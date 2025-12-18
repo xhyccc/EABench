@@ -22,6 +22,13 @@ class LLMProvider(ABC):
     async def generate(self, history: List[Message], tools: List[Dict[str, Any]]) -> LLMResponse:
         pass
 
+    async def get_completion(self, messages: List[Dict[str, str]]) -> str:
+        """Simple completion for evaluation tasks."""
+        # Default implementation wraps generate
+        history = [Message(role=m["role"], content=m["content"]) for m in messages]
+        response = await self.generate(history, [])
+        return response.content or ""
+
 class MockLLMProvider(LLMProvider):
     """A mock provider for testing."""
     async def generate(self, history: List[Message], tools: List[Dict[str, Any]]) -> LLMResponse:

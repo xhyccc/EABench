@@ -1,0 +1,57 @@
+name: "Comprehensive Tenant Evaluation Set"
+description: "Evaluation covering all users in test-tenant-1"
+cases:
+  # --- User 123 (Test User) Cases ---
+  - id: "case_001"
+    query: "When does Project Alpha start?"
+    user_id: "user123"
+    assertions:
+      - description: "States that Project Alpha starts next week"
+      - description: "Mentions the source is an email from Big Boss"
+      - description: "Does not hallucinate a specific date unless calculated"
+
+  - id: "case_002"
+    query: "Who is the manager of Test User?"
+    user_id: "user123"
+    assertions:
+      - description: "Identifies the manager as Big Boss (user456)"
+      - description: "Mentions the manager's title is VP of Engineering"
+
+  - id: "case_003"
+    query: "What was the outcome of the Project Alpha Go/No-Go meeting?"
+    user_id: "user123"
+    assertions:
+      - description: "Mentions the meeting title 'Project Alpha Go/No-Go'"
+      - description: "Mentions the agenda item 'Go/No-Go Decision'"
+
+  # --- User 456 (Big Boss) Cases ---
+  - id: "case_004"
+    query: "Who reports to me?"
+    user_id: "user456"
+    assertions:
+      - description: "Identifies Test User (user123) as a direct report"
+      - description: "Identifies Peer Dev (user789) as a direct report"
+      - description: "Does not list anyone else"
+
+  - id: "case_005"
+    query: "Summarize the Project Alpha Kickoff email I sent."
+    user_id: "user456"
+    assertions:
+      - description: "Correctly identifies the email subject 'Project Alpha Kickoff'"
+      - description: "Mentions the start time (next week)"
+      - description: "Mentions attached specs"
+
+  # --- User 789 (Peer Dev) Cases ---
+  - id: "case_006"
+    query: "Who is my manager?"
+    user_id: "user789"
+    assertions:
+      - description: "Identifies the manager as Big Boss (user456)"
+      - description: "Mentions the manager's title is VP of Engineering"
+
+  - id: "case_007"
+    query: "What did I ask user123 about on Oct 27?"
+    user_id: "user789"
+    assertions:
+      - description: "Identifies the topic as 'Lunch'"
+      - description: "Mentions the specific question 'want to grab lunch today?'"

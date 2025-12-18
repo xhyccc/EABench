@@ -1,6 +1,0 @@
-id: test-tenant-1
-user_id: user123
-username: testuser
-files:
-  hello.txt: "Hello, world!"
-  data/config.json: '{"key": "value"}'

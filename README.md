@@ -60,7 +60,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
    OPENAI_API_BASE=https://api.siliconflow.cn/v1
    ```
 
-2. **Agent Configuration (`examples/agent.yaml`):**
+2. **Agent Configuration (`examples/agents/agent.yaml`):**
    You can configure the LLM and Embedding provider separately.
 
    **Example with Azure LLM and Local Embeddings:**

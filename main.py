@@ -17,7 +17,7 @@ load_dotenv()
 
 async def main():
     # Load configs
-    agent_config = AgentConfig.from_yaml("examples/agent.yaml")
+    agent_config = AgentConfig.from_yaml("examples/agents/agent.yaml")
     tenant_config = TenantConfig.from_yaml("examples/tenants/test-tenant-1/tenant.yaml")
 
     # Initialize components

@@ -1,0 +1,86 @@
+name: "Default Judge Prompts"
+description: "Standard prompts for citation relevance and assertion checking"
+model:
+  provider: azure
+  name: gpt-4o
+  parameters:
+    temperature: 0.0
+prompts:
+  citation_relevance: |
+    You are an expert evaluator for an AI agent. Your task is to judge the relevance of the tools and data citations used by the agent to answer a user query.
+
+    User Query: {query}
+
+    Agent Tool Calls:
+    {tool_calls}
+
+    Agent Response:
+    {response}
+
+    Evaluate the following:
+    1. Did the agent use appropriate tools to find the information? (e.g., search_email for email questions)
+    2. Did the agent find relevant information?
+    3. Did the agent hallucinate information not present in the tool outputs?
+
+    Provide a score from 0 to 1 (1 being perfect usage) and a brief explanation.
+
+    Output strictly in the following YAML format:
+    ```yaml
+    score: <float 0.0-1.0>
+    explanation: "<string>"
+    ```
+
+  assertion_check: |
+    You are an expert evaluator. Your task is to verify if the AI agent's response satisfies a list of specific assertions based on the user query.
+
+    User Query: {query}
+
+    Agent Response:
+    {response}
+
+    Assertions to Check:
+    {assertions}
+
+    For each assertion, determine if it is met (True) or not met (False).
+    Then provide a final score from 0 to 1 based on the weighted percentage of passed assertions.
+
+    Output strictly in the following YAML format:
+    ```yaml
+    assertions:
+      - id: 1
+        passed: <true/false>
+        reasoning: "<string>"
+      - id: 2
+        passed: <true/false>
+        reasoning: "<string>"
+    final_score: <float 0.0-1.0>
+    summary: "<string>"
+    ```
+
+  side_by_side: |
+    You are an expert evaluator comparing two AI agents.
+
+    User Query: {query}
+
+    Agent A Response:
+    {response_a}
+
+    Agent B Response:
+    {response_b}
+
+    Assertions/Criteria:
+    {assertions}
+
+    Compare the two responses based on:
+    1. Accuracy (Did they meet the assertions?)
+    2. Completeness (Did they answer the full query?)
+    3. Conciseness (Did they avoid fluff?)
+
+    Decide which agent is better or if they are tied.
+
+    Output strictly in the following YAML format:
+    ```yaml
+    winner: <"A", "B", or "Tie">
+    reasoning: "<string>"
+    better_response_score: <float 0.0-1.0>
+    ```
