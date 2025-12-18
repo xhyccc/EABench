@@ -50,12 +50,11 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
    ```
 
    **For OpenAI / SiliconFlow:**
-   ```env
-   SILICONFLOW_API_KEY=your_api_key
-   SILICONFLOW_API_ENDPOINT=https://api.siliconflow.cn/v1
-   ```
-
-2. **Agent & Tenant Config:**
+   ```bash
+   # .env
+   OPENAI_API_KEY=your_api_key
+   OPENAI_API_BASE=https://api.siliconflow.cn/v1
+   ```2. **Agent & Tenant Config:**
    - Agent configuration is located in `examples/agent.yaml`.
    - Tenant data and configuration are in `examples/tenants/test-tenant-1/`.
 

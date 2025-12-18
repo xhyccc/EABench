@@ -28,8 +28,8 @@ def get_global_resources():
 
     # Initialize components
     if agent_config.model.provider == ProviderType.OPENAI:
-        api_key = os.getenv("SILICONFLOW_API_KEY")
-        base_url = os.getenv("SILICONFLOW_API_ENDPOINT")
+        api_key = os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("OPENAI_API_BASE")
         llm = OpenAIProvider(
             api_key=api_key,
             base_url=base_url,

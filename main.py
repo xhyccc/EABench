@@ -22,11 +22,11 @@ async def main():
 
     # Initialize components
     if agent_config.model.provider == ProviderType.OPENAI:
-        api_key = os.getenv("SILICONFLOW_API_KEY")
-        base_url = os.getenv("SILICONFLOW_API_ENDPOINT")
+        api_key = os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("OPENAI_API_BASE")
         if not api_key or not base_url:
-            raise ValueError("SILICONFLOW_API_KEY and SILICONFLOW_API_ENDPOINT must be set in .env")
-            
+            raise ValueError("OPENAI_API_KEY and OPENAI_API_BASE must be set in .env")
+        
         llm = OpenAIProvider(
             api_key=api_key,
             base_url=base_url,
