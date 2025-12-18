@@ -8,3 +8,13 @@ python-dotenv
 numpy<2
 streamlit
 watchdog
+pandas
+matplotlib
+seaborn
+scikit-learn
+nltk
+spacy
+textblob
+beautifulsoup4
+networkx
+

@@ -98,52 +98,56 @@ def execute_python(code: str, sandbox: SandboxInterface) -> str:
 # --- Search Tools ---
 
 class SearchFileInput(BaseModel):
-    query: str = Field(..., description="The search query.")
+    query: list[str] = Field(..., description="The list of search queries.")
     full_content: bool = Field(False, description="Whether to search full content (True) or just snippets (False).")
 
 @registry.register(name="search_file", args_schema=SearchFileInput)
-async def search_file(query: str, full_content: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_file(query: list[str], full_content: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches for files based on content or snippets."""
-    try:
-        plan = await query_analyzer.analyze(query, "search_file", tool_name="search_file")
-        strategy = plan.get("strategy", "semantic")
-        refined_query = plan.get("refined_query", query)
-        
-        # TODO: Implement specific filtering logic for filename, author, type
-        # For now, we map strategies to index selection or basic filtering
-        
-        index_name = "file_contents" if full_content else "file_snippets"
-        
-        if strategy == "filename_exact":
-            # We can't easily do exact match with vector search unless we have metadata filtering
-            # For now, we'll just use the refined query (filename) against snippets
-            results = await search_engine.search("file_snippets", refined_query)
-            return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_file", tool_name="search_file")
+            strategy = plan.get("strategy", "semantic")
+            refined_query = plan.get("refined_query", q)
             
-        elif strategy == "semantic":
-            results = await search_engine.search(index_name, refined_query)
-            return str(results)
+            # TODO: Implement specific filtering logic for filename, author, type
+            # For now, we map strategies to index selection or basic filtering
             
-        else:
-            # Fallback
-            results = await search_engine.search(index_name, refined_query)
-            return str(results)
+            index_name = "file_contents" if full_content else "file_snippets"
             
-    except Exception as e:
-        debug_logger.log_tool_result("search_file_error", str(e))
-        index_name = "file_contents" if full_content else "file_snippets"
-        results = await search_engine.search(index_name, query)
-        return str(results)
+            if strategy == "filename_exact":
+                # We can't easily do exact match with vector search unless we have metadata filtering
+                # For now, we'll just use the refined query (filename) against snippets
+                results = await search_engine.search("file_snippets", refined_query)
+                all_results.append(f"Results for '{q}':\n{results}")
+                
+            elif strategy == "semantic":
+                results = await search_engine.search(index_name, refined_query)
+                all_results.append(f"Results for '{q}':\n{results}")
+                
+            else:
+                # Fallback
+                results = await search_engine.search(index_name, refined_query)
+                all_results.append(f"Results for '{q}':\n{results}")
+                
+        except Exception as e:
+            debug_logger.log_tool_result("search_file_error", str(e))
+            index_name = "file_contents" if full_content else "file_snippets"
+            results = await search_engine.search(index_name, q)
+            all_results.append(f"Results for '{q}':\n{results}")
+
+    return "\n\n".join(all_results)
 
 from .llm_provider import Message
 from .logger import debug_logger
 import json
 
 class SearchEmailInput(BaseModel):
-    query: str = Field(None, description="The search query. If empty, lists recent emails.")
+    query: list[str] = Field(None, description="The list of search queries. If empty, lists recent emails.")
 
 @registry.register(name="search_email", args_schema=SearchEmailInput)
-async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyzer, query: str = None) -> str:
+async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyzer, query: list[str] = None) -> str:
     """Searches emails. Uses LLM to optimize the search strategy."""
     
     # 1. Helper to get all user's emails
@@ -177,54 +181,56 @@ async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyze
         emails = get_all_my_emails()
         return str([e.model_dump() for e in emails[:20]])
 
-    # 2. LLM Analysis via QueryAnalyzer
-    try:
-        plan = await query_analyzer.analyze(query, "search_email")
-        
-        strategy = plan.get("strategy", "semantic")
-        refined_query = plan.get("refined_query", query)
-        sender_name = plan.get("sender_name")
-        
-        all_emails = get_all_my_emails()
-        
-        if strategy == "recent":
-            return str([e.model_dump() for e in all_emails[:20]])
+    all_results = []
+    for q in query:
+        # 2. LLM Analysis via QueryAnalyzer
+        try:
+            plan = await query_analyzer.analyze(q, "search_email", tool_name="search_email")
             
-        elif strategy == "sender_filter":
-            matches = []
-            # Resolve sender
-            sender_id = None
-            if sender_name:
-                for user in search_engine.tenant.users:
-                    if (sender_name.lower() in user.username.lower() or 
-                        sender_name.lower() in user.profile.name.display_name.lower() or
-                        (user.profile.title and sender_name.lower() in user.profile.title.lower())): 
-                        sender_id = user.id
-                        break
+            strategy = plan.get("strategy", "semantic")
+            refined_query = plan.get("refined_query", q)
+            sender_name = plan.get("sender_name")
             
-            for email in all_emails:
-                if sender_id and email.from_user == sender_id:
-                    matches.append(email)
-                elif sender_name and sender_name.lower() in email.from_user.lower():
-                    matches.append(email)
-            return str([e.model_dump() for e in matches[:20]])
+            all_emails = get_all_my_emails()
             
-        elif strategy == "semantic":
-            results = await search_engine.search("emails", refined_query, top_k=20)
-            return str(results)
-            
-        elif strategy == "hybrid":
-            results = await search_engine.search("emails", refined_query, top_k=50)
-            results.sort(key=lambda x: x['metadata']['timestamp'], reverse=True)
-            return str(results[:20])
-            
-    except Exception as e:
-        debug_logger.log_tool_result("search_email_error", str(e))
-        # Fallback to basic semantic search
-        results = await search_engine.search("emails", query, top_k=20)
-        return str(results)
+            if strategy == "recent":
+                all_results.append(f"Results for '{q}':\n{[e.model_dump() for e in all_emails[:20]]}")
+                
+            elif strategy == "sender_filter":
+                matches = []
+                # Resolve sender
+                sender_id = None
+                if sender_name:
+                    for user in search_engine.tenant.users:
+                        if (sender_name.lower() in user.username.lower() or 
+                            sender_name.lower() in user.profile.name.display_name.lower() or
+                            (user.profile.title and sender_name.lower() in user.profile.title.lower())): 
+                            sender_id = user.id
+                            break
+                
+                for email in all_emails:
+                    if sender_id and email.from_user == sender_id:
+                        matches.append(email)
+                    elif sender_name and sender_name.lower() in email.from_user.lower():
+                        matches.append(email)
+                all_results.append(f"Results for '{q}':\n{[e.model_dump() for e in matches[:20]]}")
+                
+            elif strategy == "semantic":
+                results = await search_engine.search("emails", refined_query, top_k=20)
+                all_results.append(f"Results for '{q}':\n{results}")
+                
+            elif strategy == "hybrid":
+                results = await search_engine.search("emails", refined_query, top_k=50)
+                results.sort(key=lambda x: x['metadata']['timestamp'], reverse=True)
+                all_results.append(f"Results for '{q}':\n{results[:20]}")
+                
+        except Exception as e:
+            debug_logger.log_tool_result("search_email_error", str(e))
+            # Fallback to basic semantic search
+            results = await search_engine.search("emails", q, top_k=20)
+            all_results.append(f"Results for '{q}':\n{results}")
 
-    return "Error: Unreachable code" 
+    return "\n\n".join(all_results) 
 
 # Removed duplicate search_email_v2 and merged logic into search_email above
 # The previous implementation had a placeholder search_email and a v2.
@@ -303,83 +309,98 @@ async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyze
     return "Error: Unreachable code"
 
 class SearchChatInput(BaseModel):
-    query: str = Field(..., description="The search query.")
+    query: list[str] = Field(..., description="The list of search queries.")
 
 @registry.register(name="search_chat", args_schema=SearchChatInput)
-async def search_chat(query: str, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_chat(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches 1:1 chats."""
-    try:
-        plan = await query_analyzer.analyze(query, "search_chat", tool_name="search_chat")
-        refined_query = plan.get("refined_query", query)
-        # TODO: Implement participant filtering
-        results = await search_engine.search("chats", refined_query)
-        return str(results)
-    except Exception:
-        results = await search_engine.search("chats", query)
-        return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_chat")
+            refined_query = plan.get("refined_query", q)
+            # TODO: Implement participant filtering
+            results = await search_engine.search("chats", refined_query)
+            all_results.append(f"Results for '{q}':\n{results}")
+        except Exception:
+            results = await search_engine.search("chats", q)
+            all_results.append(f"Results for '{q}':\n{results}")
+    return "\n\n".join(all_results)
 
 class SearchGroupChatInput(BaseModel):
-    query: str = Field(..., description="The search query.")
+    query: list[str] = Field(..., description="The list of search queries.")
 
 @registry.register(name="search_group_chat", args_schema=SearchGroupChatInput)
-async def search_group_chat(query: str, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_group_chat(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches group chats."""
-    try:
-        plan = await query_analyzer.analyze(query, "search_chat", tool_name="search_group_chat") # Reuse chat prompt
-        refined_query = plan.get("refined_query", query)
-        results = await search_engine.search("group_chats", refined_query)
-        return str(results)
-    except Exception:
-        results = await search_engine.search("group_chats", query)
-        return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_group_chat") # Reuse chat prompt
+            refined_query = plan.get("refined_query", q)
+            results = await search_engine.search("group_chats", refined_query)
+            all_results.append(f"Results for '{q}':\n{results}")
+        except Exception:
+            results = await search_engine.search("group_chats", q)
+            all_results.append(f"Results for '{q}':\n{results}")
+    return "\n\n".join(all_results)
 
 class SearchChannelInput(BaseModel):
-    query: str = Field(..., description="The search query.")
+    query: list[str] = Field(..., description="The list of search queries.")
 
 @registry.register(name="search_channel", args_schema=SearchChannelInput)
-async def search_channel(query: str, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_channel(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches channels."""
-    try:
-        plan = await query_analyzer.analyze(query, "search_chat", tool_name="search_channel") # Reuse chat prompt
-        refined_query = plan.get("refined_query", query)
-        results = await search_engine.search("channels", refined_query)
-        return str(results)
-    except Exception:
-        results = await search_engine.search("channels", query)
-        return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_channel") # Reuse chat prompt
+            refined_query = plan.get("refined_query", q)
+            results = await search_engine.search("channels", refined_query)
+            all_results.append(f"Results for '{q}':\n{results}")
+        except Exception:
+            results = await search_engine.search("channels", q)
+            all_results.append(f"Results for '{q}':\n{results}")
+    return "\n\n".join(all_results)
 
 class SearchMeetingInput(BaseModel):
-    query: str = Field(..., description="The search query.")
+    query: list[str] = Field(..., description="The list of search queries.")
     transcript: bool = Field(False, description="Whether to search transcripts (True) or just config/agenda (False).")
 
 @registry.register(name="search_meeting", args_schema=SearchMeetingInput)
-async def search_meeting(query: str, transcript: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_meeting(query: list[str], transcript: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches meetings."""
     index_name = "meetings_transcript" if transcript else "meetings_config"
-    try:
-        plan = await query_analyzer.analyze(query, "search_meeting", tool_name="search_meeting")
-        refined_query = plan.get("refined_query", query)
-        # TODO: Implement organizer/attendee filtering
-        results = await search_engine.search(index_name, refined_query)
-        return str(results)
-    except Exception:
-        results = await search_engine.search(index_name, query)
-        return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_meeting", tool_name="search_meeting")
+            refined_query = plan.get("refined_query", q)
+            # TODO: Implement organizer/attendee filtering
+            results = await search_engine.search(index_name, refined_query)
+            all_results.append(f"Results for '{q}':\n{results}")
+        except Exception:
+            results = await search_engine.search(index_name, q)
+            all_results.append(f"Results for '{q}':\n{results}")
+    return "\n\n".join(all_results)
 
 # --- User Context Tools ---
 
 class SearchPeopleInput(BaseModel):
-    query: str = Field(..., description="The name, username, or email to search for.")
+    query: list[str] = Field(..., description="The list of names, usernames, or emails to search for.")
 
 @registry.register(name="search_people", args_schema=SearchPeopleInput)
-async def search_people(query: str, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_people(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches for colleagues/users in the tenant using semantic search."""
-    try:
-        plan = await query_analyzer.analyze(query, "search_people", tool_name="search_people")
-        refined_query = plan.get("refined_query", query)
-        # TODO: Implement role/department filtering
-        results = await search_engine.search("users", refined_query)
-        return str(results)
-    except Exception:
-        results = await search_engine.search("users", query)
-        return str(results)
+    all_results = []
+    for q in query:
+        try:
+            plan = await query_analyzer.analyze(q, "search_people", tool_name="search_people")
+            refined_query = plan.get("refined_query", q)
+            # TODO: Implement role/department filtering
+            results = await search_engine.search("users", refined_query)
+            all_results.append(f"Results for '{q}':\n{results}")
+        except Exception:
+            results = await search_engine.search("users", q)
+            all_results.append(f"Results for '{q}':\n{results}")
+    return "\n\n".join(all_results)
