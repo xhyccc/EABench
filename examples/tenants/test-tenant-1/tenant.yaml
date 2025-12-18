@@ -2,10 +2,10 @@ id: test-tenant-1
 domain: test-tenant-1.com
 users:
   - id: user123
-    username: testuser
+    username: user123
     groups: [dev]
     profile:
-      email: testuser@test-tenant-1.com
+      email: user123@test-tenant-1.com
       name:
         display_name: Test User
         first_name: Test
@@ -19,10 +19,10 @@ users:
       timezone: America/New_York
 
   - id: user456
-    username: manager
+    username: user456
     groups: [management]
     profile:
-      email: manager@test-tenant-1.com
+      email: user456@test-tenant-1.com
       name:
         display_name: Big Boss
         first_name: Big
@@ -34,10 +34,10 @@ users:
       timezone: America/Los_Angeles
 
   - id: user789
-    username: peer
+    username: user789
     groups: [dev]
     profile:
-      email: peer@test-tenant-1.com
+      email: user789@test-tenant-1.com
       name:
         display_name: Peer Dev
         first_name: Peer

@@ -91,9 +91,11 @@ class SearchEngine:
 
         # Index Emails
         for email in self.tenant.emails:
-            text = f"From: {email.from_user}\nTo: {', '.join(email.to_users)}\n"
+            text = f"ID: {email.id}\nFrom: {email.from_user}\nTo: {', '.join(email.to_users)}\n"
             if email.cc_users:
                 text += f"CC: {', '.join(email.cc_users)}\n"
+            if email.bcc_users:
+                text += f"BCC: {', '.join(email.bcc_users)}\n"
             text += f"Date: {email.timestamp}\nSubject: {email.subject}\nBody: {email.body}"
             await self._add_to_index("emails", text, email.model_dump())
 
@@ -102,30 +104,42 @@ class SearchEngine:
             # Index each message or the whole chat? 
             # Let's index individual messages for better granularity
             for msg in chat.messages:
-                text = f"Date: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
+                text = f"Chat ID: {chat.id}\nParticipants: {', '.join(chat.participants)}\nDate: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
                 await self._add_to_index("chats", text, {"chat_id": chat.id, "participants": chat.participants, **msg.model_dump()})
 
         # Index Group Chats
         for gc in self.tenant.group_chats:
             for msg in gc.messages:
-                text = f"Group: {gc.name}\nDate: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
+                text = f"Group Chat ID: {gc.id}\nGroup: {gc.name}\nParticipants: {', '.join(gc.participants)}\nDate: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
                 await self._add_to_index("group_chats", text, {"group_chat_id": gc.id, "participants": gc.participants, **msg.model_dump()})
 
         # Index Channels
         for channel in self.tenant.channels:
             for post in channel.posts:
-                text = f"Channel: {channel.name}\nDate: {post.timestamp}\nAuthor: {post.author}\nContent: {post.content}"
+                text = f"Channel ID: {channel.id}\nChannel: {channel.name}\nParticipants: {', '.join(channel.participants)}\nDate: {post.timestamp}\nAuthor: {post.author}\nContent: {post.content}"
                 await self._add_to_index("channels", text, {"channel_id": channel.id, "participants": channel.participants, **post.model_dump()})
 
         # Index Meetings
         for meeting in self.tenant.meetings:
             # Config (Agenda, Title)
-            config_text = f"Title: {meeting.title}\nAgenda: {meeting.agenda}"
+            config_text = f"Meeting ID: {meeting.id}\nTitle: {meeting.title}\nAgenda: {meeting.agenda}\n"
+            config_text += f"Organizer: {meeting.organizer}\n"
+            config_text += f"Invitees: {', '.join(meeting.invitees)}\n"
+            config_text += f"Attendees: {', '.join(meeting.attendees)}\n"
+            config_text += f"Date: {meeting.start_time} to {meeting.end_time}\n"
+            if meeting.location:
+                config_text += f"Location: {meeting.location}\n"
+
             await self._add_to_index("meetings_config", config_text, meeting.model_dump(exclude={"transcript", "chat"}))
             
             # Transcript
             if meeting.transcript:
-                await self._add_to_index("meetings_transcript", meeting.transcript, {
+                transcript_text = f"Meeting ID: {meeting.id}\nTitle: {meeting.title}\nDate: {meeting.start_time}\n"
+                transcript_text += f"Organizer: {meeting.organizer}\n"
+                transcript_text += f"Attendees: {', '.join(meeting.attendees)}\n"
+                transcript_text += f"Transcript:\n{meeting.transcript}"
+
+                await self._add_to_index("meetings_transcript", transcript_text, {
                     "meeting_id": meeting.id, 
                     "transcript": meeting.transcript,
                     "organizer": meeting.organizer,

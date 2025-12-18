@@ -60,6 +60,7 @@ class Meeting(BaseModel):
     start_time: str
     end_time: str
     agenda: str
+    location: str = "online"
     transcript: Optional[str] = None
     chat: Optional[GroupChat] = None
 

@@ -9,7 +9,7 @@ class QueryAnalyzer:
         self.config = config
         self.llm = llm
 
-    async def analyze(self, query: str, domain: str, tool_name: str = None) -> Dict[str, Any]:
+    async def analyze(self, query: str, domain: str, tool_name: str = None, user_profile: str = "") -> Dict[str, Any]:
         """
         Analyzes the user query using the configured LLM and domain-specific prompt.
         Returns a structured dictionary (DSL) representing the search strategy.
@@ -23,6 +23,9 @@ class QueryAnalyzer:
             return {"strategy": "semantic", "refined_query": query}
 
         prompt = prompt_template.replace("{query}", query)
+        if "{user_profile}" in prompt:
+            prompt = prompt.replace("{user_profile}", user_profile)
+            
         messages = [Message(role="system", content=prompt)]
 
         try:

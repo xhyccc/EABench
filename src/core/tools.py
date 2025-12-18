@@ -5,6 +5,14 @@ from ..sandbox.base import SandboxInterface
 from .search_engine import SearchEngine
 from .query_analyzer import QueryAnalyzer
 
+def _get_user_profile(search_engine: SearchEngine) -> str:
+    if not search_engine.current_user_id or not search_engine.tenant:
+        return "No user context."
+    user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
+    if user:
+        return user.model_dump_json(indent=2)
+    return "User not found."
+
 class ReadFileInput(BaseModel):
     path: str = Field(..., description="The path to the file to read.")
 
@@ -105,9 +113,10 @@ class SearchFileInput(BaseModel):
 async def search_file(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer, full_content: bool = False) -> str:
     """Searches for files based on content or snippets."""
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_file", tool_name="search_file")
+            plan = await query_analyzer.analyze(q, "search_file", tool_name="search_file", user_profile=user_profile)
             strategy = plan.get("strategy", "semantic")
             refined_query = plan.get("refined_query", q)
             
@@ -182,15 +191,26 @@ async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyze
         return str([e.model_dump() for e in emails[:20]])
 
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         # 2. LLM Analysis via QueryAnalyzer
         try:
-            plan = await query_analyzer.analyze(q, "search_email", tool_name="search_email")
+            plan = await query_analyzer.analyze(q, "search_email", tool_name="search_email", user_profile=user_profile)
             
             strategy = plan.get("strategy", "semantic")
             refined_query = plan.get("refined_query", q)
             sender_name = plan.get("sender_name")
             
+            # Resolve sender ID if sender_name is provided
+            sender_id = None
+            if sender_name:
+                for user in search_engine.tenant.users:
+                    if (sender_name.lower() in user.username.lower() or 
+                        sender_name.lower() in user.profile.name.display_name.lower() or
+                        (user.profile.title and sender_name.lower() in user.profile.title.lower())): 
+                        sender_id = user.id
+                        break
+
             all_emails = get_all_my_emails()
             
             if strategy == "recent":
@@ -198,16 +218,6 @@ async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyze
                 
             elif strategy == "sender_filter":
                 matches = []
-                # Resolve sender
-                sender_id = None
-                if sender_name:
-                    for user in search_engine.tenant.users:
-                        if (sender_name.lower() in user.username.lower() or 
-                            sender_name.lower() in user.profile.name.display_name.lower() or
-                            (user.profile.title and sender_name.lower() in user.profile.title.lower())): 
-                            sender_id = user.id
-                            break
-                
                 for email in all_emails:
                     if sender_id and email.from_user == sender_id:
                         matches.append(email)
@@ -221,7 +231,19 @@ async def search_email(search_engine: SearchEngine, query_analyzer: QueryAnalyze
                 
             elif strategy == "hybrid":
                 results = await search_engine.search("emails", refined_query, top_k=50)
-                results.sort(key=lambda x: x['metadata']['timestamp'], reverse=True)
+                
+                # Filter by sender if provided
+                if sender_id or sender_name:
+                    filtered_results = []
+                    for r in results:
+                        meta_sender = r.get('metadata', {}).get('from_user', '')
+                        if sender_id and meta_sender == sender_id:
+                            filtered_results.append(r)
+                        elif sender_name and sender_name.lower() in meta_sender.lower():
+                            filtered_results.append(r)
+                    results = filtered_results
+
+                results.sort(key=lambda x: x.get('metadata', {}).get('timestamp', ''), reverse=True)
                 all_results.append(f"Results for '{q}':\n{results[:20]}")
                 
         except Exception as e:
@@ -315,9 +337,10 @@ class SearchChatInput(BaseModel):
 async def search_chat(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches 1:1 chats."""
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_chat")
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_chat", user_profile=user_profile)
             refined_query = plan.get("refined_query", q)
             # TODO: Implement participant filtering
             results = await search_engine.search("chats", refined_query)
@@ -334,9 +357,10 @@ class SearchGroupChatInput(BaseModel):
 async def search_group_chat(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches group chats."""
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_group_chat") # Reuse chat prompt
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_group_chat", user_profile=user_profile) # Reuse chat prompt
             refined_query = plan.get("refined_query", q)
             results = await search_engine.search("group_chats", refined_query)
             all_results.append(f"Results for '{q}':\n{results}")
@@ -352,9 +376,10 @@ class SearchChannelInput(BaseModel):
 async def search_channel(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches channels."""
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_channel") # Reuse chat prompt
+            plan = await query_analyzer.analyze(q, "search_chat", tool_name="search_channel", user_profile=user_profile) # Reuse chat prompt
             refined_query = plan.get("refined_query", q)
             results = await search_engine.search("channels", refined_query)
             all_results.append(f"Results for '{q}':\n{results}")
@@ -372,9 +397,10 @@ async def search_meeting(query: list[str], search_engine: SearchEngine, query_an
     """Searches meetings."""
     index_name = "meetings_transcript" if transcript else "meetings_config"
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_meeting", tool_name="search_meeting")
+            plan = await query_analyzer.analyze(q, "search_meeting", tool_name="search_meeting", user_profile=user_profile)
             refined_query = plan.get("refined_query", q)
             # TODO: Implement organizer/attendee filtering
             results = await search_engine.search(index_name, refined_query)
@@ -393,9 +419,10 @@ class SearchPeopleInput(BaseModel):
 async def search_people(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
     """Searches for colleagues/users in the tenant using semantic search."""
     all_results = []
+    user_profile = _get_user_profile(search_engine)
     for q in query:
         try:
-            plan = await query_analyzer.analyze(q, "search_people", tool_name="search_people")
+            plan = await query_analyzer.analyze(q, "search_people", tool_name="search_people", user_profile=user_profile)
             refined_query = plan.get("refined_query", q)
             # TODO: Implement role/department filtering
             results = await search_engine.search("users", refined_query)

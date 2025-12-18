@@ -32,8 +32,13 @@ class AgentRunner:
             if search_engine and search_engine.current_user_id:
                 user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
                 if user:
-                    system_prompt += f"\n\nYou are acting on behalf of user: {user.profile.name.display_name} (ID: {user.id}).\n"
-                    system_prompt += f"Your profile: {user.model_dump()}"
+                    user_profile_str = user.model_dump_json(indent=2)
+                    if "{user_profile}" in system_prompt:
+                        system_prompt = system_prompt.replace("{user_profile}", user_profile_str)
+                    else:
+                        # Fallback: Append if placeholder not found (backward compatibility)
+                        system_prompt += f"\n\nYou are acting on behalf of user: {user.profile.name.display_name} (ID: {user.id}).\n"
+                        system_prompt += f"Your profile: {user_profile_str}"
 
             self.history.append(Message(role="system", content=system_prompt))
         
