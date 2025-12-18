@@ -26,9 +26,20 @@ class SearchEngine:
                 "users": {"vectors": [], "data": []},
             }
         self.current_user_id: str = None
+        self.current_user_emails: List[str] = []
 
     def set_user_context(self, user_id: str):
         self.current_user_id = user_id
+        self.current_user_emails = []
+        if self.tenant:
+            user = next((u for u in self.tenant.users if u.id == user_id), None)
+            if user:
+                if user.profile.email:
+                    self.current_user_emails.append(user.profile.email)
+                # Also add constructed email if needed
+                constructed_email = f"{user.username}@{self.tenant.domain}"
+                if constructed_email not in self.current_user_emails:
+                    self.current_user_emails.append(constructed_email)
 
     async def index_all(self):
         # Index File Snippets
@@ -173,10 +184,22 @@ class SearchEngine:
 
     def _is_user_allowed(self, index_name: str, metadata: Dict[str, Any], user_id: str) -> bool:
         if index_name == "emails":
-            return (user_id == metadata.get("from_user") or 
-                    user_id in metadata.get("to_users", []) or 
-                    user_id in metadata.get("cc_users", []) or 
-                    user_id in metadata.get("bcc_users", []))
+            # Check ID
+            if (user_id == metadata.get("from_user") or 
+                user_id in metadata.get("to_users", []) or 
+                user_id in metadata.get("cc_users", []) or 
+                user_id in metadata.get("bcc_users", [])):
+                return True
+            
+            # Check Emails
+            for email in self.current_user_emails:
+                if (email == metadata.get("from_user") or 
+                    email in metadata.get("to_users", []) or 
+                    email in metadata.get("cc_users", []) or 
+                    email in metadata.get("bcc_users", [])):
+                    return True
+            
+            return False
         
         elif index_name in ["chats", "group_chats", "channels"]:
             return user_id in metadata.get("participants", [])

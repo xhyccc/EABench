@@ -28,4 +28,16 @@ class MockEmbeddingProvider(EmbeddingProvider):
         # Return a random vector or a deterministic one based on text length
         import random
         random.seed(len(text))
-        return [random.random() for _ in range(1536)]
+        return [random.random() for _ in range(384)] # 384 is common for small models
+
+class LocalEmbeddingProvider(EmbeddingProvider):
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
+        from sentence_transformers import SentenceTransformer
+        self.model = SentenceTransformer(model_name)
+
+    async def get_embedding(self, text: str) -> List[float]:
+        # SentenceTransformer is synchronous, but we can run it directly here
+        # since it's fast enough for local testing, or wrap in run_in_executor if needed.
+        # For simplicity in this context, we'll run it directly.
+        embedding = self.model.encode(text)
+        return embedding.tolist()

@@ -5,6 +5,9 @@ model:
   name: gpt-4o
   parameters:
     temperature: 0.7
+embedding:
+  provider: azure
+  model: text-embedding-ada-002
 system_prompt: |
   You are an intelligent enterprise assistant designed to help users with their daily work tasks within the EABench platform.
   
@@ -93,7 +96,7 @@ query_analyzer_prompt:
     Determine the best search strategy. Return a JSON object with:
     - "strategy": One of ["recent", "semantic", "sender_filter", "hybrid"]
     - "refined_query": The optimized query string for semantic search (if applicable).
-    - "sender_name": The name of the sender if strategy is "sender_filter" or "hybrid".
+    - "sender_name": The name of the sender if strategy is "sender_filter" or "hybrid", else null.
     
     Rules:
     - If user asks for "recent emails", "my emails", "latest emails" -> strategy: "recent"

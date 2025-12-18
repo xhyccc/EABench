@@ -6,8 +6,10 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
 
 - **Sandboxed Execution**: Agents run in a controlled environment with restricted access.
 - **Multi-Provider Support**: Supports Azure OpenAI and OpenAI-compatible providers (e.g., SiliconFlow).
+- **Flexible Embeddings**: Choose between Azure OpenAI Embeddings or high-quality Local Embeddings (using `sentence-transformers`) for semantic search.
 - **Vector Search Engine**: Built-in semantic search for retrieving relevant context from tenant data.
 - **Role-Based Access Control**: Search results are filtered based on the logged-in user's permissions (e.g., users can only search emails they sent or received).
+- **Data Analysis Capabilities**: The agent can execute Python code to analyze data using libraries like `pandas`, `scikit-learn`, `matplotlib`, and `networkx`.
 - **Rich Test Dataset**: Includes a "Project Alpha" story arc with realistic team interactions, crises, and resolutions.
 - **Web Interface**: A Streamlit-based UI for interactive testing and demonstration.
 
@@ -15,6 +17,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
 
 - Python 3.10 or higher
 - An Azure OpenAI API key OR an OpenAI-compatible API key (e.g., SiliconFlow)
+- (Optional) For local embeddings: Sufficient RAM to run `all-MiniLM-L6-v2` (approx. 1GB).
 
 ## Installation
 
@@ -33,7 +36,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
-   pip install streamlit  # Required for the Web UI
+   # Note: This installs sentence-transformers, pandas, scikit-learn, etc.
    ```
 
 ## Configuration
@@ -46,6 +49,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
    AZURE_API_KEY=your_azure_api_key
    AZURE_ENDPOINT=https://your-resource.openai.azure.com/
    AZURE_API_VERSION=2024-12-01-preview
+   # Optional if using local embeddings
    AZURE_EMB_API_VERSION=2023-05-15
    ```
 
@@ -54,8 +58,32 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
    # .env
    OPENAI_API_KEY=your_api_key
    OPENAI_API_BASE=https://api.siliconflow.cn/v1
-   ```2. **Agent & Tenant Config:**
-   - Agent configuration is located in `examples/agent.yaml`.
+   ```
+
+2. **Agent Configuration (`examples/agent.yaml`):**
+   You can configure the LLM and Embedding provider separately.
+
+   **Example with Azure LLM and Local Embeddings:**
+   ```yaml
+   model:
+     provider: azure
+     name: gpt-4o
+     parameters:
+       temperature: 0.7
+   
+   embedding:
+     provider: local
+     model: all-MiniLM-L6-v2
+   ```
+
+   **Example with Azure LLM and Azure Embeddings:**
+   ```yaml
+   embedding:
+     provider: azure
+     model: text-embedding-ada-002
+   ```
+
+3. **Tenant Config:**
    - Tenant data and configuration are in `examples/tenants/test-tenant-1/`.
 
 ## Usage
@@ -64,7 +92,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
 The Web UI allows you to log in as different users and interact with the agent from their perspective.
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 - Open your browser at `http://localhost:8501`.
 - Select a user from the sidebar (e.g., `user123`, `user456`).

@@ -14,6 +14,11 @@ class ModelConfig(BaseModel):
     name: str
     parameters: Dict[str, Any] = Field(default_factory=dict)
 
+class EmbeddingConfig(BaseModel):
+    provider: ProviderType
+    model: str
+    parameters: Dict[str, Any] = Field(default_factory=dict)
+
 class ToolConfig(BaseModel):
     definitions: List[str]
     config: Dict[str, Any] = Field(default_factory=dict)
@@ -38,6 +43,7 @@ class AgentConfig(BaseModel):
     id: str
     version: str
     model: ModelConfig
+    embedding: Optional[EmbeddingConfig] = None
     system_prompt: str
     query_analyzer_prompt: QueryAnalyzerPromptConfig = Field(default_factory=QueryAnalyzerPromptConfig)
     dynamic_keys: List[str] = Field(default_factory=list)

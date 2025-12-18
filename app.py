@@ -8,7 +8,7 @@ from src.core.agent_runner import AgentRunner
 from src.core.llm_provider import MockLLMProvider
 from src.core.openai_provider import OpenAIProvider
 from src.core.azure_provider import AzureOpenAIProvider
-from src.core.embedding_provider import AzureEmbeddingProvider, MockEmbeddingProvider
+from src.core.embedding_provider import AzureEmbeddingProvider, MockEmbeddingProvider, LocalEmbeddingProvider
 from src.core.search_engine import SearchEngine
 from src.core.tool_registry import registry
 from src.sandbox.local_sandbox import LocalSandbox
@@ -26,7 +26,7 @@ def get_global_resources():
     agent_config = AgentConfig.from_yaml("examples/agent.yaml")
     tenant_config = TenantConfig.from_yaml("examples/tenants/test-tenant-1/tenant.yaml")
 
-    # Initialize components
+    # Initialize LLM
     if agent_config.model.provider == ProviderType.OPENAI:
         api_key = os.getenv("OPENAI_API_KEY")
         base_url = os.getenv("OPENAI_API_BASE")
@@ -36,13 +36,11 @@ def get_global_resources():
             model=agent_config.model.name,
             temperature=agent_config.model.parameters.get("temperature", 0.7)
         )
-        embedding_provider = MockEmbeddingProvider()
         
     elif agent_config.model.provider == ProviderType.AZURE:
         api_key = os.getenv("AZURE_API_KEY")
         azure_endpoint = os.getenv("AZURE_ENDPOINT")
         api_version = os.getenv("AZURE_API_VERSION")
-        emb_api_version = os.getenv("AZURE_EMB_API_VERSION")
         
         llm = AzureOpenAIProvider(
             api_key=api_key,
@@ -51,16 +49,28 @@ def get_global_resources():
             deployment_name=agent_config.model.name,
             temperature=agent_config.model.parameters.get("temperature", 0.7)
         )
-        
-        embedding_deployment = "text-embedding-ada-002" 
-        embedding_provider = AzureEmbeddingProvider(
-            api_key=api_key,
-            azure_endpoint=azure_endpoint,
-            api_version=emb_api_version or api_version,
-            deployment_name=embedding_deployment
-        )
     else:
         llm = MockLLMProvider()
+
+    # Initialize Embedding Provider
+    embedding_provider = None
+    if agent_config.embedding:
+        if agent_config.embedding.provider == ProviderType.AZURE:
+            api_key = os.getenv("AZURE_API_KEY")
+            azure_endpoint = os.getenv("AZURE_ENDPOINT")
+            emb_api_version = os.getenv("AZURE_EMB_API_VERSION") or os.getenv("AZURE_API_VERSION")
+            
+            embedding_provider = AzureEmbeddingProvider(
+                api_key=api_key,
+                azure_endpoint=azure_endpoint,
+                api_version=emb_api_version,
+                deployment_name=agent_config.embedding.model
+            )
+        elif agent_config.embedding.provider == ProviderType.LOCAL:
+            embedding_provider = LocalEmbeddingProvider(model_name=agent_config.embedding.model)
+    
+    if not embedding_provider:
+        # Fallback to Mock if not configured or unknown
         embedding_provider = MockEmbeddingProvider()
 
     sandbox = LocalSandbox(tenant_config)
@@ -129,6 +139,9 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 if prompt := st.chat_input("Ask a question..."):
+    # Clear debug logs for the new turn to avoid clutter
+    st.session_state.debug_logs = []
+    
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)

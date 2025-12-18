@@ -17,4 +17,5 @@ spacy
 textblob
 beautifulsoup4
 networkx
+sentence-transformers
 
