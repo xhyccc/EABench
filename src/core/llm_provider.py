@@ -16,6 +16,7 @@ class Message(BaseModel):
 class LLMResponse(BaseModel):
     content: Optional[str] = None
     tool_calls: Optional[List[ToolCall]] = None
+    usage: Optional[Dict[str, int]] = None # prompt_tokens, completion_tokens, total_tokens
 
 class LLMProvider(ABC):
     @abstractmethod
@@ -36,12 +37,19 @@ class MockLLMProvider(LLMProvider):
         
         # If the last message was a tool result, return a final answer summarizing it
         if last_msg.role == "tool":
-            return LLMResponse(content=f"I have executed the tool. The result was: {last_msg.content}")
+            return LLMResponse(
+                content=f"I have executed the tool. The result was: {last_msg.content}",
+                usage={"prompt_tokens": 10, "completion_tokens": 10, "total_tokens": 20}
+            )
 
         # Simple mock logic: if the last message is user "list files", call list_files tool
         if last_msg.role == "user" and "list files" in last_msg.content.lower():
              return LLMResponse(
-                 tool_calls=[ToolCall(id="call_1", name="list_files", arguments={"path": "."})]
+                 tool_calls=[ToolCall(id="call_1", name="list_files", arguments={"path": "."})],
+                 usage={"prompt_tokens": 5, "completion_tokens": 5, "total_tokens": 10}
              )
         
-        return LLMResponse(content="I am a mock agent.")
+        return LLMResponse(
+            content="I am a mock agent.",
+            usage={"prompt_tokens": 5, "completion_tokens": 5, "total_tokens": 10}
+        )

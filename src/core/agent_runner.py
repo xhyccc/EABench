@@ -1,5 +1,6 @@
 import asyncio
-from typing import List
+from typing import List, Dict, Any
+from pydantic import BaseModel
 from .llm_provider import LLMProvider, Message, ToolCall
 from .tool_registry import ToolRegistry
 from ..config.agent_config import AgentConfig
@@ -10,6 +11,10 @@ from .query_analyzer import QueryAnalyzer
 class MaxTurnsExceededError(Exception):
     pass
 
+class AgentRunResult(BaseModel):
+    response: str
+    metrics: Dict[str, Any]
+
 class AgentRunner:
     def __init__(self, agent_config: AgentConfig, llm_provider: LLMProvider, tool_registry: ToolRegistry):
         self.config = agent_config
@@ -18,7 +23,7 @@ class AgentRunner:
         self.history: List[Message] = []
         self.query_analyzer = QueryAnalyzer(agent_config, llm_provider)
 
-    async def run(self, user_query: str, sandbox: SandboxInterface, search_engine=None) -> str:
+    async def run(self, user_query: str, sandbox: SandboxInterface, search_engine=None) -> AgentRunResult:
         # 1. Initialize Context (Only if history is empty)
         if not self.history:
             system_prompt = self.config.system_prompt
@@ -34,6 +39,13 @@ class AgentRunner:
         
         self.history.append(Message(role="user", content=user_query))
 
+        metrics = {
+            "tool_calls_count": 0,
+            "llm_calls_count": 0,
+            "total_prompt_tokens": 0,
+            "total_completion_tokens": 0,
+        }
+
         # 2. Main ReAct Loop
         steps = 0
         while steps < self.config.flow.max_turns:
@@ -48,9 +60,15 @@ class AgentRunner:
             response = await self.llm.generate(self.history, enabled_tools)
             debug_logger.log_llm_response(response)
             
+            metrics["llm_calls_count"] += 1
+            if response.usage:
+                metrics["total_prompt_tokens"] += response.usage.get("prompt_tokens", 0)
+                metrics["total_completion_tokens"] += response.usage.get("completion_tokens", 0)
+
             self.history.append(Message(role="assistant", content=response.content, tool_calls=response.tool_calls))
 
             if response.tool_calls:
+                metrics["tool_calls_count"] += len(response.tool_calls)
                 # Execute Tools in Sandbox
                 for call in response.tool_calls:
                     debug_logger.log_tool_call(call.name, call.arguments)
@@ -59,7 +77,14 @@ class AgentRunner:
                     self.history.append(Message(role="tool", tool_call_id=call.id, content=result))
             else:
                 # Final Answer
-                return response.content
+                if metrics["llm_calls_count"] > 0:
+                    metrics["avg_prompt_tokens"] = metrics["total_prompt_tokens"] / metrics["llm_calls_count"]
+                    metrics["avg_completion_tokens"] = metrics["total_completion_tokens"] / metrics["llm_calls_count"]
+                else:
+                    metrics["avg_prompt_tokens"] = 0
+                    metrics["avg_completion_tokens"] = 0
+                
+                return AgentRunResult(response=response.content, metrics=metrics)
             
             steps += 1
         

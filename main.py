@@ -88,8 +88,9 @@ async def main():
         query = "What was the critical issue with Project Alpha and how was it resolved?"
         print(f"User: {query}")
         
-        response = await runner.run(query, sandbox, search_engine)
-        print(f"Agent: {response}")
+        run_result = await runner.run(query, sandbox, search_engine)
+        print(f"Agent: {run_result.response}")
+        print(f"Metrics: {run_result.metrics}")
         
     finally:
         sandbox.stop()

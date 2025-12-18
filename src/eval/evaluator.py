@@ -2,6 +2,7 @@ import asyncio
 import re
 import yaml
 import textwrap
+import time
 from typing import List, Dict, Any, Tuple
 from scipy import stats
 from .models import EvaluationCase, EvaluationResult, EvaluationSet, ComparisonResult
@@ -104,8 +105,13 @@ class Evaluator:
         # Usually eval cases are independent.
         self.runner.history = [] 
         
+        start_time = time.time()
+        run_metrics = {}
         try:
-            response_text = await self.runner.run(case.query, self.sandbox, self.search_engine)
+            run_result = await self.runner.run(case.query, self.sandbox, self.search_engine)
+            response_text = run_result.response
+            run_metrics = run_result.metrics
+            
             # Extract tool calls from history
             tool_calls = []
             for msg in self.runner.history:
@@ -115,6 +121,9 @@ class Evaluator:
         except Exception as e:
             response_text = f"Error: {str(e)}"
             tool_calls = []
+        
+        end_time = time.time()
+        latency = end_time - start_time
 
         # 2. Evaluate: Citation Relevance
         citation_score, citation_reason = await self._evaluate_citation(case.query, tool_calls, response_text)
@@ -125,15 +134,19 @@ class Evaluator:
         # 4. Aggregate
         passed = assertion_score >= 0.75 and citation_score >= 0.7 # Thresholds
         
+        metrics = {
+            "citation_score": citation_score,
+            "assertion_score": assertion_score,
+            "latency": latency,
+            **run_metrics
+        }
+
         return EvaluationResult(
             case_id=case.id,
             query=case.query,
             response=response_text,
             tool_calls=tool_calls,
-            metrics={
-                "citation_score": citation_score,
-                "assertion_score": assertion_score
-            },
+            metrics=metrics,
             assertion_results=assertion_results,
             reasoning=f"Citation: {citation_reason}\nAssertions: {assertion_reason}",
             passed=passed
@@ -198,9 +211,14 @@ class Evaluator:
             
             # Parse YAML Score
             data = self._parse_yaml_response(judgment)
-            score = float(data.get("final_score", 0.0))
+            # score = float(data.get("final_score", 0.0))
             summary = data.get("summary", "No summary provided.")
             assertion_results = data.get("assertions", [])
+            
+            # Calculate Pass Rate
+            passed_count = sum(1 for r in assertion_results if r.get('passed', False))
+            total_count = len(assertions)
+            score = passed_count / total_count if total_count > 0 else 0.0
             
             # Enrich with descriptions
             for res in assertion_results:

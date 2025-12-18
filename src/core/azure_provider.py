@@ -19,8 +19,11 @@ class AzureOpenAIProvider(LLMProvider):
         openai_messages = []
         for msg in history:
             message_dict = {"role": msg.role}
-            if msg.content:
+            if msg.content is not None:
                 message_dict["content"] = msg.content
+            elif msg.role == "assistant" and msg.tool_calls:
+                # Ensure content is not null for strict APIs
+                message_dict["content"] = ""
             
             if msg.tool_calls:
                 openai_tool_calls = []
@@ -65,5 +68,10 @@ class AzureOpenAIProvider(LLMProvider):
 
         return LLMResponse(
             content=message.content,
-            tool_calls=tool_calls
+            tool_calls=tool_calls,
+            usage={
+                "prompt_tokens": response.usage.prompt_tokens,
+                "completion_tokens": response.usage.completion_tokens,
+                "total_tokens": response.usage.total_tokens
+            } if response.usage else None
         )

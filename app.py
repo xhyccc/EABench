@@ -199,8 +199,10 @@ if app_mode == "Chat":
             with st.spinner("Thinking..."):
                 try:
                     # Run Agent
-                    response = asyncio.run(runner.run(prompt, sandbox, session_search_engine))
+                    run_result = asyncio.run(runner.run(prompt, sandbox, session_search_engine))
+                    response = run_result.response
                     st.markdown(response)
+                    st.caption(f"Metrics: {run_result.metrics}")
                     st.session_state.messages.append({"role": "assistant", "content": response})
                 except Exception as e:
                     st.error(f"Error: {e}")
@@ -335,6 +337,11 @@ elif app_mode == "Evaluation":
                 
                 assertion_pass_rate = passed_assertions / total_assertions if total_assertions > 0 else 0
 
+                # Calculate Token/Tool Totals
+                total_tool_calls = sum(r.metrics.get('tool_calls_count', 0) for r in results)
+                total_prompt_tokens = sum(r.metrics.get('total_prompt_tokens', 0) for r in results)
+                total_completion_tokens = sum(r.metrics.get('total_completion_tokens', 0) for r in results)
+
                 # Display Metrics
                 st.subheader("Overall Results")
                 m_col1, m_col2, m_col3 = st.columns(3)
@@ -342,13 +349,21 @@ elif app_mode == "Evaluation":
                 m_col2.metric("Avg Assertion Score", f"{avg_assertion:.2f}")
                 m_col3.metric("Assertion Pass Rate", f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})")
                 
+                m_col4, m_col5, m_col6 = st.columns(3)
+                m_col4.metric("Total Tool Calls", f"{total_tool_calls}")
+                m_col5.metric("Total Prompt Tokens", f"{total_prompt_tokens}")
+                m_col6.metric("Total Completion Tokens", f"{total_completion_tokens}")
+
                 # Download Button
                 download_data = {
                     "overall_score_card": {
                         "total_cases": total_cases,
                         "avg_citation_score": float(f"{avg_citation:.2f}"),
                         "avg_assertion_score": float(f"{avg_assertion:.2f}"),
-                        "assertion_pass_rate": f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})"
+                        "assertion_pass_rate": f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})",
+                        "total_tool_calls": total_tool_calls,
+                        "total_prompt_tokens": total_prompt_tokens,
+                        "total_completion_tokens": total_completion_tokens
                     },
                     "detailed_results": []
                 }
@@ -427,6 +442,9 @@ elif app_mode == "Evaluation":
                         with col2:
                             st.metric("Citation Score", f"{res.metrics['citation_score']:.2f}")
                             st.metric("Assertion Score", f"{res.metrics['assertion_score']:.2f}")
+                            st.metric("Latency", f"{res.metrics.get('latency', 0):.2f}s")
+                            st.write("**Metrics:**")
+                            st.json({k: v for k, v in res.metrics.items() if k not in ['citation_score', 'assertion_score', 'latency']})
                             st.write("**Tool Calls:**")
                             st.json(res.tool_calls)
 
@@ -517,8 +535,13 @@ elif app_mode == "Side-by-Side Comparison":
         st.markdown("**Metrics**")
         c_score = result.metrics.get('citation_score', 0.0)
         a_score = result.metrics.get('assertion_score', 0.0)
+        latency = result.metrics.get('latency', 0.0)
         st.write(f"Citation Score: `{c_score:.2f}`")
         st.write(f"Assertion Score: `{a_score:.2f}`")
+        st.write(f"Latency: `{latency:.2f}s`")
+        
+        with st.expander("More Metrics"):
+            st.json({k: v for k, v in result.metrics.items() if k not in ['citation_score', 'assertion_score', 'latency']})
         
         st.markdown("**Assertions**")
         if result.assertion_results:
@@ -602,7 +625,46 @@ elif app_mode == "Side-by-Side Comparison":
                 col2.metric("Avg Assertion (Treatment)", f"{avg_a_b:.2f}")
                 col3.metric("Diff", f"{avg_a_b - avg_a_a:.2f}")
                 col4.metric("P-Value", f"{p_a:.4f}" if p_a is not None else "N/A")
+
+                # Latency
+                l_a = [r.result_a.metrics.get('latency', 0.0) for r in comparison_results]
+                l_b = [r.result_b.metrics.get('latency', 0.0) for r in comparison_results]
+                avg_l_a = sum(l_a)/len(l_a) if l_a else 0
+                avg_l_b = sum(l_b)/len(l_b) if l_b else 0
+                p_l = evaluator_a.calculate_p_value(l_a, l_b)
                 
+                col1, col2, col3, col4 = st.columns(4)
+                col1.metric("Avg Latency (Control)", f"{avg_l_a:.2f}s")
+                col2.metric("Avg Latency (Treatment)", f"{avg_l_b:.2f}s")
+                col3.metric("Diff", f"{avg_l_b - avg_l_a:.2f}s")
+                col4.metric("P-Value", f"{p_l:.4f}" if p_l is not None else "N/A")
+                
+                # Token/Tool Totals
+                tc_a = sum(r.result_a.metrics.get('tool_calls_count', 0) for r in comparison_results)
+                tc_b = sum(r.result_b.metrics.get('tool_calls_count', 0) for r in comparison_results)
+                
+                pt_a = sum(r.result_a.metrics.get('total_prompt_tokens', 0) for r in comparison_results)
+                pt_b = sum(r.result_b.metrics.get('total_prompt_tokens', 0) for r in comparison_results)
+                
+                ct_a = sum(r.result_a.metrics.get('total_completion_tokens', 0) for r in comparison_results)
+                ct_b = sum(r.result_b.metrics.get('total_completion_tokens', 0) for r in comparison_results)
+
+                st.markdown("#### Resource Usage")
+                col1, col2, col3 = st.columns(3)
+                col1.metric("Total Tool Calls (Control)", f"{tc_a}")
+                col2.metric("Total Tool Calls (Treatment)", f"{tc_b}")
+                col3.metric("Diff", f"{tc_b - tc_a}")
+                
+                col1, col2, col3 = st.columns(3)
+                col1.metric("Total Prompt Tokens (Control)", f"{pt_a}")
+                col2.metric("Total Prompt Tokens (Treatment)", f"{pt_b}")
+                col3.metric("Diff", f"{pt_b - pt_a}")
+                
+                col1, col2, col3 = st.columns(3)
+                col1.metric("Total Completion Tokens (Control)", f"{ct_a}")
+                col2.metric("Total Completion Tokens (Treatment)", f"{ct_b}")
+                col3.metric("Diff", f"{ct_b - ct_a}")
+
                 # Download Results
                 download_data = {
                     "summary": {
@@ -624,6 +686,17 @@ elif app_mode == "Side-by-Side Comparison":
                                 "treatment": avg_a_b,
                                 "diff": avg_a_b - avg_a_a,
                                 "p_value": p_a
+                            },
+                            "latency": {
+                                "control": avg_l_a,
+                                "treatment": avg_l_b,
+                                "diff": avg_l_b - avg_l_a,
+                                "p_value": p_l
+                            },
+                            "resource_usage": {
+                                "tool_calls": {"control": tc_a, "treatment": tc_b, "diff": tc_b - tc_a},
+                                "prompt_tokens": {"control": pt_a, "treatment": pt_b, "diff": pt_b - pt_a},
+                                "completion_tokens": {"control": ct_a, "treatment": ct_b, "diff": ct_b - ct_a}
                             }
                         }
                     },

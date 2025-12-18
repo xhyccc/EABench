@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Any
+from typing import Any, Optional
 from .tool_registry import registry
 from ..sandbox.base import SandboxInterface
 from .search_engine import SearchEngine
@@ -99,10 +99,10 @@ def execute_python(code: str, sandbox: SandboxInterface) -> str:
 
 class SearchFileInput(BaseModel):
     query: list[str] = Field(..., description="The list of search queries.")
-    full_content: bool = Field(False, description="Whether to search full content (True) or just snippets (False).")
+    full_content: Optional[bool] = Field(False, description="Whether to search full content (True) or just snippets (False).")
 
 @registry.register(name="search_file", args_schema=SearchFileInput)
-async def search_file(query: list[str], full_content: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_file(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer, full_content: bool = False) -> str:
     """Searches for files based on content or snippets."""
     all_results = []
     for q in query:
@@ -365,10 +365,10 @@ async def search_channel(query: list[str], search_engine: SearchEngine, query_an
 
 class SearchMeetingInput(BaseModel):
     query: list[str] = Field(..., description="The list of search queries.")
-    transcript: bool = Field(False, description="Whether to search transcripts (True) or just config/agenda (False).")
+    transcript: Optional[bool] = Field(False, description="Whether to search transcripts (True) or just config/agenda (False).")
 
 @registry.register(name="search_meeting", args_schema=SearchMeetingInput)
-async def search_meeting(query: list[str], transcript: bool, search_engine: SearchEngine, query_analyzer: QueryAnalyzer) -> str:
+async def search_meeting(query: list[str], search_engine: SearchEngine, query_analyzer: QueryAnalyzer, transcript: bool = False) -> str:
     """Searches meetings."""
     index_name = "meetings_transcript" if transcript else "meetings_config"
     all_results = []
