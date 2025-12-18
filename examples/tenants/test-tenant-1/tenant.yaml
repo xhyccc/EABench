@@ -1,0 +1,51 @@
+id: test-tenant-1
+domain: test-tenant-1.com
+users:
+  - id: user123
+    username: testuser
+    groups: [dev]
+    profile:
+      email: testuser@test-tenant-1.com
+      name:
+        display_name: Test User
+        first_name: Test
+        last_name: User
+        nickname: Tester
+      manager_id: user456
+      department: Engineering
+      skills: [python, ai]
+      title: Senior Engineer
+      location: New York
+      timezone: America/New_York
+
+  - id: user456
+    username: manager
+    groups: [management]
+    profile:
+      email: manager@test-tenant-1.com
+      name:
+        display_name: Big Boss
+        first_name: Big
+        last_name: Boss
+      department: Engineering
+      skills: [management, strategy]
+      title: VP of Engineering
+      location: San Francisco
+      timezone: America/Los_Angeles
+
+  - id: user789
+    username: peer
+    groups: [dev]
+    profile:
+      email: peer@test-tenant-1.com
+      name:
+        display_name: Peer Dev
+        first_name: Peer
+        last_name: Dev
+      manager_id: user456
+      department: Engineering
+      skills: [java, backend]
+      title: Software Engineer
+      location: London
+      timezone: Europe/London
+

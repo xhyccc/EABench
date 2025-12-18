@@ -1,0 +1,10 @@
+pydantic
+pyyaml
+docker
+opentelemetry-api
+opentelemetry-sdk
+openai
+python-dotenv
+numpy<2
+streamlit
+watchdog

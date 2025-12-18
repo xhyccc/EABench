@@ -1,0 +1,76 @@
+- id: email_001
+  from_user: user456
+  to_users: [user123, user789]
+  cc_users: []
+  bcc_users: []
+  subject: "Project Alpha Kickoff"
+  body: "Team,\n\nWe are officially starting Project Alpha. The goal is to launch SmartInsights by Oct 27.\n\n@Test User, please lead the spec.\n@Peer Dev, please handle the backend.\n\nLet's move fast.\n\nBig Boss"
+  timestamp: "2023-10-20T09:00:00Z"
+
+- id: email_002
+  from_user: user123
+  to_users: [user456]
+  cc_users: [user789]
+  bcc_users: []
+  subject: "Re: Project Alpha Kickoff - Spec Ready"
+  body: "Hi Boss,\n\nThe spec is ready for review. I've uploaded it to `project_alpha/spec.md`.\n\nWe are targeting a code freeze on Oct 26.\n\nBest,\nTest User"
+  timestamp: "2023-10-22T16:00:00Z"
+
+- id: email_003
+  from_user: user789
+  to_users: [user123]
+  cc_users: []
+  bcc_users: []
+  subject: "URGENT: Memory Leak in API"
+  body: "Hey,\n\nI'm seeing massive memory spikes when processing large batches. Check `logs/error_log_2023_10_25.txt`.\n\nWe might need to delay the launch if we can't fix this.\n\nPeer"
+  timestamp: "2023-10-25T14:30:00Z"
+
+- id: email_004
+  from_user: user123
+  to_users: [user456]
+  cc_users: [user789]
+  bcc_users: []
+  subject: "Status Update: Critical Issue Resolved"
+  body: "Boss,\n\nWe found a memory leak in the batch processing logic. Peer Dev has pushed a fix.\n\nWe are still on track for tomorrow's launch.\n\nTest User"
+  timestamp: "2023-10-26T18:00:00Z"
+
+- id: email1
+  from_user: user456
+  to_users: [user123]
+  subject: Project Alpha Kickoff
+  body: |
+    Hi Team,
+    
+    We are starting Project Alpha next week. Please review the attached specs.
+    
+    Best,
+    Big Boss
+  timestamp: "2023-10-26T09:00:00Z"
+
+- id: email2
+  from_user: user123
+  to_users: [user456]
+  cc_users: [user789]
+  subject: "Re: Project Alpha Kickoff"
+  body: |
+    Thanks Boss. I have reviewed the specs and they look good.
+    
+    Regards,
+    Test User
+  timestamp: "2023-10-26T10:00:00Z"
+
+- id: email3
+  from_user: user789
+  to_users: [user123]
+  subject: Lunch?
+  body: |
+    Hey, want to grab lunch today?
+  timestamp: "2023-10-27T12:00:00Z"
+
+- id: email4
+  from_user: user123
+  to_users: [user789]
+  subject: "Re: Lunch?"
+  body: |
+    Sure, let's go to the taco place.
+  timestamp: "2023-10-27T12:05:00Z"

@@ -1,0 +1,35 @@
+- id: chat_001
+  participants: [user123, user789]
+  messages:
+    - from_user: user123
+      to_user: user789
+      content: "Hey, did you see the new design spec?"
+      timestamp: "2023-10-22T10:00:00Z"
+    - from_user: user789
+      to_user: user123
+      content: "Yeah, looks ambitious. The AI integration part is tricky."
+      timestamp: "2023-10-22T10:05:00Z"
+    - from_user: user123
+      to_user: user789
+      content: "I know. Can we mock it for now?"
+      timestamp: "2023-10-22T10:06:00Z"
+    - from_user: user789
+      to_user: user123
+      content: "Sure, I'll create a dummy endpoint."
+      timestamp: "2023-10-22T10:10:00Z"
+
+- id: chat_002
+  participants: [user123, user456]
+  messages:
+    - from_user: user456
+      to_user: user123
+      content: "Are we on track?"
+      timestamp: "2023-10-25T09:00:00Z"
+    - from_user: user123
+      to_user: user456
+      content: "Mostly. Hitting some performance snags."
+      timestamp: "2023-10-25T09:05:00Z"
+    - from_user: user456
+      to_user: user123
+      content: "Fix it. We cannot miss the launch."
+      timestamp: "2023-10-25T09:10:00Z"

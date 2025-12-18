@@ -1,0 +1,29 @@
+- id: meeting_001
+  title: "Project Alpha Go/No-Go"
+  organizer: user456
+  invitees: [user123, user789]
+  attendees: [user123, user456, user789]
+  start_time: "2023-10-26T16:00:00Z"
+  end_time: "2023-10-26T16:30:00Z"
+  agenda: "1. Review critical bugs\n2. Final decision on launch"
+  transcript: |
+    User456: Okay, let's make this quick. Are we good for tomorrow?
+    User789: The memory leak is fixed. I've stress-tested it for 2 hours. No spikes.
+    User123: Frontend is stable. All tests passing.
+    User456: Great. Then it's a GO. Good job everyone.
+  chat:
+    id: meeting_chat_001
+    name: "Go/No-Go Chat"
+    participants: [user123, user456, user789]
+    messages:
+      - from_user: user123
+        content: "I'm sharing my screen."
+        timestamp: "2023-10-26T16:05:00Z"
+  start_time: "2023-10-25T15:00:00Z"
+  end_time: "2023-10-25T15:30:00Z"
+  agenda: "1. Memory Leak Status\n2. Go/No-Go Decision"
+  transcript: |
+    Test User: We have a critical memory leak.
+    Big Boss: Can we fix it today?
+    Peer Dev: I think so. I found a circular reference in the batch processor.
+    Big Boss: Fix it. We launch tomorrow.
