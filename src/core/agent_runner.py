@@ -5,6 +5,7 @@ from .tool_registry import ToolRegistry
 from ..config.agent_config import AgentConfig
 from ..sandbox.base import SandboxInterface
 from .logger import debug_logger
+from .query_analyzer import QueryAnalyzer
 
 class MaxTurnsExceededError(Exception):
     pass
@@ -15,19 +16,22 @@ class AgentRunner:
         self.llm = llm_provider
         self.tools = tool_registry
         self.history: List[Message] = []
+        self.query_analyzer = QueryAnalyzer(agent_config, llm_provider)
 
     async def run(self, user_query: str, sandbox: SandboxInterface, search_engine=None) -> str:
-        # 1. Initialize Context
-        system_prompt = self.config.system_prompt
-        
-        # Inject User Profile if available
-        if search_engine and search_engine.current_user_id:
-            user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
-            if user:
-                system_prompt += f"\n\nYou are acting on behalf of user: {user.profile.name.display_name} (ID: {user.id}).\n"
-                system_prompt += f"Your profile: {user.model_dump()}"
+        # 1. Initialize Context (Only if history is empty)
+        if not self.history:
+            system_prompt = self.config.system_prompt
+            
+            # Inject User Profile if available
+            if search_engine and search_engine.current_user_id:
+                user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
+                if user:
+                    system_prompt += f"\n\nYou are acting on behalf of user: {user.profile.name.display_name} (ID: {user.id}).\n"
+                    system_prompt += f"Your profile: {user.model_dump()}"
 
-        self.history.append(Message(role="system", content=system_prompt))
+            self.history.append(Message(role="system", content=system_prompt))
+        
         self.history.append(Message(role="user", content=user_query))
 
         # 2. Main ReAct Loop
@@ -80,6 +84,8 @@ class AgentRunner:
                 kwargs["search_engine"] = search_engine
             if "llm" in sig.parameters:
                 kwargs["llm"] = self.llm
+            if "query_analyzer" in sig.parameters:
+                kwargs["query_analyzer"] = self.query_analyzer
                 
             if asyncio.iscoroutinefunction(tool_func):
                 return await tool_func(**kwargs)

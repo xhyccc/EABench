@@ -17,7 +17,8 @@ system_prompt: |
   - **Search First**: When asked about a topic, use the specific search tool for the data type (e.g., `search_email` for emails, `search_file` for documents).
   - **Empty Queries**: To list recent items (e.g., "my emails"), call the search tool with an empty query string.
   - **People Search**: Use `search_people` to find contact details or identify colleagues.
-  - **File Access**: Use `list_files` to explore directories and `read_file` to get content.
+  - **File Access**: Use `read_file` to get content. Always provide the relative path (e.g., "docs/specs/v1.md"), not just the filename.
+  - **Data Analysis**: Use `execute_python` to perform calculations, data analysis, or complex logic.
   
   ### Responsible AI & Safety
   - **Privacy**: You only have access to data the user is authorized to see. Do not attempt to bypass these restrictions.
@@ -27,12 +28,48 @@ system_prompt: |
   
   ### Examples
   - User: "What is the status of Project Alpha?"
-    Thought: I need to check emails and chats for updates on Project Alpha.
+    Thought: I need to check emails for updates on Project Alpha.
     Tool: `search_email(query="Project Alpha status")`
   
   - User: "Show me my recent emails."
     Thought: The user wants to see their latest emails.
     Tool: `search_email(query="")`
+
+  - User: "Find the design document for the new UI."
+    Thought: I need to search for files related to the UI design.
+    Tool: `search_file(query="UI design document", full_content=False)`
+
+  - User: "Search for 'architecture diagram' inside all documents."
+    Thought: The user wants to find files with terms matching 'architecture diagram' in their content.
+    Tool: `search_file(query="architecture diagram", full_content=True)`
+
+  - User: "Read the content of 'docs/design_spec.md'."
+    Thought: The user wants to read a specific file using its relative path.
+    Tool: `read_file(path="docs/design_spec.md")`
+
+  - User: "Calculate the average daily active users from this list: [100, 120, 110, 130]."
+    Thought: I need to perform a calculation.
+    Tool: `execute_python(code="data = [100, 120, 110, 130]\nprint(sum(data) / len(data))")`
+
+  - User: "What did we discuss with John about the budget in our chat?"
+    Thought: I need to search 1:1 chats with John about the budget.
+    Tool: `search_chat(query="budget discussion with John")`
+
+  - User: "Find discussions about the launch in the 'General' channel."
+    Thought: I need to search the 'General' channel for launch discussions.
+    Tool: `search_channel(query="launch discussion in General channel")`
+
+  - User: "Search for group chats about the offsite."
+    Thought: I need to search group chats for offsite planning.
+    Tool: `search_group_chat(query="offsite planning")`
+
+  - User: "Find meetings about the quarterly review."
+    Thought: I need to search for meetings related to the quarterly review.
+    Tool: `search_meeting(query="quarterly review", transcript=False)`
+
+  - User: "What did we say about the budget in the last meeting?"
+    Thought: I need to find meetings with terms matching 'budget' in their transcripts.
+    Tool: `search_meeting(query="budget", transcript=True)`
   
   - User: "Who is user456?"
     Thought: I need to look up user details.
@@ -40,8 +77,7 @@ system_prompt: |
 tools:
   definitions:
     - read_file
-    - list_files
-    - execute_command
+    - execute_python
     - search_file
     - search_email
     - search_chat
@@ -49,6 +85,58 @@ tools:
     - search_channel
     - search_meeting
     - search_people
+
+query_analyzer_prompt:
+  search_email: |
+    You are an expert search optimizer. Analyze the user's email search query: "{query}"
+    
+    Determine the best search strategy. Return a JSON object with:
+    - "strategy": One of ["recent", "semantic", "sender_filter", "hybrid"]
+    - "refined_query": The optimized query string for semantic search (if applicable).
+    - "sender_name": The name of the sender if strategy is "sender_filter" or "hybrid".
+    
+    Rules:
+    - If user asks for "recent emails", "my emails", "latest emails" -> strategy: "recent"
+    - If user asks for emails from a specific person (e.g. "from boss", "emails by John") -> strategy: "sender_filter"
+    - If user asks for a topic (e.g. "project alpha", "budget") -> strategy: "semantic"
+    - If user asks for "recent emails about X" -> strategy: "hybrid" (semantic + sort)
+
+  search_file: |
+    Analyze the file search query: "{query}"
+    
+    Determine the best search strategy. Return a JSON object with:
+    - "strategy": One of ["filename_exact", "semantic", "author_filter", "type_filter", "recent"]
+    - "filename": The specific filename if strategy is "filename_exact".
+    - "author": The author name if strategy is "author_filter".
+    - "file_type": The file extension (e.g., "pdf", "docx") if strategy is "type_filter".
+    - "refined_query": The optimized query string for semantic search.
+
+  search_chat: |
+    Analyze the chat search query: "{query}"
+    
+    Determine the best search strategy. Return a JSON object with:
+    - "strategy": One of ["participant_filter", "date_range", "semantic", "recent"]
+    - "participant_name": The name of the participant if strategy is "participant_filter".
+    - "time_period": The time description if strategy is "date_range".
+    - "refined_query": The optimized query string for semantic search.
+
+  search_meeting: |
+    Analyze the meeting search query: "{query}"
+    
+    Determine the best search strategy. Return a JSON object with:
+    - "strategy": One of ["transcript_search", "config_search", "organizer_filter", "attendee_filter", "recent"]
+    - "person_name": The name of the person if strategy is "organizer_filter" or "attendee_filter".
+    - "refined_query": The optimized query string for semantic search.
+
+  search_people: |
+    Analyze the people search query: "{query}"
+    
+    Determine the best search strategy. Return a JSON object with:
+    - "strategy": One of ["name_exact", "role_filter", "skill_semantic", "department_filter"]
+    - "name": The name if strategy is "name_exact".
+    - "role": The role title if strategy is "role_filter".
+    - "department": The department name if strategy is "department_filter".
+    - "refined_query": The optimized query string for semantic search.
 flow:
   strategy: react
   max_turns: 5

@@ -27,11 +27,19 @@ class FlowConfig(BaseModel):
     strategy: FlowStrategy
     max_turns: int = 10
 
+class QueryAnalyzerPromptConfig(BaseModel):
+    search_email: str = Field(default="")
+    search_file: str = Field(default="")
+    search_chat: str = Field(default="")
+    search_meeting: str = Field(default="")
+    search_people: str = Field(default="")
+
 class AgentConfig(BaseModel):
     id: str
     version: str
     model: ModelConfig
     system_prompt: str
+    query_analyzer_prompt: QueryAnalyzerPromptConfig = Field(default_factory=QueryAnalyzerPromptConfig)
     dynamic_keys: List[str] = Field(default_factory=list)
     tools: ToolConfig
     flow: FlowConfig

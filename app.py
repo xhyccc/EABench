@@ -111,6 +111,7 @@ if "runner" not in st.session_state:
 if "last_user" in st.session_state and st.session_state.last_user != current_user.username:
     st.session_state.runner = AgentRunner(agent_config, llm, registry)
     st.session_state.messages = []
+    st.session_state.debug_logs = [] # Clear debug logs for new session
     st.rerun()
 
 st.session_state.last_user = current_user.username
@@ -121,6 +122,7 @@ st.title("EABench Agent Chat")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
+    st.session_state.debug_logs = [] # Initialize debug logs
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
@@ -143,22 +145,53 @@ if prompt := st.chat_input("Ask a question..."):
 
 # Debug Logs Expander
 with st.expander("Debug Logs", expanded=False):
-    if "debug_logs" in st.session_state:
-        for log in st.session_state.debug_logs:
-            st.write(f"**{log['type']}**")
-            if log['type'] == "LLM Call":
-                st.json(log['content'])
-            elif log['type'] == "LLM Response":
-                st.write(log['content'])
-                if log.get('tool_calls'):
-                    st.write("Tool Calls:")
-                    st.json(log['tool_calls'])
-            elif log['type'] == "Tool Call":
-                st.write(f"Tool: `{log['tool']}`")
-                st.json(log['arguments'])
-            elif log['type'] == "Tool Result":
-                st.write(f"Tool: `{log['tool']}`")
-                st.code(log['result'])
-            st.divider()
+    if "debug_logs" in st.session_state and st.session_state.debug_logs:
+        tab1, tab2 = st.tabs(["Reasoning Trace", "Search Analysis"])
+        
+        with tab1:
+            for log in st.session_state.debug_logs:
+                if log['type'] in ["LLM Call", "LLM Response"]:
+                    st.write(f"**{log['type']}**")
+                    if log['type'] == "LLM Call":
+                        with st.expander("Messages List"):
+                            st.json(log['content'])
+                    elif log['type'] == "LLM Response":
+                        st.write(log['content'])
+                        if log.get('tool_calls'):
+                            st.write("Tool Calls:")
+                            st.json(log['tool_calls'])
+                    st.divider()
+        
+        with tab2:
+            # Group Query Analysis with subsequent Tool Results
+            logs = st.session_state.debug_logs
+            i = 0
+            while i < len(logs):
+                log = logs[i]
+                if log['type'] == "Query Analysis":
+                    with st.container():
+                        st.subheader(f"Search: {log['domain']}")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.markdown("**Query Analysis**")
+                            st.write(f"Input: `{log['query']}`")
+                            st.json(log['result'])
+                        
+                        # Look ahead for the corresponding Tool Result
+                        # It should be the next Tool Result with matching tool name
+                        result_log = None
+                        for j in range(i + 1, len(logs)):
+                            if logs[j]['type'] == "Tool Result" and logs[j]['tool'] == log['domain']:
+                                result_log = logs[j]
+                                break
+                        
+                        with col2:
+                            st.markdown("**Search Results**")
+                            if result_log:
+                                st.code(result_log['result'], language="json")
+                            else:
+                                st.write("No results found or tool execution failed.")
+                        st.divider()
+                i += 1
     else:
         st.write("No logs yet.")

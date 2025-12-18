@@ -9,16 +9,24 @@ logger = logging.getLogger("EABench")
 
 class DebugLogger:
     def __init__(self):
-        self.logs = []
+        pass
+
+    def _append_log(self, entry: Dict[str, Any]):
+        try:
+            if "debug_logs" not in st.session_state:
+                st.session_state.debug_logs = []
+            st.session_state.debug_logs.append(entry)
+        except Exception:
+            # Not in Streamlit context or session_state not accessible
+            pass
 
     def log_llm_call(self, messages: List[Dict[str, Any]]):
         entry = {
             "type": "LLM Call",
             "content": messages
         }
-        self.logs.append(entry)
+        self._append_log(entry)
         logger.info(f"LLM Call: {json.dumps(messages, indent=2)}")
-        self._update_streamlit()
 
     def log_llm_response(self, response: Any):
         # Handle object with content/tool_calls attributes
@@ -30,11 +38,10 @@ class DebugLogger:
             "content": content,
             "tool_calls": [t.model_dump() for t in tool_calls] if tool_calls else None
         }
-        self.logs.append(entry)
+        self._append_log(entry)
         logger.info(f"LLM Response: {content}")
         if tool_calls:
             logger.info(f"Tool Calls: {tool_calls}")
-        self._update_streamlit()
 
     def log_tool_call(self, tool_name: str, arguments: Dict[str, Any]):
         entry = {
@@ -42,9 +49,8 @@ class DebugLogger:
             "tool": tool_name,
             "arguments": arguments
         }
-        self.logs.append(entry)
+        self._append_log(entry)
         logger.info(f"Tool Call: {tool_name} with args {arguments}")
-        self._update_streamlit()
 
     def log_tool_result(self, tool_name: str, result: str):
         entry = {
@@ -52,14 +58,18 @@ class DebugLogger:
             "tool": tool_name,
             "result": result
         }
-        self.logs.append(entry)
+        self._append_log(entry)
         logger.info(f"Tool Result ({tool_name}): {result}")
-        self._update_streamlit()
 
-    def _update_streamlit(self):
-        if "debug_logs" not in st.session_state:
-            st.session_state.debug_logs = []
-        st.session_state.debug_logs = self.logs
+    def log_query_analysis(self, domain: str, query: str, result: Dict[str, Any]):
+        entry = {
+            "type": "Query Analysis",
+            "domain": domain,
+            "query": query,
+            "result": result
+        }
+        self._append_log(entry)
+        logger.info(f"Query Analysis ({domain}): {query} -> {json.dumps(result)}")
 
 # Global logger instance
 debug_logger = DebugLogger()
