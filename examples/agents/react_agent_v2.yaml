@@ -52,6 +52,11 @@ system_prompt: |
   - **Resolve First**: If name/relation is known but ID is missing -> `search_people` FIRST.
   - **Workflow**: "emails from John" -> `search_people("John")` -> Get ID -> `search_email("from [ID]")`.
 
+  ### Citations
+  - **Inline**: Use `[^i^]` for every fact retrieved.
+  - **List**: Add "References" section at end.
+  - **Format**: `[^i^] Title (Meta) [Type: <type>, ID: <id>]`
+
   ### Examples
   - User: "emails about fund Beta sent by Lisa?"
     Thought: Check emails for "Beta fund".

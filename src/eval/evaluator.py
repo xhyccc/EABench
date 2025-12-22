@@ -155,7 +155,7 @@ class Evaluator:
     def _parse_yaml_response(self, response_text: str) -> Dict[str, Any]:
         try:
             # Find code block
-            pattern = r"```(?:yaml)?(.*?)```"
+            pattern = r"```(?:yaml|json)?(.*?)```"
             match = re.search(pattern, response_text, re.DOTALL)
             if match:
                 clean_text = match.group(1)
@@ -171,26 +171,97 @@ class Evaluator:
             print(f"Error parsing YAML: {e}")
             return {}
 
-    async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
-        prompt = self.prompts["citation_relevance"].format(
-            query=query,
-            tool_calls=str(tool_calls),
-            response=response
-        )
+    def _fetch_entity_content(self, entity_type: str, entity_id: str) -> str:
+        tenant = self.search_engine.tenant
+        if not tenant:
+            return None
+            
+        entity_type = entity_type.lower().strip()
+        entity_id = entity_id.strip()
         
-        # Call LLM
-        messages = [{"role": "user", "content": prompt}]
-        try:
-            judgment = await self.judge_llm.get_completion(messages)
+        if entity_type == 'email':
+            for email in tenant.emails:
+                if email.id == entity_id:
+                    return f"Subject: {email.subject}\nBody: {email.body}"
+        elif entity_type == 'file':
+            # Assume ID is path
+            try:
+                return self.sandbox.read_file(entity_id)
+            except:
+                return None
+        elif entity_type == 'chat':
+            for chat in tenant.chats:
+                if chat.id == entity_id:
+                    return "\n".join([f"{m.from_user}: {m.content}" for m in chat.messages])
+        elif entity_type in ['group_chat', 'group chat']:
+             for gc in tenant.group_chats:
+                if gc.id == entity_id:
+                    return "\n".join([f"{m.from_user}: {m.content}" for m in gc.messages])
+        elif entity_type == 'channel':
+             for ch in tenant.channels:
+                if ch.id == entity_id:
+                    return "\n".join([f"{p.author}: {p.content}" for p in ch.posts])
+        elif entity_type == 'meeting':
+            for m in tenant.meetings:
+                if m.id == entity_id:
+                    content = f"Title: {m.title}\nAgenda: {m.agenda}"
+                    if m.transcript:
+                        content += f"\nTranscript: {m.transcript}"
+                    return content
+        
+        return None
+
+    async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
+        # Regex to extract citations
+        # Format: [^i^] <Title> (<Author>, <Date>) [Type: <type>, ID: <id>]
+        pattern = r"\[\^(\d+)\^\]\s+.*?\s+\[Type:\s+(.*?),\s+ID:\s+(.*?)\]"
+        matches = re.findall(pattern, response)
+        
+        if not matches:
+            return 0.0, "No structured citations found in the response."
             
-            # Parse YAML Score
-            data = self._parse_yaml_response(judgment)
-            score = float(data.get("score", 0.0))
-            explanation = data.get("explanation", "No explanation provided.")
+        total_score = 0.0
+        explanations = []
+        
+        for i, (cit_num, cit_type, cit_id) in enumerate(matches):
+            content = self._fetch_entity_content(cit_type, cit_id)
             
-            return score, explanation
-        except Exception as e:
-            return 0.0, f"Error in judgment: {e}"
+            if not content:
+                explanations.append(f"Citation {cit_num} (ID: {cit_id}): Content not found (Hallucination).")
+                continue 
+                
+            # Evaluate relevance
+            prompt = f"""
+            You are an evaluator. Determine if the cited content is relevant to the user's query.
+            
+            User Query: {query}
+            
+            Cited Content ({cit_type}):
+            {content[:3000]} 
+            
+            Task:
+            1. Is this content relevant to answering the query?
+            2. Assign a relevance score from 0.0 to 1.0.
+            
+            Output YAML:
+            score: <float>
+            reason: <string>
+            """
+            
+            messages = [{"role": "user", "content": prompt}]
+            try:
+                judgment = await self.judge_llm.get_completion(messages)
+                data = self._parse_yaml_response(judgment)
+                score = float(data.get("score", 0.0))
+                reason = data.get("reason", "No reason")
+                
+                total_score += score
+                explanations.append(f"Citation {cit_num}: {score} - {reason}")
+            except Exception as e:
+                explanations.append(f"Citation {cit_num}: Error evaluating - {e}")
+                
+        final_score = total_score / len(matches) if matches else 0.0
+        return final_score, "\n".join(explanations)
 
     async def _evaluate_assertions(self, query: str, response: str, assertions: List[Any]) -> Tuple[float, str, List[Dict[str, Any]]]:
         # Format assertions with IDs
