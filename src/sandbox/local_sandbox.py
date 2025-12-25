@@ -18,9 +18,10 @@ class LocalSandbox(SandboxInterface):
         if not self.tenant.data_path or not os.path.exists(self.tenant.data_path):
             return
 
-        # Copy all files from data_path to root_dir
-        # We use shutil.copytree with dirs_exist_ok=True to merge into the temp dir
-        shutil.copytree(self.tenant.data_path, self.root_dir, dirs_exist_ok=True)
+        # Copy all files from data_path to root_dir/data
+        # We want to preserve the 'data/' prefix in the sandbox so paths like 'data/docs/file.txt' work
+        dest_dir = os.path.join(self.root_dir, "data")
+        shutil.copytree(self.tenant.data_path, dest_dir, dirs_exist_ok=True)
 
     def stop(self):
         if self.root_dir and os.path.exists(self.root_dir):
@@ -48,9 +49,41 @@ class LocalSandbox(SandboxInterface):
             return str(e)
 
     def read_file(self, path: str) -> str:
-        full_path = self._resolve_path(path)
-        with open(full_path, "r") as f:
-            return f.read()
+        # 1. Try exact match
+        try:
+            full_path = self._resolve_path(path)
+            if os.path.exists(full_path) and os.path.isfile(full_path):
+                with open(full_path, "r") as f:
+                    return f.read()
+        except (ValueError, OSError):
+            pass
+
+        # 2. Fuzzy match: Search for files containing the path substring
+        matches = []
+        for root, _, files in os.walk(self.root_dir):
+            for file in files:
+                abs_path = os.path.join(root, file)
+                rel_path = os.path.relpath(abs_path, self.root_dir)
+                
+                if path in rel_path:
+                    matches.append(abs_path)
+        
+        if not matches:
+            raise FileNotFoundError(f"File not found: {path}")
+            
+        if len(matches) == 1:
+            with open(matches[0], "r") as f:
+                return f.read()
+                
+        # If multiple matches, try to find one that ends with the path (suffix match)
+        suffix_matches = [m for m in matches if os.path.relpath(m, self.root_dir).endswith(path)]
+        if len(suffix_matches) == 1:
+            with open(suffix_matches[0], "r") as f:
+                return f.read()
+                
+        # Still ambiguous
+        rel_matches = [os.path.relpath(m, self.root_dir) for m in matches]
+        raise FileNotFoundError(f"Ambiguous path '{path}'. Matches: {', '.join(rel_matches)}")
 
     def write_file(self, path: str, content: str):
         full_path = self._resolve_path(path)

@@ -431,3 +431,25 @@ async def search_people(query: list[str], search_engine: SearchEngine, query_ana
             results = await search_engine.search("users", q)
             all_results.append(f"Results for '{q}':\n{results}")
     return "\n\n".join(all_results)
+
+class SearchInFileInput(BaseModel):
+    file_path: str = Field(..., description="The path to the file to search in.")
+    key_terms: list[str] = Field(..., description="The list of key terms to search for.")
+
+@registry.register(name="search_in_file", args_schema=SearchInFileInput)
+def search_in_file(file_path: str, key_terms: list[str], sandbox: SandboxInterface) -> str:
+    """Searches for key terms in a specific file."""
+    try:
+        content = sandbox.read_file(file_path)
+    except Exception as e:
+        return f"Error reading file: {e}"
+    
+    found_terms = []
+    for term in key_terms:
+        if term.lower() in content.lower():
+            found_terms.append(term)
+            
+    if found_terms:
+        return f"Found terms: {', '.join(found_terms)}"
+    else:
+        return "No terms found."

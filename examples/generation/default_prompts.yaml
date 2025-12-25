@@ -1,0 +1,283 @@
+model_config:
+  provider: azure
+  model: gpt-4o
+  temperature: 0.7
+
+generate_users: |
+  You are a data generator for an enterprise simulation.
+  Based on the following company description, generate a list of users, their roles, and the organizational structure.
+
+  Company Name: {company_name}
+  Industry: {industry}
+  Size: {company_size}
+  Description: {description}
+
+  Output a JSON object with a list of "users". 
+  Ensure the hierarchy makes sense (e.g., CEO -> VP -> Manager -> IC).
+  Generate at least {num_users} users.
+  
+  CRITICAL: Use diverse, realistic, and modern names for users. 
+  Avoid generic names like "John Doe" or "Alice Smith". 
+  Use names like "Sarah Nguyen", "Sam Altman", "Omar Khan", "Elena Rodriguez", "Wei Chen", "Priya Patel", etc.
+  Vary the cultural backgrounds to reflect a global or modern diverse workforce.
+
+  CRITICAL: 
+  1. The "id" field MUST be the same as the "username" and the email alias (the part before @).
+  2. Assign each user to appropriate "groups" (e.g., "Executive", "Engineering", "Sales", "All Employees").
+  3. Include "location" (e.g., "New York", "London", "Remote") and "timezone" (e.g., "America/New_York").
+
+  IMPORTANT: Return ONLY valid JSON. No markdown formatting or explanations.
+
+  Example Output:
+  {{
+    "users": [
+      {{
+        "id": "snguyen",
+        "username": "snguyen",
+        "groups": ["Executive", "Board", "All Employees"],
+        "email": "snguyen@{domain}",
+        "name": {{
+          "display_name": "Sarah Nguyen",
+          "first_name": "Sarah",
+          "last_name": "Nguyen"
+        }},
+        "title": "CEO",
+        "department": "Executive",
+        "manager_id": null,
+        "skills": ["Leadership", "Strategy"],
+        "location": "San Francisco",
+        "timezone": "America/Los_Angeles"
+      }},
+      {{
+        "id": "okhan",
+        "username": "okhan",
+        "groups": ["Engineering", "Management", "All Employees"],
+        "email": "okhan@{domain}",
+        "name": {{
+          "display_name": "Omar Khan",
+          "first_name": "Omar",
+          "last_name": "Khan"
+        }},
+        "title": "VP of Engineering",
+        "department": "Engineering",
+        "manager_id": "snguyen",
+        "skills": ["Engineering Management", "Python"],
+        "location": "New York",
+        "timezone": "America/New_York"
+      }}
+    ]
+  }}
+
+generate_daily_story: |
+  You are a creative writer for an enterprise simulation.
+  Based on the company description, previous storyline, and key events, generate a list of minor events or a narrative for the current day.
+
+  Company Name: {company_name}
+  Description: {description}
+  Date: {date}
+  
+  Key Events (Milestones):
+  {key_events}
+
+  Previous Storyline (History):
+  {storyline_history}
+
+  Generate a short narrative or list of 3-5 specific minor events that happen on this day.
+  These events should drive the story forward towards the key events, or add realistic day-to-day noise.
+  
+  Output a JSON object with a "daily_events" list of strings.
+  
+  IMPORTANT: Return ONLY valid JSON.
+
+  Example Output:
+  {{
+    "daily_events": [
+      "The CEO announced a new strategic partnership.",
+      "The engineering team faced a minor bug in the login system.",
+      "Marketing team started brainstorming for the summer campaign."
+    ]
+  }}
+
+generate_email_summaries: |
+  You are a data generator. Based on the daily events, generate a list of email threads that would naturally occur.
+  
+  Current Scenario (Today's Events): {event_description}
+  Previous Storyline Context: {storyline_history}
+  Users: {users_context}
+  Date: {date}
+
+  Output a JSON list of email summaries. Each summary should have:
+  - id: unique string
+  - from_user: user_id
+  - to_users: list of user_ids
+  - cc_users: list of user_ids
+  - subject: string
+  - context_summary: string (brief description of what the email body should contain)
+  - timestamp: ISO 8601 string (on this date)
+
+  IMPORTANT: Return ONLY valid JSON.
+
+generate_email_content: |
+  You are a data generator. Generate the full body of an email based on the summary.
+  
+  Subject: {subject}
+  From: {from_user_name} ({from_user_title})
+  To: {to_users_names}
+  Context: {context_summary}
+  
+  Story Context: {storyline_history}
+
+  Write a realistic, professional (but potentially noisy) email body.
+  Include natural human elements like:
+  - Minor typos or informal language where appropriate.
+  - Requests for clarification or double-checking.
+  - References to previous discussions or meetings.
+  - "Sent from my iPhone" or similar signatures occasionally.
+
+  Output a JSON object:
+  {{
+    "body": "The full email body text..."
+  }}
+
+generate_chat_summaries: |
+  You are a data generator. Based on the daily events, generate a list of chat conversations (1:1 or group).
+
+  Current Scenario (Today's Events): {event_description}
+  Users: {users_context}
+  Date: {date}
+
+  Output a JSON list of chat summaries:
+  - type: "chat" or "group_chat"
+  - id: unique string
+  - name: string (for group chat)
+  - participants: list of user_ids
+  - context_summary: string (what they are discussing)
+
+  IMPORTANT: Return ONLY valid JSON.
+
+generate_chat_content: |
+  You are a data generator. Generate the messages for a chat conversation.
+
+  Participants: {participants_names}
+  Context: {context_summary}
+  Date: {date}
+
+  Write a realistic chat log.
+  - Use short messages, emojis, and quick exchanges.
+  - Include miscommunications, "did you see this?", "can you check?", etc.
+  - Timestamps should be sequential on the given date.
+
+  Output a JSON object:
+  {{
+    "messages": [
+      {{ "from_user": "user_id", "content": "message text", "timestamp": "ISO string" }}
+    ]
+  }}
+
+generate_meeting_summaries: |
+  You are a data generator. Generate a list of meetings for today.
+
+  Current Scenario (Today's Events): {event_description}
+  Users: {users_context}
+  Date: {date}
+
+  Output a JSON list of meeting summaries:
+  - id: unique string
+  - title: string
+  - organizer_id: user_id
+  - attendee_ids: list of user_ids
+  - start_time: ISO string
+  - end_time: ISO string
+  - location: string
+  - agenda: string
+  - context_summary: string (what happens in the meeting)
+
+  IMPORTANT: Return ONLY valid JSON.
+
+generate_meeting_transcript: |
+  You are a data generator. Generate a detailed transcript for a meeting.
+
+  Title: {title}
+  Agenda: {agenda}
+  Participants: {participants_names}
+  Context: {context_summary}
+
+  Write a realistic meeting transcript.
+  - Include dialogue with speaker names.
+  - Include interruptions, "can you hear me?", "let's take this offline", etc.
+  - Ensure the discussion covers the agenda but might veer off-topic.
+  - Include action items or conclusions at the end if relevant.
+
+  Output a JSON object:
+  {{
+    "transcript": "User1: Hi everyone...\nUser2: Hello..."
+  }}
+
+generate_meeting_chat: |
+  You are a data generator. Generate a chat log that occurred during a meeting.
+  This is the "side-bar" chat where participants share links, make quick comments, or say "brb".
+
+  Meeting Title: {title}
+  Participants: {participants_names}
+  Context: {context_summary}
+  Date: {date}
+
+  Write a realistic chat log.
+  - Include messages from participants.
+  - Include timestamps relative to the meeting start.
+  - Content can be related to the meeting or logistical (e.g., "I can't hear you", "Here is the link").
+
+  Output a JSON object:
+  {{
+    "messages": [
+      {{
+        "from_user": "user_id",
+        "content": "Can everyone see my screen?",
+        "timestamp": "2025-12-24T10:05:00Z"
+      }}
+    ]
+  }}
+
+generate_file_summaries: |
+  You are a data generator. Generate a list of files created or modified today.
+
+  Current Scenario (Today's Events): {event_description}
+  Users: {users_context}
+  Date: {date}
+
+  Output a JSON list of file summaries:
+  - path: string (e.g., data/docs/report.pdf) - MUST start with 'data/'
+  - created_by: user_id
+  - context_summary: string (what the file contains)
+  - snippet: string (a short 3-5 sentence preview of the file content)
+
+  IMPORTANT: Return ONLY valid JSON.
+
+generate_file_content: |
+  You are a data generator. Generate the content of a file.
+
+  Path: {path}
+  Author: {author_name}
+  Context: {context_summary}
+
+  Write the full content of the file (Markdown format preferred).
+  - Make it detailed and comprehensive.
+  - If it's a report, include sections, bullet points, and data.
+  - If it's code, include realistic code snippets.
+
+  Output a JSON object:
+  {{
+    "content": "# Title\n\nContent..."
+  }}
+
+generate_eval_cases: |
+  You are an evaluation expert. Based on the generated data (emails, chats, files, meetings), generate a set of evaluation cases (queries) to test an AI assistant.
+
+  Data Summary:
+  {data_summary}
+
+  Generate {num_cases} evaluation cases.
+  Output a JSON list of objects:
+  - query: string (the user's question)
+  - user_id: string (the user asking the question)
+  - assertions: list of strings (facts that must be present in the answer)

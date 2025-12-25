@@ -136,7 +136,7 @@ except Exception as e:
 
 # Sidebar - Navigation
 st.sidebar.title("Navigation")
-app_mode = st.sidebar.radio("Go to", ["Chat", "Evaluation", "Side-by-Side Comparison"])
+app_mode = st.sidebar.radio("Go to", ["Chat", "Evaluation", "Side-by-Side Comparison", "Data Generator"])
 
 # Sidebar - User Selection
 st.sidebar.title("Login")
@@ -727,4 +727,107 @@ elif app_mode == "Side-by-Side Comparison":
 
             except Exception as e:
                 st.error(f"Error running comparison: {e}")
+
+elif app_mode == "Data Generator":
+    st.title("Data Generator")
+    st.markdown("Generate a new test tenant based on a custom story.")
+
+    # Get available prompt configs
+    prompt_files = [f for f in os.listdir("examples/generation") if f.endswith(".yaml")]
+    default_prompt_index = 0
+    if "default_prompts.yaml" in prompt_files:
+        default_prompt_index = prompt_files.index("default_prompts.yaml")
+
+    with st.form("data_gen_form"):
+        col1, col2 = st.columns(2)
+        with col1:
+            company_name = st.text_input("Company Name", value="TechNova")
+            industry = st.text_input("Industry", value="Software")
+            company_size = st.selectbox("Company Size", ["small", "medium", "large"], index=1)
+            prompts_file = st.selectbox("Prompts Config", prompt_files, index=default_prompt_index)
+        
+        with col2:
+            duration_days = st.number_input("Duration (Days)", min_value=1, max_value=30, value=7)
+            # provider = st.selectbox("LLM Provider", ["openai", "azure"], index=0) # Removed in favor of yaml config
+        
+        key_events_str = st.text_area("Key Events (one per line)", value="Project Alpha Kickoff\nServer Outage Incident")
+        description = st.text_area("Description", value="A fast-paced software startup facing scaling challenges.")
+        
+        submitted = st.form_submit_button("Generate Tenant")
+
+    if submitted:
+        from src.generator.pipeline import DataGenerator
+        from src.generator.models import StoryConfig
+        
+        # Parse events
+        key_events = [e.strip() for e in key_events_str.split("\n") if e.strip()]
+        
+        story = StoryConfig(
+            company_name=company_name,
+            industry=industry,
+            company_size=company_size,
+            duration_days=duration_days,
+            key_events=key_events,
+            description=description
+        )
+        
+        # Initialize LLM for Generator (reuse global config logic or create new)
+        # We need to create a new LLM instance based on the selected provider in the form
+        # independent of the agent's LLM
+        
+        prompts_path = os.path.join("examples/generation", prompts_file)
+        with open(prompts_path, "r") as f:
+            prompts_config = yaml.safe_load(f)
+            
+        model_config = prompts_config.get("model_config", {})
+        final_provider = model_config.get("provider", "openai")
+        final_model = model_config.get("model")
+
+        if final_provider == "openai":
+            api_key = os.getenv("OPENAI_API_KEY")
+            if not api_key:
+                st.error("OPENAI_API_KEY not found in environment variables.")
+                st.stop()
+                
+            gen_llm = OpenAIProvider(
+                api_key=api_key,
+                base_url=os.getenv("OPENAI_BASE_URL") or os.getenv("OPENAI_API_BASE"),
+                model=final_model or os.getenv("OPENAI_MODEL", "gpt-4o")
+            )
+        else:
+            api_key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("AZURE_API_KEY")
+            endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_ENDPOINT")
+            deployment = final_model or os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME") or os.getenv("AZURE_DEPLOYMENT_NAME")
+            api_version = os.getenv("AZURE_OPENAI_API_VERSION") or os.getenv("AZURE_API_VERSION") or "2023-05-15"
+
+            if not api_key or not endpoint:
+                st.error("AZURE_OPENAI_API_KEY (or AZURE_API_KEY) and AZURE_OPENAI_ENDPOINT (or AZURE_ENDPOINT) are required.")
+                st.stop()
+            
+            if not deployment:
+                st.error("AZURE_OPENAI_DEPLOYMENT_NAME (or AZURE_DEPLOYMENT_NAME) is missing in .env and not specified in prompts yaml.")
+                st.stop()
+                
+            gen_llm = AzureOpenAIProvider(
+                api_key=api_key,
+                azure_endpoint=endpoint,
+                deployment_name=deployment,
+                api_version=api_version
+            )
+            
+        generator = DataGenerator(gen_llm, prompts_path=prompts_path)
+        
+        with st.spinner("Generating data... This may take a minute."):
+            try:
+                # Run async generation
+                output = asyncio.run(generator.generate_tenant(story))
+                
+                st.success("Generation Complete!")
+                st.write(f"**Tenant ID:** `{output.tenant_id}`")
+                st.write(f"**Path:** `{output.base_path}`")
+                st.write(f"**Summary:** {output.summary}")
+                st.info("Refresh the page to see the new tenant in the configuration sidebar.")
+                
+            except Exception as e:
+                st.error(f"Generation failed: {e}")
 

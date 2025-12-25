@@ -1,0 +1,700 @@
+- id: chat_002
+  participants:
+  - wchen
+  - okhan
+  messages:
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Hey Omar, we might have an issue \U0001F62C"
+    timestamp: '2025-12-21T10:03:12Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Morning, Wei! What\u2019s up?"
+    timestamp: '2025-12-21T10:03:36Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "I accidentally pushed untested code to production last night \U0001F613"
+    timestamp: '2025-12-21T10:04:10Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Wait, what? Untested? To prod? \U0001F62E"
+    timestamp: '2025-12-21T10:04:45Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Yeah... I didn\u2019t realize I was on the prod branch \U0001F614"
+    timestamp: '2025-12-21T10:05:01Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: What changes did you push? Any idea of the impact?
+    timestamp: '2025-12-21T10:05:27Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Mostly UI updates, but I didn\u2019t run all the tests. Could break\
+      \ some flows."
+    timestamp: '2025-12-21T10:05:49Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: Did you see any errors in the logs? Or user reports?
+    timestamp: '2025-12-21T10:06:10Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: I checked logs for like 10 mins. Nothing major. But can you double-check?
+    timestamp: '2025-12-21T10:06:35Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: Sure, let me pull up the logs. One sec.
+    timestamp: '2025-12-21T10:06:51Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: Wait... which repo? Main app or the admin panel?
+    timestamp: '2025-12-21T10:07:12Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Main app. Sorry, should\u2019ve mentioned that."
+    timestamp: '2025-12-21T10:07:25Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: Got it. Checking now. Hang tight.
+    timestamp: '2025-12-21T10:07:39Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Also, I\u2019ve drafted a rollback script just in case. Can you review\
+      \ it when you\u2019re done?"
+    timestamp: '2025-12-21T10:08:02Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Yeah, I\u2019ll look at it after the logs. \U0001F44D"
+    timestamp: '2025-12-21T10:08:17Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: Thanks. Sorry again for the mess.
+    timestamp: '2025-12-21T10:08:31Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "No worries. Let\u2019s just fix it. \U0001F60A"
+    timestamp: '2025-12-21T10:08:46Z'
+- id: chat_005
+  participants:
+  - snguyen
+  - okhan
+  messages:
+  - from_user: omar_khan
+    to_user: snguyen
+    content: "Hey Sarah, quick update on the server latency issue \U0001F680"
+    timestamp: '2025-12-21T10:32:12Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Morning! Oh good, what's the status? Still seeing delays on my end \U0001F615"
+    timestamp: '2025-12-21T10:33:08Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Yeah, so the engineering team implemented a patch late last night.
+    timestamp: '2025-12-21T10:33:45Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: But it looks like there are still some edge cases. Did you check the
+      latest logs?
+    timestamp: '2025-12-21T10:34:10Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: Not yet, let me pull them up. One sec!
+    timestamp: '2025-12-21T10:34:25Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: "\U0001F44D"
+    timestamp: '2025-12-21T10:34:30Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: Hmm, still seeing some spikes around 2:00 AM. Did the patch address the
+      DB queries?
+    timestamp: '2025-12-21T10:36:02Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Good question, I think so. Let me double-check with DevOps.
+    timestamp: '2025-12-21T10:36:38Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Cool. Also, did you see my email about the infrastructure audit? Need\
+      \ your input on one section. \U0001F4E7"
+    timestamp: '2025-12-21T10:37:12Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Oh, I missed that! When did you send it?
+    timestamp: '2025-12-21T10:37:30Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: 'Yesterday evening. Subject: ''Infra Audit Notes''.'
+    timestamp: '2025-12-21T10:37:50Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: "Gotcha, I'll check now. \u270B"
+    timestamp: '2025-12-21T10:38:05Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Thanks! Oh, and re: latency, should we escalate if it's not resolved\
+      \ by EOD? \U0001F552"
+    timestamp: '2025-12-21T10:38:48Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: "Yeah, absolutely. Let\u2019s give the patch some time and monitor. I\u2019\
+      ll ping you after I talk to DevOps."
+    timestamp: '2025-12-21T10:39:20Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Perfect. Talk soon! \U0001F596"
+    timestamp: '2025-12-21T10:39:38Z'
+- id: chat_006
+  participants:
+  - arodriguez
+  - epatel
+  messages:
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Hey Antonio, did you see the latest customer feedback? \U0001F62C"
+    timestamp: '2025-12-21T09:12:34Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Morning, Elena. Not yet, what's going on?
+    timestamp: '2025-12-21T09:13:02Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Lots of frustration about the service outages last week. They're asking\
+      \ for updates. \U0001F615"
+    timestamp: '2025-12-21T09:13:45Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Ugh, okay. Did we send out the email notice yet?
+    timestamp: '2025-12-21T09:14:10Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "I thought you were handling that? \U0001F914"
+    timestamp: '2025-12-21T09:14:35Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Wait, what? I thought you said you\u2019d draft it after the meeting\
+      \ on Friday. \U0001F605"
+    timestamp: '2025-12-21T09:15:01Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "No no, I was waiting for your input on the timeline details! Did you\
+      \ check the notes? \U0001F633"
+    timestamp: '2025-12-21T09:15:34Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Hold on... checking now. One sec.
+    timestamp: '2025-12-21T09:16:02Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Ah, okay, I see it now. My bad. I\u2019ll draft something and send it\
+      \ to you for review in 10 mins."
+    timestamp: '2025-12-21T09:17:21Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "\U0001F44D Cool, just make sure to emphasize the steps we\u2019re taking\
+      \ to prevent this in the future."
+    timestamp: '2025-12-21T09:17:45Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Got it. Will do. btw, did you see the email from Sarah about the new
+      customer FAQ?
+    timestamp: '2025-12-21T09:18:12Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: No, when did she send it?
+    timestamp: '2025-12-21T09:18:33Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Late last night. Check your inbox when you can. It\u2019s actually pretty\
+      \ good!"
+    timestamp: '2025-12-21T09:18:59Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Will do. Thanks! Let me know when the draft is ready. \U0001F64C"
+    timestamp: '2025-12-21T09:19:23Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Will do. Talk soon! \U0001F60A"
+    timestamp: '2025-12-21T09:19:40Z'
+- id: chat_004
+  participants:
+  - arodriguez
+  - epatel
+  messages:
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Hey, did you see the tweet? \U0001F62C"
+    timestamp: '2025-12-22T09:03:12Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: "Which one? \U0001F440"
+    timestamp: '2025-12-22T09:03:30Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "The one from @realKaraJ. It's blowing up. 15K likes already. \U0001F613"
+    timestamp: '2025-12-22T09:03:45Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: Oh wow. Let me check.
+    timestamp: '2025-12-22T09:04:02Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: "Yep. Saw it. That\u2019s... not great. Did PR flag this yet?"
+    timestamp: '2025-12-22T09:05:10Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Not yet. I think we need to get ahead of it. The outage last night was\
+      \ rough. \U0001F615"
+    timestamp: '2025-12-22T09:05:40Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: Agreed. Should we draft something together?
+    timestamp: '2025-12-22T09:06:00Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Yes. I\u2019ll start, give me 5 mins. Can you check if we have stats\
+      \ on resolution times?"
+    timestamp: '2025-12-22T09:06:20Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: On it. BRB.
+    timestamp: '2025-12-22T09:06:28Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Ok, here\u2019s a rough draft: \u2018We\u2019re aware some customers\
+      \ experienced outages last night. We apologize for the inconvenience and are\
+      \ working to ensure this doesn\u2019t happen again.\u2019 Thoughts?"
+    timestamp: '2025-12-22T09:12:45Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: "Looks good, but maybe add something about what we\u2019re doing now?\
+      \ Like immediate steps?"
+    timestamp: '2025-12-22T09:13:10Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Good call. Maybe \u2018...We\u2019ve identified the cause and are implementing\
+      \ fixes to prevent future issues.\u2019?"
+    timestamp: '2025-12-22T09:13:55Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: 'Perfect. Oh, and stats: average resolution time was 3 hours, 22 mins.'
+    timestamp: '2025-12-22T09:14:20Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Thanks! Wanna add that in? Like \u2018Most issues were resolved in under\
+      \ 4 hours.\u2019"
+    timestamp: '2025-12-22T09:14:45Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: Done. Sending to PR now?
+    timestamp: '2025-12-22T09:15:00Z'
+  - from_user: Elena Patel
+    to_user: arodriguez
+    content: "Yes. Forwarding now. Fingers crossed! \U0001F91E"
+    timestamp: '2025-12-22T09:15:20Z'
+  - from_user: Antonio Rodriguez
+    to_user: arodriguez
+    content: "\U0001F91E Let\u2019s hope they like it. Keep me posted."
+    timestamp: '2025-12-22T09:15:35Z'
+- id: chat_005
+  participants:
+  - okhan
+  - wchen
+  messages:
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Hey Wei, did you get a chance to look at the rollback issue? \U0001F9D0"
+    timestamp: '2025-12-22T10:02:15Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Morning! Yeah, I saw it. It\u2019s related to the config merge from\
+      \ last week, I think."
+    timestamp: '2025-12-22T10:03:07Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Oh, the one with the dependency overrides? \U0001F629"
+    timestamp: '2025-12-22T10:03:29Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Yep, that one. There\u2019s a conflict with how the auth service initializes\
+      \ now."
+    timestamp: '2025-12-22T10:03:44Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Did you see the errors in staging logs? Looks messy. \U0001F62C"
+    timestamp: '2025-12-22T10:04:05Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: Wait, staging? I was only looking at the dev environment logs. Hold on,
+      checking now.
+    timestamp: '2025-12-22T10:04:32Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Yeah, staging has like 20 warnings and 5 critical errors. Can you confirm\
+      \ if they\u2019re the same? \U0001F914"
+    timestamp: '2025-12-22T10:04:56Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Wait, where are you seeing 5 critical errors? I only see 3 in dev. \U0001F937\
+      \u200D\u2642\uFE0F"
+    timestamp: '2025-12-22T10:05:18Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Hmm, check the staging log from 9:30 AM. It\u2019s all there. I\u2019\
+      ll send you the link."
+    timestamp: '2025-12-22T10:05:45Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Got it. (brb while I dig through this mess \U0001F605)"
+    timestamp: '2025-12-22T10:06:12Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: No worries. Also, can you check if the rollback script is calling the
+      correct API version?
+    timestamp: '2025-12-22T10:06:40Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Oof, good point. I don\u2019t think it is. Let me confirm. Hang tight."
+    timestamp: '2025-12-22T10:07:08Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Yep, it\u2019s still pointing to v2 instead of v3. That\u2019s definitely\
+      \ part of the issue. \U0001F621"
+    timestamp: '2025-12-22T10:08:35Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Ugh, I knew it. Let\u2019s patch that first and test again."
+    timestamp: '2025-12-22T10:08:50Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "On it. We\u2019ll need to revalidate the auth flows after, though. \U0001F644"
+    timestamp: '2025-12-22T10:09:12Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Yeah, one thing at a time. Let me know when the patch is ready. \U0001F44D"
+    timestamp: '2025-12-22T10:09:32Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: Will do. Check back in 10 mins?
+    timestamp: '2025-12-22T10:09:48Z'
+  - from_user: omar.khan
+    to_user: okhan
+    content: "Cool. Ping me if anything explodes. \U0001F602"
+    timestamp: '2025-12-22T10:10:01Z'
+  - from_user: wei.chen
+    to_user: okhan
+    content: "Haha, fingers crossed. \U0001F91E"
+    timestamp: '2025-12-22T10:10:15Z'
+- id: 9i0j1k2l
+  participants:
+  - wchen
+  - okhan
+  messages:
+  - from_user: omar_khan
+    to_user: wchen
+    content: Hey Wei, about the rollback code bug... did you see my email earlier?
+    timestamp: '2025-12-23T09:15:34Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Morning! Yeah, I saw it, but I haven\u2019t had time to dig into it\
+      \ yet. What's your take? \U0001F41B"
+    timestamp: '2025-12-23T09:16:12Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: I think it's in the error handling logic. Something's off when retries
+      are triggered. Can you check line 247 in `rollback_utils.py`?
+    timestamp: '2025-12-23T09:16:45Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: Hmm, give me a sec...
+    timestamp: '2025-12-23T09:17:02Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Wait, line 247? I see a comment there, not code \U0001F914"
+    timestamp: '2025-12-23T09:17:34Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Ah, my bad! I meant line 274 \U0001F605"
+    timestamp: '2025-12-23T09:17:57Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: Lol, ok hold on... oh wow, yeah, that logic is messy. Looks like it skips
+      the final retry if a timeout happens mid-loop?
+    timestamp: '2025-12-23T09:18:45Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Exactly! That's what caused the issue in staging last week. \U0001F629"
+    timestamp: '2025-12-23T09:19:12Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: Did the tests not catch this? What about the edge case scenarios?
+    timestamp: '2025-12-23T09:19:45Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Nope, I don\u2019t think we have tests for that specific flow. Seems\
+      \ like a gap in the suite. \U0001F480"
+    timestamp: '2025-12-23T09:20:18Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Ugh, ok. We should probably review the test plan today. Can you send\
+      \ me the scenarios we\u2019re missing?"
+    timestamp: '2025-12-23T09:20:52Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Sure, I\u2019ll pull that up. Also, do you think we should prioritize\
+      \ fixing this before the holidays? \U0001F550"
+    timestamp: '2025-12-23T09:21:25Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: "Hmm, tough call. If we patch it quickly, it might be fine. But rushing\
+      \ before holidays... risky \U0001F62C"
+    timestamp: '2025-12-23T09:22:01Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "True. Let\u2019s sync with the team at 11 and get their input?"
+    timestamp: '2025-12-23T09:22:30Z'
+  - from_user: wei_chen
+    to_user: wchen
+    content: Good plan. Ping me if anything else comes up before then!
+    timestamp: '2025-12-23T09:22:50Z'
+  - from_user: omar_khan
+    to_user: wchen
+    content: "Will do. \U0001F44D"
+    timestamp: '2025-12-23T09:23:02Z'
+- id: 3m4n5o6p
+  participants:
+  - arodriguez
+  - epatel
+  messages:
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Hey Antonio, did you see the email from HorizonTech? \U0001F62C"
+    timestamp: '2025-12-23T09:02:13Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Morning, Elena. Which one? I just logged on. \U0001F4E8"
+    timestamp: '2025-12-23T09:03:01Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "The one from their COO. Subject line: 'URGENT: Service Disruption.'\
+      \ \U0001F613"
+    timestamp: '2025-12-23T09:03:48Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Yikes. Checking now. One sec.
+    timestamp: '2025-12-23T09:04:07Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Oh wow, this is bad. They\u2019re saying the outage lasted 4 hrs for\
+      \ their team??"
+    timestamp: '2025-12-23T09:05:23Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Yeah, and they want a full report by EOD. Can we pull logs for what\
+      \ happened on their end? \U0001F575\uFE0F\u200D\u2642\uFE0F"
+    timestamp: '2025-12-23T09:05:58Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "I\u2019ll ask DevOps. Hold on."
+    timestamp: '2025-12-23T09:06:12Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Actually, can you loop in Max? He might already have the logs ready.\
+      \ \U0001F5A5\uFE0F"
+    timestamp: '2025-12-23T09:06:54Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Good idea, sending him a message now. Did you see the part where they\
+      \ mentioned escalating to their legal team? \U0001F61F"
+    timestamp: '2025-12-23T09:07:35Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: Yeah, not great. We really need to smooth this over. Did we send their
+      team the emergency contact info like we promised last quarter?
+    timestamp: '2025-12-23T09:08:45Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "I think so? Let me double-check our records. BRB. \U0001F50D"
+    timestamp: '2025-12-23T09:09:12Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Thanks. I\u2019ll draft an initial response in the meantime. Do we offer\
+      \ them a SLA credit upfront or wait for their reply?"
+    timestamp: '2025-12-23T09:10:02Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Hmm, let's wait for now. Offering it upfront might make us look more\
+      \ at fault than we are. \U0001F914"
+    timestamp: '2025-12-23T09:10:47Z'
+  - from_user: antonio_rodriguez
+    to_user: arodriguez
+    content: "Got it. I\u2019ll keep it neutral then. Email draft coming your way\
+      \ in 10 mins."
+    timestamp: '2025-12-23T09:11:15Z'
+  - from_user: elena_patel
+    to_user: arodriguez
+    content: "Perfect. Thanks, Antonio. Let me know if you hear back from DevOps or\
+      \ Max. \U0001F64F"
+    timestamp: '2025-12-23T09:12:03Z'
+- id: 7q8r9s0t
+  participants:
+  - snguyen
+  - okhan
+  messages:
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: Hey Omar, quick update on the rollback?
+    timestamp: '2025-12-23T10:02:15Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: "Morning! Yeah, rollback is 90% done. Just verifying logs now. \U0001F44D"
+    timestamp: '2025-12-23T10:03:10Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: Great to hear. Did you check the API endpoints? Some were timing out
+      yesterday.
+    timestamp: '2025-12-23T10:03:45Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Not yet. Let me test those next. Which ones specifically?
+    timestamp: '2025-12-23T10:04:13Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: The payment and user auth ones. I can send you the logs if needed.
+    timestamp: '2025-12-23T10:04:30Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Yeah, send me the logs. Thanks!
+    timestamp: '2025-12-23T10:04:45Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Sent! Check your email. \U0001F4E7"
+    timestamp: '2025-12-23T10:05:01Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Got it. Looking now.
+    timestamp: '2025-12-23T10:05:15Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Wait, only seeing auth logs. Did you include the payment ones?
+    timestamp: '2025-12-23T10:06:05Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Oh shoot, missed those. Hold up. \U0001F605"
+    timestamp: '2025-12-23T10:06:20Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Resent\u2014should be in your inbox now."
+    timestamp: '2025-12-23T10:07:10Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Yep, got it. Thanks!
+    timestamp: '2025-12-23T10:07:35Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Payment API looks fine now. Auth still has some timeout errors, though.
+    timestamp: '2025-12-23T10:08:12Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: Hmm, timeout errors? Did you check the token refresh flow?
+    timestamp: '2025-12-23T10:08:40Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Not yet. Want me to focus on that next?
+    timestamp: '2025-12-23T10:09:02Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Yeah, let\u2019s prioritize that. Can you loop in DevOps if it looks\
+      \ like a server config issue?"
+    timestamp: '2025-12-23T10:09:25Z'
+  - from_user: omar_khan
+    to_user: snguyen
+    content: Will do. Might take me 30 mins or so to dig into it.
+    timestamp: '2025-12-23T10:09:50Z'
+  - from_user: sarah_nguyen
+    to_user: snguyen
+    content: "Sounds good. Let me know what you find. \U0001F64F"
+    timestamp: '2025-12-23T10:10:10Z'
+- id: 1u2v3w4x
+  participants:
+  - snguyen
+  - arodriguez
+  messages:
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "Antonio, did you see the email from the client? \U0001F633"
+    timestamp: '2025-12-23T09:03:12Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: Which one? Just got out of a meeting.
+    timestamp: '2025-12-23T09:04:01Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: The one from Mark at 8:47 AM. Huge complaint about the product delays.
+    timestamp: '2025-12-23T09:04:22Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: Wait, let me pull it up. One sec.
+    timestamp: '2025-12-23T09:04:40Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "Okay, but we need to act fast. He\u2019s asking for a call TODAY with\
+      \ the execs."
+    timestamp: '2025-12-23T09:05:02Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: "Just saw it. Wow. \U0001F62C Did we know the delays were this bad?"
+    timestamp: '2025-12-23T09:05:47Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "I didn\u2019t\u2026 but the ops team might\u2019ve. Can you check with\
+      \ them?"
+    timestamp: '2025-12-23T09:06:09Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: "Sure. I\u2019ll ping Emma. Hold on."
+    timestamp: '2025-12-23T09:06:22Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: Also, do we have an exec available for a call? Did you ask already?
+    timestamp: '2025-12-23T09:06:40Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: Not yet. Was waiting to confirm the situation first. Should I reach out
+      to Alex or Michelle?
+    timestamp: '2025-12-23T09:07:10Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: "Michelle for sure. She\u2019s better with client-facing stuff. \U0001F4DE"
+    timestamp: '2025-12-23T09:07:28Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "Okay, on it. I\u2019ll let you know once I hear back."
+    timestamp: '2025-12-23T09:07:50Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: "Emma just replied. She said they flagged the delay last week, but no\
+      \ one escalated it. \U0001F624"
+    timestamp: '2025-12-23T09:08:34Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "Ugh, unbelievable. We\u2019ll need to address that separately. First,\
+      \ let\u2019s fix this client issue."
+    timestamp: '2025-12-23T09:08:58Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: "Agreed. Let\u2019s get Michelle to confirm the call time, then prep\
+      \ talking points. Mark\u2019s not going to be happy. \U0001F62C"
+    timestamp: '2025-12-23T09:09:20Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "No kidding. Okay, I just emailed Michelle. Waiting for her reply. Refreshing\
+      \ my inbox every 5 secs. \U0001F602"
+    timestamp: '2025-12-23T09:09:45Z'
+  - from_user: Antonio Rodriguez
+    to_user: snguyen
+    content: LOL, same. Let me know the second she replies.
+    timestamp: '2025-12-23T09:10:06Z'
+  - from_user: Sarah Nguyen
+    to_user: snguyen
+    content: "Will do. Fingers crossed \U0001F91E"
+    timestamp: '2025-12-23T09:10:20Z'
