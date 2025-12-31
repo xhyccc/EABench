@@ -151,13 +151,32 @@ class DataGenerator:
         users_context = "\n".join([f"{u.id}: {u.profile.name.display_name} ({u.profile.title})" for u in users])
         start_date = datetime.datetime.now() - datetime.timedelta(days=story.duration_days)
         
-        storyline_history = []
+        long_history = []
+        recent_history = []
+        
+        # Log of all generation events
+        generation_log = []
         
         # Daily Simulation Loop
         for day in range(story.duration_days):
             current_date = start_date + datetime.timedelta(days=day)
             date_str = current_date.strftime("%Y-%m-%d")
             print(f"Simulating Day {day+1}/{story.duration_days}: {date_str}")
+
+            # Summarize history every 7 days (start of new week)
+            if day > 0 and day % 7 == 0:
+                print(f"Summarizing history for week ending {date_str}...")
+                summary_prompt = self.prompts['summarize_history'].format(
+                    recent_events="\n".join(recent_history)
+                )
+                summary_resp = await self.llm.get_completion([{"role": "user", "content": summary_prompt}])
+                summary_data = self._parse_json(summary_resp)
+                summary_text = summary_data.get("summary", "")
+                if summary_text:
+                    long_history.append(f"[Week ending {date_str}] {summary_text}")
+                
+                # Clear recent history for the new week
+                recent_history = []
             
             # 1. Generate Daily Story
             daily_prompt = self.prompts['generate_daily_story'].format(
@@ -165,7 +184,8 @@ class DataGenerator:
                 description=story.description,
                 date=date_str,
                 key_events="\n".join(story.key_events),
-                storyline_history="\n".join(storyline_history[-5:]) # Keep last 5 days context
+                long_history="\n".join(long_history),
+                recent_history="\n".join(recent_history)
             )
             
             daily_resp = await self.llm.get_completion([{"role": "user", "content": daily_prompt}])
@@ -177,16 +197,27 @@ class DataGenerator:
                 continue
                 
             # Update history
-            storyline_history.extend([f"[{date_str}] {e}" for e in daily_events])
+            recent_history.extend([f"[{date_str}] {e}" for e in daily_events])
             current_scenario = "\n".join(daily_events)
-            history_context = "\n".join(storyline_history[-10:]) # Pass more context to content generators
+            
+            # Log daily events
+            generation_log.append({
+                "date": date_str,
+                "type": "storyline",
+                "events": daily_events
+            })
+            
+            # Prepare context strings
+            long_history_str = "\n".join(long_history)
+            recent_history_str = "\n".join(recent_history)
 
             # 2. Generate Content based on Daily Events
             
             # --- Emails ---
             email_summary_prompt = self.prompts['generate_email_summaries'].format(
                 event_description=current_scenario,
-                storyline_history=history_context,
+                long_history=long_history_str,
+                recent_history=recent_history_str,
                 users_context=users_context,
                 date=date_str
             )
@@ -209,7 +240,8 @@ class DataGenerator:
                         from_user_title=from_title,
                         to_users_names=to_names,
                         context_summary=summary.get('context_summary'),
-                        storyline_history=history_context
+                        long_history=long_history_str,
+                        recent_history=recent_history_str
                     )
                     content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
                     content_data = self._parse_json(content_resp)
@@ -231,10 +263,25 @@ class DataGenerator:
                     
                     # Append to file
                     self._append_to_yaml(email_obj, os.path.join(base_path, "config", "emails.yaml"))
+                    
+                    # Log email generation
+                    generation_log.append({
+                        "date": date_str,
+                        "type": "email",
+                        "id": email_obj.id,
+                        "subject": email_obj.subject,
+                        "from": email_obj.from_user,
+                        "to": email_obj.to_users,
+                        "cc": email_obj.cc_users,
+                        "body": email_obj.body,
+                        "summary": summary.get('context_summary')
+                    })
 
             # --- Chats ---
             chat_summary_prompt = self.prompts['generate_chat_summaries'].format(
                 event_description=current_scenario,
+                long_history=long_history_str,
+                recent_history=recent_history_str,
                 users_context=users_context,
                 date=date_str
             )
@@ -249,6 +296,8 @@ class DataGenerator:
                     content_prompt = self.prompts['generate_chat_content'].format(
                         participants_names=participants_names,
                         context_summary=summary.get('context_summary'),
+                        long_history=long_history_str,
+                        recent_history=recent_history_str,
                         date=date_str
                     )
                     content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
@@ -287,6 +336,17 @@ class DataGenerator:
                         if messages:
                             print(f"First Msg: {messages[0]['content'][:250]}...")
                         self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "group_chats.yaml"))
+                        
+                        # Log group chat
+                        generation_log.append({
+                            "date": date_str,
+                            "type": "group_chat",
+                            "id": chat_obj.id,
+                            "name": chat_obj.name,
+                            "participants": chat_obj.participants,
+                            "messages": messages,
+                            "summary": summary.get('context_summary')
+                        })
                     else:
                         chat_obj = Chat(
                             id=summary.get('id'),
@@ -297,10 +357,22 @@ class DataGenerator:
                         if messages:
                             print(f"First Msg: {messages[0]['content'][:250]}...")
                         self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "chats.yaml"))
+                        
+                        # Log chat
+                        generation_log.append({
+                            "date": date_str,
+                            "type": "chat",
+                            "id": chat_obj.id,
+                            "participants": chat_obj.participants,
+                            "messages": messages,
+                            "summary": summary.get('context_summary')
+                        })
 
             # --- Meetings ---
             meeting_summary_prompt = self.prompts['generate_meeting_summaries'].format(
                 event_description=current_scenario,
+                long_history=long_history_str,
+                recent_history=recent_history_str,
                 users_context=users_context,
                 date=date_str
             )
@@ -316,7 +388,9 @@ class DataGenerator:
                         title=summary.get('title'),
                         agenda=summary.get('agenda'),
                         participants_names=participants_names,
-                        context_summary=summary.get('context_summary')
+                        context_summary=summary.get('context_summary'),
+                        long_history=long_history_str,
+                        recent_history=recent_history_str
                     )
                     transcript_resp = await self.llm.get_completion([{"role": "user", "content": transcript_prompt}])
                     transcript_data = self._parse_json(transcript_resp)
@@ -371,10 +445,25 @@ class DataGenerator:
                         print(f"Chat Preview: {len(meeting_obj.chat.messages)} messages")
                     
                     self._append_to_yaml(meeting_obj, os.path.join(base_path, "config", "meetings.yaml"))
+                    
+                    # Log meeting
+                    generation_log.append({
+                        "date": date_str,
+                        "type": "meeting",
+                        "id": meeting_obj.id,
+                        "title": meeting_obj.title,
+                        "organizer": meeting_obj.organizer,
+                        "attendees": meeting_obj.attendees,
+                        "transcript": meeting_obj.transcript,
+                        "chat_messages": meeting_chat_messages,
+                        "summary": summary.get('context_summary')
+                    })
             
             # --- Files ---
             file_summary_prompt = self.prompts['generate_file_summaries'].format(
                 event_description=current_scenario,
+                long_history=long_history_str,
+                recent_history=recent_history_str,
                 users_context=users_context,
                 date=date_str
             )
@@ -389,7 +478,9 @@ class DataGenerator:
                     content_prompt = self.prompts['generate_file_content'].format(
                         path=summary.get('path'),
                         author_name=author_name,
-                        context_summary=summary.get('context_summary')
+                        context_summary=summary.get('context_summary'),
+                        long_history=long_history_str,
+                        recent_history=recent_history_str
                     )
                     content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
                     content_data = self._parse_json(content_resp)
@@ -417,8 +508,214 @@ class DataGenerator:
                         snippet=summary.get('snippet') or summary.get('context_summary')
                     )
                     self._append_to_yaml(meta, os.path.join(base_path, "config", "files.yaml"))
+                    
+                    # Log file creation
+                    generation_log.append({
+                        "date": date_str,
+                        "type": "file",
+                        "path": path,
+                        "created_by": meta.created_by,
+                        "content": content,
+                        "summary": summary.get('context_summary')
+                    })
+
+        # Save generation log
+        with open(os.path.join(base_path, "generation_log.json"), "w") as f:
+            json.dump(generation_log, f, indent=2)
+        print(f"Generation log saved to {os.path.join(base_path, 'generation_log.json')}")
+
+        # Generate Eval Dataset
+        await self.generate_eval_dataset(tenant_id, base_path)
 
         return
+
+    async def generate_eval_dataset(self, tenant_id: str, base_path: str, num_queries: int = 200):
+        print(f"Generating evaluation dataset for {tenant_id}...")
+        
+        log_path = os.path.join(base_path, "generation_log.json")
+        if not os.path.exists(log_path):
+            print(f"Error: Generation log not found at {log_path}")
+            return
+
+        with open(log_path, "r") as f:
+            generation_log = json.load(f)
+
+        # Load users
+        tenant_config_path = os.path.join(base_path, "tenant.yaml")
+        users_context = ""
+        if os.path.exists(tenant_config_path):
+            with open(tenant_config_path, "r") as f:
+                tenant_data = yaml.safe_load(f)
+            users = tenant_data.get("users", [])
+            users_context = ", ".join([f"{u['id']} ({u['profile']['name']['display_name']})" for u in users])
+
+        eval_dataset = []
+        import random
+
+        # Filter items by type
+        emails = [x for x in generation_log if x['type'] == 'email']
+        meetings = [x for x in generation_log if x['type'] == 'meeting']
+        files = [x for x in generation_log if x['type'] == 'file']
+        chats = [x for x in generation_log if x['type'] in ['chat', 'group_chat']]
+        storyline = [x for x in generation_log if x['type'] == 'storyline']
+
+        # 1. Generate Search Queries (Target: ~40%)
+        # We process in batches to generate diverse queries
+        num_search = int(num_queries * 0.4)
+        print(f"Generating {num_search} search queries...")
+        
+        all_items = emails + meetings + files + chats
+        random.shuffle(all_items)
+        
+        batch_size = 10
+        for i in range(0, len(all_items), batch_size):
+            if len(eval_dataset) >= num_search:
+                break
+                
+            batch = all_items[i:i+batch_size]
+            # Create a simplified context for the prompt
+            items_context = []
+            for item in batch:
+                ctx = {
+                    "id": item.get('id') or item.get('path'),
+                    "type": item['type'],
+                    "date": item['date'],
+                    "summary": item.get('summary', '')
+                }
+                if item['type'] == 'email':
+                    ctx['from'] = item.get('from')
+                    ctx['subject'] = item.get('subject')
+                elif item['type'] == 'meeting':
+                    ctx['title'] = item.get('title')
+                    ctx['attendees'] = item.get('attendees')
+                elif item['type'] == 'file':
+                    ctx['path'] = item.get('path')
+                    ctx['created_by'] = item.get('created_by')
+                
+                items_context.append(ctx)
+            
+            prompt = self.prompts['generate_search_eval'].format(
+                num=5,
+                items_context=json.dumps(items_context, indent=2),
+                users_context=users_context
+            )
+            
+            resp = await self.llm.get_completion([{"role": "user", "content": prompt}])
+            queries = self._parse_json(resp)
+            
+            if isinstance(queries, list):
+                eval_dataset.extend(queries)
+
+        # 2. Generate Multi-hop Queries (Target: ~40%)
+        num_multihop = int(num_queries * 0.4)
+        print(f"Generating {num_multihop} multi-hop queries...")
+        
+        # Group events by date to find related sequences
+        events_by_date = {}
+        for item in generation_log:
+            if item['type'] == 'storyline': continue
+            d = item['date']
+            if d not in events_by_date: events_by_date[d] = []
+            events_by_date[d].append(item)
+            
+        dates = sorted(events_by_date.keys())
+        
+        for d in dates:
+            if len([q for q in eval_dataset if q.get('type') == 'multihop']) >= num_multihop:
+                break
+                
+            day_events = events_by_date[d]
+            if len(day_events) < 2: continue
+            
+            # Create context
+            events_context = []
+            for item in day_events:
+                events_context.append({
+                    "id": item.get('id') or item.get('path'),
+                    "type": item['type'],
+                    "summary": item.get('summary', '')
+                })
+                
+            prompt = self.prompts['generate_multihop_eval'].format(
+                num=3,
+                events_context=json.dumps(events_context, indent=2),
+                users_context=users_context
+            )
+            
+            resp = await self.llm.get_completion([{"role": "user", "content": prompt}])
+            queries = self._parse_json(resp)
+            
+            if isinstance(queries, list):
+                for q in queries:
+                    q['type'] = 'multihop' # Ensure type is set
+                    eval_dataset.append(q)
+
+        # 3. Generate Report Queries (Target: ~20%)
+        num_report = int(num_queries * 0.2)
+        print(f"Generating {num_report} report queries...")
+        
+        # Use storyline and major events
+        story_context = []
+        for item in storyline:
+            story_context.append(f"Date: {item['date']}\nEvents: {item['events']}")
+            
+        prompt = self.prompts['generate_report_eval'].format(
+            num=num_report,
+            context="\n\n".join(story_context),
+            users_context=users_context
+        )
+        
+        resp = await self.llm.get_completion([{"role": "user", "content": prompt}])
+        queries = self._parse_json(resp)
+        
+        if isinstance(queries, list):
+            for q in queries:
+                q['type'] = 'report'
+                eval_dataset.append(q)
+
+        # Post-process to add IDs and ensure structure
+        final_cases = []
+        for i, case in enumerate(eval_dataset):
+            # Ensure assertions is a list of objects with description if it's just strings
+            assertions = case.get('assertions', [])
+            formatted_assertions = []
+            for a in assertions:
+                if isinstance(a, str):
+                    formatted_assertions.append({"description": a})
+                else:
+                    formatted_assertions.append(a)
+
+            final_cases.append({
+                "id": f"case_{i+1:03d}",
+                "query": case.get('query'),
+                "user_id": case.get('user_id', 'unknown'),
+                "assertions": formatted_assertions,
+                "entity_list": case.get('entity_list', [])
+                # Keep other metadata if useful for debugging, but maybe not in final yaml if strict
+                # "type": case.get('type'),
+                # "target_ids": case.get('target_ids')
+            })
+
+        # Save Eval Dataset Log (JSON)
+        log_output_path = os.path.join(base_path, "eval_dataset_log.json")
+        with open(log_output_path, "w") as f:
+            json.dump(final_cases, f, indent=2)
+        print(f"Evaluation dataset log saved to {log_output_path}")
+
+        # Save Eval Dataset (YAML)
+        output_path = os.path.join(base_path, "eval_dataset.yaml")
+        
+        # Wrap in a structure similar to eval_set.yaml
+        eval_data = {
+            "name": f"Evaluation Set for {tenant_id}",
+            "description": "Generated evaluation queries covering search, multi-hop reasoning, and report generation.",
+            "cases": final_cases
+        }
+        
+        with open(output_path, "w") as f:
+            yaml.dump(eval_data, f, sort_keys=False, allow_unicode=True, width=1000)
+            
+        print(f"Generated {len(final_cases)} evaluation queries. Saved to {output_path}")
 
     async def _generate_eval_set(self, story: StoryConfig, tenant_config: TenantConfig, base_path: str):
         # Summarize data for the prompt

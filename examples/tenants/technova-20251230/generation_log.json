@@ -1,0 +1,737 @@
+[
+  {
+    "date": "2025-12-27",
+    "type": "storyline",
+    "events": [
+      "The IT team detected unusual traffic spikes, prompting an investigation into potential vulnerabilities ahead of the server crash.",
+      "A heated debate broke out during the product team meeting about finalizing the pricing structure for the upcoming product launch.",
+      "The customer support team reported a surge in user complaints related to intermittent app slowdowns, raising concerns about server capacity.",
+      "A junior developer accidentally pushed untested code to production, causing a brief system outage before a rollback was implemented.",
+      "The CEO sent out an all-hands email emphasizing the importance of teamwork and resilience as the company prepares for rapid scaling."
+    ]
+  },
+  {
+    "date": "2025-12-27",
+    "type": "email",
+    "id": "email_001",
+    "subject": "Urgent: Investigation into Traffic Spikes and Server Vulnerabilities",
+    "from": "okhan",
+    "to": [
+      "erodriguez",
+      "wchen"
+    ],
+    "summary": "The IT team has detected unusual traffic spikes that may be linked to potential vulnerabilities. We need to coordinate efforts to investigate and mitigate risks before any major incidents occur."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "email",
+    "id": "email_002",
+    "subject": "Follow-up: Pricing Structure Debate for Upcoming Launch",
+    "from": "wchen",
+    "to": [
+      "ppatel",
+      "snguyen"
+    ],
+    "summary": "A heated discussion occurred during the product team meeting regarding the pricing structure. Seeking additional input from sales and leadership to finalize the strategy before launch."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "email",
+    "id": "email_003",
+    "subject": "Action Required: System Outage Caused by Untested Code Push",
+    "from": "erodriguez",
+    "to": [
+      "okhan",
+      "wchen"
+    ],
+    "summary": "A junior developer accidentally pushed untested code, resulting in a brief outage. The code was rolled back, but we need to review procedures for development and deployment to prevent future incidents."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "email",
+    "id": "email_004",
+    "subject": "Escalation: User Complaints About App Slowdowns",
+    "from": "ppatel",
+    "to": [
+      "wchen"
+    ],
+    "summary": "Customer support has reported a surge in complaints related to intermittent app slowdowns. Possible server capacity issues\u2014requesting engineering and product teams to investigate and address."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "email",
+    "id": "email_005",
+    "subject": "All-Hands Reminder: Teamwork & Resilience as We Scale Rapidly",
+    "from": "snguyen",
+    "to": [
+      "okhan",
+      "erodriguez",
+      "wchen",
+      "ppatel"
+    ],
+    "summary": "Reiterating the importance of collaboration, resilience, and preparation as the company grows rapidly. Encouragement to align efforts across all teams during this critical period."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "group_chat",
+    "id": "chat1",
+    "name": "IT Team - Traffic Investigation",
+    "participants": [
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "Discussing unusual traffic spikes and investigating potential vulnerabilities ahead of the server crash."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "group_chat",
+    "id": "chat2",
+    "name": "Product Team - Pricing Debate",
+    "participants": [
+      "wchen",
+      "ppatel"
+    ],
+    "summary": "Debating the pricing structure for the upcoming product launch and trying to reach a consensus."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "group_chat",
+    "id": "chat3",
+    "name": "Customer Support - App Slowdowns",
+    "participants": [
+      "okhan",
+      "ppatel"
+    ],
+    "summary": "Addressing user complaints related to intermittent app slowdowns and raising concerns about server capacity."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "chat",
+    "id": "chat4",
+    "participants": [
+      "erodriguez",
+      "okhan"
+    ],
+    "summary": "Discussing the accidental push of untested code to production and steps taken for rollback and system recovery."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "group_chat",
+    "id": "chat5",
+    "name": "Company-wide Resilience",
+    "participants": [
+      "snguyen",
+      "okhan",
+      "wchen",
+      "erodriguez",
+      "ppatel"
+    ],
+    "summary": "Discussing the CEO's all-hands email emphasizing teamwork and resilience as the company prepares for rapid scaling."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "meeting",
+    "id": "meeting-001",
+    "title": "IT Security Investigation",
+    "organizer": "okhan",
+    "attendees": [
+      "okhan",
+      "erodriguez",
+      "wchen"
+    ],
+    "summary": "The IT team detected unusual traffic spikes, prompting an investigation into potential vulnerabilities."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "meeting",
+    "id": "meeting-002",
+    "title": "Product Pricing Debate",
+    "organizer": "wchen",
+    "attendees": [
+      "wchen",
+      "ppatel",
+      "snguyen"
+    ],
+    "summary": "A heated debate broke out about finalizing the pricing structure for the upcoming product launch."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "meeting",
+    "id": "meeting-003",
+    "title": "Customer Support Concerns",
+    "organizer": "ppatel",
+    "attendees": [
+      "ppatel",
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "The customer support team reported a surge in complaints related to intermittent app slowdowns, raising server capacity concerns."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "meeting",
+    "id": "meeting-004",
+    "title": "Code Rollback Review",
+    "organizer": "erodriguez",
+    "attendees": [
+      "erodriguez",
+      "okhan",
+      "snguyen"
+    ],
+    "summary": "A junior developer accidentally pushed untested code to production, causing a brief system outage before a rollback was implemented."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "meeting",
+    "id": "meeting-005",
+    "title": "All-Hands Resilience and Scaling",
+    "organizer": "snguyen",
+    "attendees": [
+      "snguyen",
+      "okhan",
+      "wchen",
+      "ppatel",
+      "erodriguez"
+    ],
+    "summary": "The CEO sent out an all-hands email emphasizing the importance of teamwork and resilience as the company prepares for rapid scaling."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "file",
+    "path": "data/logs/traffic_analysis_20251227.log",
+    "created_by": "erodriguez",
+    "summary": "Log file containing an analysis of unusual traffic spikes detected on 2025-12-27."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "file",
+    "path": "data/docs/product_pricing_strategy_20251227.pdf",
+    "created_by": "wchen",
+    "summary": "Document summarizing the heated debate and key points discussed during the product team meeting regarding pricing strategies."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "file",
+    "path": "data/reports/user_complaints_analysis_20251227.csv",
+    "created_by": "ppatel",
+    "summary": "Spreadsheet documenting the surge in user complaints related to app slowdowns on 2025-12-27."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "file",
+    "path": "data/code/rollback_notes_20251227.txt",
+    "created_by": "erodriguez",
+    "summary": "Text file detailing the rollback process after the accidental push of untested code to production."
+  },
+  {
+    "date": "2025-12-27",
+    "type": "file",
+    "path": "data/emails/all_hands_announcement_20251227.txt",
+    "created_by": "snguyen",
+    "summary": "Email sent by the CEO emphasizing teamwork and resilience ahead of rapid scaling plans."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "storyline",
+    "events": [
+      "The IT team discovered that the unusual traffic spikes were caused by a botnet attack, intensifying efforts to fortify server defenses.",
+      "A senior product manager expressed concerns about the rushed timeline for the new product launch, sparking a tense discussion in the leadership meeting.",
+      "The marketing team accidentally leaked a draft promotional video for the new product, resulting in mixed reactions on social media.",
+      "A key client threatened to cancel their contract after experiencing repeated app slowdowns, escalating pressure on the customer support team.",
+      "A junior engineer proposed an innovative solution to optimize server capacity, gaining unexpected support from a senior developer."
+    ]
+  },
+  {
+    "date": "2025-12-28",
+    "type": "email",
+    "id": "email_001",
+    "subject": "Urgent: Botnet Attack and Server Defense Updates",
+    "from": "okhan",
+    "to": [
+      "snguyen",
+      "erodriguez"
+    ],
+    "summary": "The IT team has confirmed that the unusual traffic spikes were caused by a botnet attack. This email provides details on the current mitigation strategies and requests approval for additional resources to bolster server defenses."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "email",
+    "id": "email_002",
+    "subject": "Concerns Regarding New Product Launch Timeline",
+    "from": "wchen",
+    "to": [
+      "snguyen",
+      "ppatel"
+    ],
+    "summary": "Following the leadership meeting, this email outlines concerns about the accelerated timeline for the upcoming product launch and proposes a revised schedule to address potential risks."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "email",
+    "id": "email_003",
+    "subject": "Action Plan: Marketing Video Leak and Social Media Reactions",
+    "from": "wchen",
+    "to": [
+      "snguyen"
+    ],
+    "summary": "This email discusses the accidental leak of the draft promotional video, its reception on social media, and the proposed steps to control the narrative and mitigate any negative fallout."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "email",
+    "id": "email_004",
+    "subject": "Client Escalation: Contract Cancellation Threat",
+    "from": "ppatel",
+    "to": [
+      "snguyen",
+      "okhan"
+    ],
+    "summary": "A critical client has threatened to cancel their contract due to repeated app slowdowns. This email details the issue, the client's feedback, and an urgent request for a resolution plan to retain the client."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "email",
+    "id": "email_005",
+    "subject": "Proposal: Junior Engineer's Server Optimization Solution",
+    "from": "erodriguez",
+    "to": [
+      "okhan"
+    ],
+    "summary": "This email highlights the innovative server optimization solution proposed by a junior engineer, summarizing its potential benefits and requesting approval to prototype and test the idea."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "group_chat",
+    "id": "chat_001",
+    "name": "IT Team Botnet Investigation",
+    "participants": [
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "Discussion about fortifying server defenses after discovering the botnet attack causing traffic spikes."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "group_chat",
+    "id": "chat_002",
+    "name": "Leadership Product Launch Review",
+    "participants": [
+      "snguyen",
+      "wchen",
+      "okhan"
+    ],
+    "summary": "Senior product manager's concerns about the rushed timeline for the new product launch leading to a tense discussion."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "group_chat",
+    "id": "chat_003",
+    "name": "Marketing Video Leak Fallout",
+    "participants": [
+      "wchen",
+      "ppatel"
+    ],
+    "summary": "Addressing the accidental leak of the draft promotional video and the mixed reactions on social media."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "group_chat",
+    "id": "chat_004",
+    "name": "Customer Escalation - App Slowdowns",
+    "participants": [
+      "ppatel",
+      "okhan",
+      "snguyen"
+    ],
+    "summary": "Urgent discussion about a key client's threat to cancel their contract due to repeated app slowdowns."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "chat",
+    "id": "chat_005",
+    "participants": [
+      "erodriguez",
+      "junior_engineer"
+    ],
+    "summary": "Senior developer expressing support for the junior engineer's innovative solution to optimize server capacity."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "meeting",
+    "id": "meeting1",
+    "title": "IT Team Strategy Session",
+    "organizer": "okhan",
+    "attendees": [
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "The IT team discovered that the unusual traffic spikes were caused by a botnet attack, prompting efforts to fortify server defenses."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "meeting",
+    "id": "meeting2",
+    "title": "Leadership Discussion on Product Launch Timeline",
+    "organizer": "snguyen",
+    "attendees": [
+      "snguyen",
+      "wchen"
+    ],
+    "summary": "A senior product manager expressed concerns about the rushed timeline for the new product launch, sparking a tense discussion in the leadership meeting."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "meeting",
+    "id": "meeting3",
+    "title": "Marketing Team Emergency Meeting",
+    "organizer": "snguyen",
+    "attendees": [
+      "snguyen",
+      "ppatel"
+    ],
+    "summary": "The marketing team accidentally leaked a draft promotional video for the new product, resulting in mixed reactions on social media."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "meeting",
+    "id": "meeting4",
+    "title": "Customer Retention Strategy Meeting",
+    "organizer": "ppatel",
+    "attendees": [
+      "ppatel",
+      "wchen"
+    ],
+    "summary": "A key client threatened to cancel their contract after experiencing repeated app slowdowns, escalating pressure on the customer support team."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "meeting",
+    "id": "meeting5",
+    "title": "Engineering Brainstorming Session",
+    "organizer": "erodriguez",
+    "attendees": [
+      "erodriguez",
+      "okhan"
+    ],
+    "summary": "A junior engineer proposed an innovative solution to optimize server capacity, gaining unexpected support from a senior developer."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "file",
+    "path": "data/reports/server_defense_plan_2025-12-28.pdf",
+    "created_by": "okhan",
+    "summary": "Detailed plan outlining strategies to fortify server defenses against the botnet attack."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "file",
+    "path": "data/meetings/product_launch_timeline_discussion_notes_2025-12-28.docx",
+    "created_by": "wchen",
+    "summary": "Meeting notes summarizing the discussion about the rushed timeline for the product launch."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "file",
+    "path": "data/media/draft_promotional_video_feedback_2025-12-28.txt",
+    "created_by": "erodriguez",
+    "summary": "Feedback and reactions to the accidentally leaked promotional video for the new product."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "file",
+    "path": "data/clients/key_client_issue_report_2025-12-28.pdf",
+    "created_by": "ppatel",
+    "summary": "Report detailing the issues faced by a key client experiencing repeated app slowdowns."
+  },
+  {
+    "date": "2025-12-28",
+    "type": "file",
+    "path": "data/engineering/server_optimization_proposal_2025-12-28.docx",
+    "created_by": "erodriguez",
+    "summary": "Proposal for optimizing server capacity, submitted by a junior engineer and supported by a senior developer."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "storyline",
+    "events": [
+      "The IT team implemented the junior engineer's optimization solution, leading to a temporary improvement in server performance but uncovering deeper issues with database queries.",
+      "A product team member accidentally shared an internal document discussing the pricing strategy for the new product, sparking speculation among competitors.",
+      "The customer support team received an influx of emails from users reporting issues with app notifications, adding to the strain on resources ahead of the server crash.",
+      "The CEO held an emergency meeting to address the botnet attack and reassured the team that external cybersecurity consultants will be brought in to assist.",
+      "A junior marketing associate suggested hosting a live Q&A session for the new product launch, receiving cautious approval but causing internal debate about its feasibility."
+    ]
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-001",
+    "subject": "Follow-Up on Database Query Issues",
+    "from": "okhan",
+    "to": [
+      "snguyen",
+      "erodriguez"
+    ],
+    "summary": "Discussion regarding deeper database query issues uncovered after implementing the junior engineer's optimization solution. Requesting prioritization of resources to address these issues."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-002",
+    "subject": "Urgent: Pricing Document Leak",
+    "from": "wchen",
+    "to": [
+      "snguyen",
+      "ppatel"
+    ],
+    "summary": "Addressing the accidental sharing of the internal pricing strategy document and outlining immediate steps to mitigate potential damage from competitor speculation."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-003",
+    "subject": "Competitor Response to Pricing Leak",
+    "from": "ppatel",
+    "to": [
+      "snguyen",
+      "wchen"
+    ],
+    "summary": "Sharing initial feedback from sales channels and clients regarding competitor speculation following the pricing strategy leak."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-004",
+    "subject": "Cybersecurity Consultant Engagement",
+    "from": "snguyen",
+    "to": [
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "Details about the external cybersecurity consultants being brought in to address the botnet attack and next steps for the IT team."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-005",
+    "subject": "Proposed Action Plan for Database Query Optimization",
+    "from": "erodriguez",
+    "to": [
+      "okhan"
+    ],
+    "summary": "Sharing a detailed plan to address the deeper database query issues that were identified, with an estimated timeline and resource requirements."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-006",
+    "subject": "Update on App Notification Issues",
+    "from": "okhan",
+    "to": [
+      "snguyen",
+      "wchen"
+    ],
+    "summary": "A summary of the influx of user complaints regarding app notifications and the IT team's current actions to resolve these issues before the server crash."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-007",
+    "subject": "Live Q&A Session Feasibility",
+    "from": "wchen",
+    "to": [
+      "snguyen"
+    ],
+    "summary": "Discussion about the potential benefits and risks of hosting a live Q&A session for the new product launch, following internal debate about its feasibility."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-008",
+    "subject": "Next Steps After Emergency Meeting",
+    "from": "snguyen",
+    "to": [
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "Reiteration of the outcomes from the emergency meeting about the botnet attack, including key priorities and deadlines for the IT team."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-009",
+    "subject": "Client Concerns About App Performance",
+    "from": "ppatel",
+    "to": [
+      "wchen"
+    ],
+    "summary": "Summary of key client concerns regarding recent app performance issues and suggestions to address their dissatisfaction before contracts are canceled."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "email",
+    "id": "email-010",
+    "subject": "Debugging Plan for Server Query Performance",
+    "from": "erodriguez",
+    "to": [
+      "okhan"
+    ],
+    "summary": "Proposing a timeline and team assignments for debugging deeper server query issues, emphasizing the urgency of resolving these problems before they escalate further."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "group_chat",
+    "id": "chat_001",
+    "name": "IT Team - Server Optimization",
+    "participants": [
+      "snguyen",
+      "okhan",
+      "erodriguez"
+    ],
+    "summary": "Discussion about the temporary improvement in server performance after implementing the junior engineer's solution and plans to address deeper database query issues."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "group_chat",
+    "id": "chat_002",
+    "name": "Product Team - Pricing Strategy Leak",
+    "participants": [
+      "snguyen",
+      "wchen"
+    ],
+    "summary": "Follow-up discussion regarding the accidental sharing of the internal pricing strategy document and its implications for the upcoming product launch."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "group_chat",
+    "id": "chat_003",
+    "name": "Customer Support - Notification Issues",
+    "participants": [
+      "snguyen",
+      "ppatel"
+    ],
+    "summary": "Addressing the influx of user emails about app notification issues and strategizing ways to manage customer concerns ahead of the server crash."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "group_chat",
+    "id": "chat_004",
+    "name": "Emergency Cybersecurity Meeting",
+    "participants": [
+      "snguyen",
+      "okhan",
+      "erodriguez",
+      "wchen"
+    ],
+    "summary": "Emergency discussion led by the CEO about the botnet attack, reassurance about hiring external cybersecurity consultants, and next steps to secure the system."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "chat",
+    "id": "chat_005",
+    "participants": [
+      "wchen",
+      "ppatel"
+    ],
+    "summary": "Private discussion about the feasibility of hosting a live Q&A session for the new product launch, following the junior marketing associate's suggestion."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "meeting",
+    "id": "meeting-001",
+    "title": "Emergency Meeting on Botnet Attack",
+    "organizer": "snguyen",
+    "attendees": [
+      "snguyen",
+      "okhan",
+      "erodriguez",
+      "wchen"
+    ],
+    "summary": "The CEO reassures the team about bringing in external cybersecurity consultants and sets priorities for immediate actions."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "meeting",
+    "id": "meeting-002",
+    "title": "Database Query Optimization Discussion",
+    "organizer": "okhan",
+    "attendees": [
+      "okhan",
+      "erodriguez",
+      "wchen"
+    ],
+    "summary": "Engineering team strategizes on resolving database inefficiencies after implementing the junior engineer's optimization solution."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "meeting",
+    "id": "meeting-003",
+    "title": "Pricing Strategy Review",
+    "organizer": "wchen",
+    "attendees": [
+      "wchen",
+      "ppatel"
+    ],
+    "summary": "The product team evaluates potential competitor responses and decides on communication strategies following the accidental leak."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "meeting",
+    "id": "meeting-004",
+    "title": "Customer Support Crisis Management",
+    "organizer": "ppatel",
+    "attendees": [
+      "ppatel",
+      "snguyen",
+      "wchen"
+    ],
+    "summary": "Customer support team discusses strategies to manage user complaints and alleviate resource strain caused by the server crash."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "meeting",
+    "id": "meeting-005",
+    "title": "New Product Launch Live Q&A Session Planning",
+    "organizer": "wchen",
+    "attendees": [
+      "wchen",
+      "snguyen",
+      "ppatel"
+    ],
+    "summary": "The team evaluates the pros and cons of the junior marketing associate's proposal for a live Q&A session, focusing on potential benefits and challenges."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "file",
+    "path": "data/docs/server_optimization_report.pdf",
+    "created_by": "erodriguez",
+    "summary": "Detailed analysis of the junior engineer's optimization solution and its impact on server performance."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "file",
+    "path": "data/docs/pricing_strategy_internal.pdf",
+    "created_by": "wchen",
+    "summary": "Internal document discussing pricing strategies for the upcoming product launch."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "file",
+    "path": "data/logs/app_notification_issues.log",
+    "created_by": "okhan",
+    "summary": "Log file documenting user reports about app notification issues received by the customer support team."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "file",
+    "path": "data/notes/emergency_meeting_summary.txt",
+    "created_by": "snguyen",
+    "summary": "Summary of the emergency meeting led by the CEO addressing the botnet attack."
+  },
+  {
+    "date": "2025-12-29",
+    "type": "file",
+    "path": "data/ideas/live_QA_session_proposal.md",
+    "created_by": "ppatel",
+    "summary": "Proposal document for hosting a live Q&A session as part of the new product launch strategy."
+  }
+]

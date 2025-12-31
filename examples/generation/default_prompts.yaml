@@ -79,8 +79,11 @@ generate_daily_story: |
   Key Events (Milestones):
   {key_events}
 
-  Previous Storyline (History):
-  {storyline_history}
+  Long-term History (Summarized):
+  {long_history}
+
+  Recent History (Last few days):
+  {recent_history}
 
   Generate a short narrative or list of 3-5 specific minor events that happen on this day.
   These events should drive the story forward towards the key events, or add realistic day-to-day noise.
@@ -98,11 +101,25 @@ generate_daily_story: |
     ]
   }}
 
+summarize_history: |
+  You are a historian for an enterprise simulation.
+  Summarize the following recent events into a concise paragraph that captures the key developments, decisions, and conflicts.
+  Discard minor noise unless it had a lasting impact.
+
+  Recent Events:
+  {recent_events}
+
+  Output a JSON object:
+  {{
+    "summary": "The engineering team successfully launched v2.0 despite initial server crashes..."
+  }}
+
 generate_email_summaries: |
   You are a data generator. Based on the daily events, generate a list of email threads that would naturally occur.
   
   Current Scenario (Today's Events): {event_description}
-  Previous Storyline Context: {storyline_history}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
   Users: {users_context}
   Date: {date}
 
@@ -125,7 +142,8 @@ generate_email_content: |
   To: {to_users_names}
   Context: {context_summary}
   
-  Story Context: {storyline_history}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
 
   Write a realistic, professional (but potentially noisy) email body.
   Include natural human elements like:
@@ -143,6 +161,8 @@ generate_chat_summaries: |
   You are a data generator. Based on the daily events, generate a list of chat conversations (1:1 or group).
 
   Current Scenario (Today's Events): {event_description}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
   Users: {users_context}
   Date: {date}
 
@@ -160,6 +180,8 @@ generate_chat_content: |
 
   Participants: {participants_names}
   Context: {context_summary}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
   Date: {date}
 
   Write a realistic chat log.
@@ -178,6 +200,8 @@ generate_meeting_summaries: |
   You are a data generator. Generate a list of meetings for today.
 
   Current Scenario (Today's Events): {event_description}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
   Users: {users_context}
   Date: {date}
 
@@ -201,6 +225,8 @@ generate_meeting_transcript: |
   Agenda: {agenda}
   Participants: {participants_names}
   Context: {context_summary}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
 
   Write a realistic meeting transcript.
   - Include dialogue with speaker names.
@@ -242,6 +268,8 @@ generate_file_summaries: |
   You are a data generator. Generate a list of files created or modified today.
 
   Current Scenario (Today's Events): {event_description}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
   Users: {users_context}
   Date: {date}
 
@@ -259,6 +287,8 @@ generate_file_content: |
   Path: {path}
   Author: {author_name}
   Context: {context_summary}
+  Long-term History: {long_history}
+  Recent History: {recent_history}
 
   Write the full content of the file (Markdown format preferred).
   - Make it detailed and comprehensive.
@@ -269,6 +299,101 @@ generate_file_content: |
   {{
     "content": "# Title\n\nContent..."
   }}
+
+generate_search_eval: |
+  You are an expert at testing enterprise search systems.
+  Below is a list of data items (emails, files, meetings).
+  Generate {num} complex search queries.
+  
+  Each query should:
+  1. Be natural language but imply specific constraints (time, author, type, keywords).
+  2. Be designed to find specific items or a small set of items.
+  3. NOT explicitly mention IDs.
+  4. Assign a realistic 'user_id' from the provided list who would likely ask this (e.g., a recipient of an email, or attendee of a meeting).
+
+  Users:
+  {users_context}
+
+  Data Items:
+  {items_context}
+
+  Output JSON:
+  [
+    {{
+      "query": "Find the PDF report about server crash from last week",
+      "user_id": "okhan",
+      "assertions": [
+        "Returns the file 'data/reports/crash.pdf'",
+        "Identifies the author as Omar Khan"
+      ],
+      "entity_list": [
+        {{ "entity_type": "file", "entity_id": "data/reports/crash.pdf" }}
+      ]
+    }}
+  ]
+
+generate_multihop_eval: |
+  You are an expert at testing AI assistants.
+  Below is a sequence of related events.
+  Generate {num} multi-hop reasoning queries.
+  
+  A multi-hop query requires the user to find information in one place to answer a question about another, or to trace a chain of events.
+  Example: "Who was the organizer of the meeting discussed in Sarah's email about 'Budget'?"
+  
+  Assign a realistic 'user_id' from the provided list.
+
+  Users:
+  {users_context}
+
+  Events:
+  {events_context}
+
+  Output JSON:
+  [
+    {{
+      "query": "...",
+      "user_id": "snguyen",
+      "assertions": [
+        "Identifies the email about 'Budget'",
+        "Identifies the meeting organizer as 'Jane Doe'"
+      ],
+      "entity_list": [
+        {{ "entity_type": "email", "entity_id": "email_1" }},
+        {{ "entity_type": "meeting", "entity_id": "meeting_2" }}
+      ]
+    }}
+  ]
+
+generate_report_eval: |
+  You are an expert at testing AI assistants.
+  Below is a summary of events for a specific topic or time period.
+  Generate {num} requests for comprehensive reports.
+
+  The query should ask for a summary, timeline, or analysis of a specific topic found in the text.
+  Assign a realistic 'user_id' from the provided list.
+
+  Users:
+  {users_context}
+
+  Context:
+  {context}
+
+  Output JSON:
+  [
+    {{
+      "query": "Write a briefing on the server crash incident, including the timeline and root cause.",
+      "user_id": "erodriguez",
+      "assertions": [
+        "Mentions the server crash on Dec 27",
+        "Identifies the root cause as untested code",
+        "Mentions the rollback"
+      ],
+      "entity_list": [
+        {{ "entity_type": "email", "entity_id": "email_3" }},
+        {{ "entity_type": "file", "entity_id": "data/code/rollback.txt" }}
+      ]
+    }}
+  ]
 
 generate_eval_cases: |
   You are an evaluation expert. Based on the generated data (emails, chats, files, meetings), generate a set of evaluation cases (queries) to test an AI assistant.
