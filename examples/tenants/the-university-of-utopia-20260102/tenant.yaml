@@ -1,0 +1,624 @@
+domain: the-university-of-utopia-20260102.com
+id: the-university-of-utopia-20260102
+resource_limits: {}
+users:
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: snguyen
+  profile:
+    department: Executive
+    email: snguyen@the-university-of-utopia-20260102.com
+    location: San Francisco
+    name:
+      display_name: Sarah Nguyen
+      first_name: Sarah
+      last_name: Nguyen
+    skills:
+    - Leadership
+    - Strategic Planning
+    - Higher Education
+    timezone: America/Los_Angeles
+    title: President & CEO
+  username: snguyen
+- groups:
+  - Finance
+  - Management
+  - All Employees
+  id: ppatel
+  profile:
+    department: Finance
+    email: ppatel@the-university-of-utopia-20260102.com
+    location: New York
+    manager_id: snguyen
+    name:
+      display_name: Priya Patel
+      first_name: Priya
+      last_name: Patel
+    skills:
+    - Financial Management
+    - Budgeting
+    - Higher Education Finance
+    timezone: America/New_York
+    title: Chief Financial Officer (CFO)
+  username: ppatel
+- groups:
+  - Academic Affairs
+  - Management
+  - All Employees
+  id: echen
+  profile:
+    department: Academic Affairs
+    email: echen@the-university-of-utopia-20260102.com
+    location: Boston
+    manager_id: snguyen
+    name:
+      display_name: Emily Chen
+      first_name: Emily
+      last_name: Chen
+    skills:
+    - Academic Leadership
+    - Curriculum Development
+    - Research
+    timezone: America/New_York
+    title: Provost and Chief Academic Officer
+  username: echen
+- groups:
+  - IT
+  - Management
+  - All Employees
+  id: okhan
+  profile:
+    department: IT
+    email: okhan@the-university-of-utopia-20260102.com
+    location: Remote
+    manager_id: snguyen
+    name:
+      display_name: Omar Khan
+      first_name: Omar
+      last_name: Khan
+    skills:
+    - IT Strategy
+    - Cybersecurity
+    - Cloud Computing
+    timezone: America/Chicago
+    title: Chief Information Officer (CIO)
+  username: okhan
+- groups:
+  - Student Affairs
+  - Management
+  - All Employees
+  id: arodriguez
+  profile:
+    department: Student Affairs
+    email: arodriguez@the-university-of-utopia-20260102.com
+    location: Austin
+    manager_id: snguyen
+    name:
+      display_name: Alejandro Rodriguez
+      first_name: Alejandro
+      last_name: Rodriguez
+    skills:
+    - Student Services
+    - Counseling
+    - Campus Life
+    timezone: America/Chicago
+    title: Vice President of Student Affairs
+  username: arodriguez
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: snguyen_2
+  profile:
+    department: Executive
+    email: snguyen_2@the-university-of-utopia-20260102.com
+    location: San Francisco
+    name:
+      display_name: Sarah Nguyen
+      first_name: Sarah
+      last_name: Nguyen
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: America/Los_Angeles
+    title: President
+  username: snguyen_2
+- groups:
+  - Finance
+  - All Employees
+  id: mgarcia
+  profile:
+    department: Finance
+    email: mgarcia@the-university-of-utopia-20260102.com
+    location: Miami
+    manager_id: snguyen
+    name:
+      display_name: Maria Garcia
+      first_name: Maria
+      last_name: Garcia
+    skills:
+    - Financial Management
+    - Budgeting
+    timezone: America/New_York
+    title: Chief Financial Officer
+  username: mgarcia
+- groups:
+  - Academic Affairs
+  - All Employees
+  id: jkim
+  profile:
+    department: Academic Affairs
+    email: jkim@the-university-of-utopia-20260102.com
+    location: Boston
+    manager_id: snguyen
+    name:
+      display_name: Jin Kim
+      first_name: Jin
+      last_name: Kim
+    skills:
+    - Academic Leadership
+    - Curriculum Development
+    timezone: America/New_York
+    title: Provost
+  username: jkim
+- groups:
+  - IT
+  - All Employees
+  id: achopra
+  profile:
+    department: IT
+    email: achopra@the-university-of-utopia-20260102.com
+    location: Seattle
+    manager_id: snguyen
+    name:
+      display_name: Ananya Chopra
+      first_name: Ananya
+      last_name: Chopra
+    skills:
+    - IT Strategy
+    - Cybersecurity
+    timezone: America/Los_Angeles
+    title: Chief Information Officer
+  username: achopra
+- groups:
+  - Student Affairs
+  - All Employees
+  id: aabdi
+  profile:
+    department: Student Affairs
+    email: aabdi@the-university-of-utopia-20260102.com
+    location: Chicago
+    manager_id: snguyen
+    name:
+      display_name: Amina Abdi
+      first_name: Amina
+      last_name: Abdi
+    skills:
+    - Student Engagement
+    - Conflict Resolution
+    timezone: America/Chicago
+    title: Dean of Students
+  username: aabdi
+- groups:
+  - Finance
+  - All Employees
+  id: kfernandez
+  profile:
+    department: Finance
+    email: kfernandez@the-university-of-utopia-20260102.com
+    location: Remote
+    manager_id: mgarcia
+    name:
+      display_name: Katherine Fernandez
+      first_name: Katherine
+      last_name: Fernandez
+    skills:
+    - Data Analysis
+    - Cost Management
+    timezone: America/New_York
+    title: Financial Analyst
+  username: kfernandez
+- groups:
+  - IT
+  - All Employees
+  id: dlobo
+  profile:
+    department: IT
+    email: dlobo@the-university-of-utopia-20260102.com
+    location: London
+    manager_id: achopra
+    name:
+      display_name: Dev Lobo
+      first_name: Dev
+      last_name: Lobo
+    skills:
+    - Network Administration
+    - Systems Management
+    timezone: Europe/London
+    title: Systems Administrator
+  username: dlobo
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: ltanaka
+  profile:
+    department: Finance
+    email: ltanaka@the-university-of-utopia-20260102.com
+    location: Tokyo
+    name:
+      display_name: Lina Tanaka
+      first_name: Lina
+      last_name: Tanaka
+    skills:
+    - Financial Strategy
+    - Risk Management
+    timezone: Asia/Tokyo
+    title: CFO
+  username: ltanaka
+- groups:
+  - Academic Affairs
+  - All Employees
+  id: dpatel
+  profile:
+    department: Academic Affairs
+    email: dpatel@the-university-of-utopia-20260102.com
+    location: London
+    name:
+      display_name: Devika Patel
+      first_name: Devika
+      last_name: Patel
+    skills:
+    - Economics
+    - Research
+    timezone: Europe/London
+    title: Professor of Economics
+  username: dpatel
+- groups:
+  - IT
+  - Engineering
+  - All Employees
+  id: jgarcia
+  profile:
+    department: IT
+    email: jgarcia@the-university-of-utopia-20260102.com
+    location: Remote
+    manager_id: ltanaka
+    name:
+      display_name: Javier Garcia
+      first_name: Javier
+      last_name: Garcia
+    skills:
+    - System Administration
+    - Network Security
+    timezone: America/Mexico_City
+    title: IT Systems Administrator
+  username: jgarcia
+- groups:
+  - Student Affairs
+  - All Employees
+  id: amalek
+  profile:
+    department: Student Affairs
+    email: amalek@the-university-of-utopia-20260102.com
+    location: Cairo
+    name:
+      display_name: Amira Malek
+      first_name: Amira
+      last_name: Malek
+    skills:
+    - Student Engagement
+    - Event Coordination
+    timezone: Africa/Cairo
+    title: Student Engagement Coordinator
+  username: amalek
+- groups:
+  - IT
+  - All Employees
+  id: wchen
+  profile:
+    department: IT
+    email: wchen@the-university-of-utopia-20260102.com
+    location: San Francisco
+    manager_id: jgarcia
+    name:
+      display_name: Wei Chen
+      first_name: Wei
+      last_name: Chen
+    skills:
+    - Software Development
+    - JavaScript
+    timezone: America/Los_Angeles
+    title: Junior Software Developer
+  username: wchen
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: sjohnson
+  profile:
+    department: Executive
+    email: sjohnson@the-university-of-utopia-20260102.com
+    location: Boston
+    name:
+      display_name: Samuel Johnson
+      first_name: Samuel
+      last_name: Johnson
+    skills:
+    - Leadership
+    - Strategy
+    timezone: America/New_York
+    title: President
+  username: sjohnson
+- groups:
+  - Finance
+  - Management
+  - All Employees
+  id: enavarro
+  profile:
+    department: Finance
+    email: enavarro@the-university-of-utopia-20260102.com
+    location: Madrid
+    manager_id: sjohnson
+    name:
+      display_name: Elena Navarro
+      first_name: Elena
+      last_name: Navarro
+    skills:
+    - Accounting
+    - Budgeting
+    timezone: Europe/Madrid
+    title: Director of Finance
+  username: enavarro
+- groups:
+  - Academic Affairs
+  - Management
+  - All Employees
+  id: msharma
+  profile:
+    department: Academic Affairs
+    email: msharma@the-university-of-utopia-20260102.com
+    location: Delhi
+    manager_id: sjohnson
+    name:
+      display_name: Meera Sharma
+      first_name: Meera
+      last_name: Sharma
+    skills:
+    - Curriculum Development
+    - Education Policy
+    timezone: Asia/Kolkata
+    title: Dean of Academic Affairs
+  username: msharma
+- groups:
+  - IT
+  - All Employees
+  id: ymukherjee
+  profile:
+    department: IT
+    email: ymukherjee@the-university-of-utopia-20260102.com
+    location: Remote
+    manager_id: sjohnson
+    name:
+      display_name: Yash Mukherjee
+      first_name: Yash
+      last_name: Mukherjee
+    skills:
+    - Technical Support
+    - System Administration
+    timezone: Asia/Kolkata
+    title: IT Support Specialist
+  username: ymukherjee
+- groups:
+  - Student Affairs
+  - All Employees
+  id: ckwong
+  profile:
+    department: Student Affairs
+    email: ckwong@the-university-of-utopia-20260102.com
+    location: Hong Kong
+    manager_id: sjohnson
+    name:
+      display_name: Chloe Kwong
+      first_name: Chloe
+      last_name: Kwong
+    skills:
+    - Counseling
+    - Student Engagement
+    timezone: Asia/Hong_Kong
+    title: Student Counselor
+  username: ckwong
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mabdul
+  profile:
+    department: Executive
+    email: mabdul@the-university-of-utopia-20260102.com
+    location: London
+    name:
+      display_name: Mariam Abdul
+      first_name: Mariam
+      last_name: Abdul
+    skills:
+    - Finance Strategy
+    - Leadership
+    timezone: Europe/London
+    title: Chief Financial Officer
+  username: mabdul
+- groups:
+  - Finance
+  - All Employees
+  id: tsingh
+  profile:
+    department: Finance
+    email: tsingh@the-university-of-utopia-20260102.com
+    location: New York
+    manager_id: mabdul
+    name:
+      display_name: Tanveer Singh
+      first_name: Tanveer
+      last_name: Singh
+    skills:
+    - Budget Analysis
+    - Forecasting
+    timezone: America/New_York
+    title: Financial Analyst
+  username: tsingh
+- groups:
+  - IT
+  - All Employees
+  id: dlopez
+  profile:
+    department: IT
+    email: dlopez@the-university-of-utopia-20260102.com
+    location: San Francisco
+    name:
+      display_name: Diego Lopez
+      first_name: Diego
+      last_name: Lopez
+    skills:
+    - Network Infrastructure
+    - Team Management
+    timezone: America/Los_Angeles
+    title: IT Manager
+  username: dlopez
+- groups:
+  - Academic Affairs
+  - All Employees
+  id: lmatsuda
+  profile:
+    department: Academic Affairs
+    email: lmatsuda@the-university-of-utopia-20260102.com
+    location: Tokyo
+    name:
+      display_name: Lila Matsuda
+      first_name: Lila
+      last_name: Matsuda
+    skills:
+    - Curriculum Development
+    - Student Counseling
+    timezone: Asia/Tokyo
+    title: Academic Advisor
+  username: lmatsuda
+- groups:
+  - Student Affairs
+  - All Employees
+  id: jpark
+  profile:
+    department: Student Affairs
+    email: jpark@the-university-of-utopia-20260102.com
+    location: Seoul
+    name:
+      display_name: Jin Park
+      first_name: Jin
+      last_name: Park
+    skills:
+    - Student Engagement
+    - Event Coordination
+    timezone: Asia/Seoul
+    title: Student Affairs Officer
+  username: jpark
+- groups:
+  - IT
+  - All Employees
+  id: knguyen
+  profile:
+    department: IT
+    email: knguyen@the-university-of-utopia-20260102.com
+    location: Remote
+    manager_id: dlopez
+    name:
+      display_name: Khoa Nguyen
+      first_name: Khoa
+      last_name: Nguyen
+    skills:
+    - System Maintenance
+    - Cloud Computing
+    timezone: America/Chicago
+    title: System Administrator
+  username: knguyen
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: aramirez
+  profile:
+    department: Executive
+    email: aramirez@the-university-of-utopia-20260102.com
+    location: Remote
+    name:
+      display_name: Amara Ramirez
+      first_name: Amara
+      last_name: Ramirez
+    skills:
+    - Financial Strategy
+    - Budgeting
+    - Risk Management
+    timezone: America/Chicago
+    title: Chief Financial Officer
+  username: aramirez
+- groups:
+  - IT
+  - Management
+  - All Employees
+  id: wcheng
+  profile:
+    department: IT
+    email: wcheng@the-university-of-utopia-20260102.com
+    location: New York
+    manager_id: aramirez
+    name:
+      display_name: Wei Cheng
+      first_name: Wei
+      last_name: Cheng
+    skills:
+    - Cloud Computing
+    - Cybersecurity
+    - Team Management
+    timezone: America/New_York
+    title: Director of IT
+  username: wcheng
+- groups:
+  - Student Affairs
+  - All Employees
+  id: aadebayo
+  profile:
+    department: Student Affairs
+    email: aadebayo@the-university-of-utopia-20260102.com
+    location: London
+    manager_id: wcheng
+    name:
+      display_name: Afolabi Adebayo
+      first_name: Afolabi
+      last_name: Adebayo
+    skills:
+    - Counseling
+    - Conflict Resolution
+    - Wellness Programs
+    timezone: Europe/London
+    title: Student Wellness Coordinator
+  username: aadebayo
+- groups:
+  - Finance
+  - All Employees
+  id: kfernandez_6
+  profile:
+    department: Finance
+    email: kfernandez_6@the-university-of-utopia-20260102.com
+    location: San Francisco
+    manager_id: aramirez
+    name:
+      display_name: Karla Fernandez
+      first_name: Karla
+      last_name: Fernandez
+    skills:
+    - Financial Analysis
+    - Data Reporting
+    - Forecasting
+    timezone: America/Los_Angeles
+    title: Senior Financial Analyst
+  username: kfernandez_6

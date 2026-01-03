@@ -1,0 +1,3954 @@
+[
+  {
+    "id": "case_001",
+    "query": "What was the meeting about the parking fee increase leak that involved Priya and other finance team members last month?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Leaked Parking Fee Increase Discussion'"
+      },
+      {
+        "description": "Filters by date (last month) and attendees including Priya Patel"
+      },
+      {
+        "description": "Ensures the discussion summary matches the parking fee increase topic"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_002",
+    "query": "Can you find the internal document about the Humanities dean possibly resigning that was created by Emily?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Returns the file 'humanities_dean_resignation_rumors_20251221.pdf'"
+      },
+      {
+        "description": "Filters by author as Emily Chen"
+      },
+      {
+        "description": "Ensures the topic is about the dean's resignation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/humanities_dean_resignation_rumors_20251221.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_003",
+    "query": "Which group chat from the end of last year discussed how to encourage alumni donations to meet the $500,000 fundraising goal?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Returns the group chat summary about alumni fundraising campaigns"
+      },
+      {
+        "description": "Filters by date (end of 2025)"
+      },
+      {
+        "description": "Ensures the discussion aligns with donation strategies and the $500,000 goal"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat1"
+      }
+    ]
+  },
+  {
+    "id": "case_004",
+    "query": "What recent chat discussed supporting students during activist events and budget cuts?",
+    "user_id": "sjohnson",
+    "assertions": [
+      {
+        "description": "Returns the chat from January 1, 2026, about student activism and budget cuts"
+      },
+      {
+        "description": "Filters by topic including student events and academic integrity"
+      },
+      {
+        "description": "Ensures the date aligns with 'recent' (early 2026)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_007"
+      }
+    ]
+  },
+  {
+    "id": "case_005",
+    "query": "Can you find the chat about restoring the IT system after the outage that happened earlier this month?",
+    "user_id": "knguyen",
+    "assertions": [
+      {
+        "description": "Returns the group chat summary about IT system restoration"
+      },
+      {
+        "description": "Filters by date (early December 2025)"
+      },
+      {
+        "description": "Ensures the topic aligns with the outage restoration"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_006"
+      }
+    ]
+  },
+  {
+    "id": "case_006",
+    "query": "Can you find the email about logistics for the candlelight vigil sent last week?",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Addressing Candlelight Vigil Logistics' from Alejandro Rodriguez"
+      },
+      {
+        "description": "Matches the date constraint of being sent last week"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      }
+    ]
+  },
+  {
+    "id": "case_007",
+    "query": "Show me the details of the IT system recovery meeting that happened earlier this week.",
+    "user_id": "ymukherjee",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Emergency IT System Recovery Meeting' attended by Yash Mukherjee"
+      },
+      {
+        "description": "Filters by the date constraint of earlier this week"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_008",
+    "query": "I need the chat about addressing alumni concerns regarding scholarship cuts from the middle of December.",
+    "user_id": "aabdi",
+    "assertions": [
+      {
+        "description": "Returns the chat summarizing a one-on-one conversation about scholarship cuts"
+      },
+      {
+        "description": "Matches the date constraint of mid-December"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_002"
+      }
+    ]
+  },
+  {
+    "id": "case_009",
+    "query": "Find the chat about coordinating efforts for student protests earlier this month.",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Returns the chat about student engagement efforts in response to protests"
+      },
+      {
+        "description": "Filters by the date constraint of early December"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      }
+    ]
+  },
+  {
+    "id": "case_010",
+    "query": "Locate the chat discussing the formal budget restructuring proposal from December 22.",
+    "user_id": "dpatel",
+    "assertions": [
+      {
+        "description": "Returns the chat summarizing collaboration on a budget restructuring proposal"
+      },
+      {
+        "description": "Matches the specific date of December 22"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_010"
+      }
+    ]
+  },
+  {
+    "id": "case_011",
+    "query": "Find the meeting about the department merger clause review that happened right after Christmas.",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Department Merger Clause Review'."
+      },
+      {
+        "description": "The meeting date is December 26, 2025."
+      },
+      {
+        "description": "Emily Chen is listed as an attendee."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_012",
+    "query": "Locate the email sent by Amina Abdi about support for students during the budget crisis.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Support for Students Affected by Recent Events'."
+      },
+      {
+        "description": "The email is sent by Amina Abdi."
+      },
+      {
+        "description": "The email date is December 23, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_013",
+    "query": "Find the leaked email file discussing the merger of underperforming departments from Christmas Eve.",
+    "user_id": "dpatel",
+    "assertions": [
+      {
+        "description": "Returns the file with the path 'data/emails/leaked_department_merger_discussion.txt'."
+      },
+      {
+        "description": "The file date is December 24, 2025."
+      },
+      {
+        "description": "The file discusses merging underperforming departments."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/emails/leaked_department_merger_discussion.txt"
+      }
+    ]
+  },
+  {
+    "id": "case_014",
+    "query": "Show the group chat from late December about IT security addressing unauthorized server access attempts.",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Returns the group chat summary about IT security and unauthorized server access."
+      },
+      {
+        "description": "The chat date is December 29, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_006"
+      }
+    ]
+  },
+  {
+    "id": "case_015",
+    "query": "Find the chat discussing student engagement activities and plans for the upcoming campus rally.",
+    "user_id": "ymukherjee",
+    "assertions": [
+      {
+        "description": "Returns the chat summary about student engagement and the campus rally."
+      },
+      {
+        "description": "The chat date is December 15, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      }
+    ]
+  },
+  {
+    "id": "case_016",
+    "query": "Find the email sent by Omar Khan about urgent funding needs for server issues, around late December 2025.",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Critical Campus Server Issues and Funding Needs'."
+      },
+      {
+        "description": "The sender is Omar Khan, and the email date is December 27, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      }
+    ]
+  },
+  {
+    "id": "case_017",
+    "query": "Locate the document summarizing the graduate student crowdfunding campaign for scholarships, created at the end of December 2025.",
+    "user_id": "jpark",
+    "assertions": [
+      {
+        "description": "Returns the file 'graduate_students_crowdfunding_campaign_summary.pdf'."
+      },
+      {
+        "description": "The file was created on December 31, 2025, and authored by Jin Park."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/fundraising/graduate_students_crowdfunding_campaign_summary.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_018",
+    "query": "Get the email from Devika Patel discussing faculty concerns about leadership instability and budget issues, dated just before the new year.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Faculty Concerns Over Leadership and Budget Management'."
+      },
+      {
+        "description": "The sender is Devika Patel, and the email date is December 30, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      }
+    ]
+  },
+  {
+    "id": "case_019",
+    "query": "Find the meeting notes from the discussion about the student sit-in at the administration building. This meeting happened in mid-December 2025.",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Student Sit-In Response Planning'."
+      },
+      {
+        "description": "The meeting attendees include Alejandro Rodriguez and Amina Abdi, and the date is December 11, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting2"
+      }
+    ]
+  },
+  {
+    "id": "case_020",
+    "query": "Show me the group chat discussion from early December 2025 about network outages and restoring access to academic resources.",
+    "user_id": "ckwong",
+    "assertions": [
+      {
+        "description": "Returns the group chat summary analyzing causes of the partial network outage."
+      },
+      {
+        "description": "The chat date is December 10, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_002"
+      }
+    ]
+  },
+  {
+    "id": "case_021",
+    "query": "Can you locate the email sent by Amira Malek on Christmas about mental health support for students?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Student Mental Health Support Amid Protests'"
+      },
+      {
+        "description": "Filters by author 'amalek' and date '2025-12-25'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_022",
+    "query": "Find the security vulnerability report document created by Dev Lobo at the end of December.",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/it/security_vulnerability_report.pdf'"
+      },
+      {
+        "description": "Filters by creator 'dlobo' and date '2025-12-31'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/it/security_vulnerability_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_023",
+    "query": "Show me the group chat from early December where the IT department discussed technical support for faculty events and protests.",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Returns the group chat from '2025-12-03'"
+      },
+      {
+        "description": "Filters by keywords 'technical support' and 'protests'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_008"
+      }
+    ]
+  },
+  {
+    "id": "case_024",
+    "query": "Could you find the alumni group chat from mid-December discussing their statement about the administration's handling of the financial crisis?",
+    "user_id": "enavarro",
+    "assertions": [
+      {
+        "description": "Returns the group chat with ID 'alumni_statement_20251211'"
+      },
+      {
+        "description": "Filters by date '2025-12-11' and keywords 'alumni association', 'financial crisis'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "alumni_statement_20251211"
+      }
+    ]
+  },
+  {
+    "id": "case_025",
+    "query": "Locate the follow-up email from Ananya Chopra sent right after Christmas about IT infrastructure issues.",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Follow-Up on IT Infrastructure Crisis'"
+      },
+      {
+        "description": "Filters by author 'achopra' and date '2025-12-26'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      }
+    ]
+  },
+  {
+    "id": "case_026",
+    "query": "Show me the email sent by Mariam Abdul about the alumni coalition donations update just before the holidays.",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Alumni Coalition Donations Update'"
+      },
+      {
+        "description": "The email is authored by mabdul"
+      },
+      {
+        "description": "The date of the email is near the holidays, specifically December 21, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      }
+    ]
+  },
+  {
+    "id": "case_027",
+    "query": "Find the email Alejandro Rodriguez sent about security measures for campus events after the anonymous threat.",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Coordination for Increased Campus Security Presence'"
+      },
+      {
+        "description": "The email is authored by arodriguez"
+      },
+      {
+        "description": "The summary mentions tensions during events and an anonymous threat"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      }
+    ]
+  },
+  {
+    "id": "case_028",
+    "query": "Locate the group chat discussing strategies to maximize alumni donations before the matching pledge deadline.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the group chat from December 19, 2025"
+      },
+      {
+        "description": "The summary mentions surpassing $300,000 in donations and strategies to maximize contributions"
+      },
+      {
+        "description": "The type of the item is specified as a group_chat"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_004"
+      }
+    ]
+  },
+  {
+    "id": "case_029",
+    "query": "Find the email Alejandro Rodriguez sent about supporting students during the campus rally earlier this month.",
+    "user_id": "mabdul",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Support for Students During Protest'"
+      },
+      {
+        "description": "The email is authored by arodriguez"
+      },
+      {
+        "description": "The date of the email is December 3, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_030",
+    "query": "Search for the chat discussing the budget shortfall caused by the accounting error in the finance department.",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Returns the chat from December 3, 2025"
+      },
+      {
+        "description": "The summary mentions an accounting error and budget shortfall"
+      },
+      {
+        "description": "The type of the item is specified as a chat"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_003"
+      }
+    ]
+  },
+  {
+    "id": "case_031",
+    "query": "What was the meeting in January 2026 about faculty petitions and who attended?",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Faculty Petition Review' held on 2026-01-01"
+      },
+      {
+        "description": "Includes detailed attendee information"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_032",
+    "query": "Show me the email from Omar Khan about the network outage follow-up sent in December 2025.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email 'Follow-Up: Network Outage Impact Assessment' sent on 2025-12-10"
+      },
+      {
+        "description": "Identifies Omar Khan as the sender"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      }
+    ]
+  },
+  {
+    "id": "case_033",
+    "query": "Can I get the latest alumni fundraising progress report from December 2025?",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the file 'alumni_fundraising_update_20251218.xlsx'"
+      },
+      {
+        "description": "Identifies Alejandro Rodriguez as the creator of the file"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/reports/alumni_fundraising_update_20251218.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "case_034",
+    "query": "Find the December 2025 meeting discussing strategies for addressing student unrest due to tuition hikes.",
+    "user_id": "amalek",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Student Wellness Coordination' held on 2025-12-09"
+      },
+      {
+        "description": "Includes details about attendees and the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_035",
+    "query": "Locate the one-on-one chat from December 2025 about prioritizing Wi-Fi repairs during finals.",
+    "user_id": "ckwong",
+    "assertions": [
+      {
+        "description": "Returns the chat 'chat_009' from 2025-12-16"
+      },
+      {
+        "description": "Includes the summary about Wi-Fi repairs"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_009"
+      }
+    ]
+  },
+  {
+    "id": "case_036",
+    "query": "Show me the meeting notes where we discussed outsourcing maintenance services amid the budget concerns, sometime before Christmas 2025.",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Maintenance Outsourcing Controversy'"
+      },
+      {
+        "description": "Includes summary about administration considering outsourcing maintenance services"
+      },
+      {
+        "description": "Has attendance from Katherine Fernandez, Amara Ramirez, Tanveer Singh, and Elena Navarro"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_037",
+    "query": "Pull up the email that Maria sent right before Christmas about the alumni coalition's donation and transparency measures.",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Response to Alumni Coalition\u2019s $100,000 Matching Pledge'"
+      },
+      {
+        "description": "Sent by Maria Garcia on December 23, 2025"
+      },
+      {
+        "description": "Mentions transparency measures and next steps"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      }
+    ]
+  },
+  {
+    "id": "case_038",
+    "query": "Find the chat where we planned the emergency alumni meeting about the university's financial challenges earlier in December 2025.",
+    "user_id": "aramirez",
+    "assertions": [
+      {
+        "description": "Returns the group chat from December 7, 2025"
+      },
+      {
+        "description": "Mentions planning for an alumni meeting about the university's financial future"
+      },
+      {
+        "description": "Does not include unrelated chats or meetings"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_005"
+      }
+    ]
+  },
+  {
+    "id": "case_039",
+    "query": "Locate the email Meera sent on New Year\u2019s Day 2026 summarizing faculty concerns about academic standards and budget cuts.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Faculty Concerns Over Budget Cuts and Academic Integrity'"
+      },
+      {
+        "description": "Sent by Meera Sharma on January 1, 2026"
+      },
+      {
+        "description": "Includes summary of faculty concerns from the 'teach-in' event"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_010"
+      }
+    ]
+  },
+  {
+    "id": "case_040",
+    "query": "Can you find the group chat from Christmas Eve 2025 discussing the logistics for the emergency town hall about budget concerns?",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the group chat from December 24, 2025"
+      },
+      {
+        "description": "Mentions logistics and agenda for an emergency town hall meeting"
+      },
+      {
+        "description": "Does not retrieve unrelated group chats or meetings"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_001"
+      }
+    ]
+  },
+  {
+    "id": "case_041",
+    "query": "Can you find the report written by Alejandro Rodriguez about the campus march incident? I think it was created sometime in December 2025.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/security/march_incident_report.pdf'"
+      },
+      {
+        "description": "Identifies the author as Alejandro Rodriguez"
+      },
+      {
+        "description": "Filters by creation date within December 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/security/march_incident_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_042",
+    "query": "I need the chat from mid-December 2025 where people discussed the financial inconsistencies found in the student newspaper article.",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Returns the chat 'chat_007'"
+      },
+      {
+        "description": "Filters by date around December 13, 2025"
+      },
+      {
+        "description": "Includes the keyword 'financial inconsistencies' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_007"
+      }
+    ]
+  },
+  {
+    "id": "case_043",
+    "query": "Can you locate the file created by Javier Garcia on the server failure details? I believe it was written in late December 2025.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/docs/it_server_failure_report.pdf'"
+      },
+      {
+        "description": "Identifies the author as Javier Garcia"
+      },
+      {
+        "description": "Filters by creation date within late December 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/it_server_failure_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_044",
+    "query": "Get me the group chat from December 12, 2025, where staff and finance team talked about the leaked parking fee email.",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the group chat 'email_leak_parking_fees_20251212'"
+      },
+      {
+        "description": "Filters by date December 12, 2025"
+      },
+      {
+        "description": "Includes keywords 'parking fees' and 'leaked email' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "email_leak_parking_fees_20251212"
+      }
+    ]
+  },
+  {
+    "id": "case_045",
+    "query": "Find the chat on December 24, 2025, where people discussed server outages and possible upgrades.",
+    "user_id": "dlopez",
+    "assertions": [
+      {
+        "description": "Returns the chat 'chat_010'"
+      },
+      {
+        "description": "Filters by date December 24, 2025"
+      },
+      {
+        "description": "Includes keywords 'server outages' and 'upgrades' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_010"
+      }
+    ]
+  },
+  {
+    "id": "case_046",
+    "query": "Show me the email from Emily Chen earlier this month about the student newspaper and the tuition hike issue.",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Response to Student Newspaper Investigation on Tuition Hike'"
+      },
+      {
+        "description": "Filters emails authored by Emily Chen in December 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_003"
+      }
+    ]
+  },
+  {
+    "id": "case_047",
+    "query": "Find the technical report Omar Khan wrote last week about vulnerabilities in the IT infrastructure.",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/it/vulnerability_report.pdf'"
+      },
+      {
+        "description": "Filters files created by Omar Khan in the week of December 22, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/it/vulnerability_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_048",
+    "query": "Retrieve the meeting notes from mid-December where the emergency financial restructuring plan was discussed with department heads.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Emergency Financial Restructuring Plan Discussion'"
+      },
+      {
+        "description": "Filters for meetings attended by Priya Patel on December 13, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_049",
+    "query": "Locate the email Alejandro Rodriguez sent after Christmas about planning support for the student rally.",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Planning Support for Upcoming Rally Against Interim Chancellor'"
+      },
+      {
+        "description": "Filters emails authored by Alejandro Rodriguez after December 25, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_050",
+    "query": "Find the chat from late December discussing IT's coordination with student affairs about server outages.",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the chat summary about IT and student affairs coordination on December 22, 2025"
+      },
+      {
+        "description": "Filters chats based on the topic of server outages"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      }
+    ]
+  },
+  {
+    "id": "case_051",
+    "query": "Show me the email Sarah sent on New Year's Day about the chancellor's financial recovery plan.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Follow-up on Chancellor's Financial Recovery Plan'"
+      },
+      {
+        "description": "Filters by the sender 'snguyen' and the date '2026-01-01'"
+      },
+      {
+        "description": "Includes the discussion on tuition hikes and budget allocations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      }
+    ]
+  },
+  {
+    "id": "case_052",
+    "query": "Locate the meeting where the finance team discussed discrepancies and transparency issues earlier this December.",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Finds the meeting titled 'Finance Department Budget Review'"
+      },
+      {
+        "description": "Filters to December 2025 and includes 'discrepancies' and 'transparency' in the summary"
+      },
+      {
+        "description": "Includes attendees such as Priya Patel and Lina Tanaka"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_053",
+    "query": "Find the recent group chat about submitting an emergency funding request and fixing hardware problems.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the group chat from '2025-12-08'"
+      },
+      {
+        "description": "Includes the discussion on 'emergency funding request' and 'outdated hardware'"
+      },
+      {
+        "description": "Filters to group chat type"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_09"
+      }
+    ]
+  },
+  {
+    "id": "case_054",
+    "query": "Get me the chat from mid-December about IT resolving portal issues and planning for future outages.",
+    "user_id": "aabdi",
+    "assertions": [
+      {
+        "description": "Returns the chat from '2025-12-12'"
+      },
+      {
+        "description": "Includes topics about 'portal issues' and 'preventing outages'"
+      },
+      {
+        "description": "Filters by date close to mid-December 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "it_support_failure_followup_20251212"
+      }
+    ]
+  },
+  {
+    "id": "case_055",
+    "query": "Find the discussion about the chancellor's leaked photo and the strategy to manage public backlash.",
+    "user_id": "kfernandez_6",
+    "assertions": [
+      {
+        "description": "Returns the chat from '2025-12-22'"
+      },
+      {
+        "description": "Includes discussion on 'chancellor's photo leak' and 'managing backlash'"
+      },
+      {
+        "description": "Filters to December 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_002"
+      }
+    ]
+  },
+  {
+    "id": "case_056",
+    "query": "I need the email Emily sent earlier this month about responding to the faculty's open letter on department mergers.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_004'"
+      },
+      {
+        "description": "Identifies the author as Emily Chen"
+      },
+      {
+        "description": "The email's date is in December 2025 and matches the timeline"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      }
+    ]
+  },
+  {
+    "id": "case_057",
+    "query": "Locate the group chat from December discussing how to handle the student demonstration near the finance department.",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Returns the group chat 'chat_03'"
+      },
+      {
+        "description": "The date aligns with December 8, 2025"
+      },
+      {
+        "description": "Summary mentions managing a student demonstration"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_03"
+      }
+    ]
+  },
+  {
+    "id": "case_058",
+    "query": "Find the meeting from late December about ensuring transparency in alumni donations. I think Priya and Katherine were in it.",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Returns the meeting 'meeting3'"
+      },
+      {
+        "description": "Identifies attendees including Priya Patel and Katherine Fernandez"
+      },
+      {
+        "description": "The meeting date is December 23, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting3"
+      }
+    ]
+  },
+  {
+    "id": "case_059",
+    "query": "Can you find the PDF report Alejandro created about textbook pricing issues in the university bookstore?",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/docs/bookstore_textbook_pricing_report.pdf'"
+      },
+      {
+        "description": "Identifies the author as Alejandro Rodriguez"
+      },
+      {
+        "description": "The file's summary discusses textbook pricing concerns"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/bookstore_textbook_pricing_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_060",
+    "query": "Show me the chat from January 1st about the financial recovery plan for campus concerns.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the chat 'chat_008'"
+      },
+      {
+        "description": "The chat date is January 1, 2026"
+      },
+      {
+        "description": "Summary mentions financial recovery planning"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_008"
+      }
+    ]
+  },
+  {
+    "id": "case_061",
+    "query": "Can you find the email sent by Alejandro about supporting students during protests, likely from late December?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_005'"
+      },
+      {
+        "description": "Filters by author 'arodriguez' and date range of late December 2025"
+      },
+      {
+        "description": "Includes keywords like 'support', 'students', and 'protests'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_062",
+    "query": "I need the meeting notes from the finance committee review meeting about donation transparency held around December 27.",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Returns the meeting 'meeting_004'"
+      },
+      {
+        "description": "Filters by date '2025-12-27' and title containing 'Finance Committee Review'"
+      },
+      {
+        "description": "Includes attendee 'ltanaka'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_063",
+    "query": "Show me the email Priya sent earlier in December about budget strategies to avoid layoffs.",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_007'"
+      },
+      {
+        "description": "Filters by author 'ppatel', date range 'early December 2025', and keywords 'budget', 'strategies', 'layoffs'"
+      },
+      {
+        "description": "Matches subject 'Budget Strategy Discussion'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_064",
+    "query": "Find the discussion or chat about media handling and the interim chancellor's interviews from early December.",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the chat 'chat_008'"
+      },
+      {
+        "description": "Filters by date '2025-12-07' and keywords 'media', 'interim chancellor', 'interviews'"
+      },
+      {
+        "description": "Identifies relevant type as 'chat'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_008"
+      }
+    ]
+  },
+  {
+    "id": "case_065",
+    "query": "Locate Alejandro's email about the viral student demands and social media strategies from just before New Year's Eve.",
+    "user_id": "ymukherjee",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_007'"
+      },
+      {
+        "description": "Filters by author 'arodriguez', date range 'late December 2025', and keywords 'student demands', 'social media', 'viral'"
+      },
+      {
+        "description": "Matches subject 'Student Protest and Viral Social Media Campaign'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_066",
+    "query": "Show me the email from Sarah Nguyen about an alumni donation and concerns about university leadership that was sent in early December 2025.",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Acknowledgment of Alumni Donation and Concerns'."
+      },
+      {
+        "description": "Filters by the sender as Sarah Nguyen."
+      },
+      {
+        "description": "Restricts to items dated around December 3, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_067",
+    "query": "Find the meeting where students' peaceful march against the tuition hike was discussed, sometime in late December 2025.",
+    "user_id": "aadebayo",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Student March Coordination'."
+      },
+      {
+        "description": "Confirms the date is December 21, 2025."
+      },
+      {
+        "description": "Includes Afolabi Adebayo and other attendees in the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_068",
+    "query": "Locate the email from Mariam Abdul about financial transparency plans sent in mid-December 2025.",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Concerns Regarding Financial Transparency Plan'."
+      },
+      {
+        "description": "Filters by the sender as Mariam Abdul."
+      },
+      {
+        "description": "Restricts to emails sent around December 14, 2025."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_009"
+      }
+    ]
+  },
+  {
+    "id": "case_069",
+    "query": "Find the meeting where staff discussed disruptions caused by students during a faculty meeting, likely held in mid-December 2025.",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Student Protest Debrief'."
+      },
+      {
+        "description": "Filters by the date December 13, 2025."
+      },
+      {
+        "description": "Includes Alejandro Rodriguez and other attendees in the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_070",
+    "query": "What was the group chat from early December 2025 where strategies to handle media attention on the interim chancellor were discussed?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Returns the group chat summary involving media attention on the interim chancellor."
+      },
+      {
+        "description": "Confirms the date is around December 6, 2025."
+      },
+      {
+        "description": "Identifies this as a group chat discussion."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_005"
+      }
+    ]
+  },
+  {
+    "id": "case_071",
+    "query": "Show me the summary of the teach-in event organized by students and professors discussing budget cuts and academic integrity, created around the start of 2026.",
+    "user_id": "amalek",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/student_activism/teachin_event_summary.pdf'"
+      },
+      {
+        "description": "Filters by the file's creation date (2026-01-01)"
+      },
+      {
+        "description": "Identifies the author as Amira Malek"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/student_activism/teachin_event_summary.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_072",
+    "query": "Find the email sent by Mariam Abdul about alumni fundraising progress, specifically before the coalition reached their $500,000 goal.",
+    "user_id": "mabdul",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_004'"
+      },
+      {
+        "description": "Filters by sender (Mariam Abdul) and date (2025-12-18)"
+      },
+      {
+        "description": "Includes details about the alumni coalition's progress"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      }
+    ]
+  },
+  {
+    "id": "case_073",
+    "query": "Locate the announcement document celebrating the alumni fundraising milestone created by Sarah Nguyen on December 22, 2025.",
+    "user_id": "snguyen_2",
+    "assertions": [
+      {
+        "description": "Returns the file 'data/docs/alumni_fundraising_announcement.pdf'"
+      },
+      {
+        "description": "Filters by the file's creation date (2025-12-22)"
+      },
+      {
+        "description": "Identifies the author as Sarah Nguyen"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/alumni_fundraising_announcement.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_074",
+    "query": "Find the discussion or chat from late December 2025 between the President and Provost about rumors of a dean resigning and leadership stability.",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Returns the chat 'leadership_stability_rumors_20251217'"
+      },
+      {
+        "description": "Filters by the conversation's date (2025-12-17)"
+      },
+      {
+        "description": "Includes discussion about leadership changes and stability"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "leadership_stability_rumors_20251217"
+      }
+    ]
+  },
+  {
+    "id": "case_075",
+    "query": "Retrieve the email from Lina Tanaka discussing the alumni coalition\u2019s milestone and plans for fund allocation transparency from late December 2025.",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Returns the email 'email_005'"
+      },
+      {
+        "description": "Filters by sender (Lina Tanaka) and date (2025-12-22)"
+      },
+      {
+        "description": "Includes information about alumni fundraising transparency"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_076",
+    "query": "Show me the email sent by Omar Khan about a critical vulnerability in the system around mid-December.",
+    "user_id": "dpatel",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Emergency Shutdown of Email System Due to Vulnerability'"
+      },
+      {
+        "description": "The email is authored by Omar Khan"
+      },
+      {
+        "description": "The email date matches December 13, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      }
+    ]
+  },
+  {
+    "id": "case_077",
+    "query": "I need the chat conversation where the CFO discussed the parking fee increase and strategies for stakeholder communication.",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Returns the chat conversation labeled 'finance_team_parking_fee_20251212'"
+      },
+      {
+        "description": "Date of the chat matches December 12, 2025"
+      },
+      {
+        "description": "The summary mentions parking fee increases and stakeholder strategies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "finance_team_parking_fee_20251212"
+      }
+    ]
+  },
+  {
+    "id": "case_078",
+    "query": "Find the email Alejandro Rodriguez sent about the sit-in and alternative ways to address student concerns after the town hall was canceled.",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Update on Sit-In and Town Hall Cancellation'"
+      },
+      {
+        "description": "The email is authored by Alejandro Rodriguez"
+      },
+      {
+        "description": "The email date matches December 20, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      }
+    ]
+  },
+  {
+    "id": "case_079",
+    "query": "Locate the email from mid-December about an alternative budget proposal to avoid faculty layoffs.",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Alternative Budget Proposal Discussion'"
+      },
+      {
+        "description": "The sender is Devika Patel"
+      },
+      {
+        "description": "The email date matches December 14, 2025"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      }
+    ]
+  },
+  {
+    "id": "case_080",
+    "query": "Get the group chat where the alumni association discussed their public statement about sustainability over cost-cutting.",
+    "user_id": "ymukherjee",
+    "assertions": [
+      {
+        "description": "Returns the group chat with the summary about the alumni association's public statement"
+      },
+      {
+        "description": "Date of the chat matches December 8, 2025"
+      },
+      {
+        "description": "The chat type is 'group_chat'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_05"
+      }
+    ]
+  },
+  {
+    "id": "case_081",
+    "query": "What were the proposed next steps from the board meeting regarding the budget deficit and tuition hike, and how were these incorporated into the strategic planning session proposal?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing the board meeting on the budget deficit and tuition hike."
+      },
+      {
+        "description": "Links the feedback from the board meeting to the proposal for the strategic planning session."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      }
+    ]
+  },
+  {
+    "id": "case_082",
+    "query": "How did the finance team's discovery of the accounting error influence the updated financial projections requested in a later communication?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email detailing the accounting error and its impact."
+      },
+      {
+        "description": "Recognizes the connection to the follow-up email requesting updated financial projections."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      }
+    ]
+  },
+  {
+    "id": "case_083",
+    "query": "What concerns expressed by the prominent alum regarding the university's direction were discussed in the meeting addressing alumni concerns?",
+    "user_id": "aabdi",
+    "assertions": [
+      {
+        "description": "Identifies the letter from the prominent alum detailing their concerns."
+      },
+      {
+        "description": "Links the alum's concerns to the meeting discussing alumni concerns and their donation."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/donations/prominent-alum-donation-letter.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting-005"
+      }
+    ]
+  },
+  {
+    "id": "case_084",
+    "query": "What were the initial findings from the finance department's internal review, and how were they discussed in the meeting about preventing future errors?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the file containing the finance department's findings as 'finance_review_findings_20251204.xlsx'"
+      },
+      {
+        "description": "Links the findings to the finance department meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/reports/finance_review_findings_20251204.xlsx"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_085",
+    "query": "How did the leaked email about department mergers influence the discussions in the senior leadership group chat and subsequent meeting?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies the leaked email as a file with ID 'board_discussions_leaked_20251204.txt'"
+      },
+      {
+        "description": "Connects the email to the senior leadership group chat and the meeting on mitigating the backlash."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/emails/board_discussions_leaked_20251204.txt"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "group_chat_010"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_003"
+      }
+    ]
+  },
+  {
+    "id": "case_086",
+    "query": "What concerns were raised during the student protest, and how were these addressed in discussions between student leaders and administrators?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the protest summary document as 'protest_summary_20251204.docx'"
+      },
+      {
+        "description": "Connects the concerns to the chat discussing coordination between student leaders and administration."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/events/protest_summary_20251204.docx"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_009"
+      }
+    ]
+  },
+  {
+    "id": "case_087",
+    "query": "What decisions about department mergers were discussed in the chancellor's meeting, and how are they addressed in the follow-up emails?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the meeting involving the chancellor and the finance team about department mergers."
+      },
+      {
+        "description": "Finds the email summarizing the discussion about department mergers and next steps."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      }
+    ]
+  },
+  {
+    "id": "case_088",
+    "query": "What actions were proposed in the meeting about faculty layoffs to address concerns raised in the email about the leaked budget plan?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing faculty concerns about the leaked budget plan."
+      },
+      {
+        "description": "Finds the meeting addressing faculty concerns about potential layoffs."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_009"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_003"
+      }
+    ]
+  },
+  {
+    "id": "case_089",
+    "query": "How did the IT team plan to prevent future disruptions based on their meeting, and what guidance was provided to students during the outage in related communications?",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Identifies the meeting addressing the root cause of the system outage and future prevention steps."
+      },
+      {
+        "description": "Finds the email providing guidance to support students during the outage."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_090",
+    "query": "What actions were proposed in the emergency town hall meeting to address the budget issues, and how do they relate to the administration's formal response to the tuition hike petition?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Links the emergency town hall meeting to the budget concerns and tuition hike petition."
+      },
+      {
+        "description": "Identifies the proposed actions and their connection to the formal response."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/emergency_townhall_summary.pdf"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      }
+    ]
+  },
+  {
+    "id": "case_091",
+    "query": "How does the accounting discrepancy review impact the proposed budget plan discussed in the finance department meeting?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Connects the accounting discrepancy review to the finance department meeting."
+      },
+      {
+        "description": "Explains how the discrepancy findings influence the budget plan."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/reports/accounting_discrepancy_review.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_092",
+    "query": "What strategies are being considered to address faculty concerns about department mergers, and how do these relate to the faculty's open letter?",
+    "user_id": "dpatel",
+    "assertions": [
+      {
+        "description": "Establishes the connection between the faculty's open letter and the strategies being discussed."
+      },
+      {
+        "description": "Highlights the administration's plans to address faculty concerns."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/letters/faculty_open_letter_draft.docx"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_009"
+      }
+    ]
+  },
+  {
+    "id": "case_093",
+    "query": "What discrepancies were mentioned in the financial transparency plan review, and how were they addressed in the finance department meeting?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the document containing review notes on the financial transparency draft"
+      },
+      {
+        "description": "Identifies the meeting where the finance department addressed the discrepancies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/financial_transparency_draft_review.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_094",
+    "query": "What feedback from the alumni association's emergency meeting was used to strategize for the upcoming student sit-ins?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Connects the alumni emergency meeting agenda with the student affairs strategy meeting"
+      },
+      {
+        "description": "Links alumni concerns to the student sit-ins response strategy"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/meetings/alumni_emergency_meeting_agenda.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_095",
+    "query": "How did the leaked budget draft reported in the student newspaper influence the university's decision to postpone the financial transparency plan?",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Identifies the student newspaper's investigative report on the leaked budget draft"
+      },
+      {
+        "description": "Links the investigative report to the decision to postpone the financial transparency plan"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/articles/student_newspaper_budget_investigation.docx"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_001"
+      }
+    ]
+  },
+  {
+    "id": "case_096",
+    "query": "What were the key points discussed in the interim chancellor's meeting with the faculty union representative, and how were they described in the related email?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the meeting with the faculty union representative"
+      },
+      {
+        "description": "Finds the related email summarizing the meeting outcomes"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      }
+    ]
+  },
+  {
+    "id": "case_097",
+    "query": "How did the alumni association's public statement about financial sustainability connect to the discussion in the group chat about media attention?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the alumni association's public statement"
+      },
+      {
+        "description": "Links the statement to the group chat about addressing media attention"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/alumni_association_statement.pdf"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_08"
+      }
+    ]
+  },
+  {
+    "id": "case_098",
+    "query": "What emergency funding concerns raised by the IT department were discussed in both the meeting and the formal request document?",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Identifies the meeting where the IT department raised funding concerns"
+      },
+      {
+        "description": "Finds the formal request document for emergency funding"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/it_emergency_funding_request.docx"
+      }
+    ]
+  },
+  {
+    "id": "case_099",
+    "query": "What steps were discussed in the meeting on leadership stability after a second board member hinted at resigning, and how does this connect to the email discussing the potential impact of such a resignation?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email addressing the potential impact of a second board member stepping down"
+      },
+      {
+        "description": "Connects it to the meeting evaluating next steps for leadership continuity"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_100",
+    "query": "Which faculty concerns about department mergers were discussed in the chat between Emily Chen and Meera Sharma, and how do they align with the alternative budget proposal presented in the meeting?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the chat discussing faculty concerns about department mergers"
+      },
+      {
+        "description": "Connects these concerns to the meeting presenting the alternative budget plan"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_007"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/proposals/alternative_budget_plan.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_101",
+    "query": "How does the IT team's discussion on system slowdowns in the group chat align with the formal funding request made in their meeting, and what details are included in the IT report?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Identifies the group chat discussing system slowdowns and funding needs"
+      },
+      {
+        "description": "Connects this to the meeting on emergency funding for hardware upgrades"
+      },
+      {
+        "description": "References the IT report detailing the system slowdown"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/it/system_slowdown_report_2025_12_09.docx"
+      }
+    ]
+  },
+  {
+    "id": "case_102",
+    "query": "What strategies were discussed in the meeting that addressed feedback from the emergency town hall, and how do they align with the next steps outlined in the email summarizing key takeaways from the town hall?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing key takeaways from the town hall as 'email_007'."
+      },
+      {
+        "description": "Identifies the meeting addressing town hall feedback as 'meeting_004'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_103",
+    "query": "What were the planned responses to the leaked memo discussed in the group chat, and how do they compare to the strategies outlined in the related email?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the email about planning responses to the leaked memo as 'email_001'."
+      },
+      {
+        "description": "Identifies the group chat discussing responses to the leaked memo as 'chat_005'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_005"
+      }
+    ]
+  },
+  {
+    "id": "case_104",
+    "query": "How did the findings from the report on the partial network outage influence the proposals discussed during the IT team meeting?",
+    "user_id": "dlobo",
+    "assertions": [
+      {
+        "description": "Identifies the report on the partial network outage as 'data/reports/network_outage_report.pdf'."
+      },
+      {
+        "description": "Identifies the IT team meeting discussing the network outage as 'meeting_002'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/reports/network_outage_report.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_105",
+    "query": "What specific guidance was given to the student engagement staff in response to the sit-in protest demanding assurances against faculty layoffs?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the email about student engagement staff guidance (email_006)"
+      },
+      {
+        "description": "Identifies the related group chat discussing protest strategies (student_affairs_protest_response_20251211)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "student_affairs_protest_response_20251211"
+      }
+    ]
+  },
+  {
+    "id": "case_106",
+    "query": "What steps did the IT department suggest to prevent further disruptions caused by outdated servers?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the email about website issues and server upgrades (email_003 and email_008)"
+      },
+      {
+        "description": "Connects the chat discussion regarding IT support and server issues (it_support_discussion_20251211)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_003"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "it_support_discussion_20251211"
+      }
+    ]
+  },
+  {
+    "id": "case_107",
+    "query": "What were the specific concerns raised by science faculty members in their petition about budget cuts?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing the faculty petition (email_004)"
+      },
+      {
+        "description": "Links the group chat discussion on the petition (science_faculty_petition_20251211)"
+      },
+      {
+        "description": "Connects to the document containing the formal petition details (data/science/faculty_budget_petition_2025-12-11.docx)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "science_faculty_petition_20251211"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/science/faculty_budget_petition_2025-12-11.docx"
+      }
+    ]
+  },
+  {
+    "id": "case_108",
+    "query": "Who coordinated the response to the complete failure of the student portal mentioned in the group chat about 'IT department portal failure'?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the group chat discussing the IT department's portal failure"
+      },
+      {
+        "description": "Identifies the meeting focused on resolving the portal issue"
+      },
+      {
+        "description": "Determines the key coordinator or responsible party for the task"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "it_department_portal_failure_20251212"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_109",
+    "query": "What alternative solutions to layoffs were proposed in the email discussing the humanities department strike, and how do they relate to the faculty's strike plans in the document?",
+    "user_id": "aabdi",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the humanities department strike"
+      },
+      {
+        "description": "Cross-references the document outlining the faculty's strike plans"
+      },
+      {
+        "description": "Determines the alternative solutions proposed to layoffs and their relevance to the strike"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/humanities_strike_plan.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_110",
+    "query": "What strategies for addressing media coverage of the student protest were discussed in the meeting, and how do they align with the summary document of the protest?",
+    "user_id": "ckwong",
+    "assertions": [
+      {
+        "description": "Identifies the meeting addressing media coverage of the student protest"
+      },
+      {
+        "description": "References the summary document of the student protest"
+      },
+      {
+        "description": "Determines alignment or differences between discussed strategies and the protest summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/media/student_protest_summary.docx"
+      }
+    ]
+  },
+  {
+    "id": "case_111",
+    "query": "What measures were discussed at the closed-door meeting regarding the emergency financial restructuring plan, and how were they communicated to stakeholders afterward?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the closed-door meeting on financial restructuring"
+      },
+      {
+        "description": "Finds follow-up communication details in relevant emails or chats"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/financial_restructuring_meeting_notes.txt"
+      }
+    ]
+  },
+  {
+    "id": "case_112",
+    "query": "How did the student newspaper's article impact the administration's PR strategy for addressing tuition hike concerns?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the investigative article on tuition hikes"
+      },
+      {
+        "description": "Finds the discussion or meeting about PR strategies in response"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/tuition_hike_investigation.pdf"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_003"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_113",
+    "query": "What steps were proposed to mitigate the critical vulnerability in the email system, and how did the IT department coordinate their efforts?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the critical vulnerability and mitigation steps"
+      },
+      {
+        "description": "Finds coordination details in relevant chats or meetings"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/email_vulnerability_analysis.docx"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_009"
+      }
+    ]
+  },
+  {
+    "id": "case_114",
+    "query": "Who proposed the long-term IT infrastructure improvements after discussing the repeated network outages?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing repeated network outages and critical vulnerabilities (email_006)."
+      },
+      {
+        "description": "Identifies the meeting where the IT team discussed measures to prevent future disruptions (meeting_001)."
+      },
+      {
+        "description": "Identifies the IT team as the proposers of the long-term infrastructure improvements."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_115",
+    "query": "What were the key points of the student petition discussed in a meeting, and what further actions were planned?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing key points of the student petition (email_010)."
+      },
+      {
+        "description": "Identifies the meeting where student leaders planned further actions to amplify the petition's impact (meeting_005)."
+      },
+      {
+        "description": "Connects the student petition's key points with the actions planned in the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_010"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_116",
+    "query": "How did the alumni fundraising campaign aim to support scholarships, and what strategies were discussed to maximize its impact?",
+    "user_id": "amalek",
+    "assertions": [
+      {
+        "description": "Identifies the document describing the independent alumni fundraising campaign (data/alumni/fundraising_campaign_overview.docx)."
+      },
+      {
+        "description": "Identifies the meeting where strategies were discussed to maximize the fundraising campaign's impact (meeting_004)."
+      },
+      {
+        "description": "Connects the campaign's goals with the strategies discussed."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/alumni/fundraising_campaign_overview.docx"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_117",
+    "query": "What was the response strategy discussed in the meeting regarding the student protest demands outlined in the document submitted by the protestors?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the document detailing the protestors' demands"
+      },
+      {
+        "description": "Connects the document to the meeting discussion about student protests"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/protests/student_demands_2025-12-15.docx"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_118",
+    "query": "How does the leaked recording referenced in the email about faculty layoffs relate to the meeting where the Chancellor addressed tensions about the same issue?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Links the email discussing the leaked recording to the meeting held by the Chancellor"
+      },
+      {
+        "description": "Identifies faculty layoffs as a shared topic of concern"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/media/leaked_recording_summary_2025-12-15.doc"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_003"
+      }
+    ]
+  },
+  {
+    "id": "case_119",
+    "query": "What were the recommended solutions to prevent future email system outages as discussed in the IT report and the IT meeting?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the IT report detailing the email outage"
+      },
+      {
+        "description": "Connects the report to the meeting where the IT team discussed solutions"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/it/outage_report_email_system_2025-12-15.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      }
+    ]
+  },
+  {
+    "id": "case_120",
+    "query": "What action plan was proposed to address the transparency demands from the peaceful student march?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the file summarizing the student march demands"
+      },
+      {
+        "description": "Finds the meeting discussing the evaluation of the march and action plans"
+      },
+      {
+        "description": "Links the meeting to the proposed action plan"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/student_march_summary.docx"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_121",
+    "query": "What was the IT department's conclusion on the Wi-Fi outage, and how was it communicated to the university community?",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Finds the technical report detailing the Wi-Fi failure"
+      },
+      {
+        "description": "Links the report to the meeting discussing the root cause and resolution"
+      },
+      {
+        "description": "Identifies the email summarizing the resolution timeline"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/logs/partial_wifi_failure_report.txt"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_122",
+    "query": "How did the administration plan to address the backlash from the leaked scholarship cuts?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the document containing the leaked scholarship cuts"
+      },
+      {
+        "description": "Finds the email requesting an assessment of the impact of the scholarship cuts"
+      },
+      {
+        "description": "Identifies the group chat discussing the student and alumni outrage"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/leaked_scholarship_cuts_proposal.pdf"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_009"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_007"
+      }
+    ]
+  },
+  {
+    "id": "case_123",
+    "query": "What steps were proposed during the campus-wide meeting to address the budget crisis, and were any of these discussed in the budget crisis group chat?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing the campus-wide meeting."
+      },
+      {
+        "description": "Retrieves details from the budget crisis group chat to find overlapping proposals."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "budget_crisis_meeting_20251217"
+      }
+    ]
+  },
+  {
+    "id": "case_124",
+    "query": "What strategies to address the server outage were suggested in the IT team meeting, and how do they align with the proposal to review IT infrastructure?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the meeting about the server outage."
+      },
+      {
+        "description": "Compares IT infrastructure proposals from the email to meeting discussions."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      }
+    ]
+  },
+  {
+    "id": "case_125",
+    "query": "How does the alumni coalition\u2019s fundraising campaign aim to maximize contributions, and what additional strategies were discussed in the CFO and Director of Finance chat?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email about the alumni fundraising campaign."
+      },
+      {
+        "description": "Finds additional strategies from the fundraising strategy chat."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "fundraising_strategy_20251217"
+      }
+    ]
+  },
+  {
+    "id": "case_126",
+    "query": "What strategies were discussed in the meeting about addressing the petition with 5,000 signatures, and how are they linked to the recommendations in the email about calming tensions during the sit-in?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Links the petition with 5,000 signatures to the meeting about addressing it"
+      },
+      {
+        "description": "Identifies recommendations for calming tensions from the relevant email"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_007"
+      }
+    ]
+  },
+  {
+    "id": "case_127",
+    "query": "How does the $200,000 raised by the alumni coalition, as discussed in the chat, impact the strategies proposed in the email about collaborating with alumni to mitigate the budget crisis?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the chat about the alumni coalition's progress"
+      },
+      {
+        "description": "Connects the chat discussion to the strategies proposed in the email about collaboration"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_004"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      }
+    ]
+  },
+  {
+    "id": "case_128",
+    "query": "What technical challenges mentioned in the private chat about resolving the server outage align with the issues reported in the email detailing the outage's impact on grade submissions?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies the relevant private chat about the server outage"
+      },
+      {
+        "description": "Aligns technical challenges from the chat with the details in the email about the outage's impact"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      }
+    ]
+  },
+  {
+    "id": "case_129",
+    "query": "What steps were outlined in the meeting focused on the candlelight vigil, and how do they align with the logistics discussed by Alejandro Rodriguez and Amina Abdi in their chat?",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Identifies the meeting about the candlelight vigil coordination"
+      },
+      {
+        "description": "Links the meeting to the logistics discussed in the chat between Alejandro Rodriguez and Amina Abdi"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_03"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_003"
+      }
+    ]
+  },
+  {
+    "id": "case_130",
+    "query": "How does the IT team\u2019s planned response to the leaked emails in their meeting compare to the internal discussions between Omar Khan and Dev Lobo?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Identifies the IT team meeting addressing the leaked emails"
+      },
+      {
+        "description": "Cross-references this with the private chat between Omar Khan and Dev Lobo about the same issue"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_02"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_002"
+      }
+    ]
+  },
+  {
+    "id": "case_131",
+    "query": "What are the proposed actions to stabilize faculty morale following the biology department chair\u2019s resignation, as discussed in relevant emails, chats, and the faculty meeting?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the biology department chair\u2019s resignation"
+      },
+      {
+        "description": "Links it to the chat between Emily Chen and Meera Sharma about faculty morale"
+      },
+      {
+        "description": "Incorporates discussions from the faculty meeting addressing the resignation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_005"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_04"
+      }
+    ]
+  },
+  {
+    "id": "case_132",
+    "query": "What alternative forums for dialogue were suggested after the cancellation of the town hall meeting due to security concerns?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Identifies that the town hall meeting was canceled due to security concerns."
+      },
+      {
+        "description": "Identifies the email requesting input on alternative ways to address student concerns."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_005"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/canceled_town_hall_meeting.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_133",
+    "query": "How did faculty plan to present their budget restructuring proposal while avoiding cuts to academic programs?",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing feedback on the budget restructuring proposal."
+      },
+      {
+        "description": "Recognizes the chat about the faculty's collaboration on the proposal."
+      },
+      {
+        "description": "References the draft proposal document summarizing their approach."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/faculty_budget_proposal_draft.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_134",
+    "query": "What steps were taken to resolve the issue of outdated textbooks being sold at full price after student complaints?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email requesting a review of bookstore operations."
+      },
+      {
+        "description": "Recognizes the meeting addressing solutions for student complaints about outdated textbooks."
+      },
+      {
+        "description": "References the report analyzing textbook pricing issues."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_05"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/bookstore_textbook_pricing_report.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_135",
+    "query": "Which strategy was proposed in the meeting to encourage last-minute donations to meet the $500,000 goal, and how does it align with the alumni coalition's fundraising update?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the meeting discussing alumni fundraising efforts"
+      },
+      {
+        "description": "Links the proposed strategy to the alumni coalition's fundraising progress report"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/reports/alumni_donation_update_20251221.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_136",
+    "query": "What impact does the dean of the School of Humanities' potential resignation have on administrative operations, and what strategies were proposed to reassure stakeholders?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies the meeting discussing the dean's resignation"
+      },
+      {
+        "description": "Connects proposed strategies to the email addressing fears of leadership instability"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_003"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_010"
+      }
+    ]
+  },
+  {
+    "id": "case_137",
+    "query": "What steps were outlined to support students during the tuition protest march, and how were these efforts coordinated between emails and group chats?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing logistical and emotional support for students"
+      },
+      {
+        "description": "Links the group chat on planning the peaceful march to the email content"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat3"
+      }
+    ]
+  },
+  {
+    "id": "case_138",
+    "query": "What security measures were discussed in response to the anonymous threat received by students organizing the peaceful march?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the anonymous threat and steps being taken for safety"
+      },
+      {
+        "description": "Identifies the meeting where the Student Affairs team planned safety protocols"
+      },
+      {
+        "description": "Links the security plan document with the measures discussed"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_001"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_003"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/student_march_security_plan.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_139",
+    "query": "How was the $500,000 alumni fundraising goal celebrated, and what steps were proposed to ensure transparency in fund allocation?",
+    "user_id": "mgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the email celebrating the fundraising success and planning a transparency report"
+      },
+      {
+        "description": "Identifies the group chat discussing transparency in fund allocation"
+      },
+      {
+        "description": "Links the meeting focusing on transparent fund distribution"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_005"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_140",
+    "query": "What were the public relations strategies discussed to address backlash following the leaked photo of the interim chancellor?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email addressing public backlash and strategizing next steps"
+      },
+      {
+        "description": "Identifies the individual chat discussing the PR impact of the photo leak"
+      },
+      {
+        "description": "Links the internal memo addressing the crisis with the strategies discussed"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_008"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/chancellor_photo_crisis_memo.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_141",
+    "query": "What were the proposed solutions to the budget crisis discussed in the emergency meeting called by the interim chancellor, and how did faculty respond to these proposals?",
+    "user_id": "ppatel",
+    "assertions": [
+      {
+        "description": "Identifies the emergency meeting notes as a source of proposed solutions"
+      },
+      {
+        "description": "Identifies the faculty brainstorming session as a response to these proposals"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/emergency_meeting_notes.pdf"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "faculty_budget_proposals"
+      }
+    ]
+  },
+  {
+    "id": "case_142",
+    "query": "How do the leaked documents about tuition hike discrepancies affect the trust-building measures proposed in the alumni coalition discussions?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Connects tuition hike discrepancies to the need for trust-building measures"
+      },
+      {
+        "description": "Relates alumni coalition discussions to transparency and trust-building efforts"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/media/leaked_documents_summary.pdf"
+      },
+      {
+        "entity_type": "group_chat",
+        "entity_id": "alumni_donation_transparency"
+      }
+    ]
+  },
+  {
+    "id": "case_143",
+    "query": "What actions were taken to address the IT vulnerabilities, and how does this align with the timeline and budget discussed in the relevant meeting?",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Identifies the IT vulnerability report outlining risks"
+      },
+      {
+        "description": "Connects the IT meeting discussion to urgent actions and budget considerations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/it/vulnerability_report.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting2"
+      }
+    ]
+  },
+  {
+    "id": "case_144",
+    "query": "What is the connection between the emergency town hall meeting and the interim chancellor's announcement regarding budget concerns?",
+    "user_id": "snguyen",
+    "assertions": [
+      {
+        "description": "Identifies the town hall meeting as addressing budget concerns"
+      },
+      {
+        "description": "Links the interim chancellor's announcement to the meeting"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/emergency_town_hall_announcement.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_145",
+    "query": "What were the proposed actions to address the server outage, and how did these align with discussions in the IT department meeting?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies actions proposed to address the server outage"
+      },
+      {
+        "description": "Links these actions to the IT department meeting discussions"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_003"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_002"
+      }
+    ]
+  },
+  {
+    "id": "case_146",
+    "query": "How did the alumni coalition's donation pledge influence the development of the financial transparency plan?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies conditions of the alumni coalition's pledge"
+      },
+      {
+        "description": "Connects the pledge to the financial transparency plan development"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/alumni_donation_pledge.pdf"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_005"
+      }
+    ]
+  },
+  {
+    "id": "case_147",
+    "query": "What was the connection between the faculty-led open letter condemning department mergers and the financial team\u2019s budget strategy discussion?",
+    "user_id": "echen",
+    "assertions": [
+      {
+        "description": "Identifies email summarizing the open letter"
+      },
+      {
+        "description": "Links faculty opposition to financial implications discussed in chat"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_008"
+      }
+    ]
+  },
+  {
+    "id": "case_148",
+    "query": "How did the IT department\u2019s discussion about server restoration influence the funding proposal for infrastructure fixes?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Finds the chat about partial server restoration"
+      },
+      {
+        "description": "Connects it to the funding proposal email discussing server fixes"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_004"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_010"
+      }
+    ]
+  },
+  {
+    "id": "case_149",
+    "query": "What specific steps were proposed to ensure transparency in handling the anonymous donation, and how were they discussed across different communications?",
+    "user_id": "jkim",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the anonymous donation"
+      },
+      {
+        "description": "Finds the chat and meeting where the donation\u2019s impact and next steps were debated"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_009"
+      },
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      }
+    ]
+  },
+  {
+    "id": "case_150",
+    "query": "What is the connection between the IT department's warning about a system crash and the emergency funding proposal to stabilize IT systems?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the IT department's system crash warning."
+      },
+      {
+        "description": "Finds the email submitting the emergency funding proposal."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_002"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_009"
+      }
+    ]
+  },
+  {
+    "id": "case_151",
+    "query": "How does the anonymous $50,000 donation relate to discussions about the university's financial transparency and public image?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the anonymous donation and its implications."
+      },
+      {
+        "description": "Analyzes the group chat about the speculation surrounding the donation."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_004"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_008"
+      }
+    ]
+  },
+  {
+    "id": "case_152",
+    "query": "How does the newly discovered charter clause impact the proposed department mergers and the discussions around them?",
+    "user_id": "achopra",
+    "assertions": [
+      {
+        "description": "Identifies the email sharing implications of the charter clause on department mergers."
+      },
+      {
+        "description": "Locates the group chat debating the charter clause and its impact."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_003"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_004"
+      }
+    ]
+  },
+  {
+    "id": "case_153",
+    "query": "Which faculty concerns about the proposed department mergers were discussed by Devika Patel in the chat, and how are they linked to the clause found in the university charter?",
+    "user_id": "dpatel",
+    "assertions": [
+      {
+        "description": "Identifies the chat between Devika Patel and Meera Sharma about department mergers"
+      },
+      {
+        "description": "Recognizes the clause in the university charter complicating the mergers"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_006"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_006"
+      }
+    ]
+  },
+  {
+    "id": "case_154",
+    "query": "What strategies did the finance team propose in the meeting to address the alumni coalition's concerns about financial transparency following the leaked audio recording?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the meeting where the finance team evaluated alumni demands"
+      },
+      {
+        "description": "Links the leaked audio transcript to alumni coalition concerns"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_004"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/media/leaked_audio_transcript.txt"
+      }
+    ]
+  },
+  {
+    "id": "case_155",
+    "query": "How does the investigative piece about the anonymous $50,000 donation relate to the concerns discussed by university executives in their group chat?",
+    "user_id": "jgarcia",
+    "assertions": [
+      {
+        "description": "Identifies the group chat discussing the anonymous donation and its implications"
+      },
+      {
+        "description": "Links the investigative article to public trust issues"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_007"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/journalism/investigative_piece_donation.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_156",
+    "query": "What were the financial implications discussed in relation to the IT crisis and faculty hiring freeze, and where were funding options outlined?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the email discussing financial implications of the IT crisis and faculty hiring freeze"
+      },
+      {
+        "description": "Identifies funding options and budget adjustments mentioned in the same email"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_009"
+      }
+    ]
+  },
+  {
+    "id": "case_157",
+    "query": "Who was responsible for coordinating the interim chancellor's emergency press briefing, and what were the key topics discussed in preparation for it?",
+    "user_id": "kfernandez",
+    "assertions": [
+      {
+        "description": "Identifies the email coordinating the press briefing"
+      },
+      {
+        "description": "Identifies the topics such as the IT crisis and student protests from the briefing agenda"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_005"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/events/emergency_press_briefing_agenda.docx"
+      }
+    ]
+  },
+  {
+    "id": "case_158",
+    "query": "What alternative solutions to department mergers were proposed during the meeting with deans and department chairs, and how were these solutions summarized?",
+    "user_id": "ltanaka",
+    "assertions": [
+      {
+        "description": "Identifies the meeting discussing alternatives to department mergers"
+      },
+      {
+        "description": "Identifies the summary of these alternatives in the meeting document"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "meeting",
+        "entity_id": "meeting_001"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/meetings/department_merger_alternatives.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_159",
+    "query": "What were the key recommendations for addressing the student demands during the cafeteria protest, and who discussed these recommendations in a private chat?",
+    "user_id": "arodriguez",
+    "assertions": [
+      {
+        "description": "Identifies the email about drafting an action plan to address student concerns during the cafeteria protest"
+      },
+      {
+        "description": "Identifies the private chat where Alejandro Rodriguez and Amina Abdi discussed the protest"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "email",
+        "entity_id": "email_008"
+      },
+      {
+        "entity_type": "chat",
+        "entity_id": "chat_005"
+      }
+    ]
+  },
+  {
+    "id": "case_160",
+    "query": "Who requested urgent funding to address IT vulnerabilities and what were the updates provided on security breaches?",
+    "user_id": "okhan",
+    "assertions": [
+      {
+        "description": "Identifies the group chat where Omar Khan requested urgent funding for IT infrastructure"
+      },
+      {
+        "description": "Identifies the email about updates on unauthorized access attempts and security vulnerabilities"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_008"
+      },
+      {
+        "entity_type": "email",
+        "entity_id": "email_010"
+      }
+    ]
+  },
+  {
+    "id": "case_161",
+    "query": "How did the faculty plan to gain support for the no-confidence vote, and what document contains the final draft of this vote?",
+    "user_id": "msharma",
+    "assertions": [
+      {
+        "description": "Identifies the group chat where faculty members discussed gaining support for the no-confidence vote"
+      },
+      {
+        "description": "Identifies the document containing the final draft of the no-confidence vote"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_type": "group_chat",
+        "entity_id": "chat_002"
+      },
+      {
+        "entity_type": "file",
+        "entity_id": "data/docs/no_confidence_vote_draft.pdf"
+      }
+    ]
+  },
+  {
+    "id": "case_162",
+    "query": "Provide a comprehensive analysis of the proposed tuition hike, including its timeline, faculty and student reactions, and financial implications.",
+    "user_id": "snguyen",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_163",
+    "query": "Summarize the student-led protests from December 3 to December 25, focusing on key events and outcomes.",
+    "user_id": "ppatel",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_164",
+    "query": "Create a detailed timeline of the IT department's outages and issues during this period, and highlight administrative responses.",
+    "user_id": "echen",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_165",
+    "query": "Analyze the faculty's response to potential layoffs and department mergers, and summarize their proposed alternatives.",
+    "user_id": "okhan",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_166",
+    "query": "Summarize the role of the alumni association in addressing the university's financial crisis and their influence on administrative decisions.",
+    "user_id": "arodriguez",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_167",
+    "query": "Provide an overview of the leaked emails and memos related to budget proposals and administrative decisions.",
+    "user_id": "snguyen_2",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_168",
+    "query": "Examine the interim chancellor's actions and statements during this period, and evaluate their effectiveness in addressing the crisis.",
+    "user_id": "mgarcia",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_169",
+    "query": "Write a report on the impact of the IT issues on students and faculty, with a focus on server outages and data security concerns.",
+    "user_id": "jkim",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_170",
+    "query": "Summarize the crowdfunding and fundraising efforts led by students and alumni to mitigate the financial crisis.",
+    "user_id": "achopra",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_171",
+    "query": "Analyze the leaked budget drafts and discrepancies, and assess their impact on trust in university leadership.",
+    "user_id": "aabdi",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_172",
+    "query": "Outline the events surrounding faculty union activities, including their open letters and proposed no-confidence vote.",
+    "user_id": "kfernandez",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_173",
+    "query": "Summarize the emergency meetings held by the administration from December 3 to December 31 and their outcomes.",
+    "user_id": "dlobo",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_174",
+    "query": "Provide a timeline of the student petitions and sit-ins, highlighting demands and key milestones.",
+    "user_id": "ltanaka",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_175",
+    "query": "Analyze the media coverage of the university's financial crisis, including op-eds and investigative reports.",
+    "user_id": "dpatel",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_176",
+    "query": "Summarize the events leading to leadership instability, including dean and trustee resignations.",
+    "user_id": "jgarcia",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_177",
+    "query": "Create a detailed report on the role of faculty and student collaboration in opposing tuition hikes and department mergers.",
+    "user_id": "amalek",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_178",
+    "query": "Examine the emergency town hall meetings, focusing on their purpose, execution, and reception by the campus community.",
+    "user_id": "wchen",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_179",
+    "query": "Summarize the efforts to address the outdated IT infrastructure, including identified vulnerabilities and funding requests.",
+    "user_id": "sjohnson",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_180",
+    "query": "Analyze the leaked internal documents and their impact on the financial crisis narrative.",
+    "user_id": "enavarro",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_181",
+    "query": "Provide an account of the anonymous donations received during this period, including speculation around their sources.",
+    "user_id": "msharma",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_182",
+    "query": "Summarize the faculty-led alternative budget proposals and their reception by the administration.",
+    "user_id": "ymukherjee",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_183",
+    "query": "Write a report on the impact of the financial crisis on academic programs, including proposed cuts and faculty reactions.",
+    "user_id": "ckwong",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_184",
+    "query": "Provide a timeline of the alumni coalition's fundraising campaign and its influence on university decisions.",
+    "user_id": "mabdul",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_185",
+    "query": "Analyze the role of student journalism in exposing administrative issues during the crisis.",
+    "user_id": "tsingh",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_186",
+    "query": "Summarize the outcomes of the emergency press briefing on December 28 and its implications for the university's future.",
+    "user_id": "dlopez",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_187",
+    "query": "Write a report on the Wall of Demands initiative, including its content and impact on the administration.",
+    "user_id": "lmatsuda",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_188",
+    "query": "Summarize the impact of the financial crisis on campus morale, including faculty, students, and staff perspectives.",
+    "user_id": "jpark",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_189",
+    "query": "Analyze the chancellors' communication strategies and their effectiveness in addressing community concerns.",
+    "user_id": "knguyen",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_190",
+    "query": "Summarize the events surrounding the proposed parking fee increase and resulting backlash.",
+    "user_id": "aramirez",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_191",
+    "query": "Provide a timeline and analysis of student activism, including rallies, sit-ins, and petitions.",
+    "user_id": "wcheng",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_192",
+    "query": "Analyze the response of the finance department to the accounting discrepancies and its impact on the budget crisis.",
+    "user_id": "aadebayo",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_193",
+    "query": "Examine the role of social media in shaping public opinion about the university's financial and administrative challenges.",
+    "user_id": "kfernandez_6",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_194",
+    "query": "Summarize the key concerns raised in faculty open letters and petitions to the administration.",
+    "user_id": "ppatel",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_195",
+    "query": "Write a report on the legal implications of the student protests and sit-ins during this period.",
+    "user_id": "echen",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_196",
+    "query": "Summarize the events leading to the no-confidence vote against the interim chancellor.",
+    "user_id": "okhan",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_197",
+    "query": "Analyze the financial implications of the IT department\u2019s infrastructure issues on the university\u2019s budget.",
+    "user_id": "arodriguez",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_198",
+    "query": "Summarize the role of local media in escalating the financial crisis and influencing public opinion.",
+    "user_id": "snguyen_2",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_199",
+    "query": "Write a report on the student crowdfunding efforts to support scholarships and how they were received by the administration.",
+    "user_id": "mgarcia",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_200",
+    "query": "Analyze the potential long-term impact of department mergers and faculty layoffs on the university\u2019s reputation.",
+    "user_id": "jkim",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_201",
+    "query": "Provide a comprehensive summary of the university\u2019s financial crisis, focusing on key events and proposed solutions.",
+    "user_id": "achopra",
+    "assertions": [],
+    "entity_list": []
+  },
+  {
+    "id": "case_202",
+    "query": "Summarize the outcomes of the emergency meeting on December 23 and its implications for the budget crisis.",
+    "user_id": "aabdi",
+    "assertions": [],
+    "entity_list": []
+  }
+]

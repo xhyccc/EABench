@@ -1,0 +1,101 @@
+# Website Issue Report
+
+**Date:** December 11, 2025  
+**Author:** Omar Khan  
+**Department:** IT Department, University Technology Infrastructure Division
+
+---
+
+## Executive Summary
+Intermittent issues have been observed with the university's website, impacting accessibility for students, faculty, and public users. These disruptions have been traced to the outdated hardware infrastructure, specifically aging server systems that have exceeded their recommended operational lifespan. Immediate action is required to restore reliability and mitigate further service interruptions.
+
+---
+
+## Key Findings
+
+### 1. Nature of the Issue
+- **Duration:** The issues began early morning on December 11, 2025.
+- **Symptoms:**
+  - Slow response times.
+  - Random 404 errors for key pages, including the academic portal and admissions page.
+  - Website intermittently offline for periods ranging from 5 to 20 minutes.
+- **Affected Stakeholders:**
+  - Students unable to access course materials and schedules.
+  - Faculty experiencing challenges uploading assignments and grades.
+  - Public users unable to retrieve admissions information or contact details.
+
+### 2. Root Cause Analysis
+- **Primary Cause:** Outdated servers:
+  - Current servers are 8 years old and no longer supported by the manufacturer.
+  - Lack of hardware redundancy leading to bottlenecks during traffic surges.
+  - Failure of cooling systems in server racks, causing overheating.
+- **Secondary Issues:**
+  - Outdated software configurations incompatible with modern web browsers.
+  - Insufficient bandwidth to handle increased traffic during peak hours.
+
+### 3. Impact Assessment
+- **Operational Impact:**
+  - Reduced productivity for students and faculty.
+  - Delayed submissions and academic workflows.
+  - Increased help desk tickets, straining IT resources.
+- **Reputational Impact:**
+  - Public frustration compounded by ongoing financial and administrative controversies.
+  - Negative coverage in local media outlets.
+
+---
+
+## Recommendations
+
+### 1. Short-Term Solutions
+- **Immediate Actions:**
+  - Restart affected servers to restore temporary functionality.
+  - Implement load-balancing measures to distribute traffic across functional systems.
+  - Deploy a temporary status page to provide updates to users.
+- **User Communication:**
+  - Send email notifications to students and faculty explaining the situation.
+  - Post updates on social media and the university’s IT support page.
+
+### 2. Long-Term Actions
+- **Infrastructure Overhaul:**
+  - Replace aging servers with modern hardware capable of handling increased traffic.
+  - Introduce cloud-based solutions to ensure scalability and reliability.
+  - Upgrade cooling systems in the server rooms to prevent overheating.
+- **Software Updates:**
+  - Migrate website backend to a more robust and secure platform.
+  - Update all software dependencies to ensure compatibility with modern browsers.
+- **Budget Allocation:**
+  - Advocate for increased funding to address critical IT infrastructure needs.
+
+---
+
+## Supporting Data
+
+| Metric                          | Current Value | Recommended Value |
+|---------------------------------|---------------|-------------------|
+| Average Server Response Time   | 1,200 ms      | < 500 ms          |
+| Uptime (Last 24 Hours)         | 91%           | > 99.9%           |
+| Traffic per Hour (Peak)        | 12,000 users  | 15,000+ users     |
+| Number of Active Servers       | 4             | 8+                |
+
+---
+
+## Conclusion
+The intermittent issues with the university website underscore the urgent need for hardware and software upgrades. Failure to address this problem will exacerbate existing operational and reputational challenges faced by the university. A comprehensive action plan, supported by adequate funding, is essential to ensure the website’s reliability and restore user confidence.
+
+---
+
+## Appendix
+
+### Incident Timeline (December 11, 2025)
+- **08:00 AM:** First report of website downtime received by IT help desk.
+- **08:30 AM:** Preliminary investigation initiated; servers restarted.
+- **09:15 AM:** Website restored; intermittent errors persist.
+- **10:45 AM:** Root cause identified as outdated hardware.
+- **12:00 PM:** Status update published on IT support page.
+
+### Contact Information
+**Omar Khan**  
+IT Department Lead  
+Email: omar.khan@university.edu  
+Phone: (555) 123-4567
+

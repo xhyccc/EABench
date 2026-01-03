@@ -14,7 +14,9 @@ async def main():
     parser.add_argument("--company", type=str, required=True, help="Company Name")
     parser.add_argument("--industry", type=str, required=True, help="Industry")
     parser.add_argument("--size", type=str, default="small", help="Company Size")
+    parser.add_argument("--num_users", type=int, default=5, help="Number of users to generate")
     parser.add_argument("--days", type=int, default=7, help="Duration in days")
+    parser.add_argument("--eval_batch_size", type=int, default=5, help="Batch size for eval generation")
     parser.add_argument("--events", type=str, nargs="+", required=True, help="Key events (e.g. 'Project Alpha Kickoff')")
     parser.add_argument("--description", type=str, required=True, help="Detailed description")
     parser.add_argument("--prompts", type=str, default="examples/generation/default_prompts.yaml", help="Path to prompts config file")
@@ -72,7 +74,9 @@ async def main():
         company_name=args.company,
         industry=args.industry,
         company_size=args.size,
+        num_users=args.num_users,
         duration_days=args.days,
+        eval_batch_size=args.eval_batch_size,
         key_events=args.events,
         description=args.description
     )

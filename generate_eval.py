@@ -12,6 +12,7 @@ async def main():
     parser = argparse.ArgumentParser(description="Generate evaluation dataset for an existing tenant")
     parser.add_argument("--tenant_path", type=str, required=True, help="Path to the tenant directory (e.g., examples/tenants/technova-20251230)")
     parser.add_argument("--num_queries", type=int, default=200, help="Number of queries to generate")
+    parser.add_argument("--batch_size", type=int, default=10, help="Batch size for search query generation")
     parser.add_argument("--prompts", type=str, default="examples/generation/default_prompts.yaml", help="Path to prompts config file")
     
     args = parser.parse_args()
@@ -70,7 +71,7 @@ async def main():
     tenant_id = os.path.basename(args.tenant_path)
     base_path = args.tenant_path
     
-    await generator.generate_eval_dataset(tenant_id, base_path, num_queries=args.num_queries)
+    await generator.generate_eval_dataset(tenant_id, base_path, num_queries=args.num_queries, batch_size=args.batch_size)
 
 if __name__ == "__main__":
     asyncio.run(main())

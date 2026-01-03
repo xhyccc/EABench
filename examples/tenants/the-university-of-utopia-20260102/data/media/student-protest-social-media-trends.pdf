@@ -1,0 +1,142 @@
+# Analyzing Social Media Trends of the Student Protest Against Tuition Increases
+
+## Author
+Alejandro Rodriguez
+
+## Date
+December 3, 2025
+
+---
+
+## Executive Summary
+This report provides an in-depth analysis of the social media traction and engagement surrounding the student-led protest against the proposed tuition increase at the university. The analysis focuses on identifying key themes, influencers, sentiment, and the overall impact of the protest campaign on digital platforms. Social media has played a pivotal role in amplifying the concerns of students, with significant participation observed across platforms such as Twitter, Instagram, and TikTok. 
+
+Key findings include:
+
+- **Volume of Posts**: Over 12,000 posts related to the protest were made across platforms within 24 hours.
+- **Engagement Metrics**: Posts related to the protest garnered over 3.5 million impressions and 780,000 interactions (likes, shares, comments).
+- **Sentiment Analysis**: Approximately 82% of posts expressed negative sentiment toward the tuition hike, while 14% were neutral, and 4% were positive.
+- **Influencers**: Several student leaders and notable alumni emerged as key amplifiers of the movement.
+
+---
+
+## Background
+
+The university is currently facing a significant budget deficit due to a combination of declining enrollment, rising operational costs, and an accounting error discovered on December 3, 2025. To address the shortfall, the interim chancellor proposed a controversial tuition hike during a meeting with the board of trustees. The proposal has sparked widespread criticism from students, faculty, and alumni.
+
+On December 3, 2025, students organized a social media campaign to protest the tuition hike. The campaign has rapidly gained traction, culminating in plans for an on-campus rally scheduled for December 4, 2025.
+
+---
+
+## Methodology
+
+The analysis was conducted using a combination of social media monitoring tools and manual review. Data was collected between December 2, 2025 (preliminary discussions of the tuition hike) and December 3, 2025.
+
+- **Platforms Monitored**: Twitter, Instagram, TikTok, Facebook, Reddit
+- **Hashtags Tracked**: #NoTuitionHike, #StudentVoices, #EducationNotProfit
+- **Tools Used**: Brandwatch, Hootsuite, sentiment analysis APIs (Google Cloud NLP, IBM Watson)
+- **Metrics Analyzed**:
+  - Post volume
+  - Engagement (likes, shares, comments)
+  - Sentiment (positive, neutral, negative)
+  - Influencer activity
+  - Trending keywords and hashtags
+
+---
+
+## Findings
+
+### 1. Volume of Posts
+- Total posts related to the protest: **12,342**
+  - Twitter: 6,827 posts
+  - Instagram: 3,210 posts (stories and feed combined)
+  - TikTok: 1,890 videos
+  - Facebook: 415 posts
+- Peak activity occurred on December 3, 2025, between 8:00 PM and 10:00 PM.
+
+### 2. Engagement Metrics
+- Total impressions: **3,540,000**
+- Total interactions: **780,000**
+  - Likes: 520,000
+  - Shares/Retweets: 180,000
+  - Comments: 80,000
+
+### 3. Sentiment Analysis
+- **Negative sentiment**: 82%
+  - Common themes: frustration over lack of transparency, financial strain on students
+- **Neutral sentiment**: 14%
+  - Common themes: sharing event details, logistical updates
+- **Positive sentiment**: 4%
+  - Common themes: support for student unity, calls for dialogue
+
+### 4. Key Influencers
+- **Top Student Leaders**:
+  - @StudentVoice_Alex (Twitter): 12,000 followers, 2,500 retweets on a single post
+  - @CampusActivist (Instagram): 7,800 followers, 1,100 shares of protest-related stories
+- **Notable Alumni**:
+  - @AlumJaneDoe (Twitter): 45,000 followers, expressed solidarity with students
+  - @PhilanthropistJohn (LinkedIn): Shared a critical post about the tuition hike
+
+### 5. Trending Hashtags
+- #NoTuitionHike: 8,212 mentions
+- #StudentVoices: 4,512 mentions
+- #EducationNotProfit: 3,978 mentions
+
+---
+
+## Discussion
+
+### Impact of Social Media on the Protest
+Social media has served as a vital tool for mobilizing students and fostering a sense of solidarity. The rapid spread of information through hashtags and viral posts has ensured widespread awareness of the protest, both within the university community and beyond.
+
+### Challenges
+1. **Misinformation**:
+   - Several posts incorrectly claimed that the tuition hike had already been approved.
+   - Some users spread unverified rumors about administrative corruption.
+
+2. **Polarization**:
+   - A small subset of posts criticized the protest, citing the necessity of the tuition hike to address the budget deficit.
+
+### Opportunities
+- **Strengthening Dialogue**: The protest provides an opportunity for the administration to engage directly with students and address their concerns.
+- **Leveraging Alumni Support**: Notable alumni expressing solidarity could influence both public opinion and fundraising efforts.
+
+---
+
+## Recommendations
+
+1. **Enhance Transparency**:
+   - The administration should issue a detailed statement addressing the budget deficit and the rationale behind the proposed tuition hike.
+   
+2. **Engage with Student Leaders**:
+   - Organize a town hall meeting with representatives from the student body to foster dialogue and collaboration.
+   
+3. **Combat Misinformation**:
+   - Use official social media channels to fact-check and clarify rumors.
+   
+4. **Monitor Future Trends**:
+   - Continuously track social media trends to gauge public sentiment and identify emerging concerns.
+
+---
+
+## Conclusion
+The student-led protest against the proposed tuition hike has gained significant traction on social media, highlighting widespread dissatisfaction and a demand for greater transparency. While the movement poses challenges for the university administration, it also presents an opportunity to rebuild trust and demonstrate a commitment to collaborative decision-making.
+
+---
+
+## Appendices
+
+### Appendix A: Top 10 Most-Engaged Posts
+1. **Twitter**: "We won't let this happen. Join us tomorrow at the rally! #NoTuitionHike" – 2,500 retweets, 4,000 likes
+2. **Instagram**: "Education is a right, not a privilege. See you at the steps tomorrow. #EducationNotProfit" – 1,800 shares, 3,200 likes
+3. **TikTok**: Video montage of protest preparations – 1.2M views, 150,000 likes
+
+### Appendix B: Sentiment Breakdown by Platform
+- Twitter: 85% negative, 10% neutral, 5% positive
+- Instagram: 78% negative, 17% neutral, 5% positive
+- TikTok: 80% negative, 15% neutral, 5% positive
+
+---
+
+## Author Bio
+Alejandro Rodriguez is a social media analyst specializing in digital activism and public sentiment analysis. With over a decade of experience, Alejandro has contributed to numerous reports on social media's role in shaping public discourse and mobilizing grassroots movements.

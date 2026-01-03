@@ -1,0 +1,115 @@
+# Grading System Status Update
+
+**Date:** December 21, 2025  
+**Author:** Omar Khan, IT Department  
+
+## Overview
+The IT Department is issuing a detailed update on the partial restoration of the university's grading system following a major server outage that disrupted operations during finals week. While progress has been made, several challenges remain, and full functionality is not expected to return until after the holiday break. This document outlines the current status, steps taken to restore services, and anticipated next steps.
+
+---
+
+## Current Status
+
+- **System Restoration:**
+  - As of December 21, 2025, grading system functionality has been partially restored.
+  - Instructors can now access grade submission portals, but performance remains inconsistent.
+  - Some features, including automated grade calculations and report generation, are still offline.
+
+- **Impact:**
+  - Approximately 75% of courses have regained access to basic grading functionalities.
+  - Students continue to experience delays in viewing final grades.
+  - Academic advisors and administrators lack access to full reporting tools, causing operational bottlenecks.
+
+- **Infrastructure Limitations:**
+  - The outage was caused by a critical failure in the primary server cluster, which has been flagged as outdated since 2023.
+  - Temporary fixes have been implemented, but long-term stability requires significant hardware upgrades.
+
+---
+
+## Actions Taken
+
+### Technical Interventions
+
+- **Server Patch Deployment:**
+  - Emergency patches were applied to restore partial functionality to the grading system.
+  - Additional security updates were implemented to prevent further vulnerabilities.
+
+- **Load Balancing:**
+  - Traffic rerouting has been set up to reduce strain on operational servers.
+  - Non-essential services have been temporarily disabled to prioritize grading system performance.
+
+- **Data Integrity Checks:**
+  - IT teams have conducted comprehensive audits to ensure no data loss from the outage.
+  - Backup systems have been activated to mitigate future risks.
+
+### Communication and Support
+
+- **Stakeholder Notifications:**
+  - Regular updates have been sent to students, faculty, and staff via email and the university's IT portal.
+  - FAQs addressing common concerns have been published to reduce confusion.
+
+- **Help Desk:**
+  - Extended support hours have been established to assist instructors and students with technical issues.
+  - IT staff are actively monitoring support tickets to ensure timely responses.
+
+---
+
+## Challenges
+
+- **Outdated Infrastructure:**
+  - The grading system operates on hardware flagged as a critical risk in internal reports dating back to 2023.
+  - Budget constraints have delayed necessary upgrades.
+
+- **Staffing Shortages:**
+  - The IT department is operating with reduced personnel due to budget cuts, limiting response times.
+
+- **Campus-Wide Impact:**
+  - Disruptions have added stress to students and faculty during an already tense finals week.
+  - Administrative operations are hindered by limited access to reporting tools.
+
+---
+
+## Next Steps
+
+### Short-Term Goals
+
+1. **Expand System Access:**
+   - Continue troubleshooting to restore full grading system functionality.
+   - Prioritize access for instructors managing large courses.
+
+2. **Improve Communication:**
+   - Issue daily status updates to keep stakeholders informed.
+   - Host virtual Q&A sessions to address concerns.
+
+3. **Temporary Workarounds:**
+   - Provide instructors with manual grade submission templates as a backup.
+   - Establish a secure file transfer process for grade reports.
+
+### Long-Term Goals
+
+1. **Infrastructure Upgrades:**
+   - Develop a proposal for replacing outdated hardware, with funding discussions planned for early 2026.
+   - Explore cloud-based solutions to enhance system scalability and reliability.
+
+2. **Preventative Measures:**
+   - Conduct a full audit of university IT systems to identify other critical risks.
+   - Implement stricter monitoring protocols to detect issues before they escalate.
+
+3. **Cross-Department Collaboration:**
+   - Work with the finance department to address budget constraints impacting IT operations.
+   - Engage faculty and student representatives to prioritize IT improvements affecting academic services.
+
+---
+
+## Conclusion
+The IT Department is committed to resolving the grading system outage and ensuring long-term stability for university operations. While partial functionality has been restored, significant challenges remain due to outdated infrastructure and limited resources. We appreciate the patience and understanding of all stakeholders as we work diligently to address these issues.
+
+---
+
+For further inquiries or technical support, please contact the IT Help Desk at **helpdesk@university.edu** or call **(800) 123-4567**.
+
+---
+
+**Omar Khan**  
+**IT Department Lead**  
+**University of [Name Placeholder]**

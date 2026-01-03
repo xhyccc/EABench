@@ -1,0 +1,78 @@
+# Server Outage Report
+
+**Date:** December 24, 2025  
+**Author:** Javier Garcia  
+**Context:** Detailed log of the major server outage reported by the IT department.  
+
+---
+
+## Overview
+On December 24, 2025, the university's IT infrastructure suffered a critical server outage that impacted multiple campus operations, including the submission of final grades, access to research databases, and administrative workflows. This incident, occurring during a period of heightened institutional challenges, further strained relationships between students, faculty, and administration. 
+
+The outage has been attributed to years of neglected infrastructure upgrades, compounded by ongoing delays in implementing the IT department's recommendations. The following report provides a thorough breakdown of the incident, its immediate impacts, and recommendations for mitigating future risks.
+
+---
+
+## Incident Timeline
+**December 24, 2025:**  
+- **06:45 AM**: Initial reports of slow server response times were logged by the IT monitoring systems.  
+- **07:00 AM**: Multiple departments reported inability to access grading portals, research databases, and administrative tools.  
+- **07:30 AM**: The IT department confirmed a server outage affecting critical systems and began diagnostics.  
+- **08:15 AM**: The root cause was identified as a failure in the primary storage cluster due to outdated hardware components.  
+- **09:00 AM**: IT staff initiated emergency recovery protocols, prioritizing grading systems and research database restoration.  
+- **11:30 AM**: Partial functionality was restored, though grading portals remained inaccessible.  
+- **02:00 PM**: Full restoration of systems was achieved, but underlying hardware vulnerabilities remain unresolved.  
+
+---
+
+## Impact Summary
+### Affected Systems
+- **Grading Portals:** Final grade submissions for over 12 departments were delayed, prompting widespread complaints from faculty and students.
+- **Research Databases:** Access to critical research files was disrupted, causing delays in ongoing projects.
+- **Administrative Tools:** Workflow interruptions affected financial aid processing, scholarship approvals, and payroll systems.
+
+### Stakeholder Reactions
+- **Faculty:** Expressed frustration over delays in grade submissions, especially during a critical period at the end of the semester.
+- **Students:** Complained about the lack of communication and transparency regarding the outage. Social media posts highlighted dissatisfaction with the university’s IT infrastructure.
+- **Administration:** Issued a brief statement acknowledging the outage but failed to provide immediate clarity on resolution times or long-term plans.
+
+### Media Coverage
+Local and national media outlets reported on the outage, linking it to the broader challenges facing the university. Headlines emphasized the university’s neglect of IT infrastructure amidst ongoing financial turmoil.
+
+---
+
+## Root Cause Analysis
+### Primary Cause
+The outage was traced to a failure in the primary storage cluster, specifically:  
+- **Hardware:** The storage cluster contained components that had exceeded their recommended lifecycle, with some parts dating back 8+ years.  
+- **Software:** Compatibility issues between legacy systems and newer applications created vulnerabilities.
+
+### Contributing Factors
+- **Budget Constraints:** Persistent cuts to the IT department's budget prevented necessary upgrades and maintenance.
+- **Ignored Warnings:** The IT department’s warnings about critical infrastructure risks were overlooked by university leadership for over three years.
+- **Personnel Shortages:** Recent layoffs in the IT department reduced the team’s ability to proactively address known issues.
+
+---
+
+## Recommendations
+### Immediate Actions
+- **System Audit:** Perform a comprehensive audit of all IT systems to identify and prioritize critical vulnerabilities.
+- **Emergency Funding:** Allocate emergency funds to replace outdated hardware and software components in the primary storage cluster.
+- **Communication Plan:** Establish a clear protocol for informing stakeholders about IT issues and resolutions.
+
+### Long-Term Strategies
+- **Infrastructure Upgrade:** Develop a phased plan to modernize the university’s IT systems over the next 3-5 years.  
+- **Preventative Maintenance:** Implement regular maintenance schedules to prevent future failures.  
+- **Stakeholder Collaboration:** Involve faculty, students, and alumni in discussions about IT needs and funding strategies.  
+
+---
+
+## Conclusion
+The December 24 server outage highlighted systemic issues within the university’s IT infrastructure, exacerbated by years of inadequate funding and ignored warnings. While the immediate impacts have been addressed, significant risks remain unless leadership prioritizes long-term solutions. Transparency, collaboration, and investment will be essential in preventing future crises.
+
+---
+
+**Prepared by:**  
+Javier Garcia  
+Senior IT Analyst  
+University IT Department

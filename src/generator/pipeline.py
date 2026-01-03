@@ -65,7 +65,7 @@ class DataGenerator:
 
         # 2. Generate Content (Emails, Chats, Meetings, Files)
         # We pass base_path to write incrementally
-        await self._generate_content(story, users, base_path)
+        await self._generate_content(story, users, base_path, tenant_id)
 
         # 4. Generate Eval Set
         # Reload full config to generate eval set? Or just use what we have.
@@ -82,42 +82,121 @@ class DataGenerator:
         )
 
     async def _generate_users(self, story: StoryConfig, tenant_id: str) -> List[UserInfo]:
-        prompt = self.prompts['generate_users'].format(
-            company_name=story.company_name,
-            industry=story.industry,
-            company_size=story.company_size,
-            description=story.description,
-            domain=f"{tenant_id}.com",
-            num_users=5 # Start small
-        )
-        
-        response = await self.llm.get_completion([{"role": "user", "content": prompt}])
-        data = self._parse_json(response)
-        
-        user_list = []
-        if isinstance(data, list):
-            user_list = data
-        elif isinstance(data, dict):
-            user_list = data.get("users", [])
-            
+        total_users = story.num_users
+        batch_size = story.eval_batch_size
         users = []
-        for u in user_list:
-            # Validate/Fix fields
-            if "profile" not in u:
-                # Reshape flat structure to nested profile
-                profile = {
-                    "email": u.get("email"),
-                    "name": u.get("name"),
-                    "title": u.get("title"),
-                    "department": u.get("department"),
-                    "manager_id": u.get("manager_id"),
-                    "skills": u.get("skills", []),
-                    "location": u.get("location", "San Francisco"),
-                    "timezone": u.get("timezone", "America/Los_Angeles")
-                }
-                u["profile"] = profile
+        existing_ids = set()
+        
+        # Determine batches
+        num_batches = (total_users + batch_size - 1) // batch_size
+        
+        print(f"Generating {total_users} users in {num_batches} batches (Batch Size: {batch_size})...")
+        
+        for i in range(num_batches):
+            current_batch_size = min(batch_size, total_users - len(users))
+            print(f"  Batch {i+1}/{num_batches}: Generating {current_batch_size} users...")
             
-            users.append(UserInfo(**u))
+            # Build Diversity Context
+            if not users:
+                diversity_context = "Focus on creating the core leadership team (C-level) and heads of key departments."
+            else:
+                # Analyze current distribution
+                departments = {}
+                for u in users:
+                    dept = u.profile.department
+                    departments[dept] = departments.get(dept, 0) + 1
+                
+                dept_str = ", ".join([f"{k}: {v}" for k, v in departments.items()])
+                
+                # Get last few names to avoid repetition
+                recent_names = ", ".join([u.profile.name.display_name for u in users[-10:]])
+                
+                diversity_context = (
+                    f"Current Department Distribution: {dept_str}.\n"
+                    f"Recent Names (DO NOT REPEAT): {recent_names}.\n"
+                    "INSTRUCTIONS:\n"
+                    "1. Generate users for departments that are missing or understaffed.\n"
+                    "2. Add Individual Contributors (IC) to existing managers.\n"
+                    "3. CRITICAL: Ensure new user names are culturally diverse and NOT similar to existing ones."
+                )
+
+            # Format Prompt
+            # We check if the template supports diversity_context, otherwise we append it
+            if "{diversity_context}" in self.prompts['generate_users']:
+                prompt = self.prompts['generate_users'].format(
+                    company_name=story.company_name,
+                    industry=story.industry,
+                    company_size=story.company_size,
+                    description=story.description,
+                    domain=f"{tenant_id}.com",
+                    num_users=current_batch_size,
+                    diversity_context=diversity_context
+                )
+            else:
+                # Fallback for old templates
+                prompt = self.prompts['generate_users'].format(
+                    company_name=story.company_name,
+                    industry=story.industry,
+                    company_size=story.company_size,
+                    description=story.description,
+                    domain=f"{tenant_id}.com",
+                    num_users=current_batch_size
+                )
+                prompt += f"\n\n{diversity_context}"
+
+            response = await self.llm.get_completion([{"role": "user", "content": prompt}])
+            data = self._parse_json(response)
+            
+            user_list = []
+            if isinstance(data, list):
+                user_list = data
+            elif isinstance(data, dict):
+                user_list = data.get("users", [])
+                
+            for u in user_list:
+                # Ensure ID uniqueness
+                base_id = u.get("id") or u.get("username")
+                if not base_id:
+                    # Generate ID from name
+                    name = u.get("name", {}).get("display_name", "User")
+                    base_id = name.lower().replace(" ", "")[:8]
+                
+                user_id = base_id
+                # If ID exists, append batch index or increment
+                if user_id in existing_ids:
+                    user_id = f"{base_id}_{i+1}"
+                
+                # Double check
+                counter = 1
+                while user_id in existing_ids:
+                    user_id = f"{base_id}_{i+1}_{counter}"
+                    counter += 1
+                
+                existing_ids.add(user_id)
+                u["id"] = user_id
+                u["username"] = user_id
+                # Update email to match new ID
+                if "email" in u:
+                    domain = u["email"].split("@")[-1]
+                    u["email"] = f"{user_id}@{domain}"
+
+                # Validate/Fix fields
+                if "profile" not in u:
+                    # Reshape flat structure to nested profile
+                    profile = {
+                        "email": u.get("email"),
+                        "name": u.get("name"),
+                        "title": u.get("title"),
+                        "department": u.get("department"),
+                        "manager_id": u.get("manager_id"),
+                        "skills": u.get("skills", []),
+                        "location": u.get("location", "San Francisco"),
+                        "timezone": u.get("timezone", "America/Los_Angeles")
+                    }
+                    u["profile"] = profile
+                
+                users.append(UserInfo(**u))
+                
         return users
 
     def _append_to_yaml(self, item: BaseModel, path: str):
@@ -145,7 +224,7 @@ class DataGenerator:
             with open(path, "w") as f:
                 f.write(yaml_str)
 
-    async def _generate_content(self, story: StoryConfig, users: List[UserInfo], base_path: str):
+    async def _generate_content(self, story: StoryConfig, users: List[UserInfo], base_path: str, tenant_id: str):
         # We don't store lists in memory anymore
         
         users_context = "\n".join([f"{u.id}: {u.profile.name.display_name} ({u.profile.title})" for u in users])
@@ -226,56 +305,60 @@ class DataGenerator:
             
             if isinstance(email_summaries, list):
                 for summary in email_summaries:
-                    # Generate full content
-                    from_user_obj = next((u for u in users if u.id == summary.get('from_user')), None)
-                    to_users_objs = [u for u in users if u.id in summary.get('to_users', [])]
-                    
-                    from_name = from_user_obj.profile.name.display_name if from_user_obj else "Unknown"
-                    from_title = from_user_obj.profile.title if from_user_obj else "Unknown"
-                    to_names = ", ".join([u.profile.name.display_name for u in to_users_objs])
-                    
-                    content_prompt = self.prompts['generate_email_content'].format(
-                        subject=summary.get('subject'),
-                        from_user_name=from_name,
-                        from_user_title=from_title,
-                        to_users_names=to_names,
-                        context_summary=summary.get('context_summary'),
-                        long_history=long_history_str,
-                        recent_history=recent_history_str
-                    )
-                    content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
-                    content_data = self._parse_json(content_resp)
-                    
-                    # Construct Email object
-                    email_obj = Email(
-                        id=summary.get('id'),
-                        from_user=summary.get('from_user'),
-                        to_users=summary.get('to_users', []),
-                        cc_users=summary.get('cc_users', []),
-                        subject=summary.get('subject'),
-                        body=content_data.get('body', "Content generation failed."),
-                        timestamp=summary.get('timestamp', current_date.isoformat())
-                    )
-                    
-                    # Print preview
-                    print(f"\n[Email] {email_obj.subject} ({len(email_obj.body)} chars)")
-                    print(f"Body Preview: {email_obj.body[:250]}...")
-                    
-                    # Append to file
-                    self._append_to_yaml(email_obj, os.path.join(base_path, "config", "emails.yaml"))
-                    
-                    # Log email generation
-                    generation_log.append({
-                        "date": date_str,
-                        "type": "email",
-                        "id": email_obj.id,
-                        "subject": email_obj.subject,
-                        "from": email_obj.from_user,
-                        "to": email_obj.to_users,
-                        "cc": email_obj.cc_users,
-                        "body": email_obj.body,
-                        "summary": summary.get('context_summary')
-                    })
+                    try:
+                        # Generate full content
+                        from_user_obj = next((u for u in users if u.id == summary.get('from_user')), None)
+                        to_users_objs = [u for u in users if u.id in summary.get('to_users', [])]
+                        
+                        from_name = from_user_obj.profile.name.display_name if from_user_obj else "Unknown"
+                        from_title = from_user_obj.profile.title if from_user_obj else "Unknown"
+                        to_names = ", ".join([u.profile.name.display_name for u in to_users_objs])
+                        
+                        content_prompt = self.prompts['generate_email_content'].format(
+                            subject=summary.get('subject'),
+                            from_user_name=from_name,
+                            from_user_title=from_title,
+                            to_users_names=to_names,
+                            context_summary=summary.get('context_summary'),
+                            long_history=long_history_str,
+                            recent_history=recent_history_str
+                        )
+                        content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
+                        content_data = self._parse_json(content_resp)
+                        
+                        # Construct Email object
+                        email_obj = Email(
+                            id=summary.get('id'),
+                            from_user=summary.get('from_user'),
+                            to_users=summary.get('to_users', []),
+                            cc_users=summary.get('cc_users', []),
+                            subject=summary.get('subject'),
+                            body=content_data.get('body', "Content generation failed."),
+                            timestamp=summary.get('timestamp', current_date.isoformat())
+                        )
+                        
+                        # Print preview
+                        print(f"\n[Email] {email_obj.subject} ({len(email_obj.body)} chars)")
+                        print(f"Body Preview: {email_obj.body[:250]}...")
+                        
+                        # Append to file
+                        self._append_to_yaml(email_obj, os.path.join(base_path, "config", "emails.yaml"))
+                        
+                        # Log email generation
+                        generation_log.append({
+                            "date": date_str,
+                            "type": "email",
+                            "id": email_obj.id,
+                            "subject": email_obj.subject,
+                            "from": email_obj.from_user,
+                            "to": email_obj.to_users,
+                            "cc": email_obj.cc_users,
+                            "body": email_obj.body,
+                            "summary": summary.get('context_summary')
+                        })
+                    except Exception as e:
+                        print(f"Error generating email {summary.get('id')}: {e}")
+                        continue
 
             # --- Chats ---
             chat_summary_prompt = self.prompts['generate_chat_summaries'].format(
@@ -290,83 +373,87 @@ class DataGenerator:
             
             if isinstance(chat_summaries, list):
                 for summary in chat_summaries:
-                    participants_objs = [u for u in users if u.id in summary.get('participants', [])]
-                    participants_names = ", ".join([u.profile.name.display_name for u in participants_objs])
-                    
-                    content_prompt = self.prompts['generate_chat_content'].format(
-                        participants_names=participants_names,
-                        context_summary=summary.get('context_summary'),
-                        long_history=long_history_str,
-                        recent_history=recent_history_str,
-                        date=date_str
-                    )
-                    content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
-                    content_data = self._parse_json(content_resp)
-                    
-                    messages = []
-                    participants = summary.get('participants', [])
-                    is_direct_chat = len(participants) == 2
-                    
-                    for msg in content_data.get('messages', []):
-                        from_user = msg.get('from_user')
-                        to_user = None
+                    try:
+                        participants_objs = [u for u in users if u.id in summary.get('participants', [])]
+                        participants_names = ", ".join([u.profile.name.display_name for u in participants_objs])
                         
-                        if is_direct_chat:
-                            # Infer to_user for 1:1 chats
-                            for p in participants:
-                                if p != from_user:
-                                    to_user = p
-                                    break
-                        
-                        messages.append({
-                            "from_user": from_user,
-                            "to_user": to_user,
-                            "content": msg.get('content'),
-                            "timestamp": msg.get('timestamp')
-                        })
-                        
-                    if summary.get('type') == 'group_chat':
-                        chat_obj = GroupChat(
-                            id=summary.get('id'),
-                            name=summary.get('name', 'Group Chat'),
-                            participants=summary.get('participants', []),
-                            messages=messages
+                        content_prompt = self.prompts['generate_chat_content'].format(
+                            participants_names=participants_names,
+                            context_summary=summary.get('context_summary'),
+                            long_history=long_history_str,
+                            recent_history=recent_history_str,
+                            date=date_str
                         )
-                        print(f"\n[Group Chat] {chat_obj.name} ({len(messages)} msgs)")
-                        if messages:
-                            print(f"First Msg: {messages[0]['content'][:250]}...")
-                        self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "group_chats.yaml"))
+                        content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
+                        content_data = self._parse_json(content_resp)
                         
-                        # Log group chat
-                        generation_log.append({
-                            "date": date_str,
-                            "type": "group_chat",
-                            "id": chat_obj.id,
-                            "name": chat_obj.name,
-                            "participants": chat_obj.participants,
-                            "messages": messages,
-                            "summary": summary.get('context_summary')
-                        })
-                    else:
-                        chat_obj = Chat(
-                            id=summary.get('id'),
-                            participants=summary.get('participants', []),
-                            messages=messages
-                        )
-                        print(f"\n[Chat] {', '.join(chat_obj.participants)} ({len(messages)} msgs)")
-                        if messages:
-                            print(f"First Msg: {messages[0]['content'][:250]}...")
-                        self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "chats.yaml"))
+                        messages = []
+                        participants = summary.get('participants', [])
+                        is_direct_chat = len(participants) == 2
                         
-                        # Log chat
-                        generation_log.append({
-                            "date": date_str,
-                            "type": "chat",
-                            "id": chat_obj.id,
-                            "participants": chat_obj.participants,
-                            "messages": messages,
-                            "summary": summary.get('context_summary')
-                        })
+                        for msg in content_data.get('messages', []):
+                            from_user = msg.get('from_user')
+                            to_user = None
+                            
+                            if is_direct_chat:
+                                # Infer to_user for 1:1 chats
+                                for p in participants:
+                                    if p != from_user:
+                                        to_user = p
+                                        break
+                            
+                            messages.append({
+                                "from_user": from_user,
+                                "to_user": to_user,
+                                "content": msg.get('content'),
+                                "timestamp": msg.get('timestamp')
+                            })
+                            
+                        if summary.get('type') == 'group_chat':
+                            chat_obj = GroupChat(
+                                id=summary.get('id'),
+                                name=summary.get('name', 'Group Chat'),
+                                participants=summary.get('participants', []),
+                                messages=messages
+                            )
+                            print(f"\n[Group Chat] {chat_obj.name} ({len(messages)} msgs)")
+                            if messages:
+                                print(f"First Msg: {messages[0]['content'][:250]}...")
+                            self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "group_chats.yaml"))
+                            
+                            # Log group chat
+                            generation_log.append({
+                                "date": date_str,
+                                "type": "group_chat",
+                                "id": chat_obj.id,
+                                "name": chat_obj.name,
+                                "participants": chat_obj.participants,
+                                "messages": messages,
+                                "summary": summary.get('context_summary')
+                            })
+                        else:
+                            chat_obj = Chat(
+                                id=summary.get('id'),
+                                participants=summary.get('participants', []),
+                                messages=messages
+                            )
+                            print(f"\n[Chat] {', '.join(chat_obj.participants)} ({len(messages)} msgs)")
+                            if messages:
+                                print(f"First Msg: {messages[0]['content'][:250]}...")
+                            self._append_to_yaml(chat_obj, os.path.join(base_path, "config", "chats.yaml"))
+                            
+                            # Log chat
+                            generation_log.append({
+                                "date": date_str,
+                                "type": "chat",
+                                "id": chat_obj.id,
+                                "participants": chat_obj.participants,
+                                "messages": messages,
+                                "summary": summary.get('context_summary')
+                            })
+                    except Exception as e:
+                        print(f"Error generating chat {summary.get('id')}: {e}")
+                        continue
 
             # --- Meetings ---
             meeting_summary_prompt = self.prompts['generate_meeting_summaries'].format(
@@ -381,83 +468,100 @@ class DataGenerator:
             
             if isinstance(meeting_summaries, list):
                 for summary in meeting_summaries:
-                    participants_objs = [u for u in users if u.id in summary.get('attendee_ids', [])]
-                    participants_names = ", ".join([u.profile.name.display_name for u in participants_objs])
-                    
-                    transcript_prompt = self.prompts['generate_meeting_transcript'].format(
-                        title=summary.get('title'),
-                        agenda=summary.get('agenda'),
-                        participants_names=participants_names,
-                        context_summary=summary.get('context_summary'),
-                        long_history=long_history_str,
-                        recent_history=recent_history_str
-                    )
-                    transcript_resp = await self.llm.get_completion([{"role": "user", "content": transcript_prompt}])
-                    transcript_data = self._parse_json(transcript_resp)
-                    
-                    attendees = summary.get('attendee_ids', [])
-                    organizer = attendees[0] if attendees else "unknown"
-
-                    # Generate Meeting Chat
-                    chat_prompt = self.prompts['generate_meeting_chat'].format(
-                        title=summary.get('title'),
-                        participants_names=participants_names,
-                        context_summary=summary.get('context_summary'),
-                        date=date_str
-                    )
-                    chat_resp = await self.llm.get_completion([{"role": "user", "content": chat_prompt}])
-                    chat_data = self._parse_json(chat_resp)
-                    
-                    meeting_chat_messages = []
-                    for msg in chat_data.get('messages', []):
-                        meeting_chat_messages.append({
-                            "from_user": msg.get('from_user'),
-                            "to_user": None,
-                            "content": msg.get('content'),
-                            "timestamp": msg.get('timestamp')
-                        })
+                    try:
+                        participants_objs = [u for u in users if u.id in summary.get('attendee_ids', [])]
+                        participants_names = ", ".join([u.profile.name.display_name for u in participants_objs])
                         
-                    meeting_chat = GroupChat(
-                        id=f"chat_{summary.get('id')}",
-                        name=f"Chat: {summary.get('title')}",
-                        participants=attendees,
-                        messages=meeting_chat_messages
-                    )
+                        transcript_prompt = self.prompts['generate_meeting_transcript'].format(
+                            title=summary.get('title'),
+                            agenda=summary.get('agenda'),
+                            participants_names=participants_names,
+                            context_summary=summary.get('context_summary'),
+                            long_history=long_history_str,
+                            recent_history=recent_history_str
+                        )
+                        transcript_resp = await self.llm.get_completion([{"role": "user", "content": transcript_prompt}])
+                        transcript_data = self._parse_json(transcript_resp)
+                        
+                        attendees = summary.get('attendee_ids', [])
+                        organizer = attendees[0] if attendees else "unknown"
 
-                    meeting_obj = Meeting(
-                        id=summary.get('id'),
-                        title=summary.get('title'),
-                        organizer=organizer,
-                        invitees=attendees,
-                        attendees=attendees,
-                        agenda=summary.get('agenda'),
-                        start_time=summary.get('start_time'),
-                        end_time=summary.get('end_time'),
-                        location=summary.get('location', 'Online'),
-                        transcript=transcript_data.get('transcript', "Transcript generation failed."),
-                        chat=meeting_chat
-                    )
-                    
-                    print(f"\n[Meeting] {meeting_obj.title}")
-                    if meeting_obj.transcript:
-                        print(f"Transcript Preview: {meeting_obj.transcript[:250]}...")
-                    if meeting_obj.chat:
-                        print(f"Chat Preview: {len(meeting_obj.chat.messages)} messages")
-                    
-                    self._append_to_yaml(meeting_obj, os.path.join(base_path, "config", "meetings.yaml"))
-                    
-                    # Log meeting
-                    generation_log.append({
-                        "date": date_str,
-                        "type": "meeting",
-                        "id": meeting_obj.id,
-                        "title": meeting_obj.title,
-                        "organizer": meeting_obj.organizer,
-                        "attendees": meeting_obj.attendees,
-                        "transcript": meeting_obj.transcript,
-                        "chat_messages": meeting_chat_messages,
-                        "summary": summary.get('context_summary')
-                    })
+                        # Generate Meeting Chat
+                        chat_prompt = self.prompts['generate_meeting_chat'].format(
+                            title=summary.get('title'),
+                            participants_names=participants_names,
+                            context_summary=summary.get('context_summary'),
+                            date=date_str
+                        )
+                        chat_resp = await self.llm.get_completion([{"role": "user", "content": chat_prompt}])
+                        chat_data = self._parse_json(chat_resp)
+                        
+                        meeting_chat_messages = []
+                        for msg in chat_data.get('messages', []):
+                            meeting_chat_messages.append({
+                                "from_user": msg.get('from_user'),
+                                "to_user": None,
+                                "content": msg.get('content'),
+                                "timestamp": msg.get('timestamp')
+                            })
+                            
+                        meeting_chat = GroupChat(
+                            id=f"chat_{summary.get('id')}",
+                            name=f"Chat: {summary.get('title')}",
+                            participants=attendees,
+                            messages=meeting_chat_messages
+                        )
+
+                        transcript_content = transcript_data.get('transcript', "Transcript generation failed.")
+                        if isinstance(transcript_content, list):
+                            # Convert list of speaker turns to string
+                            formatted_transcript = []
+                            for turn in transcript_content:
+                                if isinstance(turn, dict):
+                                    speaker = turn.get('speaker', 'Unknown')
+                                    text = turn.get('content', '') or turn.get('text', '')
+                                    formatted_transcript.append(f"{speaker}: {text}")
+                                elif isinstance(turn, str):
+                                    formatted_transcript.append(turn)
+                            transcript_content = "\n".join(formatted_transcript)
+
+                        meeting_obj = Meeting(
+                            id=summary.get('id'),
+                            title=summary.get('title'),
+                            organizer=organizer,
+                            invitees=attendees,
+                            attendees=attendees,
+                            agenda=summary.get('agenda'),
+                            start_time=summary.get('start_time'),
+                            end_time=summary.get('end_time'),
+                            location=summary.get('location', 'Online'),
+                            transcript=transcript_content,
+                            chat=meeting_chat
+                        )
+                        
+                        print(f"\n[Meeting] {meeting_obj.title}")
+                        if meeting_obj.transcript:
+                            print(f"Transcript Preview: {meeting_obj.transcript[:250]}...")
+                        if meeting_obj.chat:
+                            print(f"Chat Preview: {len(meeting_obj.chat.messages)} messages")
+                        
+                        self._append_to_yaml(meeting_obj, os.path.join(base_path, "config", "meetings.yaml"))
+                        
+                        # Log meeting
+                        generation_log.append({
+                            "date": date_str,
+                            "type": "meeting",
+                            "id": meeting_obj.id,
+                            "title": meeting_obj.title,
+                            "organizer": meeting_obj.organizer,
+                            "attendees": meeting_obj.attendees,
+                            "transcript": meeting_obj.transcript,
+                            "chat_messages": meeting_chat_messages,
+                            "summary": summary.get('context_summary')
+                        })
+                    except Exception as e:
+                        print(f"Error generating meeting {summary.get('id')}: {e}")
+                        continue
             
             # --- Files ---
             file_summary_prompt = self.prompts['generate_file_summaries'].format(
@@ -472,52 +576,65 @@ class DataGenerator:
             
             if isinstance(file_summaries, list):
                 for summary in file_summaries:
-                    author_obj = next((u for u in users if u.id == summary.get('created_by')), None)
-                    author_name = author_obj.profile.name.display_name if author_obj else "Unknown"
-                    
-                    content_prompt = self.prompts['generate_file_content'].format(
-                        path=summary.get('path'),
-                        author_name=author_name,
-                        context_summary=summary.get('context_summary'),
-                        long_history=long_history_str,
-                        recent_history=recent_history_str
-                    )
-                    content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
-                    content_data = self._parse_json(content_resp)
-                    
-                    # Ensure path starts with data/
-                    path = summary.get('path')
-                    if not path.startswith('data/'):
-                        path = f"data/{path}"
+                    try:
+                        author_obj = next((u for u in users if u.id == summary.get('created_by')), None)
+                        author_name = author_obj.profile.name.display_name if author_obj else "Unknown"
                         
-                    # Write content immediately
-                    file_path = os.path.join(base_path, path)
-                    os.makedirs(os.path.dirname(file_path), exist_ok=True)
-                    content = content_data.get('content', "Content generation failed.")
-                    with open(file_path, "w") as f:
-                        f.write(content)
+                        content_prompt = self.prompts['generate_file_content'].format(
+                            path=summary.get('path'),
+                            author_name=author_name,
+                            context_summary=summary.get('context_summary'),
+                            long_history=long_history_str,
+                            recent_history=recent_history_str
+                        )
                         
-                    print(f"\n[File] {path}")
-                    print(f"Content Preview: {content[:250]}...")
+                        # Retry logic for file content generation
+                        content_data = {}
+                        for attempt in range(3):
+                            try:
+                                content_resp = await self.llm.get_completion([{"role": "user", "content": content_prompt}])
+                                content_data = self._parse_json(content_resp)
+                                if isinstance(content_data, dict) and content_data.get('content'):
+                                    break
+                            except Exception as e:
+                                print(f"Attempt {attempt+1} failed for file {summary.get('path')}: {e}")
+                        
+                        # Ensure path starts with data/
+                        path = summary.get('path')
+                        if not path.startswith('data/'):
+                            path = f"data/{path}"
+                            
+                        # Write content immediately
+                        file_path = os.path.join(base_path, path)
+                        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                        content = content_data.get('content', "Content generation failed.")
+                        with open(file_path, "w") as f:
+                            f.write(content)
+                            
+                        print(f"\n[File] {path}")
+                        print(f"Content Preview: {content[:250]}...")
 
-                    # Create and append metadata
-                    meta = FileMetadata(
-                        path=path,
-                        created_by=summary.get('created_by'),
-                        created_time=datetime.datetime.now().isoformat(),
-                        snippet=summary.get('snippet') or summary.get('context_summary')
-                    )
-                    self._append_to_yaml(meta, os.path.join(base_path, "config", "files.yaml"))
-                    
-                    # Log file creation
-                    generation_log.append({
-                        "date": date_str,
-                        "type": "file",
-                        "path": path,
-                        "created_by": meta.created_by,
-                        "content": content,
-                        "summary": summary.get('context_summary')
-                    })
+                        # Create and append metadata
+                        meta = FileMetadata(
+                            path=path,
+                            created_by=summary.get('created_by'),
+                            created_time=datetime.datetime.now().isoformat(),
+                            snippet=summary.get('snippet') or summary.get('context_summary')
+                        )
+                        self._append_to_yaml(meta, os.path.join(base_path, "config", "files.yaml"))
+                        
+                        # Log file creation
+                        generation_log.append({
+                            "date": date_str,
+                            "type": "file",
+                            "path": path,
+                            "created_by": meta.created_by,
+                            "content": content,
+                            "summary": summary.get('context_summary')
+                        })
+                    except Exception as e:
+                        print(f"Error generating file {summary.get('path')}: {e}")
+                        continue
 
         # Save generation log
         with open(os.path.join(base_path, "generation_log.json"), "w") as f:
@@ -525,11 +642,11 @@ class DataGenerator:
         print(f"Generation log saved to {os.path.join(base_path, 'generation_log.json')}")
 
         # Generate Eval Dataset
-        await self.generate_eval_dataset(tenant_id, base_path)
+        await self.generate_eval_dataset(tenant_id, base_path, batch_size=story.eval_batch_size)
 
         return
 
-    async def generate_eval_dataset(self, tenant_id: str, base_path: str, num_queries: int = 200):
+    async def generate_eval_dataset(self, tenant_id: str, base_path: str, num_queries: int = 200, batch_size: int = 10):
         print(f"Generating evaluation dataset for {tenant_id}...")
         
         log_path = os.path.join(base_path, "generation_log.json")
@@ -567,7 +684,6 @@ class DataGenerator:
         all_items = emails + meetings + files + chats
         random.shuffle(all_items)
         
-        batch_size = 10
         for i in range(0, len(all_items), batch_size):
             if len(eval_dataset) >= num_search:
                 break

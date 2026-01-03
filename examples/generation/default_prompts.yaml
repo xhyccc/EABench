@@ -12,6 +12,8 @@ generate_users: |
   Size: {company_size}
   Description: {description}
 
+  {diversity_context}
+
   Output a JSON object with a list of "users". 
   Ensure the hierarchy makes sense (e.g., CEO -> VP -> Manager -> IC).
   Generate at least {num_users} users.

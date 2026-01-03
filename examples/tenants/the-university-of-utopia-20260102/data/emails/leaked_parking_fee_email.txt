@@ -1,0 +1,99 @@
+# Leaked Email: Plans to Increase Parking Fees on Campus
+
+**From:** Lina Tanaka  
+**To:** University Finance Committee  
+**Date:** December 10, 2025  
+**Subject:** Proposal for Updated Parking Fee Structure  
+
+---
+
+## Context and Rationale
+
+As part of the ongoing efforts to address the university's critical financial challenges, the Finance Committee has been tasked with identifying additional revenue streams. After a detailed review of campus services, parking fees have been identified as an area where adjustments can be made to generate substantial additional revenue with minimal operational overhaul. This proposal outlines the updated parking fee structure, the projected financial impact, and strategies for implementation.
+
+### Key Points:
+- Current parking fees have remained unchanged since 2018.
+- The university operates 12 parking facilities across campus, which are consistently at 90-95% capacity during peak hours.
+- Benchmarking against comparable institutions indicates that our current rates are significantly below market averages.
+- Increasing parking fees aligns with the broader budget restructuring plan to address the institution's $48 million deficit.
+
+---
+
+## Proposed Parking Fee Structure
+
+**Current Rates:**
+- **Student Parking Permits:** $150 per semester
+- **Faculty and Staff Parking Permits:** $200 per semester
+- **Daily Visitor Parking:** $5 per day
+
+**Proposed Rates (Effective Fall 2026):**
+- **Student Parking Permits:** $200 per semester (33% increase)
+- **Faculty and Staff Parking Permits:** $300 per semester (50% increase)
+- **Daily Visitor Parking:** $8 per day (60% increase)
+
+### Additional Considerations:
+- Introduction of a premium parking permit for reserved spaces at $500 per semester.
+- Implementation of tiered pricing based on lot location and demand.
+- Exploration of dynamic pricing during major campus events.
+
+---
+
+## Financial Impact
+
+### Revenue Projections:
+- The proposed fee adjustments are expected to generate an additional $3.2 million annually.
+  - **Breakdown:**
+    - Student permits: +$1.2 million
+    - Faculty/staff permits: +$1.5 million
+    - Visitor parking: +$0.5 million
+
+### Cost Analysis:
+- Minimal infrastructure updates required to support the new pricing model (e.g., signage updates, minor software reconfigurations).
+- Estimated one-time implementation cost: $50,000.
+
+---
+
+## Implementation Plan
+
+1. **Communication Strategy:**
+   - Develop a comprehensive communication plan to inform stakeholders about the changes.
+   - Schedule town hall meetings with students, faculty, and staff to provide transparency and address concerns.
+
+2. **Technology Upgrades:**
+   - Update parking permit software to support the new pricing tiers.
+   - Enhance mobile app functionality for real-time parking availability and payment options.
+
+3. **Timeline:**
+   - Spring 2026: Announce fee changes to campus community.
+   - Summer 2026: Update infrastructure and resolve technical issues.
+   - Fall 2026: Implement new fee structure.
+
+---
+
+## Anticipated Challenges
+
+1. **Stakeholder Pushback:**
+   - Students and employees may perceive the fee increase as an undue financial burden.
+   - Mitigation: Emphasize the necessity of the change as part of the university's financial recovery plan.
+
+2. **Equity Concerns:**
+   - Low-income students and staff may struggle with the increased costs.
+   - Mitigation: Establish a financial assistance program for eligible permit holders.
+
+3. **Operational Issues:**
+   - Potential for increased demand on public transit and alternative commuting options.
+   - Mitigation: Collaborate with local transit authorities to improve service to campus.
+
+---
+
+## Conclusion
+
+Adjusting parking fees is a necessary step to address the university's financial crisis. While we anticipate some resistance, a transparent and thoughtful rollout will help build understanding and acceptance among the campus community. The proposed changes will provide a significant and sustainable boost to our revenue without requiring major operational changes.
+
+We welcome feedback from the Finance Committee and other stakeholders to refine this plan before final approval.
+
+---
+
+**Regards,**  
+Lina Tanaka  
+Director of Campus Services

@@ -1,0 +1,108 @@
+# Server Restoration Report
+
+### Author: Dev Lobo
+
+### Date: 2025-12-25
+
+---
+
+## Context
+The university's IT department successfully restored partial server functionality following a series of outages that disrupted campus operations. These outages, caused by outdated hardware and insufficient infrastructure investment, compounded the challenges faced by the institution amidst an ongoing financial crisis. This report details the restoration efforts, the current status of the servers, and recommendations for long-term solutions.
+
+---
+
+## Background
+
+### Recent History
+- **2025-12-24**: Major server outages delayed final grade submissions for several departments, triggering faculty and student complaints during an already tense finals week.
+- **2025-12-25**: Overnight restoration efforts by the IT department yielded partial server functionality, mitigating some immediate disruptions but leaving critical vulnerabilities unaddressed.
+
+### Infrastructure Challenges
+- Outdated server hardware and software have been identified as primary causes of recurring outages.
+- Previous warnings about infrastructure risks were ignored due to budget constraints.
+- The current financial crisis has limited the university's ability to allocate funds for IT upgrades.
+
+---
+
+## Restoration Efforts
+
+### Actions Taken
+1. **Diagnostic Tests**:
+   - Conducted comprehensive diagnostics on affected servers.
+   - Identified hardware failures in 3 of 12 primary servers.
+2. **Temporary Server Reallocation**:
+   - Redirected traffic from failed servers to functional backups.
+   - Prioritized essential services, including grade submission portals and research databases.
+3. **Patch Implementation**:
+   - Applied emergency software patches to address security vulnerabilities.
+   - Updated critical configurations to stabilize server performance.
+4. **Collaboration**:
+   - Coordinated efforts with external IT consultants to expedite troubleshooting.
+   - Engaged faculty volunteers to assist with manual data recovery.
+
+### Current Status
+- **Restored Services**:
+   - Grade submission portals (partial functionality restored).
+   - Research databases (operational with minor delays).
+   - Email and communication servers (stable performance).
+- **Remaining Issues**:
+   - 3 primary servers remain offline, affecting non-essential services.
+   - Bandwidth limitations causing intermittent slowdowns during peak usage.
+   - Vulnerabilities in backup systems require immediate attention.
+
+---
+
+## Data Summary
+
+### Server Functionality Overview
+| Server Name        | Status           | Notes                            |
+|--------------------|------------------|----------------------------------|
+| Primary_Server_01  | Offline          | Hardware failure; needs replacement. |
+| Primary_Server_02  | Online (Restored)| Stable performance post-patch.  |
+| Primary_Server_03  | Online (Restored)| Minor delays during peak usage. |
+| Primary_Server_04  | Offline          | Pending diagnostics.            |
+| Backup_Server_01   | Online           | Operational, handling reallocated traffic. |
+
+### Restoration Timeline
+- **2025-12-24, 8:00 PM**: Initial diagnostic tests conducted.
+- **2025-12-24, 10:00 PM**: Emergency server reallocation implemented.
+- **2025-12-25, 2:00 AM**: Software patches applied to stabilize functional servers.
+- **2025-12-25, 4:00 AM**: Partial restoration completed; services resumed.
+
+---
+
+## Recommendations
+
+### Immediate Actions
+1. **Emergency Funding**:
+   - Allocate $250,000 for immediate hardware replacements and consultant fees.
+   - Utilize the anonymous $50,000 donation toward critical upgrades.
+2. **Enhanced Monitoring**:
+   - Implement real-time monitoring tools to identify and address server issues promptly.
+
+### Long-Term Solutions
+1. **Infrastructure Investment**:
+   - Propose a $1 million budget for comprehensive IT infrastructure upgrades.
+   - Replace outdated server hardware and expand backup capacity.
+2. **Staffing Improvements**:
+   - Hire additional IT staff with expertise in large-scale systems management.
+   - Provide professional development opportunities to existing personnel.
+3. **Transparency Measures**:
+   - Publish regular reports on server health and IT spending.
+   - Engage stakeholders in decision-making processes to build trust.
+
+---
+
+## Conclusion
+While the partial restoration of server functionality has alleviated immediate disruptions, the underlying issues remain unresolved. Without significant investment in infrastructure and staffing, the university risks further outages that could severely impact operations and stakeholder trust. This report underscores the urgent need for decisive action to ensure long-term stability.
+
+---
+
+### Attachments
+- **Appendix A**: Detailed Diagnostic Report (12/24/2025)
+- **Appendix B**: Proposed Budget for IT Upgrades
+- **Appendix C**: List of Affected Services
+
+---
+
+**Prepared by**: Dev Lobo, IT Department

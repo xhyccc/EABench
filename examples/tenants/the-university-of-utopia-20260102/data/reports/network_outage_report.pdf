@@ -1,0 +1,123 @@
+# Network Outage Report
+
+## Author: Diego Lopez
+
+## Date: December 10, 2025
+
+## Context
+This technical report examines the partial network outage that occurred on December 10, 2025, at the university. The outage disrupted access to critical academic resources, sparking widespread frustration among students and faculty. The incident comes amidst a period of escalating institutional challenges, including financial instability, leadership changes, and mounting protests.
+
+---
+
+## Executive Summary
+- **Incident Description:** A partial network outage affected university users for approximately 4.5 hours on December 10, 2025.
+- **Impact:** Students and faculty were unable to access online learning platforms, research databases, and other essential IT services.
+- **Cause:** Preliminary investigation points to hardware failure exacerbated by outdated infrastructure.
+- **Resolution:** Temporary fixes were implemented to restore services, but long-term upgrades are necessary to prevent further failures.
+
+---
+
+## Incident Details
+
+### Timeline
+- **08:30 AM:** Initial reports of service disruptions begin to surface.
+- **09:00 AM:** IT department confirms widespread network issues.
+- **09:15 AM:** Emergency response initiated, and root cause investigation begins.
+- **12:00 PM:** Network services partially restored.
+- **01:00 PM:** Full restoration achieved after deploying temporary hardware patches.
+
+### Affected Systems
+The outage impacted the following:
+- Online learning management systems (e.g., Canvas, Blackboard)
+- Research databases (e.g., JSTOR, PubMed)
+- University email servers
+- Internal administrative portals
+- Campus Wi-Fi services
+
+### User Impact
+- **Students:** Missed deadlines and inability to access assignments.
+- **Faculty:** Interrupted teaching schedules and halted research activities.
+- **Administration:** Delays in communication and coordination.
+
+### Root Cause Analysis
+- **Primary Cause:** Failure of two critical network switches in the central IT hub.
+- **Contributing Factors:**
+  - Outdated hardware that had exceeded its recommended lifecycle.
+  - Lack of redundancy in the network architecture.
+  - Insufficient monitoring tools to predict imminent failures.
+
+---
+
+## Resolution
+
+### Immediate Actions Taken
+1. Identified faulty switches and replaced them with emergency spares.
+2. Rebooted network servers to restore connectivity.
+3. Deployed additional IT staff to monitor the system during recovery.
+
+### Long-Term Recommendations
+- **Upgrade Infrastructure:** Replace all network switches and servers that are beyond their lifecycle.
+- **Implement Redundancy:** Design a more resilient network architecture with failover mechanisms.
+- **Enhance Monitoring:** Invest in advanced network monitoring tools to detect and address issues proactively.
+- **Staff Training:** Conduct regular training for IT personnel on handling critical incidents.
+
+---
+
+## Data and Metrics
+
+### Outage Duration
+- **Start:** 08:30 AM
+- **End:** 01:00 PM
+- **Total Downtime:** 4 hours, 30 minutes
+
+### Affected Users
+- **Estimated Total:** 12,500
+  - Students: 10,000
+  - Faculty: 2,000
+  - Administrative Staff: 500
+
+### Financial Impact
+- **Estimated Cost:** $15,000
+  - Lost productivity: $10,000
+  - Emergency repairs: $5,000
+
+---
+
+## Strategic Implications
+The outage highlights the urgent need to address the university's aging IT infrastructure. Failure to act could lead to recurring incidents, further damaging the institution's reputation and operational efficiency. These technical challenges compound the broader issues faced by the university, including financial instability and declining trust among stakeholders.
+
+### Risks
+- **Reputation Damage:** Continued outages may erode confidence in the university's ability to provide a stable learning environment.
+- **Operational Disruption:** Unreliable IT systems could hinder academic and administrative functions.
+- **Financial Costs:** Reactive repairs are costlier than proactive upgrades.
+
+---
+
+## Conclusion
+The December 10, 2025, network outage was a significant disruption that underscores the critical importance of modernizing the university's IT infrastructure. While temporary solutions restored services, long-term investments in hardware, software, and personnel are necessary to ensure reliability and prevent future incidents.
+
+---
+
+## Appendices
+
+### Appendix A: Network Topology Diagram
+[Diagram illustrating the current network architecture, including the failed components.]
+
+### Appendix B: Incident Response Log
+[Detailed log of actions taken during the outage response.]
+
+### Appendix C: Cost Breakdown
+| Item               | Cost    |
+|--------------------|---------|
+| Emergency Hardware | $3,000  |
+| Staff Overtime     | $2,000  |
+| Productivity Loss  | $10,000 |
+| **Total**          | **$15,000** |
+
+### Appendix D: Recommendations Roadmap
+| Recommendation            | Timeline       | Estimated Cost |
+|---------------------------|----------------|----------------|
+| Infrastructure Upgrade    | 6 months       | $250,000       |
+| Redundancy Implementation | 12 months      | $120,000       |
+| Monitoring Tools          | 3 months       | $50,000        |
+| Staff Training            | Ongoing        | $15,000/year   |

@@ -1,0 +1,154 @@
+# Library Network Outage Log
+
+## Author: Javier Garcia
+
+### Date: 2025-12-14
+
+---
+
+## Context
+This log documents the network outage that affected the library database systems on December 14, 2025. The outage disrupted access to critical academic resources during the peak of the university's financial and administrative crisis. Students, faculty, and staff faced significant challenges as they prepared for final exams and research deadlines. The IT department, already stretched thin due to outdated infrastructure, worked urgently to identify and resolve the issue.
+
+---
+
+## Timeline of Events
+
+### **2025-12-14**
+
+#### 01:15 AM
+- **Event:** Initial reports of slow response times from the library database systems.
+- **Source:** Automated monitoring system flagged elevated latency on the primary database server.
+- **Action:** IT department notified via automated alerts.
+
+#### 02:00 AM
+- **Event:** Complete outage of library database systems reported by multiple users.
+- **Source:** Student complaints submitted through the university’s IT support portal.
+- **Action:** IT support team verified the issue and escalated it to the network operations team.
+
+#### 02:30 AM
+- **Event:** IT team began diagnostics on the library server cluster.
+- **Findings:**
+  - High CPU and memory usage on primary database server.
+  - Network packet loss detected between data center switches.
+  - Logs indicated a surge in simultaneous connection attempts, potentially indicative of a Denial of Service (DoS) attack or misconfiguration.
+- **Action:**
+  - Isolated affected servers from the network.
+  - Initiated emergency maintenance mode for the library systems.
+
+#### 03:15 AM
+- **Event:** Preliminary investigation identified outdated firmware on network switches as a key cause of the outage.
+- **Details:**
+  - Latest firmware update was over 18 months overdue.
+  - Previous IT department warnings about hardware obsolescence were unaddressed due to budget constraints.
+- **Action:**
+  - Team initiated firmware updates for affected switches.
+  - Began rerouting traffic to secondary network paths to restore partial connectivity.
+
+#### 05:00 AM
+- **Event:** Partial restoration of library database systems.
+- **Details:**
+  - Approximately 60% of users regained access.
+  - Performance remained degraded due to high traffic and residual network instability.
+- **Action:** IT team continued monitoring and troubleshooting.
+
+#### 07:30 AM
+- **Event:** Full restoration of library systems.
+- **Details:**
+  - Firmware updates successfully applied to all affected switches.
+  - Network traffic normalized.
+  - Library systems confirmed operational.
+- **Action:** IT department issued a status update to the university community.
+
+---
+
+## Root Cause Analysis
+
+### **Primary Causes**
+1. **Outdated Infrastructure:**
+   - Key network hardware (e.g., switches and routers) had not received critical firmware updates due to budgetary constraints.
+   - Aging hardware experienced performance degradation under peak loads.
+
+2. **Surge in Traffic:**
+   - High demand for library database systems during finals week exacerbated existing hardware limitations.
+   - Logs indicated a 250% increase in simultaneous connection attempts compared to the average daily load.
+
+3. **Delayed Maintenance:**
+   - Previous recommendations from the IT department to replace or upgrade critical infrastructure were deprioritized due to the university’s financial crisis.
+
+### **Contributing Factors**
+1. **Lack of Redundancy:**
+   - No functional failover systems were in place to handle a complete hardware failure.
+2. **Resource Constraints:**
+   - Ongoing financial instability left the IT department understaffed and underfunded.
+
+---
+
+## Impact Assessment
+
+### **Affected Systems**
+- Library database systems (100% downtime for 5.5 hours).
+- Related services:
+  - Online catalog search.
+  - Remote access to academic journals and e-books.
+  - Interlibrary loan request system.
+
+### **User Impact**
+- Estimated 15,000 students and faculty affected.
+- Disruption during critical study and research period (final exams).
+- Significant frustration expressed via IT support tickets and on social media.
+
+### **Institutional Reputational Impact**
+- Further erosion of trust in the university administration and IT department.
+- Negative media coverage anticipated due to the timing of the outage amidst other crises.
+
+---
+
+## Resolution Plan
+
+### **Immediate Actions**
+1. **Network Stabilization:**
+   - Applied firmware updates to all outdated network switches.
+   - Increased monitoring of network traffic for unusual activity.
+
+2. **Communication:**
+   - Issued an email notification to all users apologizing for the inconvenience and explaining the cause of the outage.
+   - Posted updates on the university IT status page and social media channels.
+
+### **Long-Term Actions**
+1. **Infrastructure Upgrades:**
+   - Develop a phased plan to replace outdated hardware by Q2 2026.
+   - Secure funding for critical IT infrastructure through emergency budget requests.
+
+2. **Preventative Measures:**
+   - Implement regular firmware update schedules.
+   - Increase redundancy for critical systems to prevent complete outages.
+
+3. **Stakeholder Engagement:**
+   - Advocate for greater IT budget allocation in future financial plans.
+   - Collaborate with faculty and student representatives to prioritize IT service improvements.
+
+---
+
+## Conclusion
+The library network outage on December 14, 2025, underscores the critical need for investment in IT infrastructure. While the issue was resolved within 6 hours, the disruption caused significant challenges for the university community. Moving forward, addressing systemic infrastructure issues and securing adequate funding must be a top priority to prevent similar incidents.
+
+---
+
+## Appendix
+
+### **Technical Data**
+- **Primary Server Logs (2025-12-14):**
+  - Average CPU usage: 95% (normal baseline: 45%).
+  - Peak simultaneous connection attempts: 12,450 (normal baseline: 4,000).
+- **Firmware Versions:**
+  - Current: v4.5.2 (released 2023-06).
+  - Recommended: v5.1.0 (released 2024-03).
+
+### **User Feedback Samples**
+- *"Why is the library system always down during finals? This is unacceptable!"*
+- *"I couldn’t access the journal articles I needed for my thesis. This is ridiculous."*
+- *"The university needs to get its act together. First the tuition hike, now this?"*
+
+---
+
+**End of Log**

@@ -1,0 +1,106 @@
+# Security Incident Report: Minor Altercation During Student Sit-In
+
+**Date:** December 18, 2025  
+**Author:** Diego Lopez  
+**Location:** Administration Building, First Floor Lobby  
+
+---
+
+## Summary
+At approximately 1:45 PM on December 18, 2025, a minor altercation occurred during the ongoing student sit-in at the administration building. The incident involved a verbal exchange and brief physical confrontation between protesting students and university administrators attempting to access their offices. While the altercation did not result in any injuries or property damage, it underscores escalating tensions on campus amid the ongoing financial crisis and widespread protests.
+
+---
+
+## Incident Details
+
+### Timeline of Events
+- **1:30 PM:** A group of four university administrators arrived at the administration building to retrieve documents and access their offices located on the second floor.
+- **1:35 PM:** Administrators encountered a group of approximately 30 students conducting a sit-in in the first-floor lobby. Students blocked access to the stairwell and elevators, stating that no administrative staff would be allowed entry until their demands were addressed.
+- **1:40 PM:** A verbal exchange began between administrators and student organizers. Administrators asserted their right to access university property, while students reiterated their demands for transparency and accountability.
+- **1:45 PM:** The exchange escalated when one administrator attempted to push past the group. A student organizer stepped in front of the administrator, leading to a brief physical confrontation. Security staff intervened to de-escalate the situation.
+- **1:50 PM:** Security staff successfully separated the parties and mediated a temporary resolution. Administrators agreed to leave the building, and students resumed their sit-in.
+
+### Key Individuals Involved
+- **Administrators:**
+  - Dr. Karen Ellis (Interim Vice Chancellor for Operations)
+  - Mr. Thomas Reed (Director of Budget Planning)
+  - Ms. Priya Sharma (Executive Assistant to the Chancellor)
+  - Mr. Andrew Collins (IT Systems Coordinator)
+
+- **Student Organizers:**
+  - Maria Gonzalez (Junior, Political Science)
+  - Noah Kim (Sophomore, Environmental Studies)
+  - Jasmine Patel (Senior, Sociology)
+
+- **Security Staff Present:**
+  - Officer James Carter  
+  - Officer Elaine Rodriguez  
+
+---
+
+## Observations
+
+### Security Staff Report
+- **Intervention Measures Taken:**
+  - Officers positioned themselves between the two groups to prevent further escalation.
+  - Officers requested both parties remain calm and facilitated dialogue to reach a temporary resolution.
+  - Officers escorted administrators out of the building to avoid future confrontations.
+
+- **Student Sentiment:**
+  - Students expressed frustration and anger, citing the administration’s failure to address their demands and ongoing financial challenges affecting the university.
+  - Some students voiced concerns about potential retaliation for their participation in the sit-in.
+
+### Notes from Witnesses
+- **Student Testimony:**
+  - “We’re here because the administration refuses to listen to us. They keep making decisions behind closed doors, and we’re the ones who have to suffer the consequences.” – Maria Gonzalez
+
+- **Administrator Testimony:**
+  - “We’re just trying to do our jobs under difficult circumstances. We respect the students’ right to protest, but preventing us from accessing our offices doesn’t help anyone.” – Dr. Karen Ellis
+
+---
+
+## Impact Assessment
+
+### Immediate Consequences
+- **No injuries** were reported among students, administrators, or security staff.
+- **No property damage** occurred during the incident.
+- **Increased tensions** between students and university leadership were observed.
+
+### Broader Implications
+- The incident highlights the growing divide between students and the administration amid the ongoing financial crisis.
+- Security staff may require additional training in conflict de-escalation techniques to better handle similar situations in the future.
+- The sit-in, now in its second day, continues to disrupt access to the administration building, affecting university operations.
+
+---
+
+## Recommendations
+
+1. **Enhanced Communication:**
+   - The administration should issue a formal statement addressing the incident and reiterate its commitment to dialogue with students.
+   - Regular updates on the financial crisis and proposed solutions should be shared with the campus community to improve transparency.
+
+2. **Conflict De-escalation Training:**
+   - Security staff should receive additional training to handle high-tension situations involving protests and demonstrations.
+
+3. **Mediation Efforts:**
+   - The university should appoint a neutral mediator to facilitate discussions between student representatives and the administration.
+
+4. **Access Protocols:**
+   - Develop clear protocols for staff access to buildings during protests to minimize the potential for conflict.
+
+5. **Continued Monitoring:**
+   - Security staff should continue to monitor the sit-in and provide regular updates to university leadership.
+
+---
+
+## Attachments
+
+- [Incident Photos - Administration Building](#)  
+- [Student Petition Details - 5,000 Signatures](#)  
+- [IT Department Outage Update](#)  
+
+---
+
+**Prepared by:** Diego Lopez  
+**Position:** Security Incident Analyst  
+**Date:** December 18, 2025
