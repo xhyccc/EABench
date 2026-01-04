@@ -54,6 +54,49 @@ python -m streamlit run app.py
   - files (documents, emails)
   - tenant-level settings (resource limits, protected files)
 
+- **Tenant generation (recommended)**: For large-scale or reproducible evaluation, generate tenants programmatically. The generator accepts options like `--users`, `--seed`, and `--scenario` and outputs a tenant folder with `tenant.yaml`, a `files/` directory, and an optional `.cache/` for cached embeddings.
+
+  Use the real CLI tools provided in the repo:
+
+  - To generate a new tenant, use `generate_data.py` which accepts `--company`, `--industry`, `--size`, `--num_users`, `--days`, `--events`, `--description`, and `--prompts`.
+
+  Example:
+  ```bash
+  python generate_data.py \
+    --company "Acme Corp" \
+    --industry "SaaS" \
+    --size small \
+    --num_users 20 \
+    --days 14 \
+    --eval_batch_size 10 \
+    --events "Project Alpha Kickoff" "Memory Leak Incident" \
+    --description "Incident response training scenario" \
+    --prompts examples/generation/default_prompts.yaml
+  ```
+
+  Output layout (example):
+  - `examples/tenants/<tenant-id>/tenant.yaml`
+  - `examples/tenants/<tenant-id>/files/` (documents, emails, meeting notes)
+  - `examples/tenants/<tenant-id>/.cache/` (optional precomputed embeddings)
+
+- **Evaluation query sets**: Place a canonical `eval_queries.yaml` in the tenant folder to define reproducible test queries. Each entry should include `id`, `prompt`, `expected_assertions` (for deterministic checks), `difficulty`, `tags`, and optional `ground_truth_refs` used by Judges.
+
+  Example query entry:
+  ```yaml
+  - id: q1
+    prompt: "Summarize the action items from the last deployment meeting."
+    expected_assertions:
+      - file_contains: {path: "files/meeting_notes/notes_2025-11-10.txt", contains: "action item"}
+    difficulty: easy
+    tags: [meeting, summary]
+  ```
+
+  Best practices:
+  - Use deterministic seeds for reproducible tenant and query generation.
+  - Create paraphrase variants to test robustness.
+  - Tag queries with difficulty and rubric hints for Judge models.
+  - Keep query sets version-controlled alongside tenants.
+
 **Security note**: Never check secrets into git. Use a secrets manager or `.env` with `.gitignore`.
 
 ---

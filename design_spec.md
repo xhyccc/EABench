@@ -172,6 +172,37 @@ This approach allows the agent to use tools that require identity (e.g., "get\_m
 
 To ensure robust evaluation, the platform enforces diversity in the generation of synthetic users. Rather than relying on generic names (e.g., "John Doe"), the system programmatically generates users with diverse cultural backgrounds and distinct names to prevent collision and bias. This ensures that the agent is tested against a realistic representation of a global user base.
 
+#### **3.3.2 Tenant & Evaluation Query Set Generation**
+
+To scale evaluations and ensure reproducibility, the platform supports programmatic tenant generation and canonical evaluation query set generation.
+
+* **Tenant Generator**: The repository provides a real CLI (`generate_data.py`) and an internal generator (`src/generator/pipeline.py`) which produce a complete tenant folder under `examples/tenants/<tenant-id>/` with:
+  - `tenant.yaml` (user definitions, roles, limits, protected files)
+  - `files/` (documents, emails, meeting notes), generated from templates and scenario parameters
+  - `.cache/` (optional precomputed embeddings)
+
+  Input parameters include `--users`, `--seed`, `--scenario`, `--protected-files`, and `--resource-limits`. Deterministic seeding is required for reproducibility and fair A/B comparisons.
+
+* **Evaluation Query Set Generator**: Use the provided `generate_eval.py` CLI which calls `DataGenerator.generate_eval_dataset` (implemented in `src/generator/pipeline.py`) to produce `eval_queries.yaml` containing entries with the following fields:
+  - `id`: Unique identifier
+  - `prompt`: The user-facing query
+  - `expected_assertions`: Deterministic checks for fast failure (e.g., file_contains, file_exists)
+  - `difficulty`: easy/medium/hard
+  - `tags`: domain/rubric tags to guide Judge prompts
+  - `ground_truth_refs`: references to files or snippets used for citation checks
+  - `paraphrase_variants`: optional list of prompt paraphrases to test robustness
+
+  The generator should support batching, paraphrase sampling, and tagging to produce diverse and thorough test suites.
+
+* **Integration & Best Practices**:
+  - Store tenant folders and their `eval_queries.yaml` together to enable portable, versioned test cases.
+  - Use deterministic seeds so multi-run aggregation results are reproducible.
+  - Include edge cases (missing files, permission-restricted files, conflicting evidence) and negative tests.
+  - Annotate queries with rubric hints (e.g., "faithfulness", "recall") to allow Judge models to apply tailored evaluation prompts.
+  - Support an optional "gold" reference export for citation verification that can be masked during judge prompts.
+
+This programmatic approach enables mass testing, A/B comparisons across agent configurations, and consistent Judge evaluation across repeated runs.
+
 ## ---
 
 **4\. Observability and Trace Instrumentation**
