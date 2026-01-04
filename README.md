@@ -83,13 +83,27 @@ python -m streamlit run app.py
 
   Example query entry:
   ```yaml
-  - id: q1
-    prompt: "Summarize the action items from the last deployment meeting."
-    expected_assertions:
-      - file_contains: {path: "files/meeting_notes/notes_2025-11-10.txt", contains: "action item"}
-    difficulty: easy
-    tags: [meeting, summary]
+  - id: case_001
+    query: "Summarize the action items from the last deployment meeting."
+    user_id: user123
+    assertions:
+      - file_contains:
+          path: files/meeting_notes/notes_2025-11-10.txt
+          contains: "action item"
+    entity_list: []
   ```
+  The generator actually produces `eval_dataset_<timestamp>.yaml` with the following structure:
+
+  - `name`: Human-readable name for the eval set
+  - `description`: Short description
+  - `cases`: List of test cases where each case contains:
+    - `id`: Case identifier (e.g., `case_001`)
+    - `query`: The user-facing query string
+    - `user_id`: The synthetic user to run as (optional)
+    - `assertions`: Deterministic checks (list of dicts, e.g., `file_contains`)
+    - `entity_list`: Optional list of entities to verify or mask
+
+  Example case (YAML snippet):
 
   Best practices:
   - Use deterministic seeds for reproducible tenant and query generation.

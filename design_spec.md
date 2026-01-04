@@ -183,14 +183,24 @@ To scale evaluations and ensure reproducibility, the platform supports programma
 
   Input parameters include `--users`, `--seed`, `--scenario`, `--protected-files`, and `--resource-limits`. Deterministic seeding is required for reproducibility and fair A/B comparisons.
 
-* **Evaluation Query Set Generator**: Use the provided `generate_eval.py` CLI which calls `DataGenerator.generate_eval_dataset` (implemented in `src/generator/pipeline.py`) to produce `eval_queries.yaml` containing entries with the following fields:
-  - `id`: Unique identifier
-  - `prompt`: The user-facing query
-  - `expected_assertions`: Deterministic checks for fast failure (e.g., file_contains, file_exists)
-  - `difficulty`: easy/medium/hard
-  - `tags`: domain/rubric tags to guide Judge prompts
-  - `ground_truth_refs`: references to files or snippets used for citation checks
-  - `paraphrase_variants`: optional list of prompt paraphrases to test robustness
+* **Evaluation Query Set Generator**: Use the provided `generate_eval.py` CLI which calls `DataGenerator.generate_eval_dataset` (implemented in `src/generator/pipeline.py`) to produce `eval_dataset_<timestamp>.yaml`. The generated YAML follows this shape:
+
+  - `name`: Human-readable name for the evaluation set
+  - `description`: Short description
+  - `cases`: A list of case objects. Each case contains:
+    - `id`: Unique identifier (e.g., `case_001`)
+    - `query`: The user-facing query string (this replaces older `prompt` terminology)
+    - `user_id`: Synthetic user id to run the query as (optional)
+    - `assertions`: Deterministic checks (list of dicts). Examples:
+      - `file_contains`: {path: str, contains: str}
+      - `file_exists`: {path: str}
+      - Arbitrary assertion objects or `{description: <freeform>}`
+    - `entity_list`: Optional list of entities to verify or mask
+    - `reasoning`: (only present in the JSON log `eval_dataset_log_<timestamp>.json`) stores generator reasoning and should not be used for strict assertions.
+
+  The pipeline writes two artifacts:
+  - `eval_dataset_log_<timestamp>.json` — full cases including `reasoning` for debugging.
+  - `eval_dataset_<timestamp>.yaml` — cleaned YAML used by evaluation runners (no `reasoning`).
 
   The generator should support batching, paraphrase sampling, and tagging to produce diverse and thorough test suites.
 
