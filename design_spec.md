@@ -445,6 +445,21 @@ OUTPUT SCHEMA:
 "pass": bool  
 }
 
+#### **6.2.3 The Assertion Schema**
+
+To evaluate agent performance beyond simple pass/fail metrics, the platform utilizes a flexible assertion system. Assertions are defined as natural language descriptions that are verified by the Judge LLM. This allows for semantic verification of complex outcomes (e.g., "The file contains a summary of the meeting") which are difficult to validate with deterministic code.
+
+**Schema:**
+
+```python
+class Assertion(BaseModel):
+    description: str = Field(..., description="Natural language description of the expected outcome.")
+    weight: float = Field(1.0, description="Importance weight of this assertion.")
+```
+
+**Evaluation Process:**
+The Evaluator collects the agent's response and execution trace, then presents them alongside the list of assertions to the Judge LLM. The Judge determines if each assertion is met based on the evidence, returning a structured result for each.
+
 ### **6.3 Operational Best Practices**
 
 #### **6.3.1 Dependency Management**
