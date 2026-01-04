@@ -9,6 +9,7 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
 - **Flexible Embeddings**: Choose between Azure OpenAI Embeddings or high-quality Local Embeddings (using `sentence-transformers`) for semantic search.
 - **Vector Search Engine**: Built-in semantic search for retrieving relevant context from tenant data.
 - **Role-Based Access Control**: Search results are filtered based on the logged-in user's permissions (e.g., users can only search emails they sent or received).
+- **Multiple Agent Strategies**: Supports standard **ReAct** (Reasoning + Acting) and **Researcher** (Plan-then-Execute) workflows.
 - **Data Analysis Capabilities**: The agent can execute Python code to analyze data using libraries like `pandas`, `scikit-learn`, `matplotlib`, and `networkx`.
 - **Rich Test Dataset**: Includes a "Project Alpha" story arc with realistic team interactions, crises, and resolutions.
 - **Web Interface**: A Streamlit-based UI for interactive testing and demonstration.
@@ -82,6 +83,10 @@ EABench is a modular platform designed to execute and evaluate LLM agents in a s
      provider: azure
      model: text-embedding-ada-002
    ```
+
+   **Agent Strategies:**
+   - **ReAct Agent** (`examples/agents/react_agent.yaml`): Standard loop of Thought -> Action -> Observation.
+   - **Researcher Agent** (`examples/agents/researcher_agent.yaml`): Generates a comprehensive plan before executing steps. Ideal for complex, multi-hop queries.
 
 3. **Tenant Config:**
    - Tenant data and configuration are in `examples/tenants/test-tenant-1/`.

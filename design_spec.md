@@ -51,7 +51,7 @@ The Capabilities section lists the enabled tools. Rather than implementing tools
 |  | dynamic\_keys | List | Context variables injected at runtime (e.g., user\_id, cwd). |
 | **Tools** | definitions | List | References to registered tools (e.g., file\_system, cli). |
 |  | config | Dict | Tool-specific constraints (e.g., root\_dir: /workspace). |
-| **Flow** | strategy | Enum | Execution pattern: react, chain, planning\_dag. |
+| **Flow** | strategy | Enum | Execution pattern: react, researcher. |
 |  | max\_turns | Integer | Safety limit to prevent infinite loops. |
 
 This declarative approach allows for A/B testing different prompts or model configurations simply by passing a different YAML file to the runner, without altering the application code.
@@ -100,9 +100,23 @@ The "flow" configuration determines how the agent transitions between reasoning,
 
 The default react strategy implements the classic "Reason-Act" loop. The agent receives the current history, generates a thought and a tool call, executes the tool, receives the output, and repeats. This continues until the LLM generates a "Final Answer" token or the max\_turns limit is reached. This is ideal for open-ended exploration.14
 
-#### **2.4.2 Directed Acyclic Graph (DAG) Strategy**
+#### **2.4.2 Researcher Strategy**
 
-For workflows requiring specific compliance checks or multi-stage planning, the dag strategy forces the agent through a predefined set of nodes. For example, a "Code Writer" flow might force a transition from Write Code to Run Tests to Refactor, preventing the agent from claiming success before the tests pass. The configuration defines the nodes and the conditional edges (e.g., if test\_result \== fail, goto Refactor). This structured approach is essential for ensuring reliability in enterprise scenarios.15
+The `researcher` strategy implements a "Plan-then-Execute" flow, designed for complex tasks requiring multi-hop reasoning. Unlike the standard ReAct loop which can get lost in details, the Researcher strategy first generates a high-level plan using a dedicated "Planner" persona.
+
+1.  **Planning Phase**: The agent analyzes the user query and generates a step-by-step plan (e.g., "1. Search for X. 2. Correlate with Y. 3. Summarize.").
+2.  **Execution Phase**: The plan is injected into the context of the standard ReAct loop. The agent then executes the plan, checking off steps as it progresses.
+3.  **Output Cleaning**: The final response is sanitized to present only the answer to the user, hiding the internal planning artifacts.
+
+This separation of planning and execution significantly improves performance on long-horizon tasks.
+
+### **2.5 Caching Mechanism**
+
+To optimize performance and reduce latency during the "hydration" of tenant environments, the platform implements a local caching layer for vector embeddings.
+
+*   **Local Cache**: Embeddings generated for tenant documents are serialized (pickled) and stored in a `.cache` directory within the tenant's root.
+*   **Cache Invalidation**: The cache is keyed by the file content hash. If a file changes, the cache is invalidated and embeddings are regenerated.
+*   **Startup Speed**: This mechanism reduces the startup time for agents with large knowledge bases from minutes to seconds on subsequent runs.
 
 ## ---
 
@@ -153,6 +167,10 @@ When the agent starts, the AgentRuntime initializes a UserContext object derived
 * AGENT\_SESSION\_TOKEN: A mock token if the agent needs to call external mock APIs.
 
 This approach allows the agent to use tools that require identity (e.g., "get\_my\_profile") without needing an actual identity provider (IdP). The tools simply read the environment variables to determine *who* is asking.17
+
+#### **3.3.1 Diversity and Realism**
+
+To ensure robust evaluation, the platform enforces diversity in the generation of synthetic users. Rather than relying on generic names (e.g., "John Doe"), the system programmatically generates users with diverse cultural backgrounds and distinct names to prevent collision and bias. This ensures that the agent is tested against a realistic representation of a global user base.
 
 ## ---
 
