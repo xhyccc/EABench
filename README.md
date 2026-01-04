@@ -87,9 +87,8 @@ python -m streamlit run app.py
     query: "Summarize the action items from the last deployment meeting."
     user_id: user123
     assertions:
-      - file_contains:
-          path: files/meeting_notes/notes_2025-11-10.txt
-          contains: "action item"
+      - description: "Returns the meeting notes from 2025-11-10"
+      - description: "Identifies at least 3 action items"
     entity_list: []
   ```
   The generator actually produces `eval_dataset_<timestamp>.yaml` with the following structure:
@@ -100,7 +99,7 @@ python -m streamlit run app.py
     - `id`: Case identifier (e.g., `case_001`)
     - `query`: The user-facing query string
     - `user_id`: The synthetic user to run as (optional)
-    - `assertions`: Deterministic checks (list of dicts, e.g., `file_contains`)
+    - `assertions`: List of natural language assertions (each with a `description` field) evaluated by the Judge LLM.
     - `entity_list`: Optional list of entities to verify or mask
 
   Example case (YAML snippet):

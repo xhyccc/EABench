@@ -480,7 +480,54 @@ Running "LLM-as-a-Judge" (especially with GPT-4) is expensive. The platform impl
 
 ## ---
 
-**7\. Conclusion**
+**7\. Comparative Analysis with State-of-the-Art**
+
+To contextualize the proposed architecture, we compare it against two leading benchmarks in the enterprise agent space: **DRBench** (ServiceNow) and **HERB** (Salesforce AI Research). While both represent significant advancements, this platform addresses critical gaps in execution security, modularity, and observability.
+
+### **7.1 Comparison with DRBench (ServiceNow)**
+
+**DRBench** focuses on "Deep Research" tasks, evaluating an agent's ability to synthesize insights from diverse enterprise data sources (chat logs, spreadsheets, PDFs).
+
+*   **Similarities**: Both platforms emphasize realistic enterprise contexts (personas, organizational settings) and multi-step reasoning over simple fact retrieval. Both use an "Insight-Centric" evaluation metric (recall of critical claims).
+*   **EABench Advantages**:
+    *   **Benchmarking Active Execution vs. Passive Research**: DRBench is primarily a research benchmark; agents read data and produce a report. EABench is a **benchmark for execution**. It evaluates agents that modify state (create files, run CLI commands) within a secure sandbox, providing a rigorous testbed for *acting* agents, not just *reading* agents.
+    *   **Infrastructure Modularity**: DRBench provides a fixed Docker-based task loader. EABench decouples the runtime from the environment via the `SandboxInterface`, allowing for lightweight local execution (for dev loops) or heavy-duty Kubernetes pods (for scale) without changing the agent code.
+    *   **Configuration-as-Code**: EABench enforces a strict YAML-based definition for agents and tenants, whereas DRBench relies more on Python class inheritance (`DrBenchAgent`). This makes EABench more portable and easier to version control.    *   **Programmatic Scenario Generation**: Unlike DRBench's fixed task loader, EABench includes a comprehensive pipeline (`generate_data.py`, `generate_eval.py`) to procedurally generate diverse tenant states and evaluation query sets. This prevents agents from overfitting to a static benchmark and allows for infinite variations of test cases.
+### **7.2 Comparison with HERB (Salesforce AI Research)**
+
+**HERB** benchmarks "Deep Search" over heterogeneous data, highlighting retrieval as the primary bottleneck in RAG systems.
+
+*   **Similarities**: Both acknowledge the complexity of "dirty" enterprise data (sparse, noisy, interconnected). Both support answerable vs. unanswerable query evaluation.
+*   **EABench Advantages**:
+    *   **Benchmarking Beyond RAG**: HERB is explicitly a RAG benchmark ("Retrieval-Augmented Generation"). It evaluates how well a system retrieves evidence. EABench benchmarks the entire **cognitive cycle** (Reason -> Act -> Observe). If an agent fails to retrieve a file, EABench allows it to *debug* the failure (e.g., by running `ls -R` or `grep`), mirroring real-world developer behavior. HERB treats retrieval as a static step; EABench treats it as a dynamic tool interaction.
+    *   **Observability Standard**: HERB outputs final scores. EABench adopts OpenTelemetry standards to trace the *process*. We can evaluate *why* retrieval failed (e.g., "Did the agent formulate a bad search query?" vs "Did the vector DB fail?"), providing granular diagnostics that HERB's end-to-end metrics miss.
+    *   **Security-First Design**: HERB does not focus on the security of the execution environment. EABench's "Test Tenant" architecture with cryptographic isolation is designed specifically for running untrusted, generated code, a requirement HERB does not address.    *   **Dynamic vs. Static Evaluation**: HERB relies on a static dataset. EABench's generation pipeline allows for robust "stress testing" by creating synthetic users, file systems, and queries on the fly, ensuring agents are evaluated against a distribution of problems rather than a fixed set of examples.
+### **7.3 Summary of Differentiators**
+
+| Feature | DRBench | HERB | **EABench (This Platform)** |
+| :--- | :--- | :--- | :--- |
+| **Primary Focus** | Deep Research & Reporting | Deep Search & Retrieval (RAG) | **Benchmarking Autonomous Execution & State Modification** |
+| **Agent Capabilities** | Read-Only (Search/Synthesize) | Read-Only (Retrieve/Answer) | **Read/Execute (Full Environment Interaction)** |
+| **Environment** | Docker (Task-based) | Static Dataset | **Sandboxed Tenants (Docker/UserNS)** |
+| **Evaluation** | Insight Recall | RAG Metrics (Accuracy/Relevance) | **Process Tracing (OTEL) + State Assertions** |
+| **Data Strategy** | Fixed Task Loader | Static Dataset | **Procedural Generation (Infinite Scenarios)** |
+| **Configurability** | Python Classes | Python Scripts | **Declarative YAML (Config-as-Code)** |
+
+### 7.4 The Paradigm Shift in Evaluation Methodology
+
+From an academic perspective, EABench represents a departure from traditional NLP evaluation paradigms toward **Interactive Environment Evaluation**. This shift addresses three critical gaps in current literature regarding enterprise agent deployment:
+
+1.  **Ecological Validity**: Traditional benchmarks (e.g., MMLU, GSM8K) measure an LLM's static knowledge or reasoning in a vacuum. However, enterprise agents operate in **stateful, non-deterministic environments**. EABench improves ecological validity by evaluating agents not on what they *know*, but on how they *change the state* of a system to achieve a goal. This aligns with recent calls in the research community to move beyond "static QA" to "dynamic agency."
+
+2.  **Process-Oriented Auditing**: In enterprise settings, a correct answer derived from an incorrect process is a liability (e.g., guessing a financial figure correctly without reading the database). EABench's **Trace-Centric** approach shifts the unit of analysis from the *Output* ($y$) to the *Execution Graph* ($G$). This allows researchers to formalize metrics for "Procedural Compliance"—measuring whether an agent adhered to business logic constraints (e.g., "Always verify PII before export")—which is invisible in outcome-based metrics like F1 or Exact Match.
+
+3.  **The Safety-Utility Trade-off**: Academic benchmarks often ignore the computational and security cost of execution. EABench explicitly couples performance metrics with **Sandboxed Execution**, allowing for the study of the "Safety-Utility Trade-off." It enables quantitative analysis of how strict security policies (e.g., read-only file systems, network whitelisting) impact an agent's task success rate, a critical area of study for safe deployment.
+
+This methodology bridges the gap between "Leaderboard Performance" and "Production Readiness," providing a rigorous framework for the next generation of agentic research.
+
+## ---
+
+**8\. Conclusion**
 
 This specification defines a robust, enterprise-grade architecture for building and evaluating AI agents. By rigorously separating concerns—Model, Runtime, Environment, and Evaluation—the platform achieves the flexibility required by modern AI teams.
 
