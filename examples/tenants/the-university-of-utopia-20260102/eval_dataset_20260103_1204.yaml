@@ -1,0 +1,3736 @@
+name: Evaluation Set for the-university-of-utopia-20260102
+description: Generated evaluation queries covering search, multi-hop reasoning, and report generation.
+cases:
+- id: case_001
+  query: What was discussed in the meeting about the faculty no-confidence vote held at the end of December?
+  user_id: msharma
+  assertions:
+  - description: Returns the meeting 'Faculty No-Confidence Vote Planning'
+  - description: Identifies the meeting date as December 27, 2025
+  - description: Confirms the user was an attendee of the meeting
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_002
+  query: Show me the email Emily sent last week about the rumors of a dean stepping down and how to handle leadership changes.
+  user_id: ppatel
+  assertions:
+  - description: Returns the email 'Rumors of Dean Resignation - Leadership Planning'
+  - description: Confirms the email date is December 17, 2025
+  - description: Identifies Emily Chen as the sender
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_003
+  query: Can you find the alumni statement Sarah prepared earlier this month about the financial crisis?
+  user_id: snguyen
+  assertions:
+  - description: Returns the file 'data/alumni/alumni_statement_financial_crisis_2025-12-11.txt'
+  - description: Confirms the file was created by Sarah Nguyen
+  - description: Identifies the file's creation date as December 11, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/alumni/alumni_statement_financial_crisis_2025-12-11.txt
+- id: case_004
+  query: Show me the email Meera sent last week about addressing faculty complaints and student worries during the current financial and administrative crisis.
+  user_id: dpatel
+  assertions:
+  - description: Returns the email 'Faculty and Student Engagement Plan'
+  - description: Confirms the email was sent by Meera Sharma
+  - description: Identifies the email date as December 16, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_005
+  query: What was discussed in the group chat earlier this month about the interim chancellor's meeting with the faculty union and the concerns about layoffs?
+  user_id: ltanaka
+  assertions:
+  - description: Returns the group chat discussion from December 8, 2025
+  - description: Confirms the topic was about the interim chancellor's meeting and layoffs
+  - description: Identifies that this is a group chat
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_01
+- id: case_006
+  query: Show me the meeting I attended earlier this month where the alumni association talked about the administration's response to the financial crisis.
+  user_id: snguyen
+  assertions:
+  - description: Returns the meeting titled 'Alumni Association Statement Review'
+  - description: Matches attendee Sarah Nguyen
+  - description: Filters for meetings from December 2025
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting5
+- id: case_007
+  query: Find the email from Omar about IT funding. It was sent at the start of December.
+  user_id: ppatel
+  assertions:
+  - description: Returns the email sent by Omar Khan on December 8, 2025
+  - description: Subject matches 'Request for Emergency IT Funding'
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_008
+  query: What was the email I sent last week about the alumni coalition's donation decision?
+  user_id: mabdul
+  assertions:
+  - description: Returns the email sent by Mariam Abdul on December 29, 2025
+  - description: 'Subject matches ''Alumni Coalition Announcement: Donation Withholding'''
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+- id: case_009
+  query: Show me the meeting I attended in December where the alumni voiced concerns about the administration's handling of finances.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the meeting titled 'Alumni Association Statement Review'
+  - description: Matches attendee Maria Garcia
+  - description: Filters for meetings discussing alumni concerns in December 2025
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting5
+- id: case_010
+  query: Can you show me the chat from mid-December where we discussed student concerns after the faculty meeting disruption?
+  user_id: jkim
+  assertions:
+  - description: Returns the chat from December 13, 2025
+  - description: Summary matches 'Discussion on student concerns following the disruption of the faculty meeting'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_008
+- id: case_011
+  query: Locate the email from Meera Sharma about the impact of the graduate student crowdfunding campaign sent on December 31st.
+  user_id: msharma
+  assertions:
+  - description: 'Returns the email with subject ''Graduate Student Crowdfunding Campaign: Academic Impact'''
+  - description: Identifies the sender as Meera Sharma
+  - description: Filters by the date December 31, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_012
+  query: Show me the file Katherine Fernandez created on December 30 about budget errors.
+  user_id: kfernandez
+  assertions:
+  - description: Returns the file 'data/reports/budget_error_analysis_20251230.xlsx'
+  - description: Correctly identifies the creation date as December 30, 2025
+  - description: Filters by the creator name Katherine Fernandez
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/budget_error_analysis_20251230.xlsx
+- id: case_013
+  query: Find the meeting where the alumni coalition discussed financial recovery and potential donation cuts, attended by Sarah Nguyen.
+  user_id: snguyen
+  assertions:
+  - description: Returns the meeting titled 'Alumni Coalition Financial Recovery Discussion'
+  - description: Correctly identifies the attendee Sarah Nguyen
+  - description: Filters by the topic of financial recovery and donation cuts
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_014
+  query: Find the email Sarah Nguyen sent about responding to skepticism regarding the chancellor's transformative solutions statement.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email with subject 'Response to Chancellor's Statement on Transformative Solutions'
+  - description: Identifies the sender as Sarah Nguyen
+  - description: Filters by the topic of skepticism and the chancellor's statement
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_015
+  query: Show me the chat from December 31 about the timeline for fixing the system vulnerability.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the chat summarizing the timeline for patch implementation
+  - description: Filters by the date December 31, 2025
+  - description: Correctly identifies the topic of system vulnerability
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_009
+- id: case_016
+  query: Show me the email Alejandro sent about the student demonstration outside the finance department earlier this month.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email with the subject 'Student Demonstration Outside Finance Department'
+  - description: Filters emails sent by Alejandro Rodriguez in December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_017
+  query: Find the group chat where the interim chancellor's emergency meeting was discussed before Christmas about the budget crisis.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the group chat 'emergency_meeting_faculty_staff'
+  - description: Filters group chats before December 25, 2025, related to the budget crisis
+  entity_list:
+  - entity_type: group_chat
+    entity_id: emergency_meeting_faculty_staff
+- id: case_018
+  query: Locate the chat where financial data was reviewed for the emergency town hall before Christmas.
+  user_id: achopra
+  assertions:
+  - description: Returns the chat with the summary about 'Reviewing financial data to prepare for the emergency town hall and address concerns about budget transparency'
+  - description: Filters chat logs from December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_005
+- id: case_019
+  query: Find Alejandro's email about the student protest and viral social media campaign from the end of December.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the email with the subject 'Student Protest and Viral Social Media Campaign'
+  - description: Filters emails sent by Alejandro Rodriguez around December 30, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_020
+  query: Show me the chat about planning a response to faculty concerns over the proposed layoffs and budget cuts from mid-December.
+  user_id: ppatel
+  assertions:
+  - description: Returns the chat with the summary 'Planning a response to faculty concerns over proposed layoffs and budget cuts following the leaked recording.'
+  - description: Filters chats from December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_004
+- id: case_021
+  query: Find the email from Omar about the critical system vulnerability sent on December 31, 2025.
+  user_id: snguyen
+  assertions:
+  - description: 'Returns the email ''Critical System Vulnerability: Actions Required'' sent by Omar Khan'
+  - description: Filters by sender (Omar Khan), date (December 31, 2025), and subject or content (critical system vulnerability)
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_022
+  query: Show me the Humanities faculty meeting in December about the strike and layoffs.
+  user_id: lmatsuda
+  assertions:
+  - description: Returns the meeting 'Humanities Faculty Solidarity Strike Planning' on December 12, 2025
+  - description: Filters by type (meeting), attendees (faculty), and keywords (strike, layoffs)
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_023
+  query: Locate the email from Priya about the alumni donation analysis sent right before the year ended.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the email 'Implications of Alumni Donation Conditions' sent by Priya Patel on December 24, 2025
+  - description: Filters by sender (Priya Patel), date (December 24, 2025), and keywords (alumni donation, financial plan)
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_024
+  query: Find the email from Omar about the power outage and infrastructure problems sent in December.
+  user_id: ymukherjee
+  assertions:
+  - description: Returns the email 'IT Infrastructure and Power Outage Challenges' sent by Omar Khan on December 20, 2025
+  - description: Filters by sender (Omar Khan), keywords (power outage, infrastructure), and date range (December 2025)
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_025
+  query: Show me the group chat discussing the power outage and IT issues on campus in December.
+  user_id: snguyen
+  assertions:
+  - description: Returns the group chat discussing 'power outage and critical IT infrastructure issues' on December 20, 2025
+  - description: Filters by type (group chat), keywords (power outage, IT issues), and date (December 2025)
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_002
+- id: case_026
+  query: Locate the letter requesting a meeting with the administration from earlier this month about faculty layoffs.
+  user_id: dpatel
+  assertions:
+  - description: Returns the file 'data/docs/faculty_union_meeting_request_letter.docx'
+  - description: Identifies the author as Devika Patel
+  - description: Matches the time constraint of December 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/faculty_union_meeting_request_letter.docx
+- id: case_027
+  query: Find the chat where the CIO and VP discussed the grading system outage during finals last week.
+  user_id: kfernandez
+  assertions:
+  - description: Returns the chat 'grading_system_chaos_20251217'
+  - description: Matches the time constraint and the context of the grading system outage
+  entity_list:
+  - entity_type: chat
+    entity_id: grading_system_chaos_20251217
+- id: case_028
+  query: Find the leaked document summary about tuition hikes published by the student newspaper this month.
+  user_id: msharma
+  assertions:
+  - description: Returns the file 'data/media/leaked_documents_summary.pdf'
+  - description: Identifies the author as Devika Patel
+  - description: Matches the timeframe of December 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/media/leaked_documents_summary.pdf
+- id: case_029
+  query: Retrieve the chat from IT about vulnerabilities in outdated systems and potential risks to student data from earlier this week.
+  user_id: amalek
+  assertions:
+  - description: Returns the chat 'it_vulnerability_warning'
+  - description: Matches the timeframe of late December 2025
+  - description: Addresses the topic of IT vulnerabilities
+  entity_list:
+  - entity_type: chat
+    entity_id: it_vulnerability_warning
+- id: case_030
+  query: Show the chat discussing how department mergers might affect academic programs and faculty morale from last week.
+  user_id: echen
+  assertions:
+  - description: Returns the chat 'chat_009'
+  - description: Matches the topic of department mergers and faculty morale
+  - description: Falls within the time constraint of mid-December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_009
+- id: case_031
+  query: Can you find the sales report for protest merchandise from mid-December created by Karla?
+  user_id: kfernandez_6
+  assertions:
+  - description: Returns the file 'data/bookstore/protest_merchandise_sales_2025-12-15.xlsx'
+  - description: Matches the creation date of December 15, 2025
+  - description: Identifies the creator as Karla Fernandez
+  entity_list:
+  - entity_type: file
+    entity_id: data/bookstore/protest_merchandise_sales_2025-12-15.xlsx
+- id: case_032
+  query: Pull up Alejandro's email from late December about the leaked trustee letter and faculty concerns.
+  user_id: arodriguez
+  assertions:
+  - description: 'Returns the email with subject ''Response Needed: Leaked Trustee Letter and Faculty Concerns'''
+  - description: Matches the sender as Alejandro Rodriguez
+  - description: Matches the date of December 30, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_033
+  query: Find the group chat about the email system outage on December 15.
+  user_id: msharma
+  assertions:
+  - description: Returns the chat with summary 'Addressing the critical issue with the email system causing a campus-wide communication blackout'
+  - description: Matches the date of December 15, 2025
+  - description: Matches the type as 'group_chat'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_002
+- id: case_034
+  query: Show me the group chat about the faculty union representative's comments and the budget crisis from December 14.
+  user_id: snguyen
+  assertions:
+  - description: Returns the chat with summary 'Debriefing on the faculty union representative's public criticism of the administration's handling of the budget crisis and planning next steps'
+  - description: Matches the date of December 14, 2025
+  - description: Matches the type as 'group_chat'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_004
+- id: case_035
+  query: Locate Jin's email from early December about supporting students affected by the tuition hike.
+  user_id: jpark
+  assertions:
+  - description: Returns the email with subject 'Support for Students Affected by Tuition Hike'
+  - description: Matches the sender as Jin Park
+  - description: Matches the date of December 9, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_036
+  query: Show me the meeting notes from last week's discussion about protest merchandise trends and campus unrest.
+  user_id: amalek
+  assertions:
+  - description: Returns the meeting titled 'Protest Merchandise Demand Analysis'
+  - description: Confirms the meeting occurred on 2025-12-15
+  - description: Includes Amira Malek as an attendee
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_037
+  query: Find the recently published editorial criticizing our financial crisis handling.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the PDF file 'data/media/news_op_ed_criticism.pdf'
+  - description: Confirms the file was created on 2025-12-05
+  - description: Identifies Alejandro Rodriguez as the author
+  entity_list:
+  - entity_type: file
+    entity_id: data/media/news_op_ed_criticism.pdf
+- id: case_038
+  query: Can you pull up the email about organizing the student rally against the interim chancellor? It was sent around Christmas.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email with subject 'Planning for Next Week’s Rally'
+  - description: Confirms the email was sent on 2025-12-25
+  - description: Identifies Alejandro Rodriguez as the sender
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_039
+  query: Find the spreadsheet about the outcomes of the crowdfunding rally held earlier this month.
+  user_id: aabdi
+  assertions:
+  - description: Returns the file 'data/events/crowdfunding_rally_outcomes.xlsx'
+  - description: Confirms the file was created on 2025-12-10
+  - description: Identifies Amira Malek as the author
+  entity_list:
+  - entity_type: file
+    entity_id: data/events/crowdfunding_rally_outcomes.xlsx
+- id: case_040
+  query: Retrieve the log file about unauthorized access attempts on the server from the end of this month.
+  user_id: jkim
+  assertions:
+  - description: Returns the file 'data/logs/server_access_attempts_20251229.log'
+  - description: Confirms the file was created on 2025-12-29
+  - description: Identifies Javier Garcia as the author
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/server_access_attempts_20251229.log
+- id: case_041
+  query: Show me the leaked draft budget report that mentions eliminating academic programs from December.
+  user_id: snguyen
+  assertions:
+  - description: Returns the file 'data/leaks/budget_report_draft_20251218.pdf'
+  - description: Identifies the creation date as December 18, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/leaks/budget_report_draft_20251218.pdf
+- id: case_042
+  query: Find the discussion from December about boosting faculty and staff morale during unrest.
+  user_id: ppatel
+  assertions:
+  - description: Returns the group chat 'chat_010'
+  - description: Identifies the date as December 10, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_010
+- id: case_043
+  query: Locate the student petition draft about tuition hikes and layoffs.
+  user_id: ckwong
+  assertions:
+  - description: Returns the file 'data/docs/student_petition_draft.docx'
+  - description: Identifies the author as Chloe Kwong
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/student_petition_draft.docx
+- id: case_044
+  query: Find the group chat from late December where university leadership discussed alumni demands related to financial transparency.
+  user_id: okhan
+  assertions:
+  - description: Returns the group chat 'chat_005'
+  - description: Identifies the date as December 27, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_005
+- id: case_045
+  query: Show me the recent discussion about student activism and academic integrity after the budget cuts.
+  user_id: aramirez
+  assertions:
+  - description: Returns the chat 'chat_007'
+  - description: Identifies the date as January 1, 2026
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_046
+  query: Find the meeting I attended with the faculty union representative about layoffs earlier this month
+  user_id: snguyen
+  assertions:
+  - description: Returns the meeting titled 'Faculty Union Representative Meeting'
+  - description: The meeting took place on December 8, 2025
+  - description: Sarah Nguyen was an attendee
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_047
+  query: Show me the email from Alejandro about the incident during the peaceful march last week
+  user_id: msharma
+  assertions:
+  - description: Returns the email with subject 'Incident During Peaceful March – Next Steps'
+  - description: The email was sent by Alejandro Rodriguez
+  - description: The email date is December 23, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_048
+  query: What was discussed in the group chat about planning the campus rally against tuition hikes at the beginning of the month?
+  user_id: ppatel
+  assertions:
+  - description: Returns the group chat with summary 'Planning and coordination for tomorrow's student-led campus rally against the proposed tuition hike'
+  - description: The group chat date is December 3, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_004
+- id: case_049
+  query: Find the chat where the economics department's alternative budget proposal was reviewed last week.
+  user_id: echen
+  assertions:
+  - description: Returns the chat with summary 'Reviewing an alternative budget proposal from the economics department to address faculty and student concerns'
+  - description: The chat date is December 15, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_010
+- id: case_050
+  query: Find the group chat about the critical server failure and its impact on research data last week
+  user_id: okhan
+  assertions:
+  - description: Returns the group chat with summary 'Discussion about the failure of another critical server, disruptions to research data storage, and plans for system repairs'
+  - description: The group chat date is December 22, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_051
+  query: Show me the formal request document from early December about an interview with the interim chancellor regarding university budget issues.
+  user_id: enavarro
+  assertions:
+  - description: Returns the file 'data/requests/journalist_interview_request.docx'
+  - description: Identifies the author as Elena Navarro
+  - description: Matches the type 'file' and date '2025-12-06'
+  - description: Includes keywords 'interview', 'interim chancellor', and 'budget issues'
+  entity_list:
+  - entity_type: file
+    entity_id: data/requests/journalist_interview_request.docx
+- id: case_052
+  query: What was discussed in the IT meeting on December 10 about resolving the network outage and planning system upgrades?
+  user_id: okhan
+  assertions:
+  - description: Returns the meeting 'IT Infrastructure Crisis Resolution'
+  - description: Matches the date '2025-12-10'
+  - description: Includes attendees such as Omar Khan, Khoa Nguyen, and others
+  - description: Mentions 'network outage' and 'system upgrades' in the summary
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_053
+  query: Find the email Omar sent in early December about funding for hardware upgrades to address IT system issues.
+  user_id: ymukherjee
+  assertions:
+  - description: Returns the email with the subject 'IT Infrastructure Concerns Impacting Operations'
+  - description: Matches the sender as Omar Khan
+  - description: Includes date '2025-12-09'
+  - description: Mentions 'funding for hardware upgrades' and 'IT system issues'
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_054
+  query: Locate the chat from late December where Omar and Diego discussed server issues and funding requirements.
+  user_id: dlobo
+  assertions:
+  - description: Returns the chat between Omar Khan and Diego Lopez with ID 'chat_014'
+  - description: Matches date '2025-12-27'
+  - description: Includes keywords 'server issues' and 'funding requirements'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_014
+- id: case_055
+  query: Find the group discussion from mid-December where the IT team talked about resolving server outages within two days.
+  user_id: jgarcia
+  assertions:
+  - description: Returns the group chat with ID 'chat_002'
+  - description: Matches date '2025-12-18'
+  - description: Includes keywords 'IT team', 'server outages', and '48 hours'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_002
+- id: case_056
+  query: Locate the document summarizing the demands from the student protestors chained to the administration building earlier this month.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the file 'data/protests/student_demands_2025-12-15.docx'
+  - description: Identifies the file as authored by Alejandro Rodriguez
+  entity_list:
+  - entity_type: file
+    entity_id: data/protests/student_demands_2025-12-15.docx
+- id: case_057
+  query: Find the email from Samuel Johnson about the backlash regarding the trustee dinner photo leak sent last week.
+  user_id: sjohnson
+  assertions:
+  - description: Returns the email with subject 'Backlash Over Leaked Trustee Dinner Photo'
+  - description: Matches the email sender as Samuel Johnson and the date as December 22, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_058
+  query: Search for the email about organizing the emergency scholarships crowdfunding campaign sent earlier this month.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with subject 'Student Crowdfunding Campaign Coordination'
+  - description: Matches the email sender as Alejandro Rodriguez and the date as December 9, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_059
+  query: Find the email sent earlier this month about student wellness resources and tuition hike concerns.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with subject 'Support for Students Following Budget Concerns'
+  - description: Matches the email sender as Alejandro Rodriguez and the date as December 8, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_060
+  query: Search for the email discussing plans for the student town hall meeting sent at the start of this month.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with subject 'Next Steps for Student Town Hall'
+  - description: Matches the email sender as Alejandro Rodriguez and the date as December 4, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_061
+  query: Can you show me the meeting notes from the emergency press briefing preparation that happened this past weekend?
+  user_id: sjohnson
+  assertions:
+  - description: Returns the meeting with the title 'Emergency Press Briefing Preparation'
+  - description: Matches the date constraint (2025-12-28, weekend before query date)
+  - description: Identifies Samuel Johnson as an attendee
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_062
+  query: I need the email about student engagement during the recent leadership crisis.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with the subject 'Student Engagement During Leadership Crisis'
+  - description: Matches the sender 'Alejandro Rodriguez'
+  - description: Filters based on keywords 'student engagement' and 'leadership crisis'
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_063
+  query: Find the public statement from Sarah Nguyen about the student protests and financial transparency from early December.
+  user_id: snguyen
+  assertions:
+  - description: Returns the file 'data/docs/chancellor_statement_20251204.pdf'
+  - description: Matches the author 'Sarah Nguyen'
+  - description: Filters based on keywords 'student protests' and 'financial transparency'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/chancellor_statement_20251204.pdf
+- id: case_064
+  query: Can you find the chat discussing the board member resignation and its impact on university leadership earlier this month?
+  user_id: achopra
+  assertions:
+  - description: Returns the chat with the summary mentioning 'unexpected resignation of a board member'
+  - description: Matches the date constraint (early December, 2025-12-08)
+  - description: Filters based on keywords 'board member resignation' and 'university leadership'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_04
+- id: case_065
+  query: Please locate the email from Omar Khan about the network outage impact report sent earlier this month.
+  user_id: okhan
+  assertions:
+  - description: 'Returns the email with the subject ''Follow-Up: Network Outage Impact Assessment'''
+  - description: Matches the sender 'Omar Khan'
+  - description: Filters based on keywords 'network outage' and 'impact report'
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_066
+  query: Show me the meeting about faculty concerns regarding financial restructuring that happened on December 16th.
+  user_id: kfernandez
+  assertions:
+  - description: Returns the meeting 'Faculty Open Letter Discussion' on 2025-12-16
+  - description: Confirms the user was an attendee in the meeting
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_067
+  query: Retrieve the meeting about student concerns on scholarships held on December 16th.
+  user_id: lmatsuda
+  assertions:
+  - description: Finds the meeting 'Scholarship Fund Allocation Review' on 2025-12-16
+  - description: Confirms the user was an attendee in the meeting
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_068
+  query: Locate the investigative article about an anonymous trustee donation written by a journalist in late December.
+  user_id: mgarcia
+  assertions:
+  - description: Finds the file 'data/journalism/investigative_piece_donation.pdf'
+  - description: Confirms the file was created by 'local_journalist'
+  entity_list:
+  - entity_type: file
+    entity_id: data/journalism/investigative_piece_donation.pdf
+- id: case_069
+  query: Find the group chat about restructuring the budget without affecting academic programs from late December.
+  user_id: jkim
+  assertions:
+  - description: Returns the group chat 'chat_001' on 2025-12-20
+  - description: Confirms the focus of the discussion was on budget restructuring
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_070
+  query: Show me the urgent group chat about departmental budget discrepancies from December 11th.
+  user_id: aabdi
+  assertions:
+  - description: Finds the group chat 'finance_review_20251211' on 2025-12-11
+  - description: Confirms the topic was about departmental budget discrepancies
+  entity_list:
+  - entity_type: group_chat
+    entity_id: finance_review_20251211
+- id: case_071
+  query: Can you find the email about the anonymous threat and the safety measures for the student march? It was sent by Alejandro Rodriguez recently.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with the subject 'Security Concerns Regarding Peaceful March'.
+  - description: Filters by the author Alejandro Rodriguez and date close to December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_072
+  query: Can you show me the email from Emily Chen about the meeting with deans and department chairs on alternatives to merging departments?
+  user_id: echen
+  assertions:
+  - description: 'Returns the email with the subject ''Follow-up: Alternatives to Department Mergers''.'
+  - description: Filters by the author Emily Chen and a time frame around December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_073
+  query: I need the PDF file summarizing the graduate students' crowdfunding campaign for scholarships. Jin Park worked on it, and it was finalized around New Year's Eve.
+  user_id: jpark
+  assertions:
+  - description: Returns the file 'data/fundraising/graduate_students_crowdfunding_campaign_summary.pdf'.
+  - description: Filters by author Jin Park and date December 31, 2025.
+  entity_list:
+  - entity_type: file
+    entity_id: data/fundraising/graduate_students_crowdfunding_campaign_summary.pdf
+- id: case_074
+  query: Can you locate the technical report written by Dev Lobo about the server restoration that happened on Christmas?
+  user_id: dlobo
+  assertions:
+  - description: Returns the file 'data/logs/server_restoration_report.log'.
+  - description: Filters by the author Dev Lobo and date December 25, 2025.
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/server_restoration_report.log
+- id: case_075
+  query: Can you find the group chat about the administration's response to the student protest? It was around mid-December.
+  user_id: snguyen
+  assertions:
+  - description: Returns the group chat with summary 'Managing the administration's response to the student protest at the administration building...'.
+  - description: Filters for group chat type and date around December 15, 2025.
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_009
+- id: case_076
+  query: Can you pull up the meeting where faculty discussed layoffs and budget clarity earlier this month?
+  user_id: msharma
+  assertions:
+  - description: Returns the meeting titled 'Faculty Concerns Town Hall'
+  - description: Matches the date '2025-12-05'
+  - description: Includes 'layoffs' and 'budget clarity' in the meeting summary
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_077
+  query: Show me the detailed server outage report from Christmas Eve.
+  user_id: jgarcia
+  assertions:
+  - description: Returns the file 'data/logs/server_outage_report_20251224.log'
+  - description: Matches the date '2025-12-24'
+  - description: Includes 'server outage' in the file summary
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/server_outage_report_20251224.log
+- id: case_078
+  query: Can you find the meeting from this month where leadership reviewed the alumni donation requirements for financial transparency?
+  user_id: aramirez
+  assertions:
+  - description: Returns the meeting titled 'Alumni Financial Plan Review'
+  - description: Matches the date '2025-12-24'
+  - description: Includes 'financial transparency' and 'alumni donation' in the meeting summary
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_079
+  query: Find the report summarizing the student sit-in at the administration building from earlier this month.
+  user_id: amalek
+  assertions:
+  - description: Returns the file 'data/protests/administration_building_sit_in.docx'
+  - description: Matches the date '2025-12-17'
+  - description: Includes 'student sit-in' and 'administration building' in the file summary
+  entity_list:
+  - entity_type: file
+    entity_id: data/protests/administration_building_sit_in.docx
+- id: case_080
+  query: Show me the chat from Christmas Eve where we discussed the alumni coalition's $100,000 pledge and financial transparency plans.
+  user_id: mabdul
+  assertions:
+  - description: Returns the group chat 'chat_009'
+  - description: Matches the date '2025-12-24'
+  - description: Includes 'alumni coalition,' '$100,000 pledge,' and 'financial transparency' in the chat summary
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_009
+- id: case_081
+  query: Find the email about the emergency IT meeting to address the critical vulnerability, sent just before New Year's Eve.
+  user_id: achopra
+  assertions:
+  - description: 'Returns the email with the subject ''Emergency IT Strategy Meeting: Vulnerability Mitigation'''
+  - description: Identifies the sender as Ananya Chopra
+  - description: Filters based on the date '2025-12-31'
+  entity_list:
+  - entity_type: email
+    entity_id: email_006
+- id: case_082
+  query: Locate the final draft document of the faculty's no-confidence vote against the interim chancellor, prepared right before the start of the new year.
+  user_id: dpatel
+  assertions:
+  - description: Returns the file 'data/docs/no_confidence_vote_draft.pdf'
+  - description: Identifies the creator as Devika Patel
+  - description: Filters based on the document type being a PDF and the creation date '2025-12-29'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/no_confidence_vote_draft.pdf
+- id: case_083
+  query: Find the email discussing how to support students during the campus protests earlier in December.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with the subject 'Supporting Students During Campus Protests'
+  - description: Identifies the sender as Alejandro Rodriguez
+  - description: Filters based on the date '2025-12-10'
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_084
+  query: Retrieve the detailed IT report about the email system outage that caused the communication failure mid-December.
+  user_id: okhan
+  assertions:
+  - description: Returns the file 'data/it/outage_report_email_system_2025-12-15.pdf'
+  - description: Identifies the creator as Omar Khan
+  - description: Filters based on the document type being a PDF and the creation date '2025-12-15'
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/outage_report_email_system_2025-12-15.pdf
+- id: case_085
+  query: Find the email about preparing a financial transparency report to secure additional alumni funds, sent right after Christmas.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the email with the subject 'Preparing Financial Transparency Report for Alumni Coalition'
+  - description: Identifies the sender as Maria Garcia
+  - description: Filters based on the date '2025-12-26'
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_086
+  query: Show me the leaked draft about budget cuts and potential layoffs from early December.
+  user_id: dpatel
+  assertions:
+  - description: Returns the file 'data/leaks/proposed_budget_plan_draft.pdf'
+  - description: The file is authored by 'dpatel'
+  - description: The file creation date is '2025-12-05', which is before mid-December 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/leaks/proposed_budget_plan_draft.pdf
+- id: case_087
+  query: Find the email from Alejandro about the social media backlash regarding the interim chancellor's resignation petition sent around Christmas.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email with ID 'email_001'
+  - description: The email is from 'arodriguez'
+  - description: The email date is '2025-12-26', which is around Christmas
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_088
+  query: Retrieve the email from Emily about the faculty petition to delay department mergers sent at the start of the year.
+  user_id: echen
+  assertions:
+  - description: Returns the email with ID 'email_004'
+  - description: The email is from 'echen'
+  - description: The email date is '2026-01-01', which aligns with the start of the year
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_089
+  query: What was discussed in the leadership meeting about financial strategies and layoffs that Sarah and Priya attended in early December?
+  user_id: snguyen
+  assertions:
+  - description: Returns the meeting with ID 'meeting_001'
+  - description: The meeting title is 'Emergency Financial Strategy Meeting'
+  - description: The meeting date is '2025-12-10', which is early December
+  - description: Attendees include 'snguyen' and 'ppatel'
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_090
+  query: Find the group chat discussing feedback from the emergency town hall meeting held after the financial strategy meeting in December.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the group chat with ID 'chat_001'
+  - description: The group chat summary mentions feedback and next steps following the emergency town hall
+  - description: The group chat date is '2025-12-10', which aligns with the timing after the financial strategy meeting
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_091
+  query: Show me the email sent earlier this month summarizing the student protest and plans for follow-up with student leaders.
+  user_id: arodriguez
+  assertions:
+  - description: Matches 'Student Protest Update and Coordination' email sent by Alejandro Rodriguez.
+  - description: Filters emails by the date range '2025-12' and keywords like 'student protest' and 'follow-up'.
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_092
+  query: Find the email from earlier this month discussing the leaked email about department mergers and its implications.
+  user_id: echen
+  assertions:
+  - description: Matches the email titled 'Concerns About Department Mergers' sent by Emily Chen on 2025-12-04.
+  - description: Filters emails by keywords like 'department mergers' and 'leaked email' within December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_093
+  query: Locate the group chat where the IT department discussed the server outage during finals week and their restoration efforts.
+  user_id: msharma
+  assertions:
+  - description: Matches the group chat titled 'server_outage_response_20251217' that occurred on December 17, 2025.
+  - description: Filters group chats by date and keywords like 'server outage' and 'finals week'.
+  entity_list:
+  - entity_type: group_chat
+    entity_id: server_outage_response_20251217
+- id: case_094
+  query: Show me the email about the campus Wi-Fi failure and the timeline for restoring the network sent earlier this week.
+  user_id: jgarcia
+  assertions:
+  - description: Matches the email titled 'Update on Campus Wi-Fi Restoration Progress' sent by Javier Garcia on 2025-12-16.
+  - description: Filters emails by date and keywords like 'Wi-Fi failure' and 'restoration timeline'.
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_095
+  query: Find the email discussing adjustments to the financial transparency plan timeline and the next steps sent earlier this month.
+  user_id: ppatel
+  assertions:
+  - description: Matches the email titled 'Revised Financial Transparency Plan Timeline' sent by Priya Patel on 2025-12-07.
+  - description: Filters emails by keywords like 'financial transparency plan' and 'adjustments to timeline' within December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email9
+- id: case_096
+  query: Show me the email Priya sent about financial restructuring plans in December 2025.
+  user_id: ppatel
+  assertions:
+  - description: Returns the email with subject 'Preparation for Financial Restructuring Meeting'
+  - description: Filters by the sender 'Priya Patel' and the date 'December 2025'
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_097
+  query: Find the urgent memo about IT system crashes from the end of December 2025.
+  user_id: okhan
+  assertions:
+  - description: Returns the file 'data/memos/it_funding_warning.pdf'
+  - description: Identifies the author as Omar Khan
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/it_funding_warning.pdf
+- id: case_098
+  query: Retrieve the email with feedback from the teach-in event, sent around New Year 2026.
+  user_id: amalek
+  assertions:
+  - description: Returns the email with subject 'Student Activist Feedback on Teach-in Event'
+  - description: Filters by the sender 'Amira Malek' and the date 'January 1, 2026'
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_099
+  query: Locate the document from December 2025 criticizing the administration's lack of transparency.
+  user_id: mabdul
+  assertions:
+  - description: Returns the file 'data/finance/philanthropist_statement_2025-12-15.txt'
+  - description: Filters by the creation date 'December 15, 2025' and author 'Mariam Abdul'
+  entity_list:
+  - entity_type: file
+    entity_id: data/finance/philanthropist_statement_2025-12-15.txt
+- id: case_100
+  query: Find the proposal for student counseling during protests, sent after Christmas 2025.
+  user_id: aabdi
+  assertions:
+  - description: Returns the email with subject 'Support Plan for Students During Protests'
+  - description: Filters by sender 'Amina Abdi' and the date 'December 27, 2025'
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_101
+  query: Show me the email from Maria last week about the financial impact of tuition freezes and faculty layoffs.
+  user_id: aabdi
+  assertions:
+  - description: Returns the email 'email_010'
+  - description: Identifies the sender as Maria Garcia
+  - description: Filters emails by date range (last week) and keywords related to tuition freezes and faculty layoffs
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_102
+  query: Find the meeting notes from earlier this month about the student protest and how we planned to address their concerns.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the meeting 'meeting_002'
+  - description: Filters meetings by date range (early December) and keywords related to 'student protest' and 'follow-up actions'
+  - description: Identifies the attendee as Alejandro Rodriguez
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_103
+  query: Find the group chat from last week where the leadership team discussed the interim chancellor's video and stakeholder frustrations.
+  user_id: msharma
+  assertions:
+  - description: Returns the chat 'chat_001'
+  - description: Filters chats by date range (last week) and keywords related to 'leadership', 'interim chancellor's video', and 'stakeholder frustrations'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_104
+  query: Locate the email from Dev about the completed server patch and restored coursework platforms.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the email 'email_007'
+  - description: Filters emails by sender (Dev Lobo) and keywords related to 'server patch' and 'restored coursework platforms'
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_105
+  query: Find the email from Amina about coordinating with student leaders after the protest.
+  user_id: jpark
+  assertions:
+  - description: Returns the email 'email_009'
+  - description: Filters emails by sender (Amina Abdi) and keywords related to 'student leaders', 'coordinating', and 'protest'
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_106
+  query: Can you find the power outage report from last week that impacted several campus buildings?
+  user_id: okhan
+  assertions:
+  - description: Returns the file 'data/docs/power_outage_report.pdf'
+  - description: Identifies the author as Omar Khan
+  - description: Matches the event date (2025-12-20) and keywords 'power outage' and 'campus buildings'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/power_outage_report.pdf
+- id: case_107
+  query: Show me the group chat about the tensions during the march on campus a few days before Christmas.
+  user_id: msharma
+  assertions:
+  - description: Returns the chat 'march_tensions_protesters'
+  - description: Matches the date (2025-12-23) and keywords 'march', 'tensions', and 'campus'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: march_tensions_protesters
+- id: case_108
+  query: Find the internal report about the anonymous $50,000 donation to the university's emergency fund shared around Christmas.
+  user_id: echen
+  assertions:
+  - description: Returns the file 'data/docs/anonymous_donation_report.pdf'
+  - description: Identifies the author as Elena Navarro
+  - description: Matches the date (2025-12-25) and keywords 'anonymous donation', '$50,000', and 'emergency fund'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/anonymous_donation_report.pdf
+- id: case_109
+  query: I need the group chat from late December where we discussed the delayed financial plan and the protests.
+  user_id: ppatel
+  assertions:
+  - description: Returns the chat 'chat_008'
+  - description: Matches the date (2025-12-30) and keywords 'delayed financial plan' and 'protests'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_008
+- id: case_110
+  query: Retrieve the chat where Sarah and Alejandro talked about the interim chancellor and department mergers exposed by the student journalist.
+  user_id: snguyen
+  assertions:
+  - description: Returns the chat 'chat_003'
+  - description: Matches the participants Sarah Nguyen and Alejandro Rodriguez
+  - description: Matches the date (2025-12-29) and keywords 'interim chancellor', 'department mergers', and 'student journalist'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_111
+  query: What was the meeting about leadership issues and the letter leak that happened near the end of December?
+  user_id: msharma
+  assertions:
+  - description: Returns the meeting 'Board of Trustees Leadership Concerns'
+  - description: Includes attendees such as Meera Sharma, Devika Patel, Lila Matsuda, and Alejandro Rodriguez
+  - description: Confirms that it occurred on December 30, 2025
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_112
+  query: Can you locate the network outage log for the library systems that happened earlier this month?
+  user_id: jgarcia
+  assertions:
+  - description: Returns the file 'data/logs/library_network_outage.log'
+  - description: Identifies the creator as Javier Garcia
+  - description: Matches the date to December 14, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/library_network_outage.log
+- id: case_113
+  query: Find the email Priya sent about outsourcing maintenance services and its financial impact just before the holidays.
+  user_id: ppatel
+  assertions:
+  - description: Returns the email 'Outsourcing Maintenance Services - Budget Consideration'
+  - description: Confirms it was sent by Priya Patel on December 21, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_114
+  query: Locate the file about the emergency scholarship crowdfunding plan created by students earlier this month.
+  user_id: amalek
+  assertions:
+  - description: Returns the file 'data/campaigns/emergency_scholarship_crowdfunding_plan.docx'
+  - description: Confirms the creator as Amira Malek
+  - description: Matches the creation date to December 9, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/campaigns/emergency_scholarship_crowdfunding_plan.docx
+- id: case_115
+  query: Find the email about the IT department's response to the power outage and the resolution timeline sent recently.
+  user_id: okhan
+  assertions:
+  - description: Returns the email 'Power Outage Update and IT Support'
+  - description: Confirms it was sent by Omar Khan on December 20, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+- id: case_116
+  query: Find the email about the student petition summary sent before the meeting with student representatives was planned.
+  user_id: amalek
+  assertions:
+  - description: Returns the email with subject 'Follow-Up on Student-Led Petition'
+  - description: Identifies the sender as Amira Malek
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_117
+  query: Retrieve the email about the budget projection error flagged in late December from Katherine Fernandez.
+  user_id: kfernandez
+  assertions:
+  - description: 'Returns the email with subject ''Financial Projection Error: Immediate Action Required'''
+  - description: Identifies the date as December 30, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_118
+  query: Locate the group chat discussing the dean's resignation and leadership implications from this month.
+  user_id: echen
+  assertions:
+  - description: Returns the chat with summary 'Discussion about the potential resignation of the dean of the School of Humanities'
+  - description: Matches the date as December 21, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat4
+- id: case_119
+  query: Find the meeting summary about the budget crisis and avoiding tuition hikes or layoffs from mid-December.
+  user_id: sjohnson
+  assertions:
+  - description: Returns the group chat with summary 'Faculty members and university leaders discuss alternative solutions to address the budget crisis'
+  - description: Matches the date as December 17, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: budget_crisis_meeting_20251217
+- id: case_120
+  query: Show me the urgent email about the IT system crash and funding needs sent by Omar Khan last week.
+  user_id: okhan
+  assertions:
+  - description: Returns the email with subject 'IT System Crash Warning and Budget Requirements'
+  - description: Identifies the sender as Omar Khan
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_121
+  query: Find the email about the library banner protest sent just before the New Year
+  user_id: arodriguez
+  assertions:
+  - description: 'Returns the email titled ''Student Protest Update: Library Banner Incident'''
+  - description: Identifies the sender as Alejandro Rodriguez
+  - description: Filters to emails sent in late December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_122
+  query: Locate the group chat from early December about tuition hikes and departmental concerns
+  user_id: msharma
+  assertions:
+  - description: Returns the group chat dated December 4, 2025
+  - description: The topic involves tuition hikes and departmental issues
+  entity_list:
+  - entity_type: group_chat
+    entity_id: group_chat_006
+- id: case_123
+  query: Find the discussion about securing campus servers due to IT vulnerabilities discovered before the New Year
+  user_id: okhan
+  assertions:
+  - description: Returns the group chat conversation dated December 31, 2025
+  - description: The topic addresses IT vulnerabilities and securing campus servers
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_124
+  query: Find the conversation about server outages affecting academic operations around Christmas
+  user_id: ltanaka
+  assertions:
+  - description: Returns the chat on December 24, 2025
+  - description: The discussion focuses on server outages and academic contingency plans
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_125
+  query: Show me the email from Meera Sharma about feedback on tuition hikes from early December
+  user_id: msharma
+  assertions:
+  - description: Returns the email sent by Meera Sharma on December 4, 2025
+  - description: The email discusses faculty and student feedback on tuition hikes
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_126
+  query: Locate the email Sarah sent after the board meeting about the budget deficit and tuition hike proposal. It should include next steps and feedback from leadership.
+  user_id: ppatel
+  assertions:
+  - description: 'Returns the email with the subject ''Follow-Up: Board Discussion on Budget Deficit and Tuition Hike Proposal'''
+  - description: Identifies the author as Sarah Nguyen
+  - description: Filters by type 'email' and date around December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_127
+  query: Find the meeting with the chancellor and department heads about the emergency financial restructuring plan. It should have happened in mid-December 2025.
+  user_id: snguyen
+  assertions:
+  - description: Returns the meeting titled 'Emergency Financial Restructuring Plan Discussion'
+  - description: Includes attendees such as Sarah Nguyen, Priya Patel, Emily Chen, and Alejandro Rodriguez
+  - description: Filters by type 'meeting' and date around December 13, 2025
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_128
+  query: Show me the chat between Sarah and Maria where they discussed the backlash from the Q&A session and the financial transparency plan delay.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the chat that includes Sarah Nguyen and Maria Garcia discussing Q&A backlash and financial transparency
+  - description: Filters by type 'chat' and date around December 2025
+  - description: Includes the keywords 'backlash' and 'financial transparency plan'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_004
+- id: case_129
+  query: Find the group chat where student support was organized and grievances from the 'Wall of Demands' were discussed. It should have been around the end of December 2025.
+  user_id: achopra
+  assertions:
+  - description: Returns the group chat summary discussing student support and grievances from the 'Wall of Demands'
+  - description: Filters by type 'group_chat' and date around December 31, 2025
+  - description: Includes the keywords 'student support' and 'Wall of Demands'
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_003
+- id: case_130
+  query: Find the chat where the impact of system outages on student affairs and wellness services was reviewed. It should have been after Christmas in December 2025.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the chat summary discussing the impact of system outages on student affairs and wellness services
+  - description: Filters by type 'chat' and date around December 26, 2025
+  - description: Includes the keywords 'system outages' and 'wellness services'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_131
+  query: Show me the email Omar sent about the library network outage earlier this month.
+  user_id: snguyen
+  assertions:
+  - description: 'Returns the email titled ''Urgent: Library Database Network Outage'''
+  - description: Matches the author as Omar Khan
+  - description: Filters emails sent in December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_132
+  query: Find Lina's email about the finance strategy meeting that she sent right after Christmas.
+  user_id: msharma
+  assertions:
+  - description: Returns the email titled 'Finance Department's Strategy Meeting Proposal'
+  - description: Matches the author as Lina Tanaka
+  - description: Filters emails sent in late December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+- id: case_133
+  query: Locate Alejandro's email about organizing resources for the rally against the interim chancellor.
+  user_id: achopra
+  assertions:
+  - description: Returns the email titled 'Planning Support for Upcoming Rally Against Interim Chancellor'
+  - description: Matches the author as Alejandro Rodriguez
+  - description: Filters emails sent around December 26, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+- id: case_134
+  query: Show me the email from Lina about the urgent review of new financial discrepancies from earlier this month.
+  user_id: ymukherjee
+  assertions:
+  - description: Returns the email titled 'Urgent Review of Financial Discrepancies'
+  - description: Matches the author as Lina Tanaka
+  - description: Filters emails sent in early December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email3
+- id: case_135
+  query: Find the discussion about student wellness resources related to the tuition hike from the beginning of December.
+  user_id: dlopez
+  assertions:
+  - description: Returns the chat titled 'Discussion about student wellness resources'
+  - description: Filters chats from early December 2025
+  - description: Matches keywords 'student wellness' and 'tuition hike'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_009
+- id: case_136
+  query: Show me the email from Omar about funding needs for the system recovery plan, sent just before the holidays.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email 'System Recovery Plan and Funding Needs'
+  - description: Filters by sender 'Omar Khan' and date range around December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_137
+  query: Find the meeting where the IT team discussed fixing the server outage and improving infrastructure on Christmas Eve.
+  user_id: dlobo
+  assertions:
+  - description: Returns the meeting titled 'IT Crisis Response Meeting'
+  - description: Filters by attendees including 'Dev Lobo', topic of server issues, and date '2025-12-24'.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_138
+  query: Locate the conversation I had with Meera about department mergers and layoffs earlier this month.
+  user_id: echen
+  assertions:
+  - description: Returns the chat summary discussing faculty concerns.
+  - description: Filters by participants 'Emily Chen' and 'Meera Sharma' and date '2025-12-09'.
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_139
+  query: Find the meeting where the finance team discussed how to allocate alumni donations and ensure transparency.
+  user_id: mabdul
+  assertions:
+  - description: Returns the meeting titled 'Alumni Fundraising Allocation Planning'
+  - description: Filters by attendees including 'Amina Abdi', topic of alumni funds, and date '2025-12-22'.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_140
+  query: Find the email I sent about the server outage and the final grade submission issues on December 24th.
+  user_id: okhan
+  assertions:
+  - description: 'Returns the email ''Urgent: Server Outage Resolution Plan'''
+  - description: Filters by sender 'Omar Khan' and date '2025-12-24'.
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_141
+  query: Show me the meeting where alternatives to department mergers were discussed in December 2025.
+  user_id: dpatel
+  assertions:
+  - description: Returns the meeting titled 'Discussion on Alternatives to Department Mergers'
+  - description: Filters by date (December 2025) and attendee (Devika Patel)
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_142
+  query: Find the email from Emily Chen about faculty concerns on department mergers from early December 2025.
+  user_id: msharma
+  assertions:
+  - description: Returns the email titled 'Faculty Concerns Regarding Department Mergers'
+  - description: Filters by date (early December 2025) and sender (Emily Chen)
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+- id: case_143
+  query: Can you show me the meeting where we planned the logistics for the student rally happening next week?
+  user_id: amalek
+  assertions:
+  - description: Returns the meeting titled 'Student Engagement and Rally Planning'
+  - description: Filters by date (December 2025) and attendee (Amira Malek)
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_144
+  query: Locate the chat about faculty and student feedback on the tuition hike from mid-December 2025.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the chat titled 'Dean of Academic Affairs and Economics Professor discuss feedback on tuition hike'
+  - description: Filters by date (December 2025)
+  entity_list:
+  - entity_type: chat
+    entity_id: tuition_hike_feedback_20251217
+- id: case_145
+  query: Find the meeting where we discussed safety protocols for the student march happening in December 2025.
+  user_id: aabdi
+  assertions:
+  - description: Returns the meeting titled 'Student March Security Briefing'
+  - description: Filters by date (December 2025) and attendee (Amina Abdi)
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_146
+  query: Show me the meeting about the graduate student crowdfunding campaign that happened near the end of December.
+  user_id: amalek
+  assertions:
+  - description: Returns the meeting titled 'Graduate Student Crowdfunding Campaign Coordination'
+  - description: The meeting took place on December 31, 2025
+  - description: The user Amira Malek was an attendee
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_147
+  query: Can you find the IT meeting about resolving the server outage that disrupted grade submissions?
+  user_id: okhan
+  assertions:
+  - description: Returns the meeting titled 'IT Crisis Management Meeting'
+  - description: The meeting took place on December 18, 2025
+  - description: The meeting summary mentions a 48-hour server outage
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_148
+  query: Find the chat where students discussed concerns about the chancellor’s 'transformative solutions' statement.
+  user_id: snguyen
+  assertions:
+  - description: Returns the chat dated December 14, 2025
+  - description: The chat summary mentions student concerns about the chancellor's statement
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_005
+- id: case_149
+  query: Locate the recent chat about organizing student engagement for the protests and march.
+  user_id: jkim
+  assertions:
+  - description: Returns the chat dated December 21, 2025
+  - description: The chat summary mentions coordinating student engagement and communication efforts for protests and a march
+  entity_list:
+  - entity_type: chat
+    entity_id: chat6
+- id: case_150
+  query: Find the group chat from early December about planning the alumni association’s emergency meeting.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the chat dated December 7, 2025
+  - description: The chat summary mentions planning the alumni association's emergency meeting regarding the university's financial future
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_005
+- id: case_151
+  query: Show me the email from Priya Patel about how to allocate the $500,000 donation, sent in late December 2025.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email 'email_010'
+  - description: Identifies the sender as Priya Patel
+  - description: Matches the date range of late December 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_152
+  query: Find the discussion about the independent alumni-led fundraising campaign for scholarships from mid-December 2025.
+  user_id: echen
+  assertions:
+  - description: Returns the chat 'chat_006'
+  - description: Matches the topic of alumni fundraising for scholarships
+  - description: Matches the date of mid-December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_006
+- id: case_153
+  query: Locate the draft document regarding the faculty's no-confidence vote against the interim chancellor, prepared in late December 2025.
+  user_id: dpatel
+  assertions:
+  - description: Returns the file 'data/meetings/no_confidence_vote_draft.pdf'
+  - description: Identifies the creator as Devika Patel
+  - description: Matches the date range of late December 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/meetings/no_confidence_vote_draft.pdf
+- id: case_154
+  query: Find the group chat from late December 2025 that talks about urgent funding needs and system crash warnings.
+  user_id: msharma
+  assertions:
+  - description: Returns the chat 'chat_002'
+  - description: Matches the topic of urgent funding needs and system crash warnings
+  - description: Matches the date of late December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_002
+- id: case_155
+  query: Show me the chat from early December 2025 where student concerns about tuition hikes and financial unrest were discussed.
+  user_id: jkim
+  assertions:
+  - description: Returns the chat 'chat_007'
+  - description: Matches the topic of student concerns about tuition hikes and financial unrest
+  - description: Matches the date of early December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_156
+  query: Show me the email summarizing the emergency town hall meeting where students and faculty raised key concerns.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email sent on December 25, 2025, by Emily Chen
+  - description: Email subject matches 'Follow-up on Emergency Town Hall Meeting'
+  - description: Summary mentions concerns raised by students and faculty
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_157
+  query: Find the chat where Alejandro and Amina coordinated the logistics for the student candlelight vigil.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the chat from December 19, 2025
+  - description: Summary includes coordination efforts for the candlelight vigil
+  - description: Participants include Alejandro Rodriguez and Amina Abdi
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_158
+  query: Retrieve the group chat where the team discussed addressing budget discrepancies raised by the student demonstration.
+  user_id: ppatel
+  assertions:
+  - description: Returns the group chat from December 8, 2025
+  - description: Summary mentions responding to budget discrepancies
+  - description: Context involves a student demonstration
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_07
+- id: case_159
+  query: Show me the email detailing the action plan to resolve the critical IT vulnerability and prevent a system shutdown.
+  user_id: msharma
+  assertions:
+  - description: Returns the email sent on December 28, 2025, by Omar Khan
+  - description: Subject matches 'Action Plan for Addressing IT Vulnerabilities'
+  - description: Summary includes immediate steps, resource needs, and timeline for resolving the vulnerability
+  entity_list:
+  - entity_type: email
+    entity_id: email_006
+- id: case_160
+  query: Find the email from Alejandro about managing the student protest and handling transparency with the media.
+  user_id: aabdi
+  assertions:
+  - description: Returns the email sent on December 12, 2025, by Alejandro Rodriguez
+  - description: 'Subject matches ''Student Protest: Addressing Media Attention and Transparency Concerns'''
+  - description: Summary mentions steps to address transparency and media coverage
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_161
+  query: Find the chat from early December where the CFO and Director of Finance discussed the parking fee changes.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the chat 'finance_team_parking_fee_20251212'
+  - description: Matches the keywords 'parking fee increase' and 'CFO and Director of Finance'
+  - description: Filters for chats from around December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: finance_team_parking_fee_20251212
+- id: case_162
+  query: Show me Amina's email about engaging with students during the December sit-in.
+  user_id: sjohnson
+  assertions:
+  - description: Returns the email 'email_008'
+  - description: Filters by sender 'Amina Abdi'
+  - description: Matches keywords 'engaging with students', 'sit-in', and 'December 2025'
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_163
+  query: Find the chat where Emily and Meera talked about the no-confidence vote draft in late December.
+  user_id: echen
+  assertions:
+  - description: Returns the chat 'chat_004'
+  - description: Filters by participants 'Emily Chen' and 'Meera Sharma'
+  - description: Matches keywords 'no-confidence vote draft' and 'December 2025'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_004
+- id: case_164
+  query: Find the chat about the alumni coalition's $100,000 pledge and the financial plan from just before Christmas.
+  user_id: dlobo
+  assertions:
+  - description: Returns the chat 'chat_007'
+  - description: Matches keywords 'alumni coalition', '$100,000 pledge', and 'financial plan'
+  - description: Filters for chats around December 24, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_165
+  query: Locate the chat where Devika and Meera discussed faculty concerns about department mergers in late December.
+  user_id: dpatel
+  assertions:
+  - description: Returns the chat 'chat_006'
+  - description: Filters by participants 'Devika Patel' and 'Meera Sharma'
+  - description: Matches keywords 'faculty concerns' and 'department mergers'
+  - description: Filters for chats on December 27, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_006
+- id: case_166
+  query: Show me the email sent by Ananya Chopra about the IT infrastructure crisis on December 26, 2025.
+  user_id: achopra
+  assertions:
+  - description: Returns the email with subject 'Follow-Up on IT Infrastructure Crisis'
+  - description: Filters based on date (2025-12-26) and sender (achopra)
+  - description: Highlights the summary discussing server restoration and funding issues
+  entity_list:
+  - entity_type: email
+    entity_id: email_006
+- id: case_167
+  query: What was the conversation between Alejandro Rodriguez and Amina Abdi about the student protest and transparency this week?
+  user_id: arodriguez
+  assertions:
+  - description: Returns the chat discussion from December 29, 2025
+  - description: Includes keywords like 'student protest', 'transparency', and 'budget accountability'
+  - description: Identifies participants as Alejandro Rodriguez and Amina Abdi
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_005
+- id: case_168
+  query: Can you find the financial restructuring proposal Sarah Nguyen created earlier this month for the board?
+  user_id: snguyen_2
+  assertions:
+  - description: Returns the file 'data/docs/emergency_financial_restructuring_plan.pdf'
+  - description: Filters by type (file) and creator (snguyen_2)
+  - description: Highlights the summary about financial restructuring measures
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/emergency_financial_restructuring_plan.pdf
+- id: case_169
+  query: Find the recent email from Devika Patel about the no-confidence motion against the interim chancellor.
+  user_id: dpatel
+  assertions:
+  - description: Returns the email with subject 'Support for No-Confidence Motion'
+  - description: Filters by sender (dpatel) and recent date (2025-12-29)
+  - description: Highlights content about encouraging support for the vote against the interim chancellor
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_170
+  query: Locate the email sent by Maria Garcia about the anonymous $50,000 donation from December 26, 2025.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the email with subject 'Speculation Regarding Anonymous $50,000 Donation'
+  - description: Filters by sender (mgarcia) and date (2025-12-26)
+  - description: Highlights the summary discussing financial transparency and public image
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_171
+  query: Show me the detailed email from Wei Cheng about fixing IT infrastructure issues sent on December 12, 2025.
+  user_id: kfernandez
+  assertions:
+  - description: 'Returns the email with subject ''IT Infrastructure Crisis: Long-term Solutions Discussion'''
+  - description: Filters by sender 'wcheng'
+  - description: Filters by date '2025-12-12'
+  entity_list:
+  - entity_type: email
+    entity_id: email_006
+- id: case_172
+  query: Find the report written by Alejandro Rodriguez about outdated textbooks in the university bookstore.
+  user_id: mgarcia
+  assertions:
+  - description: Returns the file 'data/docs/bookstore_textbook_pricing_report.pdf'
+  - description: Filters by author 'arodriguez'
+  - description: Searches for keywords 'outdated textbooks', 'university bookstore'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/bookstore_textbook_pricing_report.pdf
+- id: case_173
+  query: Find the senior leadership discussion about the leaked emails on department mergers earlier this month.
+  user_id: snguyen
+  assertions:
+  - description: Returns the group chat with summary 'Senior leadership discusses the implications of the leaked board email about potential department mergers.'
+  - description: Filters by type 'group_chat'
+  - description: Searches within December 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: group_chat_010
+- id: case_174
+  query: Retrieve the urgent email from Omar Khan about repairing the email system vulnerability sent on December 15, 2025.
+  user_id: jkim
+  assertions:
+  - description: Returns the email with subject 'Urgent Repair for Email System Vulnerability'
+  - description: Filters by sender 'okhan'
+  - description: Filters by date '2025-12-15'
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_175
+  query: Locate the chat conversation about coordinating support for the student protests on December 15, 2025.
+  user_id: amalek
+  assertions:
+  - description: Returns the chat with summary 'Coordinating support and communication with student groups involved in the protests.'
+  - description: Filters by type 'chat'
+  - description: Searches within December 15, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_176
+  query: Show me the email from Omar Khan about the emergency server patch sent on New Year's Day.
+  user_id: okhan
+  assertions:
+  - description: Returns the email with subject 'Emergency Server Patch Updates'
+  - description: Identifies the sender as Omar Khan
+  - description: Email is dated January 1, 2026
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+- id: case_177
+  query: Locate the Word document about the email system vulnerability analysis conducted last December.
+  user_id: okhan
+  assertions:
+  - description: Returns the document 'data/docs/email_vulnerability_analysis.docx'
+  - description: Identifies the author as Omar Khan
+  - description: Document is dated December 13, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/email_vulnerability_analysis.docx
+- id: case_178
+  query: Find the faculty meeting notes from December about the restructuring proposal.
+  user_id: dpatel
+  assertions:
+  - description: Returns the file 'data/docs/faculty_meeting_notes.pdf'
+  - description: Identifies the author as Devika Patel
+  - description: File is dated December 22, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/faculty_meeting_notes.pdf
+- id: case_179
+  query: Show me the IT department's report on the grading system restoration progress from last December.
+  user_id: okhan
+  assertions:
+  - description: Returns the file 'data/it/grading_system_status_update_20251221.txt'
+  - description: Identifies the author as Omar Khan
+  - description: File is dated December 21, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/grading_system_status_update_20251221.txt
+- id: case_180
+  query: Find the chat discussing the root cause of server outages and upgrade possibilities from Christmas Eve.
+  user_id: okhan
+  assertions:
+  - description: Returns the chat with summary 'Technical discussion about the root cause of the server outages and potential upgrades to prevent future failures.'
+  - description: Chat is dated December 24, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_010
+- id: case_181
+  query: Show me the email about the urgent IT infrastructure upgrades, especially the one sent by Wei Chen last week.
+  user_id: kfernandez
+  assertions:
+  - description: Returns the email 'email_008'
+  - description: Identifies the sender as Wei Chen
+  - description: Filters emails sent in the week of December 11, 2025
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_182
+  query: Find the IT outage summary report from Diego Lopez about the recent disruption to online classes earlier this month.
+  user_id: echen
+  assertions:
+  - description: Returns the file 'data/reports/it_outage_summary.pdf'
+  - description: Filters files created by Diego Lopez
+  - description: Identifies that the file pertains to the IT outage in early December 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/it_outage_summary.pdf
+- id: case_183
+  query: Show me the chat where the 'Wall of Demands' and its impact on academic programs were discussed late last month.
+  user_id: msharma
+  assertions:
+  - description: Returns the chat 'chat_007'
+  - description: Filters for conversations mentioning 'Wall of Demands'
+  - description: Limits results to late December 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_184
+  query: Find the email from Mariam Abdul about reviewing bookstore pricing policies, especially regarding outdated textbooks.
+  user_id: ltanaka
+  assertions:
+  - description: Returns the email 'email_007'
+  - description: Filters emails sent by Mariam Abdul
+  - description: Identifies the subject as related to bookstore pricing and outdated textbooks
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+- id: case_185
+  query: Show me the chat about budget adjustments to address financial discrepancies from December 10th.
+  user_id: ymukherjee
+  assertions:
+  - description: Returns the chat 'chat_009'
+  - description: Filters for conversations about financial discrepancies and budget adjustments
+  - description: Limits results to December 10, 2025
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_009
+- id: case_186
+  query: Show me the recent email from Omar about the leaked emails and IT problems.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email with subject 'Leaked Emails and IT Infrastructure Risk'
+  - description: Email is authored by Omar Khan.
+  - description: Email is dated 2025-12-19.
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+- id: case_187
+  query: I need the latest document with signatures for the tuition hike petition.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the file 'data/docs/tuition_hike_petition_signatures.csv'
+  - description: File is created by Alejandro Rodriguez.
+  - description: File is dated 2025-12-06.
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/tuition_hike_petition_signatures.csv
+- id: case_188
+  query: Find the recent meeting I attended about the petition and department cuts.
+  user_id: ppatel
+  assertions:
+  - description: Returns the meeting titled 'Emergency Meeting on Tuition Hike and Department Cuts'.
+  - description: Meeting is dated 2025-12-18.
+  - description: Includes Priya Patel in the attendee list.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_189
+  query: Can you find Priya's recent email about the emergency budget review for board concerns?
+  user_id: msharma
+  assertions:
+  - description: Returns the email with subject 'Emergency Budget Review Post Board Pushback'.
+  - description: Email is authored by Priya Patel.
+  - description: Email is dated 2025-12-12.
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_190
+  query: Pull up Priya's email about the status update on alternative budget plans.
+  user_id: echen
+  assertions:
+  - description: Returns the email with subject 'Alternative Budget Proposals - Progress Update'.
+  - description: Email is authored by Priya Patel.
+  - description: Email is dated 2025-12-10.
+  entity_list:
+  - entity_type: email
+    entity_id: email_009
+- id: case_191
+  query: Find the email about the student article discussing inconsistencies in the interim chancellor's comments on department mergers.
+  user_id: amalek
+  assertions:
+  - description: 'Returns the email ''Student Journalist Article: Chancellor Statement Discrepancies'' sent by Amira Malek.'
+  - description: Filters for emails sent on or around December 29, 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+- id: case_192
+  query: Show me the discussion where faculty brainstormed solutions to the budget crisis to avoid raising tuition.
+  user_id: dpatel
+  assertions:
+  - description: Returns the group chat 'faculty_budget_proposals'.
+  - description: Filters for group chats related to budget discussions involving faculty.
+  entity_list:
+  - entity_type: group_chat
+    entity_id: faculty_budget_proposals
+- id: case_193
+  query: Find the email about how faculty can support the alumni coalition's fundraising efforts.
+  user_id: echen
+  assertions:
+  - description: Returns the email 'Response to Alumni Coalition’s Fundraising Campaign' sent by Emily Chen.
+  - description: Filters for emails related to fundraising campaigns sent in December 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_194
+  query: Locate the email requesting a financial analysis for the budget adjustment proposals.
+  user_id: ppatel
+  assertions:
+  - description: 'Returns the email ''Financial Analysis: Proposed Budget Adjustments'' sent by Priya Patel.'
+  - description: Applies filters for emails sent on December 25, 2025.
+  entity_list:
+  - entity_type: email
+    entity_id: email_008
+- id: case_195
+  query: Find the email about next steps after the interim chancellor's vague response to the budget crisis.
+  user_id: snguyen
+  assertions:
+  - description: Returns the email 'Follow-up on Interim Chancellor's Video Statement' sent by Sarah Nguyen.
+  - description: Filters for emails sent on December 19, 2025 related to the budget crisis.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+- id: case_196
+  query: Show me the leaked document about proposed scholarship cuts from earlier this month.
+  user_id: msharma
+  assertions:
+  - description: Returns the file 'data/docs/leaked_scholarship_cuts_proposal.pdf'
+  - description: Identifies it as a document created on December 16, 2025
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/leaked_scholarship_cuts_proposal.pdf
+- id: case_197
+  query: Find the recent group chat where finance leaders talked about utilizing a $50,000 emergency fund donation.
+  user_id: dpatel
+  assertions:
+  - description: Returns the group chat 'chat_009'
+  - description: Identifies the date as December 25, 2025
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_009
+- id: case_198
+  query: Find the meeting where faculty drafted a formal budget proposal to address the financial crisis.
+  user_id: lmatsuda
+  assertions:
+  - description: Returns the meeting 'meeting_02'
+  - description: Identifies attendees including 'lmatsuda', 'msharma', and others
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_02
+- id: case_199
+  query: Show me an email about mental health resources for students during the recent unrest.
+  user_id: arodriguez
+  assertions:
+  - description: Returns the email 'email_010'
+  - description: Identifies the sender as Alejandro Rodriguez
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+- id: case_200
+  query: Find the IT department's report on server issues that disrupted campus operations this week.
+  user_id: jgarcia
+  assertions:
+  - description: Returns the file 'data/it/server_issue_report_20251227.pdf'
+  - description: Identifies the author as Javier Garcia
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/server_issue_report_20251227.pdf
+- id: case_201
+  query: What were the next steps discussed in the group chat about the emergency town hall meeting, as outlined in its summary document?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the emergency town hall meeting summary document
+  - description: Links the emergency town hall meeting to the related group chat
+  - description: Extracts the next steps from the group chat
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/emergency_townhall_summary.pdf
+  - entity_type: chat
+    entity_id: chat_001
+- id: case_202
+  query: What steps were planned to resolve the accounting discrepancy discussed in the finance department's meeting?
+  user_id: wchen
+  assertions:
+  - description: Identifies the email about the accounting discrepancy
+  - description: Links the email to the finance department meeting
+  - description: Extracts the planned steps from the meeting
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_203
+  query: What was the administration's formal response to the student petition against tuition hikes, as coordinated in the meeting and related communications?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the email about the administration's formal response to the student petition
+  - description: Links the email to the chat and meeting discussing the same topic
+  - description: Extracts the formal response from the meeting and chat
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_204
+  query: What document was presented during the chancellor's meeting with the board of trustees to discuss financial restructuring?
+  user_id: snguyen
+  assertions:
+  - description: Identifies the chancellor's discussion on financial restructuring in the meeting with the board
+  - description: Connects the discussion to the document outlining the emergency financial restructuring plan
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chancellor_board_meeting_20251212
+  - entity_type: file
+    entity_id: data/docs/emergency_financial_restructuring_plan.pdf
+- id: case_205
+  query: Which meeting evaluated media coverage of the protest described in the email outlining student grievances?
+  user_id: msharma
+  assertions:
+  - description: Identifies the email summarizing student grievances and protest for transparency
+  - description: Connects the grievances to the meeting that discussed media coverage of the protest
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_206
+  query: What log file corresponds to the IT department's discussion on the student portal failure?
+  user_id: ltanaka
+  assertions:
+  - description: Identifies the IT department's group chat about the portal failure
+  - description: Connects the discussion to the log file documenting the outage errors
+  entity_list:
+  - entity_type: group_chat
+    entity_id: it_department_portal_failure_20251212
+  - entity_type: file
+    entity_id: data/logs/student_portal_failure_12122025.log
+- id: case_207
+  query: What concerns were raised in the Q&A session about the financial transparency plan, and how are they addressed in the draft document?
+  user_id: snguyen
+  assertions:
+  - description: Identifies the connection between the Q&A session and the draft of the financial transparency plan
+  - description: Extracts specific concerns from the Q&A session and evaluates their resolution in the draft document
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: file
+    entity_id: data/reports/financial_transparency_plan_draft.pdf
+- id: case_208
+  query: What specific issues discussed in the chat about IT hardware upgrades are mentioned in the meeting and detailed in the system slowdown report?
+  user_id: okhan
+  assertions:
+  - description: Identifies the IT hardware issues discussed in the chat
+  - description: Links the chat to the meeting discussing hardware upgrades
+  - description: Finds supporting details in the system slowdown report
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_002
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: file
+    entity_id: data/it/system_slowdown_report_2025_12_09.docx
+- id: case_209
+  query: What strategies discussed in the chat about the crowdfunding campaign are included in the campaign execution plan, and how were they addressed in the meeting?
+  user_id: arodriguez
+  assertions:
+  - description: Explores the strategies discussed in the chat about the crowdfunding campaign
+  - description: Links the chat discussion to the campaign execution plan document
+  - description: Identifies how the strategies were further refined in the meeting
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: file
+    entity_id: data/campaigns/emergency_scholarship_crowdfunding_plan.docx
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_210
+  query: How did the leaked budget plan impact the agenda of the faculty meeting addressing potential layoffs?
+  user_id: echen
+  assertions:
+  - description: Identifies the leaked budget plan as 'data/leaks/proposed_budget_plan_draft.pdf'
+  - description: Connects the leaked budget plan to 'meeting_003' where faculty discussed layoffs hinted in the document
+  entity_list:
+  - entity_type: file
+    entity_id: data/leaks/proposed_budget_plan_draft.pdf
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_211
+  query: What strategies were discussed in the student organizers' meeting to address the concerns raised in the petition against the tuition hike?
+  user_id: amalek
+  assertions:
+  - description: Identifies the student petition as 'data/petitions/student_petition_tuition_hike.pdf'
+  - description: Connects the petition to 'meeting_002' where strategies were planned
+  entity_list:
+  - entity_type: file
+    entity_id: data/petitions/student_petition_tuition_hike.pdf
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_212
+  query: How did the IT outage summary influence the measures discussed in the meeting to ensure future system stability?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the IT outage summary as 'data/reports/it_outage_summary.pdf'
+  - description: Connects the outage summary to 'meeting_004' where measures were discussed
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/it_outage_summary.pdf
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_213
+  query: How do the demands outlined by the protesting students relate to the increased sales of protest-themed merchandise at the bookstore?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the document outlining student protest demands
+  - description: Links the bookstore sales report to the protest demands
+  entity_list:
+  - entity_type: file
+    entity_id: data/protests/student_demands_2025-12-15.docx
+  - entity_type: file
+    entity_id: data/bookstore/protest_merchandise_sales_2025-12-15.xlsx
+- id: case_214
+  query: What actions did the IT department take to resolve the email system outage, and how do they align with the causes identified in the outage report?
+  user_id: msharma
+  assertions:
+  - description: Connects the IT meeting on resolving the outage to the report on blackout causes
+  - description: Explains alignment between the actions taken and the identified causes
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: file
+    entity_id: data/it/outage_report_email_system_2025-12-15.pdf
+- id: case_215
+  query: What steps did the administration take to address transparency and financial stability concerns raised by the leaked recording about faculty cuts?
+  user_id: echen
+  assertions:
+  - description: Links the leaked recording to the meeting addressing financial stability and transparency
+  - description: Identifies the administration's steps to mitigate concerns
+  entity_list:
+  - entity_type: file
+    entity_id: data/media/leaked_recording_summary_2025-12-15.doc
+  - entity_type: meeting
+    entity_id: meeting_006
+- id: case_216
+  query: Who participated in the meeting with the faculty union representative about layoffs, and how were their concerns addressed in subsequent emails?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the meeting participants as the interim chancellor and the faculty union representative
+  - description: Identifies the follow-up email addressing concerns about layoffs as 'email_010'
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: email
+    entity_id: email_010
+- id: case_217
+  query: What was the university's response to the student demonstration about budget discrepancies, and how was it communicated?
+  user_id: echen
+  assertions:
+  - description: Identifies the meeting about the student demonstration as 'meeting_002'
+  - description: Identifies the email discussing the university's official response as 'email_002'
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: email
+    entity_id: email_002
+- id: case_218
+  query: How does the IT department's funding request relate to the discussions about short-term measures to address outdated hardware?
+  user_id: msharma
+  assertions:
+  - description: Identifies the IT department's funding request document as 'data/docs/it_emergency_funding_request.docx'
+  - description: Identifies the group chat discussing short-term fixes as 'chat_09'
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/it_emergency_funding_request.docx
+  - entity_type: group_chat
+    entity_id: chat_09
+- id: case_219
+  query: Which meeting discussed the interdisciplinary programs mentioned in the email summarizing today's meeting with deans and department chairs?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the email about today's meeting with deans and department chairs (email_001).
+  - description: Connects the email to the meeting evaluating interdisciplinary programs (meeting_001).
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_220
+  query: How does the IT department's report on the software vulnerability connect to the agenda of the emergency press briefing?
+  user_id: dlobo
+  assertions:
+  - description: Identifies the IT department's report on the software vulnerability (data/it/security_vulnerability_report.pdf).
+  - description: Links the IT crisis details to the emergency press briefing agenda (data/events/emergency_press_briefing_agenda.docx).
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/security_vulnerability_report.pdf
+  - entity_type: file
+    entity_id: data/events/emergency_press_briefing_agenda.docx
+- id: case_221
+  query: What aspects of the student protest plans outlined in the email were incorporated into the university leadership's meeting for the emergency press briefing?
+  user_id: amalek
+  assertions:
+  - description: Identifies the email discussing plans to address the student protest (email_007).
+  - description: Connects the email's protest strategies to the university leadership's emergency press briefing meeting (meeting_003).
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_222
+  query: Who coordinated the emergency server patch mentioned in the email about restored access to online coursework platforms?
+  user_id: echen
+  assertions:
+  - description: Identifies the email about restored access to online coursework platforms (email_007)
+  - description: Identifies the group chat where the emergency server patch was coordinated (chat_003)
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: group_chat
+    entity_id: chat_003
+- id: case_223
+  query: Which meeting addressed the implementation of transparency measures discussed in the email about the $250,000 donor pledge?
+  user_id: msharma
+  assertions:
+  - description: Identifies the email discussing the $250,000 donor pledge (email_005)
+  - description: Identifies the meeting where the implementation of transparency measures was discussed (meeting_004)
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_224
+  query: Where can the notes outlining the financial recovery plan promised by the chancellor during the press conference be found?
+  user_id: achopra
+  assertions:
+  - description: Identifies the group chat discussing the financial recovery plan promised by the chancellor (chat_001)
+  - description: Identifies the file containing the press conference notes about the financial recovery plan (data/press_conference/financial_recovery_plan_notes.pdf)
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+  - entity_type: file
+    entity_id: data/press_conference/financial_recovery_plan_notes.pdf
+- id: case_225
+  query: What strategies were proposed in meetings to address the administrative instability caused by the dean's potential resignation mentioned in the email?
+  user_id: okhan
+  assertions:
+  - description: Identifies the email discussing the dean's potential resignation (email_001).
+  - description: Connects the email to the related meeting summarizing concerns about administrative instability (meeting_003).
+  - description: Extracts proposed strategies from the meeting notes.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_226
+  query: How did the logistical support discussed in the chat contribute to the plans mentioned in the email about student safety during the protests?
+  user_id: aabdi
+  assertions:
+  - description: Identifies the email discussing student support during protests (email_005).
+  - description: Finds the group chat where logistical planning for the march was discussed (chat3).
+  - description: Examines links between the email and the chat to determine how the logistical plans were implemented.
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: group_chat
+    entity_id: chat3
+- id: case_227
+  query: What challenges and solutions regarding the grading system restoration were discussed in the meeting and chat, as indicated in the email update?
+  user_id: msharma
+  assertions:
+  - description: Identifies the email discussing grading system restoration (email_003).
+  - description: Finds the related meeting discussing the grading system's restoration and expected timeline (meeting_002).
+  - description: Extracts further details from the chat about IT challenges and solutions (chat2).
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: chat
+    entity_id: chat2
+- id: case_228
+  query: Who led the IT team meeting addressing the server outage mentioned in the email?
+  user_id: echen
+  assertions:
+  - description: Identifies the email about the server outage as 'email_002'
+  - description: Identifies the associated meeting as 'meeting_002'
+  - description: Determines the leader of the IT team meeting.
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_229
+  query: What strategies were proposed in the chat to maximize donations for the fundraising campaign mentioned in the email?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the email about the fundraising campaign as 'email_004'
+  - description: Identifies the chat about strategies for maximizing donations as 'fundraising_strategy_20251217'
+  - description: Extracts the proposed strategies from the discussion.
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: chat
+    entity_id: fundraising_strategy_20251217
+- id: case_230
+  query: What resolution strategies were proposed in the meeting that discussed the student sit-in mentioned in the email?
+  user_id: dlobo
+  assertions:
+  - description: Identifies the email about the student sit-in as 'email_003'
+  - description: Identifies the meeting discussing resolution strategies as 'meeting_004'
+  - description: Extracts proposed strategies from the meeting.
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_231
+  query: Which group chat corresponds to the email discussing the budget discrepancies outlined by the finance department?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the email discussing 'budget discrepancies' as email_001
+  - description: Connects the email to the relevant group chat 'finance_review_20251211'
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: group_chat
+    entity_id: finance_review_20251211
+- id: case_232
+  query: Which meeting corresponds to the email about the science faculty's petition requesting clarity on budget cuts?
+  user_id: echen
+  assertions:
+  - description: Identifies the email discussing 'science faculty's petition' as email_004
+  - description: Links the email to the relevant meeting 'meeting4'
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: meeting
+    entity_id: meeting4
+- id: case_233
+  query: Which file contains the detailed report of the website issues mentioned in the IT department's email?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the email discussing 'website issues' as email_003
+  - description: Connects the email to the file 'data/it/website_issue_report_2025-12-11.pdf'
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: file
+    entity_id: data/it/website_issue_report_2025-12-11.pdf
+- id: case_234
+  query: What details about the security measures for the student march are mentioned in the security plan document discussed in the email about the anonymous threat?
+  user_id: okhan
+  assertions:
+  - description: Identifies the email discussing the anonymous threat as 'email_001'
+  - description: Matches the email with the security plan document 'data/docs/student_march_security_plan.pdf'
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: file
+    entity_id: data/docs/student_march_security_plan.pdf
+- id: case_235
+  query: What mediation strategies were proposed in the faculty meeting as detailed in the meeting notes mentioned in the group chat about faculty accusations?
+  user_id: achopra
+  assertions:
+  - description: Identifies the group chat about faculty accusations as 'chat_003'
+  - description: Matches the chat with the meeting notes document 'data/docs/faculty_meeting_notes.pdf'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: file
+    entity_id: data/docs/faculty_meeting_notes.pdf
+- id: case_236
+  query: What public relations strategies were outlined in the internal memo to address the backlash about the chancellor's photo leak mentioned in the chat?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the chat discussing the chancellor's photo leak as 'chat_002'
+  - description: Matches the chat with the internal memo on the chancellor photo crisis 'data/docs/chancellor_photo_crisis_memo.pdf'
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_002
+  - entity_type: file
+    entity_id: data/docs/chancellor_photo_crisis_memo.pdf
+- id: case_237
+  query: What strategies were discussed by university leadership in response to the faculty meeting disruption caused by student protests?
+  user_id: dlopez
+  assertions:
+  - description: Identifies the faculty meeting disrupted by students (mentioned in email_001 and chat_002).
+  - description: Connects the disruption to the meeting held by student affairs staff (meeting_004).
+  - description: Extracts strategies discussed at meeting_004 to address student demands.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: chat
+    entity_id: chat_002
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_238
+  query: What immediate steps were taken to address the critical vulnerability in the university’s email system?
+  user_id: achopra
+  assertions:
+  - description: Identifies the critical vulnerability in the email system (mentioned in email_002, email_006, and chat_001).
+  - description: Connects the vulnerability to the IT department meeting discussing urgent repair measures (meeting_002).
+  - description: Extracts the immediate steps taken from the meeting and relevant emails.
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: chat
+    entity_id: chat_001
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_239
+  query: What public response did university leadership plan after the student newspaper published an investigative article about tuition hike inconsistencies?
+  user_id: msharma
+  assertions:
+  - description: Identifies the investigative article published by the student newspaper (data/docs/tuition_hike_investigation.pdf).
+  - description: Connects the article to the university leadership meeting discussing the public response (meeting_005).
+  - description: Extracts the planned public response from meeting_005.
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/tuition_hike_investigation.pdf
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_240
+  query: What specific demands from the student sit-in manifesto were discussed in the Student Affairs meeting about the tuition hike protests?
+  user_id: aabdi
+  assertions:
+  - description: Identifies the document outlining the student manifesto.
+  - description: Maps the demands from the manifesto to the meeting agenda.
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/student_sit_in_manifesto.pdf
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_241
+  query: Which steps discussed in the meeting about financial transparency directly align with the conditions outlined in the alumni coalition's pledge document?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the document outlining the alumni coalition's pledge.
+  - description: Identifies the meeting where financial transparency plans were discussed.
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/alumni_donation_pledge.pdf
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_242
+  query: What specific issues from the server outage logs were addressed in the IT meeting regarding infrastructure improvements?
+  user_id: jkim
+  assertions:
+  - description: Identifies the log detailing the server outage.
+  - description: Links the issues in the log to the meeting agenda about infrastructure improvements.
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/server_outage_report_20251224.log
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_243
+  query: Which meeting discussed strategies to address the student protest and the 'Wall of Demands' mentioned in the email?
+  user_id: jkim
+  assertions:
+  - description: Identifies the email discussing the student protest and 'Wall of Demands' as 'email_007'
+  - description: Identifies the meeting discussing strategies for engaging with protesters as 'meeting_003'
+  entity_list:
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_244
+  query: Which meeting was held to address the IT issues highlighted in the power failure report?
+  user_id: msharma
+  assertions:
+  - description: Identifies the power failure report as 'data/memos/power_failure_report_20251230.docx'
+  - description: Identifies the CIO-led meeting addressing IT issues as 'meeting_001'
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/power_failure_report_20251230.docx
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_245
+  query: Which group chat discussed the implications of the leaked trustee letter for leadership?
+  user_id: achopra
+  assertions:
+  - description: Identifies the leaked trustee letter as 'data/leaks/board_of_trustees_letter_20251230.pdf'
+  - description: Identifies the group chat discussing its implications as 'chat_009'
+  entity_list:
+  - entity_type: file
+    entity_id: data/leaks/board_of_trustees_letter_20251230.pdf
+  - entity_type: group_chat
+    entity_id: chat_009
+- id: case_246
+  query: How does the faculty-led open letter about department mergers, discussed in the emails, impact the financial plan reviewed in the finance team's meeting?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the email discussing the faculty-led open letter condemning department mergers (email_005).
+  - description: Identifies the finance team meeting that reviews the emergency fund updates and financial strategies (meeting_004).
+  - description: Connects the faculty opposition to financial strategy adjustments discussed in the meeting.
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_247
+  query: What are the implications of the anonymous $50,000 donation as discussed in the financial team's chat and meeting?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the chat discussing the financial implications of the anonymous donation (chat_009).
+  - description: Identifies the finance team meeting reviewing the donation's impact (meeting_004).
+  - description: Connects insights from both the chat and the meeting to identify implications for the university's finances.
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_009
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_248
+  query: How did the logistics for the rally evolve after the petition surpassed 10,000 signatures, as discussed in the student affairs meeting and related chats?
+  user_id: ltanaka
+  assertions:
+  - description: Identifies the file documenting the petition update (data/docs/petition_update_10000_signatures.pdf).
+  - description: Identifies the chat discussing the student rally logistics (chat_005).
+  - description: Identifies the meeting where rally logistics and communication strategies were prepared (meeting_005).
+  - description: Connects the petition milestone to the discussions about rally logistics.
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/petition_update_10000_signatures.pdf
+  - entity_type: chat
+    entity_id: chat_005
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_249
+  query: Who decided to cancel the town hall meeting mentioned in the email about intensified protests and security concerns?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the email discussing the intensified sit-in and the cancellation of the town hall meeting.
+  - description: Links the decision to the interim chancellor mentioned in the document about the canceled town hall meeting.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: file
+    entity_id: data/docs/canceled_town_hall_meeting.pdf
+- id: case_250
+  query: Which meeting discussed solutions to the complaints about the university bookstore mentioned in the email about outdated textbooks?
+  user_id: echen
+  assertions:
+  - description: Identifies the email discussing outdated textbooks sold at full price.
+  - description: Links to the meeting addressing student complaints about the bookstore.
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: meeting
+    entity_id: meeting_05
+- id: case_251
+  query: What does the draft proposal mentioned in the email about budget restructuring contain?
+  user_id: msharma
+  assertions:
+  - description: Identifies the email about faculty-led budget restructuring efforts.
+  - description: Links to the draft proposal file containing details of the restructuring plan.
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: file
+    entity_id: data/docs/faculty_budget_proposal_draft.pdf
+- id: case_252
+  query: What were the key topics discussed in the emergency meeting called by the interim chancellor to address the budget crisis?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the emergency meeting announcement email.
+  - description: Links to the notes from the emergency meeting document.
+  - description: Extracts the key topics discussed from the notes.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: file
+    entity_id: data/docs/emergency_meeting_notes.pdf
+- id: case_253
+  query: What actions did the administration plan in response to the student-run newspaper's publication of leaked documents showing tuition hike discrepancies?
+  user_id: echen
+  assertions:
+  - description: Identifies the leaked document summary file.
+  - description: Connects to the group chat discussing the administration's response to the leak.
+  - description: Extracts the administration's planned actions from the conversation.
+  entity_list:
+  - entity_type: file
+    entity_id: data/media/leaked_documents_summary.pdf
+  - entity_type: group_chat
+    entity_id: student_newspaper_leak_response
+- id: case_254
+  query: What critical risks were identified in the IT vulnerability warning, and how were they addressed in the subsequent meeting?
+  user_id: ltanaka
+  assertions:
+  - description: Locates the chat about the IT vulnerability warning.
+  - description: Connects to the meeting focused on long-term system upgrades.
+  - description: Extracts the critical risks and their proposed solutions from the meeting summary.
+  entity_list:
+  - entity_type: chat
+    entity_id: it_vulnerability_warning
+  - entity_type: meeting
+    entity_id: meeting2
+- id: case_255
+  query: What next steps were discussed in response to the interim chancellor's video statement on the budget crisis?
+  user_id: sjohnson
+  assertions:
+  - description: Identifies the content of the interim chancellor's video statement
+  - description: Identifies the follow-up leadership discussion (chat_001)
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/interim_chancellor_video_statement.pdf
+  - entity_type: chat
+    entity_id: chat_001
+- id: case_256
+  query: What logistics for the candlelight vigil were discussed, and how do they align with the plans outlined in the email?
+  user_id: aabdi
+  assertions:
+  - description: Identifies the email discussing candlelight vigil planning (email_002)
+  - description: Connects it to the logistics coordination in the chat (chat_003)
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: chat
+    entity_id: chat_003
+- id: case_257
+  query: What impact did the biology department chair's resignation have on faculty morale as discussed in group conversations?
+  user_id: msharma
+  assertions:
+  - description: Identifies the resignation letter (data/docs/biology_department_chair_resignation.pdf)
+  - description: Connects it to the group chat discussing faculty morale (chat_010)
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/biology_department_chair_resignation.pdf
+  - entity_type: chat
+    entity_id: chat_010
+- id: case_258
+  query: Who initiated the emergency funding proposal discussed in relation to the IT department's warning about a system crash?
+  user_id: echen
+  assertions:
+  - description: Links the IT department's warning of a potential system crash to the emergency funding proposal.
+  - description: Identifies the person or group who initiated the proposal.
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_009
+- id: case_259
+  query: Who suggested forming a task force to evaluate the implications of the newly discovered charter clause, and in what context?
+  user_id: achopra
+  assertions:
+  - description: Identifies the email discussing the charter clause discovery and its implications.
+  - description: Links the suggestion for forming a task force to evaluate the impacts on department mergers.
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: file
+    entity_id: data/charter/unknown_clause_discovery.pdf
+- id: case_260
+  query: What were the potential public relations implications of the anonymous $50,000 donation, and who discussed them?
+  user_id: msharma
+  assertions:
+  - description: Identifies the chat discussing the anonymous donation and its implications.
+  - description: Links the discussion to the detailed report on speculation surrounding the donation.
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_008
+  - entity_type: file
+    entity_id: data/media/donation_speculation_report.pdf
+- id: case_261
+  query: Who organized the meeting about addressing the petition with 5,000 signatures that was discussed in the group chat?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the group chat discussing the petition (chat_001)
+  - description: Links chat_001 to meeting_001 about the petition
+  - description: Extracts the meeting organizer from meeting_001
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chat_001
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_262
+  query: Who is responsible for prioritizing repairs for the server outage, as discussed in the chat about the outage's technical issues?
+  user_id: echen
+  assertions:
+  - description: Identifies the chat discussing technical challenges and troubleshooting methods for the server outage (chat_010)
+  - description: Links chat_010 to the detailed breakdown of technical issues in email_006
+  - description: Extracts the responsible person from chat_006
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_010
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: chat
+    entity_id: chat_006
+- id: case_263
+  query: What concerns about faculty workload were discussed in the private chat after the leaked budget report was shared in the email?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the email discussing the leaked budget report and its impact on faculty morale (email_003)
+  - description: Connects email_003 to the private chat between the Provost and Dean addressing faculty concerns (chat_007)
+  - description: Extracts faculty concerns about workload from chat_007
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_264
+  query: What response did the faculty members discuss in response to the student journalist's article on the interim chancellor's statements?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the investigative article on the interim chancellor's statements.
+  - description: Identifies the faculty's discussion on the no-confidence vote in response to the article.
+  entity_list:
+  - entity_type: file
+    entity_id: data/articles/chancellor_statements_analysis.docx
+  - entity_type: group_chat
+    entity_id: chat_002
+- id: case_265
+  query: What funding requests were made by the IT department in response to unauthorized server access attempts?
+  user_id: okhan
+  assertions:
+  - description: Identifies the unauthorized server access attempts.
+  - description: Identifies the IT department's funding request for critical upgrades.
+  entity_list:
+  - entity_type: file
+    entity_id: data/logs/server_access_attempts_20251229.log
+  - entity_type: chat
+    entity_id: chat_008
+- id: case_266
+  query: What solutions were proposed in response to the alumni coalition's decision to withhold donations?
+  user_id: enavarro
+  assertions:
+  - description: Identifies the alumni coalition's decision to withhold donations.
+  - description: Identifies proposed solutions discussed in emails and meetings.
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/alumni_donation_withhold_notice.pdf
+  - entity_type: email
+    entity_id: email_009
+- id: case_267
+  query: What timeline did Sarah Nguyen and Maria Garcia discuss regarding the interim chancellor's promised financial transparency plan?
+  user_id: snguyen
+  assertions:
+  - description: Links the interim chancellor's statement in the email about financial transparency to the chat discussing the timeline.
+  - description: Identifies details about the timeline from the chat between Sarah Nguyen and Maria Garcia.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: chat
+    entity_id: chat_001
+- id: case_268
+  query: What steps did senior leadership discuss in response to the leaked email about potential department mergers?
+  user_id: echen
+  assertions:
+  - description: Identifies the leaked email discussing department mergers.
+  - description: Determines the actions senior leadership planned to address concerns about these mergers.
+  entity_list:
+  - entity_type: file
+    entity_id: data/emails/board_discussions_leaked_20251204.txt
+  - entity_type: group_chat
+    entity_id: group_chat_010
+- id: case_269
+  query: What strategies were discussed in the meeting to address the concerns raised in the alumni association's open letter about the tuition hike?
+  user_id: achopra
+  assertions:
+  - description: Identifies the alumni association's open letter about tuition hikes.
+  - description: Connects the concerns in the letter to the strategies discussed in the meeting.
+  entity_list:
+  - entity_type: file
+    entity_id: data/letters/alumni_open_letter_20251204.pdf
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_270
+  query: What were the specific concerns raised in the meeting about academic continuity during IT disruptions that were directly related to the leaked memo on faculty layoffs?
+  user_id: msharma
+  assertions:
+  - description: Identifies the content of the leaked memo about faculty layoffs
+  - description: Links the memo to the meeting addressing faculty concerns about academic continuity
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/faculty_layoffs_memo.pdf
+  - entity_type: meeting
+    entity_id: meeting_006
+- id: case_271
+  query: What specific risks identified in the network outage report were addressed in the IT team's meeting about system upgrades?
+  user_id: achopra
+  assertions:
+  - description: Identifies the network outage report's key findings
+  - description: Maps these findings to the IT team's meeting discussions about outdated hardware and upgrades
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/network_outage_report.pdf
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_272
+  query: Which specific concerns raised during the group chat about the crowdfunding rally were reflected in the rally outcomes?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the student concerns from the group chat
+  - description: Connects these concerns to data in the crowdfunding rally outcomes file
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: file
+    entity_id: data/events/crowdfunding_rally_outcomes.xlsx
+- id: case_273
+  query: Who led the discussion about the accounting error in the finance department and its budgetary implications?
+  user_id: echen
+  assertions:
+  - description: Identifies the meeting about the accounting error as 'meeting-003'.
+  - description: Identifies the email requesting corrections and updated reports as 'email_002'.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting-003
+  - entity_type: email
+    entity_id: email_002
+- id: case_274
+  query: How is the interim chancellor's meeting with the board connected to the tuition hike that led to the student protest?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the meeting with the board as 'meeting-001'.
+  - description: Identifies the student protest planning meeting as 'meeting-004'.
+  - description: Identifies the email summarizing the student protest as 'email_003'.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting-001
+  - entity_type: meeting
+    entity_id: meeting-004
+  - entity_type: email
+    entity_id: email_003
+- id: case_275
+  query: What actions were taken by the university in response to the alum's $50,000 donation and their concerns about leadership?
+  user_id: okhan
+  assertions:
+  - description: Identifies the email acknowledging the donation as 'email_005'.
+  - description: Identifies the chat discussing the donation and leadership concerns as 'chat_006'.
+  - description: Identifies the meeting about addressing alumni concerns as 'meeting-005'.
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: chat
+    entity_id: chat_006
+  - entity_type: meeting
+    entity_id: meeting-005
+- id: case_276
+  query: Who contributed feedback on the no-confidence vote draft before the faculty meeting to escalate concerns to the board?
+  user_id: echen
+  assertions:
+  - description: Identifies the discussion between Emily Chen and Meera Sharma about the no-confidence vote draft
+  - description: Links the faculty meeting where leadership accountability was discussed
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_004
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: file
+    entity_id: data/meetings/no_confidence_vote_draft.pdf
+- id: case_277
+  query: What transparency plan did the finance team propose to mitigate the backlash from the leaked audio regarding alumni relations?
+  user_id: kfernandez
+  assertions:
+  - description: Identifies the leaked audio transcript's impact on alumni relations
+  - description: Connects the finance team's meeting where conditional donations and transparency plans were discussed
+  entity_list:
+  - entity_type: file
+    entity_id: data/media/leaked_audio_transcript.txt
+  - entity_type: meeting
+    entity_id: meeting_004
+  - entity_type: email
+    entity_id: email_005
+- id: case_278
+  query: What funding strategies were discussed to prevent system crashes following the IT team's troubleshooting session?
+  user_id: okhan
+  assertions:
+  - description: Identifies the IT team's group chat about server issues
+  - description: Connects the meeting where funding solutions for server crashes were discussed
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: file
+    entity_id: data/it/server_issue_report_20251227.pdf
+- id: case_279
+  query: What preparations were discussed in the group chat for the emergency town hall meeting mentioned in the announcement document?
+  user_id: mgarcia
+  assertions:
+  - description: Identifies the document announcing the emergency town hall meeting
+  - description: Connects the preparation discussions in the group chat to the meeting
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/emergency_town_hall_announcement.pdf
+  - entity_type: group_chat
+    entity_id: chat_001
+- id: case_280
+  query: What steps were coordinated in the group chat to address the Wi-Fi outage reported in the email and technical report?
+  user_id: ltanaka
+  assertions:
+  - description: Identifies the email about Wi-Fi outage
+  - description: Connects the technical report to the group chat coordinating the resolution
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: file
+    entity_id: data/logs/partial_wifi_failure_report.txt
+  - entity_type: group_chat
+    entity_id: chat_004
+- id: case_281
+  query: What strategies were discussed in the group chat and meeting to mitigate the backlash from the leaked scholarship cuts document?
+  user_id: achopra
+  assertions:
+  - description: Identifies the leaked scholarship cuts document
+  - description: Links the group chat's discussion to the meeting addressing the student concerns
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/leaked_scholarship_cuts_proposal.pdf
+  - entity_type: group_chat
+    entity_id: chat_007
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_282
+  query: What actions were decided during the finance department meeting in response to the discrepancies discussed in the email about postponing the financial transparency plan?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the email discussing financial discrepancies
+  - description: Links the email to the meeting where those discrepancies were addressed
+  entity_list:
+  - entity_type: email
+    entity_id: email1
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_283
+  query: What strategies were proposed in the meeting to address student concerns raised by the investigative article on the leaked budget draft?
+  user_id: msharma
+  assertions:
+  - description: Identifies the investigative article on the leaked budget draft
+  - description: Links the article to the meeting discussing strategies for addressing student concerns
+  entity_list:
+  - entity_type: file
+    entity_id: data/articles/student_newspaper_budget_investigation.docx
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_284
+  query: What hardware upgrade proposals were discussed in the IT department meeting to address the system outage caused by outdated hardware?
+  user_id: ckwong
+  assertions:
+  - description: Identifies the system outage caused by outdated hardware
+  - description: Links the outage report to the IT department meeting where upgrades were proposed
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/system_outage_cause_report.pdf
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_285
+  query: Which meeting focused on addressing the grievances and reform demands listed by students on the 'Wall of Demands' discussed in the group chat?
+  user_id: ppatel
+  assertions:
+  - description: Identifies the group chat discussing the 'Wall of Demands' (chat_003).
+  - description: Links the group chat to the meeting that strategized a response to the 'Wall of Demands' (meeting_004).
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_003
+  - entity_type: meeting
+    entity_id: meeting_004
+- id: case_286
+  query: What actions were proposed in the meeting and chats regarding the system vulnerability detailed in the IT report?
+  user_id: echen
+  assertions:
+  - description: Identifies the critical IT report on system vulnerability (data/it/security_vulnerability_report.pdf).
+  - description: Connects the report to relevant discussions in meetings (meeting_001, meeting_006).
+  - description: Links the report to group chat discussions (chat_001, chat_006, chat_009).
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/security_vulnerability_report.pdf
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: meeting
+    entity_id: meeting_006
+  - entity_type: chat
+    entity_id: chat_001
+  - entity_type: chat
+    entity_id: chat_006
+  - entity_type: chat
+    entity_id: chat_009
+- id: case_287
+  query: What strategies to address faculty concerns about the leaked memo on department closures were discussed in the meeting and group chat?
+  user_id: msharma
+  assertions:
+  - description: Identifies the leaked memo detailing department closures (data/memos/internal_memo_department_closures.pdf).
+  - description: Links the memo to the meeting addressing its impact (meeting_003).
+  - description: Links the memo to the group chat discussing faculty concerns (chat_002).
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/internal_memo_department_closures.pdf
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: chat
+    entity_id: chat_002
+- id: case_288
+  query: What measures were proposed to prevent future network outages as discussed in the meeting about the library database outage?
+  user_id: msharma
+  assertions:
+  - description: Identifies the email discussing the network outage and its impact on the library database systems
+  - description: Identifies the meeting where strategies to resolve and prevent outages were discussed
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_289
+  query: What were the key points of discussion in the meeting with student representatives regarding the petition against department mergers?
+  user_id: dlopez
+  assertions:
+  - description: Identifies the email summarizing the student petition and the planned meeting
+  - description: Identifies the meeting where student representatives discussed their concerns
+  entity_list:
+  - entity_type: email
+    entity_id: email_010
+  - entity_type: meeting
+    entity_id: meeting_005
+- id: case_290
+  query: What strategies to leverage the alumni fundraising campaign were discussed to address the university's financial instability?
+  user_id: aramirez
+  assertions:
+  - description: Identifies the group chat discussing the fundraising campaign's potential impact
+  - description: Identifies the meeting where university leadership strategized ways to address financial instability
+  entity_list:
+  - entity_type: chat
+    entity_id: chat_008
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_291
+  query: Provide an analysis of the leaked budget plan, including its impact on faculty morale, staff concerns, and strategies to address the unrest caused by potential layoffs.
+  user_id: echen
+  assertions:
+  - description: Examines the leaked budget plan and its implications for layoffs
+  - description: Analyzes faculty and staff morale based on reactions to the leak
+  - description: Proposes strategies for mitigating unrest and clarifying the administration's stance
+  entity_list:
+  - entity_type: file
+    entity_id: data/leaks/proposed_budget_plan_draft.pdf
+  - entity_type: email
+    entity_id: email_009
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: group_chat
+    entity_id: chat_005
+- id: case_292
+  query: Create a report on the IT system outage, including its causes, impact on academic operations, and recommendations for hardware upgrades to prevent future incidents.
+  user_id: wcheng
+  assertions:
+  - description: Identifies the cause of the outage as outdated hardware
+  - description: Describes the impact on online class portals and academic resources
+  - description: Proposes solutions to ensure system stability and prevent future outages
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/system_outage_cause_report.pdf
+  - entity_type: email
+    entity_id: email_008
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: group_chat
+    entity_id: chat_007
+- id: case_293
+  query: Write a comprehensive report on student actions against the tuition hike, including the petition, sit-ins, and demonstrations, and evaluate the administration's responses.
+  user_id: snguyen
+  assertions:
+  - description: Summarizes the student petition and associated demonstrations
+  - description: Analyzes the administration's engagement with student organizers
+  - description: Proposes actionable steps to address student concerns effectively
+  entity_list:
+  - entity_type: file
+    entity_id: data/petitions/student_petition_tuition_hike.pdf
+  - entity_type: meeting
+    entity_id: meeting_005
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: group_chat
+    entity_id: chat_007
+- id: case_294
+  query: Generate a detailed report on the campus Wi-Fi outage incident, including its impact on students during finals, technical root cause, and resolution timeline.
+  user_id: ltanaka
+  assertions:
+  - description: Includes the timeline of the Wi-Fi outage incident
+  - description: Describes the technical root cause of the outage
+  - description: Explains the impact on students during finals
+  - description: Provides details of the IT department's resolution efforts
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: group_chat
+    entity_id: chat_004
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: file
+    entity_id: data/logs/partial_wifi_failure_report.txt
+- id: case_295
+  query: Provide an analysis of the leaked scholarship cuts proposal, including the timeline of events, stakeholder reactions, and mitigation strategies proposed by the administration.
+  user_id: msharma
+  assertions:
+  - description: Includes the timeline of the leaked scholarship cuts proposal
+  - description: Describes the reactions of students, faculty, and alumni
+  - description: Outlines the administration's proposed mitigation strategies
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: email
+    entity_id: email_009
+  - entity_type: group_chat
+    entity_id: chat_007
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: file
+    entity_id: data/docs/leaked_scholarship_cuts_proposal.pdf
+- id: case_296
+  query: Write a report summarizing the peaceful student march demanding transparency and tuition freeze, including the administration's engagement efforts and suggestions proposed to address student concerns.
+  user_id: ppatel
+  assertions:
+  - description: Provides a detailed summary of the student march
+  - description: Includes the administration's response to the march
+  - description: Describes suggestions proposed to address student concerns
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: group_chat
+    entity_id: chat_005
+  - entity_type: meeting
+    entity_id: meeting_005
+  - entity_type: file
+    entity_id: data/docs/student_march_summary.docx
+- id: case_297
+  query: Provide a detailed analysis of the leadership crisis surrounding the interim chancellor, including faculty actions, student protests, and trustee concerns.
+  user_id: dlobo
+  assertions:
+  - description: Includes faculty's no-confidence vote and its finalized draft
+  - description: Details student protests demanding transparency and the creation of the 'Wall of Demands'
+  - description: References the leaked letter from the board of trustees expressing concerns about the interim chancellor's leadership
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: email
+    entity_id: email_009
+  - entity_type: file
+    entity_id: data/docs/no_confidence_vote_draft.pdf
+  - entity_type: file
+    entity_id: data/leaks/board_of_trustees_letter_20251230.pdf
+  - entity_type: file
+    entity_id: data/students/wall_of_demands_summary.pdf
+- id: case_298
+  query: Summarize the timeline of IT incidents, including unauthorized access attempts, power failures, and the discovery of a critical system vulnerability. Highlight their impact on campus operations and proposed solutions.
+  user_id: wcheng
+  assertions:
+  - description: Describes unauthorized server access attempts and their investigation
+  - description: Mentions the administration building power failure and its operational impact
+  - description: Includes the critical system vulnerability and its urgency
+  - description: Outlines proposed solutions from the IT department
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: email
+    entity_id: email_010
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: file
+    entity_id: data/logs/server_access_attempts_20251229.log
+  - entity_type: file
+    entity_id: data/memos/power_failure_report_20251230.docx
+  - entity_type: file
+    entity_id: data/it/security_vulnerability_report.pdf
+- id: case_299
+  query: Analyze the financial crisis facing the university, including budget discrepancies, delayed financial recovery plans, and responses from students, faculty, and alumni.
+  user_id: msharma
+  assertions:
+  - description: Includes flagged budget discrepancies and their analysis
+  - description: Details the delayed financial recovery plan and stakeholder frustrations
+  - description: Describes student protests and the 'Wall of Demands'
+  - description: Mentions alumni withholding donations and their crowdfunding campaign
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: email
+    entity_id: email_008
+  - entity_type: file
+    entity_id: data/reports/budget_error_analysis_20251230.xlsx
+  - entity_type: file
+    entity_id: data/docs/financial_recovery_plan_draft_20251230.pdf
+  - entity_type: file
+    entity_id: data/students/wall_of_demands_summary.pdf
+  - entity_type: file
+    entity_id: data/memos/alumni_donation_withhold_notice.pdf
+  - entity_type: file
+    entity_id: data/fundraising/graduate_students_crowdfunding_campaign_summary.pdf
+- id: case_300
+  query: Generate a comprehensive analysis of the leaked faculty layoffs memo, including its impact on faculty morale, student protests, and administrative response strategies.
+  user_id: snguyen
+  assertions:
+  - description: Summarizes the contents and implications of the leaked memo
+  - description: Analyzes the impact on faculty morale and student protests
+  - description: Outlines administrative strategies to mitigate unrest
+  entity_list:
+  - entity_type: file
+    entity_id: data/memos/faculty_layoffs_memo.pdf
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: group_chat
+    entity_id: group_chat_005
+  - entity_type: meeting
+    entity_id: meeting_006
+- id: case_301
+  query: Provide a detailed timeline and analysis of the partial network outage, including affected systems, root causes, and proposed measures to prevent future incidents.
+  user_id: ppatel
+  assertions:
+  - description: Includes a clear timeline of the outage
+  - description: Identifies root causes and affected systems
+  - description: Describes proposed measures for prevention
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/network_outage_report.pdf
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: group_chat
+    entity_id: group_chat_002
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_302
+  query: Create a report summarizing student concerns regarding financial management, including insights from the crowdfunding rally and protests, and outline proposed solutions for engaging students in financial planning.
+  user_id: achopra
+  assertions:
+  - description: Summarizes outcomes of the crowdfunding rally
+  - description: Describes student concerns about financial management
+  - description: Includes proposed solutions for student engagement in financial planning
+  entity_list:
+  - entity_type: file
+    entity_id: data/events/crowdfunding_rally_outcomes.xlsx
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: group_chat
+    entity_id: group_chat_003
+  - entity_type: meeting
+    entity_id: meeting_003
+- id: case_303
+  query: Generate a comprehensive report analyzing the proposed tuition hike, including its financial rationale, stakeholder reactions (students, faculty, alumni), and potential impact on the university.
+  user_id: snguyen
+  assertions:
+  - description: Explains the financial rationale behind the tuition hike as discussed in the board meeting and interim chancellor's statement.
+  - description: Summarizes student-led protests and petitions against the tuition hike, including participation numbers and key concerns.
+  - description: Includes faculty concerns from the town hall and alumni feedback urging alternative funding solutions.
+  - description: Discusses the leaked email regarding department mergers and its connection to the tuition hike.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting-001
+  - entity_type: file
+    entity_id: data/docs/interim-chancellor-budget-meeting-notes.pdf
+  - entity_type: file
+    entity_id: data/media/student-protest-social-media-trends.pdf
+  - entity_type: email
+    entity_id: email_008
+  - entity_type: file
+    entity_id: data/letters/alumni_open_letter_20251204.pdf
+  - entity_type: file
+    entity_id: data/emails/board_discussions_leaked_20251204.txt
+- id: case_304
+  query: Create a timeline of student-led actions against the proposed tuition hike, including protests, petitions, and related administrative engagements.
+  user_id: ppatel
+  assertions:
+  - description: Includes the protest on Dec 3 with over 500 participants and faculty involvement.
+  - description: Mentions the petition organized on Dec 5 with over 1,000 signatures.
+  - description: Summarizes administrative responses, including the chancellor's statement and planned discussions with student leaders.
+  - description: Highlights social media traction and coordination efforts for protests.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting-004
+  - entity_type: file
+    entity_id: data/events/protest_summary_20251204.docx
+  - entity_type: file
+    entity_id: data/petitions/student_petition_tuition_hike.pdf
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_008
+  - entity_type: file
+    entity_id: data/docs/chancellor_statement_20251204.pdf
+- id: case_305
+  query: Provide an analysis of the accounting error discovered by the finance department, including its impact on the budget deficit, findings from the internal review, and proposed corrective measures.
+  user_id: echen
+  assertions:
+  - description: Discusses the initial accounting error discovered on Dec 3 and its impact on the budget shortfall.
+  - description: Summarizes the finance department's internal review findings and protocols established to prevent future errors.
+  - description: Includes updates on revised financial projections and implications for university operations.
+  - description: Details stakeholder communications regarding the error and corrective actions.
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting-003
+  - entity_type: file
+    entity_id: data/reports/finance-accounting-error-analysis.xlsx
+  - entity_type: file
+    entity_id: data/reports/finance_review_findings_20251204.xlsx
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: group_chat
+    entity_id: group_chat_002
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_306
+  query: Generate a report on leadership stability during the financial crisis, including an analysis of board member resignations and the chancellor's actions to address unrest.
+  user_id: sjohnson
+  assertions:
+  - description: Includes details about board member resignations during the crisis
+  - description: Analyzes the chancellor's emergency town hall and meetings with the board of trustees
+  - description: Discusses leadership strategies to address campus unrest
+  entity_list:
+  - entity_type: meeting
+    entity_id: meeting_004
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: file
+    entity_id: data/meetings/board_member_resignation_notes.txt
+  - entity_type: file
+    entity_id: data/notes/emergency_townhall_summary.docx
+- id: case_307
+  query: Prepare an analysis of the financial transparency plan, including details on uncovered budget discrepancies, proposed alternative budget plans, and stakeholder feedback.
+  user_id: ppatel
+  assertions:
+  - description: Includes details on the financial transparency plan drafts and delays
+  - description: Discusses uncovered budget discrepancies and their implications
+  - description: Analyzes faculty-proposed alternative budget plans and community support
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/financial_transparency_plan_draft.pdf
+  - entity_type: file
+    entity_id: data/proposals/alternative_budget_plan.pdf
+  - entity_type: file
+    entity_id: data/finance/budget_discrepancy_report_2025.xlsx
+  - entity_type: chat
+    entity_id: chat_007
+- id: case_308
+  query: Draft a summary of IT infrastructure issues, including repeated system outages, identified vulnerabilities, and proposed solutions to ensure system stability.
+  user_id: okhan
+  assertions:
+  - description: Details incidents of system slowdowns, outages, and vulnerabilities
+  - description: Includes technical analyses of the causes of these issues
+  - description: Proposes solutions to improve IT infrastructure and prevent future disruptions
+  entity_list:
+  - entity_type: file
+    entity_id: data/it/system_slowdown_report_2025_12_09.docx
+  - entity_type: file
+    entity_id: data/logs/student_portal_failure_12122025.log
+  - entity_type: file
+    entity_id: data/docs/email_vulnerability_analysis.docx
+  - entity_type: meeting
+    entity_id: meeting_001
+- id: case_309
+  query: Generate a detailed report of the IT infrastructure issues, including server crashes, vulnerabilities, unauthorized access attempts, and proposed solutions across the timeline from December 25 to December 29.
+  user_id: okhan
+  assertions:
+  - description: Details all major IT incidents between December 25 and December 29
+  - description: Explains the causes behind server crashes and vulnerabilities
+  - description: Summarizes proposed solutions and funding requirements
+  - description: Includes warnings about potential system-wide failures and their implications
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_010
+  - entity_type: group_chat
+    entity_id: group_chat_007
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: file
+    entity_id: data/logs/server_restoration_report.log
+  - entity_type: file
+    entity_id: data/memos/it_funding_warning.pdf
+  - entity_type: file
+    entity_id: data/it/security_vulnerability_report.pdf
+  - entity_type: file
+    entity_id: data/logs/server_access_attempts_20251229.log
+- id: case_310
+  query: Provide an analysis of the faculty's opposition to department mergers and their coordinated efforts, including the open letter, discovery of the charter clause, and the no-confidence vote draft.
+  user_id: msharma
+  assertions:
+  - description: Summarizes the faculty's opposition to department mergers and their concerns
+  - description: Includes details about the open letter and its impact on social media
+  - description: Explains the significance of the charter clause discovery and its implications
+  - description: Analyzes the no-confidence vote draft and its traction among faculty
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: group_chat
+    entity_id: group_chat_002
+  - entity_type: group_chat
+    entity_id: group_chat_004
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: meeting
+    entity_id: meeting_002
+  - entity_type: file
+    entity_id: data/docs/faculty_merger_open_letter.pdf
+  - entity_type: file
+    entity_id: data/charter/unknown_clause_discovery.pdf
+  - entity_type: file
+    entity_id: data/meetings/no_confidence_draft.docx
+  - entity_type: file
+    entity_id: data/docs/no_confidence_vote_draft.pdf
+- id: case_311
+  query: Draft a detailed report on the anonymous $50,000 donation, including speculation about its source, public perception, and its role in the university's financial strategy during the crisis.
+  user_id: aramirez
+  assertions:
+  - description: Explains the details of the anonymous $50,000 donation
+  - description: Includes speculation about its source, including ties to the trustee
+  - description: Analyzes public perception and media coverage of the donation
+  - description: Discusses its financial impact and proposed allocation
+  entity_list:
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: email
+    entity_id: email_009
+  - entity_type: group_chat
+    entity_id: group_chat_008
+  - entity_type: group_chat
+    entity_id: group_chat_009
+  - entity_type: meeting
+    entity_id: meeting_006
+  - entity_type: meeting
+    entity_id: meeting_004
+  - entity_type: file
+    entity_id: data/docs/anonymous_donation_report.pdf
+  - entity_type: file
+    entity_id: data/media/donation_speculation_report.pdf
+  - entity_type: file
+    entity_id: data/journalism/investigative_piece_donation.pdf
+- id: case_312
+  query: Generate a comprehensive analysis of IT infrastructure failures from Dec 14 to Dec 18, including causes, timelines, and recommendations for improving system reliability.
+  user_id: okhan
+  assertions:
+  - description: Summarizes the library database outage on Dec 14 and its resolution steps.
+  - description: Includes details about the email system blackout on Dec 15 and immediate actions taken.
+  - description: Analyzes the partial Wi-Fi failure on Dec 16 and its impact on students.
+  - description: Details the server outage affecting grading systems on Dec 17 and Dec 18.
+  - description: Provides recommendations for proactive IT infrastructure upgrades.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: file
+    entity_id: data/logs/library_network_outage.log
+  - entity_type: file
+    entity_id: data/it/outage_report_email_system_2025-12-15.pdf
+  - entity_type: file
+    entity_id: data/logs/partial_wifi_failure_report.txt
+  - entity_type: file
+    entity_id: data/reports/server_outage_update_20251218.txt
+- id: case_313
+  query: Provide a detailed timeline and analysis of student protests and sit-ins from Dec 15 to Dec 20, including key demands, security concerns, and administrative responses.
+  user_id: sjohnson
+  assertions:
+  - description: Includes the chaining protest at the administration building on Dec 15.
+  - description: Mentions the sit-in starting Dec 17, its escalation, and resulting security concerns.
+  - description: Summarizes the delivery of the petition on Dec 18 with 5,000 signatures and its demands.
+  - description: Discusses the cancellation of the town hall meeting on Dec 20 due to intensified protests.
+  - description: Analyzes administrative actions to address student concerns and de-escalate tensions.
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: file
+    entity_id: data/protests/student_demands_2025-12-15.docx
+  - entity_type: file
+    entity_id: data/docs/petition_summary_20251218.pdf
+  - entity_type: file
+    entity_id: data/docs/sit_in_intensification_update.pdf
+- id: case_314
+  query: Compile a detailed report on the alumni coalition's fundraising campaign from Dec 14 to Dec 20, including donation milestones, matching goals, and projected impact on the financial crisis.
+  user_id: mgarcia
+  assertions:
+  - description: Describes the campaign launch on Dec 14 and its intended goals to support scholarships and avoid department cuts.
+  - description: Includes updates on donation milestones ($200,000 on Dec 17, $300,000 on Dec 19, and $400,000 on Dec 20).
+  - description: Analyzes the matching pledge strategy and its extension to the end of the month.
+  - description: Highlights the morale boost among students and faculty due to the campaign's success.
+  - description: Projects the financial impact of reaching the $500,000 goal.
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: file
+    entity_id: data/alumni/fundraising_campaign_overview.docx
+  - entity_type: file
+    entity_id: data/reports/alumni_fundraising_update_20251218.xlsx
+  - entity_type: file
+    entity_id: data/docs/alumni_coalition_donation_update.pdf
+- id: case_315
+  query: Provide an analysis of the IT department's infrastructure challenges, including system outages, funding requests, and the risk of outdated hardware.
+  user_id: ppatel
+  assertions:
+  - description: Includes a timeline of reported IT failures across the given dates
+  - description: Identifies the impact of outdated hardware on university operations
+  - description: Analyzes the urgency and justification for emergency funding requests
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_008
+  - entity_type: file
+    entity_id: data/it/system_slowdown_report_2025_12_09.docx
+  - entity_type: file
+    entity_id: data/it/network_status_logs_2025-12-10.log
+  - entity_type: file
+    entity_id: data/it/website_issue_report_2025-12-11.pdf
+- id: case_316
+  query: Summarize the student-led protest and crowdfunding rally, including the goals, outcomes, and how the university administration responded.
+  user_id: snguyen
+  assertions:
+  - description: Details the timeline of the protest and rally
+  - description: Includes the goals and demands of the student organizers
+  - description: Summarizes the outcomes of the rally, including funds raised
+  - description: Describes the university's response to student concerns
+  entity_list:
+  - entity_type: email
+    entity_id: email_003
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: file
+    entity_id: data/events/crowdfunding_rally_outcomes.xlsx
+  - entity_type: file
+    entity_id: data/media/student_protest_summary.docx
+- id: case_317
+  query: Evaluate faculty responses to potential layoffs and budget cuts, including their alternative budget proposal and its implications for the university.
+  user_id: echen
+  assertions:
+  - description: Describes faculty concerns regarding layoffs and department mergers
+  - description: Includes details of the alternative budget proposal emphasizing grant applications
+  - description: Analyzes the feasibility and impact of the proposal on the university's financial crisis
+  - description: Mentions faculty efforts such as petitions and proposed actions against cuts
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: file
+    entity_id: data/proposals/alternative_budget_plan.pdf
+  - entity_type: file
+    entity_id: data/science/faculty_budget_petition_2025-12-11.docx
+- id: case_318
+  query: Generate a detailed report on the student-led protest addressing layoffs and department mergers, including its timeline, key grievances, and media impact.
+  user_id: amalek
+  assertions:
+  - description: Provides a timeline of the protest from initiation to media coverage
+  - description: Summarizes student grievances about layoffs and department mergers
+  - description: Analyzes media coverage and public response
+  entity_list:
+  - entity_type: group_chat
+    entity_id: student_protest_organizers_20251212
+  - entity_type: file
+    entity_id: data/media/student_protest_summary.docx
+  - entity_type: email
+    entity_id: email_003
+- id: case_319
+  query: Prepare an analysis of the IT infrastructure issues, including the portal failure and email system vulnerabilities, with proposed solutions to prevent future outages.
+  user_id: kfernandez
+  assertions:
+  - description: Details the causes of the portal failure and email system vulnerabilities
+  - description: Includes logs and technical analysis of the incidents
+  - description: Proposes actionable solutions for long-term IT infrastructure improvement
+  entity_list:
+  - entity_type: group_chat
+    entity_id: it_department_portal_failure_20251212
+  - entity_type: file
+    entity_id: data/logs/student_portal_failure_12122025.log
+  - entity_type: file
+    entity_id: data/docs/email_vulnerability_analysis.docx
+  - entity_type: meeting
+    entity_id: meeting_002
+- id: case_320
+  query: Create a comprehensive report on the emergency financial restructuring plan, including proposed measures, board pushback, and stakeholder reactions.
+  user_id: ppatel
+  assertions:
+  - description: Summarizes the emergency financial restructuring plan
+  - description: Documents board pushback and concerns
+  - description: Includes stakeholder feedback, including faculty and student reactions
+  entity_list:
+  - entity_type: group_chat
+    entity_id: chancellor_board_meeting_20251212
+  - entity_type: file
+    entity_id: data/docs/emergency_financial_restructuring_plan.pdf
+  - entity_type: chat
+    entity_id: provost_cfo_budget_talks_20251212
+- id: case_321
+  query: Provide a detailed analysis of the interim chancellor's public relations crisis, including the leaked photo, subsequent backlash, and calls for resignation.
+  user_id: ppatel
+  assertions:
+  - description: Includes details about the leaked photo of the interim chancellor dining with a controversial trustee.
+  - description: Analyzes the backlash and its impact on university leadership and public perception.
+  - description: Discusses strategies proposed to rebuild trust and manage the crisis.
+  entity_list:
+  - entity_type: event
+    entity_id: '2025-12-22'
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: group_chat
+    entity_id: chat_002
+  - entity_type: file
+    entity_id: data/docs/chancellor_photo_crisis_memo.pdf
+- id: case_322
+  query: Summarize the ongoing IT infrastructure failures, including server outages, vulnerabilities, and the impact on campus operations. Provide details on proposed solutions and funding requirements.
+  user_id: echen
+  assertions:
+  - description: Covers the timeline of server outages and vulnerabilities reported from Dec 22 to Dec 26.
+  - description: Highlights the impact of these issues on research data storage, grade submissions, and student activities.
+  - description: Includes proposed solutions and emergency funding requirements to address the outdated infrastructure.
+  entity_list:
+  - entity_type: event
+    entity_id: '2025-12-22'
+  - entity_type: event
+    entity_id: '2025-12-23'
+  - entity_type: event
+    entity_id: '2025-12-24'
+  - entity_type: event
+    entity_id: '2025-12-26'
+  - entity_type: email
+    entity_id: email_004
+  - entity_type: file
+    entity_id: data/docs/it_server_failure_report.pdf
+  - entity_type: file
+    entity_id: data/logs/server_outage_report_20251224.log
+  - entity_type: file
+    entity_id: data/logs/it_systems_update_20251224.log
+  - entity_type: file
+    entity_id: data/memos/it_funding_warning.pdf
+- id: case_323
+  query: Generate a report on the alumni coalition's fundraising campaign, including the success of the $500,000 goal, the additional $100,000 pledge, and the transparency demands related to fund allocation.
+  user_id: ltanaka
+  assertions:
+  - description: Includes details of the initial $500,000 fundraising goal and its achievement.
+  - description: Discusses the conditional $100,000 pledge contingent on implementing transparency measures.
+  - description: Analyzes the impact of these contributions on university finances and stakeholder trust.
+  entity_list:
+  - entity_type: event
+    entity_id: '2025-12-22'
+  - entity_type: event
+    entity_id: '2025-12-23'
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: file
+    entity_id: data/docs/alumni_fundraising_announcement.pdf
+  - entity_type: file
+    entity_id: data/alumni/pledge_campaign_update.xlsx
+  - entity_type: file
+    entity_id: data/docs/alumni_donation_pledge.pdf
+- id: case_324
+  query: Provide a comprehensive analysis of the student disruption during the faculty meeting, including concerns raised, student feedback, and proposed administrative strategies to address the situation.
+  user_id: snguyen
+  assertions:
+  - description: Includes details about the student disruption at the faculty meeting
+  - description: Summarizes concerns regarding layoffs and department mergers
+  - description: Explores student feedback and proposed strategies
+  entity_list:
+  - entity_type: email
+    entity_id: email_001
+  - entity_type: email
+    entity_id: email_007
+  - entity_type: file
+    entity_id: data/docs/student_protest_report.pdf
+  - entity_type: group_chat
+    entity_id: chat_002
+- id: case_325
+  query: Generate a detailed report on the critical vulnerability discovered in the university's email system, including the timeline of events, risks involved, and emergency actions taken to mitigate the issue.
+  user_id: ppatel
+  assertions:
+  - description: Explains the critical vulnerability identified in the email system
+  - description: Provides a timeline of events leading to the emergency shutdown
+  - description: Details the risks and emergency actions taken by the IT department
+  entity_list:
+  - entity_type: email
+    entity_id: email_002
+  - entity_type: email
+    entity_id: email_006
+  - entity_type: group_chat
+    entity_id: chat_001
+  - entity_type: file
+    entity_id: data/docs/email_vulnerability_analysis.docx
+- id: case_326
+  query: Provide a summary and analysis of the alternative budget plan proposed during the public forum, including its key recommendations, community support, and potential implications for the university's financial restructuring plan.
+  user_id: achopra
+  assertions:
+  - description: Summarizes the alternative budget plan proposed by the economics faculty member
+  - description: Highlights key recommendations within the plan
+  - description: Explores the community support and potential impact on financial restructuring
+  entity_list:
+  - entity_type: email
+    entity_id: email_005
+  - entity_type: group_chat
+    entity_id: chat_010
+  - entity_type: meeting
+    entity_id: meeting_003
+  - entity_type: file
+    entity_id: data/docs/alternative_budget_plan.pdf
+- id: case_327
+  query: Generate a comprehensive report outlining the sequence of IT infrastructure failures, including the server outage affecting grade submissions and the leaked emails about ignored risks. Include an analysis of the root causes and proposed measures for improvement.
+  user_id: okhan
+  assertions:
+  - description: Details the timeline of IT infrastructure issues, including the server outage and leaked emails
+  - description: Identifies outdated infrastructure as a critical risk flagged years ago
+  - description: Proposes actionable steps to address IT vulnerabilities and prevent future failures
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/server_outage_update_20251218.txt
+  - entity_type: file
+    entity_id: data/emails/it_department_leak_2025_critical_risks.pdf
+  - entity_type: meeting
+    entity_id: meeting_02
+  - entity_type: email
+    entity_id: email_003
+- id: case_328
+  query: Prepare an analysis of the student and faculty protests, petitions, and sit-ins opposing tuition hikes, department cuts, and scholarship eliminations during the specified dates. Include key demands, major events, and administration responses.
+  user_id: msharma
+  assertions:
+  - description: Summarizes major protest events, including the sit-in and petition delivery
+  - description: Highlights key demands such as tuition freeze and scholarship preservation
+  - description: Analyzes the administration's responses and their impact on campus sentiment
+  entity_list:
+  - entity_type: file
+    entity_id: data/docs/petition_summary_20251218.pdf
+  - entity_type: file
+    entity_id: data/protests/administration_building_sit_in.docx
+  - entity_type: meeting
+    entity_id: meeting_001
+  - entity_type: meeting
+    entity_id: meeting_005
+  - entity_type: group_chat
+    entity_id: chat_007
+- id: case_329
+  query: Provide a detailed summary of the alumni coalition's fundraising campaign, including milestones, strategies, and its impact on alleviating the university's financial crisis.
+  user_id: ppatel
+  assertions:
+  - description: Includes the timeline and milestones of the fundraising campaign, such as reaching $300,000 and $400,000
+  - description: Highlights matching pledge deadlines and strategies to increase donations
+  - description: Analyzes how the funds could mitigate scholarship cuts and department mergers
+  entity_list:
+  - entity_type: file
+    entity_id: data/reports/alumni_fundraising_update_20251218.xlsx
+  - entity_type: file
+    entity_id: data/docs/alumni_donation_campaign_update.pdf
+  - entity_type: meeting
+    entity_id: meeting_03
+  - entity_type: email
+    entity_id: email_010
+  - entity_type: group_chat
+    entity_id: chat_004

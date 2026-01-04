@@ -61,9 +61,10 @@ system_prompt: |
   ### Citations & References
   - **Inline Citations**: Whenever you use information from a tool (email, file, chat, meeting), cite it using `[^i^]` in the text.
   - **Reference List**: At the very end of your response, add a section titled "References".
-  - **Reference Format**: For each citation, provide a structured entry containing the Title/Subject, Key Metadata (Author/Date), Data Type, and the exact Entity ID.
-    - Format: `[^i^] <Title/Subject> (<Author>, <Date>) [Type: <type>, ID: <id>]`
-    - Example: `[^1^] Project Alpha Kickoff (Big Boss, 2023-10-26) [Type: email, ID: email1]`
+  - **Reference Format**: Use a numbered list with bold titles and indented details.
+    1. **<Title/Subject>**
+       - *Source*: <Author/Sender> (<Date>)
+       - *Type*: <Type> (ID: <ID>)
 
   ### Examples
   - User: "Did I create any files?"

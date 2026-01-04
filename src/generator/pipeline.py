@@ -735,6 +735,7 @@ class DataGenerator:
             events_by_date[d].append(item)
             
         dates = sorted(events_by_date.keys())
+        random.shuffle(dates) # Randomize dates to avoid chronological bias
         
         for d in dates:
             if len([q for q in eval_dataset if q.get('type') == 'multihop']) >= num_multihop:
@@ -770,24 +771,67 @@ class DataGenerator:
         num_report = int(num_queries * 0.2)
         print(f"Generating {num_report} report queries...")
         
-        # Use storyline and major events
-        story_context = []
-        for item in storyline:
-            story_context.append(f"Date: {item['date']}\nEvents: {item['events']}")
+        # Use storyline and major events, enriched with artifacts
+        # We need to map dates to artifacts
+        artifacts_by_date = {}
+        for item in generation_log:
+            if item['type'] == 'storyline': continue
+            d = item['date']
+            if d not in artifacts_by_date: artifacts_by_date[d] = []
+            artifacts_by_date[d].append(item)
+
+        # Sort storyline by date
+        storyline.sort(key=lambda x: x['date'])
+        
+        generated_reports = 0
+        max_attempts = num_report * 2 # Avoid infinite loop
+        attempts = 0
+        
+        while generated_reports < num_report and attempts < max_attempts:
+            attempts += 1
             
-        prompt = self.prompts['generate_report_eval'].format(
-            num=num_report,
-            context="\n\n".join(story_context),
-            users_context=users_context
-        )
-        
-        resp = await self.llm.get_completion([{"role": "user", "content": prompt}])
-        queries = self._parse_json(resp)
-        
-        if isinstance(queries, list):
-            for q in queries:
-                q['type'] = 'report'
-                eval_dataset.append(q)
+            # Pick a random window of 3-7 days
+            if not storyline: break
+            
+            window_size = random.randint(3, 7)
+            start_idx = random.randint(0, max(0, len(storyline) - window_size))
+            window_items = storyline[start_idx : start_idx + window_size]
+            
+            story_context = []
+            for item in window_items:
+                date = item['date']
+                day_artifacts = artifacts_by_date.get(date, [])
+                
+                artifacts_str = ""
+                if day_artifacts:
+                    artifacts_list = []
+                    for art in day_artifacts:
+                        art_id = art.get('id') or art.get('path')
+                        art_type = art.get('type')
+                        art_summary = art.get('summary', 'No summary')
+                        artifacts_list.append(f"- [{art_type}] {art_id}: {art_summary}")
+                    artifacts_str = "\nArtifacts:\n" + "\n".join(artifacts_list)
+                
+                story_context.append(f"Date: {date}\nEvents: {item['events']}{artifacts_str}")
+            
+            # Generate small batch for this window
+            batch_num = min(3, num_report - generated_reports)
+            
+            prompt = self.prompts['generate_report_eval'].format(
+                num=batch_num,
+                context="\n\n".join(story_context),
+                users_context=users_context
+            )
+            
+            resp = await self.llm.get_completion([{"role": "user", "content": prompt}])
+            queries = self._parse_json(resp)
+            
+            if isinstance(queries, list):
+                for q in queries:
+                    q['type'] = 'report'
+                    eval_dataset.append(q)
+                    generated_reports += 1
+                    if generated_reports >= num_report: break
 
         # Post-process to add IDs and ensure structure
         final_cases = []
@@ -803,6 +847,7 @@ class DataGenerator:
 
             final_cases.append({
                 "id": f"case_{i+1:03d}",
+                "reasoning": case.get('reasoning', ''),
                 "query": case.get('query'),
                 "user_id": case.get('user_id', 'unknown'),
                 "assertions": formatted_assertions,
@@ -812,20 +857,31 @@ class DataGenerator:
                 # "target_ids": case.get('target_ids')
             })
 
-        # Save Eval Dataset Log (JSON)
-        log_output_path = os.path.join(base_path, "eval_dataset_log.json")
+        # Generate timestamp for filenames
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
+
+        # Save Eval Dataset Log (JSON) - Includes reasoning
+        log_output_path = os.path.join(base_path, f"eval_dataset_log_{timestamp}.json")
         with open(log_output_path, "w") as f:
             json.dump(final_cases, f, indent=2)
         print(f"Evaluation dataset log saved to {log_output_path}")
 
-        # Save Eval Dataset (YAML)
-        output_path = os.path.join(base_path, "eval_dataset.yaml")
+        # Save Eval Dataset (YAML) - Excludes reasoning
+        output_path = os.path.join(base_path, f"eval_dataset_{timestamp}.yaml")
+        
+        # Create a clean version for YAML without reasoning
+        yaml_cases = []
+        for case in final_cases:
+            c = case.copy()
+            if 'reasoning' in c:
+                del c['reasoning']
+            yaml_cases.append(c)
         
         # Wrap in a structure similar to eval_set.yaml
         eval_data = {
             "name": f"Evaluation Set for {tenant_id}",
             "description": "Generated evaluation queries covering search, multi-hop reasoning, and report generation.",
-            "cases": final_cases
+            "cases": yaml_cases
         }
         
         with open(output_path, "w") as f:
@@ -875,15 +931,31 @@ class DataGenerator:
         except json.JSONDecodeError:
             pass
             
-        # Try to find start and end to handle extra text
+        # Try to find start and use raw_decode to handle extra data at the end
         try:
             start_list = text.find("[")
             start_dict = text.find("{")
             
-            if start_list == -1 and start_dict == -1:
-                return {}
+            start = -1
+            if start_list != -1 and (start_dict == -1 or start_list < start_dict):
+                start = start_list
+            elif start_dict != -1:
+                start = start_dict
                 
-            # Determine if it starts as list or dict
+            if start != -1:
+                try:
+                    obj, _ = json.JSONDecoder().raw_decode(text[start:])
+                    return obj
+                except:
+                    # If raw_decode fails (e.g. incomplete JSON), try the greedy rfind method
+                    pass
+            
+            # Fallback: Greedy rfind (useful if raw_decode failed due to malformed end but rfind finds a valid subset?)
+            # Actually, raw_decode is usually better. But let's keep the old logic as a last resort
+            # but modified to be less prone to "Extra data" if possible.
+            # If raw_decode failed, it means the JSON is likely invalid (e.g. missing closing bracket).
+            # The old logic tried to find the LAST closing bracket.
+            
             if start_list != -1 and (start_dict == -1 or start_list < start_dict):
                 # It's a list
                 end = text.rfind("]")

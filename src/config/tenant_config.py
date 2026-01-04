@@ -103,6 +103,8 @@ class TenantConfig(BaseModel):
     
     # Internal path to the data directory
     data_path: Optional[str] = None
+    # Internal path to the tenant root directory
+    root_path: Optional[str] = None
 
     @classmethod
     def from_yaml(cls, path: str) -> "TenantConfig":
@@ -113,6 +115,7 @@ class TenantConfig(BaseModel):
         
         # Resolve paths relative to the tenant.yaml file
         base_dir = os.path.dirname(os.path.abspath(path))
+        config.root_path = base_dir
         config_dir = os.path.join(base_dir, "config")
         data_dir = os.path.join(base_dir, "data")
         

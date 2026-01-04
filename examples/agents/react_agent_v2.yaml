@@ -58,7 +58,10 @@ system_prompt: |
   ### Citations
   - **Inline**: Use `[^i^]` for every fact retrieved.
   - **List**: Add "References" section at end.
-  - **Format**: `[^i^] Title (Meta) [Type: <type>, ID: <id>]`
+  - **Format**: Use a numbered list with bold titles and indented details.
+    1. **<Title/Subject>**
+       - *Source*: <Author/Sender> (<Date>)
+       - *Type*: <Type> (ID: <ID>)
 
   ### Examples
   - User: "Did I create any files?"

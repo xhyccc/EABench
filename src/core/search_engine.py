@@ -1,4 +1,6 @@
 import numpy as np
+import os
+import pickle
 from typing import List, Dict, Any, Tuple
 from .embedding_provider import EmbeddingProvider
 from ..config.tenant_config import TenantConfig
@@ -42,6 +44,22 @@ class SearchEngine:
                     self.current_user_emails.append(constructed_email)
 
     async def index_all(self):
+        # Check for cache
+        if self.tenant.root_path:
+            cache_dir = os.path.join(self.tenant.root_path, ".cache")
+            model_name = self.embedding_provider.get_model_name()
+            safe_model_name = "".join(c if c.isalnum() else "_" for c in model_name)
+            cache_file = os.path.join(cache_dir, f"embeddings_{safe_model_name}.pkl")
+            
+            if os.path.exists(cache_file):
+                print(f"Loading index from cache: {cache_file}")
+                try:
+                    with open(cache_file, "rb") as f:
+                        self.indices = pickle.load(f)
+                    return
+                except Exception as e:
+                    print(f"Failed to load cache: {e}")
+
         # Index File Snippets
         for file_meta in self.tenant.files_metadata:
             if file_meta.snippet:
@@ -146,6 +164,22 @@ class SearchEngine:
                     "invitees": meeting.invitees,
                     "attendees": meeting.attendees
                 })
+
+        # Save to cache
+        if self.tenant.root_path:
+            try:
+                cache_dir = os.path.join(self.tenant.root_path, ".cache")
+                model_name = self.embedding_provider.get_model_name()
+                safe_model_name = "".join(c if c.isalnum() else "_" for c in model_name)
+                cache_file = os.path.join(cache_dir, f"embeddings_{safe_model_name}.pkl")
+                
+                if not os.path.exists(cache_dir):
+                    os.makedirs(cache_dir)
+                with open(cache_file, "wb") as f:
+                    pickle.dump(self.indices, f)
+                print(f"Saved index to cache: {cache_file}")
+            except Exception as e:
+                print(f"Failed to save cache: {e}")
 
     async def _add_to_index(self, index_name: str, text: str, metadata: Dict[str, Any]):
         vector = await self.embedding_provider.get_embedding(text)

@@ -7,6 +7,10 @@ class EmbeddingProvider(ABC):
     async def get_embedding(self, text: str) -> List[float]:
         pass
 
+    @abstractmethod
+    def get_model_name(self) -> str:
+        pass
+
 class AzureEmbeddingProvider(EmbeddingProvider):
     def __init__(self, api_key: str, azure_endpoint: str, api_version: str, deployment_name: str):
         self.client = AsyncAzureOpenAI(
@@ -23,6 +27,9 @@ class AzureEmbeddingProvider(EmbeddingProvider):
         )
         return response.data[0].embedding
 
+    def get_model_name(self) -> str:
+        return self.deployment_name
+
 class MockEmbeddingProvider(EmbeddingProvider):
     async def get_embedding(self, text: str) -> List[float]:
         # Return a random vector or a deterministic one based on text length
@@ -30,9 +37,13 @@ class MockEmbeddingProvider(EmbeddingProvider):
         random.seed(len(text))
         return [random.random() for _ in range(384)] # 384 is common for small models
 
+    def get_model_name(self) -> str:
+        return "mock-embedding"
+
 class LocalEmbeddingProvider(EmbeddingProvider):
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
         from sentence_transformers import SentenceTransformer
+        self.model_name = model_name
         self.model = SentenceTransformer(model_name)
 
     async def get_embedding(self, text: str) -> List[float]:
@@ -41,3 +52,6 @@ class LocalEmbeddingProvider(EmbeddingProvider):
         # For simplicity in this context, we'll run it directly.
         embedding = self.model.encode(text)
         return embedding.tolist()
+
+    def get_model_name(self) -> str:
+        return self.model_name

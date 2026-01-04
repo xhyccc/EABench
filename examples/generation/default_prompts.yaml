@@ -19,8 +19,16 @@ generate_users: |
   Generate at least {num_users} users.
   
   CRITICAL: Use diverse, realistic, and modern names for users. 
-  Avoid generic names like "John Doe" or "Alice Smith". 
-  Use names like "Sarah Nguyen", "Sam Altman", "Omar Khan", "Elena Rodriguez", "Wei Chen", "Priya Patel", etc.
+  - Do NOT use common names like "John", "Smith", "Doe", "Alice", "Bob".
+  - Mix names from different regions:
+    - East Asia (e.g., Wei, Tanaka, Nguyen)
+    - South Asia (e.g., Sharma, Patel, Singh)
+    - Middle East (e.g., Al-Fayed, Haddad)
+    - Africa (e.g., Okonkwo, Mensah)
+    - Europe (e.g., Schmidt, Rossi, Dubois)
+    - Latin America (e.g., Garcia, Silva)
+  - Use full names.
+  - Do NOT use the names from the Example Output below (e.g. Sarah Nguyen, Omar Khan).
   Vary the cultural backgrounds to reflect a global or modern diverse workforce.
 
   CRITICAL: 
@@ -322,6 +330,7 @@ generate_search_eval: |
   Output JSON:
   [
     {{
+      "reasoning": "User needs a specific crash report. I will target the PDF file created by Omar.",
       "query": "Find the PDF report about server crash from last week",
       "user_id": "okhan",
       "assertions": [
@@ -353,6 +362,7 @@ generate_multihop_eval: |
   Output JSON:
   [
     {{
+      "reasoning": "Connect the email about budget to the meeting organizer mentioned in it.",
       "query": "...",
       "user_id": "snguyen",
       "assertions": [
@@ -368,11 +378,15 @@ generate_multihop_eval: |
 
 generate_report_eval: |
   You are an expert at testing AI assistants.
-  Below is a summary of events for a specific topic or time period.
+  Below is a summary of events and generated artifacts (emails, files, meetings) for a specific time period.
   Generate {num} requests for comprehensive reports.
 
   The query should ask for a summary, timeline, or analysis of a specific topic found in the text.
   Assign a realistic 'user_id' from the provided list.
+
+  CRITICAL: You MUST include 'assertions' and 'entity_list' for every case.
+  - 'assertions': A list of strings describing what the result should contain.
+  - 'entity_list': A list of objects {{ "entity_type": "...", "entity_id": "..." }} referencing the specific artifacts provided in the context.
 
   Users:
   {users_context}
@@ -383,6 +397,7 @@ generate_report_eval: |
   Output JSON:
   [
     {{
+      "reasoning": "The context shows a server crash and rollback. A report query should summarize this sequence.",
       "query": "Write a briefing on the server crash incident, including the timeline and root cause.",
       "user_id": "erodriguez",
       "assertions": [
