@@ -3,7 +3,7 @@ from typing import List, Dict, Any
 from pydantic import BaseModel
 from .llm_provider import LLMProvider, Message, ToolCall
 from .tool_registry import ToolRegistry
-from ..config.agent_config import AgentConfig
+from ..config.agent_config import AgentConfig, FlowStrategy
 from ..sandbox.base import SandboxInterface
 from .logger import debug_logger
 from .query_analyzer import QueryAnalyzer
@@ -29,6 +29,7 @@ class AgentRunner:
             system_prompt = self.config.system_prompt
             
             # Inject User Profile if available
+            user_profile_str = ""
             if search_engine and search_engine.current_user_id:
                 user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
                 if user:
@@ -42,7 +43,41 @@ class AgentRunner:
 
             self.history.append(Message(role="system", content=system_prompt))
         
-        self.history.append(Message(role="user", content=user_query))
+        # Handle Researcher Strategy: Generate Plan First
+        if self.config.flow.strategy == FlowStrategy.RESEARCHER:
+            # Construct Planning Prompt
+            planning_prompt_template = getattr(self.config, 'planning_prompt', None)
+            if not planning_prompt_template:
+                planning_prompt_template = (
+                    "You are a research planner. Create a step-by-step plan to answer the user's request.\n"
+                    "User Request: {user_query}\n"
+                )
+            
+            # Fill placeholders
+            planning_prompt = planning_prompt_template.replace("{user_query}", user_query)
+            if "{user_profile}" in planning_prompt and 'user_profile_str' in locals():
+                planning_prompt = planning_prompt.replace("{user_profile}", user_profile_str)
+
+            # Generate Plan (using a temporary history to not pollute the main context yet, or maybe we want it?)
+            # Let's keep it separate to ensure the planner focuses only on planning.
+            planning_messages = [Message(role="user", content=planning_prompt)]
+            
+            debug_logger.log_llm_call([m.model_dump() for m in planning_messages])
+            plan_response = await self.llm.generate(planning_messages, tools=[]) # No tools for planner
+            debug_logger.log_llm_response(plan_response)
+            
+            plan = plan_response.content
+            
+            # Inject Plan into the conversation
+            # We present the plan to the ReAct agent as the "User's Request" (or context for it)
+            full_query = (
+                f"Original Request: {user_query}\n\n"
+                f"I have generated a research plan to address this:\n{plan}\n\n"
+                f"Please execute this plan step-by-step to answer the original request."
+            )
+            self.history.append(Message(role="user", content=full_query))
+        else:
+            self.history.append(Message(role="user", content=user_query))
 
         metrics = {
             "tool_calls_count": 0,

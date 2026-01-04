@@ -26,7 +26,7 @@ class ToolConfig(BaseModel):
 class FlowStrategy(str, Enum):
     REACT = "react"
     CHAIN = "chain"
-    PLANNING_DAG = "planning_dag"
+    RESEARCHER = "researcher"
 
 class FlowConfig(BaseModel):
     strategy: FlowStrategy
@@ -45,6 +45,7 @@ class AgentConfig(BaseModel):
     model: ModelConfig
     embedding: Optional[EmbeddingConfig] = None
     system_prompt: str
+    planning_prompt: Optional[str] = None
     query_analyzer_prompt: QueryAnalyzerPromptConfig = Field(default_factory=QueryAnalyzerPromptConfig)
     dynamic_keys: List[str] = Field(default_factory=list)
     tools: ToolConfig
