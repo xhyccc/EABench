@@ -19,14 +19,15 @@ EABench is a modular platform to execute, test, and evaluate LLM-powered agents 
 
 ## Quickstart 🚀
 
+### Python
+
 1. Clone and setup:
 
 ```bash
 git clone <repository-url>
-cd EABench
-python3 -m venv .venv
+cd EABench/python
+bash install.sh        # creates .venv and installs all dependencies
 source .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 2. Configure credentials (see **Configuration** below). Add a `.env` file in the repo root; do NOT commit secrets.
@@ -38,6 +39,14 @@ python -m streamlit run app.py
 ```
 
 4. Open `http://localhost:8501`, pick a tenant user, and ask the agent questions.
+
+### Rust
+
+```bash
+cd rust
+cargo build
+cargo run
+```
 
 ---
 
@@ -149,9 +158,19 @@ python -m streamlit run app.py
 
 ## Developer Workflow
 
+### Python
+
+- Install (one-time):
+  ```bash
+  cd python
+  bash install.sh --dev     # also installs pytest, black, ruff
+  source .venv/bin/activate
+  ```
+
 - Run tests:
   ```bash
-  pytest -q
+  cd python
+  pytest tests/ -q
   ```
 
 - Lint & format:
@@ -166,18 +185,50 @@ python -m streamlit run app.py
 
 - Add a new tool: create a function and decorate with `@tool`, include an args schema (Pydantic) and register it in the ToolRegistry.
 
+### Rust
+
+- Build and test:
+  ```bash
+  cd rust
+  cargo build
+  cargo test
+  ```
+
 ---
 
 ## Project Structure
 
-- `src/core/`: Agent runtime, provider adapters, runner, and search engine (includes caching logic).
-- `src/config/`: Pydantic schemas for agent, tenant, and flow configs.
-- `src/sandbox/`: Sandbox implementations (DockerSandbox, LocalSandbox).
-- `src/eval/`: Evaluation runner, assertions, Judge prompt templates.
-- `examples/agents/`: Agent YAMLs (react_agent.yaml, researcher_agent.yaml).
-- `examples/tenants/`: Tenant test datasets.
-- `app.py`: Streamlit UI.
-- `main.py`: CLI entrypoint.
+```
+EABench/
+├── python/                  # Python implementation
+│   ├── install.sh           # One-step install script
+│   ├── requirements.txt
+│   ├── app.py               # Streamlit web UI
+│   ├── main.py              # CLI entry point
+│   ├── generate_data.py     # Tenant data generator
+│   ├── generate_eval.py     # Evaluation set generator
+│   ├── debug_search.py      # Search debugging utility
+│   ├── src/
+│   │   ├── core/            # Agent runtime, search engine, LLM providers
+│   │   ├── config/          # Pydantic schemas for agent & tenant configs
+│   │   ├── sandbox/         # LocalSandbox implementation
+│   │   ├── eval/            # Evaluator, assertions, Judge templates
+│   │   └── generator/       # Tenant & eval data generation pipeline
+│   └── tests/               # Pytest test suite (98 tests)
+├── rust/                    # Rust implementation
+│   ├── Cargo.toml
+│   ├── README.md
+│   └── src/
+│       ├── config/          # TenantConfig, AgentConfig
+│       ├── sandbox/         # LocalSandbox (Sandbox trait)
+│       ├── search/          # Keyword SearchEngine
+│       └── eval/            # Deterministic Evaluator (72 tests)
+└── examples/
+    ├── agents/              # Agent YAML configurations
+    ├── tenants/             # Tenant test datasets
+    ├── evals/               # Judge prompt configurations
+    └── generation/          # Prompt templates for data generation
+```
 
 ---
 

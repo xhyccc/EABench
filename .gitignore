@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 .cache/
 
+# Rust build artifacts
+rust/target/
+
