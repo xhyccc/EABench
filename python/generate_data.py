@@ -1,0 +1,92 @@
+import asyncio
+import os
+import yaml
+import argparse
+from dotenv import load_dotenv
+from src.core.openai_provider import OpenAIProvider
+from src.core.azure_provider import AzureOpenAIProvider
+from src.generator.pipeline import DataGenerator
+from src.generator.models import StoryConfig
+
+async def main():
+    load_dotenv()
+    parser = argparse.ArgumentParser(description="Generate a test tenant for EABench.")
+    parser.add_argument("--company", type=str, required=True, help="Company Name")
+    parser.add_argument("--industry", type=str, required=True, help="Industry")
+    parser.add_argument("--size", type=str, default="small", help="Company Size")
+    parser.add_argument("--num_users", type=int, default=5, help="Number of users to generate")
+    parser.add_argument("--days", type=int, default=7, help="Duration in days")
+    parser.add_argument("--eval_batch_size", type=int, default=5, help="Batch size for eval generation")
+    parser.add_argument("--events", type=str, nargs="+", required=True, help="Key events (e.g. 'Project Alpha Kickoff')")
+    parser.add_argument("--description", type=str, required=True, help="Detailed description")
+    parser.add_argument("--prompts", type=str, default="examples/generation/default_prompts.yaml", help="Path to prompts config file")
+    
+    args = parser.parse_args()
+
+    # Load prompts config to get model settings
+    if not os.path.exists(args.prompts):
+        print(f"Error: Prompts file not found at {args.prompts}")
+        return
+
+    with open(args.prompts, "r") as f:
+        prompts_config = yaml.safe_load(f)
+    
+    model_config = prompts_config.get("model_config", {})
+    provider = model_config.get("provider", "openai")
+    model_name = model_config.get("model")
+
+    # Initialize LLM
+    if provider == "openai":
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            print("Error: OPENAI_API_KEY not found in environment variables.")
+            return
+
+        llm = OpenAIProvider(
+            api_key=api_key,
+            base_url=os.getenv("OPENAI_BASE_URL") or os.getenv("OPENAI_API_BASE"),
+            model=model_name or os.getenv("OPENAI_MODEL", "gpt-4o")
+        )
+    else:
+        api_key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("AZURE_API_KEY")
+        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_ENDPOINT")
+        deployment = model_name or os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME") or os.getenv("AZURE_DEPLOYMENT_NAME")
+        api_version = os.getenv("AZURE_OPENAI_API_VERSION") or os.getenv("AZURE_API_VERSION") or "2023-05-15"
+
+        if not api_key or not endpoint:
+            print("Error: AZURE_OPENAI_API_KEY (or AZURE_API_KEY) and AZURE_OPENAI_ENDPOINT (or AZURE_ENDPOINT) are required.")
+            return
+        
+        if not deployment:
+             print("Error: AZURE_OPENAI_DEPLOYMENT_NAME (or AZURE_DEPLOYMENT_NAME) is missing in .env and not specified in prompts yaml.")
+             return
+
+        llm = AzureOpenAIProvider(
+            api_key=api_key,
+            azure_endpoint=endpoint,
+            deployment_name=deployment,
+            api_version=api_version
+        )
+
+    generator = DataGenerator(llm, prompts_path=args.prompts)
+    
+    story = StoryConfig(
+        company_name=args.company,
+        industry=args.industry,
+        company_size=args.size,
+        num_users=args.num_users,
+        duration_days=args.days,
+        eval_batch_size=args.eval_batch_size,
+        key_events=args.events,
+        description=args.description
+    )
+
+    print("Starting generation...")
+    output = await generator.generate_tenant(story)
+    print(f"Generation complete!")
+    print(f"Tenant ID: {output.tenant_id}")
+    print(f"Path: {output.base_path}")
+    print(f"Summary: {output.summary}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
