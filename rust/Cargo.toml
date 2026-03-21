@@ -10,6 +10,7 @@ serde_yaml = "0.9"
 anyhow = "1.0"
 walkdir = "2.5"
 tempfile = "3.19"
+rayon = "1.11"
 
 [[bin]]
 name = "eabench"

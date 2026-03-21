@@ -253,6 +253,25 @@ impl SearchEngine {
     // Private helpers
     // -----------------------------------------------------------------------
 
+    /// Search across all data types (files, emails, chats, meetings, users)
+    /// and return the top `top_k` results ranked by relevance score.
+    pub fn search_all(&self, query: &str, top_k: usize) -> Vec<SearchResult> {
+        let mut all: Vec<SearchResult> = vec![
+            self.search_files(query, top_k),
+            self.search_emails(query, top_k),
+            self.search_chats(query, top_k),
+            self.search_meetings(query, top_k),
+            self.search_people(query, top_k),
+        ]
+        .into_iter()
+        .flatten()
+        .collect();
+
+        all.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap());
+        all.truncate(top_k);
+        all
+    }
+
     fn email_visible_to_user(&self, email: &crate::config::tenant_config::Email) -> bool {
         if self.current_user_id.is_some() {
             let user_emails = &self.current_user_emails;
@@ -574,5 +593,41 @@ mod tests {
         let mut engine = SearchEngine::new(make_tenant());
         engine.set_user_context("unknown");
         assert!(engine.current_user_emails.is_empty());
+    }
+
+    // --- search_all tests --------------------------------------------------
+
+    #[test]
+    fn test_search_all_returns_results_across_types() {
+        let engine = SearchEngine::new(make_tenant());
+        // "Alice" matches users and chats
+        let results = engine.search_all("Alice", 10);
+        assert!(!results.is_empty());
+        let kinds: Vec<&str> = results.iter().map(|r| r.kind.as_str()).collect();
+        // Should contain at least one user or chat result
+        assert!(kinds.iter().any(|&k| k == "user" || k == "chat"));
+    }
+
+    #[test]
+    fn test_search_all_respects_top_k() {
+        let engine = SearchEngine::new(make_tenant());
+        let results = engine.search_all("the", 2);
+        assert!(results.len() <= 2);
+    }
+
+    #[test]
+    fn test_search_all_no_match_returns_empty() {
+        let engine = SearchEngine::new(make_tenant());
+        let results = engine.search_all("zzz_absolutely_nomatch_zzz", 10);
+        assert!(results.is_empty());
+    }
+
+    #[test]
+    fn test_search_all_sorted_by_score() {
+        let engine = SearchEngine::new(make_tenant());
+        let results = engine.search_all("report", 10);
+        for window in results.windows(2) {
+            assert!(window[0].score >= window[1].score);
+        }
     }
 }
