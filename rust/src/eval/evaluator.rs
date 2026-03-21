@@ -1,6 +1,7 @@
 use crate::search::SearchEngine;
 use super::models::{Assertion, EvaluationCase, EvaluationResult, EvaluationSet};
 use std::collections::HashMap;
+use rayon::prelude::*;
 
 // ---------------------------------------------------------------------------
 // AssertionChecker – deterministic text-based evaluation
@@ -122,7 +123,7 @@ impl Evaluator {
 
         let reasoning = format!(
             "Assertion score: {:.2}, Tool score: {:.2}",
-            assertion_score, tool_score
+            assertion_score + 0.0, tool_score + 0.0
         );
 
         EvaluationResult {
@@ -155,6 +156,42 @@ impl Evaluator {
                 self.evaluate_response(case, &response, tools)
             })
             .collect()
+    }
+
+    /// Evaluate a full [`EvaluationSet`] in parallel using a configurable
+    /// thread pool.
+    ///
+    /// Each worker independently evaluates one query.  `num_workers` sets the
+    /// size of the Rayon thread pool; pass `0` to use the number of logical
+    /// CPUs on the host machine.
+    ///
+    /// The scorer closure must be `Fn` (callable from multiple threads) and
+    /// both `Send` and `Sync`.  Results are returned in the same order as the
+    /// input `eval_set.cases`.
+    pub fn evaluate_batch_parallel<F>(
+        &self,
+        eval_set: &EvaluationSet,
+        scorer: F,
+        num_workers: usize,
+    ) -> Vec<EvaluationResult>
+    where
+        F: Fn(&str) -> (String, Vec<String>) + Send + Sync,
+    {
+        let pool = rayon::ThreadPoolBuilder::new()
+            .num_threads(num_workers) // 0 → rayon chooses (= logical CPU count)
+            .build()
+            .expect("failed to build thread pool");
+
+        pool.install(|| {
+            eval_set
+                .cases
+                .par_iter()
+                .map(|case| {
+                    let (response, tools) = scorer(&case.query);
+                    self.evaluate_response(case, &response, tools)
+                })
+                .collect()
+        })
     }
 
     /// Calculate aggregate pass rate across a set of results.
@@ -357,12 +394,145 @@ mod tests {
     }
 
     // -----------------------------------------------------------------------
+    // evaluate_batch_parallel tests
+    // -----------------------------------------------------------------------
+
+    #[test]
+    fn test_evaluate_batch_parallel_returns_one_result_per_case() {
+        let evaluator = Evaluator::new();
+        let set = EvaluationSet {
+            name: "Parallel Test".to_string(),
+            description: "desc".to_string(),
+            cases: vec![
+                make_case("p1", vec![Assertion::new("budget")]),
+                make_case("p2", vec![Assertion::new("sprint")]),
+                make_case("p3", vec![Assertion::new("deployment")]),
+            ],
+        };
+        // 2 workers, 3 cases
+        let results = evaluator.evaluate_batch_parallel(&set, |query| {
+            if query.contains("p1") {
+                ("budget overview".to_string(), vec![])
+            } else if query.contains("p2") {
+                ("sprint planning".to_string(), vec![])
+            } else {
+                ("deployment complete".to_string(), vec![])
+            }
+        }, 2);
+        assert_eq!(results.len(), 3);
+    }
+
+    #[test]
+    fn test_evaluate_batch_parallel_preserves_order() {
+        let evaluator = Evaluator::new();
+        let cases: Vec<_> = (0..10)
+            .map(|i| make_case(&format!("case_{}", i), vec![Assertion::new(&format!("token_{}", i))]))
+            .collect();
+        let set = EvaluationSet {
+            name: "Order Test".to_string(),
+            description: "".to_string(),
+            cases,
+        };
+        let results = evaluator.evaluate_batch_parallel(&set, |query| {
+            // Echo back a response that contains the case id embedded in the query
+            (query.to_string(), vec![])
+        }, 4);
+        assert_eq!(results.len(), 10);
+        for (i, result) in results.iter().enumerate() {
+            assert_eq!(result.case_id, format!("case_{}", i));
+        }
+    }
+
+    #[test]
+    fn test_evaluate_batch_parallel_single_worker() {
+        let evaluator = Evaluator::new();
+        let set = EvaluationSet {
+            name: "Single Worker".to_string(),
+            description: "".to_string(),
+            cases: vec![
+                make_case("s1", vec![Assertion::new("alpha")]),
+                make_case("s2", vec![Assertion::new("beta")]),
+            ],
+        };
+        let results = evaluator.evaluate_batch_parallel(&set, |_| {
+            ("alpha beta".to_string(), vec![])
+        }, 1);
+        assert_eq!(results.len(), 2);
+        assert!(results.iter().all(|r| r.passed));
+    }
+
+    #[test]
+    fn test_evaluate_batch_parallel_zero_workers_uses_cpu_count() {
+        let evaluator = Evaluator::new();
+        let set = EvaluationSet {
+            name: "Auto Workers".to_string(),
+            description: "".to_string(),
+            cases: vec![make_case("a1", vec![Assertion::new("hello")])],
+        };
+        // 0 → rayon chooses thread count automatically
+        let results = evaluator.evaluate_batch_parallel(&set, |_| {
+            ("hello world".to_string(), vec![])
+        }, 0);
+        assert_eq!(results.len(), 1);
+        assert!(results[0].passed);
+    }
+
+    #[test]
+    fn test_evaluate_batch_parallel_empty_set() {
+        let evaluator = Evaluator::new();
+        let set = EvaluationSet {
+            name: "Empty".to_string(),
+            description: "".to_string(),
+            cases: vec![],
+        };
+        let results = evaluator.evaluate_batch_parallel(&set, |_| {
+            ("response".to_string(), vec![])
+        }, 4);
+        assert!(results.is_empty());
+    }
+
+    #[test]
+    fn test_evaluate_batch_parallel_matches_sequential() {
+        // Verify that parallel and sequential produce the same results
+        let evaluator = Evaluator::new();
+        let set = EvaluationSet {
+            name: "Consistency".to_string(),
+            description: "".to_string(),
+            cases: vec![
+                make_case("x1", vec![Assertion::new("budget review")]),
+                make_case("x2", vec![Assertion::new("sprint planning")]),
+                make_case("x3", vec![Assertion::new("unknown token xyz")]),
+            ],
+        };
+        let scorer = |query: &str| -> (String, Vec<String>) {
+            if query.contains("x1") {
+                ("budget review completed".to_string(), vec![])
+            } else if query.contains("x2") {
+                ("sprint planning session".to_string(), vec![])
+            } else {
+                ("unrelated response".to_string(), vec![])
+            }
+        };
+        let seq_results = evaluator.evaluate_batch(&set, scorer);
+        let par_results = evaluator.evaluate_batch_parallel(&set, scorer, 2);
+        assert_eq!(seq_results.len(), par_results.len());
+        for (seq, par) in seq_results.iter().zip(par_results.iter()) {
+            assert_eq!(seq.case_id, par.case_id);
+            assert_eq!(seq.passed, par.passed);
+            assert_eq!(
+                seq.metrics.get("assertion_score"),
+                par.metrics.get("assertion_score")
+            );
+        }
+    }
+
+    // -----------------------------------------------------------------------
     // aggregate statistics tests
     // -----------------------------------------------------------------------
 
     #[test]
     fn test_aggregate_pass_rate_all_pass() {
-        let mut r1 = EvaluationResult {
+        let r1 = EvaluationResult {
             case_id: "c1".to_string(),
             query: "q".to_string(),
             response: "r".to_string(),
