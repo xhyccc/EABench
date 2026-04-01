@@ -15,6 +15,20 @@
 \usepackage{caption}
 \usepackage{listings}
 \usepackage{float}
+
+\lstset{
+  basicstyle=\scriptsize\ttfamily,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  xleftmargin=0.5em,
+  xrightmargin=0.5em,
+  frame=single,
+  rulecolor=\color{gray!40},
+  aboveskip=4pt,
+  belowskip=4pt,
+}
 \usepackage{microtype}
 \usepackage{titlesec}
 
@@ -343,6 +357,34 @@ generator proceeds in five phases:
     that a Judge can later verify.
 \end{enumerate}
 
+\textbf{Example data-generator configuration.}
+Listing~\ref{lst:storyconfig} shows a representative \texttt{StoryConfig}.
+The \texttt{key\_events} field provides the narrative arc that drives
+cross-document coherence: every email, meeting, and file generated for
+the tenant will reference one or more of these events.
+The generator produces fully interconnected corpora---emails discussing
+launch readiness point to the same meeting transcripts in which
+the go/no-go decision was made, and incident post-mortems in the file
+store cite the chat threads in which the outage was first flagged.
+
+\begin{lstlisting}[caption={Example StoryConfig for a software-startup tenant.},label={lst:storyconfig}]
+# Data-generator configuration (StoryConfig)
+company_name: TechNova Inc.
+industry: Software-as-a-Service
+company_size: small
+num_users: 5
+duration_days: 3
+key_events:
+  - "Product Alpha Launch: TechNova releases its flagship SaaS
+     platform to enterprise customers after months of testing"
+  - "Production Outage: An untested code push crashes the live
+     API; on-call engineers execute an emergency rollback"
+description: >
+  A fast-growing SaaS startup building enterprise productivity
+  tools for mid-market companies, now undergoing a critical
+  product-launch phase.
+\end{lstlisting}
+
 \textbf{Strengths over prior approaches.}
 Unlike BEIR~\citep{thakur2021beir} or other document retrieval benchmarks,
 EABench data spans \emph{multiple modalities} (emails, meetings, files, chats,
@@ -379,6 +421,94 @@ The top-level \texttt{AgentConfig} Pydantic model includes:
   \item \texttt{flow.max\_turns}: Maximum number of ReAct iterations before
     the agent is forced to return.
 \end{itemize}
+
+\textbf{Example ReAct agent configuration.}
+Listing~\ref{lst:react_agent} shows a condensed YAML for a ReAct agent.
+The \texttt{\{user\_profile\}} placeholder in \texttt{system\_prompt} is
+resolved at runtime with the active user's profile, enabling per-user
+personalisation without any code changes.
+The \texttt{tools.definitions} list gives practitioners fine-grained
+control over which tools are exposed to the model.
+
+\begin{lstlisting}[caption={Condensed ReAct agent configuration (\texttt{react\_agent.yaml}).},label={lst:react_agent}]
+id: react-agent-v1
+version: "1.0.0"
+model:
+  provider: azure
+  name: gpt-4o
+  parameters: {temperature: 0.7}
+embedding:
+  provider: azure
+  model: text-embedding-ada-002
+system_prompt: |
+  You are an intelligent enterprise assistant.
+  ### User Context (Personalisation)
+  {user_profile}   # resolved at runtime for the active user
+  ### Tool Usage Guidelines
+  - Search first: use search_email, search_file, search_meeting.
+  - Resolve names to User IDs via search_people before other
+    searches.
+  - Use execute_python ONLY for data analysis; print all results.
+  ### Citations
+  - Cite every retrieved fact inline with [^N^] and add a
+    References section at the end of every response.
+tools:
+  definitions:
+    - search_email
+    - search_file
+    - search_meeting
+    - search_chat
+    - search_people
+    - read_file
+    - execute_python
+flow:
+  strategy: react
+  max_turns: 5
+\end{lstlisting}
+
+\textbf{Example Plan-and-Execute (Researcher) agent configuration.}
+Listing~\ref{lst:researcher_agent} shows the additional
+\texttt{planning\_prompt} field used by the Researcher strategy.
+The planner LLM receives the raw user query and the user profile, and
+emits a structured step-by-step research plan that is then injected as
+context for the standard ReAct execution loop.
+Because planning and execution use separate model invocations, the
+planner model can be a smaller, faster model (e.g., \texttt{gpt-4o-mini})
+while the executor uses a more capable model.
+
+\begin{lstlisting}[caption={Condensed Plan-and-Execute agent configuration (\texttt{researcher\_agent.yaml}).},label={lst:researcher_agent}]
+id: researcher-agent-v1
+version: "1.0.0"
+model:
+  provider: azure
+  name: gpt-4o-mini
+  parameters: {temperature: 0.0}
+planning_prompt: |
+  You are a Senior Research Planner.
+  Create a step-by-step plan to answer the user's request.
+  User Request: {user_query}
+  User Profile:  {user_profile}
+  Guidelines:
+  1. Resolve all names to User IDs via search_people first.
+  2. Break multi-hop questions into dependent steps.
+  3. Do NOT execute -- output only the numbered plan.
+  Output format:
+  1. [Step Name]: description  (Tool: <tool_name>)
+  2. [Step Name]: description  (Tool: <tool_name>)
+system_prompt: |
+  ... (same enterprise-assistant prompt as ReAct agent) ...
+tools:
+  definitions:
+    - search_email
+    - search_file
+    - search_meeting
+    - search_people
+    - read_file
+    - execute_python
+flow:
+  strategy: researcher
+  max_turns: 10
+\end{lstlisting}
 
 \textbf{ReAct execution.}
 Under the \texttt{react} strategy, the \texttt{AgentRunner} maintains a running
@@ -495,6 +625,69 @@ the stated requirements and ground its response in real source entities.
 Aggregate metrics across a full evaluation set include pass rate, mean
 assertion score, mean citation score, mean latency, mean token usage, and mean
 tool call count.
+
+\textbf{Example evaluator configuration.}
+Listing~\ref{lst:judge_config} shows the evaluator (judge) configuration.
+The \texttt{prompts} block defines two LLM prompt templates:
+\texttt{citation\_relevance} measures factual grounding by scoring whether
+each cited source is genuinely relevant to the query, and
+\texttt{assertion\_check} verifies whether the agent's response satisfies
+each natural-language assertion, producing a per-assertion pass/fail result
+and a weighted final score.
+
+\begin{lstlisting}[caption={Condensed evaluator (judge) configuration (\texttt{default\_judge.yaml}).},label={lst:judge_config}]
+name: "Default Judge Prompts"
+model:
+  provider: azure
+  name: gpt-4o
+  parameters: {temperature: 0.0}
+prompts:
+  citation_relevance: |
+    You are an expert evaluator. Judge the relevance of citations
+    used by the agent to answer the user query.
+    User Query:       {query}
+    Agent Tool Calls: {tool_calls}
+    Agent Response:   {response}
+    Score 0-1 (1 = perfectly relevant; 0 = hallucinated/irrelevant).
+    Output YAML:
+      score: <float 0.0-1.0>
+      explanation: "<string>"
+  assertion_check: |
+    Verify whether the agent response satisfies each assertion.
+    User Query:     {query}
+    Agent Response: {response}
+    Assertions:     {assertions}
+    For each assertion output passed: true/false and reasoning.
+    Compute final_score as the weighted fraction of passed assertions.
+    Output YAML:
+      assertions:
+        - {id: 1, passed: <bool>, reasoning: "<string>"}
+      final_score: <float 0.0-1.0>
+      summary: "<string>"
+\end{lstlisting}
+
+\textbf{Example evaluation case.}
+Listing~\ref{lst:eval_case} shows a representative evaluation case
+produced by the automated case-generation pipeline for a tenant.
+Each case binds a natural-language query to a specific user identity
+(enforcing access control), a set of verifiable assertions, and a list
+of expected source entities for citation checking.
+
+\begin{lstlisting}[caption={Auto-generated evaluation case (TechNova tenant, \texttt{eval\_dataset.yaml}).},label={lst:eval_case}]
+- id: case_001
+  # Query run under Omar Khan's access context
+  query: >
+    Show me Priya Patel's email about client app
+    performance issues.
+  user_id: okhan
+  assertions:
+    - description: "Returns email titled 'Client Concerns About
+                    App Performance'"
+    - description: "Identifies sender as ppatel"
+  entity_list:
+    - entity_type: email
+      entity_id: email-009
+\end{lstlisting}
 
 Table~\ref{tab:comparison} summarizes how EABench compares with existing
 benchmarks across key dimensions.
