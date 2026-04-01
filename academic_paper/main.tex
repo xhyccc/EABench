@@ -1,0 +1,700 @@
+\documentclass[10pt,twocolumn]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{titlesec}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+}
+
+\titlespacing*{\section}{0pt}{1.2ex plus .3ex minus .2ex}{0.6ex plus .1ex}
+\titlespacing*{\subsection}{0pt}{0.9ex plus .2ex minus .1ex}{0.4ex plus .1ex}
+
+% ── Title ─────────────────────────────────────────────────────────────
+\title{\textbf{EABench: A Configurable Benchmark Framework\\for Evaluating LLM-Powered Enterprise Agents}}
+
+\author{
+  EABench Contributors\\
+  \texttt{https://github.com/xhyccc/EABench}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+% ══════════════════════════════════════════════════════════════════════
+% ABSTRACT
+% ══════════════════════════════════════════════════════════════════════
+\begin{abstract}
+Large language model (LLM) agents are increasingly deployed in enterprise
+productivity settings---automatically managing emails, scheduling meetings,
+retrieving files, and executing multi-step workflows across heterogeneous data
+sources.  Despite rapid progress in general-purpose agent benchmarks, existing
+evaluation frameworks fall short in two important respects: they provide little
+support for generating \emph{realistic enterprise data at scale}, and they
+offer limited flexibility in \emph{agent architecture configuration}.  We
+present \textbf{EABench}, an open-source benchmark framework designed to
+address both gaps.  EABench provides (1)~an LLM-driven \emph{synthetic data
+generation} pipeline that produces coherent, inter-connected corporate corpora
+spanning emails, meetings, files, chats, and channels; (2)~a
+\emph{configurable agent runtime} that supports multiple execution strategies
+(ReAct and Plan-and-Execute) and multiple LLM backends through a
+provider-agnostic interface; (3)~a comprehensive \emph{enterprise tool suite}
+encompassing semantic search over all content types, sandboxed file I/O, and
+code execution; and (4)~a \emph{multi-dimensional evaluation harness} combining
+deterministic assertions, citation relevance scoring, and LLM-as-a-Judge for
+end-to-end and user-level evaluation.  Together, these components enable
+systematic, reproducible comparison of agent designs under realistic enterprise
+conditions.
+\end{abstract}
+
+% ══════════════════════════════════════════════════════════════════════
+% 1  INTRODUCTION
+% ══════════════════════════════════════════════════════════════════════
+\section{Introduction}
+\label{sec:intro}
+
+The emergence of LLM-based autonomous agents capable of using tools, planning
+multi-step workflows, and interacting with external APIs has prompted a wave of
+benchmarks aimed at measuring agent capability.  However, a growing gap exists
+between academic benchmark environments and the conditions found in real
+enterprise deployments.  Enterprise AI agents must navigate large,
+\emph{heterogeneous} corpora---email threads, calendar invites, document
+repositories, instant messages, and project channels---where information is
+\emph{fragmented} across sources, \emph{access-controlled} at the user level,
+and \emph{temporally distributed} across weeks or months of organizational
+history.
+
+Current benchmarks such as WebArena~\citep{zhou2023webarena},
+AgentBench~\citep{liu2023agentbench}, and ToolBench~\citep{qin2023toolllm}
+focus primarily on web navigation, software engineering tasks, and API calling,
+respectively.  While these settings surface important capabilities, they do not
+capture the \emph{enterprise information retrieval and synthesis} tasks that
+constitute the bulk of knowledge-worker workload: ``Summarize all action items
+from last week's incident post-mortems,'' ``Find the latest contract
+negotiation emails with Vendor~X,'' or ``Who owns the on-call rotation this
+month?''
+
+EABench directly targets this gap.  Its three core contributions are:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+  \item \textbf{Realistic, configurable data generation.}
+    EABench uses an LLM-driven pipeline to generate fully synthetic yet
+    coherent enterprise tenants at any scale, with user-defined industry,
+    company size, timeline, and storyline events.  The resulting corpora are
+    inter-connected: emails reference meeting decisions, files document project
+    outcomes, and chats discuss ongoing incidents---exactly as in real
+    organizations.
+
+  \item \textbf{Flexible agent architecture.}
+    Rather than fixing a single agent design, EABench exposes a
+    \emph{configuration-as-code} model in which every aspect of an
+    agent---LLM backend, execution strategy (ReAct vs.\ Plan-and-Execute),
+    available tools, system prompt, and planning prompt---is specified in a
+    human-readable YAML file.  This enables controlled ablation studies and
+    rapid iteration without modifying source code.
+
+  \item \textbf{Comprehensive evaluation.}
+    EABench's evaluation harness combines \emph{deterministic assertions}
+    (verifiable ground-truth checks), \emph{citation scoring} (verifying that
+    responses cite real, relevant source entities), and
+    \emph{LLM-as-a-Judge} scoring for qualitative dimensions such as
+    faithfulness, completeness, and reasoning quality.  User-level evaluation
+    simulates realistic access-control scenarios by running queries under
+    specific user identities that determine data visibility.
+\end{enumerate}
+
+The remainder of this paper is organized as follows.
+Section~\ref{sec:related} surveys related work.
+Section~\ref{sec:method} describes EABench's methodology in detail.
+Section~\ref{sec:experiments} presents experimental results and analysis.
+Section~\ref{sec:conclusion} concludes with a discussion of limitations and
+future directions.
+
+% ══════════════════════════════════════════════════════════════════════
+% 2  RELATED WORK
+% ══════════════════════════════════════════════════════════════════════
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Agent Benchmarks}
+
+\textbf{WebArena}~\citep{zhou2023webarena} provides a realistic web browsing
+environment with four web applications (shopping, reddit, GitLab, map) and 812
+long-horizon tasks.  While WebArena evaluates task completion in a realistic
+setting, its tasks are scoped to web interfaces and do not address enterprise
+knowledge retrieval.  \textbf{WorkArena}~\citep{drouin2024workarena} extends
+this approach to ServiceNow workflows, targeting enterprise service management
+tasks.  However, its data is limited to a single application and does not cover
+the richly inter-connected multi-source data of a real enterprise.
+
+\textbf{AgentBench}~\citep{liu2023agentbench} is a multi-dimensional benchmark
+spanning eight environments including OS, database, web browsing, and lateral
+reasoning tasks.  It demonstrates that current LLMs struggle with multi-step
+tool-use tasks; however, its environments are largely synthetic or game-like
+rather than representative of knowledge-worker contexts.
+
+\textbf{ToolBench}~\citep{qin2023toolllm} focuses specifically on evaluating
+LLMs' ability to invoke real-world APIs from a large catalog of 16,000 APIs.
+While this directly tests tool-use, the tasks are API-centric rather than
+information-synthesis-centric, and there is no notion of user-level access
+control or data provenance.
+
+\textbf{$\tau$-bench}~\citep{yao2024taubench} introduces the concept of user
+simulation for interactive task evaluation in airline and retail domains.  The
+approach of simulating realistic user interactions---rather than specifying
+fully deterministic tasks---is conceptually related to EABench's user-level
+evaluation mode, though $\tau$-bench targets customer service scenarios rather
+than enterprise knowledge work.
+
+\subsection{Enterprise AI Assistants}
+
+Several industry systems have been deployed for enterprise AI assistance.
+\textbf{Microsoft 365 Copilot}~\citep{microsoft2023copilot} integrates LLMs
+with Microsoft Graph to answer queries over emails, documents, meetings, and
+Teams chats.  Its architecture involves retrieval-augmented generation (RAG)
+over enterprise data with user-level access control.  While such systems
+demonstrate the commercial viability of enterprise agents, they do not provide
+open evaluation datasets or benchmarking infrastructure.
+
+\textbf{Glean} and similar enterprise search platforms combine vector search
+with access control lists (ACLs) to implement personalized search across
+connected SaaS applications.  These systems illustrate the importance of
+user-context-aware retrieval---a feature EABench explicitly supports through
+its user-level indexing and filtering.
+
+\subsection{Synthetic Data Generation for Benchmarks}
+
+Several recent works have investigated LLM-generated synthetic data for
+evaluation.
+\textbf{AgentInstruct}~\citep{mitra2024agentinstruct} uses LLMs to generate
+instruction tuning data by transforming raw documents through a pipeline of
+multiple specialized agents.
+\textbf{FrontierMath}~\citep{glazer2024frontiermath} demonstrates that
+LLM-generated problems can challenge state-of-the-art models.
+\textbf{WildChat}~\citep{zhao2024wildchat} collects naturally occurring LLM
+conversations in the wild.
+
+EABench's approach differs from prior work in that it generates
+\emph{structured organizational corpora} rather than isolated question-answer
+pairs.  The generator produces inter-connected narrative artifacts (emails,
+meetings, files, chats) grounded in a shared storyline, enabling queries that
+require multi-hop reasoning across document types and temporal reasoning over
+event sequences.
+
+\subsection{LLM-as-a-Judge Evaluation}
+
+Automated evaluation using LLMs as judges has gained significant traction
+following MT-Bench~\citep{zheng2023judging} and Chatbot
+Arena~\citep{chiang2024chatbot}.  LLM judges show high correlation with human
+preferences at lower cost and enable evaluation of open-ended responses that
+resist automatic metrics.
+
+EABench extends the LLM-as-a-Judge paradigm to \emph{agentic evaluation},
+where the judge must assess not only the final response but also the
+\emph{reasoning process}---including whether cited sources are accurate,
+whether tool calls were appropriate, and whether the overall research plan was
+followed.
+
+\subsection{ReAct and Plan-and-Execute Agent Frameworks}
+
+\textbf{ReAct}~\citep{yao2022react} introduced the Reason+Act paradigm, where
+LLMs interleave reasoning traces with tool invocations.  This approach
+demonstrated that explicitly reasoning about the next action before taking it
+substantially improves task performance on knowledge-intensive tasks.
+
+\textbf{Plan-and-Solve}~\citep{wang2023plansolve} agents extend this idea by
+separating the planning phase---generating a high-level task decomposition---from
+the execution phase.  This separation can improve reliability on complex
+multi-step tasks by preventing the agent from ``losing the thread'' during long
+tool-use sequences.
+
+EABench implements both paradigms as first-class, YAML-configurable execution
+strategies, enabling direct comparison of their performance characteristics
+across benchmark tasks.
+
+% ══════════════════════════════════════════════════════════════════════
+% 3  METHODOLOGY
+% ══════════════════════════════════════════════════════════════════════
+\section{Methodology}
+\label{sec:method}
+
+EABench is organized around four interacting subsystems:
+(1)~the data generation pipeline,
+(2)~the configurable agent runtime,
+(3)~the enterprise tool suite, and
+(4)~the evaluation harness.
+Figure~\ref{fig:arch} shows the overall system architecture.
+
+\begin{figure*}[t]
+\centering
+\small
+\begin{verbatim}
++----------------------------------------------------------------------+
+|                     DATA GENERATION PIPELINE                         |
+|  Story Config --> LLM-driven generation --> Tenant YAML + Files      |
++-----------------------------+----------------------------------------+
+                              | tenant data
+                              v
++----------------------------------------------------------------------+
+|                      AGENT RUNTIME LAYER                             |
+|                                                                      |
+|  +-----------------+  +------------------+  +-------------------+    |
+|  | Agent Config    |  |  LLM Provider    |  |   Sandbox         |    |
+|  | (YAML)          |  | OpenAI / Azure   |  |  LocalSandbox     |    |
+|  |  - model        |  | Anthropic / Local|  |  DockerSandbox    |    |
+|  |  - flow strategy|  +--------+---------+  +-------+-----------+    |
+|  |  - tools        |           |                    |                |
+|  |  - prompts      |  +--------v--------------------v-----------+    |
+|  +-----------------+  |          AgentRunner                    |    |
+|                       |  ReAct loop / Researcher strategy       |    |
+|                       +--------------------+--------------------+    |
+|                                            |                         |
+|  +-----------------------------------------v----------------------+  |
+|  |                      Tool Suite                                |  |
+|  | search_email  search_file  search_meeting  search_people  ...  |  |
+|  | read_file  list_files  execute_command  execute_python         |  |
+|  +----------------------------+-----------------------------------+  |
+|                               |                                      |
+|  +----------------------------v-----------------------------------+  |
+|  |                   Search Engine                                |  |
+|  |    Vector indices (per content type) + ACL filtering           |  |
+|  +----------------------------------------------------------------+  |
++-----------------------------+----------------------------------------+
+                              | agent response + traces
+                              v
++----------------------------------------------------------------------+
+|                      EVALUATION HARNESS                              |
+| Assertions | Citation Scoring | LLM-as-a-Judge | A/B Compare        |
++----------------------------------------------------------------------+
+\end{verbatim}
+\caption{EABench system architecture.  The data generation pipeline produces
+tenant corpora consumed by the agent runtime.  The agent uses LLM providers,
+tools, and a search engine to answer queries inside a sandbox.  The evaluation
+harness scores agent responses along multiple dimensions.}
+\label{fig:arch}
+\end{figure*}
+
+\subsection{Data Generation}
+\label{sec:datagen}
+
+\textbf{Design goals.}
+Benchmark data for enterprise agents must satisfy three requirements
+simultaneously:
+(a)~\emph{realism}---the content must resemble actual corporate communication
+artifacts;
+(b)~\emph{coherence}---distinct artifacts (emails, meetings, files) must form a
+consistent narrative rather than isolated documents; and
+(c)~\emph{controllability}---the researcher must be able to specify the domain,
+scale, and scenario characteristics.
+
+\textbf{Generator architecture.}
+The data generation pipeline is driven by a \texttt{DataGenerator} class that
+accepts a \texttt{StoryConfig} specifying the company name, industry, size,
+number of users, timeline length, and a list of named \emph{story events}
+(e.g., ``Product Alpha Launch,'' ``Production Database Outage'').  The
+generator proceeds in five phases:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+  \item \textbf{User generation.}
+    Synthetic employee profiles are created with realistic names, email
+    addresses, departments, job titles, management hierarchies, and skill sets.
+    Users are assigned to organizational groups that determine their
+    communication patterns.
+
+  \item \textbf{Story arc construction.}
+    For each story event, the generator synthesizes a brief scenario narrative
+    that will inform all subsequent content generation.  This ensures that
+    emails, meetings, and files reference the same shared context.
+
+  \item \textbf{Daily content generation.}
+    For each day in the specified timeline, the generator prompts the LLM to
+    produce a batch of emails, meeting records, instant messages, and file
+    documents consistent with the day's story state.  To maintain coherence
+    across days, the generator maintains a rolling summary of past events.
+
+  \item \textbf{Cross-referencing.}
+    The generator explicitly instructs the LLM to create cross-references:
+    emails should cite decisions from meetings, files should document outcomes
+    of email discussions, and chats should reference both.
+
+  \item \textbf{Evaluation query generation.}
+    Given a completed tenant, a separate pipeline generates evaluation queries
+    grounded in the tenant's content, with LLM-written assertion descriptions
+    that a Judge can later verify.
+\end{enumerate}
+
+\textbf{Strengths over prior approaches.}
+Unlike BEIR~\citep{thakur2021beir} or other document retrieval benchmarks,
+EABench data spans \emph{multiple modalities} (emails, meetings, files, chats,
+channels) and requires \emph{cross-modal reasoning}.  Unlike curated enterprise
+benchmarks such as WorkArena, EABench data can be generated on demand for any
+domain and scale, enabling evaluation under distribution shift.
+
+\subsection{Agent Configuration}
+\label{sec:agentconfig}
+
+EABench adopts a \emph{configuration-as-code} model in which every aspect of
+an agent is specified in a human-readable YAML file.  This enables rigorous
+ablation studies without code changes and allows practitioners to
+version-control agent designs alongside benchmark data.
+
+\textbf{AgentConfig schema.}
+The top-level \texttt{AgentConfig} Pydantic model includes:
+
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+  \item \texttt{model}: Provider type (\texttt{openai}, \texttt{azure},
+    \texttt{anthropic}, \texttt{local}), model name, and sampling parameters
+    (temperature, top-p, max tokens).
+  \item \texttt{embedding}: Provider and model for dense retrieval.
+  \item \texttt{system\_prompt}: The agent's instruction prompt, which may
+    include a \texttt{\{user\_profile\}} placeholder automatically populated
+    with the active user's profile at runtime.
+  \item \texttt{planning\_prompt}: An optional prompt used exclusively during
+    the planning phase of the Researcher strategy.
+  \item \texttt{query\_analyzer\_prompt}: Per-tool LLM prompts for the query
+    analyzer (see \S\ref{sec:tools}).
+  \item \texttt{tools.definitions}: The list of tool names available to this
+    agent, enabling fine-grained capability control.
+  \item \texttt{flow.strategy}: Either \texttt{react} or \texttt{researcher}.
+  \item \texttt{flow.max\_turns}: Maximum number of ReAct iterations before
+    the agent is forced to return.
+\end{itemize}
+
+\textbf{ReAct execution.}
+Under the \texttt{react} strategy, the \texttt{AgentRunner} maintains a running
+conversation history and iterates through LLM call $\to$ tool execution $\to$
+observation cycles until the LLM produces a response without tool calls, or
+\texttt{max\_turns} is reached.  The system prompt is injected once at the
+beginning of the conversation; subsequent turns contain tool results as
+\texttt{tool} role messages.
+
+\textbf{Researcher (Plan-and-Execute) execution.}
+Under the \texttt{researcher} strategy, \texttt{AgentRunner} first invokes the
+LLM with the \texttt{planning\_prompt} to produce a high-level, step-by-step
+research plan.  The plan is then injected into the conversation as context for
+the standard ReAct loop.  This separation allows the planner to reason globally
+about the task structure before committing to individual tool invocations.  The
+final response is sanitized to remove internal planning artifacts before being
+returned to the user.
+
+\subsection{Enterprise Tool Suite}
+\label{sec:tools}
+
+EABench provides a comprehensive suite of enterprise tools organized into two
+categories.
+
+\textbf{Semantic search tools.}
+Seven search tools cover every content type in the tenant:
+
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+  \item \texttt{search\_email}: Multi-strategy email search supporting semantic
+    similarity, keyword matching, sender filtering, and recency ranking.  A
+    \emph{query analyzer} sub-module uses an LLM to determine the optimal
+    retrieval strategy for each incoming query.
+  \item \texttt{search\_file}: Vector-based search over indexed file content.
+  \item \texttt{search\_meeting}: Search over meeting agendas and transcripts.
+  \item \texttt{search\_chat} / \texttt{search\_group\_chat} /
+    \texttt{search\_channel}: Search over 1-on-1 chats, group chats, and
+    channel posts respectively.
+  \item \texttt{search\_people}: User directory search by name, title, skill,
+    or department.
+  \item \texttt{search\_in\_file}: Keyword-based search within a specific file.
+\end{itemize}
+
+All search tools respect user-level access control: results are filtered to
+documents accessible to the currently active user identity.  This enables
+evaluation of realistic \emph{data visibility} scenarios where agents must
+answer queries under specific permission contexts.
+
+\textbf{Execution tools.}
+Three tools enable agentic computation beyond retrieval:
+
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+  \item \texttt{read\_file} / \texttt{list\_files}: Sandboxed file system access.
+  \item \texttt{execute\_command}: Sandboxed shell command execution with
+    timeout enforcement.
+  \item \texttt{execute\_python}: Sandboxed Python code execution with
+    stdout/stderr capture and new-file detection.
+\end{itemize}
+
+\textbf{Tool registration.}
+New tools are registered using a \texttt{@registry.register} decorator, which
+automatically generates a JSON Schema description from the Pydantic
+\texttt{args\_schema} class.  Dependencies (\texttt{sandbox},
+\texttt{search\_engine}, \texttt{llm}, \texttt{query\_analyzer}) are injected
+automatically by the agent runner based on the tool function's parameter
+signature, eliminating the need for manual dependency wiring.
+
+\subsection{End-to-End Evaluation and User-Level Experience Simulation}
+\label{sec:eval}
+
+EABench's evaluation harness is designed to measure \emph{agent quality} across
+multiple orthogonal dimensions rather than reducing performance to a single
+score.
+
+\textbf{Deterministic assertions.}
+Each evaluation case includes a list of assertion descriptions---natural-language
+statements about what the response should or should not contain.  At evaluation
+time, a judge LLM assesses whether each assertion is satisfied, yielding a
+discrete pass/fail result per assertion.  The \emph{assertion score} is the
+fraction of passing assertions.
+
+\textbf{Citation scoring.}
+EABench adopts a structured citation format
+(\texttt{[\^{}N\^{}] Title (Author, Date) [Type: <type>, ID: <id>]}) that
+enables automated verification.  The evaluator extracts all citations from the
+agent's response, fetches the corresponding source entities from the tenant,
+and prompts a judge LLM to score the relevance of each citation to the user's
+query.  This directly measures \emph{factual grounding}: an agent that
+fabricates non-existent email IDs or cites an irrelevant meeting receives a low
+citation score regardless of the plausibility of its narrative.
+
+\textbf{LLM-as-a-Judge (side-by-side comparison).}
+In addition to absolute scoring, EABench supports \emph{comparative evaluation}
+of two agent configurations on the same set of queries.  A judge LLM receives
+both responses and determines a winner based on the evaluation criteria,
+producing a win-rate and a statistical significance estimate via a paired
+$t$-test.  This enables ablation studies (e.g., does the Researcher strategy
+outperform ReAct on multi-hop queries?) with quantified confidence.
+
+\textbf{User-level experience simulation.}
+A key feature of EABench is the ability to specify a \texttt{user\_id} per
+evaluation case.  When a case is run under a specific user identity, the search
+engine filters all retrieval results to documents accessible to that user
+according to the tenant's group membership rules.  This simulates the
+experience of different personas---an engineer, a manager, a contractor---and
+enables evaluation of whether agents correctly respect data access boundaries.
+
+\textbf{Metric aggregation.}
+The final result for each evaluation case is determined by applying minimum
+pass thresholds to both dimensions: a case \emph{passes} only when
+$\text{assertion\_score} \geq 0.75$ \textbf{AND}
+$\text{citation\_score} \geq 0.70$.
+Neither threshold alone is sufficient, ensuring that an agent must both satisfy
+the stated requirements and ground its response in real source entities.
+Aggregate metrics across a full evaluation set include pass rate, mean
+assertion score, mean citation score, mean latency, mean token usage, and mean
+tool call count.
+
+Table~\ref{tab:comparison} summarizes how EABench compares with existing
+benchmarks across key dimensions.
+
+\begin{table*}[t]
+\centering
+\caption{Comparison of EABench with existing agent benchmarks.
+$\checkmark$ = supported, -- = not supported.}
+\label{tab:comparison}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Feature} & \textbf{WebArena} & \textbf{AgentBench} & \textbf{ToolBench} & \textbf{$\tau$-bench} & \textbf{WorkArena} & \textbf{EABench} \\
+\midrule
+Multi-source enterprise data          & --            & --             & --             & --              & Partial        & $\checkmark$ \\
+Synthetic data generation             & --            & --             & --             & --              & --             & $\checkmark$ \\
+Configurable agent strategies         & --            & --             & --             & --              & --             & $\checkmark$ \\
+User-level access control             & --            & --             & --             & --              & --             & $\checkmark$ \\
+LLM-as-a-Judge evaluation             & --            & --             & --             & --              & --             & $\checkmark$ \\
+Citation grounding verification       & --            & --             & --             & --              & --             & $\checkmark$ \\
+Side-by-side comparison               & --            & --             & --             & --              & --             & $\checkmark$ \\
+Multi-provider LLM support            & --            & Partial        & --             & --              & --             & $\checkmark$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ══════════════════════════════════════════════════════════════════════
+% 4  EXPERIMENTS
+% ══════════════════════════════════════════════════════════════════════
+\section{Experiments}
+\label{sec:experiments}
+
+This section is reserved for experimental results.  Forthcoming work will
+report benchmark scores across multiple LLM backends (GPT-4o, Claude 3.5
+Sonnet, Gemini 1.5 Pro, open-source models) and agent configurations (ReAct
+vs.\ Researcher, varying tool subsets, varying prompt designs) on a
+standardized collection of enterprise tenants spanning at least three industry
+verticals (technology, healthcare, finance).  Experiments will investigate:
+
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+  \item How agent strategy (ReAct vs.\ Researcher) affects performance as a
+    function of query complexity (single-hop vs.\ multi-hop).
+  \item The impact of LLM backbone on citation accuracy and assertion pass
+    rate.
+  \item The effect of available tool subsets on task success rate.
+  \item Sensitivity of evaluation metrics to judge LLM quality.
+  \item Scaling behavior of the data generator (small: 5 users, 7 days vs.\
+    large: 50 users, 90 days).
+\end{itemize}
+
+% ══════════════════════════════════════════════════════════════════════
+% 5  CONCLUSION AND DISCUSSION
+% ══════════════════════════════════════════════════════════════════════
+\section{Conclusion and Discussion}
+\label{sec:conclusion}
+
+We have presented \textbf{EABench}, a configurable benchmark framework for
+evaluating LLM-powered agents in enterprise settings.  EABench addresses three
+gaps in existing evaluation infrastructure: the absence of realistic, at-scale
+enterprise corpora; the lack of flexible, code-free agent architecture
+configuration; and the insufficiency of single-metric evaluation for multi-step
+agentic systems.
+
+\textbf{Key contributions.}
+EABench's LLM-driven data generator produces coherent, inter-connected
+organizational data across six content types (emails, meetings, files, chats,
+group chats, channels) with controllable scale and narrative structure.  Its
+configuration-as-code agent runtime enables systematic comparison of ReAct and
+Plan-and-Execute strategies across arbitrary LLM backends without modifying
+source code.  Its multi-dimensional evaluation harness---combining deterministic
+assertions, citation grounding verification, and LLM-as-a-Judge---provides a
+more complete picture of agent quality than any single metric alone.
+User-level experience simulation adds a privacy and access-control dimension
+that is absent from prior benchmarks.
+
+\textbf{Limitations.}
+EABench currently supports only English-language content generation and
+English-language agent evaluation.  The data generator relies on a capable LLM
+(GPT-4-class or better) to produce coherent narratives; lower-quality models
+may produce less realistic data.  The citation format required by the evaluator
+must be enforced through the system prompt; agents that do not adhere to this
+format receive a zero citation score even if their responses are factually
+correct.  Finally, the evaluation assertions are LLM-generated and may not
+capture all dimensions of response quality.
+
+\textbf{Future work.}
+Several directions are planned:
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+  \item \emph{Docker sandbox integration}: Extend the sandbox backend to
+    support containerized execution for stronger security guarantees when
+    evaluating agents that run arbitrary code.
+  \item \emph{Adversarial tenant generation}: Create tenants with deliberate
+    ambiguities, contradictory documents, and planted misinformation to
+    evaluate agent robustness.
+  \item \emph{Multi-agent evaluation}: Extend the runtime to support
+    multi-agent workflows, where specialized sub-agents (e.g., an
+    email-reading agent and a meeting-summarizing agent) collaborate on a
+    shared task.
+  \item \emph{Multilingual support}: Extend the data generator and evaluation
+    harness to support non-English enterprise environments.
+  \item \emph{Human evaluation calibration}: Conduct a study comparing
+    LLM-as-a-Judge scores with human annotations to quantify judge
+    reliability.
+\end{enumerate}
+
+We believe EABench fills a critical gap between the rapid development of LLM
+agent capabilities and the infrastructure needed to evaluate them rigorously in
+the settings where they will actually be deployed.  We release all code, data
+generation scripts, and evaluation tooling under the MIT license to support
+reproducible research in enterprise AI.
+
+% ══════════════════════════════════════════════════════════════════════
+% REFERENCES
+% ══════════════════════════════════════════════════════════════════════
+\bibliographystyle{plainnat}
+
+\begin{thebibliography}{15}
+
+\bibitem[Chiang et~al.(2024)]{chiang2024chatbot}
+W.-L. Chiang, L.~Zheng, Y.~Sheng, A.~N.~Angelopoulos, T.~Li, D.~Li, et~al.
+\newblock Chatbot Arena: An open platform for evaluating LLMs by human
+  preference.
+\newblock \emph{arXiv preprint arXiv:2403.04132}, 2024.
+
+\bibitem[Drouin et~al.(2024)]{drouin2024workarena}
+A.~Drouin, M.~Gasse, M.~Caccia, I.~H.~Laradji, M.~Del~Verme, T.~Marty,
+  et~al.
+\newblock WorkArena: How capable are web agents at solving common knowledge
+  work tasks?
+\newblock \emph{arXiv preprint arXiv:2403.07718}, 2024.
+
+\bibitem[Glazer et~al.(2024)]{glazer2024frontiermath}
+E.~Glazer, E.~Erdil, T.~Besiroglu, D.~Chicharro, E.~Chen, A.~Gunning,
+  et~al.
+\newblock FrontierMath: A benchmark for evaluating advanced mathematical
+  reasoning in AI.
+\newblock \emph{arXiv preprint arXiv:2411.04872}, 2024.
+
+\bibitem[Liu et~al.(2023)]{liu2023agentbench}
+X.~Liu, H.~Yu, H.~Zhang, Y.~Xu, X.~Lei, H.~Lai, et~al.
+\newblock AgentBench: Evaluating LLMs as agents.
+\newblock \emph{arXiv preprint arXiv:2308.03688}, 2023.
+
+\bibitem[Microsoft(2023)]{microsoft2023copilot}
+Microsoft.
+\newblock Microsoft 365 Copilot: The AI-powered productivity tool for work.
+\newblock Microsoft Blog, 2023.
+
+\bibitem[Mitra et~al.(2024)]{mitra2024agentinstruct}
+A.~Mitra, L.~Del~Corro, S.~Mahajan, A.~Codas, C.~Simoes, S.~Agrawal,
+  et~al.
+\newblock AgentInstruct: Toward generative teaching with agentic flows.
+\newblock \emph{arXiv preprint arXiv:2407.03502}, 2024.
+
+\bibitem[Qin et~al.(2023)]{qin2023toolllm}
+Y.~Qin, S.~Liang, Y.~Ye, K.~Zhu, L.~Yan, Y.~Lu, et~al.
+\newblock ToolLLM: Facilitating large language models to master 16000+
+  real-world APIs.
+\newblock \emph{arXiv preprint arXiv:2307.16789}, 2023.
+
+\bibitem[Thakur et~al.(2021)]{thakur2021beir}
+N.~Thakur, N.~Reimers, A.~R{\"u}ckl{\'e}, A.~Srivastava, and I.~Gurevych.
+\newblock BEIR: A heterogeneous benchmark for zero-shot evaluation of
+  information retrieval models.
+\newblock In \emph{NeurIPS 2021 Datasets and Benchmarks}, 2021.
+
+\bibitem[Wang et~al.(2023)]{wang2023plansolve}
+L.~Wang, W.~Xu, Y.~Lan, Z.~Hu, Y.~Lan, R.~K.-W.~Lee, and E.-P.~Lim.
+\newblock Plan-and-Solve prompting: Improving zero-shot chain-of-thought
+  reasoning by large language models.
+\newblock In \emph{ACL}, 2023.
+
+\bibitem[Yao et~al.(2022)]{yao2022react}
+S.~Yao, J.~Zhao, D.~Yu, N.~Du, I.~Shafran, K.~Narasimhan, and Y.~Cao.
+\newblock ReAct: Synergizing reasoning and acting in language models.
+\newblock \emph{arXiv preprint arXiv:2210.03629}, 2022.
+
+\bibitem[Yao et~al.(2024)]{yao2024taubench}
+S.~Yao, D.~Yu, J.~Zhao, I.~Shafran, T.~L.~Griffiths, Y.~Cao, and
+  K.~Narasimhan.
+\newblock $\tau$-bench: A benchmark for tool-agent-user interaction in
+  real-world domains.
+\newblock \emph{arXiv preprint arXiv:2406.12045}, 2024.
+
+\bibitem[Zhao et~al.(2024)]{zhao2024wildchat}
+W.~Zhao, X.~Ren, J.~Hessel, C.~Cardie, Y.~Choi, and Y.~Deng.
+\newblock WildChat: 1M ChatGPT interaction logs in the wild.
+\newblock In \emph{ICLR}, 2024.
+
+\bibitem[Zheng et~al.(2023)]{zheng2023judging}
+L.~Zheng, W.-L.~Chiang, Y.~Sheng, S.~Zhuang, Z.~Wu, Y.~Zhuang, et~al.
+\newblock Judging LLM-as-a-judge with MT-Bench and Chatbot Arena.
+\newblock In \emph{NeurIPS}, 2023.
+
+\bibitem[Zhou et~al.(2023)]{zhou2023webarena}
+S.~Zhou, F.~F.~Xu, H.~Zhu, X.~Zhou, R.~Lo, S.~Sridhar, et~al.
+\newblock WebArena: A realistic web environment for building autonomous agents.
+\newblock \emph{arXiv preprint arXiv:2307.13854}, 2023.
+
+\end{thebibliography}
+
+\end{document}

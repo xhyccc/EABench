@@ -8,3 +8,13 @@ __pycache__/
 # Rust build artifacts
 rust/target/
 
+# LaTeX build artifacts
+academic_paper/*.aux
+academic_paper/*.log
+academic_paper/*.out
+academic_paper/*.fls
+academic_paper/*.fdb_latexmk
+academic_paper/*.synctex.gz
+academic_paper/*.bbl
+academic_paper/*.blg
+
