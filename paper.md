@@ -12,7 +12,7 @@ Large language model (LLM) agents are increasingly deployed in enterprise produc
 
 The emergence of LLM-based autonomous agents capable of using tools, planning multi-step workflows, and interacting with external APIs has prompted a wave of benchmarks aimed at measuring agent capability. However, a growing gap exists between academic benchmark environments and the conditions found in real enterprise deployments. Enterprise AI agents must navigate large, *heterogeneous* corpora—email threads, calendar invites, document repositories, instant messages, and project channels—where information is *fragmented* across sources, *access-controlled* at the user level, and *temporally distributed* across weeks or months of organizational history.
 
-Current benchmarks such as WebArena [Zhou et al., 2023], AgentBench [Liu et al., 2023], and ToolBench [Qin et al., 2023] focus primarily on web navigation, software engineering tasks, and API calling, respectively. While these settings surface important capabilities, they do not capture the *enterprise information retrieval and synthesis* tasks that constitute the bulk of knowledge-worker workload: "Summarize all action items from last week's incident post-mortems," "Find the latest contract negotiation emails with Vendor X," or "Who owns the on-call rotation this month?"
+Current benchmarks such as WebArena [Zhou et al., 2023], AgentBench [Liu et al., 2023], and ToolBench [Qin et al., 2023] focus primarily on web navigation, software engineering tasks, and API calling, respectively. More recent enterprise-oriented benchmarks such as HERB [Choubey et al., 2025] and DrBench [Abaskohi et al., 2025] move closer to realistic knowledge-work settings by emphasizing heterogeneous enterprise evidence and open-ended research reports. However, existing benchmarks still provide limited support for simultaneously generating new enterprise tenants, reconfiguring agent architectures without code changes, and evaluating user-specific access-controlled behavior. As a result, they do not fully capture the *enterprise information retrieval and synthesis* tasks that constitute the bulk of knowledge-worker workload: "Summarize all action items from last week's incident post-mortems," "Find the latest contract negotiation emails with Vendor X," or "Who owns the on-call rotation this month?"
 
 EABench directly targets this gap. Its three core contributions are:
 
@@ -37,6 +37,10 @@ The remainder of this paper is organized as follows. Section 2 surveys related w
 **ToolBench** [Qin et al., 2023] focuses specifically on evaluating LLMs' ability to invoke real-world APIs from a large catalog of 16,000 APIs. While this directly tests tool-use, the tasks are API-centric rather than information-synthesis-centric, and there is no notion of user-level access control or data provenance.
 
 **τ-bench** [Yao et al., 2024] introduces the concept of user simulation for interactive task evaluation in airline and retail domains. The approach of simulating realistic user interactions—rather than specifying fully deterministic tasks—is conceptually related to EABench's user-level evaluation mode, though τ-bench targets customer service scenarios rather than enterprise knowledge work.
+
+**HERB** [Choubey et al., 2025] is particularly relevant because it benchmarks deep search over heterogeneous enterprise artifacts, including documents, meetings, Slack messages, GitHub content, and web pages. HERB shows that retrieval is a major bottleneck for multi-hop enterprise question answering, but it is primarily positioned as a fixed deep-search benchmark for RAG systems. In contrast, EABench contributes a configurable *benchmark framework*: it generates new enterprise tenants on demand, supports multiple agent execution strategies, and evaluates behavior under user-specific access constraints.
+
+**DrBench** [Abaskohi et al., 2025] is the closest prior work in its focus on open-ended enterprise deep research tasks and insight-centric scoring with supporting citations. Relative to DrBench, EABench places greater emphasis on benchmark configurability: the same framework couples synthetic tenant generation, YAML-driven agent reconfiguration, deterministic assertions, citation grounding checks, LLM-as-a-Judge scoring, and side-by-side comparison within one reusable evaluation pipeline.
 
 ### 2.2 Enterprise AI Assistants
 
@@ -128,7 +132,7 @@ EABench is organized around four interacting subsystems: (1) the data generation
 
 5. **Evaluation query generation.** Given a completed tenant, a separate pipeline generates evaluation queries grounded in the tenant's content, with LLM-written assertion descriptions that a Judge can later verify.
 
-**Strengths over prior approaches.** Unlike BEIR [Thakur et al., 2021] or other document retrieval benchmarks, EABench data spans *multiple modalities* (emails, meetings, files, chats, channels) and requires *cross-modal reasoning*. Unlike curated enterprise benchmarks such as WorkArena, EABench data can be generated on demand for any domain and scale, enabling evaluation under distribution shift.
+**Strengths over prior approaches.** Unlike BEIR [Thakur et al., 2021] or other document retrieval benchmarks, EABench data spans *multiple modalities* (emails, meetings, files, chats, channels) and requires *cross-modal reasoning*. Unlike curated enterprise benchmarks such as WorkArena, HERB, or DrBench, EABench data can be generated on demand for any domain and scale, enabling evaluation under distribution shift. This makes EABench useful not only as a fixed benchmark, but also as an experimental framework for controlled enterprise-agent ablations.
 
 ### 3.2 Agent Configuration
 
@@ -190,6 +194,19 @@ EABench's evaluation harness is designed to measure *agent quality* across multi
 
 ## 4. Experiments
 
+The table below compares EABench against WebArena, AgentBench, ToolBench, τ-bench, WorkArena, HERB, and DrBench across the benchmark properties discussed above. The closest baselines are HERB on heterogeneous enterprise corpora and DrBench on open-ended enterprise research evaluation; EABench combines both perspectives with configurable generation, agent design, and ACL-aware evaluation.
+
+| Feature | WebArena | AgentBench | ToolBench | τ-bench | WorkArena | HERB | DrBench | EABench |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Multi-source enterprise data | -- | -- | -- | -- | Partial | ✓ | ✓ | ✓ |
+| Synthetic data generation | -- | -- | -- | -- | -- | ✓ | Partial | ✓ |
+| Configurable agent strategies | -- | -- | -- | -- | -- | -- | -- | ✓ |
+| User-level access control | -- | -- | -- | -- | -- | -- | -- | ✓ |
+| LLM-as-a-Judge evaluation | -- | -- | -- | -- | -- | -- | -- | ✓ |
+| Citation grounding verification | -- | -- | -- | -- | -- | -- | Partial | ✓ |
+| Side-by-side comparison | -- | -- | -- | -- | -- | -- | -- | ✓ |
+| Multi-provider LLM support | -- | Partial | -- | -- | -- | Partial | Partial | ✓ |
+
 *This section is reserved for experimental results. Forthcoming work will report benchmark scores across multiple LLM backends (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, open-source models) and agent configurations (ReAct vs. Researcher, varying tool subsets, varying prompt designs) on a standardized collection of enterprise tenants spanning at least three industry verticals (technology, healthcare, finance). Experiments will investigate:*
 
 - *How agent strategy (ReAct vs. Researcher) affects performance as a function of query complexity (single-hop vs. multi-hop).*
@@ -204,7 +221,7 @@ EABench's evaluation harness is designed to measure *agent quality* across multi
 
 We have presented **EABench**, a configurable benchmark framework for evaluating LLM-powered agents in enterprise settings. EABench addresses three gaps in existing evaluation infrastructure: the absence of realistic, at-scale enterprise corpora; the lack of flexible, code-free agent architecture configuration; and the insufficiency of single-metric evaluation for multi-step agentic systems.
 
-**Key contributions.** EABench's LLM-driven data generator produces coherent, inter-connected organizational data across six content types (emails, meetings, files, chats, group chats, channels) with controllable scale and narrative structure. Its configuration-as-code agent runtime enables systematic comparison of ReAct and Plan-and-Execute strategies across arbitrary LLM backends without modifying source code. Its multi-dimensional evaluation harness—combining deterministic assertions, citation grounding verification, and LLM-as-a-Judge—provides a more complete picture of agent quality than any single metric alone. User-level experience simulation adds a privacy and access-control dimension that is absent from prior benchmarks.
+**Key contributions.** EABench's LLM-driven data generator produces coherent, inter-connected organizational data across six content types (emails, meetings, files, chats, group chats, channels) with controllable scale and narrative structure. Its configuration-as-code agent runtime enables systematic comparison of ReAct and Plan-and-Execute strategies across arbitrary LLM backends without modifying source code. Its multi-dimensional evaluation harness—combining deterministic assertions, citation grounding verification, and LLM-as-a-Judge—provides a more complete picture of agent quality than any single metric alone. User-level experience simulation adds a privacy and access-control dimension that is absent from prior benchmarks. Compared with HERB, EABench turns enterprise corpus creation into a reusable, configurable generator rather than a single released dataset. Compared with DrBench, EABench broadens insight-centric report evaluation into a general framework for controlled agent ablations, user-level access-control studies, and head-to-head comparison of execution strategies.
 
 **Limitations.** EABench currently supports only English-language content generation and English-language agent evaluation. The data generator relies on a capable LLM (GPT-4-class or better) to produce coherent narratives; lower-quality models may produce less realistic data. The citation format required by the evaluator must be enforced through the system prompt; agents that do not adhere to this format receive a zero citation score even if their responses are factually correct. Finally, the evaluation assertions are LLM-generated and may not capture all dimensions of response quality.
 
@@ -224,9 +241,13 @@ We believe EABench fills a critical gap between the rapid development of LLM age
 
 Chiang, W.-L., Zheng, L., Sheng, Y., Angelopoulos, A. N., Li, T., Li, D., ... & Stoica, I. (2024). Chatbot Arena: An open platform for evaluating LLMs by human preference. *arXiv:2403.04132*.
 
+Choubey, P. K., Peng, X., Bhagavath, S., Huang, K.-H., Xiong, C., & Wu, C.-S. (2025). Benchmarking deep search over heterogeneous enterprise data. *arXiv:2506.23139*.
+
 Drouin, A., Gasse, M., Caccia, M., Laradji, I. H., Del Verme, M., Marty, T., ... & Lacoste-Julien, S. (2024). WorkArena: How capable are web agents at solving common knowledge work tasks? *arXiv:2403.07718*.
 
 Glazer, E., Erdil, E., Besiroglu, T., Chicharro, D., Chen, E., Gunning, A., ... & Villalobos, P. (2024). FrontierMath: A benchmark for evaluating advanced mathematical reasoning in AI. *arXiv:2411.04872*.
+
+Abaskohi, A., Chen, T., Muñoz-Mármol, M., Fox, C., Ramesh, A. V., Marcotte, É., ... & others. (2025). DRBench: A realistic benchmark for enterprise deep research. *arXiv:2510.00172*.
 
 Liu, X., Yu, H., Zhang, H., Xu, Y., Lei, X., Lai, H., ... & Tang, J. (2023). AgentBench: Evaluating LLMs as agents. *arXiv:2308.03688*.
 
