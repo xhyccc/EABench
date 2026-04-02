@@ -1,10 +1,10 @@
 id: planning-agent-v1
 version: 1.0.0
 model:
-  provider: azure
-  name: gpt-4o-mini
+  provider: openai
+  name: Qwen/Qwen3-32B
   parameters:
-    temperature: 0.0
+    temperature: 0.7
 embedding:
   provider: azure
   model: text-embedding-ada-002

@@ -312,6 +312,32 @@ The evaluation runner integrates these components into a unified workflow.
    * It dispatches the trace and response to the **Judge LLM** for grading.  
 5. **Report**: It aggregates pass/fail rates, latency metrics, and Judge scores into a comprehensive HTML/JSON report.
 
+### 5.4 A/B Testing and Comparative Scorecards
+
+When evaluating agent upgrades (e.g., switching from GPT-4 to Claude 3.5 Sonnet, or modifying a system prompt), the platform generates a **Differential Scorecard**. This scorecard compares a **Control Agent** (Baseline) against a **Test Agent** (Candidate) on identical tenant scenarios.
+
+#### 5.4.1 Metric Deltas and Significance
+
+The scorecard calculates the delta ($\Delta$) for key performance indicators (KPIs). To ensure academic rigor, we apply statistical tests where applicable:
+
+*   **Success Rate $\Delta$**: The absolute difference in pass rates (e.g., +5%).
+*   **Token Efficiency $\Delta$**: Comparison of average tokens consumed per successful task.
+*   **Latency $\Delta$**: Difference in end-to-end execution time (p95).
+*   **Judge Score $\Delta$**: Shift in qualitative scores (1-5 scale).
+
+#### 5.4.2 The Streamlit Dashboard Artifact
+
+The platform includes a **Streamlit-based Web UI** (`app.py`) that visualizes these comparisons. The key component is the **Unified Scorecard Table**, which presents metrics side-by-side with statistical significance indicators (p-values) to distinguish signal from noise:
+
+| Metric Name | Control (v1) | Treatment (v2) | Diff ($\Delta$) | P-Value |
+| :--- | :--- | :--- | :--- | :--- |
+| **Success Rate** | 82% | 89% | **+7%** | 0.042* |
+| **Avg Steps** | 12.4 | 8.1 | **-4.3** | < 0.001*** |
+| **Cost/Run** | $0.15 | $0.12 | **-$0.03** | N/A |
+| **Judge Score** | 4.2/5 | 3.9/5 | **-0.3** | 0.12 |
+
+This automated comparison prevents "blind upgrades" where a model might improve on code generation but regress on reasoning or safety.
+
 ## ---
 
 **6\. Detailed Component Implementation Specifications**

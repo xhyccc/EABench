@@ -598,72 +598,88 @@ elif app_mode == "Side-by-Side Comparison":
                 c3.metric("Ties", f"{ties} ({ties/total:.0%})")
                 
                 st.divider()
-                st.markdown("#### Metrics Analysis")
-                
-                # Citation Scores
+                st.markdown("### Unified Scorecard")
+
+                # Helper to format p-value
+                def fmt_p(p):
+                    if p is None: return "N/A"
+                    if p < 0.001: return "< 0.001***"
+                    if p < 0.01: return f"{p:.3f}**"
+                    if p < 0.05: return f"{p:.3f}*"
+                    return f"{p:.3f}"
+
+                # 1. Citation Score
                 c_a = [r.result_a.metrics.get('citation_score', 0.0) for r in comparison_results]
                 c_b = [r.result_b.metrics.get('citation_score', 0.0) for r in comparison_results]
                 avg_c_a = sum(c_a)/len(c_a) if c_a else 0
                 avg_c_b = sum(c_b)/len(c_b) if c_b else 0
                 p_c = evaluator_a.calculate_p_value(c_a, c_b)
                 
-                col1, col2, col3, col4 = st.columns(4)
-                col1.metric("Avg Citation (Control)", f"{avg_c_a:.2f}")
-                col2.metric("Avg Citation (Treatment)", f"{avg_c_b:.2f}")
-                col3.metric("Diff", f"{avg_c_b - avg_c_a:.2f}")
-                col4.metric("P-Value", f"{p_c:.4f}" if p_c is not None else "N/A")
-                
-                # Assertion Scores
+                # 2. Assertion Score
                 a_a = [r.result_a.metrics.get('assertion_score', 0.0) for r in comparison_results]
                 a_b = [r.result_b.metrics.get('assertion_score', 0.0) for r in comparison_results]
                 avg_a_a = sum(a_a)/len(a_a) if a_a else 0
                 avg_a_b = sum(a_b)/len(a_b) if a_b else 0
                 p_a = evaluator_a.calculate_p_value(a_a, a_b)
-                
-                col1, col2, col3, col4 = st.columns(4)
-                col1.metric("Avg Assertion (Control)", f"{avg_a_a:.2f}")
-                col2.metric("Avg Assertion (Treatment)", f"{avg_a_b:.2f}")
-                col3.metric("Diff", f"{avg_a_b - avg_a_a:.2f}")
-                col4.metric("P-Value", f"{p_a:.4f}" if p_a is not None else "N/A")
 
-                # Latency
+                # 3. Latency
                 l_a = [r.result_a.metrics.get('latency', 0.0) for r in comparison_results]
                 l_b = [r.result_b.metrics.get('latency', 0.0) for r in comparison_results]
                 avg_l_a = sum(l_a)/len(l_a) if l_a else 0
                 avg_l_b = sum(l_b)/len(l_b) if l_b else 0
                 p_l = evaluator_a.calculate_p_value(l_a, l_b)
-                
-                col1, col2, col3, col4 = st.columns(4)
-                col1.metric("Avg Latency (Control)", f"{avg_l_a:.2f}s")
-                col2.metric("Avg Latency (Treatment)", f"{avg_l_b:.2f}s")
-                col3.metric("Diff", f"{avg_l_b - avg_l_a:.2f}s")
-                col4.metric("P-Value", f"{p_l:.4f}" if p_l is not None else "N/A")
-                
-                # Token/Tool Totals
-                tc_a = sum(r.result_a.metrics.get('tool_calls_count', 0) for r in comparison_results)
-                tc_b = sum(r.result_b.metrics.get('tool_calls_count', 0) for r in comparison_results)
-                
-                pt_a = sum(r.result_a.metrics.get('total_prompt_tokens', 0) for r in comparison_results)
-                pt_b = sum(r.result_b.metrics.get('total_prompt_tokens', 0) for r in comparison_results)
-                
-                ct_a = sum(r.result_a.metrics.get('total_completion_tokens', 0) for r in comparison_results)
-                ct_b = sum(r.result_b.metrics.get('total_completion_tokens', 0) for r in comparison_results)
 
-                st.markdown("#### Resource Usage")
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Total Tool Calls (Control)", f"{tc_a}")
-                col2.metric("Total Tool Calls (Treatment)", f"{tc_b}")
-                col3.metric("Diff", f"{tc_b - tc_a}")
+                # 4. Tool Calls (Avg)
+                tc_a = [r.result_a.metrics.get('tool_calls_count', 0) for r in comparison_results]
+                tc_b = [r.result_b.metrics.get('tool_calls_count', 0) for r in comparison_results]
+                avg_tc_a = sum(tc_a)/len(tc_a) if tc_a else 0
+                avg_tc_b = sum(tc_b)/len(tc_b) if tc_b else 0
+                p_tc = evaluator_a.calculate_p_value(tc_a, tc_b)
+
+                # 5. Prompt Tokens (Avg)
+                pt_a = [r.result_a.metrics.get('total_prompt_tokens', 0) for r in comparison_results]
+                pt_b = [r.result_b.metrics.get('total_prompt_tokens', 0) for r in comparison_results]
+                avg_pt_a = sum(pt_a)/len(pt_a) if pt_a else 0
+                avg_pt_b = sum(pt_b)/len(pt_b) if pt_b else 0
+                p_pt = evaluator_a.calculate_p_value(pt_a, pt_b)
+
+                # 6. Completion Tokens (Avg)
+                ct_a = [r.result_a.metrics.get('total_completion_tokens', 0) for r in comparison_results]
+                ct_b = [r.result_b.metrics.get('total_completion_tokens', 0) for r in comparison_results]
+                avg_ct_a = sum(ct_a)/len(ct_a) if ct_a else 0
+                avg_ct_b = sum(ct_b)/len(ct_b) if ct_b else 0
+                p_ct = evaluator_a.calculate_p_value(ct_a, ct_b)
+
+                # Build Table Rows
+                rows = []
                 
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Total Prompt Tokens (Control)", f"{pt_a}")
-                col2.metric("Total Prompt Tokens (Treatment)", f"{pt_b}")
-                col3.metric("Diff", f"{pt_b - pt_a}")
+                # Citation
+                diff_c = avg_c_b - avg_c_a
+                rows.append(f"| **Citation Score** | {avg_c_a:.2f} | {avg_c_b:.2f} | **{diff_c:+.2f}** | {fmt_p(p_c)} |")
                 
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Total Completion Tokens (Control)", f"{ct_a}")
-                col2.metric("Total Completion Tokens (Treatment)", f"{ct_b}")
-                col3.metric("Diff", f"{ct_b - ct_a}")
+                # Assertion
+                diff_a = avg_a_b - avg_a_a
+                rows.append(f"| **Assertion Score** | {avg_a_a:.2f} | {avg_a_b:.2f} | **{diff_a:+.2f}** | {fmt_p(p_a)} |")
+                
+                # Latency
+                diff_l = avg_l_b - avg_l_a
+                rows.append(f"| **Avg Latency (s)** | {avg_l_a:.2f} | {avg_l_b:.2f} | **{diff_l:+.2f}** | {fmt_p(p_l)} |")
+                
+                # Tool Calls
+                diff_tc = avg_tc_b - avg_tc_a
+                rows.append(f"| **Avg Tool Calls** | {avg_tc_a:.1f} | {avg_tc_b:.1f} | **{diff_tc:+.1f}** | {fmt_p(p_tc)} |")
+                
+                # Prompt Tokens
+                diff_pt = avg_pt_b - avg_pt_a
+                rows.append(f"| **Avg Prompt Tokens** | {avg_pt_a:.0f} | {avg_pt_b:.0f} | **{diff_pt:+.0f}** | {fmt_p(p_pt)} |")
+                
+                # Completion Tokens
+                diff_ct = avg_ct_b - avg_ct_a
+                rows.append(f"| **Avg Compl. Tokens** | {avg_ct_a:.0f} | {avg_ct_b:.0f} | **{diff_ct:+.0f}** | {fmt_p(p_ct)} |")
+
+                # Render Table
+                table_md = "| Metric Name | Control (A) | Treatment (B) | Diff ($\\Delta$) | P-Value |\n| :--- | :--- | :--- | :--- | :--- |\n" + "\n".join(rows)
+                st.markdown(table_md)
 
                 # Download Results
                 download_data = {
@@ -694,9 +710,9 @@ elif app_mode == "Side-by-Side Comparison":
                                 "p_value": p_l
                             },
                             "resource_usage": {
-                                "tool_calls": {"control": tc_a, "treatment": tc_b, "diff": tc_b - tc_a},
-                                "prompt_tokens": {"control": pt_a, "treatment": pt_b, "diff": pt_b - pt_a},
-                                "completion_tokens": {"control": ct_a, "treatment": ct_b, "diff": ct_b - ct_a}
+                                "tool_calls_avg": {"control": avg_tc_a, "treatment": avg_tc_b, "diff": avg_tc_b - avg_tc_a, "p_value": p_tc},
+                                "prompt_tokens_avg": {"control": avg_pt_a, "treatment": avg_pt_b, "diff": avg_pt_b - avg_pt_a, "p_value": p_pt},
+                                "completion_tokens_avg": {"control": avg_ct_a, "treatment": avg_ct_b, "diff": avg_ct_b - avg_ct_a, "p_value": p_ct}
                             }
                         }
                     },

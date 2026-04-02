@@ -1,8 +1,8 @@
 id: test-agent-v1
 version: 1.0.0
 model:
-  provider: azure
-  name: gpt-4o
+  provider: openai
+  name: Qwen/Qwen3-32B
   parameters:
     temperature: 0.7
 embedding:
