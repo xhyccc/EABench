@@ -101,10 +101,16 @@ history.
 Current benchmarks such as WebArena~\citep{zhou2023webarena},
 AgentBench~\citep{liu2023agentbench}, and ToolBench~\citep{qin2023toolllm}
 focus primarily on web navigation, software engineering tasks, and API calling,
-respectively.  While these settings surface important capabilities, they do not
-capture the \emph{enterprise information retrieval and synthesis} tasks that
-constitute the bulk of knowledge-worker workload: ``Summarize all action items
-from last week's incident post-mortems,'' ``Find the latest contract
+respectively.  More recent enterprise-oriented benchmarks such as
+HERB~\citep{choubey2025herb} and DrBench~\citep{abaskohi2025drbench} move
+closer to realistic knowledge-work settings by emphasizing heterogeneous
+enterprise evidence and open-ended research reports.  However, existing
+benchmarks still provide limited support for simultaneously generating new
+enterprise tenants, reconfiguring agent architectures without code changes, and
+evaluating user-specific access-controlled behavior.  As a result, they do not
+fully capture the \emph{enterprise information retrieval and synthesis} tasks
+that constitute the bulk of knowledge-worker workload: ``Summarize all action
+items from last week's incident post-mortems,'' ``Find the latest contract
 negotiation emails with Vendor~X,'' or ``Who owns the on-call rotation this
 month?''
 
@@ -179,6 +185,24 @@ approach of simulating realistic user interactions---rather than specifying
 fully deterministic tasks---is conceptually related to EABench's user-level
 evaluation mode, though $\tau$-bench targets customer service scenarios rather
 than enterprise knowledge work.
+
+\textbf{HERB}~\citep{choubey2025herb} is particularly relevant because it
+benchmarks deep search over heterogeneous enterprise artifacts, including
+documents, meetings, Slack messages, GitHub content, and web pages.  HERB shows
+that retrieval is a major bottleneck for multi-hop enterprise question
+answering, but it is primarily positioned as a fixed deep-search benchmark for
+RAG systems.  In contrast, EABench contributes a configurable \emph{benchmark
+framework}: it generates new enterprise tenants on demand, supports multiple
+agent execution strategies, and evaluates behavior under user-specific access
+constraints.
+
+\textbf{DrBench}~\citep{abaskohi2025drbench} is the closest prior work in its
+focus on open-ended enterprise deep research tasks and insight-centric scoring
+with supporting citations.  Relative to DrBench, EABench places greater
+emphasis on benchmark configurability: the same framework couples synthetic
+tenant generation, YAML-driven agent reconfiguration, deterministic assertions,
+citation grounding checks, LLM-as-a-Judge scoring, and side-by-side comparison
+within one reusable evaluation pipeline.
 
 \subsection{Enterprise AI Assistants}
 
@@ -389,8 +413,10 @@ description: >
 Unlike BEIR~\citep{thakur2021beir} or other document retrieval benchmarks,
 EABench data spans \emph{multiple modalities} (emails, meetings, files, chats,
 channels) and requires \emph{cross-modal reasoning}.  Unlike curated enterprise
-benchmarks such as WorkArena, EABench data can be generated on demand for any
-domain and scale, enabling evaluation under distribution shift.
+benchmarks such as WorkArena, HERB, or DrBench, EABench data can be generated
+on demand for any domain and scale, enabling evaluation under distribution
+shift.  This makes EABench useful not only as a fixed benchmark, but also as an
+experimental framework for controlled enterprise-agent ablations.
 
 \subsection{Agent Configuration}
 \label{sec:agentconfig}
@@ -690,26 +716,31 @@ of expected source entities for citation checking.
 \end{lstlisting}
 
 Table~\ref{tab:comparison} summarizes how EABench compares with existing
-benchmarks across key dimensions.
+benchmarks across key dimensions.  HERB is the closest baseline on
+heterogeneous enterprise corpora, while DrBench is the closest baseline on
+open-ended enterprise research evaluation; EABench combines both perspectives
+with configurable generation, agent design, and ACL-aware evaluation.
 
 \begin{table*}[t]
 \centering
-\caption{Comparison of EABench with existing agent benchmarks.
-$\checkmark$ = supported, -- = not supported.}
+\caption{Comparison of EABench with related agent benchmarks.
+$\checkmark$ = supported, Partial = partially supported, -- = not supported or
+not a primary focus.}
 \label{tab:comparison}
-\small
-\begin{tabular}{lcccccc}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccccc}
 \toprule
-\textbf{Feature} & \textbf{WebArena} & \textbf{AgentBench} & \textbf{ToolBench} & \textbf{$\tau$-bench} & \textbf{WorkArena} & \textbf{EABench} \\
+\textbf{Feature} & \textbf{WebArena} & \textbf{AgentBench} & \textbf{ToolBench} & \textbf{$\tau$-bench} & \textbf{WorkArena} & \textbf{HERB} & \textbf{DrBench} & \textbf{EABench} \\
 \midrule
-Multi-source enterprise data          & --            & --             & --             & --              & Partial        & $\checkmark$ \\
-Synthetic data generation             & --            & --             & --             & --              & --             & $\checkmark$ \\
-Configurable agent strategies         & --            & --             & --             & --              & --             & $\checkmark$ \\
-User-level access control             & --            & --             & --             & --              & --             & $\checkmark$ \\
-LLM-as-a-Judge evaluation             & --            & --             & --             & --              & --             & $\checkmark$ \\
-Citation grounding verification       & --            & --             & --             & --              & --             & $\checkmark$ \\
-Side-by-side comparison               & --            & --             & --             & --              & --             & $\checkmark$ \\
-Multi-provider LLM support            & --            & Partial        & --             & --              & --             & $\checkmark$ \\
+ Multi-source enterprise data          & --            & --             & --             & --              & Partial        & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
+ Synthetic data generation             & --            & --             & --             & --              & --             & $\checkmark$ & Partial      & $\checkmark$ \\
+ Configurable agent strategies         & --            & --             & --             & --              & --             & --            & --           & $\checkmark$ \\
+ User-level access control             & --            & --             & --             & --              & --             & --            & --           & $\checkmark$ \\
+ LLM-as-a-Judge evaluation             & --            & --             & --             & --              & --             & --            & --           & $\checkmark$ \\
+ Citation grounding verification       & --            & --             & --             & --              & --             & --            & Partial      & $\checkmark$ \\
+ Side-by-side comparison               & --            & --             & --             & --              & --             & --            & --           & $\checkmark$ \\
+ Multi-provider LLM support            & --            & Partial        & --             & --              & --             & Partial       & Partial      & $\checkmark$ \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -762,6 +793,11 @@ assertions, citation grounding verification, and LLM-as-a-Judge---provides a
 more complete picture of agent quality than any single metric alone.
 User-level experience simulation adds a privacy and access-control dimension
 that is absent from prior benchmarks.
+Compared with HERB, EABench turns enterprise corpus creation into a reusable,
+configurable generator rather than a single released dataset.  Compared with
+DrBench, EABench broadens insight-centric report evaluation into a general
+framework for controlled agent ablations, user-level access-control studies, and
+head-to-head comparison of execution strategies.
 
 \textbf{Limitations.}
 EABench currently supports only English-language content generation and
@@ -813,6 +849,11 @@ W.-L. Chiang, L.~Zheng, Y.~Sheng, A.~N.~Angelopoulos, T.~Li, D.~Li, et~al.
   preference.
 \newblock \emph{arXiv preprint arXiv:2403.04132}, 2024.
 
+\bibitem[Choubey et~al.(2025)]{choubey2025herb}
+P.~K. Choubey, X.~Peng, S.~Bhagavath, K.-H.~Huang, C.~Xiong, and C.-S.~Wu.
+\newblock Benchmarking deep search over heterogeneous enterprise data.
+\newblock \emph{arXiv preprint arXiv:2506.23139}, 2025.
+
 \bibitem[Drouin et~al.(2024)]{drouin2024workarena}
 A.~Drouin, M.~Gasse, M.~Caccia, I.~H.~Laradji, M.~Del~Verme, T.~Marty,
   et~al.
@@ -826,6 +867,12 @@ E.~Glazer, E.~Erdil, T.~Besiroglu, D.~Chicharro, E.~Chen, A.~Gunning,
 \newblock FrontierMath: A benchmark for evaluating advanced mathematical
   reasoning in AI.
 \newblock \emph{arXiv preprint arXiv:2411.04872}, 2024.
+
+\bibitem[Abaskohi et~al.(2025)]{abaskohi2025drbench}
+A.~Abaskohi, T.~Chen, M.~Mu{\~n}oz-M{\'a}rmol, C.~Fox, A.~V.~Ramesh,
+  {\'E}.~Marcotte, et~al.
+\newblock DRBench: A realistic benchmark for enterprise deep research.
+\newblock \emph{arXiv preprint arXiv:2510.00172}, 2025.
 
 \bibitem[Liu et~al.(2023)]{liu2023agentbench}
 X.~Liu, H.~Yu, H.~Zhang, Y.~Xu, X.~Lei, H.~Lai, et~al.
