@@ -1,8 +1,22 @@
 use anyhow::{Context, Result};
 use serde_json::{json, Value};
 use std::collections::HashMap;
+use std::sync::Arc;
 
 use super::llm_provider::{LLMProvider, LLMResponse, Message, ToolCall};
+
+// ---------------------------------------------------------------------------
+// TLS helper – always use the OS-native TLS stack to avoid rustls
+// compatibility issues with certain Azure endpoints.
+// ---------------------------------------------------------------------------
+
+fn make_agent() -> ureq::Agent {
+    let connector = native_tls::TlsConnector::new()
+        .expect("failed to create native TLS connector");
+    ureq::AgentBuilder::new()
+        .tls_connector(Arc::new(connector))
+        .build()
+}
 
 // ---------------------------------------------------------------------------
 // OpenAIProvider
@@ -95,7 +109,7 @@ impl LLMProvider for OpenAIProvider {
         }
 
         let url = format!("{}/chat/completions", self.base_url);
-        let response: Value = ureq::post(&url)
+        let response: Value = make_agent().post(&url)
             .set("Authorization", &format!("Bearer {}", self.api_key))
             .set("Content-Type", "application/json")
             .send_json(&body)
@@ -194,7 +208,7 @@ impl LLMProvider for AzureOpenAIProvider {
             self.azure_endpoint, self.deployment_name, self.api_version
         );
 
-        let response: Value = ureq::post(&url)
+        let response: Value = make_agent().post(&url)
             .set("api-key", &self.api_key)
             .set("Content-Type", "application/json")
             .send_json(&body)
