@@ -1,0 +1,887 @@
+id: hugesmoothtech-corp-20260403
+domain: hugesmoothtech-corp-20260403.com
+users:
+- id: wyamada
+  username: wyamada
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: wyamada@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Wakana Yamada
+      first_name: Wakana
+      last_name: Yamada
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Corporate Strategy
+    - Innovation
+    title: CEO
+    location: San Francisco
+    timezone: America/Los_Angeles
+- id: arajput
+  username: arajput
+  groups:
+  - Engineering
+  - Executive
+  - All Employees
+  profile:
+    email: arajput@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Anika Rajput
+      first_name: Anika
+      last_name: Rajput
+      nickname: null
+    manager_id: wyamada
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Cloud Architecture
+    - AI Development
+    - Technical Leadership
+    title: CTO
+    location: New York
+    timezone: America/New_York
+- id: mgarcia
+  username: mgarcia
+  groups:
+  - Sales
+  - Executive
+  - All Employees
+  profile:
+    email: mgarcia@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Mateo Garcia
+      first_name: Mateo
+      last_name: Garcia
+      nickname: null
+    manager_id: wyamada
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Strategy
+    - Revenue Growth
+    - Negotiation
+    title: Chief Revenue Officer
+    location: Miami
+    timezone: America/New_York
+- id: llovato
+  username: llovato
+  groups:
+  - Human Resources
+  - Executive
+  - All Employees
+  profile:
+    email: llovato@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Luciana Lovato
+      first_name: Luciana
+      last_name: Lovato
+      nickname: null
+    manager_id: wyamada
+    skip_manager_id: null
+    department: Human Resources
+    skills:
+    - Talent Management
+    - Diversity & Inclusion
+    - Organizational Development
+    title: Chief People Officer
+    location: Remote
+    timezone: America/Sao_Paulo
+- id: hndlovu
+  username: hndlovu
+  groups:
+  - Finance
+  - Executive
+  - All Employees
+  profile:
+    email: hndlovu@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Hassan Ndlovu
+      first_name: Hassan
+      last_name: Ndlovu
+      nickname: null
+    manager_id: wyamada
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Planning
+    - Risk Management
+    - Budgeting
+    title: Chief Financial Officer
+    location: London
+    timezone: Europe/London
+- id: ljansen
+  username: ljansen
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: ljansen@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Lars Jansen
+      first_name: Lars
+      last_name: Jansen
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Strategic Vision
+    title: CEO
+    location: Amsterdam
+    timezone: Europe/Amsterdam
+- id: mabdi
+  username: mabdi
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: mabdi@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Muna Abdi
+      first_name: Muna
+      last_name: Abdi
+      nickname: null
+    manager_id: ljansen
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Engineering Leadership
+    - Software Architecture
+    title: VP of Engineering
+    location: London
+    timezone: Europe/London
+- id: ykobayashi
+  username: ykobayashi
+  groups:
+  - Engineering
+  - All Employees
+  profile:
+    email: ykobayashi@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Yuki Kobayashi
+      first_name: Yuki
+      last_name: Kobayashi
+      nickname: null
+    manager_id: mabdi
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Full Stack Development
+    - JavaScript
+    title: Software Engineer
+    location: Tokyo
+    timezone: Asia/Tokyo
+- id: npatel
+  username: npatel
+  groups:
+  - Sales
+  - Management
+  - All Employees
+  profile:
+    email: npatel@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Neha Patel
+      first_name: Neha
+      last_name: Patel
+      nickname: null
+    manager_id: ljansen
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Strategy
+    - Account Management
+    title: Sales Director
+    location: Mumbai
+    timezone: Asia/Kolkata
+- id: jmensah
+  username: jmensah
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: jmensah@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Josiah Mensah
+      first_name: Josiah
+      last_name: Mensah
+      nickname: null
+    manager_id: ljansen
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Planning
+    - Budgeting
+    title: Financial Analyst
+    location: Accra
+    timezone: Africa/Accra
+- id: alee
+  username: alee
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: alee@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Amira Lee
+      first_name: Amira
+      last_name: Lee
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Strategic Planning
+    title: CEO
+    location: San Francisco
+    timezone: America/Los_Angeles
+- id: jokonkwo
+  username: jokonkwo
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: jokonkwo@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Jamila Okonkwo
+      first_name: Jamila
+      last_name: Okonkwo
+      nickname: null
+    manager_id: alee
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Technical Leadership
+    - Software Architecture
+    title: VP of Engineering
+    location: London
+    timezone: Europe/London
+- id: kfujimoto
+  username: kfujimoto
+  groups:
+  - Engineering
+  - All Employees
+  profile:
+    email: kfujimoto@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Kenji Fujimoto
+      first_name: Kenji
+      last_name: Fujimoto
+      nickname: null
+    manager_id: jokonkwo
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - JavaScript
+    - React
+    - Frontend Development
+    title: Software Engineer
+    location: Tokyo
+    timezone: Asia/Tokyo
+- id: rsharma
+  username: rsharma
+  groups:
+  - Sales
+  - All Employees
+  profile:
+    email: rsharma@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ravi Sharma
+      first_name: Ravi
+      last_name: Sharma
+      nickname: null
+    manager_id: alee
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Strategy
+    - Client Relationship Management
+    title: Sales Manager
+    location: Mumbai
+    timezone: Asia/Kolkata
+- id: lrodriguez
+  username: lrodriguez
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: lrodriguez@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Luz Rodriguez
+      first_name: Luz
+      last_name: Rodriguez
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Budgeting
+    - Financial Modeling
+    title: Financial Analyst
+    location: Mexico City
+    timezone: America/Mexico_City
+- id: mgarcia_4
+  username: mgarcia_4
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: mgarcia@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Maria Garcia
+      first_name: Maria
+      last_name: Garcia
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Strategy
+    - Growth
+    title: CEO
+    location: San Francisco
+    timezone: America/Los_Angeles
+- id: tkimani
+  username: tkimani
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: tkimani@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Tobias Kimani
+      first_name: Tobias
+      last_name: Kimani
+      nickname: null
+    manager_id: mgarcia
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Engineering Leadership
+    - Cloud Architecture
+    title: VP of Engineering
+    location: Nairobi
+    timezone: Africa/Nairobi
+- id: jchung
+  username: jchung
+  groups:
+  - Engineering
+  - All Employees
+  profile:
+    email: jchung@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ji-Hyun Chung
+      first_name: Ji-Hyun
+      last_name: Chung
+      nickname: null
+    manager_id: tkimani
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Backend Development
+    - Java
+    - Databases
+    title: Software Engineer
+    location: Seoul
+    timezone: Asia/Seoul
+- id: adubois
+  username: adubois
+  groups:
+  - Finance
+  - Management
+  - All Employees
+  profile:
+    email: adubois@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Alain Dubois
+      first_name: Alain
+      last_name: Dubois
+      nickname: null
+    manager_id: mgarcia
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Strategy
+    - Accounting
+    - Budgeting
+    title: CFO
+    location: Paris
+    timezone: Europe/Paris
+- id: khalhaddad
+  username: khalhaddad
+  groups:
+  - Sales
+  - Management
+  - All Employees
+  profile:
+    email: khalhaddad@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Khalid Al-Haddad
+      first_name: Khalid
+      last_name: Al-Haddad
+      nickname: null
+    manager_id: mgarcia
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Leadership
+    - Negotiation
+    - Customer Relations
+    title: VP of Sales
+    location: Dubai
+    timezone: Asia/Dubai
+- id: yzhang
+  username: yzhang
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: yzhang@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ying Zhang
+      first_name: Ying
+      last_name: Zhang
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Strategic Thinking
+    title: CEO
+    location: San Francisco
+    timezone: America/Los_Angeles
+- id: emensah
+  username: emensah
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: emensah@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ebenezer Mensah
+      first_name: Ebenezer
+      last_name: Mensah
+      nickname: null
+    manager_id: yzhang
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Software Development
+    - Team Leadership
+    title: Engineering Manager
+    location: London
+    timezone: Europe/London
+- id: mrodriguez
+  username: mrodriguez
+  groups:
+  - Sales
+  - Management
+  - All Employees
+  profile:
+    email: mrodriguez@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Mateo Rodriguez
+      first_name: Mateo
+      last_name: Rodriguez
+      nickname: null
+    manager_id: yzhang
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Strategy
+    - Negotiation
+    title: Sales Manager
+    location: Mexico City
+    timezone: America/Mexico_City
+- id: tnguyen
+  username: tnguyen
+  groups:
+  - Human Resources
+  - All Employees
+  profile:
+    email: tnguyen@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Thuy Nguyen
+      first_name: Thuy
+      last_name: Nguyen
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Human Resources
+    skills:
+    - Recruitment
+    - Employee Relations
+    title: HR Specialist
+    location: Remote
+    timezone: Asia/Ho_Chi_Minh
+- id: rpatel
+  username: rpatel
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: rpatel@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Rhea Patel
+      first_name: Rhea
+      last_name: Patel
+      nickname: null
+    manager_id: yzhang
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Modeling
+    - Budget Management
+    title: Financial Analyst
+    location: Mumbai
+    timezone: Asia/Kolkata
+- id: lmatsuda
+  username: lmatsuda
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: lmatsuda@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Lina Matsuda
+      first_name: Lina
+      last_name: Matsuda
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Technical Strategy
+    - Cloud Architecture
+    title: Chief Technology Officer
+    location: Tokyo
+    timezone: Asia/Tokyo
+- id: mndlovu
+  username: mndlovu
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: mndlovu@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Mandla Ndlovu
+      first_name: Mandla
+      last_name: Ndlovu
+      nickname: null
+    manager_id: lmatsuda
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Team Management
+    - Backend Development
+    - Agile Methodologies
+    title: Engineering Manager
+    location: Johannesburg
+    timezone: Africa/Johannesburg
+- id: ccastillo
+  username: ccastillo
+  groups:
+  - Sales
+  - All Employees
+  profile:
+    email: ccastillo@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Carlos Castillo
+      first_name: Carlos
+      last_name: Castillo
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Client Relations
+    - Negotiation
+    - CRM Tools
+    title: Sales Representative
+    location: Mexico City
+    timezone: America/Mexico_City
+- id: skorhonen
+  username: skorhonen
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: skorhonen@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Sanni Korhonen
+      first_name: Sanni
+      last_name: Korhonen
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Modeling
+    - Budget Planning
+    - Forecasting
+    title: Senior Financial Analyst
+    location: Helsinki
+    timezone: Europe/Helsinki
+- id: araheem
+  username: araheem
+  groups:
+  - Human Resources
+  - All Employees
+  profile:
+    email: araheem@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Amina Raheem
+      first_name: Amina
+      last_name: Raheem
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Human Resources
+    skills:
+    - Employee Relations
+    - Recruitment
+    - Diversity Initiatives
+    title: HR Specialist
+    location: Dubai
+    timezone: Asia/Dubai
+- id: ekimura
+  username: ekimura
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: ekimura@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Emiko Kimura
+      first_name: Emiko
+      last_name: Kimura
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Operations Management
+    - Strategic Planning
+    title: Chief Operating Officer
+    location: Tokyo
+    timezone: Asia/Tokyo
+- id: jokonkwo_7
+  username: jokonkwo_7
+  groups:
+  - Engineering
+  - All Employees
+  profile:
+    email: jokonkwo@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Jide Okonkwo
+      first_name: Jide
+      last_name: Okonkwo
+      nickname: null
+    manager_id: okhan
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Java
+    - Cloud Computing
+    title: Software Engineer
+    location: Lagos
+    timezone: Africa/Lagos
+- id: mgarcia_7
+  username: mgarcia_7
+  groups:
+  - Sales
+  - All Employees
+  profile:
+    email: mgarcia@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Marisol Garcia
+      first_name: Marisol
+      last_name: Garcia
+      nickname: null
+    manager_id: snguyen
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - B2B Sales
+    - Negotiation
+    title: Sales Manager
+    location: Buenos Aires
+    timezone: America/Argentina/Buenos_Aires
+- id: tsingh
+  username: tsingh
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: tsingh@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Tarun Singh
+      first_name: Tarun
+      last_name: Singh
+      nickname: null
+    manager_id: ekimura
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Financial Modeling
+    - Data Analysis
+    title: Financial Analyst
+    location: Mumbai
+    timezone: Asia/Kolkata
+- id: adelgado
+  username: adelgado
+  groups:
+  - Human Resources
+  - All Employees
+  profile:
+    email: adelgado@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Angela Delgado
+      first_name: Angela
+      last_name: Delgado
+      nickname: null
+    manager_id: ekimura
+    skip_manager_id: null
+    department: Human Resources
+    skills:
+    - Employee Relations
+    - Recruiting
+    title: HR Specialist
+    location: Madrid
+    timezone: Europe/Madrid
+- id: jkim
+  username: jkim
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: jkim@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ji-Hoon Kim
+      first_name: Ji-Hoon
+      last_name: Kim
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Cloud Infrastructure
+    - Innovation
+    title: Chief Technology Officer (CTO)
+    location: Seoul
+    timezone: Asia/Seoul
+- id: npatel_8
+  username: npatel_8
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: npatel@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Neha Patel
+      first_name: Neha
+      last_name: Patel
+      nickname: null
+    manager_id: jkim
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Team Leadership
+    - Microservices
+    title: Engineering Manager
+    location: Bangalore
+    timezone: Asia/Kolkata
+- id: cnavarro
+  username: cnavarro
+  groups:
+  - Sales
+  - All Employees
+  profile:
+    email: cnavarro@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Camila Navarro
+      first_name: Camila
+      last_name: Navarro
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Client Acquisition
+    - CRM
+    title: Sales Executive
+    location: Mexico City
+    timezone: America/Mexico_City
+- id: ahaddad
+  username: ahaddad
+  groups:
+  - Finance
+  - All Employees
+  profile:
+    email: ahaddad@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Ayesha Haddad
+      first_name: Ayesha
+      last_name: Haddad
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Finance
+    skills:
+    - Data Analysis
+    - Budgeting
+    title: Financial Analyst
+    location: Dubai
+    timezone: Asia/Dubai
+- id: kmensah
+  username: kmensah
+  groups:
+  - Human Resources
+  - All Employees
+  profile:
+    email: kmensah@hugesmoothtech-corp-20260403.com
+    name:
+      display_name: Kwame Mensah
+      first_name: Kwame
+      last_name: Mensah
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Human Resources
+    skills:
+    - Recruitment
+    - Employee Relations
+    title: HR Generalist
+    location: Accra
+    timezone: Africa/Accra
+files_metadata: []
+chats: []
+group_chats: []
+meetings: []
+emails: []
+channels: []
+resource_limits: {}
