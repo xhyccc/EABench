@@ -1,7 +1,14 @@
-from typing import List, Dict, Optional
-from pydantic import BaseModel, Field
+from typing import List, Dict, Optional, Any
+from pydantic import BaseModel, Field, field_validator
+import datetime as _dt
 import yaml
 import os
+
+def _coerce_dt(v: Any) -> Any:
+    """Coerce datetime/date objects to ISO strings for fields typed as str."""
+    if isinstance(v, (_dt.datetime, _dt.date)):
+        return v.isoformat()
+    return v
 
 class UserName(BaseModel):
     display_name: str
@@ -34,11 +41,20 @@ class FileMetadata(BaseModel):
     last_modified_time: Optional[str] = None
     snippet: Optional[str] = None
 
+    @field_validator("created_time", "last_modified_time", mode="before")
+    @classmethod
+    def coerce_datetime_to_str(cls, v):
+        return _coerce_dt(v)
+
 class ChatMessage(BaseModel):
     from_user: str
     to_user: Optional[str] = None
     content: str
     timestamp: str
+
+    @field_validator("timestamp", mode="before")
+    @classmethod
+    def coerce_dt(cls, v): return _coerce_dt(v)
 
 class Chat(BaseModel):
     id: str
@@ -59,6 +75,10 @@ class Meeting(BaseModel):
     attendees: List[str] = Field(default_factory=list)
     start_time: str
     end_time: str
+
+    @field_validator("start_time", "end_time", mode="before")
+    @classmethod
+    def coerce_dt(cls, v): return _coerce_dt(v)
     agenda: str
     location: str = "online"
     transcript: Optional[str] = None
@@ -74,11 +94,19 @@ class Email(BaseModel):
     body: str
     timestamp: str
 
+    @field_validator("timestamp", mode="before")
+    @classmethod
+    def coerce_dt(cls, v): return _coerce_dt(v)
+
 class ChannelPost(BaseModel):
     id: str
     author: str
     content: str
     timestamp: str
+
+    @field_validator("timestamp", mode="before")
+    @classmethod
+    def coerce_dt(cls, v): return _coerce_dt(v)
 
 class Channel(BaseModel):
     id: str

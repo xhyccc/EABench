@@ -123,14 +123,22 @@ selected_agent_config = st.sidebar.selectbox("Agent Config", agent_config_files,
 agent_config_path = os.path.join("examples/agents", selected_agent_config) if selected_agent_config else "examples/agents/agent.yaml"
 
 # Tenant Config
-tenant_dirs = [d for d in os.listdir("examples/tenants") if os.path.isdir(os.path.join("examples/tenants", d))]
-selected_tenant = st.sidebar.selectbox("Tenant", tenant_dirs, index=0 if tenant_dirs else None)
+tenant_dirs = sorted(d for d in os.listdir("examples/tenants") if os.path.isdir(os.path.join("examples/tenants", d)))
+# Prefer a tenant that already has a cached index so first load is fast
+_cached = [d for d in tenant_dirs if os.path.exists(os.path.join("examples/tenants", d, ".cache"))]
+_default_idx = tenant_dirs.index(_cached[0]) if _cached else 0
+selected_tenant = st.sidebar.selectbox("Tenant", tenant_dirs, index=_default_idx)
 tenant_config_path = os.path.join("examples/tenants", selected_tenant, "tenant.yaml") if selected_tenant else "examples/tenants/test-tenant-1/tenant.yaml"
 
 # Initialize Global Resources
+_init_placeholder = st.empty()
 try:
+    with _init_placeholder.container():
+        st.info("⏳ Initializing — indexing tenant data, please wait...")
     tenant_config, sandbox, global_search_engine, llm, agent_config = get_global_resources(agent_config_path, tenant_config_path)
+    _init_placeholder.empty()
 except Exception as e:
+    _init_placeholder.empty()
     st.error(f"Failed to initialize system: {e}")
     st.stop()
 
@@ -208,7 +216,7 @@ if app_mode == "Chat":
                     st.error(f"Error: {e}")
 
     # Debug Logs Expander
-    with st.expander("Debug Logs", expanded=False):
+    with st.expander("Debug Logs", expanded=True):
         if "debug_logs" in st.session_state and st.session_state.debug_logs:
             tab1, tab2 = st.tabs(["Reasoning Trace", "Search Analysis"])
             
@@ -227,36 +235,50 @@ if app_mode == "Chat":
                         st.divider()
             
             with tab2:
-                # Group Query Analysis with subsequent Tool Results
+                # Show all Tool Calls with their arguments and results
                 logs = st.session_state.debug_logs
+                # Pair Tool Call → Query Analysis (optional) → Tool Result
                 i = 0
+                tool_call_count = 0
                 while i < len(logs):
                     log = logs[i]
-                    if log['type'] == "Query Analysis":
-                        with st.container():
-                            st.subheader(f"Search: {log['domain']}")
-                            col1, col2 = st.columns(2)
+                    if log['type'] == "Tool Call":
+                        tool_call_count += 1
+                        tool_name = log['tool']
+                        arguments = log['arguments']
+
+                        # Collect optional Query Analysis entries that follow (before the Tool Result)
+                        query_analyses = []
+                        result_log = None
+                        for j in range(i + 1, len(logs)):
+                            if logs[j]['type'] == "Query Analysis" and logs[j]['domain'] == tool_name:
+                                query_analyses.append(logs[j])
+                            elif logs[j]['type'] == "Tool Result" and logs[j]['tool'] == tool_name:
+                                result_log = logs[j]
+                                break
+                            elif logs[j]['type'] == "Tool Call":
+                                break  # next tool started, stop looking
+
+                        with st.expander(f"🔍 #{tool_call_count}: `{tool_name}`", expanded=True):
+                            col1, col2 = st.columns([1, 2])
                             with col1:
-                                st.markdown("**Query Analysis**")
-                                st.write(f"Input: `{log['query']}`")
-                                st.json(log['result'])
-                            
-                            # Look ahead for the corresponding Tool Result
-                            # It should be the next Tool Result with matching tool name
-                            result_log = None
-                            for j in range(i + 1, len(logs)):
-                                if logs[j]['type'] == "Tool Result" and logs[j]['tool'] == log['domain']:
-                                    result_log = logs[j]
-                                    break
-                            
-                            with col2:
-                                st.markdown("**Search Results**")
-                                if result_log:
-                                    st.code(result_log['result'], language="json")
+                                st.markdown("**Arguments**")
+                                st.json(arguments)
+                                if query_analyses:
+                                    for qa in query_analyses:
+                                        st.markdown(f"**Query Analysis** — `{qa['query']}`")
+                                        st.json(qa['result'])
                                 else:
-                                    st.write("No results found or tool execution failed.")
-                            st.divider()
+                                    st.caption("_(no query analysis — direct lookup or empty query)_")
+                            with col2:
+                                st.markdown("**Result**")
+                                if result_log:
+                                    st.code(result_log['result'][:3000] + ("..." if len(result_log['result']) > 3000 else ""), language="json")
+                                else:
+                                    st.caption("No result captured.")
                     i += 1
+                if tool_call_count == 0:
+                    st.write("No tool calls in this turn.")
         else:
             st.write("No logs yet.")
 
@@ -730,13 +752,31 @@ elif app_mode == "Side-by-Side Comparison":
 
 elif app_mode == "Data Generator":
     st.title("Data Generator")
-    st.markdown("Generate a new test tenant based on a custom story.")
+    st.markdown(
+        "Generate a new synthetic tenant using the **Rust offline pipeline** "
+        "(`eabench generate`).  The generated YAML/JSON data lands in "
+        "`examples/tenants/` and is immediately readable by the Python web UI."
+    )
 
-    # Get available prompt configs
-    prompt_files = [f for f in os.listdir("examples/generation") if f.endswith(".yaml")]
-    default_prompt_index = 0
-    if "default_prompts.yaml" in prompt_files:
-        default_prompt_index = prompt_files.index("default_prompts.yaml")
+    # Locate the eabench binary (release build preferred)
+    def _find_eabench() -> str | None:
+        candidates = [
+            os.path.join("rust", "target", "release", "eabench"),
+            os.path.join("rust", "target", "debug", "eabench"),
+        ]
+        for c in candidates:
+            if os.path.isfile(c):
+                return c
+        return None
+
+    rust_bin = _find_eabench()
+    if rust_bin is None:
+        st.warning(
+            "Rust binary not found. Build it first:\n"
+            "```bash\ncd rust && cargo build --release\n```"
+        )
+    else:
+        st.caption(f"Binary: `{rust_bin}`")
 
     with st.form("data_gen_form"):
         col1, col2 = st.columns(2)
@@ -744,90 +784,51 @@ elif app_mode == "Data Generator":
             company_name = st.text_input("Company Name", value="TechNova")
             industry = st.text_input("Industry", value="Software")
             company_size = st.selectbox("Company Size", ["small", "medium", "large"], index=1)
-            prompts_file = st.selectbox("Prompts Config", prompt_files, index=default_prompt_index)
-        
+            provider = st.selectbox("LLM Provider", ["openai", "azure"], index=1)
         with col2:
+            num_users = st.number_input("Users", min_value=1, max_value=50, value=5)
             duration_days = st.number_input("Duration (Days)", min_value=1, max_value=30, value=7)
-            # provider = st.selectbox("LLM Provider", ["openai", "azure"], index=0) # Removed in favor of yaml config
-        
+            dry_run = st.checkbox("Dry-run (no LLM calls)", value=False)
+
         key_events_str = st.text_area("Key Events (one per line)", value="Project Alpha Kickoff\nServer Outage Incident")
         description = st.text_area("Description", value="A fast-paced software startup facing scaling challenges.")
-        
-        submitted = st.form_submit_button("Generate Tenant")
 
-    if submitted:
-        from src.generator.pipeline import DataGenerator
-        from src.generator.models import StoryConfig
-        
-        # Parse events
+        submitted = st.form_submit_button("Generate Tenant", disabled=(rust_bin is None))
+
+    if submitted and rust_bin:
+        import subprocess
         key_events = [e.strip() for e in key_events_str.split("\n") if e.strip()]
-        
-        story = StoryConfig(
-            company_name=company_name,
-            industry=industry,
-            company_size=company_size,
-            duration_days=duration_days,
-            key_events=key_events,
-            description=description
-        )
-        
-        # Initialize LLM for Generator (reuse global config logic or create new)
-        # We need to create a new LLM instance based on the selected provider in the form
-        # independent of the agent's LLM
-        
-        prompts_path = os.path.join("examples/generation", prompts_file)
-        with open(prompts_path, "r") as f:
-            prompts_config = yaml.safe_load(f)
-            
-        model_config = prompts_config.get("model_config", {})
-        final_provider = model_config.get("provider", "openai")
-        final_model = model_config.get("model")
 
-        if final_provider == "openai":
-            api_key = os.getenv("OPENAI_API_KEY")
-            if not api_key:
-                st.error("OPENAI_API_KEY not found in environment variables.")
-                st.stop()
-                
-            gen_llm = OpenAIProvider(
-                api_key=api_key,
-                base_url=os.getenv("OPENAI_BASE_URL") or os.getenv("OPENAI_API_BASE"),
-                model=final_model or os.getenv("OPENAI_MODEL", "gpt-4o")
+        cmd = [
+            rust_bin, "generate",
+            "--company", company_name,
+            "--industry", industry,
+            "--description", description,
+            "--size", company_size,
+            "--num-users", str(num_users),
+            "--days", str(duration_days),
+            "--provider", provider,
+        ]
+        for ev in key_events:
+            cmd += ["--events", ev]
+        if dry_run:
+            cmd.append("--dry-run")
+
+        with st.spinner("Running Rust generator… this may take a minute."):
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                env={**os.environ},
+                cwd=os.getcwd(),
             )
+
+        if result.returncode == 0:
+            st.success("Generation complete!")
+            st.code(result.stdout, language="text")
+            st.info("Refresh the page or re-select the tenant in the sidebar to load new data.")
         else:
-            api_key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("AZURE_API_KEY")
-            endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_ENDPOINT")
-            deployment = final_model or os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME") or os.getenv("AZURE_DEPLOYMENT_NAME")
-            api_version = os.getenv("AZURE_OPENAI_API_VERSION") or os.getenv("AZURE_API_VERSION") or "2023-05-15"
+            st.error("Generation failed (exit code {})".format(result.returncode))
+            st.code(result.stderr or result.stdout, language="text")
 
-            if not api_key or not endpoint:
-                st.error("AZURE_OPENAI_API_KEY (or AZURE_API_KEY) and AZURE_OPENAI_ENDPOINT (or AZURE_ENDPOINT) are required.")
-                st.stop()
-            
-            if not deployment:
-                st.error("AZURE_OPENAI_DEPLOYMENT_NAME (or AZURE_DEPLOYMENT_NAME) is missing in .env and not specified in prompts yaml.")
-                st.stop()
-                
-            gen_llm = AzureOpenAIProvider(
-                api_key=api_key,
-                azure_endpoint=endpoint,
-                deployment_name=deployment,
-                api_version=api_version
-            )
-            
-        generator = DataGenerator(gen_llm, prompts_path=prompts_path)
-        
-        with st.spinner("Generating data... This may take a minute."):
-            try:
-                # Run async generation
-                output = asyncio.run(generator.generate_tenant(story))
-                
-                st.success("Generation Complete!")
-                st.write(f"**Tenant ID:** `{output.tenant_id}`")
-                st.write(f"**Path:** `{output.base_path}`")
-                st.write(f"**Summary:** {output.summary}")
-                st.info("Refresh the page to see the new tenant in the configuration sidebar.")
-                
-            except Exception as e:
-                st.error(f"Generation failed: {e}")
 
