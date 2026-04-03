@@ -64,3 +64,19 @@ cargo run -- eval \
   --eval   examples/tenants/test-tenant-1/eval_set.yaml \
   --workers 4
 ```
+
+---
+
+## Launch the web UI
+
+```bash
+cargo run -- serve
+```
+
+Custom port:
+
+```bash
+cargo run -- serve --port 8502
+```
+
+> Defaults to `../python/app.py`. Looks for `../.venv/bin/streamlit` first, then falls back to `streamlit` on PATH.

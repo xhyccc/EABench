@@ -37,6 +37,14 @@ use eabench_lib::generator::{DataGenerator, StoryConfig, OpenAIProvider, AzureOp
 enum Command {
     Eval(EvalArgs),
     Generate(GenerateArgs),
+    Serve(ServeArgs),
+}
+
+struct ServeArgs {
+    /// Port for the Streamlit server (default 8501)
+    port: u16,
+    /// Path to the app.py to launch (default: ../python/app.py)
+    app: String,
 }
 
 struct EvalArgs {
@@ -85,7 +93,49 @@ fn main() -> Result<()> {
     match parse_args(&args)? {
         Command::Eval(a)     => run_eval(a),
         Command::Generate(a) => run_generate(a),
+        Command::Serve(a)    => run_serve(a),
     }
+}
+
+// ---------------------------------------------------------------------------
+// serve subcommand
+// ---------------------------------------------------------------------------
+
+fn run_serve(a: ServeArgs) -> Result<()> {
+    let app_path = std::fs::canonicalize(&a.app)
+        .with_context(|| format!("app not found at '{}' — run from the rust/ directory", a.app))?;
+
+    println!("EABench – Web UI");
+    println!("----------------");
+    println!("App    : {}", app_path.display());
+    println!("Port   : {}", a.port);
+    println!("URL    : http://localhost:{}", a.port);
+    println!();
+
+    let streamlit = which_streamlit()?;
+    println!("Launching: {} run {} --server.port {}", streamlit, app_path.display(), a.port);
+    println!("Press Ctrl+C to stop.");
+    println!();
+
+    let status = std::process::Command::new(&streamlit)
+        .args(["run", app_path.to_str().unwrap(), "--server.port", &a.port.to_string()])
+        .status()
+        .with_context(|| format!("failed to launch streamlit ('{}' not found — is the Python venv activated?)", streamlit))?;
+
+    if !status.success() {
+        anyhow::bail!("streamlit exited with status: {}", status);
+    }
+    Ok(())
+}
+
+/// Find the `streamlit` executable: repo .venv first, then PATH.
+fn which_streamlit() -> Result<String> {
+    for candidate in &["../.venv/bin/streamlit", ".venv/bin/streamlit"] {
+        if std::path::Path::new(candidate).exists() {
+            return Ok(candidate.to_string());
+        }
+    }
+    Ok("streamlit".to_string())
 }
 
 // ---------------------------------------------------------------------------
@@ -330,6 +380,7 @@ fn parse_args(args: &[String]) -> Result<Command> {
     match subcommand {
         "generate" => parse_generate_args(&args[2..]),
         "eval"     => parse_eval_args(&args[2..]),
+        "serve"    => parse_serve_args(&args[2..]),
         "--help" | "-h" => {
             print_usage();
             std::process::exit(0);
@@ -337,7 +388,7 @@ fn parse_args(args: &[String]) -> Result<Command> {
         // Backwards-compatible: if first arg looks like a flag, treat as eval
         _ if subcommand.starts_with('-') => parse_eval_args(&args[1..]),
         other => anyhow::bail!(
-            "Unknown subcommand '{}'. Expected 'generate' or 'eval'. Use --help for usage.",
+            "Unknown subcommand '{}'. Expected 'generate', 'eval', or 'serve'. Use --help for usage.",
             other
         ),
     }
@@ -566,6 +617,7 @@ fn print_usage() {
          SUBCOMMANDS:\n\
          \x20   eval      Run deterministic evaluation against an eval set (default)\n\
          \x20   generate  Generate a new synthetic tenant using an LLM\n\
+         \x20   serve     Launch the Streamlit web UI\n\
          \n\
          ── EVAL ────────────────────────────────────────────────────────\n\
          \x20   --tenant PATH    Path to tenant.yaml  (default: examples/tenants/test-tenant-1/tenant.yaml)\n\
@@ -607,6 +659,39 @@ fn print_usage() {
          \x20   AZURE_OPENAI_DEPLOYMENT_NAME / AZURE_DEPLOYMENT_NAME\n\
          \x20   AZURE_OPENAI_API_VERSION / AZURE_API_VERSION\n\
          \n\
+         ── SERVE ────────────────────────────────────────────────────────\n\
+         \x20   --port N      Port for the Streamlit server  (default: 8501)\n\
+         \x20   --app  PATH   Path to app.py                 (default: ../app.py)\n\
+         \n\
          \x20   --help               Print this message\n"
     );
+}
+
+fn parse_serve_args(args: &[String]) -> Result<Command> {
+    let mut port: u16 = 8501;
+    let mut app       = "../python/app.py".to_string();
+
+    let mut i = 0usize;
+    while i < args.len() {
+        match args[i].as_str() {
+            "--port" => {
+                i += 1;
+                let v = args.get(i).context("--port requires a NUMBER")?;
+                port = v.parse::<u16>()
+                    .with_context(|| format!("--port '{}' is not a valid port number", v))?;
+            }
+            "--app" => {
+                i += 1;
+                app = args.get(i).context("--app requires a PATH")?.clone();
+            }
+            "--help" | "-h" => {
+                print_usage();
+                std::process::exit(0);
+            }
+            other => anyhow::bail!("Unknown argument '{}'. Use --help for usage.", other),
+        }
+        i += 1;
+    }
+
+    Ok(Command::Serve(ServeArgs { port, app }))
 }
