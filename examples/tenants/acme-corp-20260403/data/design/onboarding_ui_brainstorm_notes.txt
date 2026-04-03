@@ -1,0 +1,101 @@
+# Onboarding UI Brainstorming Notes
+
+**File Path**: `data/design/onboarding_ui_brainstorm_notes.txt`  
+**Author**: Mariana Ribeiro  
+**Date**: April 2, 2026  
+
+---
+
+## Context
+These notes summarize the brainstorming session held on April 2, 2026, with the design team. The session aimed to refine the user interface (UI) updates for the onboarding flow of the SaaS product. The goal is to enhance the user experience, reduce friction during onboarding, and improve user retention metrics.
+
+---
+
+## Participants
+- Mariana Ribeiro (Lead Designer)
+- Alex Chen (UI/UX Designer)
+- Priya Patel (Junior Designer)
+- Martin Gomez (Product Manager)
+- Sarah Lee (Frontend Developer, observer for feasibility input)
+
+---
+
+## Key Discussion Points
+
+### 1. **Current Onboarding Flow Pain Points**
+- **Overwhelming initial screen**: The current design presents too many options to new users, leading to confusion.
+- **Lack of guidance**: Users are unsure of the first actionable step when they log in.
+- **Inconsistent visuals**: Some UI components do not align with the design system, causing a lack of cohesion.
+- **Slow loading times**: The onboarding flow currently involves several API calls, leading to delays.
+- **High drop-off rate**: Analytics show a 35% drop-off rate before users complete the onboarding process.
+
+### 2. **Proposed Improvements**
+#### **Simplify the Initial Screen**
+- Replace the current dashboard view with a streamlined welcome modal.
+  - Modal will include:
+    1. A short welcome message.
+    2. A progress bar indicating onboarding steps.
+    3. A prominent “Get Started” button.
+- Reduce the number of visible menu items on first login to avoid overwhelming users.
+
+#### **Step-by-Step Onboarding Process**
+- Break the onboarding flow into **three clear steps**:
+  1. **Profile Setup**: Prompt users to upload a profile picture, set preferences.
+  2. **Core Feature Tutorial**: A guided walkthrough of the product’s core features.
+  3. **Action Prompt**: Encourage users to perform an action (e.g., create their first project).
+- Use tooltips and progress indicators to guide users through the flow.
+
+#### **Visual Enhancements**
+- Update UI components to match the **2026 design system**:
+  - Use the new color palette (primary: #4A90E2, secondary: #50E3C2).
+  - Implement updated button styles (larger padding, rounded corners).
+  - Add subtle animations (e.g., fade-ins for tooltips).
+
+#### **Performance Optimization**
+- Work closely with the engineering team to:
+  - **Cache API calls** for static data used during onboarding.
+  - Implement lazy loading for non-critical assets.
+
+#### **Personalization**
+- Leverage user data to personalize the onboarding experience:
+  - Pre-fill forms using available information (e.g., email, name).
+  - Show tailored suggestions based on the user’s role.
+
+### 3. **Feedback from Beta Client**
+- Positive feedback was shared by the sales team:
+  - Beta client appreciated the intuitive layout of the core product.
+  - Requested clearer instructions during the onboarding process.
+- Action item: Incorporate feedback into the updated flow.
+
+### 4. **Challenges and Risks**
+- **Technical Feasibility**: Sarah raised concerns about implementing real-time progress tracking due to backend limitations.
+- **Timeline**: Martin reminded the team of the tight Q2 sprint deadline.
+- **Design Consistency**: Ensuring all new components align with the updated design system.
+
+---
+
+## Action Items
+1. **Wireframes**:
+   - Mariana and Alex to create low-fidelity wireframes for the new onboarding flow by April 5.
+2. **Feasibility Review**:
+   - Sarah to review proposed UI changes with the engineering team by April 6.
+3. **Usability Testing**:
+   - Priya to organize a usability test with 5 beta users by April 15.
+4. **Analytics Setup**:
+   - Ensure tracking is in place for new onboarding flow metrics (e.g., completion rate, time to complete).
+
+---
+
+## Next Steps
+- Schedule a follow-up meeting on April 10 to review wireframes and finalize designs.
+- Share progress updates in the #design-team Slack channel.
+
+---
+
+## Additional Notes
+- Mariana emphasized the importance of balancing simplicity and functionality to ensure user satisfaction.
+- Alex suggested exploring a gamification element (e.g., badges for completing onboarding) as a future iteration.
+
+---
+
+**End of Notes**

@@ -1,0 +1,72 @@
+# Mandatory Cybersecurity Training Reminder
+
+**Author:** Chinwe Okonkwu  
+**Date:** April 2, 2026  
+
+Dear Team,
+
+As part of our ongoing commitment to ensuring the security and integrity of our systems, data, and operations, this is a friendly reminder to complete the **mandatory cybersecurity training** by the end of this week (**April 7, 2026**). This training is a critical component of our organization's security protocol and is required for all employees, regardless of role or department.
+
+---
+
+### Why is this Training Important?
+
+- **Protecting Company Assets:** Cyber threats are evolving rapidly. This training equips you with the knowledge to identify and mitigate potential risks.
+- **Compliance Requirements:** Completing this training ensures we remain compliant with industry regulations and standards.
+- **Personal Responsibility:** Each of us plays a role in safeguarding sensitive data and preventing breaches.
+
+---
+
+### Training Details
+
+- **Course Title:** Cybersecurity Awareness and Best Practices 2026
+- **Duration:** Approximately 2 hours (self-paced)
+- **Platform:** [SecureLearn Training Portal](https://securelearn.company.com)
+- **Deadline:** April 7, 2026 (End of Day)
+
+---
+
+### How to Access the Training
+
+1. Log in to the [SecureLearn Training Portal](https://securelearn.company.com) using your company credentials.
+2. Navigate to the **Assigned Courses** section.
+3. Click on **Cybersecurity Awareness and Best Practices 2026** to begin the training.
+4. Complete the modules, quizzes, and final assessment.
+5. Ensure you receive a completion certificate (this will be automatically logged in the HR system).
+
+---
+
+### Key Topics Covered
+
+- **Recognizing Phishing Attacks:** Learn how to identify and report suspicious emails, links, and attachments.
+- **Password Security:** Best practices for creating and managing strong passwords.
+- **Data Protection:** Guidelines for handling sensitive company and client information.
+- **Device Security:** Proper usage of company devices, VPNs, and secure networks.
+- **Incident Reporting:** Steps to take if you suspect a breach or security issue.
+
+---
+
+### Need Help?
+
+If you encounter any issues or have questions about the training, please reach out to the HR team or the IT Help Desk.
+
+- **HR Contact:** Chinwe Okonkwu (chinwe.okonkwu@company.com)
+- **IT Help Desk:** support@company.com
+
+---
+
+### Consequences of Non-Completion
+
+Failure to complete the mandatory training by the deadline may result in the following:
+
+- Temporary suspension of access to certain company resources.
+- A formal reminder from the HR department.
+- Impact on your annual compliance performance review.
+
+---
+
+Thank you for your cooperation and commitment to maintaining a secure and resilient organization. Let’s work together to keep our systems and data safe!
+
+Best regards,  
+**Chinwe Okonkwu**  
+HR Department

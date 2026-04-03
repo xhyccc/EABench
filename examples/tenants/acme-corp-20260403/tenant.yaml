@@ -1,0 +1,120 @@
+id: acme-corp-20260403
+domain: acme-corp-20260403.com
+users:
+- id: lzhang
+  username: lzhang
+  groups:
+  - Executive
+  - Board
+  - All Employees
+  profile:
+    email: lzhang@acme-corp-20260403.com
+    name:
+      display_name: Li Zhang
+      first_name: Li
+      last_name: Zhang
+      nickname: null
+    manager_id: null
+    skip_manager_id: null
+    department: Executive
+    skills:
+    - Leadership
+    - Strategic Planning
+    title: CEO
+    location: San Francisco
+    timezone: America/Los_Angeles
+- id: akarim
+  username: akarim
+  groups:
+  - Engineering
+  - Management
+  - All Employees
+  profile:
+    email: akarim@acme-corp-20260403.com
+    name:
+      display_name: Amina Karim
+      first_name: Amina
+      last_name: Karim
+      nickname: null
+    manager_id: lzhang
+    skip_manager_id: null
+    department: Engineering
+    skills:
+    - Software Architecture
+    - Team Leadership
+    title: VP of Engineering
+    location: New York
+    timezone: America/New_York
+- id: mribeiro
+  username: mribeiro
+  groups:
+  - Product
+  - Management
+  - All Employees
+  profile:
+    email: mribeiro@acme-corp-20260403.com
+    name:
+      display_name: Mariana Ribeiro
+      first_name: Mariana
+      last_name: Ribeiro
+      nickname: null
+    manager_id: lzhang
+    skip_manager_id: null
+    department: Product
+    skills:
+    - Product Management
+    - Market Analysis
+    title: Head of Product
+    location: Remote
+    timezone: America/Sao_Paulo
+- id: nsharma
+  username: nsharma
+  groups:
+  - Sales
+  - Management
+  - All Employees
+  profile:
+    email: nsharma@acme-corp-20260403.com
+    name:
+      display_name: Neha Sharma
+      first_name: Neha
+      last_name: Sharma
+      nickname: null
+    manager_id: lzhang
+    skip_manager_id: null
+    department: Sales
+    skills:
+    - Sales Strategy
+    - Client Relationships
+    title: Head of Sales
+    location: London
+    timezone: Europe/London
+- id: okonkwu
+  username: okonkwu
+  groups:
+  - Operations
+  - Management
+  - All Employees
+  profile:
+    email: okonkwu@acme-corp-20260403.com
+    name:
+      display_name: Chinwe Okonkwu
+      first_name: Chinwe
+      last_name: Okonkwu
+      nickname: null
+    manager_id: lzhang
+    skip_manager_id: null
+    department: Operations
+    skills:
+    - Operational Efficiency
+    - Process Improvement
+    title: Head of Operations
+    location: Remote
+    timezone: Africa/Lagos
+files_metadata: []
+chats: []
+group_chats: []
+meetings: []
+emails: []
+channels: []
+resource_limits: {}

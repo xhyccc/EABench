@@ -1,0 +1,2539 @@
+[
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Follow-Up on Q2 Sprint Stand-Up Meeting'."
+      },
+      {
+        "description": "Email was sent by 'mribeiro' on 2026-04-01."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_001",
+    "query": "Show me the email summarizing the progress and blockers from this week's Q2 sprint stand-up meeting.",
+    "reasoning": "User (Li Zhang) is likely looking for a summary of the Q2 sprint stand-up meeting she attended or received an email about.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Investigating Performance Bottleneck in Data Processing Module'."
+      },
+      {
+        "description": "Email was authored by 'akarim' on 2026-04-01."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_002",
+    "query": "Find my email about the performance bottleneck in the data processing module, sent earlier today.",
+    "reasoning": "User (Amina Karim) is likely to search for her own email detailing the performance bottleneck issue she discovered.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Beta Client Deal Closed: First External Use of SaaS Product'."
+      },
+      {
+        "description": "Email was authored by 'nsharma' on 2026-04-01."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_003",
+    "query": "Locate the email about the beta client deal closure and its feedback sent today.",
+    "reasoning": "User (Neha Sharma) is likely looking for the email she sent about the beta client deal closure to share details with her team.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Power Outage and Remote Work Setup Review'."
+      },
+      {
+        "description": "Email was authored by 'okonkwu' on 2026-04-01."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_004",
+    "query": "Find my email summarizing the impact of the power outage and suggestions for remote work improvements.",
+    "reasoning": "User (Chinwe Okonkwu) is likely reviewing the email about the power outage and remote work setup she sent earlier today.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Feedback on Proposed UI Update for Onboarding Flow'."
+      },
+      {
+        "description": "Email was authored by 'mribeiro' on 2026-04-01."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_005",
+    "query": "Retrieve my email asking for feedback on the proposed user interface update for the onboarding flow.",
+    "reasoning": "User (Mariana Ribeiro) is searching for feedback on the proposed UI update she sent to the team for review.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Performance Boost Achieved: Data Processing Module Optimized by 15%'"
+      },
+      {
+        "description": "Filters by sender 'akarim' and keyword 'performance improvement'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_006",
+    "query": "Show me the email about the 15% performance improvement in the data processing module from earlier this month.",
+    "reasoning": "User wants details about the performance boost achieved by the engineering team. The date and subject suggest the email sent by Amina Karim.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Brainstorming Session Outcome: Onboarding Flow UI Updates'"
+      },
+      {
+        "description": "Filters by sender 'mribeiro' and keywords 'design' and 'onboarding updates'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_007",
+    "query": "Can you find the email summarizing decisions from the design brainstorming session about onboarding updates?",
+    "reasoning": "User is looking for outcomes from a recent brainstorming session regarding onboarding flow updates. This matches an email sent by Mariana Ribeiro on April 2, 2026.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Scalability Issue Identified in Database Architecture'"
+      },
+      {
+        "description": "Filters by sender 'akarim' and keywords 'database' and 'scalability'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_008",
+    "query": "Retrieve the email about database scalability issues and proposed solutions from this week.",
+    "reasoning": "User is concerned about database scalability issues and needs a specific email discussing these challenges. The email sent by Amina Karim on April 2, 2026, matches this request.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Positive Feedback from Beta Client: Expanding the Beta Program'"
+      },
+      {
+        "description": "Filters by sender 'nsharma' and keywords 'beta program' and 'client feedback'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_009",
+    "query": "Find the email discussing client feedback and ideas for expanding the beta program.",
+    "reasoning": "User is interested in the beta program expansion based on positive client feedback. This corresponds to an email sent by Neha Sharma on April 2, 2026.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Mandatory Cybersecurity Training Reminder'"
+      },
+      {
+        "description": "Filters by sender 'okonkwu' and keywords 'cybersecurity training'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_010",
+    "query": "Give me the email reminding the team about completing mandatory cybersecurity training.",
+    "reasoning": "User needs a reminder about mandatory cybersecurity training. This matches the email sent by Chinwe Okonkwu on April 2, 2026.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Design Team UI Proposal Review'"
+      },
+      {
+        "description": "Filters meetings attended by Li Zhang on April 1, 2026"
+      },
+      {
+        "description": "Matches the summary mentioning the design team's UI proposal and discussion"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_011",
+    "query": "What was the meeting on April 1 about the design team's user interface proposal and the discussion it sparked?",
+    "reasoning": "The user (Li Zhang) is looking for a specific meeting they attended on April 1, 2026, where the design team presented a user interface proposal. The query hints at the meeting's title and summary content.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Debugging Session: Performance Bottleneck'"
+      },
+      {
+        "description": "Filters meetings attended by Amina Karim on April 1, 2026"
+      },
+      {
+        "description": "Matches the summary about a debugging session led by the VP of Engineering"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_012",
+    "query": "Show me the April 1 meeting where the VP of Engineering led a debugging session on a performance bottleneck.",
+    "reasoning": "The user (Amina Karim) is trying to locate a specific discussion about debugging a performance bottleneck, which occurred on April 1, 2026, and was led by the VP of Engineering.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Sales Team Deal Update'"
+      },
+      {
+        "description": "Filters meetings attended by Neha Sharma on April 1, 2026"
+      },
+      {
+        "description": "Matches the summary about the sales team closing a deal with a beta client"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_013",
+    "query": "Find the meeting from April 1 about the sales team’s update on closing a deal with a beta client.",
+    "reasoning": "The user (Neha Sharma) is looking for a meeting they attended on April 1, 2026, where the sales team discussed closing a deal with a beta client.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Q2 Sprint Stand-Up Meeting'"
+      },
+      {
+        "description": "Filters meetings attended by Chinwe Okonkwu on April 1, 2026"
+      },
+      {
+        "description": "Matches the summary discussing Q2 sprint progress and roadblocks"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_014",
+    "query": "What was the April 1 meeting about the Q2 sprint progress and roadblocks?",
+    "reasoning": "The user (Chinwe Okonkwu) wants to find a specific meeting they attended that discussed progress and roadblocks for the Q2 sprint. The meeting took place on April 1, 2026.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Engineering Progress Review'"
+      },
+      {
+        "description": "Filters meetings attended by Amina Karim on April 2, 2026"
+      },
+      {
+        "description": "Matches the summary mentioning optimization of the data processing module"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_015",
+    "query": "Show me the meeting on April 2 where the engineering team discussed optimizing the data processing module.",
+    "reasoning": "The user (Amina Karim) is searching for a meeting on April 2, 2026, related to engineering progress, specifically about optimizing the data processing module.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Database Scalability Discussion'"
+      },
+      {
+        "description": "Matches the date to April 2, 2026"
+      },
+      {
+        "description": "Includes Li Zhang as one of the attendees"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_016",
+    "query": "What was the meeting where we discussed the database scalability issue and planned strategies to address it on April 2, 2026?",
+    "reasoning": "Li Zhang is looking for the meeting that involved a critical database scalability issue and its resolution, which she attended on April 2, 2026.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Beta Program Expansion Planning'"
+      },
+      {
+        "description": "Matches the date to April 2, 2026"
+      },
+      {
+        "description": "Does not include Amina Karim in the attendee list, indicating she wants a recap"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_017",
+    "query": "Can you find the discussion about expanding the beta program to more clients on April 2, 2026?",
+    "reasoning": "Amina Karim wants to find the meeting where the beta program expansion was discussed, as she was likely not part of it and needs to catch up.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/meetings/2026-04-01-standup-notes.md'"
+      },
+      {
+        "description": "Confirms the file was created by Mariana Ribeiro"
+      },
+      {
+        "description": "Matches the date to April 1, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/meetings/2026-04-01-standup-notes.md",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_018",
+    "query": "Where are my notes from the stand-up discussing Q2 sprint progress and roadblocks on April 1, 2026?",
+    "reasoning": "Mariana Ribeiro wants to locate her stand-up meeting notes from April 1, 2026, where sprint progress and roadblocks were discussed.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Cybersecurity Training Reminder'"
+      },
+      {
+        "description": "Matches the date to April 2, 2026"
+      },
+      {
+        "description": "Includes Neha Sharma as one of the attendees"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_019",
+    "query": "What was the meeting where HR reminded everyone about completing the cybersecurity training before the deadline on April 2, 2026?",
+    "reasoning": "Neha Sharma needs to locate the meeting where HR emphasized the cybersecurity training deadline, which she attended on April 2, 2026.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'UI Update Finalization'"
+      },
+      {
+        "description": "Matches the date to April 2, 2026"
+      },
+      {
+        "description": "Includes Chinwe Okonkwu as one of the attendees"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_020",
+    "query": "Can you find the meeting where the product manager and design team finalized the onboarding flow UI updates on April 2, 2026?",
+    "reasoning": "Chinwe Okonkwu is trying to find the meeting she attended on April 2, 2026, where the onboarding flow UI updates were finalized.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/debugging/2026-04-01-performance-analysis.docx'"
+      },
+      {
+        "description": "Author is Amina Karim"
+      },
+      {
+        "description": "File type is 'docx'"
+      },
+      {
+        "description": "Date is April 1, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_021",
+    "query": "Locate the file documenting the debugging session for performance issues in early April 2026.",
+    "reasoning": "Li Zhang likely needs the documentation related to debugging performance bottlenecks, especially since it was authored by Amina Karim, who might be her colleague. The query specifies type (file), topic (debugging performance), and timeframe (April 2026).",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/sales/2026-04-01-first-client-deal.txt'"
+      },
+      {
+        "description": "Author is Neha Sharma"
+      },
+      {
+        "description": "File type is 'txt'"
+      },
+      {
+        "description": "Date is April 1, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_022",
+    "query": "Find the text file with details about the first external client deal finalized on April 1, 2026.",
+    "reasoning": "Neha Sharma might be looking for the file detailing the company's first client deal, likely for sales-related purposes. The query includes type (file), topic (external client deal), and a specific date (April 1, 2026).",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/design/2026-04-01-ui-proposal.pdf'"
+      },
+      {
+        "description": "Author is Mariana Ribeiro"
+      },
+      {
+        "description": "File type is 'pdf'"
+      },
+      {
+        "description": "Date is April 1, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_023",
+    "query": "Retrieve the document proposing the UI update for improving onboarding from April 1, 2026.",
+    "reasoning": "Mariana Ribeiro might need the proposal for a UI update she authored, possibly for review or feedback purposes. The query specifies type (file), topic (user interface proposal), and a specific date (April 1, 2026).",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/operations/2026-04-01-power-outage-report.md'"
+      },
+      {
+        "description": "Author is Chinwe Okonkwu"
+      },
+      {
+        "description": "File type is 'md'"
+      },
+      {
+        "description": "Date is April 1, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/operations/2026-04-01-power-outage-report.md",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_024",
+    "query": "Find my markdown file reporting the impact of the power outage on April 1, 2026.",
+    "reasoning": "Chinwe Okonkwu likely needs access to her own report detailing the impact of the power outage, possibly for operational analysis or follow-up actions. The query specifies type (file), topic (power outage report), and a specific date (April 1, 2026).",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/engineering/data_processing_optimization_report.pdf'"
+      },
+      {
+        "description": "Author is Amina Karim"
+      },
+      {
+        "description": "File type is 'pdf'"
+      },
+      {
+        "description": "Date is April 2, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_025",
+    "query": "Retrieve the PDF report about the successful optimization of the data processing module from April 2, 2026.",
+    "reasoning": "Amina Karim might be searching for the engineering team's report on data processing optimization, which she authored. The query specifies type (file), topic (data processing optimization), and a specific date (April 2, 2026).",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/engineering/database_scalability_issue_analysis.docx'"
+      },
+      {
+        "description": "Identifies the author as Amina Karim"
+      },
+      {
+        "description": "Filters based on the keyword 'database scalability issue' in both title and summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_026",
+    "query": "Show me the document I wrote about database scalability issues earlier this month.",
+    "reasoning": "User Amina Karim is likely trying to find her analysis document regarding database scalability issues created on April 2, 2026. Constraints include keywords ('database scalability issue') and document type.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/design/onboarding_ui_brainstorm_notes.txt'"
+      },
+      {
+        "description": "Identifies the author as Mariana Ribeiro"
+      },
+      {
+        "description": "Filters based on the keywords 'brainstorming' and 'onboarding UI updates'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_027",
+    "query": "Find the design team's brainstorming notes for the onboarding UI updates from last week.",
+    "reasoning": "Li Zhang might be searching for the notes from the design team's brainstorming session regarding onboarding UI updates, which Mariana Ribeiro created on April 2, 2026.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/sales/beta_client_feedback_summary.pdf'"
+      },
+      {
+        "description": "Identifies the author as Neha Sharma"
+      },
+      {
+        "description": "Filters based on the keywords 'beta client feedback' and the date range"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_028",
+    "query": "Locate the beta client feedback summary I worked on this week.",
+    "reasoning": "Neha Sharma may want to find the summary document for the positive feedback from a beta client, which she created on April 2, 2026. The query focuses on feedback and client-related keywords.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/hr/cybersecurity_training_reminder_email.txt'"
+      },
+      {
+        "description": "Identifies the author as Chinwe Okonkwu"
+      },
+      {
+        "description": "Filters based on the keywords 'cybersecurity training' and type 'email'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/hr/cybersecurity_training_reminder_email.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_029",
+    "query": "Retrieve the email I sent about mandatory cybersecurity training earlier this week.",
+    "reasoning": "Chinwe Okonkwu, being part of HR, might be searching for the cybersecurity training reminder email she sent to employees on April 2, 2026. The query implies a specific date, type (email), and topic (cybersecurity training).",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat log 'standup_q2_sprint_2026-04-01'"
+      },
+      {
+        "description": "Filters based on the keywords 'Q2 sprint stand-up meeting' and the date April 1, 2026"
+      },
+      {
+        "description": "Identifies the type as 'group_chat'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "standup_q2_sprint_2026-04-01",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_030",
+    "query": "Can you find the notes from the Q2 sprint stand-up meeting we had on Wednesday?",
+    "reasoning": "Neha Sharma might want to review the notes or discussion from the daily stand-up meeting on April 1, 2026, focusing on Q2 sprint progress. The query implies a group chat type and specific date.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat 'ui_update_discussion_2026-04-01'"
+      },
+      {
+        "description": "Summary mentions a design team's proposed update to improve onboarding"
+      },
+      {
+        "description": "Date matches earlier this week (2026-04-01)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_031",
+    "query": "Show me the discussion about the onboarding flow update from the design team earlier this week.",
+    "reasoning": "User wants to locate a discussion about a design update related to onboarding, likely initiated by the design team, and it happened recently.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat 'sales_beta_client_2026-04-01'"
+      },
+      {
+        "description": "Summary mentions a beta client deal closure"
+      },
+      {
+        "description": "Date aligns with recent activity (2026-04-01)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "sales_beta_client_2026-04-01",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_032",
+    "query": "Find the chat about the beta client deal that closed recently.",
+    "reasoning": "User is looking for a conversation detailing the closure of a beta client deal. This information is likely relevant for the sales team and occurred recently.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat 'remote_work_power_outage_2026-04-01'"
+      },
+      {
+        "description": "Summary describes task coordination due to a power outage"
+      },
+      {
+        "description": "Date matches earlier this week (2026-04-01)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "remote_work_power_outage_2026-04-01",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_033",
+    "query": "What was the team’s plan to handle the power outage in the office this week?",
+    "reasoning": "User is searching for coordinated actions taken to handle a power outage, which likely disrupted remote work. This would involve group communication.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat 'debugging_bottleneck_2026-04-01'"
+      },
+      {
+        "description": "Summary mentions debugging a performance bottleneck"
+      },
+      {
+        "description": "Date aligns with this week (2026-04-01)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_034",
+    "query": "Find the debugging session about the performance bottleneck that happened this week.",
+    "reasoning": "User is interested in debugging activities related to a performance bottleneck, likely relevant to engineers. This occurred very recently and involved a junior developer.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat 'chat_001'"
+      },
+      {
+        "description": "Summary indicates a celebration of the data processing module optimization"
+      },
+      {
+        "description": "Date aligns with this week (2026-04-02)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_035",
+    "query": "Show me the celebration chat for the successful optimization of the data processing module.",
+    "reasoning": "User recalls a meeting or chat where the engineering team celebrated a successful optimization of the data processing module. This was a group event that occurred this week.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat with the summary about the onboarding flow updates."
+      },
+      {
+        "description": "Matches the date constraint of April 2026 and the type 'group_chat'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_036",
+    "query": "Show me the group chat about finalizing UI updates for the onboarding flow from earlier this month.",
+    "reasoning": "User wants to revisit the brainstorming session conducted by the product manager and design team. I will focus on the group chat from April 2, 2026, discussing onboarding flow updates.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat discussing scalability issues in the database architecture."
+      },
+      {
+        "description": "Matches the keyword 'scalability' and the date constraint of April 2026."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_037",
+    "query": "Find the recent chat where someone raised concerns about database scalability and its impact on future growth.",
+    "reasoning": "User is looking for a discussion about database scalability issues raised by a senior developer, which occurred recently. I will target the chat from April 2, 2026.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat with the summary about beta client feedback and program expansion."
+      },
+      {
+        "description": "Matches the type 'group_chat' and the keyword 'beta client'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_038",
+    "query": "Can you pull up the group chat where the sales team discussed feedback from a beta client and talked about expanding the program?",
+    "reasoning": "User wants to reference feedback from a beta client shared by the sales team. I will target the group chat discussing the beta program expansion from April 2, 2026.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat mentioning the cybersecurity training deadline."
+      },
+      {
+        "description": "Matches the keyword 'cybersecurity training' and the type 'chat'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_005",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_039",
+    "query": "Search for the HR reminder about completing mandatory cybersecurity training by the end of the week.",
+    "reasoning": "User needs to confirm details about the cybersecurity training deadline. I will target the chat from April 2, 2026, where HR reminded everyone about the training.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat discussing UI updates for the onboarding flow."
+      },
+      {
+        "description": "Matches the type 'group_chat' and the keyword 'onboarding flow'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_040",
+    "query": "Find the recent discussion led by the product manager and design team about updating the onboarding flow interface.",
+    "reasoning": "User is looking for recent collaboration on UI updates involving the product manager and design team. I will focus on the group chat from April 2, 2026, discussing this topic.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the debugging session initiated by the junior developer"
+      },
+      {
+        "description": "Links the debugging session to the corresponding documentation file"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_041",
+    "query": "What document contains details about the debugging session for the performance bottleneck discovered by the junior developer?",
+    "reasoning": "Trace the connection between the debugging session initiated by the junior developer and the documentation that details the session.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the UI update proposal"
+      },
+      {
+        "description": "Links the email to the Slack discussion about the same proposal"
+      },
+      {
+        "description": "Connects the Slack discussion to the document containing the design mockups"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_042",
+    "query": "Where can I find the design mockups discussed in the Slack channel about the UI update proposal?",
+    "reasoning": "Connect the UI update proposal email to the Slack discussion it sparked and the corresponding proposal document.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing the beta client deal"
+      },
+      {
+        "description": "Links the email to the sales team's update on the same deal"
+      },
+      {
+        "description": "Connects the update to the file containing detailed client feedback"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "sales_beta_client_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_043",
+    "query": "What file includes the client feedback mentioned in the email about the beta client's deal?",
+    "reasoning": "Follow the chain of events from the sales team's update on the beta client deal to the email summarizing the deal and the file containing detailed feedback.",
+    "user_id": "akonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the successful optimization of the data processing module"
+      },
+      {
+        "description": "Matches this event to the group chat about the celebration with a coffee break"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_044",
+    "query": "How did the engineering team celebrate their success in optimizing the data processing module?",
+    "reasoning": "Determine how the engineering team's optimization of the data processing module was celebrated, connecting the email update to the group chat about the celebration.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the group chat mentioning the brainstorming session on onboarding flow updates"
+      },
+      {
+        "description": "Links the session to the file containing detailed notes from that meeting"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_045",
+    "query": "Where can I find the detailed notes about the brainstorming session on onboarding flow updates?",
+    "reasoning": "Trace the brainstorming session about onboarding flow updates from the chat to the file containing the session notes.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the chat where a senior developer raised concerns about scalability issues"
+      },
+      {
+        "description": "Links the concern to the document analyzing the issue in depth"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_046",
+    "query": "Where can I find detailed analysis of the scalability issue discovered by the senior developer?",
+    "reasoning": "Connect the scalability issue raised in a chat to the document analyzing the issue in detail.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the bottleneck discovery and initial debugging findings"
+      },
+      {
+        "description": "Summarizes the optimization process and the 15% performance improvement"
+      },
+      {
+        "description": "Analyzes the impact of the improvement on the SaaS product's efficiency"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_047",
+    "query": "Generate a report on the performance bottleneck discovered in the SaaS product's data processing module, including the debugging process, optimization results, and the impact on overall system performance.",
+    "reasoning": "The junior developer's discovery of a performance bottleneck and subsequent optimization by the engineering team is a critical sequence of events that showcases problem-solving and collaboration. A report should analyze the issue, resolution, and impact on the SaaS product.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Outlines key features of the proposed UI update"
+      },
+      {
+        "description": "Chronicles the Slack discussion and brainstorming session"
+      },
+      {
+        "description": "Includes decisions finalized during the brainstorming session"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_048",
+    "query": "Provide a timeline and summary of events related to the proposed user interface update for the onboarding flow, including design discussions and decisions made during brainstorming sessions.",
+    "reasoning": "The proposed user interface update for onboarding is a significant design initiative. A timeline and summary of discussions and decisions around this update would help in tracking progress and alignment across teams.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Highlights the significance of onboarding the first beta client"
+      },
+      {
+        "description": "Includes client feedback and initial usage metrics"
+      },
+      {
+        "description": "Summarizes discussions on expanding the beta program"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "sales_beta_client_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_049",
+    "query": "Create an analysis report on the first beta client's onboarding experience, including feedback received, initial usage metrics, and discussions about expanding the beta program.",
+    "reasoning": "The sales team achieved a milestone by onboarding the first beta client, and positive feedback from this client prompted discussions about expanding the beta program. A report analyzing this milestone and potential expansion opportunities would be valuable for strategic planning.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the optimization efforts of the engineering team"
+      },
+      {
+        "description": "Mentions the 15% performance improvement"
+      },
+      {
+        "description": "Explains the impact of the optimization on overall efficiency"
+      },
+      {
+        "description": "Outlines the engineering team's plans for further optimizations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_050",
+    "query": "Generate a detailed report summarizing the optimization of the data processing module, including the achieved performance improvement, its impact on overall efficiency, and plans for further enhancements.",
+    "reasoning": "The engineering team achieved a 15% performance boost in the data processing module, which is a significant milestone. A comprehensive report on this achievement, its impact, and next steps would be valuable for stakeholders.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the scalability issue discovered by the senior developer"
+      },
+      {
+        "description": "Explains the potential risks of the issue on future growth"
+      },
+      {
+        "description": "Describes the proposed solutions to address the issue"
+      },
+      {
+        "description": "Outlines the plan to ensure future scalability"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_051",
+    "query": "Provide a comprehensive analysis of the scalability issue discovered in the database architecture, including the potential risks, proposed solutions, and the plan to ensure scalability for future growth.",
+    "reasoning": "The discovery of a potential scalability issue in the database architecture is critical for future growth. An analysis of this issue, its implications, and proposed solutions is necessary for strategic planning.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the positive feedback from the beta client"
+      },
+      {
+        "description": "Explores the implications of the feedback on the product and sales strategy"
+      },
+      {
+        "description": "Proposes strategies for expanding the beta program"
+      },
+      {
+        "description": "Mentions the excitement and discussions within the sales team about scaling the program"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_052",
+    "query": "Create a report analyzing the feedback from the beta client and propose strategies for expanding the beta program to onboard more clients.",
+    "reasoning": "The positive feedback from the beta client presents an opportunity for expanding the beta program. A report analyzing this feedback and exploring strategies for scaling the program would be useful for the sales team and leadership.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes how the bottleneck was discovered"
+      },
+      {
+        "description": "Details the debugging session and findings"
+      },
+      {
+        "description": "Includes the proposed next steps and resource needs"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_053",
+    "query": "Generate a comprehensive report on the performance bottleneck discovered in the SaaS product's data processing module, including the debugging timeline, initial findings, and proposed solutions.",
+    "reasoning": "The discovery of a performance bottleneck in the SaaS product is a critical event that could impact the team's sprint goals and future scalability. A report should analyze the issue, debugging efforts, and next steps.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Highlights the key features of the UI proposal"
+      },
+      {
+        "description": "Includes feedback from the Slack discussion and brainstorming session"
+      },
+      {
+        "description": "Summarizes finalized decisions and next steps"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_054",
+    "query": "Create an analysis report on the proposed user interface update for the onboarding flow, including feedback from the Slack discussion, brainstorming session outcomes, and finalized decisions.",
+    "reasoning": "The design team's user interface proposal aims to improve onboarding flow, which is vital for user adoption. A report should summarize the proposal, Slack discussion, and the brainstorming session outcomes.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the timeline and effects of the power outage"
+      },
+      {
+        "description": "Evaluates the remote work setup's role in mitigating delays"
+      },
+      {
+        "description": "Proposes actionable solutions for similar future disruptions"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "remote_work_power_outage_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/operations/2026-04-01-power-outage-report.md",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_055",
+    "query": "Compile a report on the impact of the power outage on team workflow, including an analysis of the remote work setup's effectiveness and proposed solutions for mitigating similar issues in the future.",
+    "reasoning": "The unexpected power outage disrupted team productivity and tested the remote work setup. A report should evaluate the incident's impact and propose improvements for future scenarios.",
+    "user_id": "okonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the 15% performance improvement and its significance for overall efficiency."
+      },
+      {
+        "description": "Mentions the engineering team's celebration after the success."
+      },
+      {
+        "description": "Identifies any planned follow-up actions from the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_056",
+    "query": "Provide a summary of the engineering team's data processing module optimization, including the performance improvement, its potential impact, and any planned follow-up actions.",
+    "reasoning": "The engineering team successfully optimized the data processing module, boosting performance by 15%. A report query should summarize this achievement, its impact, and next steps.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Highlights the key decisions made during the brainstorming session."
+      },
+      {
+        "description": "Explains the next steps for finalizing the onboarding flow updates."
+      },
+      {
+        "description": "Discusses the anticipated impact on user onboarding experience."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_057",
+    "query": "Summarize the outcomes of the brainstorming session on onboarding flow UI updates, including key decisions, next steps, and their potential impact on user experience.",
+    "reasoning": "The product manager conducted a brainstorming session to finalize onboarding flow UI updates. A report query should analyze this session's key decisions and their implications.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the scalability issue and its potential impact on future growth."
+      },
+      {
+        "description": "Describes the proposed solutions and their feasibility."
+      },
+      {
+        "description": "Mentions the discussion and planning from the related meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_058",
+    "query": "Analyze the potential scalability issue discovered in the database architecture, including its implications for future growth and the proposed mitigation strategies.",
+    "reasoning": "A senior developer discovered a potential scalability issue in the database architecture. A report query should analyze the issue, its potential impact, and proposed solutions.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the 15% performance improvement achieved by the optimization"
+      },
+      {
+        "description": "Details the discussions and celebrations by the engineering team"
+      },
+      {
+        "description": "Highlights potential next steps or additional optimizations planned"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_059",
+    "query": "Provide a comprehensive report on the data processing module optimization, including performance improvements, team discussions, and future plans.",
+    "reasoning": "The engineering team successfully optimized the data processing module, which improved performance by 15%. A report query should summarize this achievement, its impact, and the team's reflections.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the scalability issue and its potential impact on future growth"
+      },
+      {
+        "description": "Summarizes proposed solutions and any immediate plans to address the risks"
+      },
+      {
+        "description": "Highlights discussions from the senior developer and relevant meetings"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_060",
+    "query": "Generate an analysis report on the database scalability issue, including the identified risks, proposed solutions, and future growth considerations.",
+    "reasoning": "The potential scalability issue in the database architecture could have significant implications for future growth. A report query should analyze the issue, proposed solutions, and planned mitigation strategies.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes key points from the beta client feedback"
+      },
+      {
+        "description": "Analyzes the feasibility and potential benefits of expanding the beta program"
+      },
+      {
+        "description": "Summarizes discussions and plans from the sales team"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_061",
+    "query": "Summarize the feedback from the recently onboarded beta client and assess the potential for expanding the beta program.",
+    "reasoning": "The sales team's positive feedback from a beta client and discussions about expanding the beta program indicate a significant development for the company. A report query should summarize the feedback and analyze the implications for future beta program expansion.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes progress updates for the Q2 sprint"
+      },
+      {
+        "description": "Highlights key roadblocks identified during the meeting"
+      },
+      {
+        "description": "Outlines proposed solutions discussed to address the roadblocks"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/meetings/2026-04-01-standup-notes.md",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email-001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "standup_q2_sprint_2026-04-01",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_062",
+    "query": "Generate a detailed summary of the Q2 sprint progress discussed during the stand-up meeting, including identified roadblocks and proposed solutions.",
+    "reasoning": "The stand-up meeting and related artifacts provide insights into the progress and challenges of the Q2 sprint. A report request should summarize these aspects comprehensively.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the performance bottleneck discovery and debugging session"
+      },
+      {
+        "description": "Includes findings and proposed steps from the debugging session"
+      },
+      {
+        "description": "Details the optimization achieved by the engineering team and its impact"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_063",
+    "query": "Provide an analysis of the performance bottleneck discovered on April 1, including the debugging session details and the engineering team's optimization efforts on April 2.",
+    "reasoning": "The discovery and optimization of the performance bottleneck in the SaaS product are critical events. A report should analyze the debugging session and subsequent improvements.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the proposed changes to the onboarding flow UI"
+      },
+      {
+        "description": "Includes feedback and discussion points from the Slack conversation"
+      },
+      {
+        "description": "Details key decisions made during the brainstorming session"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_064",
+    "query": "Create an analysis of the proposed onboarding flow UI update, including feedback from the Slack discussion and decisions made during the April 2 brainstorming session.",
+    "reasoning": "The design team's onboarding flow proposal and subsequent brainstorming session are pivotal for improving user experience. A report request should analyze these discussions and decisions.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the 15% performance improvement achieved by the engineering team."
+      },
+      {
+        "description": "Outlines the steps and strategies used to optimize the data processing module."
+      },
+      {
+        "description": "Includes future plans for additional optimizations and their anticipated impact."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_065",
+    "query": "Generate a detailed report on the data processing module optimization, including the achieved performance boost, the steps taken during the optimization, and the next steps planned for further improvements.",
+    "reasoning": "The engineering team's optimization of the data processing module is a significant event with a measurable performance improvement. A comprehensive analysis of the optimization process, its impact, and future plans is critical for organizational learning and strategic planning.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the details of the scalability issue discovered by the senior developer."
+      },
+      {
+        "description": "Discusses the potential risks associated with the issue for future growth."
+      },
+      {
+        "description": "Outlines the proposed solutions and the strategies planned to mitigate the problem."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_066",
+    "query": "Provide an in-depth analysis of the database scalability issue, detailing the risks identified, the proposed solutions, and the mitigation strategies discussed.",
+    "reasoning": "The discovery of a scalability issue in the database architecture is a critical technical concern. An analysis of this issue, including its potential risks, proposed solutions, and mitigation plans, is essential for ensuring long-term system stability.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the positive feedback from the beta client."
+      },
+      {
+        "description": "Discusses the implications of the feedback for the sales strategy."
+      },
+      {
+        "description": "Outlines the proposed plans for expanding the beta program to onboard more clients."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_067",
+    "query": "Summarize the feedback received from the beta client, its implications for the sales strategy, and the plans for expanding the beta program.",
+    "reasoning": "The sales team's receipt of positive feedback from a beta client and discussions about expanding the beta program are crucial for business development. A report summarizing the feedback, its potential impact, and the plans for expanding the program would help align internal stakeholders.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the discovery of the performance bottleneck and its initial impact"
+      },
+      {
+        "description": "Summarizes the debugging session outcomes"
+      },
+      {
+        "description": "Explains the optimization steps taken and their impact on performance"
+      },
+      {
+        "description": "Includes quantitative results such as the 15% improvement"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_068",
+    "query": "Provide a comprehensive report on the performance bottleneck discovery, debugging session, and subsequent optimization of the data processing module.",
+    "reasoning": "Given the discovery of a performance bottleneck and the subsequent optimization, a report should analyze the sequence of events, technical challenges, and the impact of the improvements.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the initial UI proposal and highlights key features"
+      },
+      {
+        "description": "Includes feedback from the Slack discussion and brainstorming session"
+      },
+      {
+        "description": "Outlines decisions made and next steps for implementation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_069",
+    "query": "Generate a detailed report on the user interface update proposal and the brainstorming session for improving the onboarding flow.",
+    "reasoning": "The design team's proposal and subsequent brainstorming session indicate iterative work on the onboarding flow UI. A report should summarize the discussions, decisions, and next steps.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the first beta client deal, including client feedback and usage metrics"
+      },
+      {
+        "description": "Summarizes discussions about expanding the beta program"
+      },
+      {
+        "description": "Analyzes implications for future client onboarding strategies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_070",
+    "query": "Create a report on the first beta client deal and the discussions about expanding the beta program.",
+    "reasoning": "The sales team's closure of a beta client deal and subsequent discussions about expanding the beta program highlight early external product adoption. A report should analyze this milestone and its implications for future strategy.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a timeline of events related to the optimization"
+      },
+      {
+        "description": "Details the 15% performance boost achieved"
+      },
+      {
+        "description": "Explains the technical modifications made to the data processing module"
+      },
+      {
+        "description": "Describes the expected impact on overall system efficiency"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_071",
+    "query": "Generate a detailed report on the engineering team's optimization of the data processing module, including a timeline of events, key technical improvements, and the expected impact on overall performance.",
+    "reasoning": "The engineering team successfully optimized the data processing module, boosting performance by 15%. This is a significant technical achievement and warrants a comprehensive report detailing the timeline, technical improvements, and expected impact.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the potential scalability issue in detail"
+      },
+      {
+        "description": "Identifies risks associated with the issue for future growth"
+      },
+      {
+        "description": "Outlines proposed solutions discussed by the team"
+      },
+      {
+        "description": "Includes plans for mitigating similar issues in the future"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_072",
+    "query": "Provide an analysis of the scalability issue discovered in the database architecture, including the potential risks, proposed solutions, and plans for addressing future growth concerns.",
+    "reasoning": "The senior developer identified a potential scalability issue in the database architecture, which could have serious implications for future growth. A full analysis should include the issue's details, potential risks, and proposed solutions.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the positive feedback from the beta client"
+      },
+      {
+        "description": "Explains why the feedback sparked discussions about expansion"
+      },
+      {
+        "description": "Evaluates the potential benefits of expanding the beta program"
+      },
+      {
+        "description": "Discusses potential risks of onboarding additional clients"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_073",
+    "query": "Summarize the feedback received from the beta client and analyze the discussions about expanding the beta program, including the potential benefits and risks of onboarding more clients.",
+    "reasoning": "The sales team received positive feedback from a beta client, leading to discussions about expanding the beta program. A report should summarize the feedback, explore the implications of the feedback, and evaluate the proposed expansion plans.",
+    "user_id": "akonkwu"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the engineering team's achievement in boosting performance by 15%"
+      },
+      {
+        "description": "Provides a detailed timeline of the optimization process"
+      },
+      {
+        "description": "Explains the potential impact of the optimization on overall system efficiency"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_074",
+    "query": "Provide a detailed report on the engineering team's optimization of the data processing module, including the timeline, performance improvements, and anticipated impact on overall efficiency.",
+    "reasoning": "The engineering team's successful optimization of the data processing module had a significant impact on performance. A comprehensive report is needed to summarize the event, including its timeline, key improvements, and potential effects on efficiency.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Highlights the major decisions made during the brainstorming session"
+      },
+      {
+        "description": "Includes a list of next steps and action items for the design team"
+      },
+      {
+        "description": "Explains how the UI updates align with the product's overarching goals"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_075",
+    "query": "Summarize the brainstorming session on the onboarding flow UI updates, including key decisions made, action items, and how they align with the overall product goals.",
+    "reasoning": "The brainstorming session on onboarding flow UI updates is critical for improving user experience. A report summarizing key decisions and next steps is necessary to track progress and ensure alignment.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the root cause of the scalability issue"
+      },
+      {
+        "description": "Outlines proposed solutions and their feasibility"
+      },
+      {
+        "description": "Provides a detailed plan for mitigating the issue and ensuring scalability for future growth"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_076",
+    "query": "Analyze the potential scalability issue in the database architecture, including its root cause, proposed solutions, and the plan to address future growth concerns.",
+    "reasoning": "The discovery of a potential scalability issue in the database architecture is a critical concern for the company's future growth. A detailed analysis is required to understand the issue, proposed solutions, and mitigation strategies.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the performance bottleneck and how it was discovered"
+      },
+      {
+        "description": "Includes findings from debugging efforts"
+      },
+      {
+        "description": "Mentions proposed solutions and requested resources"
+      },
+      {
+        "description": "Outlines follow-up actions or next steps"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_077",
+    "query": "Provide a comprehensive report on the performance bottleneck discovered in the data processing module on April 1. Include initial findings, debugging steps, proposed solutions, and any follow-up actions.",
+    "reasoning": "On April 1, a junior developer discovered a performance bottleneck in the SaaS product's data processing module, leading to an impromptu debugging session. A report query should request a detailed analysis of this incident, including findings, proposed next steps, and the resolution timeline.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the features of the user interface update proposal"
+      },
+      {
+        "description": "Includes feedback from the Slack discussion"
+      },
+      {
+        "description": "Summarizes decisions made during the brainstorming session"
+      },
+      {
+        "description": "References next steps for implementation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_078",
+    "query": "Summarize the proposed user interface update for the onboarding flow, including the initial proposal details, feedback from discussions, and key outcomes from the brainstorming session on April 2.",
+    "reasoning": "On April 1, the design team proposed a user interface update to improve onboarding flow, sparking discussions across Slack and a brainstorming session the following day. A report query should request a summary of the proposal and its subsequent developments.",
+    "user_id": "nsharma"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Mentions the significance of the beta client deal closure"
+      },
+      {
+        "description": "Includes initial client feedback and usage metrics"
+      },
+      {
+        "description": "Summarizes discussions about expanding the beta program"
+      },
+      {
+        "description": "Highlights the potential impact on the SaaS product's growth strategy"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "sales_beta_client_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_079",
+    "query": "Analyze the progression of the beta client deal, starting with the initial closure on April 1 and including subsequent feedback and discussions about expanding the program.",
+    "reasoning": "On April 1, the sales team closed a deal with a beta client, marking a significant milestone for the SaaS product's external use. Positive feedback was later received, leading to discussions about expanding the beta program. A report query should analyze this progression and its implications.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the 15% performance improvement in the data processing module"
+      },
+      {
+        "description": "Explains the broader impact on overall system efficiency"
+      },
+      {
+        "description": "Outlines any planned additional optimizations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/data_processing_optimization_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_080",
+    "query": "Generate a comprehensive report on the data processing module optimization, including the achieved performance boost, its implications, and future optimization plans.",
+    "reasoning": "The engineering team's optimization of the data processing module is a significant achievement. A report should summarize the results, the impact on performance, and any planned next steps.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the key decisions made during the brainstorming session"
+      },
+      {
+        "description": "Lists the proposed updates to the onboarding flow UI"
+      },
+      {
+        "description": "Details the next steps for implementation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_081",
+    "query": "Prepare a summary report on the onboarding flow UI updates, including the outcomes of the brainstorming session, key decisions, and next steps.",
+    "reasoning": "The product manager's brainstorming session with the design team is crucial for finalizing the onboarding flow UI updates. A report should summarize the decisions made and next steps.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the nature of the scalability issue"
+      },
+      {
+        "description": "Identifies the risks to future growth if unresolved"
+      },
+      {
+        "description": "Details proposed solutions and mitigation plans"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_082",
+    "query": "Provide an in-depth analysis of the database scalability issue, including the potential risks, proposed solutions, and plans for ensuring future scalability.",
+    "reasoning": "The scalability issue in the database architecture could have long-term implications for growth. A report should analyze the problem, proposed solutions, and mitigation strategies.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a timeline of the debugging session"
+      },
+      {
+        "description": "Details the performance bottleneck issue and its impact"
+      },
+      {
+        "description": "Summarizes proposed solutions and next steps"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "debugging_bottleneck_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "email-002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/debugging/2026-04-01-performance-analysis.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_083",
+    "query": "Generate a detailed report on the performance bottleneck discovered in the SaaS product's data processing module, including the debugging session timeline, findings, and proposed solutions.",
+    "reasoning": "The debugging session initiated by the junior developer is critical for understanding the performance bottleneck in the SaaS product. A comprehensive report should summarize the issue, the actions taken, and the proposed solutions.",
+    "user_id": "mribeiro"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the proposed UI updates"
+      },
+      {
+        "description": "Includes feedback from team discussions"
+      },
+      {
+        "description": "Details decisions finalized during the brainstorming session"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "ui_update_discussion_2026-04-01",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "email-003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/design/2026-04-01-ui-proposal.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/design/onboarding_ui_brainstorm_notes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_084",
+    "query": "Provide a comprehensive analysis of the user interface update proposal for improving onboarding flow, including the design team's discussions, feedback from Slack, and decisions made during the brainstorming session.",
+    "reasoning": "The design team's proposed user interface update is essential to improving the onboarding flow. A report query should analyze the proposal, discussions, and decisions made during brainstorming sessions.",
+    "user_id": "lzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Highlights the importance of the first beta client deal"
+      },
+      {
+        "description": "Includes client feedback and usage metrics"
+      },
+      {
+        "description": "Analyzes discussions about expanding the beta program"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "sales_beta_client_2026-04-01",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "email-004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/sales/2026-04-01-first-client-deal.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/sales/beta_client_feedback_summary.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_085",
+    "query": "Summarize the significance of the first beta client deal, including client feedback, initial usage metrics, and discussions about expanding the beta program.",
+    "reasoning": "The first external use of the SaaS product by a beta client is a milestone event. A report query should analyze the deal, initial client feedback, and discussions about expanding the beta program.",
+    "user_id": "akarim"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details on the scalability issue raised by the senior developer"
+      },
+      {
+        "description": "Summarizes the proposed solutions and their feasibility"
+      },
+      {
+        "description": "Outlines the timeline of discovery and subsequent discussions"
+      },
+      {
+        "description": "Mentions plans for addressing the issue to ensure scalability for future growth"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/engineering/database_scalability_issue_analysis.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_086",
+    "query": "Generate a comprehensive report on the potential scalability issue in the database architecture, including a timeline of discovery, proposed solutions, and planned mitigation strategies.",
+    "reasoning": "The discovery of a potential scalability issue in the database architecture is a critical concern for future growth. A report query should analyze the issue, summarize the proposed solutions, and outline the steps planned for mitigation.",
+    "user_id": "mribeiro"
+  }
+]
