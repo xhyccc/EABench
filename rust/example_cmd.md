@@ -11,7 +11,7 @@ set -a && source ../.env && set +a
 ## Generate a synthetic tenant (OpenAI / SiliconFlow)
 
 ```bash
-cargo run -- generate \
+cargo run --release -- generate \
   --company "Acme Corp" \
   --industry "Technology" \
   --description "A software startup building a new SaaS product" \
@@ -29,7 +29,7 @@ cargo run -- generate \
 ## Generate a synthetic tenant (Azure OpenAI)
 
 ```bash
-cargo run -- generate \
+cargo run --release -- generate \
   --company "Acme Corp" \
   --industry "Technology" \
   --description "A software startup building a new SaaS product" \
@@ -44,10 +44,28 @@ cargo run -- generate \
 
 ---
 
+## Generate a large tenant with many events (Azure OpenAI)
+
+```bash
+cargo run --release -- generate \
+  --company "HugeSmoothTech Corp" \
+  --industry "Software Technology" \
+  --description "A software giant building SaaS products" \
+  --events "Project Kickoff" "Q1 Review" "Performance Review" "Sales Layoff" \
+           "SDE Reorganization" "Product Refocus" "AI and LLM replacements" \
+           "Use coding agents to replace SDE" "SDE layoff" \
+  --size large \
+  --num-users 40 \
+  --days 100 \
+  --provider azure
+```
+
+---
+
 ## Dry-run (validate config without calling the LLM)
 
 ```bash
-cargo run -- generate \
+cargo run --release -- generate \
   --company "Acme Corp" \
   --industry "Technology" \
   --description "A software startup building a new SaaS product" \
@@ -59,9 +77,9 @@ cargo run -- generate \
 ## Run evaluation
 
 ```bash
-cargo run -- eval \
-  --tenant examples/tenants/test-tenant-1/tenant.yaml \
-  --eval   examples/tenants/test-tenant-1/eval_set.yaml \
+cargo run --release -- eval \
+  --tenant ../examples/tenants/test-tenant-1/tenant.yaml \
+  --eval   ../examples/tenants/test-tenant-1/eval_set.yaml \
   --workers 4
 ```
 
@@ -70,13 +88,15 @@ cargo run -- eval \
 ## Launch the web UI
 
 ```bash
-cargo run -- serve
+cargo run --release -- serve
 ```
 
 Custom port:
 
 ```bash
-cargo run -- serve --port 8502
+cargo run --release -- serve --port 8502
 ```
 
-> Defaults to `../python/app.py`. Looks for `../.venv/bin/streamlit` first, then falls back to `streamlit` on PATH.
+> Looks for `../.venv/bin/streamlit` first, then falls back to `streamlit` on PATH.
+> App path defaults to `../python/app.py`. Run from the `rust/` directory.
+

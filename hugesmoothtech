@@ -1,0 +1,9 @@
+cargo run -- generate \
+  --company "HugeSmoothTech Corp" \
+  --industry "Software Technology" \
+  --description "A software giant building SaaS products" \
+  --events "Project Kickoff" "Q1 Review" "Performance Review" "Sales Layoff" "SDE Reorganization" "Product Refocus" "AI and LLM replacements" "Use coding agents to replace SDE" "SDE layoff"\
+  --size large \
+  --num-users 40 \
+  --days 100 \
+  --provider azure

@@ -1,233 +1,277 @@
 # EABench - Agent Execution and Evaluation Platform
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/) [![Rust](https://img.shields.io/badge/rust-1.75%2B-orange.svg)](https://www.rust-lang.org/)
 
-EABench is a modular platform to execute, test, and evaluate LLM-powered agents in hermetic sandboxes. It provides realistic tenant data (emails, chats, meetings, files), configurable agent workflows, secure tool execution, and an evaluation framework that includes both deterministic assertions and LLM-based judging.
+EABench is a modular platform to execute, test, and evaluate LLM-powered agents in hermetic sandboxes. It provides realistic synthetic tenant data (emails, chats, meetings, files), configurable agent workflows, secure tool execution, and an evaluation framework combining deterministic assertions with LLM-based judging.
+
+**Architecture**: Rust handles offline data generation and evaluation; Python serves the interactive web UI.
 
 ---
 
 ## Highlights ✅
 
-- **Sandboxed Execution**: Run agents safely in isolated environments (Docker or local sandboxes).
-- **Multi-Provider LLM Support**: Configure Azure OpenAI, OpenAI-compatible endpoints, or local LLMs via adapters.
-- **Embeddings & Caching**: Support for local (`sentence-transformers`) or provider embeddings, plus local pickle-based caching to speed up startup.
-- **Flexible Agent Strategies**: ReAct (interactive loop), Researcher (Plan-then-Execute), and configurable DAG flows.
-- **Traceable & Testable**: OpenTelemetry-compatible traces and assertion-driven tests + LLM-as-a-Judge evaluations.
-- **Extensible Tooling**: Register new tools with `@tool` decorators and restrict capabilities per-agent via config.
+- **Rust CLI for data generation**: Fast, parallel tenant generation with `eabench generate`. Supports Azure OpenAI and OpenAI-compatible providers.
+- **Streamlit Web UI**: Chat with agents, run evaluations, and inspect debug traces in the browser.
+- **Sandboxed Execution**: Agents run in isolated local sandboxes with read/write/execute tool access.
+- **Multi-Provider LLM Support**: Azure OpenAI, OpenAI-compatible endpoints (SiliconFlow, etc.), or local LLMs.
+- **Embeddings & Caching**: Azure or local `sentence-transformers` embeddings, cached per-tenant as `.cache/*.pkl`.
+- **Flexible Agent Strategies**: ReAct (interactive loop) and Researcher (Plan-then-Execute).
+- **LLM-as-a-Judge Evaluation**: Deterministic assertions + configurable judge prompts for qualitative scoring.
 
 ---
 
 ## Quickstart 🚀
 
-### Python
-
-1. Clone and setup:
+### 1. Prerequisites
 
 ```bash
 git clone <repository-url>
-cd EABench/python
-bash install.sh        # creates .venv and installs all dependencies
-source .venv/bin/activate
+cd EABench
 ```
 
-2. Configure credentials (see **Configuration** below). Add a `.env` file in the repo root; do NOT commit secrets.
+Create a `.env` file in the repo root (never commit it):
 
-3. Start the web UI (recommended):
+```env
+# Azure OpenAI
+AZURE_API_KEY=<your-key>
+AZURE_ENDPOINT=https://<your-resource>.cognitiveservices.azure.com/
+AZURE_API_VERSION=2024-12-01-preview
+AZURE_EMB_API_VERSION=2023-05-15
 
-```bash
-python -m streamlit run app.py
+# OpenAI-compatible (optional)
+OPENAI_API_KEY=<your-key>
+OPENAI_API_BASE=https://api.siliconflow.cn/v1
+OPENAI_MODEL=Qwen/Qwen3-32B
 ```
 
-4. Open `http://localhost:8501`, pick a tenant user, and ask the agent questions.
-
-### Rust
+### 2. Build the Rust CLI
 
 ```bash
 cd rust
-cargo build
-cargo run
+cargo build --release
+# Binary at: rust/target/release/eabench
 ```
+
+### 3. Set up Python (web UI only)
+
+```bash
+# From repo root
+python3 -m venv .venv
+.venv/bin/pip install -r python/requirements.txt
+```
+
+### 4. Generate a tenant with the Rust CLI
+
+```bash
+cd rust
+set -a && source ../.env && set +a
+
+# Small tenant (Azure)
+cargo run --release -- generate \
+  --company "Acme Corp" \
+  --industry "Technology" \
+  --description "A software startup building a SaaS product" \
+  --events "Project Kickoff" "Q1 Review" \
+  --size small \
+  --num-users 5 \
+  --days 7 \
+  --provider azure
+
+# Large tenant with many events (Azure)
+cargo run --release -- generate \
+  --company "HugeSmoothTech Corp" \
+  --industry "Software Technology" \
+  --description "A software giant building SaaS products" \
+  --events "Project Kickoff" "Q1 Review" "Performance Review" "Sales Layoff" \
+             "SDE Reorganization" "Product Refocus" "AI and LLM replacements" \
+             "Use coding agents to replace SDE" "SDE layoff" \
+  --size large \
+  --num-users 40 \
+  --days 100 \
+  --provider azure
+```
+
+Output is written to `../examples/tenants/<company-slug-YYYYMMDD>/`.
+
+### 5. Launch the web UI
+
+```bash
+# Option A: via Rust CLI (run from rust/)
+cargo run --release -- serve
+
+# Option B: directly (run from repo root)
+set -a && source .env && set +a
+.venv/bin/streamlit run python/app.py --server.port 8501
+```
+
+Open **http://localhost:8501**, select a tenant and user from the sidebar, and start chatting.
 
 ---
 
 ## Configuration
 
-- Environment variables are defined in `.env`:
-  - For Azure: `AZURE_API_KEY`, `AZURE_ENDPOINT`, `AZURE_API_VERSION`.
-  - For OpenAI: `OPENAI_API_KEY`, `OPENAI_API_BASE`.
+### Environment variables (`.env`)
 
-- Agent configs live in `examples/agents/`. You can change model, embedding provider, prompts, and flow strategy in YAML.
+| Variable | Purpose |
+|---|---|
+| `AZURE_API_KEY` | Azure OpenAI API key |
+| `AZURE_ENDPOINT` | Azure OpenAI endpoint URL |
+| `AZURE_API_VERSION` | Chat completions API version (e.g. `2024-12-01-preview`) |
+| `AZURE_EMB_API_VERSION` | Embeddings API version (e.g. `2023-05-15`) |
+| `OPENAI_API_KEY` | OpenAI / compatible API key |
+| `OPENAI_API_BASE` | Custom base URL (e.g. SiliconFlow) |
+| `OPENAI_MODEL` | Model name for OpenAI provider |
 
-- Tenants & test data live under `examples/tenants/` (create new tenants by copying an existing folder and editing its YAML). Each tenant contains:
-  - user definitions
-  - files (documents, emails)
-  - tenant-level settings (resource limits, protected files)
+### Agent configs
 
-- **Tenant generation (recommended)**: For large-scale or reproducible evaluation, generate tenants programmatically. The generator accepts options like `--users`, `--seed`, and `--scenario` and outputs a tenant folder with `tenant.yaml`, a `files/` directory, and an optional `.cache/` for cached embeddings.
+Agent configs live in `examples/agents/`. Key fields:
+- `model`: provider (`azure` or `openai`), deployment name, temperature
+- `embedding`: provider and model for semantic search
+- `flow.strategy`: `react` or `researcher`
+- `tools.definitions`: list of enabled tool names
+- `query_analyzer_prompt`: per-domain LLM prompts that refine search queries
 
-  Use the real CLI tools provided in the repo:
+### Tenant data
 
-  - To generate a new tenant, use `generate_data.py` which accepts `--company`, `--industry`, `--size`, `--num_users`, `--days`, `--events`, `--description`, and `--prompts`.
+Tenants live under `examples/tenants/<tenant-id>/`:
+- `tenant.yaml` — users, emails, chats, meetings, files metadata
+- `data/` — actual file contents
+- `docs/` — additional documents
+- `.cache/` — precomputed embeddings cache (delete to force re-index)
 
-  Example:
-  ```bash
-  python generate_data.py \
-    --company "Acme Corp" \
-    --industry "SaaS" \
-    --size small \
-    --num_users 20 \
-    --days 14 \
-    --eval_batch_size 10 \
-    --events "Project Alpha Kickoff" "Memory Leak Incident" \
-    --description "Incident response training scenario" \
-    --prompts examples/generation/default_prompts.yaml
-  ```
+---
 
-  Output layout (example):
-  - `examples/tenants/<tenant-id>/tenant.yaml`
-  - `examples/tenants/<tenant-id>/files/` (documents, emails, meeting notes)
-  - `examples/tenants/<tenant-id>/.cache/` (optional precomputed embeddings)
+## Rust CLI Reference
 
-- **Evaluation query sets**: Place a canonical `eval_queries.yaml` in the tenant folder to define reproducible test queries. Each entry should include `id`, `prompt`, `expected_assertions` (for deterministic checks), `difficulty`, `tags`, and optional `ground_truth_refs` used by Judges.
+All commands are run from the `rust/` directory. Load credentials first:
 
-  Example query entry:
-  ```yaml
+```bash
+set -a && source ../.env && set +a
+```
+
+### `generate` — Create a synthetic tenant
+
+```bash
+cargo run --release -- generate \
+  --company    "Acme Corp" \
+  --industry   "Technology" \
+  --description "A software startup" \
+  --events     "Project Kickoff" "Q1 Review" \
+  --size       small \          # small | medium | large
+  --num-users  5 \
+  --days       7 \
+  --provider   azure            # azure | openai
+```
+
+Optional flags:
+- `--output <dir>` — output directory (default: `../examples/tenants`)
+- `--prompts <path>` — prompt templates YAML (default: `../examples/generation/default_prompts.yaml`)
+- `--model <name>` — override deployment/model name
+- `--dry-run` — validate config without calling the LLM
+
+### `eval` — Run deterministic evaluation
+
+```bash
+cargo run --release -- eval \
+  --tenant  examples/tenants/test-tenant-1/tenant.yaml \
+  --eval    examples/tenants/test-tenant-1/eval_set.yaml \
+  --workers 4
+```
+
+### `serve` — Launch the web UI
+
+```bash
+cargo run --release -- serve              # default port 8501
+cargo run --release -- serve --port 8502  # custom port
+```
+
+Looks for `.venv/bin/streamlit` in the repo root first, then falls back to `streamlit` on PATH.
+
+---
+
+## Eval Dataset Format
+
+Generated eval datasets (`eval_dataset_<timestamp>.yaml`) follow this structure:
+
+```yaml
+name: "Acme Corp Evaluation"
+description: "..."
+cases:
   - id: case_001
     query: "Summarize the action items from the last deployment meeting."
     user_id: user123
     assertions:
-      - file_contains:
-          path: files/meeting_notes/notes_2025-11-10.txt
-          contains: "action item"
+      - contains: "action item"
     entity_list: []
-  ```
-  The generator actually produces `eval_dataset_<timestamp>.yaml` with the following structure:
-
-  - `name`: Human-readable name for the eval set
-  - `description`: Short description
-  - `cases`: List of test cases where each case contains:
-    - `id`: Case identifier (e.g., `case_001`)
-    - `query`: The user-facing query string
-    - `user_id`: The synthetic user to run as (optional)
-    - `assertions`: Deterministic checks (list of dicts, e.g., `file_contains`)
-    - `entity_list`: Optional list of entities to verify or mask
-
-  Example case (YAML snippet):
-
-  Best practices:
-  - Use deterministic seeds for reproducible tenant and query generation.
-  - Create paraphrase variants to test robustness.
-  - Tag queries with difficulty and rubric hints for Judge models.
-  - Keep query sets version-controlled alongside tenants.
-
-**Security note**: Never check secrets into git. Use a secrets manager or `.env` with `.gitignore`.
-
----
-
-## Important Concepts & Features 🔧
-
-### Researcher Strategy (Plan-then-Execute)
-The `researcher` flow generates a high-level plan before executing steps. This improves reliability for multi-hop or long-horizon tasks by separating planning and execution and sanitizing the final output to hide internal planning artifacts.
-
-### Embeddings & Local Cache
-Embeddings are cached per-tenant in a `.cache/` directory inside the tenant root. The cache keys are based on file content hashes to support invalidation when files change. This dramatically reduces startup indexing latency for large datasets.
-
-### Observability & Evaluation
-- Traces follow OpenTelemetry conventions to capture reasoning spans, tool calls, and observations.
-- Evaluation combines deterministic assertions (file state, tool usage) with an LLM-based Judge for qualitative measures like faithfulness and reasoning quality.
-
----
-
-## Usage Patterns
-
-### Web UI (Interactive)
-
-```bash
-python -m streamlit run app.py
 ```
 
-- Switch users from the sidebar to change agent permissions and data visibility.
-- Try queries such as: "Summarize action items from the last meeting." or "Find emails referencing the memory leak."
+---
 
-### CLI (Batch/Eval)
+## Important Concepts 🔧
 
-- `python main.py` runs the CLI demo (indexes a tenant and executes a sample query).
-- Use evaluation scripts in `src/eval/` to run test suites and collect Judge scores.
+### Researcher Strategy (Plan-then-Execute)
+The `researcher` flow generates a high-level research plan before executing tool calls. This improves reliability for multi-hop questions by separating planning and execution.
+
+### Embeddings & Cache
+Embeddings are cached per-tenant in `.cache/embeddings_<model>.pkl`. Delete the `.cache/` directory to force re-indexing after data changes.
+
+### Search Analysis Debug Tab
+In the web UI Chat view, the **Debug Logs** expander (open by default after a query) shows:
+- **Reasoning Trace**: every LLM call/response in the turn
+- **Search Analysis**: every tool call with its arguments, optional query-analyzer output, and raw results
 
 ---
 
 ## Developer Workflow
 
-### Python
+### Python tests
 
-- Install (one-time):
-  ```bash
-  cd python
-  bash install.sh --dev     # also installs pytest, black, ruff
-  source .venv/bin/activate
-  ```
+```bash
+# From repo root
+set -a && source .env && set +a
+.venv/bin/python -m pytest python/tests/ -v
+```
 
-- Run tests:
-  ```bash
-  cd python
-  pytest tests/ -q
-  ```
+### Rust build & tests
 
-- Lint & format:
-  ```bash
-  black . && ruff .
-  ```
-
-- Run a single agent locally (example):
-  ```bash
-  python -m src.core.agent_runner --agent examples/agents/researcher_agent.yaml --tenant examples/tenants/test-tenant-1
-  ```
-
-- Add a new tool: create a function and decorate with `@tool`, include an args schema (Pydantic) and register it in the ToolRegistry.
-
-### Rust
-
-- Build and test:
-  ```bash
-  cd rust
-  cargo build
-  cargo test
-  ```
+```bash
+cd rust
+cargo build --release
+cargo test
+```
 
 ---
 
 ## Project Structure
 
+## Project Structure
+
 ```
 EABench/
-├── python/                  # Python implementation
-│   ├── install.sh           # One-step install script
+├── .env                         # Credentials (not committed)
+├── python/                      # Web UI (Streamlit)
 │   ├── requirements.txt
-│   ├── app.py               # Streamlit web UI
-│   ├── main.py              # CLI entry point
-│   ├── generate_data.py     # Tenant data generator
-│   ├── generate_eval.py     # Evaluation set generator
-│   ├── debug_search.py      # Search debugging utility
-│   ├── src/
-│   │   ├── core/            # Agent runtime, search engine, LLM providers
-│   │   ├── config/          # Pydantic schemas for agent & tenant configs
-│   │   ├── sandbox/         # LocalSandbox implementation
-│   │   ├── eval/            # Evaluator, assertions, Judge templates
-│   │   └── generator/       # Tenant & eval data generation pipeline
-│   └── tests/               # Pytest test suite (98 tests)
-├── rust/                    # Rust implementation
-│   ├── Cargo.toml
-│   ├── README.md
+│   ├── app.py                   # Streamlit entry point
 │   └── src/
-│       ├── config/          # TenantConfig, AgentConfig
-│       ├── sandbox/         # LocalSandbox (Sandbox trait)
-│       ├── search/          # Keyword SearchEngine
-│       └── eval/            # Deterministic Evaluator (72 tests)
+│       ├── core/                # Agent runner, search engine, LLM/embedding providers
+│       ├── config/              # Pydantic schemas (TenantConfig, AgentConfig)
+│       ├── sandbox/             # LocalSandbox
+│       └── eval/                # Evaluator, assertions, judge templates
+│   └── tests/                   # Pytest suite (113 tests)
+├── rust/                        # Offline CLI (data gen + eval)
+│   ├── Cargo.toml
+│   ├── example_cmd.md           # CLI usage reference
+│   └── src/
+│       ├── main.rs              # CLI: eval | generate | serve subcommands
+│       ├── generator/           # Synthetic tenant generator (LLM-driven)
+│       ├── eval/                # Deterministic evaluator
+│       ├── search/              # Keyword search engine
+│       └── config/              # TenantConfig, AgentConfig (Rust)
 └── examples/
-    ├── agents/              # Agent YAML configurations
-    ├── tenants/             # Tenant test datasets
-    ├── evals/               # Judge prompt configurations
-    └── generation/          # Prompt templates for data generation
+    ├── agents/                  # Agent YAML configs (react_agent.yaml, researcher_agent.yaml, …)
+    ├── tenants/                 # Generated tenant datasets
+    ├── evals/                   # Judge prompt configs
+    └── generation/              # Prompt templates for data generation
 ```
 
 ---
