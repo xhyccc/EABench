@@ -25,7 +25,7 @@ EABench is a modular platform to execute, test, and evaluate LLM-powered agents 
 ### 1. Prerequisites
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-org/EABench.git
 cd EABench
 ```
 
@@ -244,7 +244,6 @@ cargo test
 
 ## Project Structure
 
-## Project Structure
 
 ```
 EABench/

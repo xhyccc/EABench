@@ -5,6 +5,7 @@ import datetime
 from typing import List, Dict, Any
 from pydantic import BaseModel
 from .models import StoryConfig, GenerationOutput
+from .yaml_utils import yaml_dump
 from ..core.llm_provider import LLMProvider
 from ..config.tenant_config import TenantConfig, UserInfo, Email, Chat, GroupChat, Meeting, FileMetadata
 
@@ -54,7 +55,7 @@ class DataGenerator:
         )
         tenant_data = tenant_config.model_dump(exclude={'emails', 'chats', 'group_chats', 'meetings', 'channels', 'files_metadata'}, exclude_none=True)
         with open(os.path.join(base_path, "tenant.yaml"), "w") as f:
-            yaml.dump(tenant_data, f)
+            yaml_dump(tenant_data, f)
         
         print(f"Users generated and saved to {os.path.join(base_path, 'tenant.yaml')}")
 
@@ -206,7 +207,7 @@ class DataGenerator:
         # If it's a list, we append
         
         data = item.model_dump(exclude_none=True)
-        yaml_str = yaml.dump([data], sort_keys=False)
+        yaml_str = yaml_dump([data], sort_keys=False)
         
         # Check if file is empty or just "[]"
         if os.path.exists(path):
@@ -885,7 +886,7 @@ class DataGenerator:
         }
         
         with open(output_path, "w") as f:
-            yaml.dump(eval_data, f, sort_keys=False, allow_unicode=True, width=1000)
+            yaml_dump(eval_data, f, sort_keys=False, width=1000)
             
         print(f"Generated {len(final_cases)} evaluation queries. Saved to {output_path}")
 
@@ -912,7 +913,7 @@ class DataGenerator:
         }
         
         with open(os.path.join(base_path, "eval_set.yaml"), "w") as f:
-            yaml.dump(eval_data, f)
+            yaml_dump(eval_data, f)
 
     def _parse_json(self, text: str) -> Any:
         import re
@@ -976,4 +977,4 @@ class DataGenerator:
     def _save_list_to_yaml(self, items: List[BaseModel], path: str):
         data = [item.model_dump() for item in items]
         with open(path, "w") as f:
-            yaml.dump(data, f)
+            yaml_dump(data, f)

@@ -1,10 +1,21 @@
 import streamlit as st
 import asyncio
 import os
+import sys
 from dotenv import load_dotenv
+
+# Anchor all relative paths to the repository root (one level above python/).
+# This ensures the app works correctly regardless of the working directory from
+# which `streamlit run python/app.py` is invoked.
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(_REPO_ROOT)
+# Also make sure `python/src` is importable when running from repo root.
+_PYTHON_DIR = os.path.join(_REPO_ROOT, "python")
+if _PYTHON_DIR not in sys.path:
+    sys.path.insert(0, _PYTHON_DIR)
 from src.config.agent_config import AgentConfig, ProviderType
 from src.config.tenant_config import TenantConfig
-from src.core.agent_runner import AgentRunner
+from src.core.agent_runner import AgentRunner, MaxTurnsExceededError
 from src.core.llm_provider import MockLLMProvider
 from src.core.openai_provider import OpenAIProvider
 from src.core.azure_provider import AzureOpenAIProvider
@@ -212,6 +223,8 @@ if app_mode == "Chat":
                     st.markdown(response)
                     st.caption(f"Metrics: {run_result.metrics}")
                     st.session_state.messages.append({"role": "assistant", "content": response})
+                except MaxTurnsExceededError:
+                    st.warning("⚠️ The agent reached its maximum number of turns without producing a final answer. Try rephrasing your question or increasing `max_turns` in the agent config.")
                 except Exception as e:
                     st.error(f"Error: {e}")
 
@@ -286,6 +299,7 @@ elif app_mode == "Evaluation":
     st.title("Agent Evaluation")
     
     import yaml
+    from src.generator.yaml_utils import yaml_dump
     from src.eval.models import EvaluationSet
     from src.eval.evaluator import Evaluator
     
@@ -403,8 +417,8 @@ elif app_mode == "Evaluation":
                         r_dict['assertion_results'] = reordered_assertions
                     download_data["detailed_results"].append(r_dict)
 
-                yaml_output = yaml.dump(download_data, sort_keys=False, default_flow_style=False)
-                
+                yaml_output = yaml_dump(download_data, sort_keys=False, default_flow_style=False)
+
                 st.download_button(
                     label="Download Results (YAML)",
                     data=yaml_output,
@@ -477,6 +491,7 @@ elif app_mode == "Side-by-Side Comparison":
     st.title("Side-by-Side Agent Comparison")
     
     import yaml
+    from src.generator.yaml_utils import yaml_dump
     from src.eval.models import EvaluationSet, ComparisonResult
     from src.eval.evaluator import Evaluator
     
@@ -725,7 +740,7 @@ elif app_mode == "Side-by-Side Comparison":
                     "detailed_comparisons": [r.model_dump() for r in comparison_results]
                 }
                 
-                yaml_output = yaml.dump(download_data, sort_keys=False, default_flow_style=False)
+                yaml_output = yaml_dump(download_data, sort_keys=False, default_flow_style=False)
                 st.download_button(
                     label="Download Comparison (YAML)",
                     data=yaml_output,

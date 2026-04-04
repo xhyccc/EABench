@@ -25,11 +25,11 @@ class AgentRunner:
 
     async def run(self, user_query: str, sandbox: SandboxInterface, search_engine=None) -> AgentRunResult:
         # 1. Initialize Context (Only if history is empty)
+        user_profile_str = ""  # Always defined so Researcher path can reference it safely
         if not self.history:
             system_prompt = self.config.system_prompt
             
             # Inject User Profile if available
-            user_profile_str = ""
             if search_engine and search_engine.current_user_id:
                 user = next((u for u in search_engine.tenant.users if u.id == search_engine.current_user_id), None)
                 if user:
@@ -55,7 +55,7 @@ class AgentRunner:
             
             # Fill placeholders
             planning_prompt = planning_prompt_template.replace("{user_query}", user_query)
-            if "{user_profile}" in planning_prompt and 'user_profile_str' in locals():
+            if "{user_profile}" in planning_prompt and user_profile_str:
                 planning_prompt = planning_prompt.replace("{user_profile}", user_profile_str)
 
             # Generate Plan (using a temporary history to not pollute the main context yet, or maybe we want it?)
@@ -128,7 +128,10 @@ class AgentRunner:
             
             steps += 1
         
-        raise MaxTurnsExceededError()
+        raise MaxTurnsExceededError(
+            f"Agent reached the maximum of {self.config.flow.max_turns} turns "
+            "without producing a final answer."
+        )
 
     async def _execute_tool(self, call: ToolCall, sandbox: SandboxInterface, search_engine=None) -> str:
         tool_func = self.tools.get_tool(call.name)

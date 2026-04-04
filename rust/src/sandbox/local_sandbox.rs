@@ -2,6 +2,7 @@ use anyhow::{bail, Context, Result};
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::Command;
+use std::time::Duration;
 use tempfile::TempDir;
 use walkdir::WalkDir;
 
@@ -175,13 +176,39 @@ impl Sandbox for LocalSandbox {
 
     fn execute_command(&self, cmd: &str) -> Result<String> {
         let root = self.root_dir.as_ref().context("Sandbox not started")?;
-        let output = Command::new("sh")
+
+        const TIMEOUT_SECS: u64 = 30;
+
+        let mut child = Command::new("sh")
             .arg("-c")
             .arg(cmd)
             .current_dir(root)
-            .output()
+            .stdout(std::process::Stdio::piped())
+            .stderr(std::process::Stdio::piped())
+            .spawn()
             .with_context(|| format!("executing command: {}", cmd))?;
 
+        // Poll for completion with a deadline so a runaway command cannot
+        // block the entire generator indefinitely.
+        let deadline = std::time::Instant::now() + Duration::from_secs(TIMEOUT_SECS);
+        loop {
+            match child.try_wait()? {
+                Some(_status) => break,
+                None => {
+                    if std::time::Instant::now() >= deadline {
+                        let _ = child.kill();
+                        bail!(
+                            "Command timed out after {} seconds: {}",
+                            TIMEOUT_SECS,
+                            cmd
+                        );
+                    }
+                    std::thread::sleep(Duration::from_millis(100));
+                }
+            }
+        }
+
+        let output = child.wait_with_output()?;
         let mut result = String::from_utf8_lossy(&output.stdout).to_string();
         result.push_str(&String::from_utf8_lossy(&output.stderr));
         Ok(result)

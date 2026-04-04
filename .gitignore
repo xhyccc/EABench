@@ -5,6 +5,9 @@ __pycache__/
 .DS_Store
 .cache/
 
+# Generated tenant embedding caches (can be large)
+examples/tenants/*/.cache/
+
 # Rust build artifacts
 rust/target/
 

@@ -13,8 +13,6 @@ walkdir = "2.5"
 tempfile = "3.19"
 rayon = "1.11"
 chrono = { version = "0.4", features = ["serde"] }
-ureq = { version = "2.10", features = ["json", "native-tls"], default-features = false }
-native-tls = "0.2"
 
 [[bin]]
 name = "eabench"

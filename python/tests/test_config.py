@@ -5,6 +5,8 @@ import pytest
 import yaml
 import tempfile
 
+from src.generator.yaml_utils import yaml_dump
+
 from src.config.tenant_config import (
     TenantConfig,
     UserInfo,
@@ -64,7 +66,7 @@ def _make_tenant_yaml(tmp_path: str, extra: dict = None) -> str:
 
     tenant_path = os.path.join(tmp_path, "tenant.yaml")
     with open(tenant_path, "w") as f:
-        yaml.dump(data, f)
+        yaml_dump(data, f)
 
     # Create config and data dirs so from_yaml doesn't crash on missing dirs
     os.makedirs(os.path.join(tmp_path, "config"), exist_ok=True)
@@ -84,7 +86,7 @@ def _make_agent_yaml(tmp_path: str) -> str:
     }
     path = os.path.join(tmp_path, "agent.yaml")
     with open(path, "w") as f:
-        yaml.dump(data, f)
+        yaml_dump(data, f)
     return path
 
 
@@ -212,7 +214,7 @@ class TestTenantConfigFromYaml:
         ]
         config_dir = os.path.join(str(tmp_path), "config")
         with open(os.path.join(config_dir, "files.yaml"), "w") as f:
-            yaml.dump(files_yaml, f)
+            yaml_dump(files_yaml, f)
         cfg = TenantConfig.from_yaml(tenant_path)
         assert len(cfg.files_metadata) == 1
         assert cfg.files_metadata[0].snippet == "A readme"
@@ -233,7 +235,7 @@ class TestTenantConfigFromYaml:
         ]
         config_dir = os.path.join(str(tmp_path), "config")
         with open(os.path.join(config_dir, "emails.yaml"), "w") as f:
-            yaml.dump(emails_yaml, f)
+            yaml_dump(emails_yaml, f)
         cfg = TenantConfig.from_yaml(tenant_path)
         # user1 should be resolved to alice@example.com
         assert cfg.emails[0].from_user == "alice@example.com"
@@ -256,7 +258,7 @@ class TestTenantConfigFromYaml:
         ]
         config_dir = os.path.join(str(tmp_path), "config")
         with open(os.path.join(config_dir, "chats.yaml"), "w") as f:
-            yaml.dump(chats_yaml, f)
+            yaml_dump(chats_yaml, f)
         cfg = TenantConfig.from_yaml(tenant_path)
         assert len(cfg.chats) == 1
         assert cfg.chats[0].messages[0].content == "Hello"

@@ -290,6 +290,127 @@ fn build_user_info_from_json(u: &Value, user_id: &str, domain: &str) -> Result<U
 }
 
 // ---------------------------------------------------------------------------
+// Helper: strip trailing whitespace from string values before YAML serialisation
+// ---------------------------------------------------------------------------
+
+/// Recursively strip trailing whitespace from every line of every string value
+/// inside a [`serde_json::Value`].
+///
+/// `serde_yaml` (like PyYAML) falls back to double-quoted scalars with `\n`
+/// escape sequences whenever any line in a multi-line string ends with a space
+/// character, because literal block scalars (`|`) would silently drop those
+/// trailing spaces on round-trip.  Trailing spaces in generated text content
+/// (email bodies, transcripts, chat messages, …) are never semantically
+/// meaningful, so stripping them here guarantees that strings are always
+/// written as `|-` block scalars by serde_yaml (which are then converted to
+/// inline double-quoted scalars by `inline_multiline_strings`).
+fn strip_trailing_ws(value: serde_json::Value) -> serde_json::Value {
+    match value {
+        serde_json::Value::String(s) => {
+            // Strip trailing whitespace per line, then trim any trailing
+            // newlines from the whole string.  This forces serde_yaml to use
+            // `|-` (strip chomping) rather than `|` (clip).
+            let cleaned: String = s
+                .split('\n')
+                .map(|line| line.trim_end())
+                .collect::<Vec<_>>()
+                .join("\n");
+            let cleaned = cleaned.trim_end_matches('\n').to_string();
+            serde_json::Value::String(cleaned)
+        }
+        serde_json::Value::Array(arr) => {
+            serde_json::Value::Array(arr.into_iter().map(strip_trailing_ws).collect())
+        }
+        serde_json::Value::Object(obj) => {
+            serde_json::Value::Object(
+                obj.into_iter()
+                    .map(|(k, v)| (k, strip_trailing_ws(v)))
+                    .collect(),
+            )
+        }
+        other => other,
+    }
+}
+
+/// Convert serde_yaml block scalar output to inline double-quoted strings.
+///
+/// serde_yaml uses `|-` literal block scalars for multi-line strings:
+/// ```yaml
+/// body: |-
+///   line1
+///   line2
+/// ```
+/// This function converts them to single-line double-quoted scalars:
+/// ```yaml
+/// body: "line1\nline2"
+/// ```
+/// which is valid YAML and round-trips correctly through both `serde_yaml`
+/// and PyYAML's `safe_load`.
+fn inline_multiline_strings(yaml: &str) -> String {
+    let lines: Vec<&str> = yaml.lines().collect();
+    let mut out = String::with_capacity(yaml.len());
+    let mut i = 0;
+    while i < lines.len() {
+        let raw = lines[i];
+        let indent = raw.chars().take_while(|c| *c == ' ').count();
+        let rest = raw.trim_start_matches(' ').trim_end();
+
+        // Detect block scalar indicators: `key: |-` or `key: |`
+        let (key_part, chomping) = if rest.ends_with(": |-") {
+            (&rest[..rest.len() - 4], "strip")
+        } else if rest.ends_with(": |") {
+            (&rest[..rest.len() - 3], "clip")
+        } else {
+            out.push_str(raw.trim_end());
+            out.push('\n');
+            i += 1;
+            continue;
+        };
+
+        // Content lines are indented by `indent + 2` relative to the file root
+        let block_indent = indent + 2;
+        let mut block_lines: Vec<String> = Vec::new();
+        i += 1;
+        while i < lines.len() {
+            let bl = lines[i];
+            let bl_indent = bl.chars().take_while(|c| *c == ' ').count();
+            if bl.trim().is_empty() {
+                block_lines.push(String::new());
+                i += 1;
+            } else if bl_indent >= block_indent {
+                block_lines.push(bl[block_indent..].trim_end().to_string());
+                i += 1;
+            } else {
+                break;
+            }
+        }
+
+        // Strip chomping: remove trailing empty lines
+        if chomping == "strip" {
+            while block_lines.last().map_or(false, |s| s.is_empty()) {
+                block_lines.pop();
+            }
+        }
+
+        // Escape for double-quoted YAML scalar
+        let joined = block_lines.join("\n");
+        let escaped = joined
+            .replace('\\', "\\\\")
+            .replace('"', "\\\"")
+            .replace('\n', "\\n")
+            .replace('\r', "\\r")
+            .replace('\t', "\\t");
+
+        out.push_str(&" ".repeat(indent));
+        out.push_str(key_part);
+        out.push_str(": \"");
+        out.push_str(&escaped);
+        out.push_str("\"\n");
+    }
+    out
+}
+
+// ---------------------------------------------------------------------------
 // Helper: append a YAML-serialisable item to a YAML list file
 // ---------------------------------------------------------------------------
 
@@ -298,9 +419,11 @@ fn build_user_info_from_json(u: &Value, user_id: &str, domain: &str) -> Result<U
 /// If the file contains only `[]`, it is replaced with a one-element list.
 /// Otherwise the serialised item is appended as YAML.
 pub fn append_to_yaml<T: serde::Serialize>(item: &T, path: &str) -> Result<()> {
-    let data = serde_json::to_value(item)?;
-    let yaml_str = serde_yaml::to_string(&vec![data])
-        .with_context(|| format!("serialising item to YAML for {}", path))?;
+    let data = strip_trailing_ws(serde_json::to_value(item)?);
+    let yaml_str = inline_multiline_strings(
+        &serde_yaml::to_string(&vec![data])
+            .with_context(|| format!("serialising item to YAML for {}", path))?,
+    );
 
     if Path::new(path).exists() {
         let content = fs::read_to_string(path)?;
@@ -416,8 +539,12 @@ impl DataGenerator {
             root_path: None,
         };
 
-        let tenant_yaml = serde_yaml::to_string(&tenant_config)
-            .context("serialising tenant config to YAML")?;
+        let tenant_yaml = inline_multiline_strings(
+            &serde_yaml::to_string(
+                &strip_trailing_ws(serde_json::to_value(&tenant_config)?),
+            )
+            .context("serialising tenant config to YAML")?,
+        );
         fs::write(format!("{}/tenant.yaml", base_path), tenant_yaml)?;
 
         println!(
@@ -1940,7 +2067,7 @@ impl DataGenerator {
             "cases": yaml_cases
         });
 
-        let yaml_str = serde_yaml::to_string(&eval_data)?;
+        let yaml_str = inline_multiline_strings(&serde_yaml::to_string(&strip_trailing_ws(eval_data))?);
         let yaml_path = format!("{}/eval_dataset_{}.yaml", base_path, timestamp);
         fs::write(&yaml_path, yaml_str)?;
 
@@ -2609,5 +2736,52 @@ mod tests {
         let template = "Output: {{\"id\": \"{id}\"}}";
         let result = format_template(template, &[("id", "test123")]);
         assert_eq!(result, "Output: {\"id\": \"test123\"}");
+    }
+
+    // -----------------------------------------------------------------------
+    // YAML multiline string serialisation
+    // -----------------------------------------------------------------------
+
+    /// serde_yaml 0.9 must emit literal block scalars (``|``) for strings that
+    /// contain newline characters so that the YAML is both human-readable and
+    /// safe for round-trip reads with any YAML 1.1/1.2 parser.
+    #[test]
+    fn test_serde_yaml_multiline_string_uses_literal_block() {
+        let body = "Dear Alice,\n\nPlease review the attached report.\n\nBest,\nBob";
+        let item = serde_json::json!({
+            "id": "e1",
+            "body": body,
+        });
+        let yaml_str = serde_yaml::to_string(&vec![item]).unwrap();
+        // A literal block scalar starts with `|` on the key line, e.g. `body: |`
+        assert!(
+            yaml_str.contains("|\n") || yaml_str.contains("body: |"),
+            "expected literal block scalar for multi-line string, got:\n{}",
+            yaml_str
+        );
+        // The content must be round-trippable: parse back and compare
+        let parsed: Vec<serde_json::Value> = serde_yaml::from_str(&yaml_str).unwrap();
+        assert_eq!(
+            parsed[0].get("body").and_then(|v| v.as_str()),
+            Some(body),
+            "round-trip failed for multi-line string"
+        );
+    }
+
+    #[test]
+    fn test_serde_yaml_single_line_string_no_literal_block() {
+        let item = serde_json::json!({"subject": "Hello World"});
+        let yaml_str = serde_yaml::to_string(&vec![item]).unwrap();
+        // Single-line strings should NOT need a literal block marker
+        assert!(
+            !yaml_str.contains("subject: |"),
+            "single-line string should not use literal block scalar, got:\n{}",
+            yaml_str
+        );
+        let parsed: Vec<serde_json::Value> = serde_yaml::from_str(&yaml_str).unwrap();
+        assert_eq!(
+            parsed[0].get("subject").and_then(|v| v.as_str()),
+            Some("Hello World")
+        );
     }
 }

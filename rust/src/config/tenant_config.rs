@@ -13,6 +13,7 @@ pub struct UserName {
     pub display_name: String,
     pub first_name: String,
     pub last_name: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub nickname: Option<String>,
 }
 
@@ -20,13 +21,19 @@ pub struct UserName {
 pub struct UserProfile {
     pub email: String,
     pub name: UserName,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub manager_id: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub skip_manager_id: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub department: Option<String>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub skills: Vec<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub title: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub location: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub timezone: Option<String>,
 }
 
@@ -46,10 +53,15 @@ pub struct UserInfo {
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
 pub struct FileMetadata {
     pub path: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub created_by: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub created_time: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub last_modified_by: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub last_modified_time: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub snippet: Option<String>,
 }
 
@@ -60,6 +72,7 @@ pub struct FileMetadata {
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
 pub struct ChatMessage {
     pub from_user: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub to_user: Option<String>,
     pub content: String,
     pub timestamp: String,
@@ -91,15 +104,16 @@ pub struct Meeting {
     pub id: String,
     pub title: String,
     pub organizer: String,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub invitees: Vec<String>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub attendees: Vec<String>,
     pub start_time: String,
     pub end_time: String,
     pub agenda: String,
     #[serde(default = "default_location")]
     pub location: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
     pub transcript: Option<String>,
 }
 
@@ -159,21 +173,21 @@ pub struct TenantConfig {
     pub id: String,
     #[serde(default = "default_domain")]
     pub domain: String,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub users: Vec<UserInfo>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub files_metadata: Vec<FileMetadata>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub chats: Vec<Chat>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub group_chats: Vec<GroupChat>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub meetings: Vec<Meeting>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub emails: Vec<Email>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub channels: Vec<Channel>,
-    #[serde(default)]
+    #[serde(default, skip_serializing_if = "HashMap::is_empty")]
     pub resource_limits: HashMap<String, String>,
 
     // Runtime paths (not in YAML, set after loading)

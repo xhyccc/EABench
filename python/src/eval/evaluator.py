@@ -184,10 +184,10 @@ class Evaluator:
                 if email.id == entity_id:
                     return f"Subject: {email.subject}\nBody: {email.body}"
         elif entity_type == 'file':
-            # Assume ID is path
+            # entity_id is the file path; sandbox provides path-traversal protection
             try:
                 return self.sandbox.read_file(entity_id)
-            except:
+            except (FileNotFoundError, ValueError, PermissionError):
                 return None
         elif entity_type == 'chat':
             for chat in tenant.chats:
@@ -270,7 +270,11 @@ class Evaluator:
             assertions_list.append(f"{i+1}. {a.description}")
         assertions_text = "\n".join(assertions_list)
 
-        prompt = self.prompts["assertion_check"].format(
+        prompt_template = self.prompts.get("assertion_check")
+        if not prompt_template:
+            return 0.0, "assertion_check prompt not configured.", []
+
+        prompt = prompt_template.format(
             query=query,
             response=response,
             assertions=assertions_text
@@ -291,13 +295,13 @@ class Evaluator:
             total_count = len(assertions)
             score = passed_count / total_count if total_count > 0 else 0.0
             
-            # Enrich with descriptions
+            # Enrich with descriptions — catch only specific indexing/type errors
             for res in assertion_results:
                 try:
                     idx = int(res.get('id', 0)) - 1
                     if 0 <= idx < len(assertions):
                         res['description'] = assertions[idx].description
-                except Exception:
+                except (ValueError, TypeError, IndexError):
                     pass
             
             return score, summary, assertion_results

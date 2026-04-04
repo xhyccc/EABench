@@ -73,16 +73,22 @@ class TestRustGeneratedTenantParsing:
         """Mock-embedding index_all must succeed for every tenant (no network needed)."""
         path = os.path.join(TENANTS_DIR, tenant_dir, "tenant.yaml")
         cfg = TenantConfig.from_yaml(path)
+        # Prevent SearchEngine from writing .cache pkl files into the real tenant
+        # directory.  Cache I/O is irrelevant for this correctness test.
+        cfg.root_path = None
         emb = MockEmbeddingProvider()
         sandbox = LocalSandbox(cfg)
         sandbox.start()
-        engine = SearchEngine(cfg, emb, sandbox)
-        asyncio.run(engine.index_all())
-        # At least one index should have been populated (unless tenant has no data)
-        total = sum(len(v["data"]) for v in engine.indices.values())
-        # Tenants with users should index at least the user records
-        if cfg.users:
-            assert total > 0
+        try:
+            engine = SearchEngine(cfg, emb, sandbox)
+            asyncio.run(engine.index_all())
+            # At least one index should have been populated (unless tenant has no data)
+            total = sum(len(v["data"]) for v in engine.indices.values())
+            # Tenants with users should index at least the user records
+            if cfg.users:
+                assert total > 0
+        finally:
+            sandbox.stop()
 
 
 # ---------------------------------------------------------------------------
