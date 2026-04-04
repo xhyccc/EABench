@@ -1,0 +1,132 @@
+# Internal Job Board Updates - 2026-04-02
+
+## Author: Unknown
+
+### Context
+The company has quietly updated its internal job board with new AI-related roles, signaling further shifts toward an AI-first strategy. Below are the details of the positions added, along with descriptions and requirements.
+
+---
+
+## New AI-Related Roles
+
+### 1. **AI Systems Optimization Engineer**
+#### Description:
+Responsible for improving the efficiency and reliability of AI-driven systems, with a focus on addressing production bottlenecks and mitigating critical bugs.
+
+#### Key Responsibilities:
+- Analyze and debug issues in AI coding agents and SaaS products.
+- Collaborate with engineering teams to implement hotfixes and emergency patches.
+- Develop tools for monitoring AI system performance.
+- Optimize algorithms for scalability and reliability.
+
+#### Requirements:
+- Bachelor’s or Master’s degree in Computer Science, Machine Learning, or related field.
+- 5+ years of experience in debugging and optimizing AI systems.
+- Proficiency in Python, TensorFlow, PyTorch, and SQL.
+- Experience with CI/CD pipelines and DevOps practices.
+- Strong problem-solving skills and ability to work under pressure.
+
+---
+
+### 2. **AI Ethics and Compliance Specialist**
+#### Description:
+Ensure that AI technologies comply with ethical standards and legal regulations, addressing client concerns and internal compliance issues.
+
+#### Key Responsibilities:
+- Conduct audits of AI products to ensure compliance with ethical guidelines.
+- Liaise with the legal team to prepare for client contract evaluations.
+- Lead workshops and training sessions on AI ethics.
+- Develop documentation for ethical AI practices within the organization.
+
+#### Requirements:
+- Bachelor’s degree in Law, Ethics, or a related field; advanced degrees preferred.
+- 3+ years of experience in AI ethics or compliance roles.
+- Familiarity with AI technologies and their societal impacts.
+- Strong communication skills and ability to manage cross-department collaboration.
+
+---
+
+### 3. **AI-Driven Product Manager**
+#### Description:
+Lead the development and prioritization of AI-driven features, balancing innovation with client feedback and usability concerns.
+
+#### Key Responsibilities:
+- Work with engineering teams to define feature roadmaps.
+- Prioritize client-reported issues and usability improvements.
+- Communicate with key clients to gather requirements and feedback.
+- Analyze usage data to inform product decisions.
+
+#### Requirements:
+- Bachelor’s degree in Business, Computer Science, or related field.
+- 4+ years of experience in product management roles.
+- Strong knowledge of AI technologies and SaaS product development.
+- Proven track record of balancing innovation with user-centric design.
+
+---
+
+### 4. **Data Scientist - AI Adaptation**
+#### Description:
+Develop models and frameworks to assist employees in adapting to AI-driven workflows and tools.
+
+#### Key Responsibilities:
+- Analyze employee data to identify adaptation challenges.
+- Create predictive models for training effectiveness.
+- Design tools and dashboards to assist employees in AI workflows.
+- Collaborate with HR to refine the AI Adaptation Workshop program.
+
+#### Requirements:
+- Master’s degree in Data Science, Statistics, or related field.
+- 5+ years of experience in data science and modeling.
+- Proficiency in R, Python, and visualization tools like Tableau.
+- Experience working with HR data and employee feedback.
+
+---
+
+### 5. **AI Customer Success Manager**
+#### Description:
+Act as the primary liaison between clients and the AI product teams, ensuring smooth onboarding and addressing client concerns.
+
+#### Key Responsibilities:
+- Onboard clients to AI-driven SaaS products.
+- Monitor client satisfaction and address complaints promptly.
+- Collaborate with product managers to prioritize client-reported issues.
+- Provide training and documentation for AI product features.
+
+#### Requirements:
+- Bachelor’s degree in Business, Communications, or related field.
+- 3+ years of experience in customer success roles.
+- Familiarity with AI-powered SaaS products.
+- Strong interpersonal and conflict-resolution skills.
+
+---
+
+## Observations
+- **Speculation on Layoffs:** The addition of multiple AI-related roles has fueled concerns about further workforce reductions, particularly among non-AI teams.
+- **Employee Morale:** Discussions in Slack channels indicate skepticism about the new roles and frustration over the company's direction.
+- **Client Concerns:** The prioritization of AI innovation appears to conflict with addressing usability and reliability issues raised by key clients.
+- **HR Involvement:** HR's role in organizing mandatory workshops has been met with mixed reactions, casting doubt on employee buy-in for AI adaptation initiatives.
+
+---
+
+## Next Steps
+- **Internal Communication:** HR should address employee concerns about the job board updates and clarify the company's long-term AI strategy.
+- **Client Relations:** The sales and product teams must align to address client dissatisfaction and prevent contract reevaluations.
+- **Role Fulfillment:** Ensure that new roles are filled promptly to support ongoing AI initiatives and mitigate risks of further disruptions.
+
+---
+
+## Appendix
+### Related Files:
+- `data/hr/layoff_plans_2026.csv`
+- `engineering/bug_report_critical_2026_04_01.md`
+- `legal/client_contracts_urgent_review_2026_04_02.pdf`
+
+### Recent Events Timeline:
+- [2026-04-01] Critical bug discovered in AI coding agent.
+- [2026-04-01] Legal threats issued by a major client.
+- [2026-04-02] Anonymous employee rant sparks online debate over AI-first strategy.
+- [2026-04-02] Key client schedules high-stakes call to reevaluate contract.
+
+---
+
+*End of Report*

@@ -1,0 +1,116 @@
+# Coding Agent Feedback Survey Results
+
+## Author
+Ritika Chowdhury
+
+## Context
+This document summarizes the results of a survey conducted among engineers to gather feedback on the usability of AI coding agents. The survey was initiated on 2026-03-26 following the release of a new debugging feature for the coding agents. The primary goal was to assess the effectiveness of the recent update and identify areas for improvement.
+
+---
+
+## Survey Overview
+- **Date Conducted**: 2026-03-26
+- **Respondents**: 58 engineers from various teams (back-end, front-end, DevOps, QA).
+- **Survey Type**: Anonymous, internal Google Form.
+- **Key Focus Areas**: 
+  1. Usability of AI coding agents.
+  2. Effectiveness of debugging features.
+  3. Overall user satisfaction.
+  4. Suggestions for improvement.
+
+---
+
+## Key Findings
+### 1. Overall Usability
+- **Rating Scale**: 1 (Poor) - 5 (Excellent)
+- **Average Score**: 3.4
+
+#### Breakdown by Teams:
+- **Back-End Engineers**: 3.6
+- **Front-End Engineers**: 3.2
+- **DevOps Engineers**: 3.1
+- **QA Engineers**: 3.7
+
+#### Common Feedback:
+- Positive:
+  - "The autocomplete feature has improved my coding speed significantly."
+  - "Error suggestions are more relevant than they used to be."
+- Negative:
+  - "Sometimes the AI suggests redundant code snippets."
+  - "The UI for the coding agent plugin is not intuitive."
+
+---
+
+### 2. Debugging Feature Effectiveness
+- **Rating Scale**: 1 (Not Effective) - 5 (Very Effective)
+- **Average Score**: 3.0
+
+#### Key Observations:
+- **Strengths:**
+  - 68% of respondents found the debugging feature helpful for identifying syntax errors.
+  - 54% noted that the feature reduced debugging time for small-scale projects.
+- **Weaknesses:**
+  - 45% reported that the debugging suggestions were inaccurate for complex projects.
+  - "The debug logs are too verbose, making it hard to pinpoint the actual issue."
+
+---
+
+### 3. User Satisfaction
+- **Rating Scale**: 1 (Very Dissatisfied) - 5 (Very Satisfied)
+- **Average Score**: 2.8
+
+#### Detailed Feedback:
+- **Major Complaints:**
+  1. "The AI coding agent doesn't prioritize customer-requested features."
+  2. "Frequent updates disrupt my workflow."
+  3. "The performance slows down when working on large codebases."
+- **Positive Notes:**
+  - "The collaborative mode is great for pair programming."
+  - "The agent's ability to refactor code has saved me hours."
+
+---
+
+### 4. Suggestions for Improvement
+- **Top Suggestions:**
+  1. "Improve the accuracy of debugging suggestions for complex codebases."
+  2. "Allow users to customize the agent's priorities (e.g., speed vs. accuracy)."
+  3. "Provide better documentation for advanced features."
+  4. "Optimize the agent's performance for large projects."
+  5. "Focus more on customer-requested features rather than speculative AI capabilities."
+
+---
+
+## Quantitative Data Summary
+| Metric                          | Average Score | Positive Responses (%) | Negative Responses (%) |
+|---------------------------------|---------------|-------------------------|-------------------------|
+| Overall Usability               | 3.4           | 62%                     | 38%                     |
+| Debugging Feature Effectiveness | 3.0           | 54%                     | 46%                     |
+| User Satisfaction               | 2.8           | 48%                     | 52%                     |
+
+---
+
+## Recommendations
+1. **Short-Term Actions:**
+   - Deploy a patch to address the verbosity of debug logs.
+   - Organize a training session to help users understand advanced features.
+2. **Long-Term Goals:**
+   - Conduct bi-weekly check-ins with engineers to gather continuous feedback.
+   - Prioritize feature requests that align with customer needs.
+   - Improve the AI model's ability to handle edge cases in debugging.
+
+---
+
+## Conclusion
+While the AI coding agents have shown promise, the survey results highlight significant usability gaps, particularly in debugging and user satisfaction. Addressing these issues will require a balanced approach that incorporates both engineer feedback and customer demands.
+
+---
+
+## Appendix
+### Additional Comments from Respondents
+- "The agent feels like a beta product, not production-ready."
+- "I appreciate the effort, but I don't trust the suggestions for production code."
+- "Please make the agent compatible with more IDEs."
+
+---
+
+*Report compiled by Ritika Chowdhury on 2026-03-26.*

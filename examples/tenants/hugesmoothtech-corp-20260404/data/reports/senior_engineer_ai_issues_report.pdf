@@ -1,0 +1,119 @@
+# Senior Engineer Report: Issues with AI Coding Agents
+
+**Author:** Hyun-Jae Wang  
+**Date:** March 29, 2026  
+
+---
+
+## Executive Summary
+
+This report aims to provide a comprehensive analysis of the ongoing issues with the AI coding agents currently deployed within our engineering workflows. Despite incremental updates and so-called improvements, these tools continue to underperform, creating inefficiencies, frustrating engineers, and harming client relationships. I strongly urge the leadership team to reconsider the current strategy of replacing human engineers with AI-driven tools.
+
+---
+
+## Key Issues Identified
+
+### 1. **Unreliable Debugging Capabilities**
+- **Recent Updates:**
+  - On March 25, the AI team released an update claiming to improve debugging efficiency by 20%.
+  - A subsequent hotfix on March 27 claimed to resolve 95% of debugging issues.
+- **Reality:**
+  - Engineers continue to report sporadic failures.
+  - A critical bug discovered by a junior SDE on March 26 remains partially unresolved.
+  - Workarounds proposed by engineers (e.g., on March 28) are not acknowledged or incorporated into the system.
+- **Impact:**
+  - Prolonged debugging cycles.
+  - Reduced developer productivity.
+  - Increased frustration among engineers.
+
+### 2. **Poor Usability**
+- **Feedback from Engineers:**
+  - A survey conducted on March 26 revealed widespread dissatisfaction with the coding agents' usability.
+  - On March 27, a senior engineer publicly criticized the agents on the company intranet, sparking a large thread of agreement.
+- **Specific Complaints:**
+  - Counterintuitive interfaces.
+  - Inconsistent outputs, particularly for edge cases.
+  - Lack of adaptability to non-standard coding practices often required in client projects.
+- **Impact:**
+  - Steep learning curve for engineers.
+  - Increased error rates in production environments.
+
+### 3. **Client Dissatisfaction**
+- **Recent Escalations:**
+  - On March 26, the sales department reported losing a major client, citing dissatisfaction with the AI-driven SaaS product.
+  - On March 29, a key client threatened to terminate their contract unless critical bugs were fixed within 48 hours.
+- **Root Cause:**
+  - The AI coding agents fail to deliver customer-requested updates in a timely and reliable manner.
+  - Bugs introduced by the AI tools compromise product quality.
+- **Impact:**
+  - Strained client relationships.
+  - Loss of revenue and reputational damage.
+
+### 4. **Low Employee Morale**
+- **Survey Data:**
+  - An anonymous survey on March 29 revealed that over 70% of employees feel uncertain about their job security.
+  - Many employees view the AI-driven replacement strategy as a direct threat to their roles.
+- **Contributing Factors:**
+  - Ongoing layoffs (e.g., the internal memo on March 25).
+  - Lack of transparency regarding AI's role in the company's future.
+  - Insufficient acknowledgment of employee contributions.
+- **Impact:**
+  - Resignations (e.g., a mid-level manager on March 27).
+  - Reduced productivity and engagement.
+
+---
+
+## Recommendations
+
+### 1. **Reassess the Replacement Strategy**
+- Conduct a cost-benefit analysis comparing human engineers and AI coding agents.
+- Consider a hybrid model where AI tools assist rather than replace engineers.
+
+### 2. **Improve Testing and Quality Assurance**
+- Extend testing timelines for AI updates to ensure reliability.
+- Involve engineers in the testing process to gather actionable feedback.
+- Prioritize fixing existing issues over rolling out new features.
+
+### 3. **Enhance Communication and Transparency**
+- Clearly communicate leadership's vision for AI integration.
+- Regularly update employees on the status and goals of the AI initiatives.
+- Recognize and reward employee contributions, especially for those addressing AI deficiencies.
+
+### 4. **Focus on Client Needs**
+- Shift development priorities to align with customer feedback.
+- Expedite fixes for critical client-reported bugs.
+- Involve customer-facing teams in the development process to ensure alignment with client expectations.
+
+### 5. **Invest in Training and Support**
+- Provide meaningful training on using AI tools, tailored to engineers' needs.
+- Replace tone-deaf workshops like 'Adapting to Change in AI-Driven Workplaces' with sessions focused on practical skills.
+
+---
+
+## Supporting Data
+
+### Timeline of Events (March 25–29, 2026)
+| Date       | Event                                                                                   |
+|------------|-----------------------------------------------------------------------------------------|
+| 2026-03-25 | AI team released debugging update; internal memo detailed next phase of SDE layoffs.   |
+| 2026-03-26 | Junior SDE discovered a critical bug; sales team lost a major client.                  |
+| 2026-03-27 | Senior engineer criticized AI tools; mid-level manager resigned.                      |
+| 2026-03-28 | Anonymous leak revealed plans for broader AI-driven layoffs.                          |
+| 2026-03-29 | Key client threatened contract termination; senior engineer submitted this report.     |
+
+### Survey Results
+- **70%** of employees feel uncertain about job security.
+- **85%** of engineers report dissatisfaction with AI coding agents.
+- **60%** of employees lack confidence in leadership's AI strategy.
+
+---
+
+## Conclusion
+
+The current reliance on AI coding agents has introduced significant challenges across engineering workflows, client satisfaction, and employee morale. The issues outlined in this report underscore the urgent need for leadership to reassess the company's AI-driven replacement strategy. Without immediate action, the company risks further client losses, reduced productivity, and an exodus of top talent.
+
+---
+
+**Submitted by:** Hyun-Jae Wang  
+**Role:** Senior Engineer  
+**Date:** March 29, 2026

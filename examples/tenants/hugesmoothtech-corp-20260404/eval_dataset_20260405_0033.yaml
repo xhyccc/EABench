@@ -1,0 +1,1927 @@
+cases:
+- assertions:
+  - description: Matches email with subject 'Technical Feedback on Debugging Update'
+  - description: Sent by Hyun-Jae Wang on 2026-03-25
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_001
+  query: Show me the email from Hyun-Jae Wang about the engineering team's feedback on the debugging improvements sent on March 25th.
+  user_id: tsato
+- assertions:
+  - description: 'Matches email with subject ''Action Items: Product Meeting Debate on AI vs. Customer Requests'''
+  - description: Sent by Mariana Garcia on 2026-03-25
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_002
+  query: Find the email summarizing the product meeting debate about AI priorities versus customer requests. It was sent on March 25th.
+  user_id: ymorales
+- assertions:
+  - description: Matches email with subject 'Concerns Regarding SDE Layoff Timeline Memo'
+  - description: Sent by Ravi Patel on 2026-03-25
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_003
+  query: Locate the email from Ravi Patel about the SDE layoff timeline memo and its financial and morale impacts.
+  user_id: rchowdhury
+- assertions:
+  - description: Matches email with subject 'Client Issues with SaaS Rollout - Immediate Attention Needed'
+  - description: Sent by Jacqueline Dubois on 2026-03-25
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_004
+  query: Find the email outlining client issues with the SaaS rollout that requires immediate attention.
+  user_id: adubois
+- assertions:
+  - description: 'Matches email with subject ''Follow-Up: Debugging Capabilities Update Released'''
+  - description: Sent by Takeshi Sato on 2026-03-25
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_005
+  query: Show me the email from Takeshi Sato about debugging capability improvements and their impact on future projects.
+  user_id: mgarcia
+- assertions:
+  - description: Filters by author 'nkhatri'
+  - description: Filters by content related to 'financial impact' and 'layoffs'
+  - description: Filters by email type
+  - description: Date restriction to recent emails
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_006
+  query: What email did Neha send recently about the financial impact of layoffs?
+  user_id: jhassan
+- assertions:
+  - description: Filters by keywords 'mandatory', 'HR workshop', and 'AI'
+  - description: Filters by author 'msharif'
+  - description: Restricts to emails sent this week
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_007
+  query: Show me the email about the mandatory HR workshop on AI from this week.
+  user_id: nsingh
+- assertions:
+  - description: Filters by author 'ymorales'
+  - description: Filters by keywords 'debugging', 'AI tools', and 'integration'
+  - description: Restricts to recent emails
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_008
+  query: Find the recent email from Yara about debugging AI tools.
+  user_id: erodriguez
+- assertions:
+  - description: Filters by author 'mabebe'
+  - description: Filters by keywords 'client concerns', 'SaaS', and 'rollout'
+  - description: Restricts to emails
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_009
+  query: Locate the email from Mandla about handling client concerns with the SaaS rollout.
+  user_id: carlosgarcia
+- assertions:
+  - description: Filters by author 'eabbas'
+  - description: Filters by keywords 'layoffs', 'engineering team', and 'productivity'
+  - description: Restricts to emails
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_010
+  query: Find Ehsan's email about how layoffs might affect the engineering team's productivity.
+  user_id: lzhang
+- assertions:
+  - description: Returns the email with subject 'Critical Bug in AI Coding Agent's Debugging Feature'
+  - description: Filters by sender (Thiago Silva) and date (2026-03-26)
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_011
+  query: Show me the email from Thiago Silva about the critical bug in the debugging feature sent on March 26, 2026.
+  user_id: msharif
+- assertions:
+  - description: Returns the email with subject 'Addressing Client Dissatisfaction with SaaS Product'
+  - description: Filters by sender (Mariana Garcia) and date (2026-03-26)
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_012
+  query: Find the email from Mariana Garcia about losing a major client and improving the roadmap from March 26, 2026.
+  user_id: jdubois
+- assertions:
+  - description: Returns the email with subject 'Leaked Plans for Middle-Management AI Replacement'
+  - description: Filters by sender (Amélie Dubois) and date (2026-03-26)
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_013
+  query: Show me Amélie Dubois' email about internal unrest due to AI replacing middle-management, sent on March 26, 2026.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with subject 'Survey on Coding Agent Usability - Engineer Feedback Needed'
+  - description: Filters by sender (Mona Sharif) and date (2026-03-26)
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_014
+  query: Locate Mona Sharif's email about the usability survey for coding agents sent on March 26, 2026.
+  user_id: hwang
+- assertions:
+  - description: Returns the email with subject 'Follow-Up on Lost Client - Actionable Next Steps'
+  - description: Filters by sender (Jacqueline Dubois) and date (2026-03-26)
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_015
+  query: Find Jacqueline Dubois' email sent on March 26, 2026, about the next steps after losing a major client.
+  user_id: rpatel
+- assertions:
+  - description: Returns the email with subject 'Financial Impact of Client Loss and Layoff Plans'
+  - description: Filters by author Amina Mustafa and date March 26, 2026
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_016
+  query: Show me the email from Amina Mustafa about the financial impact of losing a client and layoffs sent on March 26, 2026.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Employee Morale and Feedback Initiatives'
+  - description: Filters by author Liang Zhang and context around the HR workshop backlash
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_017
+  query: Find Liang Zhang's email about employee morale and feedback initiatives sent on the same day as the HR workshop backlash.
+  user_id: mabebe
+- assertions:
+  - description: Returns the email with subject 'Workshop Feedback and Employee Concerns'
+  - description: Filters by author Mariana Garcia and topic of workshop feedback
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_018
+  query: Retrieve the email from Mariana Garcia about workshop feedback and addressing employee concerns.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with subject 'Hotfix for Critical Debugging Bug - Immediate Action Required'
+  - description: Filters by author Yara Morales and date March 26, 2026
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_019
+  query: Find the urgent email from Yara Morales about the critical debugging hotfix sent on March 26, 2026.
+  user_id: ymorales
+- assertions:
+  - description: Returns the email with subject 'Client Retention Strategies Post-SaaS Feedback'
+  - description: Filters by author Mandla Abebe and topic of SaaS feedback
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_020
+  query: Show me the email from Mandla Abebe about client retention strategies for SaaS products.
+  user_id: adubois
+- assertions:
+  - description: 'Returns the email with the subject ''Critical Client Escalation: Feature Failure'''
+  - description: Filters by the sender 'mgarcia' and the date '2026-03-27'
+  - description: Matches the keywords 'critical feature failure' and 'client escalation'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_021
+  query: Show me the email sent today about a critical feature failure escalation from a key client.
+  user_id: mgarcia
+- assertions:
+  - description: 'Returns the email with the subject ''AI Debugging Hotfix Rollout: Engineer Feedback'''
+  - description: Filters by the sender 'msharif' and the date '2026-03-27'
+  - description: Matches the keywords 'debugging hotfix' and 'engineer feedback'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_022
+  query: Find the email from today about engineer feedback on the debugging hotfix rollout.
+  user_id: msharif
+- assertions:
+  - description: Returns the email with the subject 'Mid-Level Manager Resignation and AI Management Concerns'
+  - description: Filters by the sender 'adubois' and the date '2026-03-27'
+  - description: Matches the keywords 'AI management tools' and 'manager resignation'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_023
+  query: Locate the email addressing concerns about AI management tools and a manager's resignation.
+  user_id: adubois
+- assertions:
+  - description: Returns the email with the subject 'Employee Concerns About Severance FAQ Update'
+  - description: Filters by the sender 'rpatel' and the date '2026-03-27'
+  - description: Matches the keywords 'severance FAQ' and 'employee concerns'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_024
+  query: Find the email about employee concerns regarding changes to the severance FAQ.
+  user_id: rpatel
+- assertions:
+  - description: 'Returns the email with the subject ''Urgent: Feedback on AI Coding Agents Usability'''
+  - description: Filters by the sender 'hwang' and the date '2026-03-27'
+  - description: Matches the keywords 'AI coding agents' and 'feedback'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_025
+  query: Can you find the email about feedback on AI coding agents usability that was sent earlier today?
+  user_id: hwang
+- assertions:
+  - description: 'Returns the email with subject ''Post-Hotfix Debugging: Immediate Priorities''.'
+  - description: Filters by date (March 27, 2026) and sender (Jamal Hassan).
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_026
+  query: Show me the email about prioritizing post-hotfix debugging tasks sent on March 27, 2026.
+  user_id: rpatel
+- assertions:
+  - description: Returns the email with subject 'Client Retention Strategy After Escalation'.
+  - description: Filters by sender (Jacqueline Dubois) and date (March 27, 2026).
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_027
+  query: Find the email from Jacqueline about handling a key client escalation from March 27, 2026.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Impact Assessment of AI-Driven Management Tools'.
+  - description: Focuses on sender (Mei-Lin Ou-Yang) and the topic of AI tools and employee sentiment.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_028
+  query: Locate the email about assessing employee reaction to AI management tools, sent on March 27, 2026.
+  user_id: knguyen
+- assertions:
+  - description: Returns the email with subject 'Technical Review of AI Coding Agents Usability Issues'.
+  - description: Filters by author (Yara Morales) and mentions usability concerns.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_029
+  query: Get the email about the technical review of AI coding agents usability problems, sent on March 27, 2026.
+  user_id: tsato
+- assertions:
+  - description: Returns the email with subject 'Employee Morale and Communication Strategy'.
+  - description: Targets sender (Liang Zhang) and topic (town hall proposal for morale).
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_030
+  query: Find the proposal for a town hall to address employee morale and recent leadership changes, sent on March 27, 2026.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email titled 'Critical Client Relations Update'
+  - description: Filters by author 'jokonkwo'
+  - description: Filters by keywords 'rebuilding client relationships' and 'product delays'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_031
+  query: Find my email about rebuilding client relationships after the product delays.
+  user_id: jokonkwo
+- assertions:
+  - description: 'Returns the email titled ''Follow-Up: Virtual Q&A Session Feedback'''
+  - description: Filters by keywords 'Virtual Q&A session' and 'feedback'
+  - description: Filters by sender 'hr'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_032
+  query: Show me the email requesting feedback about the virtual Q&A session.
+  user_id: msharif
+- assertions:
+  - description: Returns the email titled 'Client Demo Postponement - Immediate Action Required'
+  - description: Filters by keywords 'postponed client demo' and 'strategies'
+  - description: Filters by sender 'adubois'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_033
+  query: Find the email about the postponed client demo and strategies for addressing it.
+  user_id: adubois
+- assertions:
+  - description: Returns the email titled 'Junior Engineer’s Debugging Workaround Proposal'
+  - description: Filters by keywords 'junior engineer', 'workaround', and 'debugging'
+  - description: Filters by sender 'jhassan'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_034
+  query: Find the email discussing the junior engineer’s workaround proposal for debugging.
+  user_id: jhassan
+- assertions:
+  - description: Returns the email titled 'Clarification on Debugging Hotfix Effectiveness'
+  - description: Filters by keywords 'debugging hotfix effectiveness' and 'sporadic issues'
+  - description: Filters by sender 'tsato'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_035
+  query: Find the email about debugging hotfix effectiveness and remaining sporadic issues.
+  user_id: tsato
+- assertions:
+  - description: Returns the email with subject 'Improving Product Stability and Client Confidence'
+  - description: Filters emails sent by 'mgarcia' on the specified date
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_036
+  query: Find the email from Mariana Garcia sent on March 28 about resolving bugs and getting ready for client demos.
+  user_id: knguyen
+- assertions:
+  - description: Returns the email with subject 'Financial Implications of AI-Driven Layoff Expansion'
+  - description: Identifies 'rpatel' as the sender
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_037
+  query: What did Ravi Patel send on March 28 about AI-driven layoffs and their financial implications?
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with subject 'Action Plan to Address Engineer Feedback on Debugging Tool'
+  - description: Filters emails authored by 'tsato' on the specified date
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_038
+  query: Locate the email from Takeshi Sato about addressing engineer feedback on the debugging tool from March 28.
+  user_id: lzhang
+- assertions:
+  - description: Returns the email with subject 'Company-Wide Statement on Recent Events'
+  - description: Identifies 'adubois' as the sender
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_039
+  query: Retrieve the company-wide statement from Amélie Dubois about layoffs, debugging tool issues, and the client demo delay.
+  user_id: ymorales
+- assertions:
+  - description: Returns the email with subject 'Coordination for Post-Demo Client Communication'
+  - description: Filters emails authored by 'msharif' on the specified date
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_040
+  query: Find Mona Sharif's email about coordinating client communication after the demo, sent on March 28.
+  user_id: nsingh
+- assertions:
+  - description: Returns the email sent by Jacqueline Dubois on 2026-03-29.
+  - description: The email discusses a client's threat to terminate their contract if specific issues are not addressed.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_041
+  query: Show me the urgent email about a key client threatening to cancel their contract, sent today.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email sent by Mariana Garcia on 2026-03-29.
+  - description: The email discusses feedback from the product team meeting regarding AI features versus customer-requested updates.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_042
+  query: Retrieve the email about client complaints and balancing AI updates with customer requests, sent earlier today.
+  user_id: adubois
+- assertions:
+  - description: Returns the email sent by Takeshi Sato on 2026-03-29.
+  - description: The email highlights potential risks due to insufficient testing before deploying the AI update.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_043
+  query: Find the email about engineers' concerns regarding insufficient testing for the AI update scheduled for next week.
+  user_id: msharif
+- assertions:
+  - description: Returns the email sent by Amina Mustafa on 2026-03-29.
+  - description: The email discusses survey results indicating employee uncertainty about job security and plans for a workshop.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_044
+  query: Show me the email about the employee survey results, specifically focusing on job security concerns.
+  user_id: nkhatri
+- assertions:
+  - description: Returns the email sent by Hyun-Jae Wang on 2026-03-29.
+  - description: The email emphasizes the risks of replacing current systems with AI coding agents and suggests reconsidering the strategy.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_045
+  query: Retrieve today's email about critical issues with AI coding agents and the suggestion to reevaluate the replacement strategy.
+  user_id: tsilva
+- assertions:
+  - description: 'Returns the email with subject ''Follow-Up: Emergency Response for Key Client Issue'' sent by jokonkwo'
+  - description: Filters emails sent on 2026-03-29
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_046
+  query: Show me the email sent yesterday about the emergency response plan for a client issue with a 48-hour deadline.
+  user_id: adubois
+- assertions:
+  - description: Returns the email with subject 'Postponed Client Demo Due to Feature Bugs' sent by msharif
+  - description: Filters emails discussing client demos and feature bugs
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_047
+  query: Find the email about the postponed client demo caused by feature bugs that outlines the rescheduling plan.
+  user_id: rpatel
+- assertions:
+  - description: Returns the email with subject 'Leadership Alignment on AI Strategy and Employee Concerns' sent by adubois
+  - description: Filters by topic of leadership and AI strategy
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_048
+  query: Show me the email about leadership alignment on AI strategy and employee morale issues sent yesterday.
+  user_id: erodriguez
+- assertions:
+  - description: Returns the email with subject 'Action Plan for Critical Bug Fixes in SaaS Product' sent by jhassan
+  - description: Filters by keywords 'critical bugs' and 'SaaS platform'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_049
+  query: Locate the email from yesterday about the action plan for resolving critical bugs in the SaaS platform.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Internal Feedback on AI Coding Agents Usability' sent by rchowdhury
+  - description: Filters by terms related to 'feedback' and 'AI coding agents'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_050
+  query: Find the email about engineers’ feedback on the usability of AI coding agents.
+  user_id: zhuangwei
+- assertions:
+  - description: Returns the email titled 'Reaffirming Our Commitment to AI-Driven Innovation'
+  - description: Matches the sender (Amélie Dubois) and the date (March 30, 2026)
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_051
+  query: Can you find the email from the CEO about AI innovation and addressing employee concerns sent on March 30th?
+  user_id: adubois
+- assertions:
+  - description: 'Returns the email titled ''Urgent: Memory Leak in Coding Agent Update'''
+  - description: Matches the sender (Takeshi Sato) and the critical nature of the issue
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_052
+  query: Locate the urgent email about a memory leak in the coding agent update with deployment instructions sent recently by Takeshi.
+  user_id: tsato
+- assertions:
+  - description: Returns the email titled 'Leadership Strategy Meeting - Employee Concerns'
+  - description: Identifies the subject of employee unrest and HR Q&A session postponement
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_053
+  query: Find the meeting or email about employee unrest and the postponed HR session that was sent recently.
+  user_id: adubois
+- assertions:
+  - description: 'Returns the email titled ''Client Escalation: Immediate Action Required'''
+  - description: Matches the sender (Jamal Okonkwo) and the critical client escalation topic
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_054
+  query: Show me the email about a client escalation with a 48-hour deadline for fixes that needs coordination with the product and sales teams.
+  user_id: jokonkwo
+- assertions:
+  - description: 'Returns the email titled ''Critical Client Issues: Status Update Needed'''
+  - description: Matches the sender (Mariana Garcia) and the legal implication context
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_055
+  query: Find the email from Mariana asking for a status update on the client issues that might lead to legal action.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Client Relationship Management - Urgent Steps'
+  - description: Filters by the sender 'mgarcia' and the date '2026-03-30'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_056
+  query: Show me the email from Mariana Garcia about urgent steps for managing the client relationship, sent on March 30, 2026.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with the subject 'Financial Impact of Client Escalation'
+  - description: Filters by the sender 'rpatel' and the date '2026-03-30'
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_057
+  query: Retrieve Ravi Patel's email about the financial risks of losing a key client, sent on March 30, 2026.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Postponement of HR Q&A Session'
+  - description: Filters by the sender 'hr_department' and the date '2026-03-30'
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_058
+  query: Find the announcement from HR about the rescheduling of the Q&A session, sent on March 30, 2026.
+  user_id: nkhatri
+- assertions:
+  - description: Returns the email with the subject 'Emergency Patch Deployment - Status Check'
+  - description: Filters by the sender 'jhassan' and the date '2026-03-30'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_059
+  query: Get Jamal Hassan's email about the status of the emergency patch deployment sent on March 30, 2026.
+  user_id: tsilva
+- assertions:
+  - description: Returns the email with the subject 'Internal Document Leak - Layoff Projections'
+  - description: Filters by the sender 'anonymous' and the date '2026-03-30'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_060
+  query: Locate the anonymous email about leaked documents and layoff projections sent on March 30, 2026.
+  user_id: jdubois
+- assertions:
+  - description: Returns the email with the subject 'Critical Bug Patch Status Update'.
+  - description: Filters by author as 'mgarcia'.
+  - description: Filters by date close to '2026-03-31'.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_061
+  query: Show me the email from Mariana Garcia about the critical bug patch update for the client deadline earlier this week.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'AI Coding Agent Slowdown Analysis'.
+  - description: Filters by author as 'jhassan'.
+  - description: Filters by date close to '2026-03-31'.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_062
+  query: Locate the email Jamal Hassan sent about the analysis of the AI coding agent slowdown during peak hours.
+  user_id: jhassan
+- assertions:
+  - description: Returns the email with the subject 'Client Escalations and Product Roadmap Adjustments'.
+  - description: Filters by author as 'adubois'.
+  - description: Filters by date close to '2026-03-31'.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_063
+  query: Find the email from Amélie Dubois about client complaints and changing the product roadmap priorities.
+  user_id: adubois
+- assertions:
+  - description: Returns the email with the subject 'Client Complaints and Feature Bug Resolution'.
+  - description: Filters by author as 'rchowdhury'.
+  - description: Filters by date close to '2026-03-31'.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_064
+  query: Retrieve the email from Ritika Chowdhury about small client feature bugs and the resolution timeline.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with the subject 'Impact of Workplace Culture on Employee Morale'.
+  - description: Filters by author as 'adubois'.
+  - description: Filters by date close to '2026-03-31'.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_065
+  query: Find the email from Amélie Dubois about the workplace culture impact of the meme posted on the intranet.
+  user_id: adubois
+- assertions:
+  - description: Returns the email titled 'HR Training Workshop Cancellation and Leadership Concerns'
+  - description: Matches the date '2026-03-31' and the sender 'tsato'
+  - description: Includes the keywords 'Adapting to AI' and 'leadership'
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_066
+  query: Show me the email from Takeshi about the 'Adapting to AI' workshop being removed and leadership disagreements, sent on March 31.
+  user_id: nkhatri
+- assertions:
+  - description: Returns the email titled 'Follow-Up on Memory Leak Patch Deployment'
+  - description: Matches the date '2026-03-31' and the sender 'jhassan'
+  - description: Includes the keywords 'memory leak patch' and 'feedback'
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_067
+  query: Locate the email Jamal sent on March 31 about the memory leak patch and feedback on its effectiveness.
+  user_id: rprasad
+- assertions:
+  - description: 'Returns the email titled ''Key Client Escalation: Legal Action Threats'''
+  - description: Matches the date '2026-03-31' and the sender 'adubois'
+  - description: Includes the keywords 'legal action', 'key client', and 'fixes to deliver'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_068
+  query: Find the email Amélie sent on March 31 about the key client threatening legal action and the fixes we need to deliver.
+  user_id: anapatel
+- assertions:
+  - description: Returns the email titled 'Postponement of Client Demo and Next Steps'
+  - description: Matches the date '2026-03-31' and the sender 'mgarcia'
+  - description: Includes the keywords 'postponed demo', 'bugs', and 'next steps'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_069
+  query: Show me the email from Mariana about postponing the client demo on March 31 and the next steps to address bugs.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email titled 'Employee Morale and HR Leadership Strategy'
+  - description: Matches the date '2026-03-31' and the sender 'rpatel'
+  - description: Includes the keywords 'employee morale', 'Adapting to AI', and 'HR leadership'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_070
+  query: Find Ravi's email from March 31 where he proposed addressing employee morale and mentioned the 'Adapting to AI' workshop.
+  user_id: ymorales
+- assertions:
+  - description: 'Returns the email with subject ''Urgent: Strategy Discussion on AI-Driven Workforce Changes'''
+  - description: Matches the author 'Amélie Dubois'
+  - description: Filters emails from April 1st, 2026
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_071
+  query: Show me the urgent email about the strategy to handle layoffs, sent on April 1st.
+  user_id: adubois
+- assertions:
+  - description: Returns the email with subject 'Critical Bug in AI Coding Agent - Immediate Action Required'
+  - description: Matches the author 'Takeshi Sato'
+  - description: Filters emails discussing production failures
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_072
+  query: Find all emails about the critical AI bug that caused production failures sent on April 1st.
+  user_id: tsato
+- assertions:
+  - description: Returns the email with subject 'Impact of AI Bug on Product Roadmap'
+  - description: Matches the author 'Mariana Garcia'
+  - description: Focuses on the AI bug and its impact on product timelines
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_073
+  query: Locate the email from Mariana Garcia about the AI bug's impact on the product roadmap.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Financial Implications of Potential Client Litigation'
+  - description: Matches the author 'Ravi Patel'
+  - description: Focuses on financial risks and litigation
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_074
+  query: Get the email analyzing the financial risks of client litigation sent on April 1st.
+  user_id: rpatel
+- assertions:
+  - description: Returns the email with subject 'Client Escalations and Legal Threats - Sales Team Coordination'
+  - description: Matches the author 'Jamal Okonkwo'
+  - description: Focuses on sales team coordination and client escalations
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_075
+  query: Find the email about managing legal threats and client escalations with the sales team.
+  user_id: jokonkwo
+- assertions:
+  - description: Returns the email with the subject 'Post-Bug Emergency Meeting Recap'.
+  - description: Filters by date (April 1st, 2026) and author (Jamal Hassan).
+  - description: Focuses on the emergency meeting related to the AI-driven coding agent bug.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_076
+  query: Show me the email from Jamal Hassan about the emergency meeting on the AI coding issue from April 1st.
+  user_id: rchowdhury
+- assertions:
+  - description: Returns the email with the subject 'AI Adaptation Workshop Announcement Feedback'.
+  - description: Filters by date (April 1st, 2026) and author (Amélie Dubois).
+  - description: Focuses on feedback and suggestions for improving the workshop.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_077
+  query: Can you find the email from Amélie Dubois about improving the AI Adaptation Workshop engagement sent on April 1st?
+  user_id: msharif
+- assertions:
+  - description: Returns the email with the subject 'Resignation of Mid-Level Manager - Strategic Implications'.
+  - description: Filters by author (Mariana Garcia) and focuses on the resignation and its implications for team morale and the AI strategy.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_078
+  query: Find the email from Mariana Garcia about the resignation of a mid-level manager and its strategic impact.
+  user_id: nkhatri
+- assertions:
+  - description: Returns the email with the subject 'Company-Wide Update on AI-First Strategy and Next Steps'.
+  - description: Filters by date (April 1st, 2026) and author (Amélie Dubois).
+  - description: Focuses on the layoffs and AI-first strategy topic.
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_079
+  query: Show me the company-wide update from Amélie Dubois about layoffs and the AI-first strategy sent on April 1st.
+  user_id: fmensah
+- assertions:
+  - description: Returns the email with the subject 'Budget Reallocation Post-Layoffs'.
+  - description: Filters by author (Ravi Patel).
+  - description: Focuses on the proposal for addressing client demands and sustaining operations.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_080
+  query: Locate the email from Ravi Patel about reallocating the budget after the layoffs.
+  user_id: ymorales
+- assertions:
+  - description: Identifies the email detailing the 20% debugging improvement as 'email_001'
+  - description: Identifies the feedback email from the engineering team as 'email_004'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  id: case_081
+  query: What were the initial observations and feedback from the engineering team regarding the 20% improvement in debugging capabilities?
+  user_id: lzhang
+- assertions:
+  - description: Identifies the group chat discussing SaaS product rollout issues as 'chat_005'
+  - description: Identifies the corresponding meeting addressing the issues as 'meeting_005'
+  entity_list:
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_082
+  query: What emergency response actions were proposed in the meeting to resolve the SaaS product rollout issues discussed in the group chat?
+  user_id: ymorales
+- assertions:
+  - description: Identifies the internal memo on SDE layoffs as 'data/memos/internal_memo_sde_layoffs_2026_03_25.pdf'
+  - description: Identifies the leadership meeting discussing the layoffs as 'meeting_003'
+  entity_list:
+  - entity_id: data/memos/internal_memo_sde_layoffs_2026_03_25.pdf
+    entity_type: file
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_083
+  query: What strategies were discussed in the leadership meeting to address the morale and communication challenges posed by the SDE layoffs mentioned in the internal memo?
+  user_id: msharif
+- assertions:
+  - description: Identifies the individual chat about the critical bug between Thiago and Jamal
+  - description: Links the individual chat to the group chat where the AI team strategized the hotfix
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  id: case_084
+  query: What was the resolution plan discussed in the group chat after Thiago informed Jamal about the critical bug?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the leaked document about replacing middle-management roles
+  - description: Links the leaked document to the email addressing employee concerns
+  - description: Connects the email to the meeting discussing mitigation strategies
+  entity_list:
+  - entity_id: data/docs/leaked_internal_document.pdf
+    entity_type: file
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_085
+  query: What mitigation strategies were discussed in the meeting following concerns raised in response to the leaked internal document?
+  user_id: adubois
+- assertions:
+  - description: Identifies the email about the lost client
+  - description: Links the email to the strategies for client retention discussed in the group chat
+  - description: Connects the group chat to the product feedback survey results
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: data/docs/coding_agent_feedback_survey.xlsx
+    entity_type: file
+  id: case_086
+  query: How did the strategies discussed for client retention align with the product feedback gathered from the coding agent usability survey?
+  user_id: nkhatri
+- assertions:
+  - description: Identifies the email initiating a technical review of usability concerns (email_009).
+  - description: Connects it to discussions in chat sessions (chat_003, chat_005, chat_007).
+  - description: Identifies relevant meeting or decision points (meeting-005).
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  id: case_087
+  query: What steps were planned to address the usability concerns raised by engineers about the AI coding agents?
+  user_id: jhassan
+- assertions:
+  - description: Identifies the email reporting the escalation (email_002).
+  - description: Connects it to group chats discussing the issue (chat_001, chat_010).
+  - description: Links it to the emergency task force meeting notes (meeting-001, data/reports/client_escalation_meeting_notes.docx).
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: chat_010
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  id: case_088
+  query: Who was involved in addressing the critical feature failure reported by the key client, and what actions were taken?
+  user_id: nkhatri
+- assertions:
+  - description: Identifies the email discussing feedback about the hotfix (email_004).
+  - description: Connects it to chats addressing the confusion and its impact (chat_002, chat_008).
+  - description: Links it to the meeting where the issue was discussed (meeting-002).
+  - description: References the technical notes on the debugging hotfix (data/patches/debugging_hotfix_notes.txt).
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: chat_008
+    entity_type: chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/patches/debugging_hotfix_notes.txt
+    entity_type: file
+  id: case_089
+  query: What caused the confusion among engineers regarding the unannounced debugging hotfix, and how was it addressed?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the meeting reviewing the junior engineer's workaround as 'meeting003'.
+  - description: Connects it to the document 'data/docs/debugging_workaround_proposal.pdf' containing the workaround details.
+  entity_list:
+  - entity_id: meeting003
+    entity_type: meeting
+  - entity_id: data/docs/debugging_workaround_proposal.pdf
+    entity_type: file
+  id: case_090
+  query: Which meeting was organized to evaluate the junior engineer's workaround proposal, and what document provides details about the workaround?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the meeting as 'meeting004' discussing damage mitigation.
+  - description: Links it to the document 'data/docs/client_demo_postponement_notice.pdf' explaining the demo postponement.
+  entity_list:
+  - entity_id: meeting004
+    entity_type: meeting
+  - entity_id: data/docs/client_demo_postponement_notice.pdf
+    entity_type: file
+  id: case_091
+  query: Which meeting focused on strategies to mitigate client dissatisfaction caused by the postponed demo, and what document explains the postponement?
+  user_id: rpatel
+- assertions:
+  - description: Identifies the meeting for damage control as 'meeting002'.
+  - description: Connects it to the file 'data/docs/layoffs_discussion_screenshots.zip' containing the leaked screenshots.
+  entity_list:
+  - entity_id: meeting002
+    entity_type: meeting
+  - entity_id: data/docs/layoffs_discussion_screenshots.zip
+    entity_type: file
+  id: case_092
+  query: Which meeting addressed the fallout from the leaked discussions on AI-driven layoffs, and which file contains the leaked screenshots?
+  user_id: msharif
+- assertions:
+  - description: Identifies the report on AI coding agents as the source document
+  - description: Identifies the leadership group chat discussing the report
+  entity_list:
+  - entity_id: data/reports/senior_engineer_ai_issues_report.pdf
+    entity_type: file
+  - entity_id: chat_001
+    entity_type: group_chat
+  id: case_093
+  query: What issue discussed in the leadership team's chat was based on the senior engineer's report on AI coding agents?
+  user_id: rpatel
+- assertions:
+  - description: Identifies the engineers' discussion about insufficient testing time
+  - description: Identifies the AI team's response to those concerns
+  entity_list:
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: data/plans/ai_team_update_announcement.pdf
+    entity_type: file
+  id: case_094
+  query: What concerns raised in the engineers' chat are addressed in the AI team's update plans?
+  user_id: nkhatri
+- assertions:
+  - description: Identifies the meeting discussing the contract termination threat
+  - description: Identifies the email containing the action plan to address the threat
+  entity_list:
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: email_006
+    entity_type: email
+  id: case_095
+  query: What action plan was discussed in the meeting about the key client's contract termination threat?
+  user_id: lzhang
+- assertions:
+  - description: Recognizes the leaked document about non-engineering layoffs.
+  - description: Identifies the email and chat discussing the HR Q&A postponement.
+  - description: Links these events to employee unrest as mentioned in related discussions.
+  entity_list:
+  - entity_id: data/leaks/internal_non_engineering_layoff_timeline.pdf
+    entity_type: file
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: chat
+  id: case_096
+  query: What specific concerns were raised by employees after the leaked layoff timeline and the postponement of the HR Q&A session?
+  user_id: msharif
+- assertions:
+  - description: Identifies the email providing details about the memory leak issue.
+  - description: Connects to the meeting where the patch deployment was organized.
+  - description: References the chat about progress and post-mortem of the patch.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: chat_007
+    entity_type: chat
+  id: case_097
+  query: How was the emergency patch for the memory leak issue developed and coordinated, and what progress was reported?
+  user_id: mgarcia
+- assertions:
+  - description: Recognizes the email analyzing financial risks from the client escalation.
+  - description: Identifies the file summarizing the client's legal threat.
+  - description: Links the chat discussing financial implications and budget adjustments for fixes.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: data/clients/escalation_report_client_xyz.txt
+    entity_type: file
+  - entity_id: chat_010
+    entity_type: chat
+  id: case_098
+  query: What financial risks were identified if the key client terminated their contract, and what mitigation strategies were proposed?
+  user_id: rpatel
+- assertions:
+  - description: Identifies the group chat discussing the patch efforts (chat_001)
+  - description: Connects this to the file documenting the finalized patch (data/reports/critical_bug_patch_notes_20260331.pdf)
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/reports/critical_bug_patch_notes_20260331.pdf
+    entity_type: file
+  id: case_099
+  query: Who documented the finalized patch for the critical bug that the product team was working on under the 48-hour client deadline?
+  user_id: adubois
+- assertions:
+  - description: Identifies the leadership discussion about the AI coding agent slowdown (chat_002)
+  - description: Links this to the report analyzing the slowdown (data/logs/ai_agent_slowdown_report_20260331.txt)
+  entity_list:
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: data/logs/ai_agent_slowdown_report_20260331.txt
+    entity_type: file
+  id: case_100
+  query: What were the potential causes and next steps discussed in the report about the AI coding agent slowdown that leadership was addressing?
+  user_id: tsato
+- assertions:
+  - description: Identifies HR's internal communication about the workshop's removal (data/hr/removed_workshop_announcement_20260331.docx)
+  - description: Connects this to the leadership meeting discussing its implications (meeting-5)
+  entity_list:
+  - entity_id: data/hr/removed_workshop_announcement_20260331.docx
+    entity_type: file
+  - entity_id: meeting-5
+    entity_type: meeting
+  id: case_101
+  query: What were the implications discussed in the leadership meeting about the removal of the 'Adapting to AI' workshop, as communicated by HR?
+  user_id: msharif
+- assertions:
+  - description: Identifies the leaked email about the second wave of SDE layoffs from 'email_001' and 'data/docs/layoff_plans_leak.pdf'.
+  - description: Connects the leaked email to the meeting where the fallout from it was discussed ('meeting-004').
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: data/docs/layoff_plans_leak.pdf
+    entity_type: file
+  - entity_id: meeting-004
+    entity_type: meeting
+  id: case_102
+  query: Which meeting discussed the fallout from the leaked email about the second wave of SDE layoffs?
+  user_id: adubois
+- assertions:
+  - description: Identifies the critical bug in the AI-driven coding agent from 'email_002' and 'data/logs/ai_agent_bug_report.log'.
+  - description: Connects the bug to the meeting discussing immediate fixes ('meeting-001').
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: data/logs/ai_agent_bug_report.log
+    entity_type: file
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_103
+  query: What meeting was held to identify the cause of the AI-driven coding agent bug and plan fixes for production build failures?
+  user_id: tsato
+- assertions:
+  - description: Identifies the resignation letter of the mid-level manager from 'data/docs/manager_resignation_letter.pdf'.
+  - description: Connects the resignation to the chat discussion about its impact ('chat_009').
+  entity_list:
+  - entity_id: data/docs/manager_resignation_letter.pdf
+    entity_type: file
+  - entity_id: chat_009
+    entity_type: chat
+  id: case_104
+  query: Which chat discussed the implications of the mid-level manager's resignation and its impact on the AI-first strategy?
+  user_id: msharif
+- assertions:
+  - description: Email_003 outlines action items for the Sales team related to client dissatisfaction.
+  - description: Email_006 discusses the testing and deployment plan for the critical bug workaround.
+  - description: Meeting-003 focuses on negotiating terms with the client to prevent contract termination.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: meeting-003
+    entity_type: meeting
+  id: case_105
+  query: How does the Sales team plan to address client dissatisfaction caused by unresolved bugs, and what role does the critical bug workaround play in their strategy?
+  user_id: nkhatri
+- assertions:
+  - description: 'The VP of Product''s memo demands a reprioritization of features (file: vp_product_prioritization_memo.txt).'
+  - description: Group_chat_001 highlights confusion about priorities caused by the memo.
+  - description: Chat_004 and Meeting-002 discuss strategies to address the confusion and its impact on teams.
+  entity_list:
+  - entity_id: data/memos/vp_product_prioritization_memo.txt
+    entity_type: file
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: chat_004
+    entity_type: chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_106
+  query: What confusion did the VP of Product's urgent memo cause, and how are engineering and product teams addressing it?
+  user_id: mgarcia
+- assertions:
+  - description: Email_005 discusses the CEO's response to the anonymous forum rant.
+  - description: Group_chat_004 involves leadership's discussion on managing online reputation amid backlash.
+  - description: 'File: anonymous_rant_analysis.docx provides an analysis of the forum post and its impact.'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: data/forum_posts/anonymous_rant_analysis.docx
+    entity_type: file
+  id: case_107
+  query: What actions did HugeSmoothTech take in response to the anonymous forum rant, and how did these actions address internal and external challenges?
+  user_id: erodriguez
+- assertions:
+  - description: Identifies the group chat where cascading failures were discussed ('chat_001')
+  - description: Connects the group chat discussion to the email outlining immediate action items ('email_001')
+  - description: Identifies the request for status updates from engineering teams in the email
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: email_001
+    entity_type: email
+  id: case_108
+  query: What document or communication outlines the immediate action items discussed in the group chat about cascading failures, and who is responsible for updates?
+  user_id: nkhatri
+- assertions:
+  - description: Identifies the file summarizing the canceled client call ('data/docs/canceled_client_meeting_notes.pdf')
+  - description: Connects the file to the chat discussing the strategy to salvage the client relationship ('chat_006')
+  - description: Identifies the meeting where the sales team strategized on addressing the client's concerns ('meeting_004')
+  entity_list:
+  - entity_id: data/docs/canceled_client_meeting_notes.pdf
+    entity_type: file
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_109
+  query: Which meeting or chat addresses the canceled client call mentioned in the document about the meeting notes, and what actions were proposed?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the file containing the leaked client dissatisfaction email ('data/emails/confidential_client_dissatisfaction_forwarded.txt')
+  - description: Connects the file to the chat discussing damage control ('chat_007')
+  - description: Identifies the meeting where the product team planned strategies to manage internal and client relations ('meeting_005')
+  entity_list:
+  - entity_id: data/emails/confidential_client_dissatisfaction_forwarded.txt
+    entity_type: file
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_110
+  query: What strategies were discussed in the meeting about internal and client relations after the confidential client dissatisfaction email was leaked?
+  user_id: rchowdhury
+- assertions:
+  - description: Includes the timeline and steps for the next phase of SDE layoffs.
+  - description: Discusses the financial impact of the layoffs.
+  - description: Analyzes the team's concerns about productivity and morale resulting from the layoffs.
+  entity_list:
+  - entity_id: data/memos/internal_memo_sde_layoffs_2026_03_25.pdf
+    entity_type: file
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_111
+  query: Provide an in-depth analysis of the planned SDE layoffs, including their timeline, financial implications, and potential impact on team morale and productivity.
+  user_id: nkhatri
+- assertions:
+  - description: Summarizes the feedback provided by engineers about the AI coding agents.
+  - description: Includes the results of the usability feedback survey.
+  - description: Mentions the public criticism raised by a senior engineer on the company intranet.
+  - description: Details the impact of the debugging feature update and the unannounced hotfix.
+  entity_list:
+  - entity_id: data/docs/coding_agent_feedback_survey.xlsx
+    entity_type: file
+  - entity_id: data/docs/usability_feedback_thread.md
+    entity_type: file
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_112
+  query: Summarize the feedback and concerns regarding the usability of the AI coding agents, including the impact of the debugging feature update and the results of the feedback survey.
+  user_id: tsato
+- assertions:
+  - description: Identifies the reasons for the major client loss.
+  - description: Discusses the details and impact of the critical feature failure reported by a key client.
+  - description: Proposes actionable strategies for client retention and addressing product shortcomings.
+  entity_list:
+  - entity_id: data/docs/client_loss_analysis.docx
+    entity_type: file
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_113
+  query: Analyze the reasons behind the loss of a major client and the critical feature failure escalation, and propose strategies to improve client retention and product enhancements.
+  user_id: rchowdhury
+- assertions:
+  - description: Details the discovery of the bug by the junior SDE
+  - description: Includes the escalation process and team discussions
+  - description: Describes the resolution steps, including the hotfix deployment
+  - description: Evaluates the effectiveness of the hotfix and remaining issues
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: data/docs/critical_bug_report.pdf
+    entity_type: file
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/patches/debugging_hotfix_notes.txt
+    entity_type: file
+  - entity_id: data/docs/debugging_hotfix_statement.pdf
+    entity_type: file
+  id: case_114
+  query: Provide a detailed analysis of the critical bug discovered in the AI coding agent's debugging feature, covering the discovery, escalation, resolution steps, and the effectiveness of the hotfix.
+  user_id: adubois
+- assertions:
+  - description: Outlines the details of the leaked document
+  - description: Describes the timeline of the leak and employee reactions
+  - description: Includes leadership's response and communication strategy
+  - description: Mentions ongoing employee morale concerns
+  entity_list:
+  - entity_id: data/docs/leaked_internal_document.pdf
+    entity_type: file
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_chat_005
+    entity_type: group_chat
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/docs/layoffs_discussion_screenshots.zip
+    entity_type: file
+  id: case_115
+  query: Summarize the events surrounding the leaked document about replacing middle-management roles with AI tools, including the timeline, employee reactions, and steps taken by leadership to manage the fallout.
+  user_id: klundqvist
+- assertions:
+  - description: Explains the reasons for the client's dissatisfaction
+  - description: Includes feedback about customer-requested features
+  - description: Details the actions taken by the sales and product teams
+  - description: Proposes strategies to improve client retention
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: data/docs/client_loss_analysis.docx
+    entity_type: file
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  id: case_116
+  query: Create a report analyzing the loss of a major client due to dissatisfaction with missing features in the AI-driven SaaS product. Include the root cause, client feedback, and strategies proposed to improve client retention.
+  user_id: nkhatri
+- assertions:
+  - description: Includes the senior engineer's public criticism on the intranet and subsequent discussions.
+  - description: Summarizes key feedback from engineers about the AI coding agents' usability issues.
+  - description: Details proposed solutions or next steps discussed in internal communications and meetings.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/docs/usability_feedback_thread.md
+    entity_type: file
+  id: case_117
+  query: Provide a comprehensive report on the usability concerns raised about AI coding agents, including a timeline of events, key feedback from engineers, and proposed solutions.
+  user_id: msharif
+- assertions:
+  - description: Explains the nature of the critical feature failure and its impact on the key client.
+  - description: Includes the emergency meeting and follow-up discussions about client dissatisfaction.
+  - description: Details actions taken to address the feature failure and prevent similar issues in the future.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  id: case_118
+  query: Create a detailed incident report on the critical feature failure reported by the key client, covering its impact on client relationships, internal response strategies, and subsequent actions taken.
+  user_id: lwong
+- assertions:
+  - description: Summarizes the content of the leaked internal discussions about AI-driven layoffs.
+  - description: Analyzes the employee reactions and concerns raised on the company intranet.
+  - description: Proposes measures to address employee distrust and mitigate reputational damage.
+  entity_list:
+  - entity_id: data/docs/layoffs_discussion_screenshots.zip
+    entity_type: file
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: meeting002
+    entity_type: meeting
+  - entity_id: chat_007
+    entity_type: group_chat
+  - entity_id: data/surveys/employee_job_security_survey_results.pdf
+    entity_type: file
+  id: case_119
+  query: Generate a report analyzing the impact of the leaked internal discussions about AI-driven layoffs, including employee reactions, reputational risks, and proposed measures to restore trust.
+  user_id: nkhatri
+- assertions:
+  - description: Details the key client's dissatisfaction and escalation to the executive level
+  - description: Explains the critical bugs and the 48-hour deadline for fixes
+  - description: Outlines the emergency response and mitigation strategies
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/clients/escalation_report_client_xyz.txt
+    entity_type: file
+  id: case_120
+  query: Provide a detailed analysis of the escalation of client dissatisfaction, including the threat of contract termination and the company's mitigation strategies.
+  user_id: nkhatri
+- assertions:
+  - description: Explains the low morale due to layoffs and leaked documents
+  - description: Mentions the postponed HR Q&A session and its impact
+  - description: Proposes potential HR strategies to rebuild trust
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/leaks/internal_non_engineering_layoff_timeline.pdf
+    entity_type: file
+  - entity_id: data/hr/postponed_q_and_a_update.txt
+    entity_type: file
+  id: case_121
+  query: Generate a comprehensive report on the state of employee morale, focusing on the impact of layoffs, the leaked documents, and the postponed HR Q&A session.
+  user_id: msharif
+- assertions:
+  - description: Describes the memory leak issue and its discovery
+  - description: Includes details of the emergency patch deployment
+  - description: Outlines the post-mortem and future preventative measures
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/patches/memory_leak_patch_notes.txt
+    entity_type: file
+  id: case_122
+  query: Prepare a technical summary of the memory leak issue in the latest coding agent update, including the emergency patch deployment and post-mortem plans.
+  user_id: tsilva
+- assertions:
+  - description: Includes details from the senior engineer's report highlighting risks to productivity and client satisfaction.
+  - description: Summarizes concerns raised by engineers regarding the AI coding agents' performance and the testing timeline for updates.
+  - description: Mentions leadership discussions about reconsidering the replacement strategy.
+  entity_list:
+  - entity_id: data/reports/senior_engineer_ai_issues_report.pdf
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_007
+    entity_type: group_chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_123
+  query: Generate a comprehensive report summarizing the issues raised about the AI coding agents' replacement strategy, including concerns from engineers and any leadership discussions or decisions.
+  user_id: adubois
+- assertions:
+  - description: Explains the root cause of the client's dissatisfaction, including the specific critical bugs in the SaaS product.
+  - description: Details the emergency all-hands call and subsequent meetings to address the issue.
+  - description: Analyzes the financial and reputational risks if the client terminates the contract.
+  - description: Outlines the action plan to resolve the critical bugs and meet the 48-hour deadline.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/escalations/key_client_bug_resolution_plan.pdf
+    entity_type: file
+  - entity_id: data/clients/escalation_report_client_xyz.txt
+    entity_type: file
+  id: case_124
+  query: Provide an in-depth analysis of the key client's contract termination threat, including the root cause of their dissatisfaction, actions taken to address the issue, and potential business impact.
+  user_id: rchowdhury
+- assertions:
+  - description: Discusses findings from the anonymous survey showing over 70% of employees feel uncertain about their job security.
+  - description: Mentions the impact of the leaked layoff timeline on employee trust.
+  - description: Analyzes the reasons and implications of the decision to remove the 'Adapting to AI' workshop.
+  - description: Provides actionable recommendations to rebuild employee morale and trust.
+  entity_list:
+  - entity_id: data/surveys/employee_job_security_survey_results.pdf
+    entity_type: file
+  - entity_id: data/leaks/internal_non_engineering_layoff_timeline.pdf
+    entity_type: file
+  - entity_id: data/hr/removed_workshop_announcement_20260331.docx
+    entity_type: file
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_125
+  query: Create a detailed analysis of the recent employee unrest, including factors such as the anonymous survey results, leaked layoff timeline, and the removal of the 'Adapting to AI' workshop. Include recommendations to improve employee morale.
+  user_id: msharif
+- assertions:
+  - description: Explains the content and impact of the leaked layoff document on employee morale.
+  - description: Details the reasons behind the postponement of the HR Q&A session and its effect on employees.
+  - description: Provides recommendations for improving internal communication and addressing employee concerns.
+  entity_list:
+  - entity_id: data/leaks/internal_non_engineering_layoff_timeline.pdf
+    entity_type: file
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  id: case_126
+  query: Provide an analysis of the employee unrest stemming from the leaked layoff timelines, the postponed HR Q&A session, and the company's communication strategies.
+  user_id: nkhatri
+- assertions:
+  - description: Includes the initial client escalation and the 48-hour deadline.
+  - description: Details the actions taken by the product and sales teams to address the client's concerns.
+  - description: Mentions any meetings, emails, or updates related to the progress of the fixes.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/clients/escalation_report_client_xyz.txt
+    entity_type: file
+  id: case_127
+  query: Create a detailed timeline of events and actions taken to address the key client's escalation and 48-hour deadline for resolving critical fixes.
+  user_id: rchowdhury
+- assertions:
+  - description: Identifies the root cause of the memory leak issue.
+  - description: Provides details on the emergency patch deployment process.
+  - description: Offers recommendations for improving testing and deployment processes to avoid similar issues.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/patches/memory_leak_patch_notes.txt
+    entity_type: file
+  id: case_128
+  query: Generate a post-mortem analysis of the memory leak issue in the AI coding agent, including the root cause, resolution, and recommendations to prevent similar issues in the future.
+  user_id: tsato
+- assertions:
+  - description: Includes a chronological timeline of events leading to the resolution of the bug.
+  - description: Describes the challenges faced by the product and engineering teams, including overtime work.
+  - description: References the finalized patch and its documentation.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting-1
+    entity_type: meeting
+  - entity_id: data/reports/critical_bug_patch_notes_20260331.pdf
+    entity_type: file
+  id: case_129
+  query: Generate a detailed timeline and analysis of the efforts to resolve the critical SaaS product bug under the 48-hour client deadline. Include key actions, challenges faced, and the final outcome.
+  user_id: adubois
+- assertions:
+  - description: Describes the performance issues with the AI coding agents and their impact on task delays.
+  - description: Summarizes the findings from the investigation into the slowdown.
+  - description: Details the planned mitigation steps or fixes.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting-2
+    entity_type: meeting
+  - entity_id: data/logs/ai_agent_slowdown_report_20260331.txt
+    entity_type: file
+  id: case_130
+  query: Provide an analysis of the unexplained slowdown in AI coding agents during peak hours. Include the reported impact on task delays, potential causes, and the steps taken to address the issue.
+  user_id: tsato
+- assertions:
+  - description: Explains why the workshop was removed and any known leadership disagreements.
+  - description: Summarizes the employee reactions and workplace culture debates.
+  - description: Provides recommendations for addressing concerns and improving communication.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting-5
+    entity_type: meeting
+  - entity_id: data/hr/removed_workshop_announcement_20260331.docx
+    entity_type: file
+  id: case_131
+  query: Analyze the implications of removing the 'Adapting to AI' workshop from the training calendar. Include employee reactions, potential leadership disagreements, and the impact on workplace culture.
+  user_id: msharif
+- assertions:
+  - description: Summarizes the content of the leaked email regarding the second wave of SDE layoffs.
+  - description: Analyzes employee reactions based on Slack discussion threads.
+  - description: Details the company's response and plans for workforce adjustments.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: data/docs/layoff_plans_leak.pdf
+    entity_type: file
+  - entity_id: data/slack/discussion_threads_2026_04_01.json
+    entity_type: file
+  - entity_id: meeting-004
+    entity_type: meeting
+  id: case_132
+  query: Provide a comprehensive analysis of the internal email leak about the second wave of SDE layoffs, including its impact on employee morale, Slack discussions, and the company's strategic response.
+  user_id: jokonkwo
+- assertions:
+  - description: Provides a timeline of the critical bug discovery and resolution efforts.
+  - description: Explains the technical impact of the bug on production builds.
+  - description: Details the workaround discovered and management's response to its implementation.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: data/logs/ai_agent_bug_report.log
+    entity_type: file
+  - entity_id: data/engineering/reports/ai_bug_workaround_discovery.md
+    entity_type: file
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_133
+  query: Summarize the timeline and resolution efforts for the critical bug in the AI-driven coding agent, highlighting its technical impact on production builds and the decisions made to mitigate further issues.
+  user_id: rpatel
+- assertions:
+  - description: Discusses the resignation of the mid-level manager and their criticism of the AI-first strategy.
+  - description: Analyzes client dissatisfaction due to missed deadlines and AI-related product issues.
+  - description: Evaluates employee skepticism about initiatives like the AI Adaptation Workshop.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: data/docs/manager_resignation_letter.pdf
+    entity_type: file
+  - entity_id: data/docs/client_litigation_risk_assessment.pdf
+    entity_type: file
+  - entity_id: data/docs/hr_ai_adaptation_workshop_outline.pdf
+    entity_type: file
+  - entity_id: group_chat_008
+    entity_type: group_chat
+  id: case_134
+  query: Evaluate the implications of HugeSmoothTech's AI-first strategy on employee morale, client relationships, and overall company performance, considering recent events and feedback.
+  user_id: msharif
+- assertions:
+  - description: Details the critical bug in the AI-driven coding agent and its impact on production builds.
+  - description: Explains the workaround proposed by the junior engineer and management's concerns about risks.
+  - description: Summarizes the current status of testing and deployment efforts.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: data/engineering/reports/ai_bug_workaround_discovery.md
+    entity_type: file
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_135
+  query: Provide a detailed analysis of the critical AI-driven coding agent bug, including the proposed workaround, risks outlined by management, and the current status of testing and deployment.
+  user_id: tsato
+- assertions:
+  - description: Provides a summary of the VP of Product's memo and its key directives.
+  - description: Explains how the memo caused confusion among teams and affected project timelines.
+  - description: Describes efforts to realign priorities and resolve communication issues.
+  entity_list:
+  - entity_id: data/memos/vp_product_prioritization_memo.txt
+    entity_type: file
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_136
+  query: Summarize the directives from the VP of Product's urgent memo and analyze its impact on team priorities, project timelines, and internal communication.
+  user_id: msharif
+- assertions:
+  - description: Summarizes the key client's concerns related to dissatisfaction and missed deadlines.
+  - description: Outlines the outcomes of the high-stakes call and any agreements made during the meeting.
+  - description: Details the action plan agreed upon by the sales team to address the client's concerns.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: data/sales/client_call_agenda_2026_04_02.pdf
+    entity_type: file
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: email_010
+    entity_type: email
+  id: case_137
+  query: Create a comprehensive report on the high-stakes client call, including a summary of the client's concerns, the meeting outcomes, and the action plan to address dissatisfaction and prevent contract termination.
+  user_id: rchowdhury
+- assertions:
+  - description: Includes the engineering director's Slack message warning about cascading failures.
+  - description: Outlines immediate action items from related emails and meetings.
+  - description: Summarizes mitigation strategies and technical discussions regarding bug fixes.
+  entity_list:
+  - entity_id: data/docs/engineering_cascading_failures_warning.pdf
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_009
+    entity_type: chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_138
+  query: Provide a detailed analysis of the cascading failure risks caused by unresolved AI coding agent bugs, including the timeline of events, mitigation strategies, and leadership actions.
+  user_id: adubois
+- assertions:
+  - description: Details the content of the new severance policy document.
+  - description: Summarizes employee reactions and layoff rumors from company forums.
+  - description: Identifies actions taken by HR and leadership to address these concerns.
+  entity_list:
+  - entity_id: data/docs/hr_severance_policy_update.pdf
+    entity_type: file
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: chat_008
+    entity_type: group_chat
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_139
+  query: Create a report summarizing the rollout of the new HR severance policy, including employee reactions, rumored layoffs, and actions taken to address these rumors.
+  user_id: msharif
+- assertions:
+  - description: Mentions the canceled client call and its implications for contract renewal.
+  - description: Summarizes notes from the canceled client meeting document.
+  - description: Outlines the sales team's risk mitigation strategies discussed in emails and meetings.
+  entity_list:
+  - entity_id: data/docs/canceled_client_meeting_notes.pdf
+    entity_type: file
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_006
+    entity_type: group_chat
+  - entity_id: meeting_006
+    entity_type: meeting
+  id: case_140
+  query: Compile a report on the major client call cancellation, the potential risks to contract renewal, and the sales team's strategies to address client concerns.
+  user_id: rchowdhury
+- assertions:
+  - description: Includes details from the public criticism of AI coding agents on the company intranet.
+  - description: Summarizes the feedback gathered from engineers regarding usability issues.
+  - description: Proposes actionable next steps to address the concerns raised.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: data/docs/usability_feedback_thread.md
+    entity_type: file
+  - entity_id: data/docs/coding_agent_feedback_survey.xlsx
+    entity_type: file
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: group_chat_009
+    entity_type: group_chat
+  id: case_141
+  query: Provide a comprehensive analysis of usability concerns related to the AI coding agents, including feedback from engineers, public criticism, and proposed next steps.
+  user_id: jhassan
+- assertions:
+  - description: Describes the critical feature failure reported by the client.
+  - description: Details the emergency meeting's outcomes and proposed solutions.
+  - description: Includes steps taken to reassure the client and prevent similar issues.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: chat_010
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  id: case_142
+  query: Summarize the key client escalation regarding the critical feature failure, including details of the issue, the emergency meeting, and proposed solutions.
+  user_id: rchowdhury
+- assertions:
+  - description: Explains the backlash against the HR workshop and its perceived tone-deafness.
+  - description: Discusses the unrest caused by the leaked document about replacing middle-management roles with AI tools.
+  - description: Addresses the impact of ongoing layoffs on employee morale.
+  - description: Proposes actionable strategies to rebuild trust and improve morale.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: group_chat_005
+    entity_type: group_chat
+  - entity_id: data/docs/hr_workshop_feedback.xlsx
+    entity_type: file
+  - entity_id: data/docs/leaked_internal_document.pdf
+    entity_type: file
+  id: case_143
+  query: Analyze the employee morale issues linked to recent events, including the backlash over the HR workshop, the leaked document about AI-driven management, and ongoing layoffs. Propose strategies to rebuild trust and improve morale.
+  user_id: msharif
+- assertions:
+  - description: Details the discovery of the critical bug by the junior SDE
+  - description: Describes the impact of the bug on engineering tasks
+  - description: Outlines the resolution timeline, including the unannounced hotfix
+  - description: Includes feedback from engineers on the hotfix and ongoing issues
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/critical_bug_report.pdf
+    entity_type: file
+  - entity_id: data/patches/debugging_hotfix_notes.txt
+    entity_type: file
+  id: case_144
+  query: Provide a detailed report on the critical debugging bug in the AI coding agent, including its discovery, impact, resolution timeline, and feedback from engineers.
+  user_id: tsato
+- assertions:
+  - description: Outlines when and how the internal document was leaked
+  - description: Describes employee reactions, including watercooler speculation and the intranet outrage
+  - description: Summarizes leadership's damage control efforts and planned next steps
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: group_chat_005
+    entity_type: group_chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/docs/leaked_internal_document.pdf
+    entity_type: file
+  - entity_id: data/docs/layoffs_discussion_screenshots.zip
+    entity_type: file
+  id: case_145
+  query: Generate a timeline and impact analysis of the leaked internal document on AI-driven layoffs, including employee reactions and leadership responses.
+  user_id: msharif
+- assertions:
+  - description: Details the specific reasons behind the client's dissatisfaction
+  - description: Includes financial implications of the client's loss
+  - description: Lists proposed strategies to prevent similar losses and improve client satisfaction
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/docs/client_loss_analysis.docx
+    entity_type: file
+  id: case_146
+  query: Analyze the loss of the major client due to dissatisfaction with the SaaS product, including the reasons cited, financial and business implications, and proposed strategies for client retention.
+  user_id: nkhatri
+- assertions:
+  - description: Summarizes the feedback from engineers on the AI coding agents' usability
+  - description: Includes details about the senior engineer's public criticism and submitted report
+  - description: Outlines proposed solutions and next steps discussed in meetings and emails
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/docs/usability_feedback_thread.md
+    entity_type: file
+  - entity_id: data/reports/senior_engineer_ai_issues_report.pdf
+    entity_type: file
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: chat_007
+    entity_type: group_chat
+  id: case_147
+  query: Provide a comprehensive analysis of the usability concerns about the AI coding agents, including feedback from engineers, the senior engineer's public criticism, and proposed solutions.
+  user_id: tsato
+- assertions:
+  - description: Includes the timeline of the critical feature failure and client escalation
+  - description: Details the emergency task force meeting and subsequent action plans
+  - description: Mentions the client demo postponement and its impact
+  - description: Outlines the resolution plan for the 48-hour deadline to address the client's threats
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/reports/client_escalation_meeting_notes.docx
+    entity_type: file
+  - entity_id: data/escalations/key_client_bug_resolution_plan.pdf
+    entity_type: file
+  - entity_id: data/docs/client_demo_postponement_notice.pdf
+    entity_type: file
+  id: case_148
+  query: Summarize the timeline and actions taken to address the critical feature failure and client dissatisfaction, including the threat of contract termination.
+  user_id: rchowdhury
+- assertions:
+  - description: Mentions the leaked screenshots of internal discussions about AI-driven layoffs
+  - description: Includes the results of the anonymous employee survey showing job security concerns
+  - description: Describes the company's response, including the Q&A session and planned workshops
+  - description: Analyzes the effectiveness and employee reception of these responses
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting002
+    entity_type: meeting
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/docs/layoffs_discussion_screenshots.zip
+    entity_type: file
+  - entity_id: data/surveys/employee_job_security_survey_results.pdf
+    entity_type: file
+  - entity_id: data/docs/hr_q_and_a_invitation.pdf
+    entity_type: file
+  id: case_149
+  query: Analyze the employee concerns about job security, including the impact of the leaked discussions on AI-driven layoffs, survey results, and the company's response.
+  user_id: msharif
+- assertions:
+  - description: Includes the AI team's claim of resolving 95% of issues with the debugging hotfix.
+  - description: Details the ongoing sporadic failures reported by engineers.
+  - description: Evaluates the junior engineer's workaround proposal and its potential for implementation.
+  entity_list:
+  - entity_id: data/docs/debugging_hotfix_statement.pdf
+    entity_type: file
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/docs/debugging_workaround_proposal.pdf
+    entity_type: file
+  - entity_id: meeting001
+    entity_type: meeting
+  - entity_id: chat_004
+    entity_type: chat
+  id: case_150
+  query: Provide a comprehensive report on the debugging tool's performance issues, including the AI team's resolution claims, ongoing failures, and the viability of the junior engineer's proposed workaround.
+  user_id: lzhang
+description: Generated evaluation queries covering search, multi-hop reasoning, and report generation.
+name: Evaluation Set for hugesmoothtech-corp-20260404

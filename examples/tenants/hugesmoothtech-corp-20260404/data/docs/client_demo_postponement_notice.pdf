@@ -1,0 +1,78 @@
+# Internal Notice: Postponement of Client Demo
+
+**Author**: Mariana Garcia  
+**Date**: March 28, 2026
+
+---
+
+## Overview
+
+This internal notice serves to inform all relevant teams about the decision to postpone the scheduled client demo originally planned for March 29, 2026. The decision was made after careful consideration of the ongoing technical issues with the new AI-driven SaaS product and the critical feedback received from both clients and internal stakeholders. This notice outlines the reasons for the postponement, the immediate next steps, and the measures we are taking to address the underlying challenges.
+
+---
+
+## Key Reasons for Postponement
+
+1. **Unresolved Feature Bugs**  
+   - A critical bug in the new debugging feature of the AI coding agents was identified on March 26, 2026, by a junior SDE. Despite an unannounced hotfix rolled out by the AI team on March 27, sporadic failures persist.
+   - These bugs directly impact the usability of a key feature that was to be showcased during the demo, risking potential embarrassment and loss of client trust if presented in its current state.
+
+2. **Client Escalations and Dissatisfaction**  
+   - On March 27, a key client submitted an urgent escalation regarding a feature failure in the SaaS product, which is critical to their operations.
+   - Feedback from other clients also highlights dissatisfaction with the lack of customer-requested features in our current AI-driven solutions.
+
+3. **Internal Morale and Resource Constraints**  
+   - The ongoing layoffs and speculation about further AI-driven role replacements have significantly impacted team morale and productivity.
+   - The product team is stretched thin, and the recent resignation of a mid-level manager on March 27 has further strained resources.
+
+4. **Reputation Management**  
+   - A failed demo risks not only the immediate loss of client confidence but also long-term reputational damage to our company and products. It is crucial that we present a polished, stable, and client-focused solution.
+
+---
+
+## Immediate Next Steps
+
+### 1. Technical Resolution
+- The AI team has been tasked with:
+  - Conducting a root cause analysis of the debugging feature failures.
+  - Implementing a comprehensive fix by **April 2, 2026**.
+  - Collaborating with engineers to ensure all reported bugs are resolved and thoroughly tested.
+
+### 2. Client Communication
+- The Sales and Customer Success teams will:
+  - Proactively communicate the postponement to clients by **March 29, 2026**.
+  - Emphasize our commitment to delivering a high-quality demo and product.
+  - Offer alternative one-on-one sessions with key clients to address their specific concerns.
+
+### 3. Internal Support
+- HR will:
+  - Schedule additional support sessions to address employee concerns about the ongoing changes.
+  - Provide clear communication about severance packages and job security to alleviate tension among teams.
+
+### 4. Revised Demo Schedule
+- A new timeline for the client demo will be determined by **April 5, 2026**, based on the resolution of technical issues and internal feedback.
+- The tentative reschedule date is **April 15, 2026**, but this is subject to change pending progress.
+
+---
+
+## Detailed Action Plan
+
+| **Action Item**                         | **Owner**           | **Deadline**       |
+|-----------------------------------------|---------------------|--------------------|
+| Finalize root cause analysis            | AI Team             | March 30, 2026    |
+| Implement and test comprehensive fixes  | AI Team & Engineers | April 2, 2026     |
+| Communicate postponement to clients     | Sales Team          | March 29, 2026    |
+| Schedule one-on-one client sessions     | Customer Success    | April 1, 2026     |
+| Provide an updated demo timeline        | Product Team        | April 5, 2026     |
+
+---
+
+## Acknowledgements
+We understand that this decision may cause additional stress for our teams. We appreciate the hard work, collaboration, and resilience demonstrated by everyone during this challenging period. Our priority remains delivering a product that meets client expectations and upholds our reputation for quality and innovation.
+
+If you have any concerns or suggestions, please reach out to your manager or attend the optional virtual Q&A session scheduled for **March 30, 2026**.
+
+---
+
+**Mariana Garcia**  
+**Director of Product Management**

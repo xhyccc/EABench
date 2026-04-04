@@ -1,0 +1,115 @@
+# Memory Leak Patch Notes
+
+### Author: Takeshi Sato
+
+---
+
+## Overview
+A minor memory leak issue was discovered in the latest coding agent update (v3.5.2) during routine debugging and internal testing. The leak affected the stability and performance of agents in environments with prolonged usage, especially during high-intensity debugging tasks. This patch aims to resolve the issue and improve overall agent reliability.
+
+---
+
+## Issue Details
+
+### Root Cause:
+The memory leak was traced back to improper management of cache memory during recursive debugging operations. Specifically:
+- **Cache Retention:** Temporary debugging data was not being cleared properly after task completion.
+- **Garbage Collection:** Inefficient garbage collection routines led to residual data accumulation over time.
+- **Thread Management:** Debugging tasks spawned extra threads that were not correctly terminated under specific conditions.
+
+### Impact:
+- **Performance Degradation:** Coding agents experienced a gradual slowdown in high-use scenarios.
+- **System Instability:** Memory usage spikes caused occasional crashes in prolonged sessions.
+- **Client-side Failures:** Reports from clients highlighted sporadic failures in debugging tasks, especially in complex projects.
+
+---
+
+## Patch Details
+
+### Version:
+v3.5.3 (Hotfix)
+
+### Changes Implemented:
+1. **Cache Optimization:**
+   - Implemented automatic clearing of temporary debugging data post-task completion.
+   - Reduced cache retention times for low-priority debugging tasks.
+
+2. **Garbage Collection Enhancements:**
+   - Updated memory management routines to enforce stricter garbage collection thresholds.
+   - Added periodic memory clean-up processes triggered during idle states.
+
+3. **Thread Management Fixes:**
+   - Corrected thread termination logic for recursive debugging operations.
+   - Enhanced monitoring of spawned threads to prevent orphaned processes.
+
+4. **Performance Monitoring Tools:**
+   - Introduced real-time memory usage tracking within the coding agent dashboard.
+   - Developed a diagnostic alert system to warn users of potential memory-related issues.
+
+---
+
+## Testing and Validation
+
+### Internal Testing:
+- Conducted stress tests with 10k+ debugging tasks.
+- Observed a **25% reduction** in memory usage during peak operations.
+- Verified stability over prolonged sessions (8+ hours).
+
+### Client Feedback:
+- Early-access clients reported **95% fewer debugging failures** after hotfix deployment.
+- No further reports of memory spikes or crashes.
+
+### Known Limitations:
+- Users running legacy projects with deprecated libraries may experience slight delays in debugging tasks due to enhanced garbage collection processes.
+- Advanced monitoring tools may require manual activation for full functionality in some environments.
+
+---
+
+## Deployment Instructions
+
+### For Engineers:
+1. **Backup Existing Installations:**
+   - Ensure all active coding agent instances are backed up.
+
+2. **Update Process:**
+   - Download patch v3.5.3 from the internal repository.
+   - Replace the existing agent files in `/opt/ai-agents/`.
+
+3. **Restart Services:**
+   - Restart all coding agent instances to apply the patch.
+
+4. **Post-Deployment Checks:**
+   - Verify memory usage via the new monitoring dashboard.
+   - Run test debugging tasks to ensure stability.
+
+### For Clients:
+- The patch will be automatically applied to hosted SaaS instances.
+- Users running on-premise installations can request support from the customer success team for manual patch deployment.
+
+---
+
+## Acknowledgements
+
+We extend our thanks to:
+- **Hiroshi Tanaka**, Junior SDE, for identifying the initial bug.
+- The QA team for their rigorous testing and validation efforts.
+- Our clients for their patience and detailed feedback during this process.
+
+---
+
+## Next Steps
+- Continue monitoring for edge-case scenarios post-patch.
+- Roll out additional performance enhancements in v3.6, scheduled for release next month.
+- Engage with clients to gather feedback on usability and reliability of updated coding agents.
+
+For further inquiries, please contact the AI team or submit a ticket through the internal support portal.
+
+---
+
+> **Note:** This patch is part of our ongoing commitment to improving the stability and reliability of AI-driven tools. We appreciate your understanding and support as we continue to enhance our products.
+
+---
+
+**Release Date:** 2026-03-30
+
+**Version:** v3.5.3
