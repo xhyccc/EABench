@@ -1,3 +1,4 @@
+import asyncio
 import numpy as np
 import os
 import pickle
@@ -5,6 +6,11 @@ from typing import List, Dict, Any, Tuple
 from .embedding_provider import EmbeddingProvider
 from ..config.tenant_config import TenantConfig
 from ..sandbox.base import SandboxInterface
+
+# Maximum texts per single embedding API call (Azure limit is 2048).
+_EMBED_BATCH_SIZE = 512
+# Maximum concurrent batch requests sent to the embedding API at once.
+_EMBED_CONCURRENCY = 8
 
 class SearchEngine:
     def __init__(self, tenant_config: TenantConfig, embedding_provider: EmbeddingProvider, sandbox: SandboxInterface, indices: Dict[str, Dict[str, Any]] = None):
@@ -44,13 +50,13 @@ class SearchEngine:
                     self.current_user_emails.append(constructed_email)
 
     async def index_all(self):
-        # Check for cache
+        # ── Cache check ────────────────────────────────────────────────────────
         if self.tenant.root_path:
             cache_dir = os.path.join(self.tenant.root_path, ".cache")
             model_name = self.embedding_provider.get_model_name()
             safe_model_name = "".join(c if c.isalnum() else "_" for c in model_name)
             cache_file = os.path.join(cache_dir, f"embeddings_{safe_model_name}.pkl")
-            
+
             if os.path.exists(cache_file):
                 print(f"Loading index from cache: {cache_file}")
                 try:
@@ -60,7 +66,10 @@ class SearchEngine:
                 except Exception as e:
                     print(f"Failed to load cache: {e}")
 
-        # Index File Snippets
+        # ── Phase 1: collect all (index_name, text, metadata) ─────────────────
+        items: List[Tuple[str, str, Dict[str, Any]]] = []
+
+        # File snippets
         for file_meta in self.tenant.files_metadata:
             if file_meta.snippet:
                 text = f"File: {file_meta.path}\n"
@@ -69,11 +78,10 @@ class SearchEngine:
                 if file_meta.last_modified_by:
                     text += f"Modified By: {file_meta.last_modified_by}\n"
                 text += f"Snippet: {file_meta.snippet}"
-                await self._add_to_index("file_snippets", text, file_meta.model_dump())
+                items.append(("file_snippets", text, file_meta.model_dump()))
 
-        # Index Users
+        # Users
         for user in self.tenant.users:
-            # Construct a rich text representation for the user
             profile = user.profile
             text = f"Name: {profile.name.display_name}\n"
             text += f"Username: {user.username}\n"
@@ -84,15 +92,10 @@ class SearchEngine:
             text += f"Skills: {', '.join(profile.skills)}\n"
             if profile.manager_id:
                 text += f"Manager ID: {profile.manager_id}\n"
-            
-            await self._add_to_index("users", text, user.model_dump())
+            items.append(("users", text, user.model_dump()))
 
-        # Index File Contents (read from sandbox)
-        # Note: In a real system, we might not want to read ALL files into memory.
-        # But for this bench, we assume small scale.
+        # File contents (read from sandbox)
         try:
-            # We need to know which files exist. We can use the metadata or list files.
-            # Let's use metadata paths.
             for file_meta in self.tenant.files_metadata:
                 try:
                     content = self.sandbox.read_file(file_meta.path)
@@ -100,14 +103,13 @@ class SearchEngine:
                     if file_meta.created_by:
                         text += f"Created By: {file_meta.created_by}\n"
                     text += f"Content: {content}"
-                    await self._add_to_index("file_contents", text, {"path": file_meta.path, "content": content})
+                    items.append(("file_contents", text, {"path": file_meta.path, "content": content}))
                 except Exception:
-                    # File might not exist in sandbox yet or is a directory
                     pass
         except Exception as e:
             print(f"Warning: Failed to index file contents: {e}")
 
-        # Index Emails
+        # Emails
         for email in self.tenant.emails:
             text = f"ID: {email.id}\nFrom: {email.from_user}\nTo: {', '.join(email.to_users)}\n"
             if email.cc_users:
@@ -115,31 +117,28 @@ class SearchEngine:
             if email.bcc_users:
                 text += f"BCC: {', '.join(email.bcc_users)}\n"
             text += f"Date: {email.timestamp}\nSubject: {email.subject}\nBody: {email.body}"
-            await self._add_to_index("emails", text, email.model_dump())
+            items.append(("emails", text, email.model_dump()))
 
-        # Index Chats
+        # Chats
         for chat in self.tenant.chats:
-            # Index each message or the whole chat? 
-            # Let's index individual messages for better granularity
             for msg in chat.messages:
                 text = f"Chat ID: {chat.id}\nParticipants: {', '.join(chat.participants)}\nDate: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
-                await self._add_to_index("chats", text, {"chat_id": chat.id, "participants": chat.participants, **msg.model_dump()})
+                items.append(("chats", text, {"chat_id": chat.id, "participants": chat.participants, **msg.model_dump()}))
 
-        # Index Group Chats
+        # Group chats
         for gc in self.tenant.group_chats:
             for msg in gc.messages:
                 text = f"Group Chat ID: {gc.id}\nGroup: {gc.name}\nParticipants: {', '.join(gc.participants)}\nDate: {msg.timestamp}\nFrom: {msg.from_user}\nContent: {msg.content}"
-                await self._add_to_index("group_chats", text, {"group_chat_id": gc.id, "participants": gc.participants, **msg.model_dump()})
+                items.append(("group_chats", text, {"group_chat_id": gc.id, "participants": gc.participants, **msg.model_dump()}))
 
-        # Index Channels
+        # Channels
         for channel in self.tenant.channels:
             for post in channel.posts:
                 text = f"Channel ID: {channel.id}\nChannel: {channel.name}\nParticipants: {', '.join(channel.participants)}\nDate: {post.timestamp}\nAuthor: {post.author}\nContent: {post.content}"
-                await self._add_to_index("channels", text, {"channel_id": channel.id, "participants": channel.participants, **post.model_dump()})
+                items.append(("channels", text, {"channel_id": channel.id, "participants": channel.participants, **post.model_dump()}))
 
-        # Index Meetings
+        # Meetings
         for meeting in self.tenant.meetings:
-            # Config (Agenda, Title)
             config_text = f"Meeting ID: {meeting.id}\nTitle: {meeting.title}\nAgenda: {meeting.agenda}\n"
             config_text += f"Organizer: {meeting.organizer}\n"
             config_text += f"Invitees: {', '.join(meeting.invitees)}\n"
@@ -147,32 +146,50 @@ class SearchEngine:
             config_text += f"Date: {meeting.start_time} to {meeting.end_time}\n"
             if meeting.location:
                 config_text += f"Location: {meeting.location}\n"
+            items.append(("meetings_config", config_text, meeting.model_dump(exclude={"transcript", "chat"})))
 
-            await self._add_to_index("meetings_config", config_text, meeting.model_dump(exclude={"transcript", "chat"}))
-            
-            # Transcript
             if meeting.transcript:
                 transcript_text = f"Meeting ID: {meeting.id}\nTitle: {meeting.title}\nDate: {meeting.start_time}\n"
                 transcript_text += f"Organizer: {meeting.organizer}\n"
                 transcript_text += f"Attendees: {', '.join(meeting.attendees)}\n"
                 transcript_text += f"Transcript:\n{meeting.transcript}"
-
-                await self._add_to_index("meetings_transcript", transcript_text, {
-                    "meeting_id": meeting.id, 
+                items.append(("meetings_transcript", transcript_text, {
+                    "meeting_id": meeting.id,
                     "transcript": meeting.transcript,
                     "organizer": meeting.organizer,
                     "invitees": meeting.invitees,
-                    "attendees": meeting.attendees
-                })
+                    "attendees": meeting.attendees,
+                }))
 
-        # Save to cache
+        # ── Phase 2: batch embed (concurrent) ─────────────────────────────────
+        texts = [text for _, text, _ in items]
+        batches = [texts[i:i + _EMBED_BATCH_SIZE] for i in range(0, len(texts), _EMBED_BATCH_SIZE)]
+        print(f"Embedding {len(texts)} items in {len(batches)} batch(es) "
+              f"(concurrency={min(len(batches), _EMBED_CONCURRENCY)})...")
+
+        all_vectors: List[List[float]] = []
+        # Process in windows of _EMBED_CONCURRENCY to avoid overwhelming the API
+        for window_start in range(0, len(batches), _EMBED_CONCURRENCY):
+            window = batches[window_start:window_start + _EMBED_CONCURRENCY]
+            batch_results = await asyncio.gather(*[
+                self.embedding_provider.get_embeddings_batch(batch) for batch in window
+            ])
+            for batch_vectors in batch_results:
+                all_vectors.extend(batch_vectors)
+
+        # ── Phase 3: populate indices ──────────────────────────────────────────
+        for (index_name, _, metadata), vector in zip(items, all_vectors):
+            self.indices[index_name]["vectors"].append(vector)
+            self.indices[index_name]["data"].append(metadata)
+
+        # ── Save cache ─────────────────────────────────────────────────────────
         if self.tenant.root_path:
             try:
                 cache_dir = os.path.join(self.tenant.root_path, ".cache")
                 model_name = self.embedding_provider.get_model_name()
                 safe_model_name = "".join(c if c.isalnum() else "_" for c in model_name)
                 cache_file = os.path.join(cache_dir, f"embeddings_{safe_model_name}.pkl")
-                
+
                 if not os.path.exists(cache_dir):
                     os.makedirs(cache_dir)
                 with open(cache_file, "wb") as f:
@@ -182,6 +199,7 @@ class SearchEngine:
                 print(f"Failed to save cache: {e}")
 
     async def _add_to_index(self, index_name: str, text: str, metadata: Dict[str, Any]):
+        """Single-item index helper (used outside index_all, e.g. incremental updates)."""
         vector = await self.embedding_provider.get_embedding(text)
         self.indices[index_name]["vectors"].append(vector)
         self.indices[index_name]["data"].append(metadata)

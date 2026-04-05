@@ -7,6 +7,13 @@ class EmbeddingProvider(ABC):
     async def get_embedding(self, text: str) -> List[float]:
         pass
 
+    async def get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
+        """Embed a list of texts. Override for efficient batch API calls."""
+        results = []
+        for text in texts:
+            results.append(await self.get_embedding(text))
+        return results
+
     @abstractmethod
     def get_model_name(self) -> str:
         pass
@@ -27,15 +34,31 @@ class AzureEmbeddingProvider(EmbeddingProvider):
         )
         return response.data[0].embedding
 
+    async def get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
+        """Single API call for the whole batch (Azure supports up to 2048 inputs)."""
+        response = await self.client.embeddings.create(
+            input=texts,
+            model=self.deployment_name
+        )
+        # response.data may not be ordered; sort by .index to be safe
+        return [item.embedding for item in sorted(response.data, key=lambda x: x.index)]
+
     def get_model_name(self) -> str:
         return self.deployment_name
 
 class MockEmbeddingProvider(EmbeddingProvider):
     async def get_embedding(self, text: str) -> List[float]:
-        # Return a random vector or a deterministic one based on text length
         import random
         random.seed(len(text))
-        return [random.random() for _ in range(384)] # 384 is common for small models
+        return [random.random() for _ in range(384)]
+
+    async def get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
+        import random
+        results = []
+        for text in texts:
+            random.seed(len(text))
+            results.append([random.random() for _ in range(384)])
+        return results
 
     def get_model_name(self) -> str:
         return "mock-embedding"
@@ -47,11 +70,13 @@ class LocalEmbeddingProvider(EmbeddingProvider):
         self.model = SentenceTransformer(model_name)
 
     async def get_embedding(self, text: str) -> List[float]:
-        # SentenceTransformer is synchronous, but we can run it directly here
-        # since it's fast enough for local testing, or wrap in run_in_executor if needed.
-        # For simplicity in this context, we'll run it directly.
         embedding = self.model.encode(text)
         return embedding.tolist()
+
+    async def get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
+        """sentence-transformers natively supports batch encoding."""
+        embeddings = self.model.encode(texts, batch_size=64, show_progress_bar=False)
+        return embeddings.tolist()
 
     def get_model_name(self) -> str:
         return self.model_name
