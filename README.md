@@ -4,13 +4,14 @@
 
 EABench is a modular platform to execute, test, and evaluate LLM-powered agents in hermetic sandboxes. It provides realistic synthetic tenant data (emails, chats, meetings, files), configurable agent workflows, secure tool execution, and an evaluation framework combining deterministic assertions with LLM-based judging.
 
-**Architecture**: The **Rust CLI** handles offline data generation and evaluation. The **Python Streamlit web UI** is the interactive front-end for chatting with agents, running evaluations, and generating new datasets.
+**Architecture**: The **Rust CLI** handles offline data generation. The **Python CLI** (`python/run_eval.py`) handles evaluation. The **Python Streamlit web UI** is the interactive front-end for chatting with agents, running evaluations, and generating new datasets.
 
 ---
 
 ## Highlights ✅
 
-- **Rust CLI for data generation**: Fast, parallel tenant generation with `eabench generate`. Supports Azure OpenAI and OpenAI-compatible providers.
+- **Rust CLI for data generation**: Fast tenant generation with `eabench generate`. Supports Azure OpenAI and OpenAI-compatible providers.
+- **Python CLI for evaluation**: `python/run_eval.py` runs the full async eval pipeline with LLM judging and saves per-case metrics to JSON.
 - **Streamlit Web UI**: Four views — Chat, Evaluation, Side-by-Side Comparison, and Data Generator — all in the browser.
 - **Sandboxed Execution**: Agents run in isolated local sandboxes with read/write/execute tool access.
 - **Multi-Provider LLM Support**: Azure OpenAI, OpenAI-compatible endpoints (SiliconFlow, etc.), or local LLMs.
@@ -98,12 +99,7 @@ Output is written to `examples/tenants/<company-slug-YYYYMMDD>/`.
 ```bash
 # From repo root
 set -a && source .env && set +a
-
-# Option A: directly
 .venv/bin/streamlit run python/app.py --server.port 8501
-
-# Option B: via the Rust binary
-./rust/target/release/eabench serve
 ```
 
 Open **http://localhost:8501**, select a tenant and user from the sidebar, and start chatting.
@@ -140,7 +136,7 @@ Generate a new synthetic tenant entirely from within the browser. Fill in compan
 
 ## Rust CLI
 
-The Rust binary (`rust/target/release/eabench`) handles offline data generation and evaluation. All commands below are run from the **repo root** after loading credentials:
+The Rust binary (`rust/target/release/eabench`) handles offline data generation. All commands below are run from the **repo root** after loading credentials:
 
 ```bash
 set -a && source .env && set +a
@@ -183,25 +179,61 @@ examples/tenants/<slug>/
 └── eval_dataset_<ts>.yaml  # Auto-generated evaluation dataset
 ```
 
-### `eval` — Run deterministic evaluation
+---
 
-Runs an eval dataset against a tenant, executing each query through the agent and scoring assertions without human involvement.
+## Python Evaluation CLI
 
-```bash
-./rust/target/release/eabench eval \
-  --tenant  examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
-  --eval    examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
-  --workers 4
-```
-
-### `serve` — Launch the web UI
+`python/run_eval.py` runs the full async evaluation pipeline: agent execution, LLM-based assertion judging, and citation scoring.
 
 ```bash
-./rust/target/release/eabench serve              # default port 8501
-./rust/target/release/eabench serve --port 8502  # custom port
+# From the python/ directory
+cd python
+set -a && source ../.env && set +a
+
+python run_eval.py \
+    --tenant  ../examples/tenants/my-tenant/tenant.yaml \
+    --eval    ../examples/tenants/my-tenant/eval_dataset.yaml
 ```
 
-Looks for `.venv/bin/streamlit` in the repo root first, then falls back to `streamlit` on PATH.
+All arguments:
+
+| Flag | Default | Description |
+|---|---|---|
+| `--tenant PATH` | *(required)* | Path to `tenant.yaml` |
+| `--eval PATH` | *(required)* | Path to eval dataset YAML |
+| `--agent PATH` | `../examples/agents/react_agent_v2.yaml` | Agent config YAML |
+| `--judge PATH` | `../examples/evals/default_judge.yaml` | Judge prompts YAML |
+| `--output PATH` | auto-named under `results/` | Output JSON file |
+| `--provider openai\|azure` | auto-detect from env | Force LLM provider |
+| `--model NAME` | from env | Model / deployment override |
+| `--api-key TEXT` | from env | API key override |
+| `--azure-endpoint URL` | from env | Azure endpoint override |
+| `--temperature FLOAT` | `0.0` | Judge LLM temperature |
+
+Output JSON structure:
+
+```json
+{
+  "metadata": { "tenant": "...", "eval_set": "...", "total_cases": 150, "timestamp": "..." },
+  "summary": {
+    "passed": 10, "failed": 140, "total": 150,
+    "pass_rate": 0.0667,
+    "mean_assertion_score": 0.504,
+    "mean_citation_score": 0.672
+  },
+  "cases": [
+    {
+      "case_id": "case_001",
+      "query": "...",
+      "response": "...",
+      "tool_calls": [...],
+      "metrics": { "assertion_score": 0.8, "citation_score": 1.0 },
+      "assertion_results": [...],
+      "passed": true
+    }
+  ]
+}
+```
 
 ---
 
@@ -300,19 +332,20 @@ EABench/
 ├── python/                      # Web UI (Streamlit)
 │   ├── requirements.txt
 │   ├── app.py                   # Streamlit entry point
+│   ├── run_eval.py              # Evaluation CLI (async, LLM judging, JSON output)
 │   └── src/
 │       ├── core/                # Agent runner, search engine, LLM/embedding providers
 │       ├── config/              # Pydantic schemas (TenantConfig, AgentConfig)
 │       ├── sandbox/             # LocalSandbox
 │       └── eval/                # Evaluator, assertions, judge templates
 │   └── tests/                   # Pytest suite (113 tests)
-├── rust/                        # Offline CLI (data gen + eval)
+├── rust/                        # Offline CLI (data generation + web UI launcher)
 │   ├── Cargo.toml
 │   ├── example_cmd.md           # CLI usage reference
 │   └── src/
-│       ├── main.rs              # CLI: eval | generate | serve subcommands
+│       ├── main.rs              # CLI: generate subcommand
 │       ├── generator/           # Synthetic tenant generator (LLM-driven)
-│       ├── eval/                # Deterministic evaluator
+│       ├── eval/                # Evaluation models (library only)
 │       ├── search/              # Keyword search engine
 │       └── config/              # TenantConfig, AgentConfig (Rust)
 └── examples/
