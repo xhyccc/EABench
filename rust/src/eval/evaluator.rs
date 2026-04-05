@@ -1,7 +1,9 @@
 use crate::search::SearchEngine;
+use crate::generator::llm_provider::{LLMProvider, Message};
 use super::models::{Assertion, EvaluationCase, EvaluationResult, EvaluationSet};
 use std::collections::HashMap;
 use rayon::prelude::*;
+use anyhow::Result;
 
 // ---------------------------------------------------------------------------
 // AssertionChecker – deterministic text-based evaluation
@@ -220,6 +222,150 @@ impl Default for Evaluator {
     fn default() -> Self {
         Self::new()
     }
+}
+
+// ---------------------------------------------------------------------------
+// LLM-based judge functions (mirrors Python Evaluator._evaluate_assertions
+// and _evaluate_citation)
+// ---------------------------------------------------------------------------
+
+/// Use an LLM judge to check whether a response satisfies each assertion.
+///
+/// Sends the `assertion_check` prompt (from the judge YAML config) to the LLM,
+/// parses the YAML response, and returns:
+///   * `score`              – fraction of assertions that passed (0.0 – 1.0)
+///   * `assertion_results`  – per-assertion `{id, passed, reasoning, description}`
+pub fn judge_assertions(
+    llm: &dyn LLMProvider,
+    prompt_template: &str,
+    query: &str,
+    response: &str,
+    assertions: &[Assertion],
+) -> Result<(f64, Vec<HashMap<String, String>>)> {
+    let assertions_text = assertions
+        .iter()
+        .enumerate()
+        .map(|(i, a)| format!("{}. {}", i + 1, a.description))
+        .collect::<Vec<_>>()
+        .join("\n");
+
+    let prompt = prompt_template
+        .replace("{query}", query)
+        .replace("{response}", response)
+        .replace("{assertions}", &assertions_text);
+
+    let messages = vec![Message::user(prompt)];
+    let resp = llm.generate(&messages, &[])?;
+    let content = resp.content.unwrap_or_default();
+
+    let yaml_str = extract_yaml_block(&content);
+    let data: serde_yaml::Value =
+        serde_yaml::from_str(&yaml_str).unwrap_or(serde_yaml::Value::Null);
+
+    let mut assertion_results: Vec<HashMap<String, String>> = Vec::new();
+    let mut passed_count = 0usize;
+
+    if let Some(arr) = data.get("assertions").and_then(|v| v.as_sequence()) {
+        for (i, item) in arr.iter().enumerate() {
+            let id = item
+                .get("id")
+                .and_then(|v| v.as_i64())
+                .unwrap_or((i + 1) as i64);
+            let passed = item
+                .get("passed")
+                .map(|v| {
+                    v.as_bool().unwrap_or(false)
+                        || v.as_str() == Some("true")
+                        || v.as_str() == Some("True")
+                })
+                .unwrap_or(false);
+            let reasoning = item
+                .get("reasoning")
+                .and_then(|v| v.as_str())
+                .unwrap_or("")
+                .to_string();
+
+            if passed {
+                passed_count += 1;
+            }
+
+            let mut m = HashMap::new();
+            m.insert("id".to_string(), id.to_string());
+            m.insert("passed".to_string(), passed.to_string());
+            m.insert("reasoning".to_string(), reasoning);
+            if let Some(a) = assertions.get(i) {
+                m.insert("description".to_string(), a.description.clone());
+            }
+            assertion_results.push(m);
+        }
+    }
+
+    let score = if assertions.is_empty() {
+        1.0
+    } else {
+        passed_count as f64 / assertions.len() as f64
+    };
+
+    Ok((score, assertion_results))
+}
+
+/// Use an LLM judge to evaluate whether the agent used tools appropriately
+/// and grounded its response in retrieved content.
+///
+/// Returns a citation/tool-usage score (0.0 – 1.0).
+pub fn judge_citation(
+    llm: &dyn LLMProvider,
+    prompt_template: &str,
+    query: &str,
+    tool_calls_log: &[(String, String)],
+    response: &str,
+) -> Result<f64> {
+    let tool_calls_text = if tool_calls_log.is_empty() {
+        "(no tool calls)".to_string()
+    } else {
+        tool_calls_log
+            .iter()
+            .map(|(name, snippet)| format!("- {}(query): {}", name, snippet))
+            .collect::<Vec<_>>()
+            .join("\n")
+    };
+
+    let prompt = prompt_template
+        .replace("{query}", query)
+        .replace("{tool_calls}", &tool_calls_text)
+        .replace("{response}", response);
+
+    let messages = vec![Message::user(prompt)];
+    let resp = llm.generate(&messages, &[])?;
+    let content = resp.content.unwrap_or_default();
+
+    let yaml_str = extract_yaml_block(&content);
+    let data: serde_yaml::Value =
+        serde_yaml::from_str(&yaml_str).unwrap_or(serde_yaml::Value::Null);
+
+    let score = data
+        .get("score")
+        .and_then(|v| v.as_f64())
+        .unwrap_or(0.0)
+        .clamp(0.0, 1.0);
+
+    Ok(score)
+}
+
+/// Extract the content of the first ``` code block in `text`.
+/// Falls back to returning the whole trimmed text if no code block is found.
+/// Mirrors the Python `_parse_yaml_response` helper.
+pub fn extract_yaml_block(text: &str) -> String {
+    if let Some(fence_start) = text.find("```") {
+        let after_fence = &text[fence_start + 3..];
+        // Skip optional language label on the opening fence line
+        let content_start = after_fence.find('\n').map(|n| n + 1).unwrap_or(0);
+        let content = &after_fence[content_start..];
+        if let Some(end) = content.find("```") {
+            return content[..end].trim().to_string();
+        }
+    }
+    text.trim().to_string()
 }
 
 // ---------------------------------------------------------------------------

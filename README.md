@@ -47,8 +47,8 @@ OPENAI_MODEL=Qwen/Qwen3-32B
 ### 2. Build the Rust CLI
 
 ```bash
-cd rust
-cargo build --release
+# From repo root
+cargo build --release --manifest-path rust/Cargo.toml
 # Binary at: rust/target/release/eabench
 ```
 
@@ -63,11 +63,11 @@ python3 -m venv .venv
 ### 4. Generate a tenant (Rust CLI)
 
 ```bash
-cd rust
-set -a && source ../.env && set +a
+# From repo root
+set -a && source .env && set +a
 
 # Small tenant (Azure)
-cargo run --release -- generate \
+./rust/target/release/eabench generate \
   --company "Acme Corp" \
   --industry "Technology" \
   --description "A software startup building a SaaS product" \
@@ -78,30 +78,32 @@ cargo run --release -- generate \
   --provider azure
 
 # Large tenant with many events (Azure)
-cargo run --release -- generate \
+./rust/target/release/eabench generate \
   --company "HugeSmoothTech Corp" \
   --industry "Software Technology" \
   --description "A software giant building SaaS products" \
   --events "Project Kickoff" "Q1 Review" "Performance Review" "Sales Layoff" \
-             "SDE Reorganization" "Product Refocus" "AI and LLM replacements" \
-             "Use coding agents to replace SDE" "SDE layoff" \
+           "SDE Reorganization" "Product Refocus" "AI and LLM replacements" \
+           "Use coding agents to replace SDE" "SDE layoff" \
   --size large \
   --num-users 40 \
   --days 100 \
   --provider azure
 ```
 
-Output is written to `../examples/tenants/<company-slug-YYYYMMDD>/`.
+Output is written to `examples/tenants/<company-slug-YYYYMMDD>/`.
 
 ### 5. Launch the web UI
 
 ```bash
-# Option A: via Rust CLI (run from rust/)
-cargo run --release -- serve
-
-# Option B: directly (run from repo root)
+# From repo root
 set -a && source .env && set +a
+
+# Option A: directly
 .venv/bin/streamlit run python/app.py --server.port 8501
+
+# Option B: via the Rust binary
+./rust/target/release/eabench serve
 ```
 
 Open **http://localhost:8501**, select a tenant and user from the sidebar, and start chatting.
@@ -138,10 +140,10 @@ Generate a new synthetic tenant entirely from within the browser. Fill in compan
 
 ## Rust CLI
 
-The Rust binary (`rust/target/release/eabench`) handles offline data generation and evaluation. All commands are run from the `rust/` directory after loading credentials:
+The Rust binary (`rust/target/release/eabench`) handles offline data generation and evaluation. All commands below are run from the **repo root** after loading credentials:
 
 ```bash
-set -a && source ../.env && set +a
+set -a && source .env && set +a
 ```
 
 ### `generate` — Create a synthetic tenant
@@ -149,20 +151,20 @@ set -a && source ../.env && set +a
 Drives an LLM to produce a full set of users, emails, chats, meetings, channel posts, files, and an evaluation dataset, all written as YAML under `examples/tenants/<slug>/`.
 
 ```bash
-cargo run --release -- generate \
+./rust/target/release/eabench generate \
   --company    "Acme Corp" \
   --industry   "Technology" \
   --description "A software startup" \
   --events     "Project Kickoff" "Q1 Review" \
-  --size       small \          # small | medium | large
+  --size       small \
   --num-users  5 \
   --days       7 \
-  --provider   azure            # azure | openai
+  --provider   azure
 ```
 
 Optional flags:
-- `--output <dir>` — output directory (default: `../examples/tenants`)
-- `--prompts <path>` — prompt templates YAML (default: `../examples/generation/default_prompts.yaml`)
+- `--output <dir>` — output directory (default: `examples/tenants`)
+- `--prompts <path>` — prompt templates YAML (default: `examples/generation/default_prompts.yaml`)
 - `--model <name>` — override deployment/model name
 - `--dry-run` — validate config without calling the LLM
 
@@ -186,17 +188,17 @@ examples/tenants/<slug>/
 Runs an eval dataset against a tenant, executing each query through the agent and scoring assertions without human involvement.
 
 ```bash
-cargo run --release -- eval \
-  --tenant  examples/tenants/test-tenant-1/tenant.yaml \
-  --eval    examples/tenants/test-tenant-1/eval_set.yaml \
+./rust/target/release/eabench eval \
+  --tenant  examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
+  --eval    examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
   --workers 4
 ```
 
 ### `serve` — Launch the web UI
 
 ```bash
-cargo run --release -- serve              # default port 8501
-cargo run --release -- serve --port 8502  # custom port
+./rust/target/release/eabench serve              # default port 8501
+./rust/target/release/eabench serve --port 8502  # custom port
 ```
 
 Looks for `.venv/bin/streamlit` in the repo root first, then falls back to `streamlit` on PATH.

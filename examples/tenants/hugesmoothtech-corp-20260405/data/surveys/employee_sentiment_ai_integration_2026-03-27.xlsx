@@ -1,0 +1,133 @@
+# Employee Sentiment Survey on AI Integration and Layoffs
+
+**File Path:** data/surveys/employee_sentiment_ai_integration_2026-03-27.xlsx  
+**Author:** Unknown  
+**Context:** Raw data from the internal employee sentiment survey regarding AI integration and layoffs.  
+
+---
+
+## Summary of Survey Results
+
+### Overview
+The survey was conducted on **March 27, 2026**, to gauge employee sentiment in light of recent developments, including:
+- Integration of AI tools (e.g., coding agents) into workflows.
+- Layoffs of software development engineers (SDEs) due to AI adoption.
+
+The results reflect a mix of optimism, concern, and confusion among employees. Below is a detailed breakdown of the findings.
+
+---
+
+## Survey Metadata
+- **Total Participants:** 1,842 employees
+- **Departments Represented:**
+  - Engineering
+  - Product Management
+  - Sales
+  - Marketing
+  - Human Resources
+  - Customer Support
+- **Response Rate:** 76%
+- **Survey Methodology:** Anonymous online questionnaire
+
+---
+
+## Key Findings
+
+### 1. Overall Sentiment About AI Integration
+- **Positive Sentiment:** 41%
+  - Employees highlighted increased efficiency and opportunities to work on more creative tasks.
+- **Neutral Sentiment:** 22%
+  - Many employees expressed uncertainty, citing lack of clarity about long-term impacts.
+- **Negative Sentiment:** 37%
+  - Concerns about job security and ethical implications dominated this group.
+
+### 2. Perceptions of Layoffs
+- **Fair:** 18%
+  - Some employees acknowledged the layoffs as a necessary step for innovation.
+- **Unfair:** 63%
+  - Majority felt the layoffs were abrupt and poorly communicated.
+- **No Opinion:** 19%
+  - A significant portion of employees refrained from commenting on this sensitive topic.
+
+### 3. Confidence in Leadership
+- **High Confidence:** 29%
+- **Moderate Confidence:** 34%
+- **Low Confidence:** 37%
+  - Leadership transparency and communication style were common points of criticism.
+
+### 4. Training and Support for AI Tools
+- **Adequacy of Training:**
+  - **Sufficient:** 47%
+  - **Insufficient:** 53%
+- **Preferred Training Methods:**
+  - Hands-on workshops: 62%
+  - Video tutorials: 24%
+  - Written documentation: 14%
+
+---
+
+## Departmental Insights
+
+### Engineering
+- **Sentiment Breakdown:**
+  - Positive: 35%, Neutral: 18%, Negative: 47%
+- Engineers expressed frustration over the layoffs but acknowledged the productivity boost from AI tools.
+
+### Sales
+- **Sentiment Breakdown:**
+  - Positive: 48%, Neutral: 30%, Negative: 22%
+- Sales teams are concerned about customer skepticism regarding AI-driven products but appreciate leadership’s town hall discussions.
+
+### Product Management
+- **Sentiment Breakdown:**
+  - Positive: 53%, Neutral: 27%, Negative: 20%
+- Product managers are optimistic about the AI integration but flagged some challenges with UX issues in AI-developed modules.
+
+### Human Resources
+- **Sentiment Breakdown:**
+  - Positive: 28%, Neutral: 35%, Negative: 37%
+- HR personnel are under pressure to manage employee morale and address ethical concerns over layoffs.
+
+---
+
+## Verbatim Comments
+
+### Positive Comments
+- *“The AI tools have streamlined a lot of mundane tasks, allowing me to focus on more strategic work.”*
+- *“I’m excited to see how AI can help us innovate faster and stay ahead of competitors.”*
+
+### Negative Comments
+- *“The layoffs were handled poorly. I feel like we’re just numbers on a spreadsheet.”*
+- *“AI is great, but it feels like leadership is rushing into this without considering the human cost.”*
+
+### Suggestions for Improvement
+- *“Provide more comprehensive training on how to use AI tools effectively.”*
+- *“Increase transparency about the decision-making process behind layoffs.”*
+- *“Offer counseling or career transition support for those affected by job cuts.”*
+
+---
+
+## Actionable Recommendations
+
+1. **Improve Communication:**
+   - Schedule regular town halls to address employee concerns and provide updates on AI integration.
+2. **Enhance Training Programs:**
+   - Develop more hands-on workshops tailored to specific roles.
+3. **Show Empathy:**
+   - Offer support programs for laid-off employees.
+4. **Monitor Employee Morale:**
+   - Conduct follow-up surveys every quarter.
+
+---
+
+## Raw Data (Sample)
+| Question                          | Strongly Agree | Agree | Neutral | Disagree | Strongly Disagree |
+|----------------------------------|----------------|-------|---------|----------|-------------------|
+| I feel optimistic about AI tools. | 23%            | 18%   | 22%     | 19%      | 18%               |
+| The layoffs were handled fairly.  | 10%            | 8%    | 19%     | 32%      | 31%               |
+| Leadership is transparent.        | 15%            | 14%   | 20%     | 28%      | 23%               |
+
+---
+
+## Conclusion
+The survey results underscore the mixed reactions to AI integration and its accompanying workforce changes. While many employees see AI as an opportunity, concerns about job security, communication, and ethics persist. Addressing these issues proactively will be critical for maintaining morale and ensuring a smooth transition into the AI-driven future.

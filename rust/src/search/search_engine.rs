@@ -30,8 +30,9 @@ pub struct SearchResult {
 /// This implementation uses simple keyword-overlap scoring so that it works
 /// without any external dependencies or LLM calls.  It mirrors the overall
 /// API shape of the Python `SearchEngine` while remaining dependency-free.
+#[derive(Clone)]
 pub struct SearchEngine {
-    tenant: TenantConfig,
+    pub tenant: TenantConfig,
     current_user_id: Option<String>,
     current_user_emails: Vec<String>,
 }

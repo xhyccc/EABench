@@ -24,11 +24,35 @@
 
 use std::path::PathBuf;
 use anyhow::{Context, Result};
+use rayon::prelude::*;
 
 use eabench_lib::config::TenantConfig;
-use eabench_lib::eval::{Evaluator, EvaluationSet};
+use eabench_lib::eval::{EvaluationSet, run_react_agent, judge_assertions, judge_citation};
 use eabench_lib::search::SearchEngine;
-use eabench_lib::generator::{DataGenerator, StoryConfig, OpenAIProvider, AzureOpenAIProvider};
+use eabench_lib::generator::{DataGenerator, StoryConfig, OpenAIProvider, AzureOpenAIProvider, LLMProvider};
+use std::sync::Arc;
+
+// ---------------------------------------------------------------------------
+// Judge-config structs (parsed from the judge YAML, e.g. default_judge.yaml)
+// ---------------------------------------------------------------------------
+
+#[derive(Debug, serde::Deserialize)]
+struct JudgePromptConfig {
+    assertion_check: String,
+    citation_relevance: String,
+    #[serde(default)]
+    side_by_side: String,
+}
+
+#[derive(Debug, serde::Deserialize)]
+struct JudgeConfig {
+    #[allow(dead_code)]
+    name: String,
+    #[serde(default)]
+    #[allow(dead_code)]
+    description: String,
+    prompts: JudgePromptConfig,
+}
 
 // ---------------------------------------------------------------------------
 // Subcommand enum
@@ -51,6 +75,21 @@ struct EvalArgs {
     tenant_path: PathBuf,
     eval_path: PathBuf,
     num_workers: usize,
+
+    // LLM provider (inherits same env-var / flag logic as generate)
+    provider: Option<String>,
+    model: Option<String>,
+    api_key: Option<String>,
+    base_url: Option<String>,
+    azure_endpoint: Option<String>,
+    azure_deployment: Option<String>,
+    api_version: Option<String>,
+    temperature: f64,
+
+    // Agent / judge
+    agent_config_path: Option<PathBuf>,
+    judge_config_path: PathBuf,
+    max_turns: usize,
 }
 
 struct GenerateArgs {
@@ -84,6 +123,40 @@ struct GenerateArgs {
 }
 
 // ---------------------------------------------------------------------------
+// Path resolution helper
+// ---------------------------------------------------------------------------
+
+/// Resolves a path that may be relative to the **repo root** or to `rust/`,
+/// regardless of the current working directory.
+///
+/// Tries, in order:
+///   1. Path as-is (already correct).
+///   2. Strip a leading `"../"` component — converts a `rust/`-relative default
+///      like `"../examples/tenants"` into `"examples/tenants"` for callers
+///      sitting at the repo root.
+///   3. Prepend `"../"` — converts a repo-root-relative path like
+///      `"examples/tenants/…"` into `"../examples/tenants/…"` for callers
+///      sitting inside `rust/`.
+///   4. Return the original path so the caller receives a meaningful error.
+fn resolve_path(p: PathBuf) -> PathBuf {
+    if p.exists() {
+        return p;
+    }
+    // Case: running from repo root with a "../"-prefixed default (designed for rust/ CWD)
+    if let Ok(stripped) = p.strip_prefix("..") {
+        if stripped.exists() {
+            return stripped.to_path_buf();
+        }
+    }
+    // Case: running from rust/ with a path relative to repo root
+    let with_parent = PathBuf::from("..").join(&p);
+    if with_parent.exists() {
+        return with_parent;
+    }
+    p // return original so the caller gets a meaningful error
+}
+
+// ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
 
@@ -103,7 +176,7 @@ fn main() -> Result<()> {
 
 fn run_serve(a: ServeArgs) -> Result<()> {
     let app_path = std::fs::canonicalize(&a.app)
-        .with_context(|| format!("app not found at '{}' — run from the rust/ directory", a.app))?;
+        .with_context(|| format!("app not found at '{}' — is the path correct? (run from the repo root or rust/)", a.app))?;
 
     println!("EABench – Web UI");
     println!("----------------");
@@ -128,9 +201,9 @@ fn run_serve(a: ServeArgs) -> Result<()> {
     Ok(())
 }
 
-/// Find the `streamlit` executable: repo .venv first, then PATH.
+/// Find the `streamlit` executable: repo root .venv first, then rust/ parent .venv, then PATH.
 fn which_streamlit() -> Result<String> {
-    for candidate in &["../.venv/bin/streamlit", ".venv/bin/streamlit"] {
+    for candidate in &[".venv/bin/streamlit", "../.venv/bin/streamlit"] {
         if std::path::Path::new(candidate).exists() {
             return Ok(candidate.to_string());
         }
@@ -142,17 +215,29 @@ fn which_streamlit() -> Result<String> {
 // eval subcommand
 // ---------------------------------------------------------------------------
 
+// Default system prompt used when no agent config is provided.
+const DEFAULT_SYSTEM_PROMPT: &str =
+    "You are an intelligent enterprise assistant. \
+     Use the available search tools to find relevant information from the user's \
+     emails, files, chats, and meetings before answering. \
+     Always base your answers on retrieved data, not assumptions.";
+
 fn run_eval(a: EvalArgs) -> Result<()> {
     println!("EABench – Agent Execution and Evaluation Platform (Rust)");
     println!("----------------------------------------------------------");
     println!("Tenant config : {}", a.tenant_path.display());
     println!("Eval set      : {}", a.eval_path.display());
+    println!("Judge config  : {}", a.judge_config_path.display());
+    println!("Max turns     : {}", a.max_turns);
     println!(
         "Workers       : {}",
         if a.num_workers == 0 { "auto (logical CPU count)".to_string() } else { a.num_workers.to_string() }
     );
     println!();
 
+    // -----------------------------------------------------------------------
+    // Load tenant and eval set
+    // -----------------------------------------------------------------------
     let tenant = TenantConfig::from_yaml(&a.tenant_path)
         .with_context(|| format!("loading tenant config from {}", a.tenant_path.display()))?;
 
@@ -173,63 +258,222 @@ fn run_eval(a: EvalArgs) -> Result<()> {
         eval_set.name,
         eval_set.cases.len()
     );
+
+    // -----------------------------------------------------------------------
+    // Build LLM provider (same resolution logic as generate)
+    // -----------------------------------------------------------------------
+    let effective_provider = a.provider
+        .clone()
+        .unwrap_or_else(|| {
+            if a.azure_endpoint.is_some() || std::env::var("AZURE_OPENAI_API_KEY").is_ok() {
+                "azure".to_string()
+            } else {
+                "openai".to_string()
+            }
+        });
+
+    let llm: Arc<dyn LLMProvider> = match effective_provider.as_str() {
+        "azure" => {
+            let key = a.api_key.clone()
+                .or_else(|| std::env::var("AZURE_OPENAI_API_KEY").ok())
+                .or_else(|| std::env::var("AZURE_API_KEY").ok())
+                .context("Azure provider: supply --api-key or set AZURE_OPENAI_API_KEY")?;
+            let endpoint = a.azure_endpoint.clone()
+                .or_else(|| std::env::var("AZURE_OPENAI_ENDPOINT").ok())
+                .or_else(|| std::env::var("AZURE_ENDPOINT").ok())
+                .context("Azure provider: supply --azure-endpoint or set AZURE_OPENAI_ENDPOINT")?;
+            let deployment = a.azure_deployment.clone()
+                .or_else(|| a.model.clone())
+                .or_else(|| std::env::var("AZURE_OPENAI_DEPLOYMENT_NAME").ok())
+                .or_else(|| std::env::var("AZURE_DEPLOYMENT_NAME").ok())
+                .unwrap_or_else(|| "gpt-4o".to_string());
+            let api_version = a.api_version.clone()
+                .or_else(|| std::env::var("AZURE_OPENAI_API_VERSION").ok())
+                .or_else(|| std::env::var("AZURE_API_VERSION").ok())
+                .unwrap_or_else(|| "2024-02-15-preview".to_string());
+            println!("LLM provider   : Azure OpenAI");
+            println!("  Endpoint     : {}", endpoint);
+            println!("  Deployment   : {}", deployment);
+            println!("  API version  : {}", api_version);
+            Arc::new(AzureOpenAIProvider::new(key, endpoint, deployment, api_version, a.temperature))
+        }
+        _ => {
+            let key = a.api_key.clone()
+                .or_else(|| std::env::var("OPENAI_API_KEY").ok())
+                .context("OpenAI provider: supply --api-key or set OPENAI_API_KEY")?;
+            let base_url = a.base_url.clone()
+                .or_else(|| std::env::var("OPENAI_BASE_URL").ok())
+                .or_else(|| std::env::var("OPENAI_API_BASE").ok());
+            let model = a.model.clone()
+                .or_else(|| std::env::var("OPENAI_MODEL").ok())
+                .unwrap_or_else(|| "gpt-4o".to_string());
+            println!("LLM provider   : OpenAI");
+            println!("  Model        : {}", model);
+            if let Some(ref url) = base_url {
+                println!("  Base URL     : {}", url);
+            }
+            Arc::new(OpenAIProvider::new(key, base_url, model, a.temperature))
+        }
+    };
+
+    // -----------------------------------------------------------------------
+    // Load judge config
+    // -----------------------------------------------------------------------
+    let raw_judge = std::fs::read_to_string(&a.judge_config_path)
+        .with_context(|| format!("reading judge config from {}", a.judge_config_path.display()))?;
+    let judge_cfg: JudgeConfig = serde_yaml::from_str(&raw_judge)
+        .with_context(|| format!("parsing judge config from {}", a.judge_config_path.display()))?;
+
+    // -----------------------------------------------------------------------
+    // Load system prompt
+    // -----------------------------------------------------------------------
+    let system_prompt: String = if let Some(ref agent_path) = a.agent_config_path {
+        let raw = std::fs::read_to_string(agent_path)
+            .with_context(|| format!("reading agent config from {}", agent_path.display()))?;
+        let v: serde_yaml::Value = serde_yaml::from_str(&raw)
+            .with_context(|| format!("parsing agent config from {}", agent_path.display()))?;
+        v.get("system_prompt")
+            .and_then(|v| v.as_str())
+            .unwrap_or(DEFAULT_SYSTEM_PROMPT)
+            .to_string()
+    } else {
+        DEFAULT_SYSTEM_PROMPT.to_string()
+    };
+
     println!();
-
-    let search_engine = SearchEngine::new(tenant.clone());
-
     println!(
-        "Running evaluation with {} worker(s)…",
+        "Running LLM evaluation with {} worker(s)…",
         if a.num_workers == 0 { "auto".to_string() } else { a.num_workers.to_string() }
     );
+    println!();
 
-    let evaluator = Evaluator::new();
+    // -----------------------------------------------------------------------
+    // Set Rayon thread pool size
+    // -----------------------------------------------------------------------
+    if a.num_workers > 0 {
+        rayon::ThreadPoolBuilder::new()
+            .num_threads(a.num_workers)
+            .build_global()
+            .ok(); // ignore error if already initialised
+    }
 
-    // The scorer uses the keyword-based search engine to generate a simple
-    // response for each query.  In production you would replace this with a
-    // real LLM call; the parallel infrastructure handles the concurrency.
-    let results = evaluator.evaluate_batch_parallel(
-        &eval_set,
-        |query| {
-            let hits = search_engine.search_all(query, 3);
-            let response = if hits.is_empty() {
-                format!("No relevant information found for: {}", query)
-            } else {
-                hits.iter()
-                    .map(|h| format!("[{}] {}: {}", h.kind, h.title, h.snippet))
-                    .collect::<Vec<_>>()
-                    .join("\n")
+    // -----------------------------------------------------------------------
+    // Parallel evaluation: one full LLM pipeline per case
+    // -----------------------------------------------------------------------
+    let assertion_check_prompt = judge_cfg.prompts.assertion_check.clone();
+    let citation_prompt        = judge_cfg.prompts.citation_relevance.clone();
+    let max_turns              = a.max_turns;
+
+    let results: Vec<eabench_lib::eval::EvaluationResult> = eval_set.cases
+        .par_iter()
+        .map(|case| {
+            let llm_ref   = Arc::clone(&llm);
+            let mut se    = SearchEngine::new(tenant.clone());
+            let user_id   = case.user_id.as_deref();
+
+            // 1. Run the ReAct agent to get a response + tool-call log.
+            let (response, tool_calls_log) = match run_react_agent(
+                llm_ref.as_ref(),
+                &mut se,
+                &system_prompt,
+                user_id,
+                &case.query,
+                max_turns,
+            ) {
+                Ok(res) => (res.response, res.tool_calls_log),
+                Err(e) => {
+                    let msg = format!("[agent error] {}", e);
+                    (msg, vec![])
+                }
             };
-            (response, vec![])
-        },
-        a.num_workers,
-    );
 
-    println!("\nResults:");
-    println!("{:-<60}", "");
+            // 2. LLM judge: assertions
+            let (assertion_score, assertion_results) =
+                judge_assertions(
+                    llm_ref.as_ref(),
+                    &assertion_check_prompt,
+                    &case.query,
+                    &response,
+                    &case.assertions,
+                )
+                .unwrap_or_else(|_| (0.0, vec![]));
+
+            // 3. LLM judge: citation / tool-call quality
+            let citation_score =
+                judge_citation(
+                    llm_ref.as_ref(),
+                    &citation_prompt,
+                    &case.query,
+                    &tool_calls_log,
+                    &response,
+                )
+                .unwrap_or(0.0);
+
+            // 4. Pass/fail threshold (mirrors Python: assertion >= 0.75 AND citation >= 0.7)
+            let passed = assertion_score >= 0.75 && citation_score >= 0.7;
+
+            let tool_call_names: Vec<String> = tool_calls_log
+                .iter()
+                .map(|(name, _)| name.clone())
+                .collect();
+
+            let mut metrics = std::collections::HashMap::new();
+            metrics.insert("assertion_score".to_string(), assertion_score);
+            metrics.insert("citation_score".to_string(), citation_score);
+            metrics.insert("overall_score".to_string(), (assertion_score + citation_score) / 2.0);
+
+            let reasoning = format!(
+                "assertion={:.2}, citation={:.2}",
+                assertion_score, citation_score
+            );
+
+            eabench_lib::eval::EvaluationResult {
+                case_id: case.id.clone(),
+                query: case.query.clone(),
+                response,
+                tool_calls: tool_call_names,
+                metrics,
+                assertion_results,
+                reasoning,
+                passed,
+            }
+        })
+        .collect();
+
+    // -----------------------------------------------------------------------
+    // Print results
+    // -----------------------------------------------------------------------
+    println!("Results:");
+    println!("{:-<70}", "");
     for result in &results {
-        // Add 0.0 to normalize IEEE 754 negative-zero to positive-zero for display.
         println!(
-            "[{}] {} | assertion={:.2} | tool={:.2} | overall={:.2} | {}",
+            "[{}] {} | assertion={:.2} | citation={:.2} | overall={:.2}",
             if result.passed { "PASS" } else { "FAIL" },
             result.case_id,
-            result.metrics.get("assertion_score").copied().unwrap_or(0.0) + 0.0,
-            result.metrics.get("tool_score").copied().unwrap_or(0.0) + 0.0,
-            result.metrics.get("overall_score").copied().unwrap_or(0.0) + 0.0,
-            result.reasoning,
+            result.metrics.get("assertion_score").copied().unwrap_or(0.0),
+            result.metrics.get("citation_score").copied().unwrap_or(0.0),
+            result.metrics.get("overall_score").copied().unwrap_or(0.0),
         );
     }
 
-    println!("{:-<60}", "");
-    let pass_rate = Evaluator::aggregate_pass_rate(&results);
-    let mean_score = Evaluator::mean_assertion_score(&results) + 0.0;
+    println!("{:-<70}", "");
+    let total = results.len();
+    let passed = results.iter().filter(|r| r.passed).count();
+    let mean_assertion = if total > 0 {
+        results.iter().map(|r| r.metrics.get("assertion_score").copied().unwrap_or(0.0)).sum::<f64>() / total as f64
+    } else { 0.0 };
+    let mean_citation = if total > 0 {
+        results.iter().map(|r| r.metrics.get("citation_score").copied().unwrap_or(0.0)).sum::<f64>() / total as f64
+    } else { 0.0 };
+
     println!(
         "Pass rate       : {}/{} ({:.1}%)",
-        results.iter().filter(|r| r.passed).count(),
-        results.len(),
-        pass_rate * 100.0,
+        passed, total,
+        if total > 0 { passed as f64 / total as f64 * 100.0 } else { 0.0 },
     );
-    println!("Mean assertion  : {:.3}", mean_score);
-    println!("{:-<60}", "");
+    println!("Mean assertion  : {:.3}", mean_assertion);
+    println!("Mean citation   : {:.3}", mean_citation);
+    println!("{:-<70}", "");
 
     Ok(())
 }
@@ -395,9 +639,24 @@ fn parse_args(args: &[String]) -> Result<Command> {
 }
 
 fn parse_eval_args(args: &[String]) -> Result<Command> {
-    let mut tenant_path = PathBuf::from("examples/tenants/test-tenant-1/tenant.yaml");
-    let mut eval_path   = PathBuf::from("examples/tenants/test-tenant-1/eval_set.yaml");
+    let mut tenant_path  = PathBuf::from("examples/tenants/test-tenant-1/tenant.yaml");
+    let mut eval_path    = PathBuf::from("examples/tenants/test-tenant-1/eval_set.yaml");
     let mut num_workers: usize = 0;
+
+    // LLM provider
+    let mut provider: Option<String>         = None;
+    let mut model: Option<String>            = None;
+    let mut api_key: Option<String>          = None;
+    let mut base_url: Option<String>         = None;
+    let mut azure_endpoint: Option<String>   = None;
+    let mut azure_deployment: Option<String> = None;
+    let mut api_version: Option<String>      = None;
+    let mut temperature: f64                 = 0.0;
+
+    // Agent / judge
+    let mut agent_config_path: Option<PathBuf> = None;
+    let mut judge_config_path = PathBuf::from("examples/evals/default_judge.yaml");
+    let mut max_turns: usize = 6;
 
     let mut i = 0usize;
     while i < args.len() {
@@ -420,6 +679,64 @@ fn parse_eval_args(args: &[String]) -> Result<Command> {
                 num_workers = n.parse::<usize>()
                     .with_context(|| format!("--workers value '{}' is not a valid number", n))?;
             }
+            // LLM provider flags
+            "--provider" => {
+                i += 1;
+                let v = args.get(i).context("--provider requires openai|azure")?;
+                match v.as_str() {
+                    "openai" | "azure" => provider = Some(v.clone()),
+                    other => anyhow::bail!("--provider must be 'openai' or 'azure' (got '{}')", other),
+                }
+            }
+            "--model" => {
+                i += 1;
+                model = Some(args.get(i).context("--model requires a VALUE")?.clone());
+            }
+            "--api-key" => {
+                i += 1;
+                api_key = Some(args.get(i).context("--api-key requires a VALUE")?.clone());
+            }
+            "--base-url" => {
+                i += 1;
+                base_url = Some(args.get(i).context("--base-url requires a URL")?.clone());
+            }
+            "--azure-endpoint" => {
+                i += 1;
+                azure_endpoint = Some(args.get(i).context("--azure-endpoint requires a URL")?.clone());
+            }
+            "--azure-deployment" => {
+                i += 1;
+                azure_deployment = Some(args.get(i).context("--azure-deployment requires a VALUE")?.clone());
+            }
+            "--api-version" => {
+                i += 1;
+                api_version = Some(args.get(i).context("--api-version requires a VALUE")?.clone());
+            }
+            "--temperature" => {
+                i += 1;
+                let v = args.get(i).context("--temperature requires a FLOAT")?;
+                temperature = v.parse::<f64>()
+                    .with_context(|| format!("--temperature '{}' is not a valid float", v))?;
+            }
+            // Agent / judge flags
+            "--agent-config" => {
+                i += 1;
+                agent_config_path = Some(PathBuf::from(
+                    args.get(i).context("--agent-config requires a PATH")?,
+                ));
+            }
+            "--judge-config" => {
+                i += 1;
+                judge_config_path = PathBuf::from(
+                    args.get(i).context("--judge-config requires a PATH")?,
+                );
+            }
+            "--max-turns" => {
+                i += 1;
+                let n = args.get(i).context("--max-turns requires a NUMBER")?;
+                max_turns = n.parse::<usize>()
+                    .with_context(|| format!("--max-turns '{}' is not a valid number", n))?;
+            }
             "--help" | "-h" => {
                 print_usage();
                 std::process::exit(0);
@@ -429,7 +746,24 @@ fn parse_eval_args(args: &[String]) -> Result<Command> {
         i += 1;
     }
 
-    Ok(Command::Eval(EvalArgs { tenant_path, eval_path, num_workers }))
+    let agent_config_path = agent_config_path.map(resolve_path);
+
+    Ok(Command::Eval(EvalArgs {
+        tenant_path: resolve_path(tenant_path),
+        eval_path:   resolve_path(eval_path),
+        num_workers,
+        provider,
+        model,
+        api_key,
+        base_url,
+        azure_endpoint,
+        azure_deployment,
+        api_version,
+        temperature,
+        agent_config_path,
+        judge_config_path: resolve_path(judge_config_path),
+        max_turns,
+    }))
 }
 
 fn parse_generate_args(args: &[String]) -> Result<Command> {
@@ -583,6 +917,12 @@ fn parse_generate_args(args: &[String]) -> Result<Command> {
         if description.is_none() { anyhow::bail!("--description is required (or supply --config)"); }
     }
 
+    // Resolve output_dir and prompts_path relative to repo root if needed
+    let output_dir = resolve_path(PathBuf::from(&output_dir))
+        .to_string_lossy().into_owned();
+    let prompts_path = resolve_path(PathBuf::from(&prompts_path))
+        .to_string_lossy().into_owned();
+
     Ok(Command::Generate(GenerateArgs {
         config_file,
         company,
@@ -619,10 +959,25 @@ fn print_usage() {
          \x20   generate  Generate a new synthetic tenant using an LLM\n\
          \x20   serve     Launch the Streamlit web UI\n\
          \n\
-         ── EVAL ────────────────────────────────────────────────────────\n\
-         \x20   --tenant PATH    Path to tenant.yaml  (default: examples/tenants/test-tenant-1/tenant.yaml)\n\
-         \x20   --eval   PATH    Path to eval YAML    (default: examples/tenants/test-tenant-1/eval_set.yaml)\n\
-         \x20   --workers N      Parallel worker threads (default: 0 = auto)\n\
+         ── EVAL: data ───────────────────────────────────────────────────\n\
+         \x20   --tenant PATH           Path to tenant.yaml  (default: examples/tenants/test-tenant-1/tenant.yaml)\n\
+         \x20   --eval   PATH           Path to eval YAML    (default: examples/tenants/test-tenant-1/eval_set.yaml)\n\
+         \x20   --workers N             Parallel worker threads (default: 0 = auto)\n\
+         \n\
+         ── EVAL: LLM provider (same flags as generate) ──────────────────\n\
+         \x20   --provider openai|azure   Force provider (default: auto-detect from env)\n\
+         \x20   --model TEXT              Model / deployment name (overrides env var)\n\
+         \x20   --api-key TEXT            API key (overrides env var)\n\
+         \x20   --base-url URL            OpenAI: custom base URL\n\
+         \x20   --azure-endpoint URL      Azure: endpoint URL\n\
+         \x20   --azure-deployment TEXT   Azure: deployment name\n\
+         \x20   --api-version TEXT        Azure: API version (default: 2024-02-15-preview)\n\
+         \x20   --temperature FLOAT       Sampling temperature (default: 0.0)\n\
+         \n\
+         ── EVAL: agent / judge ──────────────────────────────────────────\n\
+         \x20   --agent-config PATH   Path to agent YAML (optional; uses built-in default if omitted)\n\
+         \x20   --judge-config PATH   Path to judge YAML (default: examples/evals/default_judge.yaml)\n\
+         \x20   --max-turns N         Max ReAct agent turns per case (default: 6)\n\
          \n\
          ── GENERATE: story config ───────────────────────────────────────\n\
          \x20   --config FILE         Load StoryConfig from a YAML file (field flags below override it)\n\
@@ -693,5 +1048,6 @@ fn parse_serve_args(args: &[String]) -> Result<Command> {
         i += 1;
     }
 
+    let app = resolve_path(PathBuf::from(&app)).to_string_lossy().into_owned();
     Ok(Command::Serve(ServeArgs { port, app }))
 }
