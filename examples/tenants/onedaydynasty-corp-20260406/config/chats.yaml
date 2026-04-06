@@ -1,0 +1,166 @@
+- id: chat_001
+  messages:
+  - content: Hey Kiran, did you get a chance to review the finalized pre-IPO deck? 📊
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:02:15Z
+    to_user: yzhang
+  - content: Just started looking through it now! Looks solid so far. Did you update the projected growth slide?
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:03:22Z
+    to_user: yzhang
+  - content: Yeah, I updated it this morning with the Q1 numbers. Slide 7! 🚀
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:03:55Z
+    to_user: yzhang
+  - content: Hmm, Slide 7 still shows last year’s data for me. Are you sure it’s the latest version?
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:04:30Z
+    to_user: yzhang
+  - content: Wait, let me check. One sec! 🙃
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:04:47Z
+    to_user: yzhang
+  - content: Ah, my bad. Sent the wrong file earlier. Sending the updated one now. 📁
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:06:10Z
+    to_user: yzhang
+  - content: Got it. Let me refresh... okay, now I see the new numbers. That 25% YoY growth projection looks 🔥.
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:07:30Z
+    to_user: yzhang
+  - content: Right? I think it’ll impress the investors. What do you think of the competitive positioning section? 🧐
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:08:15Z
+    to_user: yzhang
+  - content: Looks good, but I think Slide 10 could use more detail. Maybe a specific example of how we’re differentiating? 🤔
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:09:00Z
+    to_user: yzhang
+  - content: Good call. Should we mention the recent customer success story we published today? It’s fresh and relevant. ✨
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:09:45Z
+    to_user: yzhang
+  - content: Yes, perfect! That blog post was solid. Let’s pull a quote or stat from it. 📝
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:10:22Z
+    to_user: yzhang
+  - content: On it. I’ll draft something and send it over for your review. 👍
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:10:50Z
+    to_user: yzhang
+  - content: Sounds good. Oh, did you see the investor inquiry about retention metrics? Do we need to add anything for that?
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:11:20Z
+    to_user: yzhang
+  - content: Yep, the CEO’s addressing that in the appendix slides. Should be covered. 😊
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:11:55Z
+    to_user: yzhang
+  - content: Great. Okay, let me know when you’re done updating Slide 10, and I’ll take a final pass. 👍
+    from_user: kiran_patel
+    timestamp: 2026-04-05T14:12:30Z
+    to_user: yzhang
+  - content: Will do. Thanks, Kiran! 💪
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:12:50Z
+    to_user: yzhang
+  participants:
+  - yzhang
+  - kpatel
+- id: chat_002
+  messages:
+  - content: Alessandro, did you see the new blog post? 👀
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:02:11Z
+    to_user: yzhang
+  - content: Yeah, I saw it earlier! Looks good overall. 👍
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:03:24Z
+    to_user: yzhang
+  - content: Great! But I think one of the customer quotes is missing? Can you check?
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:04:12Z
+    to_user: yzhang
+  - content: Which one? 🤔
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:04:30Z
+    to_user: yzhang
+  - content: The one from GreenTech Solutions. It should’ve been included under ‘SaaS deployment success’.
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:05:07Z
+    to_user: yzhang
+  - content: Huh, weird. Let me double-check the draft vs the live post. 🕵️‍♂️
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:05:45Z
+    to_user: yzhang
+  - content: Thanks! 🙏
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:05:58Z
+    to_user: yzhang
+  - content: Ok, found the issue. Looks like that section got cut during the final edit. 😅
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:08:32Z
+    to_user: yzhang
+  - content: Ah, I knew something felt off! Can you re-add it? We don’t want to upset GreenTech. 🚨
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:09:15Z
+    to_user: yzhang
+  - content: Already on it. Give me 5 mins. 😉
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:09:40Z
+    to_user: yzhang
+  - content: You’re the best, Alessandro. 🙌
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:09:55Z
+    to_user: yzhang
+  - content: All done! Refresh the page and let me know if it looks good now. ✨
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:14:08Z
+    to_user: yzhang
+  - content: Perfect! It’s back up. Thanks for the quick fix! 😊
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:15:03Z
+    to_user: yzhang
+  - content: No problem! Let’s keep an eye on feedback from the readers. 📊
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:15:25Z
+    to_user: yzhang
+  - content: Will do! Let’s hope it boosts our credibility with that investor inquiry. 🤞
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:16:12Z
+    to_user: yzhang
+  - content: Fingers crossed! 🤞
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:16:30Z
+    to_user: yzhang
+  participants:
+  - yzhang
+  - arossi
+- id: chat_003
+  messages:
+  - content: Hey, did you see the CEO's calendar? Meeting with the financial advisor about stock options today. 🧐
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:02:00Z
+  - content: Can you double-check if it’s at 3 PM or 4 PM? I saw two conflicting notes. 🤔
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:03:15Z
+  - content: Also, do we need to prep anything for the discussion? ✍️
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:04:30Z
+  - content: Wait, just saw a note from the CEO—it's 3 PM! My bad. Ignore the time check. 😅
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:05:45Z
+  - content: Can you confirm if the advisor has the latest stock option report? I think the CEO updated it last month. 📊
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:07:00Z
+  - content: Actually… do you have a link to the report? I can’t find it in the shared folder. 😬
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:08:15Z
+  - content: Never mind—found it! It was buried under 'Archived Docs'. 🙃
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:09:30Z
+  - content: All set for the meeting then. Fingers crossed it goes smoothly. 🤞
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:10:45Z
+  participants:
+  - yzhang

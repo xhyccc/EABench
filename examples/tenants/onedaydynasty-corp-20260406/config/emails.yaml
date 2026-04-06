@@ -1,0 +1,59 @@
+- bcc_users: []
+  body: "Hi Alessandro,\n\nHope this email finds you well. I’ve just finalized the draft presentation for the upcoming pre-IPO discussions, and I’d really appreciate your feedback—especially on the sections covering projected growth and our competitive positioning. These are critical areas, and I want to ensure we’re presenting them as clearly and compellingly as possible.\n\nCould you take a look and let me know if there are any gaps or areas that might need more detail? I recall during our last strategy sync you mentioned some concerns about how we’re framing our growth projections in relation to market benchmarks—do you think this version addresses those points adequately?\n\nAlso, quick question—can you double-check the competitive analysis slide? I feel like we might be missing one or two key players in the comparison, but I’m not entirely sure. Would love your thoughts there.\n\nNo rush, but if you can review this by the end of the week, that would be ideal so we have time to incorporate any updates before the next meeting with the financial advisor. Let me know if you need me to resend the file or if you’d prefer to discuss any of this live.\n\nThanks so much for your help on this!\n\nBest,\nYun\n\nSent from my iPhone"
+  cc_users:
+  - kpatel
+  from_user: yzhang
+  id: email_001
+  subject: Review of Pre-IPO Presentation Draft
+  timestamp: 2026-04-05T10:15:00Z
+  to_users:
+  - arossi
+- bcc_users: []
+  body: "Hi Kiran,\n\nHope you're doing well. Just wanted to send a quick update on the payment processing issue that was reported earlier today. The technical team has been actively troubleshooting, and we've identified the root cause as a mismatch between our subscription database and the payment gateway integration. It seems like a recent update to the gateway API introduced some unexpected behavior that wasn't fully accounted for in our system.\n\nRight now, we're working on implementing a fix to resolve the issue ASAP. We're also testing it across different subscription tiers to make sure everything works smoothly once deployed. But I wanted to double-check—do you remember if we had any similar cases reported in the past? I feel like we've dealt with something like this before, but I can't find the exact ticket or notes.\n\nLet me know if there's anything specific you'd like me to include in the incident report for the leadership team. Also, I saw the CEO's pre-IPO deck draft earlier today—looks solid! Do you think this issue is something we should flag ahead of investor discussions, or is it too minor?\n\nI'll keep you posted on the progress, but if you need anything urgently, feel free to ping me.\n\nBest,\nNour\n\nSent from my phone, so apologies for any typos!"
+  cc_users: []
+  from_user: nhaddad
+  id: email_002
+  subject: Update on Payment Processing Issue
+  timestamp: 2026-04-05T11:00:00Z
+  to_users:
+  - kpatel
+- bcc_users: []
+  body: "Hi Alessandro,\n\nHope you're doing well! I wanted to touch base regarding the inquiry we received earlier today from a potential investor about our subscription retention metrics. They’re specifically asking for more detailed insights, and I wanted to get your input on how best to approach this.\n\nI know the CEO has been focused on the pre-IPO presentation drafts, which do touch on growth projections and competitive positioning, but I’m not sure if retention metrics were covered in enough detail there. Should we adapt some of that material, or would it make more sense to pull together a separate report? If we go the latter route, I might need to loop in the analytics team for some updated retention numbers—thoughts?\n\nAlso, do you think it’s worth mentioning the recent customer success stories we highlighted on the blog? It could help frame the retention data in a positive light, but I’ll defer to your judgment on that.\n\nLet me know how you’d like to proceed. If you’re free for a quick call tomorrow, we can hash out a game plan. Otherwise, feel free to reply here with any pointers or specific details you think should be included in the response.\n\nThanks in advance!\n\nBest,\nJoy\n\nSent from my iPhone"
+  cc_users:
+  - yzhang
+  from_user: jmensa
+  id: email_003
+  subject: New Investor Inquiry on Subscription Retention Metrics
+  timestamp: 2026-04-05T12:30:00Z
+  to_users:
+  - arossi
+- bcc_users: []
+  body: "Hi Nour,\n\nHope you're doing well. I wanted to follow up urgently regarding the payment processing issue reported by the customer earlier today. This is a critical matter that needs to be resolved as quickly as possible to prevent further disruptions or potential damage to customer trust.\n\nCan you give me a quick update on where we stand with troubleshooting? Is the team making solid progress, or do we need to escalate further? Also, could you confirm if this is isolated to just one customer, or are we seeing any indications of a broader issue within the subscription system?\n\nI know there's a lot going on right now—between the pre-IPO prep and everything else—but if additional resources are needed to speed this up, let me know. We really can't afford delays here, especially with the recent investor inquiries and the blog post driving more visibility to the platform.\n\nLet’s aim to get this resolved ASAP. If possible, can you send me a quick summary or timeline of the steps being taken? Feel free to Slack me or call directly if it’s easier.\n\nThanks,\nKiran\n\nSent from my phone—apologies for any typos!"
+  cc_users:
+  - yzhang
+  from_user: kpatel
+  id: email_004
+  subject: Customer Payment Issue - Urgent Follow-Up
+  timestamp: 2026-04-05T13:00:00Z
+  to_users:
+  - nhaddad
+- bcc_users: []
+  body: "Hi Kiran,\n\nI hope this email finds you well! I wanted to let you know that I’ve scheduled a meeting with a financial advisor to go over stock option strategies as part of the prep for our pre-IPO discussions. The meeting is set for Thursday at 2 PM, and I'll share a calendar invite shortly.\n\nThis is a key step in ensuring our equity structure is polished before we present to potential investors. I know we've touched on this briefly in past strategy sessions, but if there are any specific points you'd like me to bring up—or areas where you think we could use a second opinion—please let me know. It’s important we cover all bases here.\n\nAlso, just as a heads-up, we received another inquiry from an investor asking about subscription retention metrics. I might loop back with you and the analytics team to make sure we have the latest numbers ready to share. It's crunch time for us, but I know we’re making solid progress on all fronts.\n\nLet me know if you have any thoughts or need clarification on anything. And, by the way, did you get a chance to review the pre-IPO presentation draft I finalized yesterday? Feedback is always welcome!\n\nThanks,\nYun\n\nSent from my iPhone"
+  cc_users:
+  - arossi
+  from_user: yzhang
+  id: email_005
+  subject: Meeting Scheduled with Financial Advisor
+  timestamp: 2026-04-05T14:00:00Z
+  to_users:
+  - kpatel
+- bcc_users: []
+  body: "Hi Joy,\n\nHope you're doing well! I just had a chance to go through the new blog post on customer success stories that went live yesterday. First off, great job to you and the team for pulling those stories together—it really highlights the impact we’re having with our customers.\n\nI wanted to get your thoughts on how we might incorporate some of these stories into our upcoming sales pitches. Specifically, do you think any of the case studies could work as a centerpiece for our pitch to [Client X]? I know they’ve been focused on scalability and ROI, so maybe we can emphasize the [Customer Y] example where they saw a 30% reduction in operational costs? Let me know if you think this angle is worth pursuing, or if we should focus elsewhere.\n\nAlso, can you double-check if the metrics mentioned in the post align with the internal data we’ve been using? I noticed a slight difference in the retention rate we cited for [Customer Z], and I want to make sure we’re consistent, especially with investors sniffing around lately.\n\nIf it’s easier, we can sync up on this during the team meeting later this week. Just flag it for me if you need more time to dig into the details.\n\nThanks again for all the work here—it’s such a valuable piece for both sales and marketing.\n\nBest,\n\nAlessandro\n\nSent from my iPhone"
+  cc_users:
+  - yzhang
+  from_user: arossi
+  id: email_006
+  subject: Follow-Up on Customer Success Blog Post
+  timestamp: 2026-04-05T15:00:00Z
+  to_users:
+  - jmensa

@@ -1,0 +1,100 @@
+domain: onedaydynasty-corp-20260406.com
+id: onedaydynasty-corp-20260406
+users:
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: yzhang
+  profile:
+    department: Executive
+    email: yzhang@onedaydynasty-corp-20260406.com
+    location: San Francisco
+    name:
+      display_name: Yun Zhang
+      first_name: Yun
+      last_name: Zhang
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: America/Los_Angeles
+    title: CEO
+  username: yzhang
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: kpatel
+  profile:
+    department: Engineering
+    email: kpatel@onedaydynasty-corp-20260406.com
+    location: New York
+    manager_id: yzhang
+    name:
+      display_name: Kiran Patel
+      first_name: Kiran
+      last_name: Patel
+    skills:
+    - Software Engineering
+    - Cloud Computing
+    timezone: America/New_York
+    title: VP of Engineering
+  username: kpatel
+- groups:
+  - Sales
+  - Management
+  - All Employees
+  id: arossi
+  profile:
+    department: Sales
+    email: arossi@onedaydynasty-corp-20260406.com
+    location: London
+    manager_id: yzhang
+    name:
+      display_name: Alessandro Rossi
+      first_name: Alessandro
+      last_name: Rossi
+    skills:
+    - Sales Strategy
+    - Client Relationships
+    timezone: Europe/London
+    title: VP of Sales
+  username: arossi
+- groups:
+  - Engineering
+  - All Employees
+  id: nhaddad
+  profile:
+    department: Engineering
+    email: nhaddad@onedaydynasty-corp-20260406.com
+    location: Remote
+    manager_id: kpatel
+    name:
+      display_name: Nour Haddad
+      first_name: Nour
+      last_name: Haddad
+    skills:
+    - Backend Development
+    - API Design
+    timezone: Asia/Beirut
+    title: Software Engineer
+  username: nhaddad
+- groups:
+  - Sales
+  - All Employees
+  id: jmensa
+  profile:
+    department: Sales
+    email: jmensa@onedaydynasty-corp-20260406.com
+    location: Accra
+    manager_id: arossi
+    name:
+      display_name: Joy Mensa
+      first_name: Joy
+      last_name: Mensa
+    skills:
+    - Negotiation
+    - Account Management
+    timezone: Africa/Accra
+    title: Sales Executive
+  username: jmensa

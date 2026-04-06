@@ -1,0 +1,921 @@
+cases:
+- assertions:
+  - description: Filters for emails authored by Yun Zhang.
+  - description: Narrows down to emails mentioning 'pre-IPO presentation draft.'
+  - description: Identifies the email sent on 2026-04-05.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_001
+  query: Show me the email from Yun Zhang about the pre-IPO presentation draft that was sent earlier this week.
+  user_id: yzhang
+- assertions:
+  - description: Filters for emails authored by Kiran Patel.
+  - description: Focuses on emails with 'customer payment issue' in the subject or body.
+  - description: Narrows down to urgent emails sent on 2026-04-05.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_002
+  query: Find the urgent email from Kiran Patel about the customer payment issue that was sent recently.
+  user_id: kpatel
+- assertions:
+  - description: Filters for emails authored by Joy Mensa.
+  - description: Searches for keywords such as 'investor' and 'subscription retention metrics.'
+  - description: Identifies the relevant email from 2026-04-05.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_003
+  query: Locate the email from Joy Mensa about an investor's question on subscription retention metrics.
+  user_id: jmensa
+- assertions:
+  - description: Filters for emails authored by Nour Haddad.
+  - description: Searches for keywords such as 'payment processing issue' in the subject or body.
+  - description: Narrows down to emails sent on 2026-04-05.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_004
+  query: Find Nour Haddad's update on the payment processing issue from earlier this week.
+  user_id: nhaddad
+- assertions:
+  - description: Filters for emails authored by Yun Zhang.
+  - description: Searches for terms like 'financial advisor' and 'stock options.'
+  - description: Identifies the relevant email from 2026-04-05.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_005
+  query: Can you find the email from Yun Zhang about the financial advisor meeting to discuss stock options?
+  user_id: yzhang
+- assertions:
+  - description: Returns the meeting titled 'Pre-IPO Strategy Discussion with Financial Advisor'
+  - description: Filters meetings by attendance and date
+  - description: Focuses on stock option strategies as the main topic
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_006
+  query: Find the meeting I attended where the CEO discussed stock option strategies with the financial advisor earlier this month.
+  user_id: yzhang
+- assertions:
+  - description: 'Returns the meeting titled ''Technical Troubleshooting: Payment Processing Issue'''
+  - description: Filters meetings by attendance and date
+  - description: Focuses on payment processing issues
+  entity_list:
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_007
+  query: Show the engineering meeting I joined where payment processing problems were resolved last week.
+  user_id: kpatel
+- assertions:
+  - description: Returns the email with subject 'Follow-Up on Customer Success Blog Post'
+  - description: Filters emails by author and subject keywords
+  - description: Focuses on sales pitch applications
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_008
+  query: Retrieve the email Alessandro sent about leveraging the customer success blog post in sales pitches.
+  user_id: arossi
+- assertions:
+  - description: 'Returns the meeting titled ''Investor Inquiry Follow-Up: Subscription Retention Metrics'''
+  - description: Filters meetings by attendance and title keywords
+  - description: Focuses on subscription retention and investor topics
+  entity_list:
+  - entity_id: meeting-003
+    entity_type: meeting
+  id: case_009
+  query: Find the meeting I joined where we discussed subscription retention metrics for an investor inquiry.
+  user_id: jmensa
+- assertions:
+  - description: 'Returns the meeting titled ''Technical Troubleshooting: Payment Processing Issue'''
+  - description: Filters meetings by attendance and keywords related to troubleshooting
+  - description: Focuses on the payment processing issue
+  entity_list:
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_010
+  query: Locate the troubleshooting meeting I joined with Kiran where we fixed the payment processing issue.
+  user_id: nhaddad
+- assertions:
+  - description: Returns the file 'data/presentations/pre_ipo_discussion_draft_v1.pptx'
+  - description: Identifies the author as Yun Zhang
+  - description: Matches the date constraint of April 5th, 2026
+  entity_list:
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_011
+  query: Locate the pre-IPO presentation draft from earlier this month prepared by the CEO.
+  user_id: kpatel
+- assertions:
+  - description: Returns the file 'data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf'
+  - description: Identifies the author as Nour Haddad
+  - description: Matches the keyword 'payment issue' in the summary
+  entity_list:
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_012
+  query: Find the troubleshooting report about the payment issue from last week.
+  user_id: arossi
+- assertions:
+  - description: Returns the file 'data/blog/customer_success_stories_2026-04-05.html'
+  - description: Identifies the author as Alessandro Rossi
+  - description: Matches the keyword 'customer success stories' in the summary
+  entity_list:
+  - entity_id: data/blog/customer_success_stories_2026-04-05.html
+    entity_type: file
+  id: case_013
+  query: Show me the recent blog post that highlights customer success stories.
+  user_id: jmensa
+- assertions:
+  - description: Returns the file 'data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf'
+  - description: Identifies the author as Joy Mensa
+  - description: Matches the keyword 'subscription retention metrics' in the summary
+  entity_list:
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_014
+  query: Find the investor document about subscription retention metrics from this week.
+  user_id: nhaddad
+- assertions:
+  - description: Returns the file 'data/meetings/stock_options_strategy_notes_2026-04-05.txt'
+  - description: Identifies the author as Yun Zhang
+  - description: Matches the keyword 'stock option strategies' in the summary
+  entity_list:
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_015
+  query: Find the notes from the recent meeting about stock option strategies for the pre-IPO plan.
+  user_id: arossi
+- assertions:
+  - description: Returns the chat item discussing pre-IPO presentation details.
+  - description: Filters by date (2026-04-05) and keywords like 'pre-IPO', 'growth', and 'competitive positioning'.
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  id: case_016
+  query: Show me the chat about the finalized pre-IPO presentation, particularly the part about growth projections and competitive positioning.
+  user_id: yzhang
+- assertions:
+  - description: Returns the group chat related to troubleshooting payment processing issues.
+  - description: Filters by type ('group_chat') and keywords ('payment processing', 'subscription system').
+  entity_list:
+  - entity_id: group_001
+    entity_type: group_chat
+  id: case_017
+  query: Find the group chat where payment processing issues in the subscription system were discussed.
+  user_id: kpatel
+- assertions:
+  - description: Returns the group chat addressing investor inquiries.
+  - description: Filters by date (2026-04-05) and keywords ('investor', 'retention metrics').
+  entity_list:
+  - entity_id: group_002
+    entity_type: group_chat
+  id: case_018
+  query: Locate the group chat about responding to an investor's question regarding subscription retention metrics.
+  user_id: arossi
+- assertions:
+  - description: Returns the chat coordinating the customer success blog post.
+  - description: Filters by keywords ('blog post', 'customer success', 'brand credibility').
+  entity_list:
+  - entity_id: chat_002
+    entity_type: chat
+  id: case_019
+  query: Find the chat discussing plans for the blog post showcasing customer success stories to enhance brand credibility.
+  user_id: nhaddad
+- assertions:
+  - description: Returns the chat item about meeting coordination with a financial advisor.
+  - description: Filters by keywords ('financial advisor', 'stock options', 'pre-IPO').
+  entity_list:
+  - entity_id: chat_003
+    entity_type: chat
+  id: case_020
+  query: Find the chat about scheduling a financial advisor meeting to discuss stock options for pre-IPO preparations.
+  user_id: jmensa
+- assertions:
+  - description: Identifies the email from the CEO about the finalized draft and the scheduled meeting with a financial advisor.
+  - description: Connects the scheduled meeting to the meeting notes discussing stock option strategies.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_021
+  query: Who participated in the meeting about stock option strategies, which was scheduled in the CEO's email about pre-IPO discussions?
+  user_id: yzhang
+- assertions:
+  - description: Identifies the email update about troubleshooting the payment issue.
+  - description: Links the group chat discussion about troubleshooting to the meeting where the VP of Engineering and a software engineer resolved the issue.
+  - description: Connects the final resolution to the technical report summarizing the investigation.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_022
+  query: What were the key steps taken to resolve the payment processing issue, starting from the email update to the final meeting?
+  user_id: kpatel
+- assertions:
+  - description: Identifies the email requesting feedback on the blog post.
+  - description: Connects the email to the coordination chat about enhancing brand credibility.
+  - description: Traces the feedback to the meeting where the blog post's strategic use was discussed.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting-004
+    entity_type: meeting
+  - entity_id: data/blog/customer_success_stories_2026-04-05.html
+    entity_type: file
+  id: case_023
+  query: What input did the VP of Sales receive about the customer success stories blog post, and how was it used in the meeting with the CEO and Sales Executive?
+  user_id: jmensa
+- assertions:
+  - description: Includes a summary of the draft presentation focusing on projected growth and competitive positioning
+  - description: Mentions stakeholder feedback provided via email and chat
+  - description: Includes timeline of events related to the draft presentation
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_024
+  query: Generate a comprehensive report on the finalized draft presentation for the pre-IPO discussion, including its timeline, key points, and stakeholder feedback.
+  user_id: yzhang
+- assertions:
+  - description: Details the timeline of the payment processing issue and its troubleshooting
+  - description: Describes the resolution steps taken by the technical team
+  - description: Includes follow-up actions requested by the VP of Engineering
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_025
+  query: Provide an analysis of the troubleshooting process for the SaaS subscription payment processing issue, including the timeline, resolution steps, and follow-up actions.
+  user_id: kpatel
+- assertions:
+  - description: Summarizes the content of the blog post
+  - description: Evaluates its effectiveness in enhancing brand credibility
+  - description: Discusses strategic use in sales pitches based on stakeholder feedback
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting-004
+    entity_type: meeting
+  - entity_id: data/blog/customer_success_stories_2026-04-05.html
+    entity_type: file
+  id: case_026
+  query: Write a detailed analysis of the new blog post on customer success stories, including its impact on brand credibility and potential use in sales pitches.
+  user_id: arossi
+- assertions:
+  - description: Includes a summary of the finalized pre-IPO presentation draft
+  - description: Mentions the CEO's meeting with the financial advisor discussing stock options
+  - description: Provides details on feedback requested for the pre-IPO presentation
+  - description: Discusses competitive positioning as a key focus area
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_027
+  query: Generate a detailed report summarizing the activities and artifacts related to pre-IPO preparations, focusing on growth projections and stock option strategies.
+  user_id: yzhang
+- assertions:
+  - description: Explains the nature of the payment processing issue
+  - description: Details the technical team's troubleshooting steps
+  - description: Includes the VP of Engineering's urgent follow-up request
+  - description: Summarizes the resolution progress and outcomes
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_028
+  query: Provide a detailed analysis of the payment processing issue reported on April 5, including troubleshooting actions and resolution progress.
+  user_id: kpatel
+- assertions:
+  - description: Summarizes the investor's inquiry on subscription retention metrics
+  - description: Includes details of the meeting to craft a response
+  - description: Explains strategic implications of the retention data
+  - description: Provides recommendations for investor engagement
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_029
+  query: Create a report analyzing the response to the potential investor's inquiry on subscription retention metrics, including strategic implications and recommended actions.
+  user_id: arossi
+- assertions:
+  - description: Includes the finalized draft presentation prepared by the CEO
+  - description: Summarizes feedback on the presentation from emails and chats
+  - description: Mentions the CEO's meeting with a financial advisor regarding stock option strategies
+  entity_list:
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_030
+  query: Provide a detailed summary of the pre-IPO presentation preparation process, including feedback, revisions, and key discussions.
+  user_id: yzhang
+- assertions:
+  - description: Details the initial customer report of the payment processing issue
+  - description: Summarizes the troubleshooting steps taken by the technical team
+  - description: Includes the final resolution documented in the technical report and corresponding meeting notes
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_031
+  query: Generate a report outlining the timeline, troubleshooting steps, and resolution of the payment processing issue reported by a customer.
+  user_id: kpatel
+- assertions:
+  - description: Includes the initial inquiry from the investor
+  - description: Summarizes the discussion and collaboration on crafting a response
+  - description: References the final response document with subscription retention data
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_032
+  query: Analyze the communication and response strategy for the investor inquiry on subscription retention metrics, including the data provided and related discussions.
+  user_id: arossi
+- assertions:
+  - description: Includes details of the presentation draft prepared by the CEO
+  - description: Mentions the meeting with the financial advisor regarding stock option strategies
+  - description: Analyzes competitive positioning and projected growth
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_033
+  query: Provide a comprehensive report on the pre-IPO preparation, including the finalized draft presentation, stock option strategy discussions, and competitive positioning analysis.
+  user_id: yzhang
+- assertions:
+  - description: Describes the customer's report of the issue
+  - description: Includes troubleshooting updates from the technical team
+  - description: Details the resolution and findings in the technical report
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_034
+  query: Summarize the investigation and resolution of the payment processing issue reported by a customer, including a timeline of actions and technical details.
+  user_id: kpatel
+- assertions:
+  - description: Mentions the investor's inquiry about subscription retention metrics
+  - description: Describes the collaboration on crafting the response
+  - description: Includes the document prepared as a response
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_035
+  query: Analyze the handling of the investor inquiry regarding subscription retention metrics, including the response strategy and metrics provided.
+  user_id: nhaddad
+- assertions:
+  - description: Details the finalized draft of the pre-IPO presentation
+  - description: Summarizes feedback from relevant stakeholders
+  - description: Includes strategic discussions about projected growth and competitive positioning
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_036
+  query: Provide a detailed summary of the finalized draft of the pre-IPO presentation, including feedback received, discussions held, and strategic implications.
+  user_id: yzhang
+- assertions:
+  - description: Describes the timeline of events related to the payment processing issue
+  - description: Details troubleshooting steps and resolution outcomes
+  - description: Analyzes the operational impact and customer communication
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_037
+  query: Create a comprehensive report on the payment processing issue in the SaaS subscription system, including the troubleshooting timeline, resolution steps, and operational impact.
+  user_id: nhaddad
+- assertions:
+  - description: Describes the investor inquiry related to subscription retention metrics
+  - description: Details the response preparation process and collaboration
+  - description: Analyzes the strategic implications for attracting investment
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_038
+  query: Summarize the inquiry about subscription retention metrics from the potential investor, including the response preparation and its strategic implications for investment discussions.
+  user_id: kpatel
+- assertions:
+  - description: Includes a summary of the presentation's focus on projected growth and competitive positioning
+  - description: Details feedback requested by the CEO
+  - description: Mentions discussions related to the draft presentation
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_039
+  query: Provide a comprehensive summary of the finalized pre-IPO presentation draft, including feedback received and discussions about projected growth and competitive positioning.
+  user_id: yzhang
+- assertions:
+  - description: Outlines the timeline of the payment processing issue
+  - description: Describes troubleshooting steps taken by the technical team
+  - description: Mentions follow-up actions requested by the VP of Engineering
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_040
+  query: Analyze the timeline and resolution of the customer-reported payment processing issue in the SaaS subscription system, including troubleshooting steps and follow-up actions.
+  user_id: kpatel
+- assertions:
+  - description: Details the investor's inquiry about subscription retention metrics
+  - description: Explains the company's strategy for responding to the inquiry
+  - description: Includes relevant discussions and meetings about the investor inquiry
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_041
+  query: Compile an analysis of the potential investor's inquiry regarding subscription retention metrics, including the company's response strategy and related discussions.
+  user_id: arossi
+- assertions:
+  - description: Contains a summary of the finalized draft presentation and its focus areas.
+  - description: Includes feedback from stakeholders and any collaborative discussions.
+  - description: References related meetings and files.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_042
+  query: Provide a detailed report on the finalized draft presentation for the pre-IPO discussion, including key points on projected growth and competitive positioning, feedback received, and any associated meetings or artifacts.
+  user_id: yzhang
+- assertions:
+  - description: Documents the timeline of the payment processing issue.
+  - description: Details the troubleshooting steps taken by the technical team.
+  - description: Includes communication artifacts highlighting urgency and updates.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_043
+  query: Generate an analysis of the customer-reported payment processing issue, including the timeline, troubleshooting steps, resolution status, and communication between teams.
+  user_id: kpatel
+- assertions:
+  - description: Summarizes the content and strategic importance of the blog post.
+  - description: Includes feedback from stakeholders about its effectiveness.
+  - description: Analyzes how the blog post can enhance sales pitches.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting-004
+    entity_type: meeting
+  - entity_id: data/blog/customer_success_stories_2026-04-05.html
+    entity_type: file
+  id: case_044
+  query: Provide an analysis of the recently published blog post highlighting customer success stories, including its impact on brand credibility, feedback received, and its potential application in upcoming sales efforts.
+  user_id: arossi
+- assertions:
+  - description: Summarizes the content and focus areas of the draft presentation
+  - description: Includes feedback provided via emails and chats
+  - description: Outlines discussions and collaboration concerning the pre-IPO presentation
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_045
+  query: Generate a detailed report on the finalized draft presentation for the pre-IPO discussion, including feedback, discussions, and strategic focus areas like projected growth and competitive positioning.
+  user_id: yzhang
+- assertions:
+  - description: Includes the initial report of the issue
+  - description: Details troubleshooting steps and progress
+  - description: Mentions the urgency emphasized in follow-up communications
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_046
+  query: Provide a timeline and analysis of the troubleshooting process for the customer-reported payment processing issue in the SaaS subscription system, including key actions and resolutions.
+  user_id: nhaddad
+- assertions:
+  - description: Explains the nature of the investor inquiry
+  - description: Details collaboration efforts between stakeholders
+  - description: Includes the final prepared document with subscription retention metrics
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_047
+  query: Analyze the potential investor inquiry about subscription retention metrics, including the response strategy, collaboration efforts, and the final prepared document.
+  user_id: arossi
+- assertions:
+  - description: Includes details of the finalized draft presentation focusing on projected growth and competitive positioning.
+  - description: Mentions the CEO's meeting with the financial advisor to explore stock option strategies.
+  - description: Summarizes feedback discussions regarding the draft presentation.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_048
+  query: Generate a comprehensive report on the CEO's activities and deliverables related to pre-IPO discussions, including the timeline, strategic focus, and stakeholder involvement.
+  user_id: yzhang
+- assertions:
+  - description: Mentions the initial customer complaint about payment processing issues.
+  - description: Details the troubleshooting efforts and discussions among the technical team.
+  - description: Summarizes the resolution documented in the technical report.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_049
+  query: Provide a detailed analysis of the payment processing issue reported on April 5, 2026, including the troubleshooting timeline, resolution steps, and impact assessment.
+  user_id: kpatel
+- assertions:
+  - description: Includes details of the investor's inquiry about subscription retention metrics.
+  - description: Mentions coordination efforts among the VP of Sales and Sales Executive to craft the response.
+  - description: Provides insights into the strategic importance of retention metrics for investors.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_050
+  query: Summarize the engagement with the potential investor regarding subscription retention metrics, including the inquiry details, collaboration to craft the response, and the final deliverable.
+  user_id: arossi
+- assertions:
+  - description: Includes the finalized draft presentation details
+  - description: Summarizes feedback from stakeholders via emails and chats
+  - description: Analyzes the strategic importance of projected growth and competitive positioning
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_051
+  query: Provide a detailed summary of the pre-IPO presentation draft development, including feedback and discussions on projected growth and competitive positioning.
+  user_id: yzhang
+- assertions:
+  - description: Details the customer-reported issue and its impact
+  - description: Summarizes troubleshooting steps from the technical team
+  - description: Mentions urgent follow-ups requested by stakeholders
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_052
+  query: Analyze the timeline and resolution process for the reported SaaS subscription payment processing issue, including the technical team's investigation and stakeholder communications.
+  user_id: kpatel
+- assertions:
+  - description: Describes the initial investor inquiry and its context
+  - description: Summarizes the response preparation process
+  - description: Analyzes the strategic importance of subscription retention metrics for investor relations
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_053
+  query: Create a detailed analysis of the investor inquiry about subscription retention metrics, including the response preparation and strategic implications for pre-IPO positioning.
+  user_id: arossi
+- assertions:
+  - description: Summarizes the finalized draft presentation and its focus on projected growth and competitive positioning
+  - description: Includes details from the meeting with the financial advisor regarding stock option strategies
+  - description: Mentions feedback and discussions on the pre-IPO presentation
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_054
+  query: Generate a comprehensive report on the pre-IPO preparations, including the finalized draft presentation, meeting with the financial advisor, and discussions on growth and competitive positioning.
+  user_id: yzhang
+- assertions:
+  - description: Describes the customer-reported payment processing issue
+  - description: Outlines the troubleshooting efforts provided by the technical team
+  - description: Includes the resolution timeline and any urgent follow-ups mentioned
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_055
+  query: Provide an analysis of the payment processing issue in the SaaS subscription system, including troubleshooting efforts, resolution timeline, and communication updates.
+  user_id: kpatel
+- assertions:
+  - description: Summarizes the investor's inquiry about subscription retention metrics
+  - description: Includes the company's preparation of a response
+  - description: Mentions collaboration between the VP of Sales and the Sales Executive
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_056
+  query: Create a detailed summary of the potential investor's inquiry regarding subscription retention metrics and the company's response preparation.
+  user_id: arossi
+- assertions:
+  - description: Includes a timeline of events related to the finalized draft presentation
+  - description: Summarizes feedback from relevant stakeholders
+  - description: Highlights projected growth and competitive positioning as key focus areas
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  id: case_057
+  query: Provide a detailed analysis of the finalized draft presentation for the pre-IPO discussion, including the timeline of events, feedback received, and strategic focus areas.
+  user_id: yzhang
+- assertions:
+  - description: Details the timeline of troubleshooting efforts
+  - description: Describes the actions taken by the technical team
+  - description: Provides the resolution status and impact on the SaaS subscription system
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_058
+  query: Summarize the troubleshooting process for the customer-reported payment processing issue, including the timeline, actions taken, and the resolution status.
+  user_id: kpatel
+- assertions:
+  - description: Explains the investor's request for subscription retention metrics
+  - description: Details the response crafted by the team
+  - description: Discusses the strategic implications of the inquiry for investor relations
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: group_002
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  id: case_059
+  query: Analyze the potential investor inquiry about subscription retention metrics, including details of the request, the crafted response, and its strategic implications.
+  user_id: arossi
+- assertions:
+  - description: Includes a summary of the finalized draft presentation and its focus areas.
+  - description: Describes the timeline of related communications and meetings.
+  - description: References feedback requests and collaboration on the draft.
+  entity_list:
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_060
+  query: Generate a comprehensive summary of the finalized draft presentation for the pre-IPO discussion, including its focus on projected growth and competitive positioning, and the timeline of related events.
+  user_id: yzhang
+- assertions:
+  - description: Explains the nature of the payment processing issue.
+  - description: Details the steps taken by the technical team to troubleshoot and resolve the issue.
+  - description: Includes the timeline of events and communications related to the issue.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_001
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf
+    entity_type: file
+  id: case_061
+  query: Provide a detailed analysis of the payment processing issue reported in the SaaS subscription system, including the troubleshooting steps, timeline, and resolution process.
+  user_id: kpatel
+- assertions:
+  - description: Summarizes the blog post content and its intended impact on brand credibility.
+  - description: Explores how the blog post can be leveraged in sales pitches or strategies.
+  - description: Includes references to related discussions and feedback requests.
+  entity_list:
+  - entity_id: data/blog/customer_success_stories_2026-04-05.html
+    entity_type: file
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting-004
+    entity_type: meeting
+  id: case_062
+  query: Analyze the strategic implications of the blog post on customer success stories, including its impact on brand credibility and its potential use in sales activities.
+  user_id: arossi
+- assertions:
+  - description: Provides a timeline of pre-IPO-related events on April 5, 2026
+  - description: Summarizes the finalized draft presentation focusing on projected growth and competitive positioning
+  - description: Includes details of the investor inquiry regarding subscription retention metrics
+  - description: Describes the stock option strategy meeting and its implications for pre-IPO discussions
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/presentations/pre_ipo_discussion_draft_v1.pptx
+    entity_type: file
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf
+    entity_type: file
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/meetings/stock_options_strategy_notes_2026-04-05.txt
+    entity_type: file
+  id: case_063
+  query: Generate a comprehensive report on the company's pre-IPO preparations, including a timeline of critical events, the finalized draft presentation, investor inquiries, and stock option strategies.
+  user_id: yzhang
+description: Generated evaluation queries covering search, multi-hop reasoning, and report generation.
+name: Evaluation Set for onedaydynasty-corp-20260406

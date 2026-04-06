@@ -1,4 +1,5 @@
 import asyncio
+import json
 import re
 import yaml
 import textwrap
@@ -214,9 +215,36 @@ class Evaluator:
         return None
 
     async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
-        # Parse reference entries from the References section.
-        # System-prompt format: - *Type*: <type> (ID: <id>)
-        # e.g.  - *Type*: Email (ID: email_001)
+        # Primary path: use the citation_relevance judge prompt (tool-call based, format-agnostic).
+        # This evaluates whether the agent used appropriate tools and found relevant information,
+        # without requiring the agent to output a structured References section.
+        prompt_template = self.prompts.get("citation_relevance")
+        if prompt_template:
+            tool_calls_text = (
+                "\n".join(
+                    f"- {tc['name']}({json.dumps(tc.get('arguments', {}))})"
+                    for tc in tool_calls
+                )
+                if tool_calls
+                else "No tool calls made."
+            )
+            prompt = prompt_template.format(
+                query=query,
+                tool_calls=tool_calls_text,
+                response=response,
+            )
+            messages = [{"role": "user", "content": prompt}]
+            try:
+                judgment = await self.judge_llm.get_completion(messages)
+                data = self._parse_yaml_response(judgment)
+                score = float(data.get("score", 0.0))
+                explanation = data.get("explanation", "No explanation.")
+                return score, explanation
+            except Exception as e:
+                return 0.0, f"Error in citation evaluation: {e}"
+
+        # Fallback: regex-based References section parsing.
+        # Expects the agent to emit: - *Type*: <type> (ID: <id>)
         pattern = r"\*Type\*:\s+([^\n(]+?)\s+\(ID:\s+([^)\n]+?)\)"
         matches = re.findall(pattern, response)
 
@@ -230,41 +258,39 @@ class Evaluator:
             cit_type = cit_type.strip()
             cit_id = cit_id.strip()
             content = self._fetch_entity_content(cit_type, cit_id)
-            
+
             if not content:
                 explanations.append(f"Citation {i} ({cit_type} ID: {cit_id}): Content not found (Hallucination).")
                 continue
-                
-            # Evaluate relevance
+
             prompt = f"""
             You are an evaluator. Determine if the cited content is relevant to the user's query.
-            
+
             User Query: {query}
-            
+
             Cited Content ({cit_type}):
-            {content[:3000]} 
-            
+            {content[:3000]}
+
             Task:
             1. Is this content relevant to answering the query?
             2. Assign a relevance score from 0.0 to 1.0.
-            
+
             Output YAML:
             score: <float>
             reason: <string>
             """
-            
+
             messages = [{"role": "user", "content": prompt}]
             try:
                 judgment = await self.judge_llm.get_completion(messages)
                 data = self._parse_yaml_response(judgment)
                 score = float(data.get("score", 0.0))
                 reason = data.get("reason", "No reason")
-                
                 total_score += score
                 explanations.append(f"Citation {i}: {score} - {reason}")
             except Exception as e:
                 explanations.append(f"Citation {i}: Error evaluating - {e}")
-                
+
         final_score = total_score / len(matches) if matches else 0.0
         return final_score, "\n".join(explanations)
 

@@ -1,0 +1,99 @@
+# Stock Option Strategy Notes
+
+**Author:** Yun Zhang  
+**Date:** April 5, 2026  
+**Context:** Meeting with the financial advisor to discuss stock option strategies ahead of pre-IPO discussions.
+
+## Agenda
+
+1. Overview of Pre-IPO Goals
+2. Current Equity Structure
+3. Stock Option Strategy Recommendations
+4. Tax Implications and Compliance
+5. Action Plan
+
+---
+
+## 1. Overview of Pre-IPO Goals
+
+### Objectives:
+- Ensure competitive equity offerings to attract top-tier talent post-IPO.
+- Align stock option strategies with long-term growth projections.
+- Mitigate risks associated with dilution and shareholder dissatisfaction.
+
+### Key Metrics:
+- Projected IPO valuation: **$1.2B - $1.5B**.
+- Employee retention rate (current): **87%**.
+- Subscription retention metrics (recent inquiry): **94%**.
+
+---
+
+## 2. Current Equity Structure
+
+### Summary:
+- **Total shares outstanding:** 20,000,000.
+- **Employee Stock Option Pool (ESOP):** 15% allocated (3,000,000 shares).
+- **Founders and Early Investors:** 55%.
+- **Preferred Shares (Series A, B, C):** 30%.
+
+### Challenges:
+- Need to expand ESOP allocation to 18-20% without significant dilution.
+- Address concerns from potential investors about cap table complexity.
+
+---
+
+## 3. Stock Option Strategy Recommendations
+
+### Immediate Actions:
+- Increase ESOP pool allocation to 18% to support hiring plans.
+- Implement a **tiered vesting schedule** to incentivize long-term retention:
+  - Year 1: 25% vesting (cliff).
+  - Years 2-4: Monthly vesting (remaining 75%).
+
+### Long-Term Strategy:
+- Introduce **performance-based stock options** for key leadership roles.
+- Consider **restricted stock units (RSUs)** post-IPO to reduce tax burden and simplify administration.
+
+### Benchmarking:
+- Comparable companies in the SaaS sector offer ESOP pools of **15-20%** pre-IPO.
+- Performance-based stock options are increasingly common among high-growth startups.
+
+---
+
+## 4. Tax Implications and Compliance
+
+### Key Considerations:
+- Ensure compliance with **Internal Revenue Code Section 409A** for stock option valuations.
+- Evaluate **tax implications** for international employees, especially in regions with high tax rates.
+
+### Recommendations:
+- Conduct a **409A valuation** prior to expanding the ESOP pool.
+- Partner with a global tax consultancy to address cross-border compliance challenges.
+- Communicate clearly with employees about the tax implications of exercising options.
+
+---
+
+## 5. Action Plan
+
+### Immediate Next Steps:
+- Finalize ESOP allocation increase to 18%.
+- Schedule a meeting with the legal team to initiate 409A valuation.
+- Draft an internal memo to explain updates to the stock option program to employees.
+
+### Milestone Timeline:
+| **Task**                     | **Owner**        | **Deadline**       |
+|------------------------------|------------------|--------------------|
+| ESOP pool increase approval | CEO, Legal Team  | April 15, 2026     |
+| 409A valuation process       | Finance Team     | April 30, 2026     |
+| Internal communication       | HR Team          | May 5, 2026        |
+| Investor briefing on updates | CEO              | May 10, 2026       |
+
+---
+
+### Notes:
+- The financial advisor highlighted the importance of balancing employee incentives with investor concerns about dilution.
+- Potential investors may require detailed documentation on retention metrics and equity structure as part of the due diligence process.
+
+---
+
+**End of Notes**

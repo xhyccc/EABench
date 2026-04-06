@@ -1,0 +1,2025 @@
+[
+  {
+    "assertions": [
+      {
+        "description": "Filters for emails authored by Yun Zhang."
+      },
+      {
+        "description": "Narrows down to emails mentioning 'pre-IPO presentation draft.'"
+      },
+      {
+        "description": "Identifies the email sent on 2026-04-05."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_001",
+    "query": "Show me the email from Yun Zhang about the pre-IPO presentation draft that was sent earlier this week.",
+    "reasoning": "The user is likely looking for a specific email about the pre-IPO presentation draft from Yun Zhang on the same date it was sent.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Filters for emails authored by Kiran Patel."
+      },
+      {
+        "description": "Focuses on emails with 'customer payment issue' in the subject or body."
+      },
+      {
+        "description": "Narrows down to urgent emails sent on 2026-04-05."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_002",
+    "query": "Find the urgent email from Kiran Patel about the customer payment issue that was sent recently.",
+    "reasoning": "The user is searching for an email thread discussing a customer payment issue, emphasizing urgency and authored by Kiran Patel.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Filters for emails authored by Joy Mensa."
+      },
+      {
+        "description": "Searches for keywords such as 'investor' and 'subscription retention metrics.'"
+      },
+      {
+        "description": "Identifies the relevant email from 2026-04-05."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_003",
+    "query": "Locate the email from Joy Mensa about an investor's question on subscription retention metrics.",
+    "reasoning": "The user wants details about an investor inquiry related to subscription retention metrics, authored by Joy Mensa.",
+    "user_id": "jmensa"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Filters for emails authored by Nour Haddad."
+      },
+      {
+        "description": "Searches for keywords such as 'payment processing issue' in the subject or body."
+      },
+      {
+        "description": "Narrows down to emails sent on 2026-04-05."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_004",
+    "query": "Find Nour Haddad's update on the payment processing issue from earlier this week.",
+    "reasoning": "The user is seeking an email update from Nour Haddad about the payment processing issue that was sent on 2026-04-05.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Filters for emails authored by Yun Zhang."
+      },
+      {
+        "description": "Searches for terms like 'financial advisor' and 'stock options.'"
+      },
+      {
+        "description": "Identifies the relevant email from 2026-04-05."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_005",
+    "query": "Can you find the email from Yun Zhang about the financial advisor meeting to discuss stock options?",
+    "reasoning": "The user is looking for an email from Yun Zhang regarding a meeting with a financial advisor related to stock option strategies.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Pre-IPO Strategy Discussion with Financial Advisor'"
+      },
+      {
+        "description": "Filters meetings by attendance and date"
+      },
+      {
+        "description": "Focuses on stock option strategies as the main topic"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_006",
+    "query": "Find the meeting I attended where the CEO discussed stock option strategies with the financial advisor earlier this month.",
+    "reasoning": "Yun Zhang attended the meeting titled 'Pre-IPO Strategy Discussion with Financial Advisor' on April 5, 2026. The query targets the meeting's summary and other details related to stock option strategies.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Technical Troubleshooting: Payment Processing Issue'"
+      },
+      {
+        "description": "Filters meetings by attendance and date"
+      },
+      {
+        "description": "Focuses on payment processing issues"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_007",
+    "query": "Show the engineering meeting I joined where payment processing problems were resolved last week.",
+    "reasoning": "Kiran Patel was an attendee of the meeting 'Technical Troubleshooting: Payment Processing Issue' on April 5, 2026. The query targets this specific meeting based on the attendee and issue keywords.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Follow-Up on Customer Success Blog Post'"
+      },
+      {
+        "description": "Filters emails by author and subject keywords"
+      },
+      {
+        "description": "Focuses on sales pitch applications"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_008",
+    "query": "Retrieve the email Alessandro sent about leveraging the customer success blog post in sales pitches.",
+    "reasoning": "Alessandro Rossi authored an email about the customer success blog post on April 5, 2026. The query targets this specific email based on author, keywords, and subject matter.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Investor Inquiry Follow-Up: Subscription Retention Metrics'"
+      },
+      {
+        "description": "Filters meetings by attendance and title keywords"
+      },
+      {
+        "description": "Focuses on subscription retention and investor topics"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_009",
+    "query": "Find the meeting I joined where we discussed subscription retention metrics for an investor inquiry.",
+    "reasoning": "Joy Mensa attended the meeting 'Investor Inquiry Follow-Up: Subscription Retention Metrics' on April 5, 2026. The query targets this specific meeting based on attendee, title, and investor-related keywords.",
+    "user_id": "jmensa"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the meeting titled 'Technical Troubleshooting: Payment Processing Issue'"
+      },
+      {
+        "description": "Filters meetings by attendance and keywords related to troubleshooting"
+      },
+      {
+        "description": "Focuses on the payment processing issue"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_010",
+    "query": "Locate the troubleshooting meeting I joined with Kiran where we fixed the payment processing issue.",
+    "reasoning": "Nour Haddad attended the meeting 'Technical Troubleshooting: Payment Processing Issue' on April 5, 2026. The query targets this specific meeting based on attendee, problem keywords, and the troubleshooting context.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/presentations/pre_ipo_discussion_draft_v1.pptx'"
+      },
+      {
+        "description": "Identifies the author as Yun Zhang"
+      },
+      {
+        "description": "Matches the date constraint of April 5th, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_011",
+    "query": "Locate the pre-IPO presentation draft from earlier this month prepared by the CEO.",
+    "reasoning": "User is likely seeking the latest pre-IPO presentation prepared by the CEO on April 5th, 2026. The query implies constraints on type (presentation file), creator (CEO, Yun Zhang), and date.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf'"
+      },
+      {
+        "description": "Identifies the author as Nour Haddad"
+      },
+      {
+        "description": "Matches the keyword 'payment issue' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_012",
+    "query": "Find the troubleshooting report about the payment issue from last week.",
+    "reasoning": "User is likely looking for technical documentation created by Nour Haddad on April 5th, 2026, related to troubleshooting payment processing issues. The query implies constraints on keywords ('payment issue'), type (technical report), and date.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/blog/customer_success_stories_2026-04-05.html'"
+      },
+      {
+        "description": "Identifies the author as Alessandro Rossi"
+      },
+      {
+        "description": "Matches the keyword 'customer success stories' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/blog/customer_success_stories_2026-04-05.html",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_013",
+    "query": "Show me the recent blog post that highlights customer success stories.",
+    "reasoning": "User is likely seeking the blog post created by Alessandro Rossi on April 5th, 2026, about customer success stories. The query implies constraints on type (blog post), keywords ('customer success stories'), and author.",
+    "user_id": "jmensa"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf'"
+      },
+      {
+        "description": "Identifies the author as Joy Mensa"
+      },
+      {
+        "description": "Matches the keyword 'subscription retention metrics' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_014",
+    "query": "Find the investor document about subscription retention metrics from this week.",
+    "reasoning": "User is likely looking for a document prepared by Joy Mensa on April 5th, 2026, addressing investor inquiries about subscription retention metrics. The query implies constraints on type (document), keywords ('subscription retention metrics'), and author.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the file 'data/meetings/stock_options_strategy_notes_2026-04-05.txt'"
+      },
+      {
+        "description": "Identifies the author as Yun Zhang"
+      },
+      {
+        "description": "Matches the keyword 'stock option strategies' in the summary"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_015",
+    "query": "Find the notes from the recent meeting about stock option strategies for the pre-IPO plan.",
+    "reasoning": "User is likely looking for meeting notes created by Yun Zhang on April 5th, 2026, regarding stock options strategy for pre-IPO discussions. The query implies constraints on type (meeting notes), keywords ('stock options strategy'), and date.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat item discussing pre-IPO presentation details."
+      },
+      {
+        "description": "Filters by date (2026-04-05) and keywords like 'pre-IPO', 'growth', and 'competitive positioning'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_016",
+    "query": "Show me the chat about the finalized pre-IPO presentation, particularly the part about growth projections and competitive positioning.",
+    "reasoning": "User wants to find a chat discussing pre-IPO strategies, specifically focusing on growth and competitive positioning. The context suggests this might be relevant to Yun Zhang, who could be involved in strategic discussions.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat related to troubleshooting payment processing issues."
+      },
+      {
+        "description": "Filters by type ('group_chat') and keywords ('payment processing', 'subscription system')."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_017",
+    "query": "Find the group chat where payment processing issues in the subscription system were discussed.",
+    "reasoning": "User is likely troubleshooting a technical issue with SaaS payment processing. Kiran Patel might have been involved in this discussion based on the SaaS context.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the group chat addressing investor inquiries."
+      },
+      {
+        "description": "Filters by date (2026-04-05) and keywords ('investor', 'retention metrics')."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_018",
+    "query": "Locate the group chat about responding to an investor's question regarding subscription retention metrics.",
+    "reasoning": "User is responding to an investor's inquiry about retention metrics. Alessandro Rossi, possibly in a business development or investor relations role, might have been involved.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat coordinating the customer success blog post."
+      },
+      {
+        "description": "Filters by keywords ('blog post', 'customer success', 'brand credibility')."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_019",
+    "query": "Find the chat discussing plans for the blog post showcasing customer success stories to enhance brand credibility.",
+    "reasoning": "User is looking for coordination details about a customer success blog post for brand credibility improvement. Nour Haddad might be involved in marketing or communications efforts.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the chat item about meeting coordination with a financial advisor."
+      },
+      {
+        "description": "Filters by keywords ('financial advisor', 'stock options', 'pre-IPO')."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_020",
+    "query": "Find the chat about scheduling a financial advisor meeting to discuss stock options for pre-IPO preparations.",
+    "reasoning": "User is scheduling financial advisory meetings for stock options ahead of pre-IPO discussions. Joy Mensa could be involved in financial planning or executive-level decisions.",
+    "user_id": "jmensa"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email from the CEO about the finalized draft and the scheduled meeting with a financial advisor."
+      },
+      {
+        "description": "Connects the scheduled meeting to the meeting notes discussing stock option strategies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_021",
+    "query": "Who participated in the meeting about stock option strategies, which was scheduled in the CEO's email about pre-IPO discussions?",
+    "reasoning": "Identify the connection between the finalized draft for the pre-IPO discussion mentioned in the CEO's email and the meeting where the stock option strategies were discussed.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email update about troubleshooting the payment issue."
+      },
+      {
+        "description": "Links the group chat discussion about troubleshooting to the meeting where the VP of Engineering and a software engineer resolved the issue."
+      },
+      {
+        "description": "Connects the final resolution to the technical report summarizing the investigation."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_022",
+    "query": "What were the key steps taken to resolve the payment processing issue, starting from the email update to the final meeting?",
+    "reasoning": "Trace the process of resolving the payment processing issue from the initial technical team update to the final meeting.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email requesting feedback on the blog post."
+      },
+      {
+        "description": "Connects the email to the coordination chat about enhancing brand credibility."
+      },
+      {
+        "description": "Traces the feedback to the meeting where the blog post's strategic use was discussed."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/blog/customer_success_stories_2026-04-05.html",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_023",
+    "query": "What input did the VP of Sales receive about the customer success stories blog post, and how was it used in the meeting with the CEO and Sales Executive?",
+    "reasoning": "Explore how the VP of Sales's request for feedback on the blog post influenced the subsequent meeting discussions and sales strategies.",
+    "user_id": "jmensa"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the draft presentation focusing on projected growth and competitive positioning"
+      },
+      {
+        "description": "Mentions stakeholder feedback provided via email and chat"
+      },
+      {
+        "description": "Includes timeline of events related to the draft presentation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_024",
+    "query": "Generate a comprehensive report on the finalized draft presentation for the pre-IPO discussion, including its timeline, key points, and stakeholder feedback.",
+    "reasoning": "The CEO finalized a draft presentation for the pre-IPO discussion, focusing on projected growth and competitive positioning. Multiple artifacts, including emails and chats, mention this draft. A report should summarize the key aspects of the pre-IPO presentation and its associated discussions.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the timeline of the payment processing issue and its troubleshooting"
+      },
+      {
+        "description": "Describes the resolution steps taken by the technical team"
+      },
+      {
+        "description": "Includes follow-up actions requested by the VP of Engineering"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_025",
+    "query": "Provide an analysis of the troubleshooting process for the SaaS subscription payment processing issue, including the timeline, resolution steps, and follow-up actions.",
+    "reasoning": "The customer-reported issue with payment processing required immediate troubleshooting, as reflected in multiple emails, group chats, and a technical report. A report should analyze the resolution process and its impact.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the content of the blog post"
+      },
+      {
+        "description": "Evaluates its effectiveness in enhancing brand credibility"
+      },
+      {
+        "description": "Discusses strategic use in sales pitches based on stakeholder feedback"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/blog/customer_success_stories_2026-04-05.html",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_026",
+    "query": "Write a detailed analysis of the new blog post on customer success stories, including its impact on brand credibility and potential use in sales pitches.",
+    "reasoning": "The new blog post highlighting customer success stories was intended to bolster brand credibility. Various artifacts reference the blog post and its strategic discussions. A report should evaluate its role in enhancing sales and branding strategies.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the finalized pre-IPO presentation draft"
+      },
+      {
+        "description": "Mentions the CEO's meeting with the financial advisor discussing stock options"
+      },
+      {
+        "description": "Provides details on feedback requested for the pre-IPO presentation"
+      },
+      {
+        "description": "Discusses competitive positioning as a key focus area"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_027",
+    "query": "Generate a detailed report summarizing the activities and artifacts related to pre-IPO preparations, focusing on growth projections and stock option strategies.",
+    "reasoning": "The pre-IPO preparations are a critical event involving multiple artifacts such as presentations, meetings, and emails. A report query should analyze this topic comprehensively.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the nature of the payment processing issue"
+      },
+      {
+        "description": "Details the technical team's troubleshooting steps"
+      },
+      {
+        "description": "Includes the VP of Engineering's urgent follow-up request"
+      },
+      {
+        "description": "Summarizes the resolution progress and outcomes"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_028",
+    "query": "Provide a detailed analysis of the payment processing issue reported on April 5, including troubleshooting actions and resolution progress.",
+    "reasoning": "The customer-reported issue with payment processing and its resolution is a critical operational event. A report query should analyze the troubleshooting steps and resolution timeline.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the investor's inquiry on subscription retention metrics"
+      },
+      {
+        "description": "Includes details of the meeting to craft a response"
+      },
+      {
+        "description": "Explains strategic implications of the retention data"
+      },
+      {
+        "description": "Provides recommendations for investor engagement"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_029",
+    "query": "Create a report analyzing the response to the potential investor's inquiry on subscription retention metrics, including strategic implications and recommended actions.",
+    "reasoning": "The inquiry from a potential investor regarding subscription retention metrics is significant for business development. A report query should focus on the strategic response and related artifacts.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes the finalized draft presentation prepared by the CEO"
+      },
+      {
+        "description": "Summarizes feedback on the presentation from emails and chats"
+      },
+      {
+        "description": "Mentions the CEO's meeting with a financial advisor regarding stock option strategies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_030",
+    "query": "Provide a detailed summary of the pre-IPO presentation preparation process, including feedback, revisions, and key discussions.",
+    "reasoning": "The CEO's pre-IPO presentation and related discussions are a critical event, and a report summarizing its preparation, feedback, and associated meetings will provide clarity on readiness.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the initial customer report of the payment processing issue"
+      },
+      {
+        "description": "Summarizes the troubleshooting steps taken by the technical team"
+      },
+      {
+        "description": "Includes the final resolution documented in the technical report and corresponding meeting notes"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_031",
+    "query": "Generate a report outlining the timeline, troubleshooting steps, and resolution of the payment processing issue reported by a customer.",
+    "reasoning": "The customer-reported payment processing issue is a high-priority incident that required troubleshooting and resolution. A timeline and root cause analysis will help stakeholders understand the resolution process.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes the initial inquiry from the investor"
+      },
+      {
+        "description": "Summarizes the discussion and collaboration on crafting a response"
+      },
+      {
+        "description": "References the final response document with subscription retention data"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_032",
+    "query": "Analyze the communication and response strategy for the investor inquiry on subscription retention metrics, including the data provided and related discussions.",
+    "reasoning": "The inquiry from a potential investor about subscription retention metrics is a notable event for strategic planning. A report analyzing the communication and data shared would aid future investor interactions.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the presentation draft prepared by the CEO"
+      },
+      {
+        "description": "Mentions the meeting with the financial advisor regarding stock option strategies"
+      },
+      {
+        "description": "Analyzes competitive positioning and projected growth"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_033",
+    "query": "Provide a comprehensive report on the pre-IPO preparation, including the finalized draft presentation, stock option strategy discussions, and competitive positioning analysis.",
+    "reasoning": "The pre-IPO discussions and strategic decisions made by the CEO are critical events. A report query should summarize the preparation and decisions related to the pre-IPO process.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the customer's report of the issue"
+      },
+      {
+        "description": "Includes troubleshooting updates from the technical team"
+      },
+      {
+        "description": "Details the resolution and findings in the technical report"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_034",
+    "query": "Summarize the investigation and resolution of the payment processing issue reported by a customer, including a timeline of actions and technical details.",
+    "reasoning": "The payment processing issue reported by the customer triggered immediate actions from the technical team. A report query should summarize the troubleshooting efforts and resolution steps.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Mentions the investor's inquiry about subscription retention metrics"
+      },
+      {
+        "description": "Describes the collaboration on crafting the response"
+      },
+      {
+        "description": "Includes the document prepared as a response"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_035",
+    "query": "Analyze the handling of the investor inquiry regarding subscription retention metrics, including the response strategy and metrics provided.",
+    "reasoning": "The investor inquiry about subscription retention metrics is a significant event for potential funding. A report query should detail the inquiry, response preparation, and related metrics.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the finalized draft of the pre-IPO presentation"
+      },
+      {
+        "description": "Summarizes feedback from relevant stakeholders"
+      },
+      {
+        "description": "Includes strategic discussions about projected growth and competitive positioning"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_036",
+    "query": "Provide a detailed summary of the finalized draft of the pre-IPO presentation, including feedback received, discussions held, and strategic implications.",
+    "reasoning": "The pre-IPO presentation and associated discussions are critical for strategic planning. A report query should summarize the progress, feedback, and implications.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the timeline of events related to the payment processing issue"
+      },
+      {
+        "description": "Details troubleshooting steps and resolution outcomes"
+      },
+      {
+        "description": "Analyzes the operational impact and customer communication"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_037",
+    "query": "Create a comprehensive report on the payment processing issue in the SaaS subscription system, including the troubleshooting timeline, resolution steps, and operational impact.",
+    "reasoning": "The payment issue reported by a customer is urgent and involves multiple artifacts. A report query should analyze the issue's timeline, resolution steps, and impact on operations.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the investor inquiry related to subscription retention metrics"
+      },
+      {
+        "description": "Details the response preparation process and collaboration"
+      },
+      {
+        "description": "Analyzes the strategic implications for attracting investment"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_038",
+    "query": "Summarize the inquiry about subscription retention metrics from the potential investor, including the response preparation and its strategic implications for investment discussions.",
+    "reasoning": "The inquiry from a potential investor regarding subscription retention metrics involves multiple stakeholders and artifacts. A report query should analyze the inquiry, response preparation, and potential investment implications.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the presentation's focus on projected growth and competitive positioning"
+      },
+      {
+        "description": "Details feedback requested by the CEO"
+      },
+      {
+        "description": "Mentions discussions related to the draft presentation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_039",
+    "query": "Provide a comprehensive summary of the finalized pre-IPO presentation draft, including feedback received and discussions about projected growth and competitive positioning.",
+    "reasoning": "The context indicates a finalized draft presentation for pre-IPO discussions, including projected growth and competitive positioning. A report query should summarize the presentation content and feedback activity.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Outlines the timeline of the payment processing issue"
+      },
+      {
+        "description": "Describes troubleshooting steps taken by the technical team"
+      },
+      {
+        "description": "Mentions follow-up actions requested by the VP of Engineering"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_040",
+    "query": "Analyze the timeline and resolution of the customer-reported payment processing issue in the SaaS subscription system, including troubleshooting steps and follow-up actions.",
+    "reasoning": "The context shows a critical customer-reported issue with payment processing in the SaaS subscription system, followed by troubleshooting efforts. A report query should analyze the timeline and resolution of this issue.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the investor's inquiry about subscription retention metrics"
+      },
+      {
+        "description": "Explains the company's strategy for responding to the inquiry"
+      },
+      {
+        "description": "Includes relevant discussions and meetings about the investor inquiry"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_041",
+    "query": "Compile an analysis of the potential investor's inquiry regarding subscription retention metrics, including the company's response strategy and related discussions.",
+    "reasoning": "The context mentions a potential investor's inquiry about subscription retention metrics and subsequent discussions and responses. A report query should analyze this inquiry and the company's response strategy.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Contains a summary of the finalized draft presentation and its focus areas."
+      },
+      {
+        "description": "Includes feedback from stakeholders and any collaborative discussions."
+      },
+      {
+        "description": "References related meetings and files."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_042",
+    "query": "Provide a detailed report on the finalized draft presentation for the pre-IPO discussion, including key points on projected growth and competitive positioning, feedback received, and any associated meetings or artifacts.",
+    "reasoning": "The pre-IPO discussions and associated activities are critical for the company's strategic direction. A report summarizing the CEO's efforts and outcomes related to the pre-IPO presentation draft would be valuable.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Documents the timeline of the payment processing issue."
+      },
+      {
+        "description": "Details the troubleshooting steps taken by the technical team."
+      },
+      {
+        "description": "Includes communication artifacts highlighting urgency and updates."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_043",
+    "query": "Generate an analysis of the customer-reported payment processing issue, including the timeline, troubleshooting steps, resolution status, and communication between teams.",
+    "reasoning": "The customer-reported payment processing issue has implications for the SaaS subscription system's reliability. A report analyzing the troubleshooting efforts and resolution would be beneficial for internal review.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the content and strategic importance of the blog post."
+      },
+      {
+        "description": "Includes feedback from stakeholders about its effectiveness."
+      },
+      {
+        "description": "Analyzes how the blog post can enhance sales pitches."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/blog/customer_success_stories_2026-04-05.html",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_044",
+    "query": "Provide an analysis of the recently published blog post highlighting customer success stories, including its impact on brand credibility, feedback received, and its potential application in upcoming sales efforts.",
+    "reasoning": "The new blog post on customer success stories is a key marketing artifact. A report analyzing its strategic importance and potential use in sales pitches would be helpful for the sales team.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the content and focus areas of the draft presentation"
+      },
+      {
+        "description": "Includes feedback provided via emails and chats"
+      },
+      {
+        "description": "Outlines discussions and collaboration concerning the pre-IPO presentation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_045",
+    "query": "Generate a detailed report on the finalized draft presentation for the pre-IPO discussion, including feedback, discussions, and strategic focus areas like projected growth and competitive positioning.",
+    "reasoning": "The pre-IPO discussions are a critical aspect of the company's strategic planning during this time period. A comprehensive analysis of activities related to the finalized draft presentation, projected growth, and competitive positioning is essential for understanding the preparation process.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes the initial report of the issue"
+      },
+      {
+        "description": "Details troubleshooting steps and progress"
+      },
+      {
+        "description": "Mentions the urgency emphasized in follow-up communications"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_046",
+    "query": "Provide a timeline and analysis of the troubleshooting process for the customer-reported payment processing issue in the SaaS subscription system, including key actions and resolutions.",
+    "reasoning": "The customer-reported payment processing issue is a significant operational challenge that required immediate troubleshooting and follow-up actions. A detailed timeline and analysis of the resolution process can provide insights into operational efficiency and responsiveness.",
+    "user_id": "nhaddad"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the nature of the investor inquiry"
+      },
+      {
+        "description": "Details collaboration efforts between stakeholders"
+      },
+      {
+        "description": "Includes the final prepared document with subscription retention metrics"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_047",
+    "query": "Analyze the potential investor inquiry about subscription retention metrics, including the response strategy, collaboration efforts, and the final prepared document.",
+    "reasoning": "Investor relations and inquiries about subscription retention metrics are crucial during the pre-IPO phase. A report analyzing the inquiry and responses will aid in understanding how the company is addressing investor concerns and positioning itself for growth.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the finalized draft presentation focusing on projected growth and competitive positioning."
+      },
+      {
+        "description": "Mentions the CEO's meeting with the financial advisor to explore stock option strategies."
+      },
+      {
+        "description": "Summarizes feedback discussions regarding the draft presentation."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_048",
+    "query": "Generate a comprehensive report on the CEO's activities and deliverables related to pre-IPO discussions, including the timeline, strategic focus, and stakeholder involvement.",
+    "reasoning": "The context highlights a significant event around the CEO's preparation for pre-IPO discussions and related artifacts. A report query should focus on summarizing the key actions and deliverables tied to this initiative.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Mentions the initial customer complaint about payment processing issues."
+      },
+      {
+        "description": "Details the troubleshooting efforts and discussions among the technical team."
+      },
+      {
+        "description": "Summarizes the resolution documented in the technical report."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_049",
+    "query": "Provide a detailed analysis of the payment processing issue reported on April 5, 2026, including the troubleshooting timeline, resolution steps, and impact assessment.",
+    "reasoning": "The customer-reported payment processing issue and its resolution are critical operational events. A report query should outline the incident, efforts made to resolve it, and the final outcome.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the investor's inquiry about subscription retention metrics."
+      },
+      {
+        "description": "Mentions coordination efforts among the VP of Sales and Sales Executive to craft the response."
+      },
+      {
+        "description": "Provides insights into the strategic importance of retention metrics for investors."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_050",
+    "query": "Summarize the engagement with the potential investor regarding subscription retention metrics, including the inquiry details, collaboration to craft the response, and the final deliverable.",
+    "reasoning": "The potential investor inquiry about subscription retention metrics represents an important business opportunity. A report query should focus on summarizing the engagement and the strategic response provided.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes the finalized draft presentation details"
+      },
+      {
+        "description": "Summarizes feedback from stakeholders via emails and chats"
+      },
+      {
+        "description": "Analyzes the strategic importance of projected growth and competitive positioning"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_051",
+    "query": "Provide a detailed summary of the pre-IPO presentation draft development, including feedback and discussions on projected growth and competitive positioning.",
+    "reasoning": "The pre-IPO discussion draft and the CEO's efforts to finalize it are a critical event for the company. A report query should summarize the development and feedback process of this presentation and its strategic importance.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the customer-reported issue and its impact"
+      },
+      {
+        "description": "Summarizes troubleshooting steps from the technical team"
+      },
+      {
+        "description": "Mentions urgent follow-ups requested by stakeholders"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_052",
+    "query": "Analyze the timeline and resolution process for the reported SaaS subscription payment processing issue, including the technical team's investigation and stakeholder communications.",
+    "reasoning": "The reported payment processing issue directly impacts customer satisfaction and operational efficiency. A report query should analyze the resolution process, including the troubleshooting steps and urgency emphasized by stakeholders.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the initial investor inquiry and its context"
+      },
+      {
+        "description": "Summarizes the response preparation process"
+      },
+      {
+        "description": "Analyzes the strategic importance of subscription retention metrics for investor relations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_053",
+    "query": "Create a detailed analysis of the investor inquiry about subscription retention metrics, including the response preparation and strategic implications for pre-IPO positioning.",
+    "reasoning": "The investor's inquiry about subscription retention metrics represents a vital opportunity for the company pre-IPO. A report query should analyze how the inquiry was handled and the strategic implications of the data provided.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the finalized draft presentation and its focus on projected growth and competitive positioning"
+      },
+      {
+        "description": "Includes details from the meeting with the financial advisor regarding stock option strategies"
+      },
+      {
+        "description": "Mentions feedback and discussions on the pre-IPO presentation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_054",
+    "query": "Generate a comprehensive report on the pre-IPO preparations, including the finalized draft presentation, meeting with the financial advisor, and discussions on growth and competitive positioning.",
+    "reasoning": "The pre-IPO discussion and related events are critical for the company's strategic direction. A report should summarize the finalized draft presentation, the meeting with the financial advisor, and the discussions on competitive positioning and growth projections.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the customer-reported payment processing issue"
+      },
+      {
+        "description": "Outlines the troubleshooting efforts provided by the technical team"
+      },
+      {
+        "description": "Includes the resolution timeline and any urgent follow-ups mentioned"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_055",
+    "query": "Provide an analysis of the payment processing issue in the SaaS subscription system, including troubleshooting efforts, resolution timeline, and communication updates.",
+    "reasoning": "The reported payment processing issue impacts customer satisfaction and operational stability. A report should analyze the troubleshooting efforts, resolution timeline, and communication updates.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the investor's inquiry about subscription retention metrics"
+      },
+      {
+        "description": "Includes the company's preparation of a response"
+      },
+      {
+        "description": "Mentions collaboration between the VP of Sales and the Sales Executive"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_056",
+    "query": "Create a detailed summary of the potential investor's inquiry regarding subscription retention metrics and the company's response preparation.",
+    "reasoning": "The inquiry from the potential investor reflects interest in subscription retention metrics, which could influence future investment opportunities. A report should detail the inquiry and the company's preparation of a response.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a timeline of events related to the finalized draft presentation"
+      },
+      {
+        "description": "Summarizes feedback from relevant stakeholders"
+      },
+      {
+        "description": "Highlights projected growth and competitive positioning as key focus areas"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_057",
+    "query": "Provide a detailed analysis of the finalized draft presentation for the pre-IPO discussion, including the timeline of events, feedback received, and strategic focus areas.",
+    "reasoning": "The finalized draft presentation for the pre-IPO discussion is a critical artifact mentioned multiple times in emails, chats, and meetings. A report query should analyze the timeline and feedback loop for this presentation.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the timeline of troubleshooting efforts"
+      },
+      {
+        "description": "Describes the actions taken by the technical team"
+      },
+      {
+        "description": "Provides the resolution status and impact on the SaaS subscription system"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_058",
+    "query": "Summarize the troubleshooting process for the customer-reported payment processing issue, including the timeline, actions taken, and the resolution status.",
+    "reasoning": "The customer-reported payment processing issue appears to involve multiple emails, chats, meetings, and a technical report. A report query should summarize the troubleshooting process and resolution status.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the investor's request for subscription retention metrics"
+      },
+      {
+        "description": "Details the response crafted by the team"
+      },
+      {
+        "description": "Discusses the strategic implications of the inquiry for investor relations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_059",
+    "query": "Analyze the potential investor inquiry about subscription retention metrics, including details of the request, the crafted response, and its strategic implications.",
+    "reasoning": "The potential investor inquiry regarding subscription retention metrics spans multiple communications and artifacts. A report query should analyze the inquiry, response details, and strategic implications.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the finalized draft presentation and its focus areas."
+      },
+      {
+        "description": "Describes the timeline of related communications and meetings."
+      },
+      {
+        "description": "References feedback requests and collaboration on the draft."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_060",
+    "query": "Generate a comprehensive summary of the finalized draft presentation for the pre-IPO discussion, including its focus on projected growth and competitive positioning, and the timeline of related events.",
+    "reasoning": "The context references the CEO's finalized draft presentation for the pre-IPO discussion, as well as related communications and artifacts. A report query should summarize the key details and timeline of this activity.",
+    "user_id": "yzhang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the nature of the payment processing issue."
+      },
+      {
+        "description": "Details the steps taken by the technical team to troubleshoot and resolve the issue."
+      },
+      {
+        "description": "Includes the timeline of events and communications related to the issue."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/technical/troubleshooting_report_payment_issue_2026-04-05.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_061",
+    "query": "Provide a detailed analysis of the payment processing issue reported in the SaaS subscription system, including the troubleshooting steps, timeline, and resolution process.",
+    "reasoning": "The context shows multiple interactions related to the payment processing issue in the SaaS subscription system, including troubleshooting efforts and urgent follow-ups. A report query should analyze the issue and resolution steps.",
+    "user_id": "kpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the blog post content and its intended impact on brand credibility."
+      },
+      {
+        "description": "Explores how the blog post can be leveraged in sales pitches or strategies."
+      },
+      {
+        "description": "Includes references to related discussions and feedback requests."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/blog/customer_success_stories_2026-04-05.html",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_062",
+    "query": "Analyze the strategic implications of the blog post on customer success stories, including its impact on brand credibility and its potential use in sales activities.",
+    "reasoning": "The context includes details about a new blog post highlighting customer success stories, as well as discussions about leveraging it for brand credibility and sales strategies. A report query should analyze the strategic implications of this artifact.",
+    "user_id": "arossi"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Provides a timeline of pre-IPO-related events on April 5, 2026"
+      },
+      {
+        "description": "Summarizes the finalized draft presentation focusing on projected growth and competitive positioning"
+      },
+      {
+        "description": "Includes details of the investor inquiry regarding subscription retention metrics"
+      },
+      {
+        "description": "Describes the stock option strategy meeting and its implications for pre-IPO discussions"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/presentations/pre_ipo_discussion_draft_v1.pptx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/investor/inquiry_subscription_retention_metrics_2026-04-05.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/meetings/stock_options_strategy_notes_2026-04-05.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_063",
+    "query": "Generate a comprehensive report on the company's pre-IPO preparations, including a timeline of critical events, the finalized draft presentation, investor inquiries, and stock option strategies.",
+    "reasoning": "The context highlights multiple pre-IPO-related activities, including the finalization of the draft presentation, investor inquiries, and stock option strategies. A report query should analyze the overall preparation for the pre-IPO phase, summarizing key events and artifacts.",
+    "user_id": "yzhang"
+  }
+]

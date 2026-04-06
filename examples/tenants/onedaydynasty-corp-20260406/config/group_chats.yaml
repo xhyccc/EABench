@@ -1,0 +1,331 @@
+- id: group_001
+  messages:
+  - content: Hey Nour, did you see the ticket about the payment issue? Looks serious. 😬
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:02:15Z
+    to_user: kpatel
+  - content: Yeah, just saw it. Any idea if it's affecting all users or just a subset?
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:03:02Z
+    to_user: kpatel
+  - content: Not sure yet. I’m seeing errors in the logs, but it’s not consistent. Can you check the payment gateway logs?
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:03:45Z
+    to_user: kpatel
+  - content: On it. Hold on.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:04:10Z
+    to_user: kpatel
+  - content: Thanks! Also, did you get the email from the CEO about the pre-IPO deck? Looks like it’s finalized.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:05:29Z
+    to_user: kpatel
+  - content: Oh, no, I missed that. Will check later. Let’s fix this first.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:06:12Z
+    to_user: kpatel
+  - content: 👍
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:06:25Z
+    to_user: kpatel
+  - content: Okay, checked the gateway logs. There are some timeout errors. Could be network-related?
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:08:37Z
+    to_user: kpatel
+  - content: Hmm, could be. Let me cross-check with our server logs. One sec.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:09:02Z
+    to_user: kpatel
+  - content: Did you see if the retry logic is kicking in? Could be why it's inconsistent.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:09:45Z
+    to_user: kpatel
+  - content: Good point. I’ll check that too. Btw, did the investor inquiry get forwarded to you? I think they wanted retention metrics.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:10:22Z
+    to_user: kpatel
+  - content: Yes, I saw it. Haven’t had time to respond yet. Too much going on. 😅
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:11:03Z
+    to_user: kpatel
+  - content: Tell me about it. 😵‍💫
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:11:25Z
+    to_user: kpatel
+  - content: Okay, just checked. Retry logic is working, but there's a higher failure rate than usual. Could still be the network.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:13:10Z
+    to_user: kpatel
+  - content: Should we escalate to the infrastructure team? This might need deeper digging.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:13:47Z
+    to_user: kpatel
+  - content: Yeah, let’s loop them in. I’ll send an update to the customer too. Gotta keep them in the loop.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:14:25Z
+    to_user: kpatel
+  - content: Sounds good. Let me know if you need me to jump on a call with them.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T13:15:02Z
+    to_user: kpatel
+  - content: Thanks, will do. 🙌
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T13:15:25Z
+    to_user: kpatel
+  name: Payment Processing Issue
+  participants:
+  - kpatel
+  - nhaddad
+- id: group_002
+  messages:
+  - content: Hey, did anyone see the investor inquiry about retention metrics? 📊
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:12:00Z
+  - content: Yeah, just saw it. Do we have updated stats ready? 🤔
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T09:13:15Z
+  - content: Wait—are we using the Q1 numbers or projections? Need to confirm. 🙈
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T09:14:07Z
+  - content: Projections, I think? But let me check with the CEO. Hold on. 🕒
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:14:45Z
+  - content: Okay, but Q1 retention rates are solid too—should we mention both? 🤷
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T09:15:22Z
+  - content: Hmm, might be better to focus on projections for the pre-IPO narrative. 💡
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T09:16:10Z
+  - content: Just spoke to the CEO—only projections for now. Q1 data can be a backup. 👍
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:17:33Z
+  - content: Got it. I'll draft a quick summary of the projections. Give me 10 mins. 🖋️
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T09:18:02Z
+  - content: Perfect. Can you add a note on how retention supports customer success? 🚀
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T09:18:39Z
+  - content: Sure thing. BTW, did anyone flag the payment system issue? 👀
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T09:19:10Z
+  - content: Yeah, tech team is on it. Should be fixed soon. 🙌
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:19:48Z
+  - content: Okay, Alessandro, ping me when your draft is ready—I’ll review. 📝
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T09:20:20Z
+  - content: Will do! Sending in a bit. 🤓
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T09:20:55Z
+  - content: Thanks, team! Let’s make this shine for the investor. ✨
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:21:30Z
+  name: Investor Inquiry
+  participants:
+  - yzhang
+  - arossi
+  - jmensa
+- id: chat_meeting-001
+  messages:
+  - content: Hey all, running 2 mins late, brb.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:01:00Z
+  - content: Back now! Did I miss anything critical?
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:03:00Z
+  - content: 'FYI, here’s the link to the latest equity comps we discussed last week: https://financedocs.com/equity_comps_april'
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:12:00Z
+  - content: Sound is cutting out for me—is it just me?
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:15:00Z
+  - content: Never mind, it’s working now.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:16:00Z
+  - content: 'Quick note: for the pre-IPO presentation, we should emphasize the employee stock options structure. It’s a big selling point.'
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:25:00Z
+  - content: I’ll share the deck outline after the meeting. Will put it in the shared folder.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:32:00Z
+  - content: BRB, getting a quick coffee refill.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:35:00Z
+  - content: Back with coffee. Let’s go!
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:38:00Z
+  - content: 'Here’s a quick summary of the tax implications we need to clarify: https://taxstrategy.com/pre_ipo_tips'
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:45:00Z
+  - content: 'Reminder: we need to finalize the vesting schedule for the new options by Friday.'
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:47:00Z
+  - content: Meeting running over—I need to jump off for another call at 10 sharp.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T09:53:00Z
+  - content: Great session, team! Catch you later. Will sync on the next steps via email.
+    from_user: Yun Zhang
+    timestamp: 2026-04-05T10:00:00Z
+  name: 'Chat: Pre-IPO Strategy Discussion with Financial Advisor'
+  participants:
+  - yzhang
+- id: chat_meeting-002
+  messages:
+  - content: Can you confirm if the logs are in the shared drive?
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:02:00Z
+  - content: One sec, checking now.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:02:15Z
+  - content: Yep, they're under PaymentProcessing/2026_Logs.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:02:45Z
+  - content: Got it, thanks!
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:03:00Z
+  - content: 'Here''s the link to the error codes doc: https://companydocs.com/error-codes'
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:03:30Z
+  - content: Perfect, opening it now.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:03:45Z
+  - content: Just noticed something—we might need to check the API rate limits.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:04:10Z
+  - content: Good point. I'll pull up the dashboard.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:04:25Z
+  - content: BRB, grabbing a quick coffee while the dashboard loads.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:04:40Z
+  - content: No problem. I'll test the latest patch while you're away.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:04:55Z
+  - content: Back—dashboard says we hit 90% of the quota earlier today.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:06:00Z
+  - content: That might explain some failures. Should we throttle requests for retries?
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:06:20Z
+  - content: Yeah, let's add that to the patch. Can you update the config?
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:06:35Z
+  - content: On it. Sending you the PR link in a sec.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:06:50Z
+  - content: 'PR link: https://gitrepo.com/payment-patch-2026'
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:07:30Z
+  - content: Reviewing now.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:07:45Z
+  - content: BRB, need to restart my dev environment. It's acting up.
+    from_user: Nour Haddad
+    timestamp: 2026-04-05T10:08:10Z
+  - content: Take your time—I'll test the patch against staging meanwhile.
+    from_user: Kiran Patel
+    timestamp: 2026-04-05T10:08:25Z
+  name: 'Chat: Technical Troubleshooting: Payment Processing Issue'
+  participants:
+  - kpatel
+  - nhaddad
+- id: chat_meeting-003
+  messages:
+  - content: I just emailed you the updated retention metrics. Check your inbox.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:01:45Z
+  - content: Got it, thanks! Looking at them now.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:02:10Z
+  - content: 'Quick question: Do we include the churn rate breakdown by region or keep it high-level?'
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:03:25Z
+  - content: Include the regional breakdown. They asked for granularity in their last email.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:03:50Z
+  - content: Got it. Adding that now.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:04:12Z
+  - content: Also, don't forget to highlight the 12-month retention trend. That’s one of our strongest metrics.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:04:45Z
+  - content: Good point. Adding a graph to make it visual.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:05:05Z
+  - content: BRB, grabbing a coffee real quick.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:06:30Z
+  - content: 'While you’re away, here’s the draft investor response: [link]. Let me know if anything feels off.'
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:07:15Z
+  - content: Back! Reviewing the draft now.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:09:00Z
+  - content: Looks solid. Maybe emphasize the 5% improvement in retention since Q3?
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:10:25Z
+  - content: Good call. Adding that in the summary paragraph.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:11:00Z
+  - content: 'Perfect. Also, here''s the file for the charts: [link]. Might make it easier to update.'
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:12:15Z
+  - content: Thanks! Downloading now.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:12:40Z
+  - content: BRB, my Wi-Fi is acting up.
+    from_user: Joy Mensa
+    timestamp: 2026-04-05T10:13:05Z
+  - content: No worries. Ping me when you're back.
+    from_user: Alessandro Rossi
+    timestamp: 2026-04-05T10:13:20Z
+  name: 'Chat: Investor Inquiry Follow-Up: Subscription Retention Metrics'
+  participants:
+  - arossi
+  - jmensa
+- id: chat_meeting-004
+  messages:
+  - content: Hey, everyone! Just a heads-up, I'll need to step away for 5 minutes in a bit. BRB.
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:05:12Z
+  - content: 'Got it, Yun. By the way, here''s the link to the blog analytics dashboard: https://analytics.company.com/blog'
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:06:03Z
+  - content: Thanks for sharing, Alessandro! I'll check if the bounce rate aligns with our goals.
+    from_user: joy_mensa
+    timestamp: 2026-04-05T14:06:40Z
+  - content: Looks like the CEO is making a good point about credibility. Should we include testimonials in the next post?
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:07:25Z
+  - content: Great idea, Yun! I'll draft a section on that. Alessandro, do you have any customer stories handy?
+    from_user: joy_mensa
+    timestamp: 2026-04-05T14:07:58Z
+  - content: 'Yes, I’ll pull them from the CRM after this meeting. Also, here’s our brand guidelines doc: https://docs.company.com/brand-guidelines'
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:08:22Z
+  - content: BRB for real now. Back in 5!
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:08:36Z
+  - content: Haha, okay, Yun. Alessandro, the guidelines doc reminded me—are we sticking with the new tone for all posts?
+    from_user: joy_mensa
+    timestamp: 2026-04-05T14:09:14Z
+  - content: Yes, CEO approved the tone shift last quarter. Let me know if you need clarification on anything.
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:09:40Z
+  - content: Back! What did I miss?
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:13:05Z
+  - content: Welcome back, Yun! We were just talking about sticking to the new tone for blog posts. Alessandro shared the guidelines doc earlier.
+    from_user: joy_mensa
+    timestamp: 2026-04-05T14:13:30Z
+  - content: Got it, thanks! I'll review the guidelines after the meeting.
+    from_user: yun_zhang
+    timestamp: 2026-04-05T14:13:50Z
+  - content: Sounds good. Also, quick reminder—please send me your notes by EOD today.
+    from_user: alessandro_rossi
+    timestamp: 2026-04-05T14:14:10Z
+  name: 'Chat: Content Strategy Check-In'
+  participants:
+  - yzhang
+  - arossi
+  - jmensa
