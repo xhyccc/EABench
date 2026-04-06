@@ -246,27 +246,51 @@ Examples:
     passed = sum(1 for r in results if r.passed)
     assertion_scores = [r.metrics.get("assertion_score", 0.0) for r in results]
     citation_scores = [r.metrics.get("citation_score", 0.0) for r in results]
+    tool_citation_scores = [r.metrics.get("tool_citation_score", 0.0) for r in results]
+    response_citation_scores = [r.metrics.get("response_citation_score", 0.0) for r in results]
+    # 4 explicit scorecard metrics
+    tool_search_result_numbers = [r.metrics.get("tool_search_result_number", 0) for r in results]
+    tool_search_result_relevances = [r.metrics.get("tool_search_result_relevance", 0.0) for r in results]
+    response_citation_numbers = [r.metrics.get("response_citation_number", 0) for r in results]
+    response_citation_relevances = [r.metrics.get("response_citation_relevance", 0.0) for r in results]
     mean_assertion = sum(assertion_scores) / total if total else 0.0
     mean_citation = sum(citation_scores) / total if total else 0.0
+    mean_tool_citation = sum(tool_citation_scores) / total if total else 0.0
+    mean_response_citation = sum(response_citation_scores) / total if total else 0.0
+    mean_tool_search_result_number = sum(tool_search_result_numbers) / total if total else 0.0
+    mean_tool_search_result_relevance = sum(tool_search_result_relevances) / total if total else 0.0
+    mean_response_citation_number = sum(response_citation_numbers) / total if total else 0.0
+    mean_response_citation_relevance = sum(response_citation_relevances) / total if total else 0.0
 
     # ------------------------------------------------------------------
     # Print summary
     # ------------------------------------------------------------------
     print()
-    print("=" * 60)
+    print("=" * 72)
     print("Results")
-    print("=" * 60)
+    print("=" * 72)
+    hdr = f"{'Case ID':<30}  {'assert':>6}  {'srch#':>5}  {'srch_rel':>8}  {'cite#':>5}  {'cite_rel':>8}  {'pass':>4}"
+    print(hdr)
+    print("-" * 72)
     for r in results:
         status = "PASS" if r.passed else "FAIL"
-        ascore = r.metrics.get("assertion_score", 0.0)
-        cscore = r.metrics.get("citation_score", 0.0)
-        print(f"[{status}] {r.case_id:<30}  assertion={ascore:.2f}  citation={cscore:.2f}")
+        ascore  = r.metrics.get("assertion_score", 0.0)
+        srch_n  = r.metrics.get("tool_search_result_number", 0)
+        srch_r  = r.metrics.get("tool_search_result_relevance", 0.0)
+        cite_n  = r.metrics.get("response_citation_number", 0)
+        cite_r  = r.metrics.get("response_citation_relevance", 0.0)
+        print(f"{r.case_id:<30}  {ascore:>6.2f}  {srch_n:>5}  {srch_r:>8.2f}  {cite_n:>5}  {cite_r:>8.2f}  {status:>4}")
 
-    print("-" * 60)
+    print("-" * 72)
     print(f"Pass rate       : {passed}/{total} ({100 * passed / total:.1f}%)" if total else "No cases.")
     print(f"Mean assertion  : {mean_assertion:.3f}")
-    print(f"Mean citation   : {mean_citation:.3f}")
-    print("=" * 60)
+    print()
+    print("Scorecard (averages):")
+    print(f"  tool_search_result_number    : {mean_tool_search_result_number:.2f}")
+    print(f"  tool_search_result_relevance : {mean_tool_search_result_relevance:.3f}")
+    print(f"  response_citation_number     : {mean_response_citation_number:.2f}")
+    print(f"  response_citation_relevance  : {mean_response_citation_relevance:.3f}")
+    print("=" * 72)
 
     # ------------------------------------------------------------------
     # Persist full results to JSON
@@ -296,6 +320,13 @@ Examples:
             "pass_rate": round(passed / total, 4) if total else 0.0,
             "mean_assertion_score": round(mean_assertion, 4),
             "mean_citation_score": round(mean_citation, 4),
+            "mean_tool_citation_score": round(mean_tool_citation, 4),
+            "mean_response_citation_score": round(mean_response_citation, 4),
+            # 4 scorecard metrics
+            "mean_tool_search_result_number": round(mean_tool_search_result_number, 2),
+            "mean_tool_search_result_relevance": round(mean_tool_search_result_relevance, 4),
+            "mean_response_citation_number": round(mean_response_citation_number, 2),
+            "mean_response_citation_relevance": round(mean_response_citation_relevance, 4),
         },
         "cases": [r.model_dump() for r in results],
     }

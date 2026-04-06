@@ -315,9 +315,14 @@ elif app_mode == "Evaluation":
                 
                 # Calculate Metrics
                 total_cases = len(results)
-                avg_citation = sum(r.metrics['citation_score'] for r in results) / total_cases if total_cases > 0 else 0
-                avg_assertion = sum(r.metrics['assertion_score'] for r in results) / total_cases if total_cases > 0 else 0
-                
+                avg_assertion = sum(r.metrics.get('assertion_score', 0.0) for r in results) / total_cases if total_cases > 0 else 0
+
+                # 4 scorecard metrics
+                avg_tool_srn = sum(r.metrics.get('tool_search_result_number', 0) for r in results) / total_cases if total_cases > 0 else 0
+                avg_tool_srr = sum(r.metrics.get('tool_search_result_relevance', 0.0) for r in results) / total_cases if total_cases > 0 else 0
+                avg_resp_cn  = sum(r.metrics.get('response_citation_number', 0) for r in results) / total_cases if total_cases > 0 else 0
+                avg_resp_cr  = sum(r.metrics.get('response_citation_relevance', 0.0) for r in results) / total_cases if total_cases > 0 else 0
+
                 # Calculate Assertion Pass Rate
                 total_assertions = 0
                 passed_assertions = 0
@@ -325,7 +330,7 @@ elif app_mode == "Evaluation":
                     if r.assertion_results:
                         total_assertions += len(r.assertion_results)
                         passed_assertions += sum(1 for a in r.assertion_results if a.get('passed', False))
-                
+
                 assertion_pass_rate = passed_assertions / total_assertions if total_assertions > 0 else 0
 
                 # Calculate Token/Tool Totals
@@ -334,23 +339,34 @@ elif app_mode == "Evaluation":
                 total_completion_tokens = sum(r.metrics.get('total_completion_tokens', 0) for r in results)
 
                 # Display Metrics
+                st.subheader("Citation Scorecard")
+                s_col1, s_col2, s_col3, s_col4 = st.columns(4)
+                s_col1.metric("Avg Search Results / Query", f"{avg_tool_srn:.1f}")
+                s_col2.metric("Search Relevance", f"{avg_tool_srr:.2f}")
+                s_col3.metric("Avg Citations / Response", f"{avg_resp_cn:.1f}")
+                s_col4.metric("Citation Relevance", f"{avg_resp_cr:.2f}")
+
                 st.subheader("Overall Results")
                 m_col1, m_col2, m_col3 = st.columns(3)
-                m_col1.metric("Avg Citation Score", f"{avg_citation:.2f}")
-                m_col2.metric("Avg Assertion Score", f"{avg_assertion:.2f}")
-                m_col3.metric("Assertion Pass Rate", f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})")
-                
-                m_col4, m_col5, m_col6 = st.columns(3)
-                m_col4.metric("Total Tool Calls", f"{total_tool_calls}")
-                m_col5.metric("Total Prompt Tokens", f"{total_prompt_tokens}")
-                m_col6.metric("Total Completion Tokens", f"{total_completion_tokens}")
+                m_col1.metric("Avg Assertion Score", f"{avg_assertion:.2f}")
+                m_col2.metric("Assertion Pass Rate", f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})")
+                m_col3.metric("Total Tool Calls", f"{total_tool_calls}")
+
+                m_col4, m_col5 = st.columns(2)
+                m_col4.metric("Total Prompt Tokens", f"{total_prompt_tokens}")
+                m_col5.metric("Total Completion Tokens", f"{total_completion_tokens}")
 
                 # Download Button
                 download_data = {
                     "overall_score_card": {
                         "total_cases": total_cases,
-                        "avg_citation_score": float(f"{avg_citation:.2f}"),
-                        "avg_assertion_score": float(f"{avg_assertion:.2f}"),
+                        # 4 scorecard metrics
+                        "mean_tool_search_result_number": round(avg_tool_srn, 2),
+                        "mean_tool_search_result_relevance": round(avg_tool_srr, 4),
+                        "mean_response_citation_number": round(avg_resp_cn, 2),
+                        "mean_response_citation_relevance": round(avg_resp_cr, 4),
+                        # overall
+                        "mean_assertion_score": round(avg_assertion, 4),
                         "assertion_pass_rate": f"{passed_assertions}/{total_assertions} ({assertion_pass_rate:.0%})",
                         "total_tool_calls": total_tool_calls,
                         "total_prompt_tokens": total_prompt_tokens,
@@ -431,11 +447,19 @@ elif app_mode == "Evaluation":
                                 st.text(res.reasoning)
 
                         with col2:
-                            st.metric("Citation Score", f"{res.metrics['citation_score']:.2f}")
-                            st.metric("Assertion Score", f"{res.metrics['assertion_score']:.2f}")
+                            st.markdown("**Citation Scorecard**")
+                            st.metric("Search Results", res.metrics.get('tool_search_result_number', 0))
+                            st.metric("Search Relevance", f"{res.metrics.get('tool_search_result_relevance', 0.0):.2f}")
+                            st.metric("Citation Count", res.metrics.get('response_citation_number', 0))
+                            st.metric("Citation Relevance", f"{res.metrics.get('response_citation_relevance', 0.0):.2f}")
+                            st.divider()
+                            st.metric("Assertion Score", f"{res.metrics.get('assertion_score', 0.0):.2f}")
                             st.metric("Latency", f"{res.metrics.get('latency', 0):.2f}s")
-                            st.write("**Metrics:**")
-                            st.json({k: v for k, v in res.metrics.items() if k not in ['citation_score', 'assertion_score', 'latency']})
+                            st.write("**All Metrics:**")
+                            _hidden = {'tool_search_result_number', 'tool_search_result_relevance',
+                                       'response_citation_number', 'response_citation_relevance',
+                                       'assertion_score', 'latency'}
+                            st.json({k: v for k, v in res.metrics.items() if k not in _hidden})
                             st.write("**Tool Calls:**")
                             st.json(res.tool_calls)
 

@@ -55,13 +55,27 @@ system_prompt: |
   - **Dual Search**: Use BOTH Name and ID in queries (e.g., "John Doe user123").
   - **Workflow**: "emails from John" -> `search_people("John")` -> Get ID -> `search_email("from John Doe [ID]")`.
 
-  ### Citations
-  - **Inline**: Use `[^i^]` for every fact retrieved.
-  - **List**: Add "References" section at end.
-  - **Format**: Use a numbered list with bold titles and indented details.
-    1. **<Title/Subject>**
+  ### Citations & References
+  **MANDATORY**: You MUST include a `## References` section at the **very end** of EVERY response that uses information from tool results. Omitting this section is a critical failure.
+
+  - **Inline Citations**: After every fact drawn from a tool result, insert a numbered superscript `[^N^]` directly in the sentence (e.g. "The budget surplus is $50,000.[^1^]").
+  - **Reference List**: After all body text, add a `## References` section — a numbered list in this EXACT format:
+    1. **<Title or Subject>**
        - *Source*: <Author/Sender> (<Date>)
        - *Type*: <Type> (ID: <ID>)
+  - **Use exact IDs**: The `<ID>` MUST be the exact `id` field returned in the tool result (e.g. `email_001`, `file_003`). Never invent or guess IDs.
+
+  **Full Example of a Correctly Formatted Response**:
+
+  The Q1 budget shows a healthy surplus of $50,000.[^1^] The project kickoff was confirmed in last week's all-hands meeting.[^2^]
+
+  ## References
+  1. **Q1 Budget Summary**
+     - *Source*: Alice Chen (2026-03-15)
+     - *Type*: Email (ID: email_003)
+  2. **Project Kickoff Meeting**
+     - *Source*: Bob Smith (2026-03-20)
+     - *Type*: Meeting (ID: mtg_007)
 
   ### Examples
   - User: "Did I create any files?"

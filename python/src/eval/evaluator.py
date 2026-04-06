@@ -113,12 +113,23 @@ class Evaluator:
             response_text = run_result.response
             run_metrics = run_result.metrics
             
-            # Extract tool calls from history
+            # Extract tool calls AND their results from history.
+            # We pair each assistant tool_call with the immediately following role="tool" message
+            # so the judge can verify whether the response actually reflects the retrieved data.
             tool_calls = []
+            # Build a map from tool_call_id -> result content
+            tool_results: dict[str, str] = {}
+            for msg in self.runner.history:
+                if msg.role == "tool" and msg.tool_call_id:
+                    tool_results[msg.tool_call_id] = msg.content or ""
             for msg in self.runner.history:
                 if msg.tool_calls:
                     for tc in msg.tool_calls:
-                        tool_calls.append({"name": tc.name, "arguments": tc.arguments})
+                        tool_calls.append({
+                            "name": tc.name,
+                            "arguments": tc.arguments,
+                            "result": tool_results.get(tc.id, ""),
+                        })
         except Exception as e:
             response_text = f"Error: {str(e)}"
             tool_calls = []
@@ -126,17 +137,31 @@ class Evaluator:
         end_time = time.time()
         latency = end_time - start_time
 
-        # 2. Evaluate: Citation Relevance
-        citation_score, citation_reason = await self._evaluate_citation(case.query, tool_calls, response_text)
+        # 2. Evaluate: Citation Relevance (two sub-scores + combined)
+        tool_citation_score, response_citation_score, citation_score, citation_reason = await self._evaluate_citation(case.query, tool_calls, response_text)
+
+        # Count-based metrics (no LLM needed — pure signal extraction)
+        tool_search_result_number = self._count_tool_search_results(tool_calls)
+        response_citation_number = self._count_response_citations(response_text)
 
         # 3. Evaluate: Assertions
         assertion_score, assertion_reason, assertion_results = await self._evaluate_assertions(case.query, response_text, case.assertions)
 
         # 4. Aggregate
-        passed = assertion_score >= 0.75 and citation_score >= 0.7 # Thresholds
+        # Pass requires: assertions met AND response has a proper References section.
+        # response_citation_score is the direct measure of citation formatting quality;
+        # tool_citation_score is diagnostic (quality of tool usage & faithfulness).
+        passed = assertion_score >= 0.75 and response_citation_score >= 0.7
         
         metrics = {
             "citation_score": citation_score,
+            "tool_citation_score": tool_citation_score,
+            "response_citation_score": response_citation_score,
+            # The 4 explicit scorecard metrics
+            "tool_search_result_number": tool_search_result_number,
+            "tool_search_result_relevance": tool_citation_score,
+            "response_citation_number": response_citation_number,
+            "response_citation_relevance": response_citation_score,
             "assertion_score": assertion_score,
             "latency": latency,
             **run_metrics
@@ -214,20 +239,87 @@ class Evaluator:
         
         return None
 
-    async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
-        # Primary path: use the citation_relevance judge prompt (tool-call based, format-agnostic).
-        # This evaluates whether the agent used appropriate tools and found relevant information,
-        # without requiring the agent to output a structured References section.
+    def _count_tool_search_results(self, tool_calls: List[Dict]) -> int:
+        """Count the total number of search result items returned across all tool calls.
+
+        The search tool result string format is a Python repr ending with a list of
+        dicts, each containing a 'score' key.  We count occurrences of "'score':" as
+        a reliable proxy for item count across all tool calls.
+        """
+        total = 0
+        for tc in tool_calls:
+            result = tc.get("result", "")
+            # Each search result item has exactly one 'score' key
+            total += len(re.findall(r"'score'\s*:", result))
+        return total
+
+    def _count_response_citations(self, response: str) -> int:
+        """Count the number of citation entries in the response's ## References section.
+
+        Expects entries in the agent's canonical format:
+            - *Type*: <type> (ID: <id>)
+        """
+        pattern = r"\*Type\*:\s+([^\n(]+?)\s+\(ID:\s+([^)\n]+?)\)"
+        return len(re.findall(pattern, response))
+
+    async def _evaluate_tool_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
+        """Evaluate tool usage quality: did the agent call the right tools, get relevant results,
+        and faithfully reflect those results in the response (vs. hallucinating)?"""
         prompt_template = self.prompts.get("citation_relevance")
-        if prompt_template:
-            tool_calls_text = (
-                "\n".join(
-                    f"- {tc['name']}({json.dumps(tc.get('arguments', {}))})"
-                    for tc in tool_calls
+        if not prompt_template:
+            if not tool_calls:
+                return 0.0, "No tool calls made."
+            return 0.0, "No citation_relevance prompt configured."
+
+        if tool_calls:
+            parts = []
+            for tc in tool_calls:
+                result_preview = tc.get("result", "")
+                if len(result_preview) > 2000:
+                    result_preview = result_preview[:2000] + "... [truncated]"
+                parts.append(
+                    f"- {tc['name']}({json.dumps(tc.get('arguments', {}))})\n"
+                    f"  Result: {result_preview}"
                 )
-                if tool_calls
-                else "No tool calls made."
-            )
+            tool_calls_text = "\n".join(parts)
+        else:
+            tool_calls_text = "No tool calls made."
+
+        prompt = prompt_template.format(
+            query=query,
+            tool_calls=tool_calls_text,
+            response=response,
+        )
+        messages = [{"role": "user", "content": prompt}]
+        try:
+            judgment = await self.judge_llm.get_completion(messages)
+            data = self._parse_yaml_response(judgment)
+            score = float(data.get("score", 0.0))
+            explanation = data.get("explanation", "No explanation.")
+            return score, explanation
+        except Exception as e:
+            return 0.0, f"Error in tool citation evaluation: {e}"
+
+    async def _evaluate_response_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
+        """Evaluate the References section in the response: does it exist, are the IDs real,
+        and are the cited items relevant to the query?"""
+        # Primary: use the response_citation judge prompt if configured.
+        prompt_template = self.prompts.get("response_citation")
+        if prompt_template:
+            if tool_calls:
+                parts = []
+                for tc in tool_calls:
+                    result_preview = tc.get("result", "")
+                    if len(result_preview) > 2000:
+                        result_preview = result_preview[:2000] + "... [truncated]"
+                    parts.append(
+                        f"- {tc['name']}({json.dumps(tc.get('arguments', {}))})\n"
+                        f"  Result: {result_preview}"
+                    )
+                tool_calls_text = "\n".join(parts)
+            else:
+                tool_calls_text = "No tool calls made."
+
             prompt = prompt_template.format(
                 query=query,
                 tool_calls=tool_calls_text,
@@ -241,7 +333,7 @@ class Evaluator:
                 explanation = data.get("explanation", "No explanation.")
                 return score, explanation
             except Exception as e:
-                return 0.0, f"Error in citation evaluation: {e}"
+                return 0.0, f"Error in response citation evaluation: {e}"
 
         # Fallback: regex-based References section parsing.
         # Expects the agent to emit: - *Type*: <type> (ID: <id>)
@@ -293,6 +385,20 @@ class Evaluator:
 
         final_score = total_score / len(matches) if matches else 0.0
         return final_score, "\n".join(explanations)
+
+    async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, float, float, str]:
+        """Combined citation evaluation.
+
+        Returns (tool_citation_score, response_citation_score, combined_score, reason).
+        - tool_citation_score: quality of tool calls and faithfulness to retrieved data
+        - response_citation_score: quality of the References section in the response
+        - combined_score: simple average of both sub-scores
+        """
+        tool_score, tool_reason = await self._evaluate_tool_citation(query, tool_calls, response)
+        response_score, response_reason = await self._evaluate_response_citation(query, tool_calls, response)
+        combined = (tool_score + response_score) / 2.0
+        reason = f"Tool: {tool_reason} | Response: {response_reason}"
+        return tool_score, response_score, combined, reason
 
     async def _evaluate_assertions(self, query: str, response: str, assertions: List[Any]) -> Tuple[float, str, List[Dict[str, Any]]]:
         # Format assertions with IDs

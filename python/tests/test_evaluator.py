@@ -298,14 +298,14 @@ class TestFetchEntityContent:
 class TestEvaluateCitation:
     def test_no_citations_returns_zero_score(self):
         ev = _make_evaluator()
-        score, msg = asyncio.run(ev._evaluate_citation("q", [], "plain response"))
-        assert score == pytest.approx(0.0)
+        tool_score, response_score, combined, msg = asyncio.run(ev._evaluate_citation("q", [], "plain response"))
+        assert combined == pytest.approx(0.0)
         assert "No structured citations" in msg
 
     def test_return_types_are_float_and_str(self):
         ev = _make_evaluator()
-        score, msg = asyncio.run(ev._evaluate_citation("q", [], "r"))
-        assert isinstance(score, float)
+        tool_score, response_score, combined, msg = asyncio.run(ev._evaluate_citation("q", [], "r"))
+        assert isinstance(combined, float)
         assert isinstance(msg, str)
 
     # ── BUG-001 regression ────────────────────────────────────────────────
@@ -314,8 +314,8 @@ class TestEvaluateCitation:
         """BUG-001: [^N^] Title [Type: T, ID: id] was the old expected format.
         No agent ever produces this; after the fix it must NOT match."""
         ev = _make_evaluator()
-        score, _ = asyncio.run(ev._evaluate_citation("q", [], _OLD_FORMAT_RESPONSE))
-        assert score == pytest.approx(0.0), (
+        _, _, combined, _ = asyncio.run(ev._evaluate_citation("q", [], _OLD_FORMAT_RESPONSE))
+        assert combined == pytest.approx(0.0), (
             "Old bracket format should not produce a non-zero citation score"
         )
 
@@ -324,8 +324,8 @@ class TestEvaluateCitation:
         tenant = _make_tenant()
         se = MockSearchEngine(tenant)
         ev = _make_evaluator("```yaml\nscore: 0.9\nreason: relevant\n```", search_engine=se)
-        score, _ = asyncio.run(ev._evaluate_citation("budget", [], _CITED_RESPONSE))
-        assert score > 0.0, "Citations in the correct format must yield score > 0"
+        _, response_score, _, _ = asyncio.run(ev._evaluate_citation("budget", [], _CITED_RESPONSE))
+        assert response_score > 0.0, "Citations in the correct format must yield response_score > 0"
 
     # ── Hallucination detection ───────────────────────────────────────────
 
@@ -341,14 +341,15 @@ class TestEvaluateCitation:
         """)
         tenant = _make_tenant()
         ev = _make_evaluator("score: 0.9", search_engine=MockSearchEngine(tenant))
-        score, explanation = asyncio.run(ev._evaluate_citation("q", [], response))
-        assert score == pytest.approx(0.0)
+        _, response_score, combined, explanation = asyncio.run(ev._evaluate_citation("q", [], response))
+        assert response_score == pytest.approx(0.0)
+        assert combined == pytest.approx(0.0)
         assert "Hallucination" in explanation or "not found" in explanation.lower()
 
     # ── Aggregation ───────────────────────────────────────────────────────
 
     def test_multiple_citations_are_averaged(self):
-        """One real citation (score 0.8) + one hallucination (0.0) → mean 0.4."""
+        """One real citation (score 0.8) + one hallucination (0.0) → response_score=0.4, combined=0.2."""
         response = textwrap.dedent("""
             Ref A[^1^] and B[^2^].
 
@@ -367,14 +368,16 @@ class TestEvaluateCitation:
             "```yaml\nscore: 0.8\nreason: relevant\n```",
             search_engine=MockSearchEngine(tenant),
         )
-        score, _ = asyncio.run(ev._evaluate_citation("budget", [], response))
-        assert score == pytest.approx(0.4)
+        tool_score, response_score, combined, _ = asyncio.run(ev._evaluate_citation("budget", [], response))
+        # No tool calls → tool_score=0.0; response: one real (0.8) + one hallucinated (0.0) → 0.4
+        assert response_score == pytest.approx(0.4)
+        assert combined == pytest.approx(0.2)  # (0.0 + 0.4) / 2
 
     def test_malformed_judge_yaml_returns_float(self):
         tenant = _make_tenant()
         ev = _make_evaluator("not yaml {{", search_engine=MockSearchEngine(tenant))
-        score, _ = asyncio.run(ev._evaluate_citation("q", [], _CITED_RESPONSE))
-        assert isinstance(score, float)
+        _, _, combined, _ = asyncio.run(ev._evaluate_citation("q", [], _CITED_RESPONSE))
+        assert isinstance(combined, float)
 
     def test_score_is_bounded_zero_to_one(self):
         tenant = _make_tenant()
@@ -382,8 +385,8 @@ class TestEvaluateCitation:
             "```yaml\nscore: 1.0\nreason: ok\n```",
             search_engine=MockSearchEngine(tenant),
         )
-        score, _ = asyncio.run(ev._evaluate_citation("q", [], _CITED_RESPONSE))
-        assert 0.0 <= score <= 1.0
+        _, _, combined, _ = asyncio.run(ev._evaluate_citation("q", [], _CITED_RESPONSE))
+        assert 0.0 <= combined <= 1.0
 
 
 # ===========================================================================
@@ -591,14 +594,17 @@ class TestEvaluateSingle:
         result = asyncio.run(ev.evaluate_single(self._case()))
         assert "assertion_score" in result.metrics
         assert "citation_score" in result.metrics
+        assert "tool_citation_score" in result.metrics
+        assert "response_citation_score" in result.metrics
         assert "latency" in result.metrics
 
     def test_no_citations_in_response_forces_failed(self):
-        """With no citations, citation_score=0.0 < 0.7 threshold → passed=False
+        """With no citations, response_citation_score=0.0 < 0.7 threshold → passed=False
         even when all assertions pass (assertion_score=1.0)."""
         ev, _ = self._make_full_evaluator(MockRunner(), _assertion_yaml(True, "ok"))
         result = asyncio.run(ev.evaluate_single(self._case()))
         assert result.metrics["citation_score"] == pytest.approx(0.0)
+        assert result.metrics["response_citation_score"] == pytest.approx(0.0)
         assert result.passed is False
 
 

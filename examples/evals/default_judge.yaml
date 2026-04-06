@@ -7,22 +7,28 @@ model:
     temperature: 0.0
 prompts:
   citation_relevance: |
-    You are an expert evaluator for an AI agent. Your task is to judge the relevance of the tools and data citations used by the agent to answer a user query.
+    You are an expert evaluator for an AI agent. Your task is to judge the quality of the agent's tool usage and whether its response is grounded in the retrieved data.
 
     User Query: {query}
 
-    Agent Tool Calls:
+    Agent Tool Calls and Results:
     {tool_calls}
 
-    Agent Response:
+    Agent Final Response:
     {response}
 
     Evaluate the following:
     1. Did the agent use appropriate tools to find the information? (e.g., search_email for email questions)
-    2. Did the agent find relevant information?
-    3. Did the agent hallucinate information not present in the tool outputs?
+    2. Did the retrieved tool results contain information relevant to the query?
+    3. Does the agent's response accurately reflect the tool results — or did the agent ignore/contradict the results and present hallucinated information instead?
 
-    Provide a score from 0 to 1 (1 being perfect usage) and a brief explanation.
+    Scoring guide:
+    - 1.0: Correct tools used, relevant results found, response faithfully reflects those results.
+    - 0.7-0.9: Mostly correct but minor gaps (e.g., right tool, slightly off result, or small hallucination).
+    - 0.4-0.6: Partial — some correct retrieval but response includes hallucinated or irrelevant details.
+    - 0.0-0.3: Wrong tools, no relevant results, or response contradicts/ignores the tool outputs entirely.
+
+    Provide a score from 0 to 1 and a brief explanation.
 
     Output strictly in the following YAML format:
     ```yaml
@@ -83,4 +89,38 @@ prompts:
     winner: <"A", "B", or "Tie">
     reasoning: "<string>"
     better_response_score: <float 0.0-1.0>
+    ```
+
+  response_citation: |
+    You are an expert evaluator. Your task is to assess whether the agent's final response includes a proper References section with accurate, grounded citations.
+
+    User Query: {query}
+
+    Agent Tool Calls and Results:
+    {tool_calls}
+
+    Agent Final Response:
+    {response}
+
+    Evaluate the following:
+    1. Does the response include a "## References" section at the end?
+    2. Does each reference entry follow the required format (* *Type*: <type> (ID: <id>))?
+    3. Are the cited IDs real — i.e., do they appear in the tool results above? IDs not present in any tool result are hallucinated.
+    4. Are the cited items actually relevant to the user's query?
+    5. Does the body text contain inline citations ([^N^]) that correspond to the references?
+
+    Scoring guide:
+    - 1.0: References section present, all IDs are real and appear in tool results, all citations are relevant, inline citations present.
+    - 0.7-0.9: References section present with minor issues (1 fake ID, missing inline for 1-2 items, or one irrelevant citation).
+    - 0.4-0.6: References section exists but has significant issues (multiple fake IDs, mostly missing inline citations, or marginally relevant items).
+    - 0.1-0.3: References section barely present or mostly hallucinated IDs.
+    - 0.0: No References section found at all.
+
+    Output strictly in the following YAML format:
+    ```yaml
+    score: <float 0.0-1.0>
+    has_references_section: <true/false>
+    grounded_count: <int, number of IDs verified in tool results>
+    total_cited: <int, total number of reference entries>
+    explanation: "<string>"
     ```

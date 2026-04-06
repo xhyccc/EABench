@@ -61,14 +61,14 @@ def test_parse_yaml_response_assertions_block():
 
 
 def test_citation_no_citations_in_response():
-    """When the response contains no structured citations, score is 0.0."""
+    """When the response contains no structured citations, combined score is 0.0."""
     mock_llm = MockJudgeLLM("")
     evaluator = Evaluator(None, mock_llm, None, None)
 
-    score, explanation = asyncio.run(
+    tool_score, response_score, combined, explanation = asyncio.run(
         evaluator._evaluate_citation("query", [], "plain response with no citations")
     )
-    assert score == pytest.approx(0.0)
+    assert combined == pytest.approx(0.0)
     assert "No structured citations" in explanation
 
 
