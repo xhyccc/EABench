@@ -19,7 +19,7 @@ from src.core.agent_runner import AgentRunner, MaxTurnsExceededError
 from src.core.llm_provider import MockLLMProvider
 from src.core.openai_provider import OpenAIProvider
 from src.core.azure_provider import AzureOpenAIProvider
-from src.core.embedding_provider import AzureEmbeddingProvider, MockEmbeddingProvider, LocalEmbeddingProvider
+from src.core.provider_factory import build_llm, build_embedding, build_resources
 from src.core.search_engine import SearchEngine
 from src.core.tool_registry import registry
 from src.sandbox.local_sandbox import LocalSandbox
@@ -46,9 +46,9 @@ def create_llm_from_config(model_config):
             temperature=temperature
         )
     elif provider == "azure":
-        api_key = os.getenv("AZURE_API_KEY")
-        azure_endpoint = os.getenv("AZURE_ENDPOINT")
-        api_version = os.getenv("AZURE_API_VERSION")
+        api_key = os.getenv("AZURE_API_KEY") or os.getenv("AZURE_OPENAI_API_KEY")
+        azure_endpoint = os.getenv("AZURE_ENDPOINT") or os.getenv("AZURE_OPENAI_ENDPOINT")
+        api_version = os.getenv("AZURE_API_VERSION") or os.getenv("AZURE_OPENAI_API_VERSION")
         return AzureOpenAIProvider(
             api_key=api_key,
             azure_endpoint=azure_endpoint,
@@ -61,68 +61,15 @@ def create_llm_from_config(model_config):
 
 @st.cache_resource
 def get_global_resources(agent_config_path, tenant_config_path):
-    # Load configs
     agent_config = AgentConfig.from_yaml(agent_config_path)
     tenant_config = TenantConfig.from_yaml(tenant_config_path)
 
-    # Initialize LLM
-    if agent_config.model.provider == ProviderType.OPENAI:
-        api_key = os.getenv("OPENAI_API_KEY")
-        base_url = os.getenv("OPENAI_API_BASE")
-        llm = OpenAIProvider(
-            api_key=api_key,
-            base_url=base_url,
-            model=agent_config.model.name,
-            temperature=agent_config.model.parameters.get("temperature", 0.7)
-        )
-        
-    elif agent_config.model.provider == ProviderType.AZURE:
-        api_key = os.getenv("AZURE_API_KEY")
-        azure_endpoint = os.getenv("AZURE_ENDPOINT")
-        api_version = os.getenv("AZURE_API_VERSION")
-        
-        llm = AzureOpenAIProvider(
-            api_key=api_key,
-            azure_endpoint=azure_endpoint,
-            api_version=api_version,
-            deployment_name=agent_config.model.name,
-            temperature=agent_config.model.parameters.get("temperature", 0.7)
-        )
-    else:
-        llm = MockLLMProvider()
+    llm, _embedding, sandbox, search_engine = build_resources(agent_config, tenant_config)
 
-    # Initialize Embedding Provider
-    embedding_provider = None
-    if agent_config.embedding:
-        if agent_config.embedding.provider == ProviderType.AZURE:
-            api_key = os.getenv("AZURE_API_KEY")
-            azure_endpoint = os.getenv("AZURE_ENDPOINT")
-            emb_api_version = os.getenv("AZURE_EMB_API_VERSION") or os.getenv("AZURE_API_VERSION")
-            
-            embedding_provider = AzureEmbeddingProvider(
-                api_key=api_key,
-                azure_endpoint=azure_endpoint,
-                api_version=emb_api_version,
-                deployment_name=agent_config.embedding.model
-            )
-        elif agent_config.embedding.provider == ProviderType.LOCAL:
-            embedding_provider = LocalEmbeddingProvider(model_name=agent_config.embedding.model)
-    
-    if not embedding_provider:
-        # Fallback to Mock if not configured or unknown
-        embedding_provider = MockEmbeddingProvider()
-
-    sandbox = LocalSandbox(tenant_config)
-    sandbox.start() # Start the sandbox
-    
-    # Global Search Engine (holds the indices)
-    search_engine = SearchEngine(tenant_config, embedding_provider, sandbox)
-    
-    # Index immediately
     print("Indexing data...")
     asyncio.run(search_engine.index_all())
     print("Indexing complete.")
-    
+
     return tenant_config, sandbox, search_engine, llm, agent_config
 
 # Sidebar - Configuration
@@ -345,7 +292,15 @@ elif app_mode == "Evaluation":
         
         if st.button("Run Evaluation"):
             try:
-                evaluator = Evaluator(runner, judge_llm, sandbox, session_search_engine, prompts=prompts)
+                # Create a neutral search engine for eval (no logged-in user context).
+                # Cases with user_id will set context per-case inside evaluate_single.
+                eval_search_engine = SearchEngine(
+                    tenant_config,
+                    global_search_engine.embedding_provider,
+                    sandbox,
+                    indices=global_search_engine.indices,
+                )
+                evaluator = Evaluator(runner, judge_llm, sandbox, eval_search_engine, prompts=prompts)
                 
                 progress_bar = st.progress(0)
                 results = []
@@ -494,31 +449,16 @@ elif app_mode == "Side-by-Side Comparison":
     from src.generator.yaml_utils import yaml_dump
     from src.eval.models import EvaluationSet, ComparisonResult
     from src.eval.evaluator import Evaluator
+    from src.core.provider_factory import build_llm
     
-    # Helper to create runner
+    # Helper to create runner — uses factory so env var fallback logic is shared
     def create_runner_from_file(config_filename):
         path = os.path.join("examples/agents", config_filename)
         cfg = AgentConfig.from_yaml(path)
-        
-        # Create LLM
-        if cfg.model.provider == ProviderType.OPENAI:
-            l = OpenAIProvider(
-                api_key=os.getenv("OPENAI_API_KEY"),
-                base_url=os.getenv("OPENAI_API_BASE"),
-                model=cfg.model.name,
-                temperature=cfg.model.parameters.get("temperature", 0.7)
-            )
-        elif cfg.model.provider == ProviderType.AZURE:
-            l = AzureOpenAIProvider(
-                api_key=os.getenv("AZURE_API_KEY"),
-                azure_endpoint=os.getenv("AZURE_ENDPOINT"),
-                api_version=os.getenv("AZURE_API_VERSION"),
-                deployment_name=cfg.model.name,
-                temperature=cfg.model.parameters.get("temperature", 0.7)
-            )
-        else:
+        try:
+            l = build_llm(cfg)
+        except ValueError:
             l = MockLLMProvider()
-            
         return AgentRunner(cfg, l, registry)
 
     # 1. Select Agents
@@ -600,9 +540,19 @@ elif app_mode == "Side-by-Side Comparison":
                 # Initialize Runners
                 runner_a = create_runner_from_file(config_a_file)
                 runner_b = create_runner_from_file(config_b_file)
-                
-                evaluator_a = Evaluator(runner_a, judge_llm, sandbox, session_search_engine, prompts=prompts)
-                evaluator_b = Evaluator(runner_b, judge_llm, sandbox, session_search_engine, prompts=prompts)
+
+                # Neutral search engines for comparison (no logged-in user context);
+                # cases with user_id will set context per-case inside evaluate_single.
+                def _neutral_se():
+                    return SearchEngine(
+                        tenant_config,
+                        global_search_engine.embedding_provider,
+                        sandbox,
+                        indices=global_search_engine.indices,
+                    )
+
+                evaluator_a = Evaluator(runner_a, judge_llm, sandbox, _neutral_se(), prompts=prompts)
+                evaluator_b = Evaluator(runner_b, judge_llm, sandbox, _neutral_se(), prompts=prompts)
                 
                 progress_bar = st.progress(0)
                 comparison_results = []

@@ -1,0 +1,2121 @@
+{
+  "metadata": {
+    "tenant": "../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml",
+    "eval_set": "../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml",
+    "agent_config": "../examples/agents/react_agent.yaml",
+    "judge_config": "../examples/evals/default_judge.yaml",
+    "eval_set_name": "Evaluation Set for hugesmoothtech-corp-20260404",
+    "total_cases": 150,
+    "timestamp": "2026-04-05T15:11:41.310251+00:00"
+  },
+  "summary": {
+    "passed": 0,
+    "failed": 150,
+    "total": 150,
+    "pass_rate": 0.0,
+    "mean_assertion_score": 0.0,
+    "mean_citation_score": 0.0
+  },
+  "cases": [
+    {
+      "case_id": "case_001",
+      "query": "Show me the email from Hyun-Jae Wang about the engineering team's feedback on the debugging improvements sent on March 25th.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 3.9371798038482666
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_002",
+      "query": "Find the email summarizing the product meeting debate about AI priorities versus customer requests. It was sent on March 25th.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 3.135714054107666
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_003",
+      "query": "Locate the email from Ravi Patel about the SDE layoff timeline memo and its financial and morale impacts.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6206231117248535
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_004",
+      "query": "Find the email outlining client issues with the SaaS rollout that requires immediate attention.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.33379197120666504
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_005",
+      "query": "Show me the email from Takeshi Sato about debugging capability improvements and their impact on future projects.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3517649173736572
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_006",
+      "query": "What email did Neha send recently about the financial impact of layoffs?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4504561424255371
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_007",
+      "query": "Show me the email about the mandatory HR workshop on AI from this week.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3393838405609131
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_008",
+      "query": "Find the recent email from Yara about debugging AI tools.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3373548984527588
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_009",
+      "query": "Locate the email from Mandla about handling client concerns with the SaaS rollout.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.34772300720214844
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_010",
+      "query": "Find Ehsan's email about how layoffs might affect the engineering team's productivity.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3318209648132324
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_011",
+      "query": "Show me the email from Thiago Silva about the critical bug in the debugging feature sent on March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.333331823348999
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_012",
+      "query": "Find the email from Mariana Garcia about losing a major client and improving the roadmap from March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.37027788162231445
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_013",
+      "query": "Show me Am\u00e9lie Dubois' email about internal unrest due to AI replacing middle-management, sent on March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3426079750061035
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_014",
+      "query": "Locate Mona Sharif's email about the usability survey for coding agents sent on March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3437528610229492
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_015",
+      "query": "Find Jacqueline Dubois' email sent on March 26, 2026, about the next steps after losing a major client.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4359402656555176
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_016",
+      "query": "Show me the email from Amina Mustafa about the financial impact of losing a client and layoffs sent on March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6979658603668213
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_017",
+      "query": "Find Liang Zhang's email about employee morale and feedback initiatives sent on the same day as the HR workshop backlash.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3810131549835205
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_018",
+      "query": "Retrieve the email from Mariana Garcia about workshop feedback and addressing employee concerns.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3693990707397461
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_019",
+      "query": "Find the urgent email from Yara Morales about the critical debugging hotfix sent on March 26, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7153260707855225
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_020",
+      "query": "Show me the email from Mandla Abebe about client retention strategies for SaaS products.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.33057713508605957
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_021",
+      "query": "Show me the email sent today about a critical feature failure escalation from a key client.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5287930965423584
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_022",
+      "query": "Find the email from today about engineer feedback on the debugging hotfix rollout.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.34827089309692383
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_023",
+      "query": "Locate the email addressing concerns about AI management tools and a manager's resignation.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.139604091644287
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_024",
+      "query": "Find the email about employee concerns regarding changes to the severance FAQ.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3394341468811035
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_025",
+      "query": "Can you find the email about feedback on AI coding agents usability that was sent earlier today?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3305521011352539
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_026",
+      "query": "Show me the email about prioritizing post-hotfix debugging tasks sent on March 27, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.32773470878601074
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_027",
+      "query": "Find the email from Jacqueline about handling a key client escalation from March 27, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4015028476715088
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_028",
+      "query": "Locate the email about assessing employee reaction to AI management tools, sent on March 27, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.33605194091796875
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_029",
+      "query": "Get the email about the technical review of AI coding agents usability problems, sent on March 27, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.34116291999816895
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_030",
+      "query": "Find the proposal for a town hall to address employee morale and recent leadership changes, sent on March 27, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.33854103088378906
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_031",
+      "query": "Find my email about rebuilding client relationships after the product delays.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.9415769577026367
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_032",
+      "query": "Show me the email requesting feedback about the virtual Q&A session.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.36078810691833496
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_033",
+      "query": "Find the email about the postponed client demo and strategies for addressing it.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.42046689987182617
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_034",
+      "query": "Find the email discussing the junior engineer\u2019s workaround proposal for debugging.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3714118003845215
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_035",
+      "query": "Find the email about debugging hotfix effectiveness and remaining sporadic issues.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4267559051513672
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_036",
+      "query": "Find the email from Mariana Garcia sent on March 28 about resolving bugs and getting ready for client demos.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.47338104248046875
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_037",
+      "query": "What did Ravi Patel send on March 28 about AI-driven layoffs and their financial implications?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5503988265991211
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_038",
+      "query": "Locate the email from Takeshi Sato about addressing engineer feedback on the debugging tool from March 28.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.45577311515808105
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_039",
+      "query": "Retrieve the company-wide statement from Am\u00e9lie Dubois about layoffs, debugging tool issues, and the client demo delay.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6462819576263428
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_040",
+      "query": "Find Mona Sharif's email about coordinating client communication after the demo, sent on March 28.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.38684701919555664
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_041",
+      "query": "Show me the urgent email about a key client threatening to cancel their contract, sent today.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3771378993988037
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_042",
+      "query": "Retrieve the email about client complaints and balancing AI updates with customer requests, sent earlier today.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6115028858184814
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_043",
+      "query": "Find the email about engineers' concerns regarding insufficient testing for the AI update scheduled for next week.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3776092529296875
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_044",
+      "query": "Show me the email about the employee survey results, specifically focusing on job security concerns.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4456369876861572
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_045",
+      "query": "Retrieve today's email about critical issues with AI coding agents and the suggestion to reevaluate the replacement strategy.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7553458213806152
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_046",
+      "query": "Show me the email sent yesterday about the emergency response plan for a client issue with a 48-hour deadline.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.39110684394836426
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_047",
+      "query": "Find the email about the postponed client demo caused by feature bugs that outlines the rescheduling plan.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4005410671234131
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_048",
+      "query": "Show me the email about leadership alignment on AI strategy and employee morale issues sent yesterday.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6868817806243896
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_049",
+      "query": "Locate the email from yesterday about the action plan for resolving critical bugs in the SaaS platform.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7065761089324951
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_050",
+      "query": "Find the email about engineers\u2019 feedback on the usability of AI coding agents.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7676029205322266
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_051",
+      "query": "Can you find the email from the CEO about AI innovation and addressing employee concerns sent on March 30th?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6467430591583252
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_052",
+      "query": "Locate the urgent email about a memory leak in the coding agent update with deployment instructions sent recently by Takeshi.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3680572509765625
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_053",
+      "query": "Find the meeting or email about employee unrest and the postponed HR session that was sent recently.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.36737990379333496
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_054",
+      "query": "Show me the email about a client escalation with a 48-hour deadline for fixes that needs coordination with the product and sales teams.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.37827515602111816
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_055",
+      "query": "Find the email from Mariana asking for a status update on the client issues that might lead to legal action.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.684258222579956
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_056",
+      "query": "Show me the email from Mariana Garcia about urgent steps for managing the client relationship, sent on March 30, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8631939888000488
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_057",
+      "query": "Retrieve Ravi Patel's email about the financial risks of losing a key client, sent on March 30, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.41843581199645996
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_058",
+      "query": "Find the announcement from HR about the rescheduling of the Q&A session, sent on March 30, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.41378092765808105
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_059",
+      "query": "Get Jamal Hassan's email about the status of the emergency patch deployment sent on March 30, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.093947172164917
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_060",
+      "query": "Locate the anonymous email about leaked documents and layoff projections sent on March 30, 2026.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.662769079208374
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_061",
+      "query": "Show me the email from Mariana Garcia about the critical bug patch update for the client deadline earlier this week.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4165678024291992
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_062",
+      "query": "Locate the email Jamal Hassan sent about the analysis of the AI coding agent slowdown during peak hours.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.6643860340118408
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_063",
+      "query": "Find the email from Am\u00e9lie Dubois about client complaints and changing the product roadmap priorities.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.1183819770812988
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_064",
+      "query": "Retrieve the email from Ritika Chowdhury about small client feature bugs and the resolution timeline.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.39403200149536133
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_065",
+      "query": "Find the email from Am\u00e9lie Dubois about the workplace culture impact of the meme posted on the intranet.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.154259204864502
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_066",
+      "query": "Show me the email from Takeshi about the 'Adapting to AI' workshop being removed and leadership disagreements, sent on March 31.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.3553590774536133
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_067",
+      "query": "Locate the email Jamal sent on March 31 about the memory leak patch and feedback on its effectiveness.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5565340518951416
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_068",
+      "query": "Find the email Am\u00e9lie sent on March 31 about the key client threatening legal action and the fixes we need to deliver.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8313920497894287
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_069",
+      "query": "Show me the email from Mariana about postponing the client demo on March 31 and the next steps to address bugs.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4410972595214844
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_070",
+      "query": "Find Ravi's email from March 31 where he proposed addressing employee morale and mentioned the 'Adapting to AI' workshop.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.40601515769958496
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_071",
+      "query": "Show me the urgent email about the strategy to handle layoffs, sent on April 1st.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.39919590950012207
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_072",
+      "query": "Find all emails about the critical AI bug that caused production failures sent on April 1st.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3959338665008545
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_073",
+      "query": "Locate the email from Mariana Garcia about the AI bug's impact on the product roadmap.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3896198272705078
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_074",
+      "query": "Get the email analyzing the financial risks of client litigation sent on April 1st.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4990088939666748
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_075",
+      "query": "Find the email about managing legal threats and client escalations with the sales team.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6891100406646729
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_076",
+      "query": "Show me the email from Jamal Hassan about the emergency meeting on the AI coding issue from April 1st.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3901500701904297
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_077",
+      "query": "Can you find the email from Am\u00e9lie Dubois about improving the AI Adaptation Workshop engagement sent on April 1st?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6751799583435059
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_078",
+      "query": "Find the email from Mariana Garcia about the resignation of a mid-level manager and its strategic impact.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3709869384765625
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_079",
+      "query": "Show me the company-wide update from Am\u00e9lie Dubois about layoffs and the AI-first strategy sent on April 1st.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.46497011184692383
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_080",
+      "query": "Locate the email from Ravi Patel about reallocating the budget after the layoffs.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8479690551757812
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_081",
+      "query": "What were the initial observations and feedback from the engineering team regarding the 20% improvement in debugging capabilities?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.395798921585083
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_082",
+      "query": "What emergency response actions were proposed in the meeting to resolve the SaaS product rollout issues discussed in the group chat?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.3618950843811035
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_083",
+      "query": "What strategies were discussed in the leadership meeting to address the morale and communication challenges posed by the SDE layoffs mentioned in the internal memo?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5852727890014648
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_084",
+      "query": "What was the resolution plan discussed in the group chat after Thiago informed Jamal about the critical bug?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3719189167022705
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_085",
+      "query": "What mitigation strategies were discussed in the meeting following concerns raised in response to the leaked internal document?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.657689094543457
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_086",
+      "query": "How did the strategies discussed for client retention align with the product feedback gathered from the coding agent usability survey?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5943310260772705
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_087",
+      "query": "What steps were planned to address the usability concerns raised by engineers about the AI coding agents?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.41974878311157227
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_088",
+      "query": "Who was involved in addressing the critical feature failure reported by the key client, and what actions were taken?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7750279903411865
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_089",
+      "query": "What caused the confusion among engineers regarding the unannounced debugging hotfix, and how was it addressed?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7206687927246094
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_090",
+      "query": "Which meeting was organized to evaluate the junior engineer's workaround proposal, and what document provides details about the workaround?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.2232630252838135
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_091",
+      "query": "Which meeting focused on strategies to mitigate client dissatisfaction caused by the postponed demo, and what document explains the postponement?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6034018993377686
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_092",
+      "query": "Which meeting addressed the fallout from the leaked discussions on AI-driven layoffs, and which file contains the leaked screenshots?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3721919059753418
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_093",
+      "query": "What issue discussed in the leadership team's chat was based on the senior engineer's report on AI coding agents?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.44878411293029785
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_094",
+      "query": "What concerns raised in the engineers' chat are addressed in the AI team's update plans?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3817310333251953
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_095",
+      "query": "What action plan was discussed in the meeting about the key client's contract termination threat?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.673353910446167
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_096",
+      "query": "What specific concerns were raised by employees after the leaked layoff timeline and the postponement of the HR Q&A session?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.7982909679412842
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_097",
+      "query": "How was the emergency patch for the memory leak issue developed and coordinated, and what progress was reported?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.2462198734283447
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_098",
+      "query": "What financial risks were identified if the key client terminated their contract, and what mitigation strategies were proposed?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5829789638519287
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_099",
+      "query": "Who documented the finalized patch for the critical bug that the product team was working on under the 48-hour client deadline?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6549749374389648
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_100",
+      "query": "What were the potential causes and next steps discussed in the report about the AI coding agent slowdown that leadership was addressing?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.5180788040161133
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_101",
+      "query": "What were the implications discussed in the leadership meeting about the removal of the 'Adapting to AI' workshop, as communicated by HR?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.4746246337890625
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_102",
+      "query": "Which meeting discussed the fallout from the leaked email about the second wave of SDE layoffs?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.5047333240509033
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_103",
+      "query": "What meeting was held to identify the cause of the AI-driven coding agent bug and plan fixes for production build failures?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6442489624023438
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_104",
+      "query": "Which chat discussed the implications of the mid-level manager's resignation and its impact on the AI-first strategy?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7704160213470459
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_105",
+      "query": "How does the Sales team plan to address client dissatisfaction caused by unresolved bugs, and what role does the critical bug workaround play in their strategy?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.48692798614501953
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_106",
+      "query": "What confusion did the VP of Product's urgent memo cause, and how are engineering and product teams addressing it?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7265961170196533
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_107",
+      "query": "What actions did HugeSmoothTech take in response to the anonymous forum rant, and how did these actions address internal and external challenges?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6828110218048096
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_108",
+      "query": "What document or communication outlines the immediate action items discussed in the group chat about cascading failures, and who is responsible for updates?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4864530563354492
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_109",
+      "query": "Which meeting or chat addresses the canceled client call mentioned in the document about the meeting notes, and what actions were proposed?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8423678874969482
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_110",
+      "query": "What strategies were discussed in the meeting about internal and client relations after the confidential client dissatisfaction email was leaked?",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.40947413444519043
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_111",
+      "query": "Provide an in-depth analysis of the planned SDE layoffs, including their timeline, financial implications, and potential impact on team morale and productivity.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6395766735076904
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_112",
+      "query": "Summarize the feedback and concerns regarding the usability of the AI coding agents, including the impact of the debugging feature update and the results of the feedback survey.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.1760549545288086
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_113",
+      "query": "Analyze the reasons behind the loss of a major client and the critical feature failure escalation, and propose strategies to improve client retention and product enhancements.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.408660888671875
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_114",
+      "query": "Provide a detailed analysis of the critical bug discovered in the AI coding agent's debugging feature, covering the discovery, escalation, resolution steps, and the effectiveness of the hotfix.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8166351318359375
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_115",
+      "query": "Summarize the events surrounding the leaked document about replacing middle-management roles with AI tools, including the timeline, employee reactions, and steps taken by leadership to manage the fallout.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 2.3546030521392822
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_116",
+      "query": "Create a report analyzing the loss of a major client due to dissatisfaction with missing features in the AI-driven SaaS product. Include the root cause, client feedback, and strategies proposed to improve client retention.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.1241037845611572
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_117",
+      "query": "Provide a comprehensive report on the usability concerns raised about AI coding agents, including a timeline of events, key feedback from engineers, and proposed solutions.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8493008613586426
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_118",
+      "query": "Create a detailed incident report on the critical feature failure reported by the key client, covering its impact on client relationships, internal response strategies, and subsequent actions taken.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4417600631713867
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_119",
+      "query": "Generate a report analyzing the impact of the leaked internal discussions about AI-driven layoffs, including employee reactions, reputational risks, and proposed measures to restore trust.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3928980827331543
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_120",
+      "query": "Provide a detailed analysis of the escalation of client dissatisfaction, including the threat of contract termination and the company's mitigation strategies.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6037077903747559
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_121",
+      "query": "Generate a comprehensive report on the state of employee morale, focusing on the impact of layoffs, the leaked documents, and the postponed HR Q&A session.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4499220848083496
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_122",
+      "query": "Prepare a technical summary of the memory leak issue in the latest coding agent update, including the emergency patch deployment and post-mortem plans.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7010972499847412
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_123",
+      "query": "Generate a comprehensive report summarizing the issues raised about the AI coding agents' replacement strategy, including concerns from engineers and any leadership discussions or decisions.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6264269351959229
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_124",
+      "query": "Provide an in-depth analysis of the key client's contract termination threat, including the root cause of their dissatisfaction, actions taken to address the issue, and potential business impact.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6535747051239014
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_125",
+      "query": "Create a detailed analysis of the recent employee unrest, including factors such as the anonymous survey results, leaked layoff timeline, and the removal of the 'Adapting to AI' workshop. Include recommendations to improve employee morale.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.341494083404541
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_126",
+      "query": "Provide an analysis of the employee unrest stemming from the leaked layoff timelines, the postponed HR Q&A session, and the company's communication strategies.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.33243608474731445
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_127",
+      "query": "Create a detailed timeline of events and actions taken to address the key client's escalation and 48-hour deadline for resolving critical fixes.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.917799949645996
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_128",
+      "query": "Generate a post-mortem analysis of the memory leak issue in the AI coding agent, including the root cause, resolution, and recommendations to prevent similar issues in the future.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.945465087890625
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_129",
+      "query": "Generate a detailed timeline and analysis of the efforts to resolve the critical SaaS product bug under the 48-hour client deadline. Include key actions, challenges faced, and the final outcome.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 3.1657729148864746
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_130",
+      "query": "Provide an analysis of the unexplained slowdown in AI coding agents during peak hours. Include the reported impact on task delays, potential causes, and the steps taken to address the issue.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.8122351169586182
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_131",
+      "query": "Analyze the implications of removing the 'Adapting to AI' workshop from the training calendar. Include employee reactions, potential leadership disagreements, and the impact on workplace culture.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.4500830173492432
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_132",
+      "query": "Provide a comprehensive analysis of the internal email leak about the second wave of SDE layoffs, including its impact on employee morale, Slack discussions, and the company's strategic response.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.7955269813537598
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_133",
+      "query": "Summarize the timeline and resolution efforts for the critical bug in the AI-driven coding agent, highlighting its technical impact on production builds and the decisions made to mitigate further issues.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.885704755783081
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_134",
+      "query": "Evaluate the implications of HugeSmoothTech's AI-first strategy on employee morale, client relationships, and overall company performance, considering recent events and feedback.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3543863296508789
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_135",
+      "query": "Provide a detailed analysis of the critical AI-driven coding agent bug, including the proposed workaround, risks outlined by management, and the current status of testing and deployment.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5217969417572021
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_136",
+      "query": "Summarize the directives from the VP of Product's urgent memo and analyze its impact on team priorities, project timelines, and internal communication.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6607451438903809
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_137",
+      "query": "Create a comprehensive report on the high-stakes client call, including a summary of the client's concerns, the meeting outcomes, and the action plan to address dissatisfaction and prevent contract termination.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6325953006744385
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_138",
+      "query": "Provide a detailed analysis of the cascading failure risks caused by unresolved AI coding agent bugs, including the timeline of events, mitigation strategies, and leadership actions.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.6366620063781738
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_139",
+      "query": "Create a report summarizing the rollout of the new HR severance policy, including employee reactions, rumored layoffs, and actions taken to address these rumors.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.7347638607025146
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_140",
+      "query": "Compile a report on the major client call cancellation, the potential risks to contract renewal, and the sales team's strategies to address client concerns.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.9684033393859863
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_141",
+      "query": "Provide a comprehensive analysis of usability concerns related to the AI coding agents, including feedback from engineers, public criticism, and proposed next steps.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.34151506423950195
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_142",
+      "query": "Summarize the key client escalation regarding the critical feature failure, including details of the issue, the emergency meeting, and proposed solutions.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.0081181526184082
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_143",
+      "query": "Analyze the employee morale issues linked to recent events, including the backlash over the HR workshop, the leaked document about AI-driven management, and ongoing layoffs. Propose strategies to rebuild trust and improve morale.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.45916295051574707
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_144",
+      "query": "Provide a detailed report on the critical debugging bug in the AI coding agent, including its discovery, impact, resolution timeline, and feedback from engineers.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.9079887866973877
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_145",
+      "query": "Generate a timeline and impact analysis of the leaked internal document on AI-driven layoffs, including employee reactions and leadership responses.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.5125830173492432
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_146",
+      "query": "Analyze the loss of the major client due to dissatisfaction with the SaaS product, including the reasons cited, financial and business implications, and proposed strategies for client retention.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.4594259262084961
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_147",
+      "query": "Provide a comprehensive analysis of the usability concerns about the AI coding agents, including feedback from engineers, the senior engineer's public criticism, and proposed solutions.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.3660249710083008
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_148",
+      "query": "Summarize the timeline and actions taken to address the critical feature failure and client dissatisfaction, including the threat of contract termination.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 1.0646522045135498
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_149",
+      "query": "Analyze the employee concerns about job security, including the impact of the leaked discussions on AI-driven layoffs, survey results, and the company's response.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.687467098236084
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    },
+    {
+      "case_id": "case_150",
+      "query": "Provide a comprehensive report on the debugging tool's performance issues, including the AI team's resolution claims, ongoing failures, and the viability of the junior engineer's proposed workaround.",
+      "response": "Error: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "tool_calls": [],
+      "metrics": {
+        "citation_score": 0.0,
+        "assertion_score": 0.0,
+        "latency": 0.37906575202941895
+      },
+      "assertion_results": [],
+      "reasoning": "Citation: No structured citations found in the response.\nAssertions: Error in judgment: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+      "passed": false
+    }
+  ]
+}

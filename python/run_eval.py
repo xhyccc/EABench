@@ -28,7 +28,7 @@ from src.config.tenant_config import TenantConfig
 from src.core.agent_runner import AgentRunner
 from src.core.openai_provider import OpenAIProvider
 from src.core.azure_provider import AzureOpenAIProvider
-from src.core.embedding_provider import AzureEmbeddingProvider, MockEmbeddingProvider
+from src.core.provider_factory import build_resources
 from src.core.search_engine import SearchEngine
 from src.core.tool_registry import registry
 from src.sandbox.local_sandbox import LocalSandbox
@@ -38,7 +38,7 @@ import src.core.tools  # register tools side-effectfully
 
 
 # ---------------------------------------------------------------------------
-# Provider factory helpers
+# CLI-specific LLM factory (supports --model / --api-key / --provider overrides)
 # ---------------------------------------------------------------------------
 
 def _build_llm(provider: str, model: Optional[str], api_key: Optional[str],
@@ -97,26 +97,6 @@ def _build_llm(provider: str, model: Optional[str], api_key: Optional[str],
             model=resolved_model,
             temperature=temperature,
         )
-
-
-def _build_embedding(agent_config: AgentConfig):
-    """Build embedding provider from agent config + env vars."""
-    emb_cfg = agent_config.embedding
-    if emb_cfg and emb_cfg.provider == ProviderType.AZURE:
-        key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("AZURE_API_KEY")
-        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT") or os.getenv("AZURE_ENDPOINT")
-        ver = (os.getenv("AZURE_EMB_API_VERSION")
-               or os.getenv("AZURE_OPENAI_API_VERSION")
-               or os.getenv("AZURE_API_VERSION")
-               or "2024-02-15-preview")
-        if key and endpoint:
-            return AzureEmbeddingProvider(
-                api_key=key,
-                azure_endpoint=endpoint,
-                api_version=ver,
-                deployment_name=emb_cfg.model,
-            )
-    return MockEmbeddingProvider()
 
 
 # ---------------------------------------------------------------------------
@@ -218,7 +198,8 @@ Examples:
     # ------------------------------------------------------------------
     llm = _build_llm(
         provider=args.provider,
-        model=args.model,
+        # If --model not given, use deployment name from the agent config YAML
+        model=args.model or agent_config.model.name,
         api_key=args.api_key,
         base_url=args.base_url,
         azure_endpoint=args.azure_endpoint,
@@ -229,11 +210,20 @@ Examples:
 
     # ------------------------------------------------------------------
     # Build embedding provider, sandbox, search engine, agent runner
+    # (LLM already built above; pass it in so build_resources skips re-building it)
     # ------------------------------------------------------------------
-    embedding_provider = _build_embedding(agent_config)
-    sandbox = LocalSandbox(tenant_config)
-    search_engine = SearchEngine(tenant_config, embedding_provider, sandbox)
+    try:
+        llm, _embedding, sandbox, search_engine = build_resources(agent_config, tenant_config, llm=llm)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
     runner = AgentRunner(agent_config, llm, registry)
+
+    # ------------------------------------------------------------------
+    # Index tenant data into the search engine
+    # ------------------------------------------------------------------
+    print("\nIndexing tenant data …")
+    await search_engine.index_all()
+    print("Indexing complete.\n")
 
     # ------------------------------------------------------------------
     # Run evaluation

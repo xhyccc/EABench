@@ -185,9 +185,11 @@ class Evaluator:
                     return f"Subject: {email.subject}\nBody: {email.body}"
         elif entity_type == 'file':
             # entity_id is the file path; sandbox provides path-traversal protection
+            if not self.sandbox:
+                return None
             try:
                 return self.sandbox.read_file(entity_id)
-            except (FileNotFoundError, ValueError, PermissionError):
+            except (FileNotFoundError, ValueError, PermissionError, AttributeError):
                 return None
         elif entity_type == 'chat':
             for chat in tenant.chats:
@@ -212,23 +214,26 @@ class Evaluator:
         return None
 
     async def _evaluate_citation(self, query: str, tool_calls: List[Dict], response: str) -> Tuple[float, str]:
-        # Regex to extract citations
-        # Format: [^i^] <Title> (<Author>, <Date>) [Type: <type>, ID: <id>]
-        pattern = r"\[\^(\d+)\^\]\s+.*?\s+\[Type:\s+(.*?),\s+ID:\s+(.*?)\]"
+        # Parse reference entries from the References section.
+        # System-prompt format: - *Type*: <type> (ID: <id>)
+        # e.g.  - *Type*: Email (ID: email_001)
+        pattern = r"\*Type\*:\s+([^\n(]+?)\s+\(ID:\s+([^)\n]+?)\)"
         matches = re.findall(pattern, response)
-        
+
         if not matches:
             return 0.0, "No structured citations found in the response."
-            
+
         total_score = 0.0
         explanations = []
-        
-        for i, (cit_num, cit_type, cit_id) in enumerate(matches):
+
+        for i, (cit_type, cit_id) in enumerate(matches, 1):
+            cit_type = cit_type.strip()
+            cit_id = cit_id.strip()
             content = self._fetch_entity_content(cit_type, cit_id)
             
             if not content:
-                explanations.append(f"Citation {cit_num} (ID: {cit_id}): Content not found (Hallucination).")
-                continue 
+                explanations.append(f"Citation {i} ({cit_type} ID: {cit_id}): Content not found (Hallucination).")
+                continue
                 
             # Evaluate relevance
             prompt = f"""
@@ -256,9 +261,9 @@ class Evaluator:
                 reason = data.get("reason", "No reason")
                 
                 total_score += score
-                explanations.append(f"Citation {cit_num}: {score} - {reason}")
+                explanations.append(f"Citation {i}: {score} - {reason}")
             except Exception as e:
-                explanations.append(f"Citation {cit_num}: Error evaluating - {e}")
+                explanations.append(f"Citation {i}: Error evaluating - {e}")
                 
         final_score = total_score / len(matches) if matches else 0.0
         return final_score, "\n".join(explanations)
