@@ -1,0 +1,84 @@
+# Follow-up Communication: Incorrectly Uploaded RA Application Document
+
+**Author:** Yasmin Abdul  
+**Date:** 2026-03-28  
+
+## Context
+This document outlines the follow-up communication sent regarding a student's incorrectly uploaded document for their Resident Assistant (RA) application. The issue was flagged during the routine review of RA applications by the administration team. Prompt action was necessary to ensure the application could be processed without further delays.
+
+---
+
+## Issue Summary
+- **Date of Occurrence:** 2026-03-28
+- **Issue Identified:** A student mistakenly uploaded an incorrect document as part of their RA application.
+- **Flagging Process:**
+  - The administration team identified the discrepancy during a manual review of submitted applications.
+  - The uploaded document did not match the expected format or content for the required application material (e.g., the file contained an unrelated class project instead of the required essay or recommendation letter).
+
+---
+
+## Action Plan
+
+### Follow-Up Communication
+A formal email was drafted and sent to the student to address the issue. Below is the full content of the email:
+
+---
+
+**Subject:** Follow-Up on Your RA Application Submission
+
+Dear [Student's Full Name],
+
+I hope this message finds you well. During our review of your Resident Assistant (RA) application, we noticed that one of the documents you uploaded does not align with the required submission guidelines. Specifically, the document titled "[Uploaded File Name]" appears to be unrelated to the application requirements.
+
+To ensure that your application is processed without delays, we kindly request you to re-upload the correct document at your earliest convenience. Please follow the steps below to complete this process:
+
+1. Log in to the RA application portal using your student credentials.
+2. Navigate to the "My Applications" section.
+3. Locate your RA application and click on "Edit Submission."
+4. Replace the incorrect document with the appropriate file (e.g., your essay or recommendation letter).
+5. Click "Submit" to finalize the changes.
+
+If you need assistance or encounter any technical issues, please do not hesitate to reach out to our team at [support email] or call us at [support phone number].
+
+Please note that the deadline for re-submitting your document is **2026-03-31**. Failure to submit the correct document by this date may result in your application being excluded from consideration.
+
+Thank you for your prompt attention to this matter. We appreciate your interest in the RA program and look forward to reviewing your complete application.
+
+Best regards,  
+Yasmin Abdul  
+Administration Team  
+[University Name]
+
+---
+
+### Internal Tracking
+To ensure the issue is resolved efficiently, the following steps have been implemented:
+
+- **Flagging the Application:**
+  - The student's application has been marked as "Pending Correction" in the internal administrative portal.
+  - Automatic reminders will be sent to the student every 48 hours until the issue is resolved or the deadline is reached.
+
+- **Monitoring:**
+  - The administration team will monitor the application portal to confirm receipt of the corrected document.
+  - If no action is taken by the student by **2026-03-30**, a final reminder will be sent with additional escalation to the program coordinator.
+
+- **Documentation:**
+  - All communication and actions regarding this issue have been logged in the student’s application profile for future reference.
+
+---
+
+## Additional Notes
+- **Technical Assistance:** The IT department has verified the functionality of the RA application portal to ensure no technical issues prevent the student from re-uploading their document.
+- **Deadline Impact:** The administration team has confirmed that extending the document submission deadline for this student will not disrupt the overall timeline for RA application decisions.
+- **Follow-Up Outcome:** A separate report will be generated once the issue is resolved, summarizing the corrective actions taken and any lessons learned to prevent similar occurrences in the future.
+
+---
+
+## Conclusion
+This follow-up communication aims to provide the student with clear instructions to rectify their submission while maintaining the integrity and efficiency of the RA application review process. The administration team remains committed to offering support and ensuring timely resolution of the issue.
+
+---
+
+**Prepared by:** Yasmin Abdul  
+**Position:** Administrative Coordinator  
+**Date:** 2026-03-28

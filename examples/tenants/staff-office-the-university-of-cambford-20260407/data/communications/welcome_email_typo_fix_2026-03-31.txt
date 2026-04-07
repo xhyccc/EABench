@@ -1,0 +1,71 @@
+# Correction Log: Welcome Email Typo Fix
+
+**Date:** 2026-03-31  
+**Author:** Chi Nguyen  
+**File Path:** data/communications/welcome_email_typo_fix_2026-03-31.txt  
+
+---
+
+## Overview
+This document details the identification and correction of a typo in the subject line of the welcome email for incoming students, scheduled for mass distribution on 2026-03-31. The typo was identified during the final content review process by the communications team and resolved immediately to ensure proper messaging and maintain professional standards.
+
+## Details of the Issue
+
+- **Subject Line with Typo:** "Welcom to Campus! Here's What You Need to Know."
+  - The word "Welcom" was missing the final "e."
+- **Intended Subject Line:** "Welcome to Campus! Here's What You Need to Know."
+- **Impact:**
+  - The typo, while minor, could have negatively affected the university's professional image.
+  - It was imperative to fix the issue before the email was sent to over 5,000 recipients, including new students, parents, and staff.
+
+## Steps Taken to Resolve the Issue
+
+1. **Identification:**
+   - The typo was flagged during the routine proofreading step by a communications team member at 11:45 AM.
+
+2. **Immediate Action:**
+   - The email draft was immediately pulled from the scheduled distribution queue in the university’s email marketing platform (MailSender Pro).
+
+3. **Correction Process:**
+   - The subject line was updated in the email template to include the correct spelling of "Welcome."
+   - A second proofreading round was conducted to ensure no additional issues were present in the email body or subject line.
+
+4. **Verification:**
+   - A test email was sent to the communications team at 12:15 PM to confirm the correction.
+   - Team members verified that the subject line appeared correctly in various email clients (Gmail, Outlook, mobile, etc.).
+
+5. **Rescheduling:**
+   - The corrected email was re-added to the distribution queue at 12:45 PM.
+   - The scheduled send time remained unchanged at 3:00 PM.
+
+## Additional Notes
+
+- **Coordination:**
+  - The communications team worked closely with the IT department to ensure no additional technical issues arose during the email rescheduling process.
+- **Lessons Learned:**
+  - Moving forward, the communications team will implement an additional proofreading step focused on subject lines before emails are queued for delivery.
+  - A checklist for email quality assurance will be created to prevent similar issues.
+
+## Supporting Data
+
+- **Number of Recipients Affected:** 5,243 (new students, parents, and staff).
+- **Time Spent Resolving the Issue:** Approximately 1 hour (11:45 AM - 12:45 PM).
+- **Email Marketing Platform Used:** MailSender Pro.
+- **Testing Details:**
+  - Email clients tested: Gmail, Outlook, Yahoo Mail, and default mobile email apps (iOS and Android).
+  - Results: All tests confirmed the corrected subject line displayed as intended.
+
+## Follow-Up Actions
+
+- **Post-Distribution Review:**
+  - The communications team will monitor the email’s performance metrics (open rate, click-through rate, etc.) to ensure no further issues impact its effectiveness.
+
+- **Process Update:**
+  - An updated email proofreading and quality assurance process will be drafted and shared with the team by 2026-04-07.
+
+- **Acknowledgment:**
+  - Special thanks to the team member who identified the typo and the IT department for their support in ensuring timely resolution.
+
+---
+
+**End of Log**

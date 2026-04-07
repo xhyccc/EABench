@@ -1,0 +1,130 @@
+# Resolving the QR Code Access Issue for the Campus Map
+
+## Author: Kenji Tanaka  
+### Date: April 2, 2026  
+
+---
+
+## Introduction
+
+As part of the preparation for the upcoming orientation day, the communications team incorporated a QR code into the welcome pamphlet to provide easy access to the campus map. However, on April 2, 2026, a student reported an issue accessing the QR code. This document details the investigation, root cause analysis, resolution process, and preventive measures implemented to ensure such issues are avoided in the future.
+
+---
+
+## Issue Summary
+
+- **Date Reported:** April 2, 2026
+- **Reported By:** New student via email to IT support
+- **Symptom:** Scanning the QR code in the welcome pamphlet led to a “404 Not Found” error.
+- **Impact:** Potential difficulty for students and visitors to navigate the campus on orientation day.
+
+---
+
+## Investigation
+
+The IT team immediately investigated the reported issue to identify the root cause. Below is a summary of the investigation process:
+
+### Steps Taken:
+1. **Verification of the Issue:**
+   - Scanned the QR code in the printed pamphlets to replicate the issue.
+   - Confirmed the “404 Not Found” error when accessing the QR code URL.
+
+2. **URL Inspection:**
+   - Extracted the URL embedded in the QR code.
+   - Verified that the URL was incorrectly linking to `https://campusportal.edu/campumap` instead of `https://campusportal.edu/campusmap`.
+
+3. **Source File Check:**
+   - Reviewed the digital files used for printing the pamphlets.
+   - Discovered a typo in the QR code URL within the design source file (`campumap` instead of `campusmap`).
+
+4. **Server Logs Analysis:**
+   - Checked server logs to confirm no valid requests were reaching the `/campumap` endpoint.
+   - Verified that `/campusmap` was functioning correctly.
+
+---
+
+## Root Cause
+
+The issue was caused by a typo in the QR code URL embedded in the welcome pamphlet design file. The error was introduced during the pamphlet design phase and went unnoticed during the proofreading and testing stages.
+
+---
+
+## Resolution
+
+The IT team implemented the following measures to resolve the issue promptly:
+
+### Immediate Fix:
+1. **Server Redirection:**
+   - Set up a temporary 301 redirect from `https://campusportal.edu/campumap` to `https://campusportal.edu/campusmap`.
+   - Verified the redirect functionality to ensure users scanning the QR code were directed to the correct campus map page.
+
+2. **Student Communication:**
+   - Sent an email to all new students with the correct URL for the campus map.
+   - Included instructions for accessing the map directly via the student portal as an alternative.
+
+3. **Pamphlet Correction:**
+   - Coordinated with the communications team to correct the typo in the QR code URL within the digital design file.
+   - Arranged for an emergency reprint of pamphlets to replace those distributed with the incorrect QR code.
+
+---
+
+## Preventive Measures
+
+To avoid similar issues in the future, the following steps have been implemented:
+
+### Quality Assurance:
+- **URL Validation:**
+  - Implement a mandatory step in the design QA process to verify the accuracy of all embedded URLs and QR codes.
+
+- **QR Code Testing:**
+  - Require testing of all QR codes using multiple devices before finalizing designs.
+
+### Collaboration Improvements:
+- **Design-IT Collaboration:**
+  - Establish a protocol for the IT team to review QR codes and URLs in design files prior to printing.
+
+- **Error Reporting:**
+  - Create a more streamlined process for students and staff to report similar issues quickly.
+
+### Technical Safeguards:
+- **Wildcard Redirects:**
+  - Set up wildcard redirects for common URL typos to reduce the impact of future errors.
+
+- **Automated Monitoring:**
+  - Use automated tools to periodically check the functionality of URLs embedded in public materials.
+
+---
+
+## Conclusion
+
+The QR code issue was resolved within one hour of being reported, minimizing disruption to orientation day preparations. The implementation of preventive measures will enhance the reliability of future communications and ensure a better experience for students and visitors.
+
+---
+
+### Contacts
+For further inquiries or suggestions:
+- **Kenji Tanaka**  
+  IT Department, CampusPortal University  
+  Email: kenji.tanaka@campusportal.edu  
+  Phone: +1-800-555-ITUP
+
+---
+
+## Appendix
+
+### Timeline of Events:
+
+| Date       | Event                                                                                                 |
+|------------|-------------------------------------------------------------------------------------------------------|
+| 2026-04-02 | Student reported QR code issue to IT support.                                                         |
+| 2026-04-02 | IT team verified the issue and identified the typo in the QR code URL.                                |
+| 2026-04-02 | Temporary server redirect was set up to resolve the issue.                                            |
+| 2026-04-02 | Communications team sent corrective email to students.                                                |
+| 2026-04-02 | Corrected pamphlet design file and initiated emergency reprint.                                       |
+
+---
+
+### Data:
+- **Total QR Codes Affected:** 500 pamphlets printed.
+- **Emergency Reprint Cost:** $750 (estimated).
+- **Time to Resolution:** 1 hour from issue reporting.

@@ -1,0 +1,397 @@
+domain: staff-office-the-university-of-cambford-20260407.com
+id: staff-office-the-university-of-cambford-20260407
+users:
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mgarcia
+  profile:
+    department: Executive
+    email: mgarcia@staff-office-the-university-of-cambford.com
+    location: London
+    name:
+      display_name: Maria Garcia
+      first_name: Maria
+      last_name: Garcia
+    skills:
+    - Leadership
+    - Strategy
+    - Higher Education Administration
+    timezone: Europe/London
+    title: CEO
+  username: mgarcia
+- groups:
+  - Executive
+  - Finance
+  - All Employees
+  id: ksharma
+  profile:
+    department: Finance
+    email: ksharma@staff-office-the-university-of-cambford.com
+    location: Remote
+    manager_id: mgarcia
+    name:
+      display_name: Karan Sharma
+      first_name: Karan
+      last_name: Sharma
+    skills:
+    - Financial Planning
+    - Budget Management
+    - Data Analysis
+    timezone: Asia/Kolkata
+    title: CFO
+  username: ksharma
+- groups:
+  - Executive
+  - Operations
+  - All Employees
+  id: jokonkwo
+  profile:
+    department: Operations
+    email: jokonkwo@staff-office-the-university-of-cambford.com
+    location: Cape Town
+    manager_id: mgarcia
+    name:
+      display_name: Joy Okonkwo
+      first_name: Joy
+      last_name: Okonkwo
+    skills:
+    - Operational Efficiency
+    - Supply Chain Management
+    - Project Management
+    timezone: Africa/Johannesburg
+    title: COO
+  username: jokonkwo
+- groups:
+  - Executive
+  - Technology
+  - All Employees
+  id: ktanaka
+  profile:
+    department: Technology
+    email: ktanaka@staff-office-the-university-of-cambford.com
+    location: Tokyo
+    manager_id: mgarcia
+    name:
+      display_name: Kenji Tanaka
+      first_name: Kenji
+      last_name: Tanaka
+    skills:
+    - Technology Strategy
+    - Software Development
+    - Cybersecurity
+    timezone: Asia/Tokyo
+    title: CTO
+  username: ktanaka
+- groups:
+  - Executive
+  - Human Resources
+  - All Employees
+  id: lhaddad
+  profile:
+    department: Human Resources
+    email: lhaddad@staff-office-the-university-of-cambford.com
+    location: Dubai
+    manager_id: mgarcia
+    name:
+      display_name: Layla Haddad
+      first_name: Layla
+      last_name: Haddad
+    skills:
+    - Talent Management
+    - Employee Relations
+    - Diversity and Inclusion
+    timezone: Asia/Dubai
+    title: CHRO
+  username: lhaddad
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: drossi
+  profile:
+    department: Executive
+    email: drossi@staff-office-the-university-of-cambford.com
+    location: London
+    name:
+      display_name: Daniela Rossi
+      first_name: Daniela
+      last_name: Rossi
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: Europe/London
+    title: CEO
+  username: drossi
+- groups:
+  - Technology
+  - Management
+  - All Employees
+  id: cnguyen
+  profile:
+    department: Technology
+    email: cnguyen@staff-office-the-university-of-cambford.com
+    location: San Francisco
+    manager_id: drossi
+    name:
+      display_name: Chi Nguyen
+      first_name: Chi
+      last_name: Nguyen
+    skills:
+    - Cloud Computing
+    - IT Strategy
+    timezone: America/Los_Angeles
+    title: Head of Technology
+  username: cnguyen
+- groups:
+  - Human Resources
+  - Management
+  - All Employees
+  id: smensah
+  profile:
+    department: Human Resources
+    email: smensah@staff-office-the-university-of-cambford.com
+    location: Accra
+    manager_id: drossi
+    name:
+      display_name: Samuel Mensah
+      first_name: Samuel
+      last_name: Mensah
+    skills:
+    - Employee Relations
+    - Talent Acquisition
+    timezone: Africa/Accra
+    title: HR Manager
+  username: smensah
+- groups:
+  - Finance
+  - All Employees
+  id: ysilva
+  profile:
+    department: Finance
+    email: ysilva@staff-office-the-university-of-cambford.com
+    location: São Paulo
+    manager_id: drossi
+    name:
+      display_name: Yolanda Silva
+      first_name: Yolanda
+      last_name: Silva
+    skills:
+    - Budgeting
+    - Financial Analysis
+    timezone: America/Sao_Paulo
+    title: Accountant
+  username: ysilva
+- groups:
+  - Operations
+  - All Employees
+  id: akabir
+  profile:
+    department: Operations
+    email: akabir@staff-office-the-university-of-cambford.com
+    location: Dubai
+    manager_id: drossi
+    name:
+      display_name: Aisha Kabir
+      first_name: Aisha
+      last_name: Kabir
+    skills:
+    - Process Improvement
+    - Supply Chain
+    timezone: Asia/Dubai
+    title: Operations Specialist
+  username: akabir
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: lgomez
+  profile:
+    department: Executive
+    email: lgomez@staff-office-the-university-of-cambford-20260407.com
+    location: London
+    name:
+      display_name: Luis Gomez
+      first_name: Luis
+      last_name: Gomez
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: Europe/London
+    title: CEO
+  username: lgomez
+- groups:
+  - Technology
+  - Management
+  - All Employees
+  id: hmatsuda
+  profile:
+    department: Technology
+    email: hmatsuda@staff-office-the-university-of-cambford-20260407.com
+    location: Tokyo
+    manager_id: lgomez
+    name:
+      display_name: Hiroshi Matsuda
+      first_name: Hiroshi
+      last_name: Matsuda
+    skills:
+    - Software Architecture
+    - Cybersecurity
+    timezone: Asia/Tokyo
+    title: Chief Technology Officer
+  username: hmatsuda
+- groups:
+  - Finance
+  - All Employees
+  id: npande
+  profile:
+    department: Finance
+    email: npande@staff-office-the-university-of-cambford-20260407.com
+    location: Mumbai
+    manager_id: lgomez
+    name:
+      display_name: Neha Pande
+      first_name: Neha
+      last_name: Pande
+    skills:
+    - Budgeting
+    - Financial Analysis
+    timezone: Asia/Kolkata
+    title: Finance Manager
+  username: npande
+- groups:
+  - Human Resources
+  - All Employees
+  id: jokafor
+  profile:
+    department: Human Resources
+    email: jokafor@staff-office-the-university-of-cambford-20260407.com
+    location: Lagos
+    manager_id: lgomez
+    name:
+      display_name: Joy Okafor
+      first_name: Joy
+      last_name: Okafor
+    skills:
+    - Employee Relations
+    - Recruitment
+    timezone: Africa/Lagos
+    title: HR Specialist
+  username: jokafor
+- groups:
+  - Operations
+  - All Employees
+  id: fdubois
+  profile:
+    department: Operations
+    email: fdubois@staff-office-the-university-of-cambford-20260407.com
+    location: Paris
+    manager_id: lgomez
+    name:
+      display_name: François Dubois
+      first_name: François
+      last_name: Dubois
+    skills:
+    - Logistics
+    - Process Optimization
+    timezone: Europe/Paris
+    title: Operations Coordinator
+  username: fdubois
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mzhang
+  profile:
+    department: Executive
+    email: mzhang@staff-office-the-university-of-cambford-20260407.com
+    location: Shanghai
+    name:
+      display_name: Mei Zhang
+      first_name: Mei
+      last_name: Zhang
+    skills:
+    - Leadership
+    - Operations Strategy
+    timezone: Asia/Shanghai
+    title: Chief Operating Officer
+  username: mzhang
+- groups:
+  - Finance
+  - Management
+  - All Employees
+  id: aramirez
+  profile:
+    department: Finance
+    email: aramirez@staff-office-the-university-of-cambford-20260407.com
+    location: Mexico City
+    manager_id: mzhang
+    name:
+      display_name: Ana Ramirez
+      first_name: Ana
+      last_name: Ramirez
+    skills:
+    - Budgeting
+    - Accounting
+    timezone: America/Mexico_City
+    title: Finance Manager
+  username: aramirez
+- groups:
+  - Technology
+  - Engineering
+  - All Employees
+  id: ksingh
+  profile:
+    department: Technology
+    email: ksingh@staff-office-the-university-of-cambford-20260407.com
+    location: Bengaluru
+    manager_id: aramirez
+    name:
+      display_name: Karan Singh
+      first_name: Karan
+      last_name: Singh
+    skills:
+    - JavaScript
+    - Web Development
+    timezone: Asia/Kolkata
+    title: Software Engineer
+  username: ksingh
+- groups:
+  - Human Resources
+  - Management
+  - All Employees
+  id: yabdul
+  profile:
+    department: Human Resources
+    email: yabdul@staff-office-the-university-of-cambford-20260407.com
+    location: Cairo
+    name:
+      display_name: Yasmin Abdul
+      first_name: Yasmin
+      last_name: Abdul
+    skills:
+    - Recruitment
+    - Employee Relations
+    timezone: Africa/Cairo
+    title: HR Specialist
+  username: yabdul
+- groups:
+  - Operations
+  - All Employees
+  id: jokonkwo_4
+  profile:
+    department: Operations
+    email: jokonkwo@staff-office-the-university-of-cambford-20260407.com
+    location: Lagos
+    manager_id: mzhang
+    name:
+      display_name: Joseph Okonkwo
+      first_name: Joseph
+      last_name: Okonkwo
+    skills:
+    - Logistics
+    - Process Improvement
+    timezone: Africa/Lagos
+    title: Operations Coordinator
+  username: jokonkwo_4

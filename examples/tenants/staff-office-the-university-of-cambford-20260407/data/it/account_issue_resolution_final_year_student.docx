@@ -1,0 +1,126 @@
+# Report on IT's Resolution of a Student Account Issue Preventing Re-Admissions Portal Access
+
+## Author
+Kenji Tanaka
+
+## Date
+March 30, 2026
+
+---
+
+## Introduction
+A final-year student reported being unable to access the university's re-admissions portal on March 29, 2026. This issue, while isolated, threatened to delay the student's enrollment process. The IT department promptly investigated and resolved the issue within 24 hours, ensuring the student's re-admissions process could proceed smoothly. This report details the issue, the resolution process, and key takeaways for improving systems to prevent similar occurrences in the future.
+
+---
+
+## Issue Overview
+### Incident Details
+- **Date Reported:** March 29, 2026
+- **Student Status:** Final-year student
+- **Problem Description:** Unable to access the re-admissions portal using valid credentials.
+- **Impact:** Delayed enrollment process; potential risk of missing the re-admissions deadline.
+
+### Initial Observations
+- Portal functionality was stable for other students.
+- The issue appeared to be account-specific, as other final-year students reported no problems.
+- No active system-wide glitches were detected during the timeframe.
+
+---
+
+## Resolution Process
+### Steps Taken
+1. **Account Verification**
+   - Confirmed the student's credentials and enrollment status.
+   - Verified that the account was active and flagged no administrative holds.
+
+2. **Portal Logs Analysis**
+   - Reviewed server logs to identify errors associated with the student's login attempts.
+   - Detected repeated authentication failures linked to the account.
+
+3. **Technical Investigation**
+   - Isolated the issue to a corrupted session token generated during the student's previous login attempt.
+   - Conducted a root-cause analysis to ensure there were no broader systemic issues.
+
+4. **Resolution Implementation**
+   - Cleared the corrupted session token from the portal's backend database.
+   - Reset the student's account session and refreshed authentication permissions.
+   - Guided the student through a successful login attempt.
+
+5. **Testing and Validation**
+   - Conducted multiple login tests using the student's account credentials.
+   - Monitored portal performance for 24 hours to ensure no recurring issues.
+
+### Timeframe
+- **Issue Identified:** March 29, 2026
+- **Resolution Completed:** March 30, 2026
+- **Total Time Taken:** Approximately 24 hours
+
+---
+
+## Outcomes
+### Immediate Results
+- The student successfully accessed the re-admissions portal on March 30, 2026.
+- No further issues were reported with the student's account.
+- Enrollment proceeded without delays.
+
+### System Stability
+- Confirmed portal functionality for all users after the fix.
+- No system-wide glitches detected during the monitoring period.
+
+---
+
+## Lessons Learned
+### Key Insights
+1. **Session Token Vulnerabilities**
+   - Corrupted session tokens can lead to account-specific disruptions.
+   - Regular maintenance of session databases is essential to prevent similar issues.
+
+2. **Proactive Monitoring**
+   - Real-time user activity monitoring could help identify and resolve issues faster.
+   - Automating anomaly detection in server logs could improve response times.
+
+3. **Enhanced Communication**
+   - Direct communication with affected users ensures timely resolution and reduces frustration.
+   - Clear instructions on troubleshooting steps can empower students to resolve minor issues independently.
+
+### Recommendations
+- **System Improvements:**
+  - Implement automated session token validation during login processes.
+  - Enhance server log analytics to flag account-specific anomalies.
+
+- **User Support:**
+  - Develop detailed troubleshooting FAQs for portal access issues.
+  - Introduce a dedicated support hotline for urgent IT-related concerns.
+
+- **Testing Protocols:**
+  - Expand testing scenarios to include edge cases, such as corrupted session tokens.
+  - Conduct regular performance checks on critical systems like the re-admissions portal.
+
+---
+
+## Conclusion
+The quick resolution of the student's account issue highlights the IT department's commitment to ensuring smooth operations for all users. By addressing vulnerabilities and implementing proactive measures, the university can further enhance the reliability of its systems and improve the student experience.
+
+---
+
+## Appendix
+### Supporting Data
+- **Portal Access Logs:**
+  - Timestamped login attempts showing authentication failures for the affected account.
+  - Server responses confirming the corrupted session token.
+
+- **Resolution Metrics:**
+  - Time taken to identify the issue: 6 hours
+  - Time taken to implement and validate the fix: 18 hours
+
+### Contact Information
+- **IT Department Lead:** Kenji Tanaka
+- **Email:** kenji.tanaka@university.edu
+- **Phone:** +1-555-123-4567
+
+---
+
+## Document Metadata
+- **File Path:** data/it/account_issue_resolution_final_year_student.docx
+- **Version:** Final
+- **Last Updated:** March 30, 2026

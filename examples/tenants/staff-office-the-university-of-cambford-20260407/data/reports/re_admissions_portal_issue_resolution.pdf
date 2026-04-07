@@ -1,0 +1,119 @@
+# Resolution Report: Online Re-Admissions Portal Issues
+
+## Author
+Kenji Tanaka
+
+## Date
+March 25, 2026
+
+## Context
+This technical report outlines the resolution of issues encountered with the university's online re-admissions portal. The portal experienced a temporary disruption on March 24, 2026, causing delays for second-year students attempting to complete their re-admissions process. The IT department promptly investigated and resolved the issues, ensuring the system's stability moving forward.
+
+---
+
+## Background
+
+### Incident Summary
+- **Date:** March 24, 2026
+- **Impact:** Second-year students were unable to access the re-admissions portal for approximately 2 hours.
+- **Cause:** A technical glitch stemming from an overloaded database query triggered by simultaneous high traffic during peak usage hours.
+
+### Immediate Response
+- The IT department was notified of the issue at 10:15 AM.
+- Temporary access restrictions were put in place to prevent further strain on the system while diagnostics were conducted.
+- Communication channels were activated to inform affected students and provide updates on resolution timelines.
+
+---
+
+## Technical Investigation
+
+### Root Cause Analysis
+The investigation identified the following contributing factors:
+1. **Database Query Overload:**
+   - A poorly optimized database query resulted in prolonged processing times under high traffic.
+   - The query involved fetching unindexed data from multiple tables, causing bottlenecks.
+
+2. **Concurrent Session Management:**
+   - The portal's session-handling mechanism failed to gracefully manage concurrent logins, resulting in server crashes.
+
+3. **Traffic Surge:**
+   - A spike in portal usage coincided with an automated system update, exacerbating the issue.
+
+---
+
+## Resolution Steps
+
+### Step-by-Step Actions
+1. **Database Optimization:**
+   - Rewrote the problematic query to utilize indexed fields and reduce processing load.
+   - Conducted stress tests to ensure the query performed efficiently under simulated high traffic.
+
+2. **Session Management Improvements:**
+   - Implemented a more robust session-handling algorithm to manage concurrent logins.
+   - Upgraded server-side session limits to prevent crashes during peak usage.
+
+3. **Traffic Monitoring:**
+   - Deployed real-time traffic monitoring tools to proactively identify and mitigate future surges.
+
+4. **System Update Schedule Revision:**
+   - Rescheduled automated system updates to occur during off-peak hours to minimize disruption.
+
+---
+
+## Results
+
+### System Stability
+- After implementing the above changes, the portal was stress-tested with simulated traffic equivalent to 150% of peak usage.
+- No crashes or performance bottlenecks were observed.
+
+### User Feedback
+- A brief survey was distributed to affected students:
+  - **Response Rate:** 82%
+  - **Satisfaction with Resolution:** 92% rated the resolution process as "Excellent" or "Good."
+
+### Key Metrics
+- **Downtime:** Reduced to 2 hours (initial estimate was 6 hours).
+- **Error Rate:** Reduced from 18% to <1%.
+- **Concurrent Sessions Supported:** Increased from 500 to 1,500.
+
+---
+
+## Recommendations
+
+### Preventative Measures
+1. **Regular Performance Audits:**
+   - Schedule quarterly audits of the re-admissions portal to identify and address potential issues proactively.
+
+2. **Database Maintenance:**
+   - Implement routine indexing and cleanup procedures to ensure optimal database performance.
+
+3. **Student Communication Protocol:**
+   - Develop a standardized protocol for notifying students during technical disruptions.
+
+### Long-Term Enhancements
+1. **Redundancy:**
+   - Introduce server redundancy to minimize downtime during future disruptions.
+
+2. **Scalability:**
+   - Plan for infrastructure upgrades to accommodate growth in student enrollment and peak usage demands.
+
+---
+
+## Conclusion
+The resolution of the re-admissions portal issues demonstrates the IT department's capability to address challenges swiftly and effectively. By implementing optimized database queries, improving session management, and deploying monitoring tools, the portal is now fully operational and better equipped to handle future demands.
+
+---
+
+### Appendices
+
+#### Appendix A: Error Logs
+- Detailed logs capturing the initial errors and subsequent fixes are available upon request.
+
+#### Appendix B: Survey Results
+- Full survey responses from affected students can be accessed through the administration office.
+
+---
+
+**Prepared by:**
+Kenji Tanaka  
+Technical Lead, IT Department

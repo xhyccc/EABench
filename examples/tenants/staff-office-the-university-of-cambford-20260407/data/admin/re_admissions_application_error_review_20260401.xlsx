@@ -1,0 +1,102 @@
+# Re-Admissions Application Error Review Report
+
+**File Path:** data/admin/re_admissions_application_error_review_20260401.xlsx  
+**Author:** Yolanda Silva  
+**Date:** April 1, 2026  
+
+## Context
+This spreadsheet documents errors flagged during the system review of re-admissions application statuses. The goal is to identify, categorize, and address discrepancies that may affect the enrollment process for second-year and final-year students. These errors were discovered as part of the IT department's final testing phase and subsequent student reports.
+
+## Overview of Errors
+
+A total of **15 errors** were identified and categorized. Outlined below are the key findings, grouped by type and severity:
+
+### 1. Missing Documentation
+- **Count:** 5 cases
+- **Description:** Applications flagged for incomplete documentation, particularly missing transcripts and/or recommendation letters.
+- **Impacted Students:**
+  - Student ID: RA2026001 - Missing transcript (final-year)
+  - Student ID: RA2026007 - Missing recommendation letter (second-year)
+  - Student ID: RA2026013 - Both transcript and recommendation letter missing (final-year)
+  - Student ID: RA2026021 - Missing transcript (second-year)
+  - Student ID: RA2026025 - Missing transcript (final-year)
+- **Action Taken:**
+  - Contacted affected students via email and phone, requesting prompt submission of documents.
+  - Deadline for submission: April 7, 2026.
+
+### 2. Status Discrepancies
+- **Count:** 4 cases
+- **Description:** System displayed incorrect application statuses (e.g., "Pending" instead of "Approved").
+- **Impacted Students:**
+  - Student ID: RA2026010 - Status incorrectly marked as "Denied"
+  - Student ID: RA2026015 - Status incorrectly marked as "Pending"
+  - Student ID: RA2026018 - Status incorrectly marked as "Pending"
+  - Student ID: RA2026023 - Status incorrectly marked as "Denied"
+- **Action Taken:**
+  - Corrected statuses in the system.
+  - Sent confirmation emails to affected students with updated status.
+
+### 3. Payment Confirmation Errors
+- **Count:** 3 cases
+- **Description:** Errors in payment confirmation email footer (e.g., incorrect dates or missing payment reference numbers).
+- **Impacted Students:**
+  - Student ID: RA2026003 - Missing payment reference number
+  - Student ID: RA2026014 - Incorrect payment confirmation date
+  - Student ID: RA2026020 - Missing payment reference number
+- **Action Taken:**
+  - Updated email templates to include accurate details.
+  - Re-sent corrected payment confirmation emails to affected students.
+
+### 4. Data Entry Errors
+- **Count:** 3 cases
+- **Description:** Manual data entry errors resulting in mismatched student information (e.g., incorrect names, IDs, or course details).
+- **Impacted Students:**
+  - Student ID: RA2026009 - Name misspelled in system ("Jon Doe" instead of "John Doe")
+  - Student ID: RA2026012 - Course information mismatch (Physics instead of Chemistry)
+  - Student ID: RA2026024 - Incorrect student ID linked to application (RA2026025 instead of RA2026024)
+- **Action Taken:**
+  - Verified and corrected data in the system.
+  - Verified accuracy of other student records as a precaution.
+
+## Summary of Actions
+
+1. **Immediate Fixes:**
+   - Corrected all flagged errors in the system as of April 1, 2026.
+   - Sent updated notifications to affected students.
+2. **System Review:**
+   - Conducted an additional review of 100 randomly selected applications to ensure no further discrepancies.
+3. **Process Improvements:**
+   - Implemented automated validation checks for missing documents and mismatched data.
+   - Updated training materials for staff involved in data entry and verification.
+   - Enhanced email templates to reduce future formatting and content errors.
+
+## Key Metrics
+| Error Category           | Count | Percentage of Total Errors |
+|--------------------------|-------|----------------------------|
+| Missing Documentation    | 5     | 33.33%                    |
+| Status Discrepancies     | 4     | 26.67%                    |
+| Payment Confirmation     | 3     | 20.00%                    |
+| Data Entry Errors        | 3     | 20.00%                    |
+| **Total**                | 15    | 100.00%                   |
+
+## Recommendations
+
+1. **Automated System Enhancements:**
+   - Introduce automated document upload verification to flag incomplete applications before submission.
+   - Implement stricter rules for application status updates, requiring supervisor approval for changes.
+
+2. **Training and Resources:**
+   - Conduct quarterly training for staff on data entry best practices and error prevention.
+   - Create a checklist for students to ensure all required documents are submitted during the application process.
+
+3. **Monitoring and Feedback:**
+   - Schedule monthly reviews of re-admissions application data to identify trends and recurring issues.
+   - Gather feedback from students on the application process to identify potential pain points.
+
+## Conclusion
+The errors identified and resolved during this review highlight the importance of robust quality control measures in the re-admissions process. By addressing these issues promptly and implementing the recommended improvements, the administration team aims to minimize future discrepancies and enhance the student experience.
+
+---
+
+**Prepared by:** Yolanda Silva  
+**Date:** April 1, 2026

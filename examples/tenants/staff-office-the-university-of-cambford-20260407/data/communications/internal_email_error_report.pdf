@@ -1,0 +1,111 @@
+# Internal Email Error Report
+
+**Author:** Joy Okafor  
+**Date:** 2026-04-02  
+**Context:** Incident report regarding an internal email mistakenly sent to students.
+
+---
+
+## 1. Overview
+
+On April 2, 2026, an internal email intended for the administration team was mistakenly sent to a group of students. The email contained sensitive logistical details about ongoing preparations for Orientation Day, including information that was not relevant or appropriate for student recipients. This report outlines the incident, identifies its root cause, and provides recommendations to prevent similar occurrences in the future.
+
+---
+
+## 2. Incident Details
+
+- **Date and Time of Incident:** 2026-04-02, approximately 10:45 AM
+- **Email Subject Line:** "Orientation Logistics — Internal Notes"
+- **Sent By:** Newly hired staff member (Name withheld for privacy)
+- **Intended Recipient(s):** Administration Team (internal group email: admin-team@university.edu)
+- **Actual Recipient(s):** Group of 250 students (email list: freshman-students@university.edu)
+- **Content of Email:**
+  - Updates on seating arrangements, catering changes, and audiovisual equipment status.
+  - A spreadsheet attachment detailing staff responsibilities and vendor contact information.
+
+This email caused minor confusion among students, as it included irrelevant logistical information and exposed internal processes that were not meant for public dissemination.
+
+---
+
+## 3. Root Cause Analysis
+
+A thorough investigation identified the following contributing factors:
+
+1. **Human Error:**
+   - The staff member accidentally selected the wrong email distribution list due to a naming similarity between "admin-team" and "freshman-students."
+
+2. **Lack of Email Sending Safeguards:**
+   - The university email system does not include sufficient safeguards (e.g., confirmation prompts or recipient list validation) to prevent accidental misdelivery of emails.
+
+3. **Inadequate Onboarding:**
+   - The newly hired staff member was not adequately trained on email communication protocols, including the use of internal and external mailing lists.
+
+---
+
+## 4. Immediate Actions Taken
+
+Upon discovery of the error, the following steps were taken to mitigate its impact:
+
+- **Clarification Email Sent:**
+  - A follow-up email was sent to the affected students within 30 minutes to clarify the mistake and assure them that the email was sent in error.
+  - Subject Line: "Correction: Email Sent in Error"
+  - Content:
+    > Dear Students,
+    > 
+    > Earlier today, you may have received an email titled "Orientation Logistics — Internal Notes." Please disregard this email, as it was sent to you in error. We apologize for any confusion caused and thank you for your understanding.
+    > 
+    > Best regards,  
+    > [Communications Team]
+
+- **Internal Notification:**
+  - The administration team was informed immediately about the incident to ensure alignment on follow-up actions.
+
+- **Attachment Review:**
+  - The spreadsheet attachment was reviewed to confirm that no highly sensitive or confidential information was included. While the content was internal, it was deemed low risk.
+
+---
+
+## 5. Recommendations for Future Prevention
+
+To prevent similar incidents from occurring, the following measures are recommended:
+
+### 5.1 Technical Safeguards
+- **Email Confirmation Prompts:**
+  - Implement a system that requires senders to confirm recipient lists for emails sent to large groups or external lists.
+- **Recipient List Validation:**
+  - Add a feature to flag or warn users when sending emails to groups with similar names (e.g., "admin-team" vs. "freshman-students").
+- **Access Restrictions:**
+  - Restrict access to certain mailing lists (e.g., student groups) to prevent unauthorized use by newly onboarded staff members.
+
+### 5.2 Training and Onboarding
+- **Mandatory Email Protocol Training:**
+  - Include email communication best practices in the onboarding process for all staff.
+  - Provide examples of common errors and how to avoid them.
+- **Internal Communication Guidelines:**
+  - Develop a quick-reference guide for internal communications, outlining appropriate use of email distribution lists.
+
+### 5.3 Process Improvements
+- **Pre-Send Review:**
+  - Encourage staff to double-check recipient lists and attachments before sending emails.
+- **Internal Communication Channels:**
+  - Use collaboration tools (e.g., Slack, Teams) for internal updates to reduce reliance on email for sensitive information.
+
+---
+
+## 6. Lessons Learned
+
+This incident highlights the importance of robust email communication protocols, especially in an environment where internal and external stakeholders frequently overlap. While the impact of this specific event was minimal, it serves as a valuable reminder to proactively address potential vulnerabilities in our communication systems.
+
+---
+
+## 7. Conclusion
+
+The accidental email sent to students on April 2, 2026, was the result of human error exacerbated by insufficient technical safeguards and training. Immediate corrective actions mitigated the impact, and a set of recommendations has been proposed to prevent future occurrences. By implementing these measures, the university can strengthen its communication systems and reduce the risk of similar incidents moving forward.
+
+---
+
+**Prepared by:**  
+Joy Okafor  
+Internal Communications Lead
+
+---

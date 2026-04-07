@@ -1,0 +1,115 @@
+# Log Report: Power Outlet Issue in Main Orientation Hall
+
+**Author:** Joseph Okonkwo  
+**Date:** 2026-04-05  
+
+## Context
+On the morning of April 5, 2026, during final preparations for the orientation event scheduled to take place in the main orientation hall, a technical issue was identified involving a malfunctioning power outlet. This problem posed a significant risk to the smooth operation of the event, particularly in powering critical audiovisual equipment required for the dean of engineering's opening lecture. This report details the identification, escalation, resolution, and follow-up actions associated with the issue.
+
+---
+
+## Issue Identification
+
+### **Time of Discovery:**
+- **08:15 AM** (local time)
+
+### **Discovered By:**
+- Logistics team during a routine pre-event equipment check.
+
+### **Nature of the Issue:**
+- A power outlet located near the stage of the main orientation hall was found to be non-functional.
+- This outlet was a key power source for:
+  - The primary projector.
+  - A set of wireless microphone receivers.
+  - A charging station for portable devices (used by event staff).
+
+### **Immediate Impact:**
+- Risk of delay in setting up audiovisual equipment.
+- Potential disruption to the dean's opening lecture.
+- Reduced operational capacity for event staff requiring portable device charging.
+
+---
+
+## Escalation and Communication
+
+### **Timeline of Escalation:**
+1. **08:20 AM:** The logistics team reported the issue to the facilities and maintenance department.
+2. **08:25 AM:** The head of facilities dispatched an electrician to assess the problem.
+3. **08:30 AM:** The logistics team informed the event coordinator to prepare contingency plans in case of prolonged downtime.
+
+### **Stakeholders Notified:**
+- Facilities and Maintenance Department
+- Event Coordinator
+- IT Team (to ensure backup audiovisual systems were ready)
+- Dean of Engineering (as the primary speaker impacted by the issue)
+
+---
+
+## Resolution
+
+### **Technical Diagnosis:**
+- Upon inspection, the electrician identified that the issue was caused by a tripped circuit breaker connected to the power outlet.
+- Further investigation revealed the breaker had been overloaded due to excessive power draw during the previous day's equipment testing.
+
+### **Steps Taken to Resolve the Issue:**
+1. **08:35 AM:** The circuit breaker was reset.
+2. **08:40 AM:** The electrician tested the outlet to confirm functionality.
+3. **08:45 AM:** The logistics team reconnected and tested all audiovisual equipment.
+4. **08:50 AM:** The IT team conducted a system check to ensure all equipment was operational.
+
+### **Resolution Time:**
+- The issue was fully resolved by **08:50 AM**, within 35 minutes of discovery.
+
+---
+
+## Follow-Up Actions
+
+### **Preventative Measures:**
+- The facilities department committed to reviewing and updating the load distribution for power circuits in the main orientation hall before future events.
+- The logistics team was instructed to stagger equipment testing to avoid overloading circuits.
+
+### **Backup Plans:**
+- Portable power banks and extension cords were prepared and positioned as backup solutions in case of future power issues.
+- The IT team was tasked with preparing a secondary projector and wireless microphone system to ensure redundancy.
+
+### **Documentation:**
+- The facilities department logged the incident in their maintenance tracker for future reference.
+- The logistics team updated the event preparation guide to include a mandatory power load assessment step.
+
+---
+
+## Lessons Learned
+
+### **Key Takeaways:**
+- Early detection of technical issues is critical for smooth event execution.
+- Clear and immediate communication between logistics, facilities, and IT teams minimizes downtime.
+- Backup systems and contingency plans are essential for mitigating risks associated with equipment failures.
+
+---
+
+## Acknowledgments
+
+Special thanks to the following teams for their swift response:
+- **Facilities and Maintenance Department:** For quickly diagnosing and resolving the issue.
+- **IT Department:** For ensuring all audiovisual systems were functional post-resolution.
+- **Logistics Team:** For identifying the issue early and coordinating effectively across departments.
+
+---
+
+## Appendix
+
+### **Timeline Summary:**
+- **08:15 AM:** Issue discovered.
+- **08:20 AM:** Reported to facilities.
+- **08:25 AM:** Electrician dispatched.
+- **08:35 AM:** Circuit breaker reset.
+- **08:40 AM:** Outlet functionality confirmed.
+- **08:45 AM:** Equipment reconnected and tested.
+- **08:50 AM:** Issue fully resolved.
+
+### **Contact Information:**
+- **Facilities and Maintenance Department:** facilities@university.edu
+- **Logistics Team:** logistics@university.edu
+- **IT Department:** it@university.edu
+
+---

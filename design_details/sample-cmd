@@ -1,0 +1,20 @@
+set -a && source .env && set +a && \
+./rust/target/release/eabench generate \
+  --company "Staff Office The University of Cambford" \
+  --industry "High Education" \
+  --description "The staff office in charge of University Administration at The University of Cambford" \
+  --events "Administration for new students onboarding" "preparing the orientation day for the new enrollment" "dean of engineering to give an opening lecture for STEM majors" "re-admissions of the second year, third year, and the final year students" "RA & TA studentship" \
+  --size medium \
+  --num-users 20 \
+  --days 14 \
+  --provider azure
+
+  python run_eval.py \
+    --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
+    --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \
+    --agent   ../examples/agents/react_agent.yaml
+
+  python run_eval.py \
+    --tenant  ../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
+    --eval    ../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
+    --agent   ../examples/agents/react_agent.yaml

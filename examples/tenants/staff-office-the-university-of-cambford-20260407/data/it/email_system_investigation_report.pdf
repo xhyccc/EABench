@@ -1,0 +1,131 @@
+# Investigation Report into Duplicate Re-Admissions Emails
+
+## Author
+Karan Singh
+
+## Date
+2026-04-03
+
+---
+
+## Executive Summary
+
+On 2026-04-03, a student flagged an issue regarding duplicate re-admissions emails. This prompted an investigation by the IT department to identify and resolve the root cause. The duplicate emails posed a risk of confusion and potential disruption to the re-admissions process, especially given the proximity of the upcoming orientation day.
+
+This report outlines the investigation process, findings, and proposed recommendations to prevent similar occurrences in the future. The issue was traced to a combination of a scheduling misconfiguration in the email system and incomplete testing during the recent portal updates.
+
+---
+
+## Context
+
+### Background
+The re-admissions portal serves second-year and final-year students, allowing them to confirm enrollment, submit payment, and access relevant academic information. As part of the orientation day preparations, the IT team recently conducted updates to ensure portal stability and improved email communication.
+
+### Recent History
+- **2026-03-31**: Final testing of the re-admissions portal revealed a minor glitch in payment confirmation emails, which was patched.
+- **2026-04-01**: A typo was fixed in the payment confirmation email footer.
+- **2026-04-02**: A student reported an issue with a QR code in the welcome pamphlet, which was quickly resolved.
+- **2026-04-03**: A complaint was submitted by a student regarding duplicate re-admissions emails.
+
+---
+
+## Investigation Details
+
+### Incident Description
+- **Issue Reported**: A student received duplicate re-admissions emails.
+- **Impact**: Potential confusion and unnecessary concern among students, leading to increased inquiries to the administration team.
+
+### Investigation Process
+1. **Initial Assessment**
+   - Verified the student’s email log.
+   - Checked timestamps and content of the duplicate emails.
+
+2. **System Audit**
+   - Reviewed the email scheduling module in the re-admissions system.
+   - Inspected recent patches and updates applied to the portal.
+
+3. **Testing and Simulation**
+   - Simulated email generation under various conditions.
+   - Compared results with the email logs.
+
+4. **Root Cause Analysis**
+   - Identified a misconfiguration in the email queue scheduling.
+   - Discovered insufficient error handling for duplicate triggers.
+
+---
+
+## Findings
+
+### Key Issues Identified
+- **Email Queue Scheduling Misconfiguration**
+  - A recent update to the email scheduling module inadvertently allowed duplicate triggers under specific conditions.
+  - The duplicate emails were sent when the system incorrectly re-processed a batch due to a timeout error.
+
+- **Testing Oversight**
+  - The patch applied on 2026-03-31 did not include comprehensive testing for edge cases related to email generation.
+  - The testing phase overlooked scenarios involving high server load, which contributed to the timeout error.
+
+### Additional Observations
+- **Student Communication Volume**
+  - A higher-than-usual volume of re-admissions emails was sent due to increased enrollment numbers, highlighting scalability issues.
+
+- **Documentation Gaps**
+  - The system documentation lacked detailed guidelines for email scheduling configurations, leading to errors during updates.
+
+---
+
+## Recommendations
+
+### Immediate Actions
+- **Fix Email Scheduling Module**
+  - Correct the misconfiguration to prevent duplicate triggers.
+  - Add safeguards to detect and reject duplicate batch processing.
+
+- **Enhanced Error Logging**
+  - Improve logging mechanisms to capture detailed information about timeout errors and batch processing anomalies.
+
+### Long-Term Solutions
+- **Comprehensive Testing Protocol**
+  - Implement rigorous testing procedures for all system updates, including edge case scenarios.
+  - Allocate additional resources for quality assurance.
+
+- **Scalability Improvements**
+  - Upgrade server capacity to handle peak loads during high-volume email distribution periods.
+  - Optimize email generation algorithms for performance.
+
+- **Documentation Updates**
+  - Revise system documentation to include detailed email scheduling configurations and troubleshooting steps.
+
+### Communication Strategy
+- **Student Notification**
+  - Send an apology email to affected students, clarifying the issue and ensuring them that it has been resolved.
+
+- **Staff Training**
+  - Conduct training sessions for IT staff on email system configurations and error handling.
+
+---
+
+## Conclusion
+
+The investigation revealed that the duplicate re-admissions emails were caused by a combination of a misconfiguration in the email scheduling module and insufficient testing during recent portal updates. Immediate actions have been taken to fix the issue, and long-term strategies are proposed to prevent similar occurrences in the future.
+
+By addressing the root causes and implementing the recommendations outlined in this report, the IT team aims to improve the reliability and scalability of the re-admissions portal, ensuring a seamless experience for students.
+
+---
+
+## Appendix
+
+### Timeline of Events
+- **2026-03-31**: Patch applied to fix payment confirmation email glitch.
+- **2026-04-01**: Typo corrected in email footer.
+- **2026-04-03**: Duplicate email issue reported by a student.
+
+### Key Metrics
+- **Affected Students**: 1 (confirmed case)
+- **Duplicate Emails Sent**: 2
+- **Resolution Time**: 3 hours
+
+### Contact Information
+- **Author**: Karan Singh
+- **Department**: IT
+- **Email**: karan.singh@university.edu

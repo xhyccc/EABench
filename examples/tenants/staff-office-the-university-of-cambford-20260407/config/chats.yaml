@@ -1,0 +1,3133 @@
+- id: re_admissions_glitch_20260324
+  messages:
+  - content: Hey Chi, did you see the glitch this afternoon on the re-admissions portal? 😬
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:32:00Z
+    to_user: ktanaka
+  - content: Yeah, just got off a call about it. What a mess. 😩
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:33:12Z
+    to_user: ktanaka
+  - content: Do we know what caused it? I couldn’t log in to test earlier.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:34:45Z
+    to_user: ktanaka
+  - content: Apparently, it was a validation error with the student ID field. Some IDs weren’t being recognized.
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:35:30Z
+    to_user: ktanaka
+  - content: Hmm, weird. Is it fixed now? 🤔
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:36:10Z
+    to_user: ktanaka
+  - content: IT says they patched it, but can you double-check? I’m swamped with follow-ups for flagged RA/TA apps.
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:37:18Z
+    to_user: ktanaka
+  - content: Sure, I’ll take a look. One sec.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:37:55Z
+    to_user: ktanaka
+  - content: Hmm, I’m still seeing errors on my end. Did they push the update live yet? 🤷‍♂️
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:42:07Z
+    to_user: ktanaka
+  - content: Wait, really? Let me ping them. Hold tight! 🚨
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:42:55Z
+    to_user: ktanaka
+  - content: Okay, just heard back. They’re saying it’s live... Can you refresh and try again?
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:45:21Z
+    to_user: ktanaka
+  - content: Alright, refreshing now... 🤞
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:45:50Z
+    to_user: ktanaka
+  - content: Looks good! No errors this time. 🎉
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:47:03Z
+    to_user: ktanaka
+  - content: Phew, finally! Thanks for checking. 🙏
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:47:28Z
+    to_user: ktanaka
+  - content: No problem. Do you want me to draft a quick email update for the students affected?
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:48:10Z
+    to_user: ktanaka
+  - content: That’d be great, thanks! Keep it short and sweet. 😊
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:48:50Z
+    to_user: ktanaka
+  - content: Will do. Sending it over for your review in a bit.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:49:15Z
+    to_user: ktanaka
+  - content: Perfect. You’re a lifesaver, Kenji! 🦸‍♂️
+    from_user: chi_nguyen
+    timestamp: 2026-03-24T14:49:40Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - cnguyen
+- id: engineering_lecture_review_20260324
+  messages:
+  - content: Hey Hiroshi, did you see the dean’s lecture got approved? 👏
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:03:12Z
+    to_user: ktanaka
+  - content: Yeah, just saw the update! 🎉 Did you get a chance to read the final draft?
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:03:35Z
+    to_user: ktanaka
+  - content: Not yet... was dealing with the re-admissions portal issue earlier 😅
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:04:10Z
+    to_user: ktanaka
+  - content: Oh yeah, heard about that. Is it fixed now?
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:04:28Z
+    to_user: ktanaka
+  - content: Yeah, back up and running. IT team was fast this time! 🚀
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:04:50Z
+    to_user: ktanaka
+  - content: Nice. Anyway, the lecture draft looks solid. Some good anecdotes in there. 📚
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:05:22Z
+    to_user: ktanaka
+  - content: Oh really? Can you send me the link? Can’t find it on the shared drive. 🤔
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:05:43Z
+    to_user: ktanaka
+  - content: It should be under the ‘Orientation 2026’ folder... wait, let me check. 🕵️
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:06:02Z
+    to_user: ktanaka
+  - content: Hmm, weird, it’s not there either. Did someone move it? 😐
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:06:45Z
+    to_user: ktanaka
+  - content: Ugh, maybe. Let me ask the admin team real quick. Hold on. 🕒
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:07:10Z
+    to_user: ktanaka
+  - content: Just heard back—they’re uploading it again. Should be there in a few mins. 👍
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:09:34Z
+    to_user: ktanaka
+  - content: Cool, I’ll check again in a bit. Btw, did you see the flagged RA/TA apps? Admin’s been chasing people all day. 📨
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:09:58Z
+    to_user: ktanaka
+  - content: Yeah, saw that. Hope they get it sorted before deadlines... 😬
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:10:20Z
+    to_user: ktanaka
+  - content: Same. Anyway, let me know when the lecture file is back. I want your take on the opening joke. 😄
+    from_user: hiroshi_matsuda
+    timestamp: 2026-03-24T14:10:45Z
+    to_user: ktanaka
+  - content: Will do! Hope it’s actually funny this time. 😂
+    from_user: kenji_tanaka
+    timestamp: 2026-03-24T14:11:03Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - hmatsuda
+- id: welcome_email_revision
+  messages:
+  - content: Hey Chi, did you see the dean’s request about the welcome email? 📨
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:12:00Z
+    to_user: mgarcia
+  - content: Morning, Maria! Just saw it now. He wants a personal note, right? Did we get the finalized text from him?
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:13:35Z
+    to_user: mgarcia
+  - content: Yeah, it’s in the shared folder. Let me grab the link for you. One sec! 🔗
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:14:10Z
+    to_user: mgarcia
+  - content: 'Here you go: [link] Can you check if the tone works with the rest of the email draft? 🤔'
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:15:02Z
+    to_user: mgarcia
+  - content: Got it, thanks! Looking now… hold on.
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:15:30Z
+    to_user: mgarcia
+  - content: Hmm, the note feels a bit formal compared to the rest of the text. Should we tweak it to make it more welcoming? 🤷‍♀️
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:17:05Z
+    to_user: mgarcia
+  - content: Agreed. Maybe something like ‘We’re thrilled to have you join us’? Adds some warmth! 😊
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:18:32Z
+    to_user: mgarcia
+  - content: Love that! I’ll adjust the wording now. Did we finalize the subject line for the email btw? Didn’t see it in the draft. 🤔
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:19:15Z
+    to_user: mgarcia
+  - content: Oh shoot, I thought you were handling the subject line! 😅
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:20:01Z
+    to_user: mgarcia
+  - content: Haha, no worries! How about something simple like ‘Welcome to the Engineering Faculty’? Or is that too generic? 🤷
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:20:45Z
+    to_user: mgarcia
+  - content: Hmm, maybe ‘Excited to Welcome You to Engineering!’? Adds a little energy! 🚀
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:21:20Z
+    to_user: mgarcia
+  - content: Perfect! I’ll update the subject line and tweak the dean’s note now. Can you double-check the rest of the email for typos? 👀
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:22:10Z
+    to_user: mgarcia
+  - content: On it! I’ll ping you if I spot anything. 👌
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:22:35Z
+    to_user: mgarcia
+  - content: Thanks! BTW, did you confirm the send date with the team? I think orientation starts next week, right? 🗓️
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:23:15Z
+    to_user: mgarcia
+  - content: Yep, confirmed yesterday! Email goes out Friday morning, bright and early. 🌅
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:24:00Z
+    to_user: mgarcia
+  - content: Perfect timing! Okay, updates done. Can you take one last look before I save the final version? 🤞
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:25:10Z
+    to_user: mgarcia
+  - content: Will do! Give me a sec. 🕒
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:25:30Z
+    to_user: mgarcia
+  - content: Looks good to me! We’re all set. 🙌
+    from_user: Maria Garcia
+    timestamp: 2026-03-25T09:27:45Z
+    to_user: mgarcia
+  - content: Awesome! Thanks, Maria. Let’s lock it in. 😎
+    from_user: Chi Nguyen
+    timestamp: 2026-03-25T09:28:15Z
+    to_user: mgarcia
+  participants:
+  - mgarcia
+  - cnguyen
+- id: chat_006
+  messages:
+  - content: Yasmin, did you see the email about the flagged applications? Another batch just came through. 😩
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:12:03Z
+    to_user: lhaddad
+  - content: Ugh, yeah. Just saw it. Do we know how many this time?
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:12:35Z
+    to_user: lhaddad
+  - content: Looks like 10 more? Mostly recommendation letter discrepancies again. 😕
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:13:02Z
+    to_user: lhaddad
+  - content: Can you forward me the list? I want to cross-check with what was flagged earlier.
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:13:25Z
+    to_user: lhaddad
+  - content: 'Already did! Subject line: ''March 26 Flagged Apps''.'
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:13:48Z
+    to_user: lhaddad
+  - content: Got it. Wait... why is the same applicant from Tuesday flagged AGAIN? 🤔
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:14:21Z
+    to_user: lhaddad
+  - content: Seriously? Which one? 😤
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:14:40Z
+    to_user: lhaddad
+  - content: Ahmed R. His letter was missing last time, but now it's marked as 'unverified signature'.
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:15:08Z
+    to_user: lhaddad
+  - content: Oh no, that sounds like a system glitch. Let me check the portal logs.
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:15:33Z
+    to_user: lhaddad
+  - content: Thanks. Also, should we notify him again? Or give IT a chance to fix this first?
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:16:02Z
+    to_user: lhaddad
+  - content: Let’s wait for IT. If it’s their fault, no point in stressing the applicants. 😊
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:16:25Z
+    to_user: lhaddad
+  - content: Agreed. BTW, did you notice some letters have mismatched dates? Like, signed before the application deadline. 🤨
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:17:12Z
+    to_user: lhaddad
+  - content: Oh wow, I missed that. Let me pull those up now.
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:17:39Z
+    to_user: lhaddad
+  - content: Check the ones from Dr. Patel. I think there are 3 like that. 🤷‍♀️
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:18:00Z
+    to_user: lhaddad
+  - content: Found them. That’s odd. Could be a typo? I’ll reach out to his office for clarification.
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:18:27Z
+    to_user: lhaddad
+  - content: Cool. Let me know what they say. Oh, and did IT ever confirm the portal is stable? Just paranoid now. 😅
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:19:05Z
+    to_user: lhaddad
+  - content: They said it’s fixed yesterday, but I’ll double-check with them after this. 😬
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:19:30Z
+    to_user: lhaddad
+  - content: Thanks! Let’s aim to resolve these by tomorrow. Orientation day is already chaotic enough. 🙄
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:19:57Z
+    to_user: lhaddad
+  - content: Tell me about it. I’m still recovering from the last-minute schedule updates. 😩
+    from_user: Layla Haddad
+    timestamp: 2026-03-26T14:20:15Z
+    to_user: lhaddad
+  - content: Haha, hang in there. We’ve got this. 💪
+    from_user: Yasmin Abdul
+    timestamp: 2026-03-26T14:20:36Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - yabdul
+- id: chat_007
+  messages:
+  - content: Hey Chi, did you see the final schedule for the welcome email? Is noon confirmed?
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:15:00Z
+    to_user: ktanaka
+  - content: Morning, Kenji! Yep, it’s confirmed for noon. The team finalized it yesterday. 👍
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:16:45Z
+    to_user: ktanaka
+  - content: Perfect. Just wanted to double-check since there were so many changes yesterday. 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:17:30Z
+    to_user: ktanaka
+  - content: Haha, tell me about it. The dean’s last-minute note had everyone scrambling. 😵‍💫
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:18:10Z
+    to_user: ktanaka
+  - content: True! BTW, can you check if the email includes the updated orientation schedule? The registrar sent that adjustment late last night.
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:19:00Z
+    to_user: ktanaka
+  - content: Wait—updated schedule? Didn’t see that. 😳 Do you have the details handy?
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:19:45Z
+    to_user: ktanaka
+  - content: Ugh, thought someone looped you in. Hold on, let me forward it. It came in at like 10 PM. 🙄
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:20:30Z
+    to_user: ktanaka
+  - content: Got it! Checking now. One sec. 🕵️‍♀️
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:21:10Z
+    to_user: ktanaka
+  - content: Okay, looks like the schedule tweak doesn’t affect the email timing. We’re still good for noon. 🎉
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:23:00Z
+    to_user: ktanaka
+  - content: Phew, thanks for confirming. Can you let the comms team know, just in case they missed it?
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:23:45Z
+    to_user: ktanaka
+  - content: Will do. They’ve been super thorough, but always better to be safe. 🙌
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:24:15Z
+    to_user: ktanaka
+  - content: Agreed. Once the email goes out, let’s double-check the formatting too—no typos this time. 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:25:00Z
+    to_user: ktanaka
+  - content: Haha, don’t remind me about last semester’s disaster. 😭 I’ll keep an eye out!
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:25:45Z
+    to_user: ktanaka
+  - content: You’re the best, Chi. Thanks for staying on top of this! 🙏
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-26T09:26:10Z
+    to_user: ktanaka
+  - content: Anytime, Kenji! Let me know if anything else pops up. 🚀
+    from_user: Chi Nguyen
+    timestamp: 2026-03-26T09:26:35Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - cnguyen
+- id: chat_008
+  messages:
+  - content: Hey François, did you see the email about the pamphlet error? 🙈
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:15:00Z
+    to_user: fdubois
+  - content: Just saw it. Ugh, I thought we triple-checked those. What's the exact issue?
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:16:12Z
+    to_user: fdubois
+  - content: The event timings for the breakout sessions—wrong by 30 mins. 😩
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:17:03Z
+    to_user: fdubois
+  - content: Oh no. That's going to confuse everyone. Did the printer confirm they can fix it today?
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:18:22Z
+    to_user: fdubois
+  - content: Not yet. I sent them an email but no reply yet. Can you call them? 📞
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:19:50Z
+    to_user: fdubois
+  - content: On it. BRB.
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:20:10Z
+    to_user: fdubois
+  - content: Okay, spoke to them. They said they can reprint by 3 PM if we send the corrected file ASAP.
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:35:45Z
+    to_user: fdubois
+  - content: Perfect. I'll fix the file now and send it over. Can you double-check it before I send? 👀
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:36:30Z
+    to_user: fdubois
+  - content: Sure. Send it my way when ready.
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:37:02Z
+    to_user: fdubois
+  - content: 'Done! Check your inbox. Subject: ''Pamphlet Update FINAL''.'
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:45:18Z
+    to_user: fdubois
+  - content: Got it. Reviewing now... hold on.
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:46:50Z
+    to_user: fdubois
+  - content: Looks good to me. The timings are fixed. Sending it to the printer now. 👍
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:50:20Z
+    to_user: fdubois
+  - content: Amazing, François! You're a lifesaver. 🙌 I'll let the staff know about the new ETA.
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:51:05Z
+    to_user: fdubois
+  - content: Teamwork makes the dream work! 😂 Let me know if anything else comes up.
+    from_user: francois_dubois
+    timestamp: 2026-03-26T09:52:30Z
+    to_user: fdubois
+  - content: Will do! Thanks again. 😊
+    from_user: aisha_kabir
+    timestamp: 2026-03-26T09:53:10Z
+    to_user: fdubois
+  participants:
+  - fdubois
+  - akabir
+- id: chat_009
+  messages:
+  - content: François, did you see the dean’s request for more AV equipment? 😅
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:02:34Z
+    to_user: hmatsuda
+  - content: Just saw it now... Do we even have extra equipment available? 😬
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:03:12Z
+    to_user: hmatsuda
+  - content: Checking inventory now. Can you confirm what exactly he needs? Projectors, mics, speakers?
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:04:01Z
+    to_user: hmatsuda
+  - content: I think it’s projectors and an extra wireless mic. Let me double-check his email.
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:04:23Z
+    to_user: hmatsuda
+  - content: Got it. Also, do you know if the main auditorium setup is still good after that glitch yesterday? 🤔
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:05:10Z
+    to_user: hmatsuda
+  - content: Ugh, forgot to check that. Give me a sec. 🙄
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:05:32Z
+    to_user: hmatsuda
+  - content: Okay, auditorium setup looks fine. IT confirmed everything is stable now. 👍
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:07:01Z
+    to_user: hmatsuda
+  - content: Good news! We have 2 extra projectors available, but only 1 wireless mic. Will that work?
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:07:45Z
+    to_user: hmatsuda
+  - content: Hmm, not sure. The dean mentioned wanting 2 wireless mics. Can you check if we can borrow one from another department?
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:08:30Z
+    to_user: hmatsuda
+  - content: Borrowing might work. I’ll ping the media lab—they’re usually pretty chill about lending equipment. 👍
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:09:12Z
+    to_user: hmatsuda
+  - content: Perfect. Let me know what they say. Also, can you check if the cables for the projectors are included?
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:09:57Z
+    to_user: hmatsuda
+  - content: Good call. I’ll double-check that while waiting for the media lab to respond.
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:10:15Z
+    to_user: hmatsuda
+  - content: Got an update—dean needs everything set up by 8 AM sharp tomorrow. 😳
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:11:02Z
+    to_user: hmatsuda
+  - content: 8 AM?? That’s tight. We’ll need to start setting up tonight. Let’s coordinate with facilities. 🏃
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:11:34Z
+    to_user: hmatsuda
+  - content: Agreed. I’ll contact facilities now. You focus on the equipment. Teamwork! 💪
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:12:12Z
+    to_user: hmatsuda
+  - content: Media lab says we can borrow 1 mic. Crisis averted! 😅
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-03-26T14:13:05Z
+    to_user: hmatsuda
+  - content: Amazing! You’re a lifesaver, Hiroshi. Let’s get this done. 🙌
+    from_user: François Dubois
+    timestamp: 2026-03-26T14:13:45Z
+    to_user: hmatsuda
+  participants:
+  - hmatsuda
+  - fdubois
+- id: chat_010
+  messages:
+  - content: Hey Joy, did you see the latest batch of flagged RA/TA applications? 😕
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:15:32Z
+    to_user: smensah
+  - content: Morning, Samuel! Yep, saw it. The discrepancies in the recommendation letters, right?
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:16:04Z
+    to_user: smensah
+  - content: Exactly. We need to send follow-ups ASAP. Did the admin team share the full list with you?
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:16:27Z
+    to_user: smensah
+  - content: Hmm, let me check my inbox. Hold on. 💻
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:16:45Z
+    to_user: smensah
+  - content: Got it. It's in the email from Sarah, sent at 9:45 AM. Did you get it too?
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:17:12Z
+    to_user: smensah
+  - content: Uh, no. Forward it to me, please. My inbox is a mess right now. 🙈
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:17:40Z
+    to_user: smensah
+  - content: LOL, on it. Sent! ✅
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:18:03Z
+    to_user: smensah
+  - content: Got it. Thanks! Okay, I'll draft a follow-up email template for the flagged apps. Can you double-check the application IDs from the document before I send it out?
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:18:48Z
+    to_user: smensah
+  - content: Sure thing. Give me 10 mins. 🕒
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:19:15Z
+    to_user: smensah
+  - content: Perfect. Also, did we confirm if the dean's office is okay with delaying decisions for these cases?
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:20:02Z
+    to_user: smensah
+  - content: 'Hmm, not sure. Let me check with Sarah after double-checking the IDs. Multitasking mode: ON. 😅'
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:20:47Z
+    to_user: smensah
+  - content: LOL, you're the best. Ping me if you need anything! 👍
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:21:10Z
+    to_user: smensah
+  - content: Will do! BTW, did you notice a typo in Sarah's email? She referred to TA apps as 'RA' in one of the lines. 🙃
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:22:34Z
+    to_user: smensah
+  - content: Oh no, really? 😬 I'll flag it for her after we're done with this. Thanks for catching that!
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:23:10Z
+    to_user: smensah
+  - content: No worries. Okay, IDs are all good. Sending you the checked list now. 📤
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:25:42Z
+    to_user: smensah
+  - content: You're a lifesaver, Joy! Drafting the follow-up email now. Let me know if Sarah gets back on the dean's approval. 🙏
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:26:30Z
+    to_user: smensah
+  - content: Will do. Let’s get this sorted before lunch, yeah? 🍴
+    from_user: Joy Okafor
+    timestamp: 2026-03-26T10:27:05Z
+    to_user: smensah
+  - content: You read my mind. Let’s go! 🚀
+    from_user: Samuel Mensah
+    timestamp: 2026-03-26T10:27:25Z
+    to_user: smensah
+  participants:
+  - smensah
+  - jokafor
+- id: chat_003
+  messages:
+  - content: Hey Layla, did you see the latest batch of flagged RA/TA apps? Academic transcripts again. 🤦‍♀️
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:15:00Z
+    to_user: drossi
+  - content: Morning, Daniela! Just saw your note. Ugh, yeah, it's becoming a trend. Did we already send follow-ups for these?
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:16:45Z
+    to_user: drossi
+  - content: Not yet. Wanted to check if we need to organize another round of emails or escalate somehow? Thoughts?
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:17:30Z
+    to_user: drossi
+  - content: Hmm, let me check the tracker and see how many are still pending. Can you give me 5 mins?
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:18:10Z
+    to_user: drossi
+  - content: Sure, take your time. 👍
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:18:25Z
+    to_user: drossi
+  - content: Okay, just checked. We've got 12 flagged apps still unresolved. 😬 Do we know if these are high-priority roles?
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:25:00Z
+    to_user: drossi
+  - content: Let me double-check the list... Hold on.
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:25:30Z
+    to_user: drossi
+  - content: Yep, 5 of them are for critical TA positions in Engineering. The rest are RAs for smaller projects.
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:28:50Z
+    to_user: drossi
+  - content: Got it. Should we prioritize the TA apps then? Maybe escalate those to the Dean if needed?
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:30:10Z
+    to_user: drossi
+  - content: Yeah, makes sense. Can you draft an email for the TAs? I’ll handle the follow-ups for the RAs.
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:31:45Z
+    to_user: drossi
+  - content: On it. 😊 Btw, did you see the orientation pamphlet drama earlier? Printer was acting up again. 🙃
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:33:00Z
+    to_user: drossi
+  - content: Oh no, not the printer! Is it fixed now? We can’t catch a break this week. 😩
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:33:45Z
+    to_user: drossi
+  - content: Yep, IT swooped in and saved the day. Pamphlets should be done soon, thankfully. 🤞
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:34:30Z
+    to_user: drossi
+  - content: Phew! Okay, sending out my RA follow-up emails now. Ping me if you need anything. 💻
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:35:10Z
+    to_user: drossi
+  - content: Will do! Also, could you review my TA draft when I finish? Want to make sure it’s good to go.
+    from_user: Layla Haddad
+    timestamp: 2026-03-27T09:36:00Z
+    to_user: drossi
+  - content: Of course! Send it my way when ready. 👍
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T09:36:30Z
+    to_user: drossi
+  participants:
+  - drossi
+  - lhaddad
+- id: chat_005
+  messages:
+  - content: Hey Daniela, did you see the student ambassador's feedback on the welcome speech? 🤔
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:02:00Z
+    to_user: mgarcia
+  - content: Yeah, just saw it! More 'engaging tone'—what exactly does that mean? 🙄
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:03:12Z
+    to_user: mgarcia
+  - content: Lol, I know. I think they want something less formal. Maybe more stories or jokes? 🤷‍♀️
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:03:45Z
+    to_user: mgarcia
+  - content: Jokes? For 300 new students? That could bomb spectacularly. 😬
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:04:10Z
+    to_user: mgarcia
+  - content: True. Ok, maybe just a warmer intro? Did you check the original draft again?
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:04:35Z
+    to_user: mgarcia
+  - content: Opening it now. Hold on. ⏳
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:05:00Z
+    to_user: mgarcia
+  - content: Ugh, it’s so stiff. ‘Welcome to your academic journey’—who talks like that? 😅
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:06:15Z
+    to_user: mgarcia
+  - content: Exactly! Let’s try something like ‘We’re so excited to have you here. Today marks the start of an amazing chapter.’
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:07:00Z
+    to_user: mgarcia
+  - content: Ooooh, I like that! 💡 Short and warm. What about the middle section though?
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:07:30Z
+    to_user: mgarcia
+  - content: Hmm, maybe we can highlight student resources? Like clubs, tutoring centers, and the café? Everyone loves coffee. ☕
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:08:15Z
+    to_user: mgarcia
+  - content: Good call. And maybe a quick shoutout to the RAs and TAs? They’ve been working hard prepping for this. 🙌
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:09:00Z
+    to_user: mgarcia
+  - content: Oh, for sure. Let’s add that. Ok, I’ll draft something and send it over for review.
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:09:30Z
+    to_user: mgarcia
+  - content: Thanks, Maria! You’re a lifesaver. 🙏 Let me know when it’s ready.
+    from_user: Daniela Rossi
+    timestamp: 2026-03-27T14:10:00Z
+    to_user: mgarcia
+  - content: Will do. Talk soon! 😊
+    from_user: Maria Garcia
+    timestamp: 2026-03-27T14:10:15Z
+    to_user: mgarcia
+  participants:
+  - mgarcia
+  - drossi
+- id: chat2
+  messages:
+  - content: Hey Yolanda, did you see the email about the student uploading the wrong document for their RA app? 📄
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:03:12Z
+    to_user: jokafor
+  - content: Morning! Yeah, just saw it. Did we confirm what they were supposed to upload? 🤔
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:04:25Z
+    to_user: jokafor
+  - content: Not yet, but I think it was supposed to be the statement of intent. Can you double-check the application guidelines? 🙏
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:05:37Z
+    to_user: jokafor
+  - content: On it! Hold on a sec. 🕵️‍♀️
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:06:03Z
+    to_user: jokafor
+  - content: Okay, yep! It’s the statement of intent. They uploaded their resume instead. 😅
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:07:19Z
+    to_user: jokafor
+  - content: Ah, that explains it. Should we email them again or call to clarify? 🤷‍♀️
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:08:02Z
+    to_user: jokafor
+  - content: Email is probably better—written record and all. Do you want me to draft it? 📧
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:08:45Z
+    to_user: jokafor
+  - content: That’d be awesome, thanks! Just keep it clear and friendly. 😊
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:09:12Z
+    to_user: jokafor
+  - content: Will do! BTW, did we get all the flagged apps sorted yesterday? 🧐
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:09:47Z
+    to_user: jokafor
+  - content: I think so? But I’ll double-check with the team later. 🙈
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:10:28Z
+    to_user: jokafor
+  - content: Cool. Email draft is done—sending it your way to review. Let me know if I missed anything! ✍️
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:11:05Z
+    to_user: jokafor
+  - content: Got it! Checking now. 📖
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:11:40Z
+    to_user: jokafor
+  - content: Looks good to me! Maybe add a line asking them to confirm once they've uploaded the correct doc? 🤷‍♀️
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:13:02Z
+    to_user: jokafor
+  - content: Good call. Adding that now! One sec. ⌨️
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:13:35Z
+    to_user: jokafor
+  - content: Done! Sending it out now. Fingers crossed they reply quickly. 🤞
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:14:15Z
+    to_user: jokafor
+  - content: Thanks, Yolanda! You’re a lifesaver. 💖
+    from_user: Joy Okafor
+    timestamp: 2026-03-28T09:14:40Z
+    to_user: jokafor
+  - content: Haha, anytime! 😊 Let me know if anything else pops up.
+    from_user: Yolanda Silva
+    timestamp: 2026-03-28T09:15:05Z
+    to_user: jokafor
+  participants:
+  - jokafor
+  - ysilva
+- id: chat4
+  messages:
+  - content: Hey Layla, did you see the email from Prof. Mendez? 🙃
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:15:23Z
+    to_user: jokonkwo
+  - content: Morning! Hmm, no, what’s up? 👀
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:16:10Z
+    to_user: jokonkwo
+  - content: He wants to add a message to the orientation pamphlets. Super last minute. 😬
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:16:45Z
+    to_user: jokonkwo
+  - content: Oh nooo…again? Didn’t we just finalize those? 😩
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:17:12Z
+    to_user: jokonkwo
+  - content: Yep, but here we are. He sent over a draft. Can you take a look and see if it fits the format? 🙏
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:17:48Z
+    to_user: jokonkwo
+  - content: Sure. Forward it to me?
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:18:05Z
+    to_user: jokonkwo
+  - content: 'Just sent! Subject line: ''Prof. Mendez Message''.'
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:18:30Z
+    to_user: jokonkwo
+  - content: Got it. Checking now.
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:18:45Z
+    to_user: jokonkwo
+  - content: Hmm, it’s a bit long. Doesn’t really match the tone of the other sections either. 🤔
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:20:10Z
+    to_user: jokonkwo
+  - content: Ugh, I was afraid of that. Can we trim it down? Maybe keep it under 100 words?
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:21:02Z
+    to_user: jokonkwo
+  - content: Yeah, I’ll give it a shot. Gimme 10 mins.
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:21:30Z
+    to_user: jokonkwo
+  - content: You’re the best! 🙌
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:21:45Z
+    to_user: jokonkwo
+  - content: LOL, we’ll see. Brb.
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:22:00Z
+    to_user: jokonkwo
+  - content: 'Okay, how’s this: ''Welcome to all new students! The humanities faculty is excited to support your academic journey. Explore our courses to enhance your critical thinking and creativity!'''
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:31:12Z
+    to_user: jokonkwo
+  - content: Perfect! Short, sweet, and to the point. 👌
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:32:00Z
+    to_user: jokonkwo
+  - content: Cool, sending it back to you now. Do you need me to update the pamphlet file too?
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:32:30Z
+    to_user: jokonkwo
+  - content: If you can, that’d be AMAZING. My printer’s acting up again. 😑
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:33:12Z
+    to_user: jokonkwo
+  - content: Ugh, that printer is cursed. 😂 Okay, I’ll handle it. Give me 15 mins.
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:33:45Z
+    to_user: jokonkwo
+  - content: Thank you!! I owe you coffee. ☕
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-28T09:34:10Z
+    to_user: jokonkwo
+  - content: Deal. 😄
+    from_user: Layla Haddad
+    timestamp: 2026-03-28T09:34:25Z
+    to_user: jokonkwo
+  participants:
+  - jokonkwo
+  - lhaddad
+- id: chat_002
+  messages:
+  - content: Karan, did you see the report about the final-year student who can't access the portal? 🖥️
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:15:00Z
+    to_user: ktanaka
+  - content: Yeah, just saw it. Could it be account-specific? 🤔
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:15:35Z
+    to_user: ktanaka
+  - content: Possibly. Can you check their account permissions? I'll look at the logs. 🛠️
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:16:10Z
+    to_user: ktanaka
+  - content: On it. What's the student ID? 🆔
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:16:35Z
+    to_user: ktanaka
+  - content: Let me find it... give me a sec. 🚀
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:17:00Z
+    to_user: ktanaka
+  - content: 'Got it: 20232617. Check if their account is active. 👀'
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:18:12Z
+    to_user: ktanaka
+  - content: Hmm, looks active. No issues with permissions either. 🧐
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:19:20Z
+    to_user: ktanaka
+  - content: Weird. The logs show a timeout error. Could be related to that slowness yesterday? 🕵️
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:20:05Z
+    to_user: ktanaka
+  - content: Possible. Should I test the portal with their account? 🤖
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:20:48Z
+    to_user: ktanaka
+  - content: Yes, try that. I'll cross-check the server-side logs for anomalies. 🔍
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:21:20Z
+    to_user: ktanaka
+  - content: Testing now... wait, the portal's throwing a weird error. 😬
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:22:10Z
+    to_user: ktanaka
+  - content: What's the error? Screenshot? 📸
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:22:30Z
+    to_user: ktanaka
+  - content: Just sent it. Looks like a database connection issue? 🤯
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:23:05Z
+    to_user: ktanaka
+  - content: Yikes. Let me check the DB logs. 😓
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:23:30Z
+    to_user: ktanaka
+  - content: Should I alert the team? Might need a hotfix. 🛑
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:24:00Z
+    to_user: ktanaka
+  - content: Hold off for now. Looks like a specific query issue. 🙄
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:24:35Z
+    to_user: ktanaka
+  - content: Gotcha. Let me know if you need me to patch something. 🧑‍💻
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:25:00Z
+    to_user: ktanaka
+  - content: Wait, I found it. Their account is missing a critical flag. 🤦
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:25:45Z
+    to_user: ktanaka
+  - content: Flag? Which one? 🏴
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:26:15Z
+    to_user: ktanaka
+  - content: The 're_admissions_access' flag. Adding it now. 💾
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:26:50Z
+    to_user: ktanaka
+  - content: Ah, makes sense. Should I ask the student to retry? 🙌
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:27:20Z
+    to_user: ktanaka
+  - content: Yep. Should be fixed. 🤞
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:27:45Z
+    to_user: ktanaka
+  - content: I'll email them now. Fingers crossed. ✉️
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:28:10Z
+    to_user: ktanaka
+  - content: Good work, Karan. Let me know if they reply. 🙏
+    from_user: kenji_tanaka
+    timestamp: 2026-03-29T09:28:30Z
+    to_user: ktanaka
+  - content: Will do. Thanks for catching that flag issue! 💪
+    from_user: karan_singh
+    timestamp: 2026-03-29T09:29:00Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - ksingh
+- id: chat_003
+  messages:
+  - content: Hey François, did you see the dean’s request for another rehearsal? 😅
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:03:12Z
+    to_user: mzhang
+  - content: Morning, Mei! Just saw it now. Do we have a time slot available? 🕒
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:04:25Z
+    to_user: mzhang
+  - content: Checking the schedule now. One sec! 🙏
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:05:03Z
+    to_user: mzhang
+  - content: Okay, we’ve got 3:30–4:30 pm open in the auditorium. Does that work? 🤔
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:07:48Z
+    to_user: mzhang
+  - content: Hmm, let me confirm with him. Hold tight! 👍
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:08:12Z
+    to_user: mzhang
+  - content: Also, did you hear about the name tag delay for orientation? 😬
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:08:45Z
+    to_user: mzhang
+  - content: Ugh, yeah. Admin is scrambling for backups. Hope they sort it out. 😟
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:09:30Z
+    to_user: mzhang
+  - content: Just got word from the dean—3:30 works! Can you book the auditorium? 🙌
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:12:09Z
+    to_user: mzhang
+  - content: On it! 💻
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:12:21Z
+    to_user: mzhang
+  - content: Done! Auditorium is booked for 3:30–4:30. 🎉
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:15:07Z
+    to_user: mzhang
+  - content: Perfect, thanks Mei! BTW, did you check the AV setup? Is it all good? 🎤📽️
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:15:45Z
+    to_user: mzhang
+  - content: Logistics confirmed it yesterday. Extension cords, projector, mic—all good to go! ✅
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:17:03Z
+    to_user: mzhang
+  - content: Awesome! I’ll let the dean know everything’s set. Thanks for the quick turnaround! 🙏
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:18:22Z
+    to_user: mzhang
+  - content: No problem! Let’s hope it all runs smoothly. 🤞
+    from_user: Mei Zhang
+    timestamp: 2026-03-29T10:18:50Z
+    to_user: mzhang
+  - content: Fingers crossed! 😅
+    from_user: François Dubois
+    timestamp: 2026-03-29T10:19:12Z
+    to_user: mzhang
+  participants:
+  - mzhang
+  - fdubois
+- id: chat_004
+  messages:
+  - content: Hey Daniela, did you see the feedback from the new student about the welcome email? 👀
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:15:00Z
+    to_user: cnguyen
+  - content: Yeah, just saw it. They mentioned clarity in the instructions, right?
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:16:10Z
+    to_user: cnguyen
+  - content: Exactly. Something about the wording being a bit confusing for the orientation schedule. Should we tweak it for future drafts? 🤔
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:16:45Z
+    to_user: cnguyen
+  - content: Definitely. I'm thinking we can simplify the phrasing and maybe bold the key info? What do you think?
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:17:30Z
+    to_user: cnguyen
+  - content: Sounds good to me! Can you check if the original draft is saved under 'Orientation_Materials' in the shared drive? I want to make sure we start from the correct version.
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:18:05Z
+    to_user: cnguyen
+  - content: Let me check... brb ✋
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:18:25Z
+    to_user: cnguyen
+  - content: Found it! It's under 'Orientation_Materials > Emails > Final_Draft_2026'.
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:20:00Z
+    to_user: cnguyen
+  - content: Perfect, thanks 😊. Okay, I'll draft the revised version now and share it with you for review.
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:20:35Z
+    to_user: cnguyen
+  - content: Before you do that, can you double-check the phrasing for the dean's personal note? I think it might need to be reworded so it flows better.
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:21:20Z
+    to_user: cnguyen
+  - content: Oh, good catch! I’ll take a look now. Give me a sec. 🕵️‍♀️
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:21:45Z
+    to_user: cnguyen
+  - content: 'Okay, his note says: ''Welcome students to an exciting journey of learning and innovation. Orientation day is just the beginning.'' I think we could make it more engaging.'
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:23:10Z
+    to_user: cnguyen
+  - content: 'Hmm, maybe something like: ''Welcome, future innovators! Orientation day kicks off your exciting journey of discovery and growth.'''
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:24:00Z
+    to_user: cnguyen
+  - content: Love it! 🎉 Adding that in now. Anything else you think needs tweaking?
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:24:35Z
+    to_user: cnguyen
+  - content: Nope, I think that covers it. Once you've added the changes, send the updated draft my way. I'll give it a final look.
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:25:05Z
+    to_user: cnguyen
+  - content: Will do! Check your inbox in 10 mins. 🚀
+    from_user: chi_nguyen
+    timestamp: 2026-03-29T09:25:30Z
+    to_user: cnguyen
+  - content: Thanks, Chi! 🙌
+    from_user: daniela_rossi
+    timestamp: 2026-03-29T09:26:00Z
+    to_user: cnguyen
+  participants:
+  - cnguyen
+  - drossi
+- id: chat_002
+  messages:
+  - content: Hey Karan, did you see the update from IT? They resolved the portal issue for that final-year student. 🎉
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:12:00Z
+    to_user: ktanaka
+  - content: Oh, finally! That was a tricky one. Did they confirm access on the student's end? 🤔
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:13:45Z
+    to_user: ktanaka
+  - content: Hmm, let me check the email trail real quick. Hold on.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:14:12Z
+    to_user: ktanaka
+  - content: Yep, looks like the student confirmed they can log in now. IT really came through. 🙌
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:15:03Z
+    to_user: ktanaka
+  - content: That's a relief! That student was pretty anxious about missing the deadline. 😅
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:15:45Z
+    to_user: ktanaka
+  - content: For sure. Did we update the FAQ page about re-admissions issues? I think there were more inquiries earlier. 📄
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:16:20Z
+    to_user: ktanaka
+  - content: Let me check... Wait, nope, I don't see any updates. Should I ping the web team? 💻
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:17:05Z
+    to_user: ktanaka
+  - content: Yeah, better to get that sorted. It’ll save us more emails later. Send a quick note to them. 👍
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:17:40Z
+    to_user: ktanaka
+  - content: Will do. Oh btw, did you hear about the vegetarian option issue for orientation? Logistics team is scrambling. 🥗
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:18:20Z
+    to_user: ktanaka
+  - content: Ugh, seriously? I thought they had that sorted last week. 🙄
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:18:50Z
+    to_user: ktanaka
+  - content: Nope, seems it slipped through the cracks. They’re placing an urgent order now. Fingers crossed. 🤞
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:19:30Z
+    to_user: ktanaka
+  - content: Classic last-minute chaos. 😬 Anyway, I’ll draft a quick message for the student thanking them for their patience. Anything else we need to include?
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:20:10Z
+    to_user: ktanaka
+  - content: Hmm, maybe remind them about the final submission deadline? Just to cover all bases. 🕒
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:20:40Z
+    to_user: ktanaka
+  - content: Good call. I’ll add that. Sending it now. ✉️
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:21:05Z
+    to_user: ktanaka
+  - content: Great. Thanks, Kenji! Let’s hope we don’t get more portal complaints today. 🤞
+    from_user: karan_singh
+    timestamp: 2026-03-30T09:21:30Z
+    to_user: ktanaka
+  - content: Haha, don’t jinx it! 😅 Chat later.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-30T09:22:00Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - ksingh
+- id: chat_003
+  messages:
+  - content: Hey Joy, did you see the update from the dean? Rehearsal went well! 🎉
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:05:12Z
+    to_user: mgarcia
+  - content: Oh nice! I was worried about the flow of his lecture after his concerns yesterday. Glad it worked out. 😊
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:06:08Z
+    to_user: mgarcia
+  - content: Me too. I think the extra rehearsal really helped. Did you hear about the vegetarian refreshments issue though? 🙃
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:07:19Z
+    to_user: mgarcia
+  - content: Wait, what? No, what happened?? 😳
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:07:52Z
+    to_user: mgarcia
+  - content: Apparently they forgot to include a vegetarian option in the initial order. Logistics team had to make a last-minute call to the caterer. 😅
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:08:34Z
+    to_user: mgarcia
+  - content: Oh nooo. Did they get it sorted though? That's like, super important. 😬
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:09:12Z
+    to_user: mgarcia
+  - content: Yeah, they placed an urgent order this morning. Should be fine now. Hopefully no more surprises like that. 🤞
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:09:58Z
+    to_user: mgarcia
+  - content: Fingers crossed! Oh btw, did you check if the QR code for the campus maps got added to the pamphlets? Communications team mentioned it earlier.
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:10:47Z
+    to_user: mgarcia
+  - content: Oh shoot, I forgot to confirm. Let me check real quick. Hang on. 🏃‍♀️
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:11:23Z
+    to_user: mgarcia
+  - content: No worries, just let me know! 😊
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:11:45Z
+    to_user: mgarcia
+  - content: Okay, just checked. Yup, the QR code is in there! Crisis averted. 😂
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:13:02Z
+    to_user: mgarcia
+  - content: Phew, good catch! That could've been awkward if it was missing. 😅
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:13:45Z
+    to_user: mgarcia
+  - content: Right? Especially with all the feedback about clearer instructions. Anyway, I think we’re in good shape now. 🤓
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:14:22Z
+    to_user: mgarcia
+  - content: Agreed. Let’s just hope no more last-minute surprises pop up before orientation day. 🤞
+    from_user: Joy Okonkwo
+    timestamp: 2026-03-30T14:15:01Z
+    to_user: mgarcia
+  - content: Haha, one can dream! 😂
+    from_user: Maria Garcia
+    timestamp: 2026-03-30T14:15:25Z
+    to_user: mgarcia
+  participants:
+  - mgarcia
+  - jokonkwo
+- id: chat_003
+  messages:
+  - content: Hey Kenji, did you hear about the portal glitch earlier today? 😬
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:05:00Z
+    to_user: drossi
+  - content: Yeah, IT patched it really fast though. What happened exactly? 🤔
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:06:15Z
+    to_user: drossi
+  - content: Payment confirmation emails weren’t going out. Students were panicking, thinking their re-admissions didn't go through. 😵
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:07:42Z
+    to_user: drossi
+  - content: Oh no! That could’ve been a disaster for orientation prep. Did IT say how they caught it? 🛠
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:08:30Z
+    to_user: drossi
+  - content: They spotted it during final testing. Lucky timing, honestly. 🙏
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:09:12Z
+    to_user: drossi
+  - content: Phew, close call. Do you think it affected any enrollment numbers? 📊
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:10:08Z
+    to_user: drossi
+  - content: Not that I’ve heard. IT says the system’s stable now. I’ll check with admin to confirm. 👍
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:11:02Z
+    to_user: drossi
+  - content: Cool. Also, did you see the typo in the welcome email subject line earlier? 😂
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:12:25Z
+    to_user: drossi
+  - content: Oh no, what was it? I thought comms team fixed that? 😅
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:13:10Z
+    to_user: drossi
+  - content: They did! But originally it said 'Welocme to Campus' instead of 'Welcome.' Classic typo. 🤦‍♂️
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:14:35Z
+    to_user: drossi
+  - content: Lol, at least they caught it in time. Imagine the replies they’d get. 🤣
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:15:20Z
+    to_user: drossi
+  - content: For sure. Any updates on the vegetarian snacks request? Catering was scrambling earlier. 🥗
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:16:05Z
+    to_user: drossi
+  - content: Yeah, they added more options. Should be fine now. Crisis averted. 🚨
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:16:55Z
+    to_user: drossi
+  - content: Good to hear. IT, comms, catering… busy day for everyone. 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:17:40Z
+    to_user: drossi
+  - content: Seriously. Let’s hope tomorrow’s smoother. 🤞
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:18:20Z
+    to_user: drossi
+  - content: Agreed. Catch you later, Daniela! 🚀
+    from_user: Kenji Tanaka
+    timestamp: 2026-03-31T13:19:05Z
+    to_user: drossi
+  - content: Later, Kenji! 😊
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T13:19:30Z
+    to_user: drossi
+  participants:
+  - drossi
+  - ktanaka
+- id: chat_005
+  messages:
+  - content: Hey Samuel, did you see the updated dietary preferences? 😬
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:04:12Z
+    to_user: lhaddad
+  - content: Just saw it now. Vegetarian requests are through the roof! Did we get the final count yet? 🤔
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:05:09Z
+    to_user: lhaddad
+  - content: Final count came in 20 mins ago—150 vegetarian, 30 vegan, 10 gluten-free. Catering is scrambling. 😅
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:06:34Z
+    to_user: lhaddad
+  - content: Yikes. Did we already confirm the additional vegetarian snacks? 🥗
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:07:02Z
+    to_user: lhaddad
+  - content: Not yet. I emailed catering, but they said they’re waiting on supplier availability. 😬
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:08:18Z
+    to_user: lhaddad
+  - content: Can you forward me that email? I’ll follow up with them directly.
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:08:43Z
+    to_user: lhaddad
+  - content: Sure, one sec. 🙌
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:09:01Z
+    to_user: lhaddad
+  - content: Sent it. Subject line is 'Dietary Preferences - Urgent Update'.
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:10:22Z
+    to_user: lhaddad
+  - content: Got it. Hmm, wait—are the gluten-free snacks covered? That wasn’t mentioned. 🤔
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:11:06Z
+    to_user: lhaddad
+  - content: Oh shoot, I don’t think so. Let me check the catering order spreadsheet. Hold on. 🙈
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:11:47Z
+    to_user: lhaddad
+  - content: Yep, confirmed—no gluten-free options listed yet. 😬
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:13:02Z
+    to_user: lhaddad
+  - content: Okay, I’ll bring that up with catering too. This is getting messy. 😩
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:13:33Z
+    to_user: lhaddad
+  - content: Agreed. Hopefully they can sort it out quickly. Orientation is too close for this. 😥
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:14:02Z
+    to_user: lhaddad
+  - content: I’ll keep you posted. Ping me if anything else comes up. ✌️
+    from_user: Samuel Mensah
+    timestamp: 2026-03-31T15:14:27Z
+    to_user: lhaddad
+  - content: Will do. Thanks, Samuel! 🙏
+    from_user: Layla Haddad
+    timestamp: 2026-03-31T15:14:39Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - smensah
+- id: chat_007
+  messages:
+  - content: Hey Layla, did you see the update from the logistics team about the pamphlets? 😬
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:15:00Z
+    to_user: mzhang
+  - content: Yeah, just saw it. 200 copies? That’s going to be tight with the deadline. 😓
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:16:22Z
+    to_user: mzhang
+  - content: Agreed… Can you check if the final version of the pamphlet is in the shared folder? I think I saw it but want to confirm.
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:17:10Z
+    to_user: mzhang
+  - content: Sure, one sec. 🤔
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:17:35Z
+    to_user: mzhang
+  - content: 'Got it! It’s there, file name: ''Orientation_Pamphlet_FINAL_v3.pdf''.'
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:19:02Z
+    to_user: mzhang
+  - content: Perfect!! I’ll send it to logistics now. Thanks 😊
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:19:29Z
+    to_user: mzhang
+  - content: No prob! Oh, did you catch the typo in the welcome email subject? Communications team flagged it just now.
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:20:03Z
+    to_user: mzhang
+  - content: Wait, what typo? I thought we fixed everything yesterday! 😳
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:20:45Z
+    to_user: mzhang
+  - content: Apparently it said 'Welcome to Orientation!', but should've been 'Welcome to Orientation Day!'. They’re scrambling to resend.
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:21:10Z
+    to_user: mzhang
+  - content: Oof, hope they catch everyone before the email goes live. 😬
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:21:45Z
+    to_user: mzhang
+  - content: Same. Btw, did you see the dean’s request for another rehearsal? Timing issue with his slides. 🤦‍♀️
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:22:30Z
+    to_user: mzhang
+  - content: Ugh, I was just reading that. This is his third rehearsal, right? At least he’s thorough. 😅
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:23:15Z
+    to_user: mzhang
+  - content: True, but it’s pushing his schedule tighter. Can you double-check the AV setup for his session? I think he wanted extra equipment.
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:24:00Z
+    to_user: mzhang
+  - content: Got it, I’ll ping the AV team now. 👍
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:24:25Z
+    to_user: mzhang
+  - content: Thanks! Oh, one more thing—catering just asked for *more* vegetarian snacks. Did we already account for that? 🤔
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:25:00Z
+    to_user: mzhang
+  - content: I thought they finalized the menu yesterday? Let me check with logistics. 🥗
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:25:40Z
+    to_user: mzhang
+  - content: Cool. Let me know what they say. Fingers crossed it’s not another last-minute panic. 🙏
+    from_user: layla_haddad
+    timestamp: 2026-03-31T09:26:15Z
+    to_user: mzhang
+  - content: Will do! Talk soon. 😊
+    from_user: mei_zhang
+    timestamp: 2026-03-31T09:26:40Z
+    to_user: mzhang
+  participants:
+  - mzhang
+  - lhaddad
+- id: chat_009
+  messages:
+  - content: Hey Karan, did you see the final test report for the re-admissions portal?
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:02:15Z
+    to_user: ktanaka
+  - content: Morning, Kenji! Yeah, I skimmed it. That payment confirmation glitch was a close call. 😅
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:03:02Z
+    to_user: ktanaka
+  - content: For sure! We patched it, but I’m a little worried about edge cases. Did you check the logs?
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:03:35Z
+    to_user: ktanaka
+  - content: Not yet. One sec, I’ll pull them up.
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:04:10Z
+    to_user: ktanaka
+  - content: Cool. Also, I was thinking—should we add a confirmation popup before payments? Users might appreciate a double-check.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:04:45Z
+    to_user: ktanaka
+  - content: Hmm, good idea. But wouldn’t that slow down the process? 🤔
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:05:12Z
+    to_user: ktanaka
+  - content: Possibly. Maybe an optional toggle for advanced users? Like 'Skip confirmation next time.'
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:05:50Z
+    to_user: ktanaka
+  - content: That could work! But we’ll have to update the UI flow. Could get tricky. Did you see the ticket about the mobile layout issues?
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:06:20Z
+    to_user: ktanaka
+  - content: Ah, no. Where is it? Jira?
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:06:45Z
+    to_user: ktanaka
+  - content: 'Yeah, ticket #RD-112. It’s flagged as high priority. Something about buttons overlapping on smaller screens.'
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:07:12Z
+    to_user: ktanaka
+  - content: Got it. I’ll take a look after lunch. Btw, did you notice the dean’s feedback on the portal? He said it’s 'functional but not intuitive.' 😐
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:08:01Z
+    to_user: ktanaka
+  - content: Ugh, yeah. He’s not wrong, though. The navigation could be better. Maybe we should prioritize simplifying the dashboard next sprint?
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:08:43Z
+    to_user: ktanaka
+  - content: Agreed. Let’s bring it up in the next review meeting. Also, can you check if the email templates are still breaking for non-English characters? I thought we fixed that.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:09:25Z
+    to_user: ktanaka
+  - content: Wait, they’re still breaking? 😳 I’ll test it now. BRB.
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:09:55Z
+    to_user: ktanaka
+  - content: Thanks. Oh, one more thing—should we add a QR code for campus maps on the portal like they did with the pamphlets? Students might find it handy.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:10:30Z
+    to_user: ktanaka
+  - content: Smart! Let’s mock it up. Also, email issue confirmed—special characters are breaking again. 😑
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:11:15Z
+    to_user: ktanaka
+  - content: 😩 OK, let’s log it as a bug and escalate. This can’t wait.
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:11:42Z
+    to_user: ktanaka
+  - content: On it. Logging now. Btw, don’t forget to grab lunch today. You skipped yesterday. 🙃
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:12:05Z
+    to_user: ktanaka
+  - content: Haha, thanks for the reminder. Will do. Let’s sync later today. 👍
+    from_user: kenji_tanaka
+    timestamp: 2026-03-31T10:12:30Z
+    to_user: ktanaka
+  - content: Sounds good. Catch you later!
+    from_user: karan_singh
+    timestamp: 2026-03-31T10:12:45Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - ksingh
+- id: chat_010
+  messages:
+  - content: Hi Daniela, how are we looking for orientation day? Any updates from your side? 😊
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:00:00Z
+    to_user: mgarcia
+  - content: Morning, Maria! Pretty good overall, but there are a couple of things... Did you hear about the misprint on the pamphlets? 😬
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:01:15Z
+    to_user: mgarcia
+  - content: Misprint?? 😳 No, what happened? Are we getting replacements in time?
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:02:30Z
+    to_user: mgarcia
+  - content: Yeah, logistics team caught it late last night. They already ordered an emergency reprint—200 copies should arrive later this afternoon. Crisis averted (hopefully)! 🤞
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:03:45Z
+    to_user: mgarcia
+  - content: Phew, okay. Let’s keep an eye on that. Also, did the IT team confirm the payment email glitch is fixed?
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:05:00Z
+    to_user: mgarcia
+  - content: Yep, they pushed the fix early this morning. I think everything’s good now, but I can double-check if you want?
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:05:45Z
+    to_user: mgarcia
+  - content: Yes, please. I don’t want any surprises tomorrow! 😅
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:06:30Z
+    to_user: mgarcia
+  - content: On it. BTW, catering asked for more veggie snacks. Did you see their email? 🌱
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:07:10Z
+    to_user: mgarcia
+  - content: Ugh, no, I missed that. How many more? Do we have the budget for it? 😟
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:08:00Z
+    to_user: mgarcia
+  - content: Not sure, they didn’t specify. Let me forward it to you. One sec...
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:08:45Z
+    to_user: mgarcia
+  - content: Sent! Check your inbox. 📩
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:09:10Z
+    to_user: mgarcia
+  - content: Got it, thanks. I’ll loop in finance if needed. 🙌
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:10:00Z
+    to_user: mgarcia
+  - content: Cool. Oh, one more thing—the dean’s requesting ANOTHER rehearsal for his lecture. Third time this week. 🙄
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:11:15Z
+    to_user: mgarcia
+  - content: Haha, wow, he’s thorough. Did he say why this time? 😅
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:12:00Z
+    to_user: mgarcia
+  - content: Something about slide timing being off again. I think he’s overthinking it, but hey, it’s his show. 🎤
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:13:20Z
+    to_user: mgarcia
+  - content: Fair enough. Let’s just make sure AV is ready for him. Can you confirm with them?
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:14:05Z
+    to_user: mgarcia
+  - content: Sure thing. Anything else on your radar?
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:14:45Z
+    to_user: mgarcia
+  - content: Not for now. Let me know if anything comes up. Thanks, Daniela! 👍
+    from_user: Maria Garcia
+    timestamp: 2026-03-31T09:15:30Z
+    to_user: mgarcia
+  - content: Will do! Talk soon. ✨
+    from_user: Daniela Rossi
+    timestamp: 2026-03-31T09:16:00Z
+    to_user: mgarcia
+  participants:
+  - mgarcia
+  - drossi
+- id: chat_001
+  messages:
+  - content: Hey Chi, did you see the typo in the payment confirmation email footer? 😬
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:23:00Z
+    to_user: ktanaka
+  - content: Just saw it. What happened? 😅
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:23:45Z
+    to_user: ktanaka
+  - content: Looks like 'Thank you for your payment' was spelled as 'Thank you for your paymet' 😓
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:24:10Z
+    to_user: ktanaka
+  - content: Ugh, okay. Do you know if the fix is already live? Or do we need to push it manually? 🤔
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:24:45Z
+    to_user: ktanaka
+  - content: I think it’s still pending. Can you check with IT? I’ll update the text on my end.
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:25:15Z
+    to_user: ktanaka
+  - content: On it. Brb!
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:25:30Z
+    to_user: ktanaka
+  - content: Kenji, IT says the fix will go live in 15 mins if we approve. Should I give them the green light? ✅
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:28:00Z
+    to_user: ktanaka
+  - content: Yes, please! Let’s get it done before the next batch goes out. 🙏
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:28:30Z
+    to_user: ktanaka
+  - content: Okay, approved. They’re doing the update now. Should we do a quick test after? 🤓
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:29:10Z
+    to_user: ktanaka
+  - content: Definitely. I’ll send myself a test email once it’s live. Fingers crossed! 🤞
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:29:45Z
+    to_user: ktanaka
+  - content: Oh wait—did you double-check the footer formatting? Just in case it’s wonky after the fix. 😬
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:30:15Z
+    to_user: ktanaka
+  - content: Good catch. Let me check now. Hold on...
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:30:30Z
+    to_user: ktanaka
+  - content: Looks clean! No formatting issues. 👍
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:32:00Z
+    to_user: ktanaka
+  - content: Perfect. IT says the fix is live now. Can you do the test email? 🚀
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:32:30Z
+    to_user: ktanaka
+  - content: Sending it now. Stand by. 🤖
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:33:00Z
+    to_user: ktanaka
+  - content: Got the test email! Footer looks good. 🎉
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:35:00Z
+    to_user: ktanaka
+  - content: Awesome! Crisis averted. 🙌
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:35:30Z
+    to_user: ktanaka
+  - content: Haha, seriously. Thanks for the quick coordination, Chi. You rock! 💪
+    from_user: kenji_tanaka
+    timestamp: 2026-04-01T10:36:00Z
+    to_user: ktanaka
+  - content: Teamwork makes the dream work! 😎
+    from_user: chi_nguyen
+    timestamp: 2026-04-01T10:36:30Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - cnguyen
+- id: chat_002
+  messages:
+  - content: Hey François, did you see the email from catering? 😬
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:02:00Z
+    to_user: mzhang
+  - content: Which one? I’ve been swamped with the vegetarian snack adjustment. 😅
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:03:15Z
+    to_user: mzhang
+  - content: The gluten-free issue... They made way fewer snacks than we ordered. 😖
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:03:45Z
+    to_user: mzhang
+  - content: Oh no... Did they say why? 🤔
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:04:10Z
+    to_user: mzhang
+  - content: Miscommunication. Someone must’ve sent the wrong numbers. 😣
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:04:35Z
+    to_user: mzhang
+  - content: Yikes. Can you double-check the original order? I’ll call the supplier. 📞
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:05:00Z
+    to_user: mzhang
+  - content: On it. Give me a sec. 🕒
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:05:15Z
+    to_user: mzhang
+  - content: Just got through to them. They *might* be able to deliver by tomorrow morning. 🤞
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:08:30Z
+    to_user: mzhang
+  - content: Found it! We requested 50 gluten-free options, but catering only prepped 20. 🧐
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:09:10Z
+    to_user: mzhang
+  - content: Ugh, thought so. Can you forward that to me? Supplier wants proof. 📧
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:09:35Z
+    to_user: mzhang
+  - content: Just sent it! Check your inbox. 📩
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:10:00Z
+    to_user: mzhang
+  - content: Got it. Thanks! 🙏 Sending it to them now.
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:10:25Z
+    to_user: mzhang
+  - content: Let me know what they say. We might need backup snacks if they can’t deliver. 😕
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:11:00Z
+    to_user: mzhang
+  - content: They’ll confirm in 30 min. We might need to hit the local bakery as Plan B. 🏃‍♂️
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:11:45Z
+    to_user: mzhang
+  - content: Good idea. I’ll start looking for bakeries that do gluten-free just in case. 🍞
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T14:12:10Z
+    to_user: mzhang
+  - content: Perfect. Let’s hope the supplier pulls through. Fingers crossed! 🤞
+    from_user: François Dubois
+    timestamp: 2026-04-01T14:12:30Z
+    to_user: mzhang
+  participants:
+  - mzhang
+  - fdubois
+- id: chat_003
+  messages:
+  - content: Hiroshi, did you see the dean’s request? He needs updated research trend graphs for the orientation slides. 🫠
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:15:00Z
+    to_user: mzhang
+  - content: Yeah, just saw it. 😅 Do we have the latest data? Or are we pulling it from the department repository?
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:16:35Z
+    to_user: mzhang
+  - content: Repository should have the latest, but can you double-check? I don’t want any surprises. 🙏
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:17:10Z
+    to_user: mzhang
+  - content: On it. Give me 5 mins. Will ping if I find anything off. 📊
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:17:45Z
+    to_user: mzhang
+  - content: Thanks! Also, let’s make sure the slides match the dean’s timing—he mentioned issues during rehearsal yesterday. ⏱️
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:18:20Z
+    to_user: mzhang
+  - content: Ugh, right. I’ll check that too. Let’s hope this doesn’t turn into another late-night scramble. 😬
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:19:05Z
+    to_user: mzhang
+  - content: Fingers crossed. 🤞 Keep me posted!
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:19:40Z
+    to_user: mzhang
+  - content: 'Mei, quick update: Found the latest data in the repository. Graph looks good, but the formatting is slightly off for the slides. I’ll fix it. ✏️'
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:25:15Z
+    to_user: mzhang
+  - content: Formatting issues AGAIN? 😩 If it’s not too tricky, just adjust it. We don’t have much time.
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:26:30Z
+    to_user: mzhang
+  - content: Already working on it. Btw, did you get the dean’s exact timing for the slides? Need to double-check the transitions. ⏳
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:27:15Z
+    to_user: mzhang
+  - content: Oh, good point. Let me pull up the notes from yesterday’s rehearsal. Hold on. 📋
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:27:50Z
+    to_user: mzhang
+  - content: Got it! He wanted slide 3 to stay up for 45 seconds longer. Can you tweak that? ⏱️
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:29:10Z
+    to_user: mzhang
+  - content: Yeah, I’ll adjust the timing. Also, can you check if the dean is okay with us using a slightly simplified graph style? The current one is… dense. 🧠
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:30:45Z
+    to_user: mzhang
+  - content: Simplified could work. Let me text him! 📨
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:31:20Z
+    to_user: mzhang
+  - content: Just heard back—he’s okay with simplifying, but keep the key trends highlighted. 👍
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:35:10Z
+    to_user: mzhang
+  - content: Perfect. I’ll finish updating the graph and timing, then send you the revised slides for review. ETA 20 mins. 🚀
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:36:05Z
+    to_user: mzhang
+  - content: Sounds good! Ping me when it’s ready. Thanks, Hiroshi! 🙌
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:36:40Z
+    to_user: mzhang
+  - content: Slides updated and sent! Check your inbox. Let me know if you spot anything off. 📩
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T09:55:30Z
+    to_user: mzhang
+  - content: Got them! Reviewing now. 👀
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T09:56:10Z
+    to_user: mzhang
+  - content: Looks great! Everything’s in order. Sending them to the dean now. Amazing work, Hiroshi! 🎉
+    from_user: Mei Zhang
+    timestamp: 2026-04-01T10:05:00Z
+    to_user: mzhang
+  - content: Phew, glad to hear it. Let’s hope this is the last update. 😅
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-01T10:05:40Z
+    to_user: mzhang
+  participants:
+  - mzhang
+  - hmatsuda
+- id: chat_002
+  messages:
+  - content: Hey Joy, did you see the email that just went out? 😬
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:15:23Z
+    to_user: lhaddad
+  - content: Which one? Wait, don’t tell me it’s the one from the new hire…
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:16:01Z
+    to_user: lhaddad
+  - content: Yup. It went to the student group instead of admin. 😓
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:16:23Z
+    to_user: lhaddad
+  - content: Oh no. What did it say exactly? Please tell me it wasn’t sensitive info.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:16:40Z
+    to_user: lhaddad
+  - content: Nothing sensitive, thank goodness. Just some instructions about RA/TA applications that don't apply to students at all.
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:17:10Z
+    to_user: lhaddad
+  - content: Phew. Okay, let’s draft a follow-up to clarify. Can you send me the original email? I need to see the wording.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:17:35Z
+    to_user: lhaddad
+  - content: Forwarding it now. One sec.
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:17:50Z
+    to_user: lhaddad
+  - content: Got it. Hmm, it’s not *too* bad, but we need to nip this in the bud quickly.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:18:12Z
+    to_user: lhaddad
+  - content: 'Agreed. Should we start with something like: ‘Apologies for the confusion, the previous email was sent in error’?'
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:18:40Z
+    to_user: lhaddad
+  - content: Yeah, that works. Then clarify it’s meant for internal use only and doesn’t apply to them.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:19:05Z
+    to_user: lhaddad
+  - content: Okay, I’ll draft it and send it to you for review.
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:19:20Z
+    to_user: lhaddad
+  - content: Perfect. Let me know when it’s ready.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:19:30Z
+    to_user: lhaddad
+  - content: Draft sent to your inbox. Take a look?
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:25:02Z
+    to_user: lhaddad
+  - content: Checking now…
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:25:15Z
+    to_user: lhaddad
+  - content: Looks good! Just tweak the last sentence – it sounds a bit formal. Maybe make it friendlier?
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:27:00Z
+    to_user: lhaddad
+  - content: 'Got it. How about: ‘Thanks for understanding!’ instead of ‘We appreciate your understanding.’?'
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:27:30Z
+    to_user: lhaddad
+  - content: Yes, much better. Let’s send it out ASAP.
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:27:45Z
+    to_user: lhaddad
+  - content: Sending now. Fingers crossed we don’t get too many replies. 🤞
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:28:10Z
+    to_user: lhaddad
+  - content: Haha, right? Let me know if anything comes up. Great job handling this, Layla!
+    from_user: joy_okafor
+    timestamp: 2026-04-02T10:28:30Z
+    to_user: lhaddad
+  - content: Thanks, Joy! 😅
+    from_user: layla_haddad
+    timestamp: 2026-04-02T10:28:45Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - jokafor
+- id: chat_003
+  messages:
+  - content: Morning, Karan! Ready for the AV check? 🎥
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:03:12Z
+    to_user: hmatsuda
+  - content: Morning! Yep, already in the lecture hall. Projector's on, but... did you see the replacement screen? 🧐
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:04:45Z
+    to_user: hmatsuda
+  - content: Hmm, let me check the delivery log. One sec.
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:05:13Z
+    to_user: hmatsuda
+  - content: Found it! Should be in the storage room. Can you grab it, or should I? 📦
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:06:10Z
+    to_user: hmatsuda
+  - content: I'll grab it. BRB. 🚶‍♂️
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:06:45Z
+    to_user: hmatsuda
+  - content: Cool. I'll start testing the mic setup in the meantime. 🎤
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:07:12Z
+    to_user: hmatsuda
+  - content: Back with the screen. It’s... bigger than I thought. 😂
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:15:03Z
+    to_user: hmatsuda
+  - content: Haha, yeah, these things are massive. Let me help you set it up.
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:15:50Z
+    to_user: hmatsuda
+  - content: BTW, did you notice the dean’s slide update request? Something about a new graph? 📊
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:17:22Z
+    to_user: hmatsuda
+  - content: Oh, right. I think it’s in the shared folder, but I haven’t checked if it’s uploaded to the presentation yet. Did you?
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:18:05Z
+    to_user: hmatsuda
+  - content: Not yet. Let me pull it up now. Hold on.
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:18:47Z
+    to_user: hmatsuda
+  - content: Mic test done. All good here. 🎤✅
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:20:11Z
+    to_user: hmatsuda
+  - content: Got it! The graph is in the folder, but... it’s labeled as 'Draft v2'. Is this the final one? 🤔
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:21:33Z
+    to_user: hmatsuda
+  - content: Ugh, no idea. Let me message the dean’s assistant real quick.
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:22:05Z
+    to_user: hmatsuda
+  - content: Cool. I’ll load it into the slides for now, just in case.
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:22:40Z
+    to_user: hmatsuda
+  - content: Assistant says it’s final. Go ahead with it. 👍
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:24:12Z
+    to_user: hmatsuda
+  - content: Done! Slides updated. Now testing the clicker. 🖱️
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:25:03Z
+    to_user: hmatsuda
+  - content: Oh, can you check the lighting too? The dean mentioned it felt too dim last time.
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:25:37Z
+    to_user: hmatsuda
+  - content: Yeah, adjusting them now... How’s this? 💡
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:26:45Z
+    to_user: hmatsuda
+  - content: Perfect! Looks much better. 👌
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:27:12Z
+    to_user: hmatsuda
+  - content: Awesome. Anything else? Or are we calling it a wrap? 🎬
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:28:03Z
+    to_user: hmatsuda
+  - content: Let me think... Oh, wait. The dean asked about backup batteries for the mics. Did we check those? 🔋
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:28:45Z
+    to_user: hmatsuda
+  - content: On it! ... Yep, spares are in the side drawer. All set! ✅
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:30:12Z
+    to_user: hmatsuda
+  - content: Great! I think we’re good to go. High five! 🙌
+    from_user: Hiroshi Matsuda
+    timestamp: 2026-04-02T09:31:03Z
+    to_user: hmatsuda
+  - content: High five! Let’s grab a coffee before the next crisis. ☕😂
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:31:45Z
+    to_user: hmatsuda
+  participants:
+  - hmatsuda
+  - ksingh
+- id: chat_005
+  messages:
+  - content: Hey Karan, did you see the issue with the QR code in the pamphlet? A student just flagged it. 🙃
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:15:00Z
+    to_user: cnguyen
+  - content: Morning, Chi! No, just seeing your message now. What's the problem exactly? 🤔
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:16:45Z
+    to_user: cnguyen
+  - content: The QR code isn't loading the campus map—it’s redirecting to a blank page. Can you check if the link is correct on the backend? 🔗
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:17:30Z
+    to_user: cnguyen
+  - content: On it. Give me a sec. 👍
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:18:10Z
+    to_user: cnguyen
+  - content: Let me know what you find. I’ll check if the print team used the right QR code file. Maybe it’s their mistake? 🤷‍♀️
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:18:45Z
+    to_user: cnguyen
+  - content: Uh-oh. The link in the QR code points to an outdated map URL. Looks like it wasn’t updated during the revisions. 😬
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:20:30Z
+    to_user: cnguyen
+  - content: Ugh, that explains it. 😩 Can you update the link right now? Or do we need to send out new QR codes? 😬
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:21:10Z
+    to_user: cnguyen
+  - content: Already fixing it on the backend. Students can use the same QR code once it’s updated—no need to reprint. 🙌
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:22:00Z
+    to_user: cnguyen
+  - content: Perfect! I’ll email the print team just to confirm they didn’t introduce any other errors. Thanks for jumping on this! 😊
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:22:45Z
+    to_user: cnguyen
+  - content: No worries. BTW, can you check the orientation email footer to make sure the map link there is good? Just in case. 🧐
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:23:20Z
+    to_user: cnguyen
+  - content: Oh shoot, I didn’t check that earlier. On it now! 😅
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:24:05Z
+    to_user: cnguyen
+  - content: Looks fine in the email footer—no issues there! Crisis averted. 🎉
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:26:30Z
+    to_user: cnguyen
+  - content: Sweet! Backend update is live now. Tested the QR code—campus map loads perfectly. ✅
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:27:15Z
+    to_user: cnguyen
+  - content: You're a lifesaver, Karan! Thanks again. 😊 I'll let the student know everything's fixed. ✨
+    from_user: Chi Nguyen
+    timestamp: 2026-04-02T09:28:00Z
+    to_user: cnguyen
+  - content: Anytime! Let me know if anything else comes up. 👍
+    from_user: Karan Singh
+    timestamp: 2026-04-02T09:28:45Z
+    to_user: cnguyen
+  participants:
+  - cnguyen
+  - ksingh
+- id: chat_002
+  messages:
+  - content: Hey Karan, got a sec? A student reported receiving duplicate re-admissions emails. Did you notice anything weird in the logs? 🤔
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:15:00Z
+    to_user: ktanaka
+  - content: Morning! Hmm, no, I didn’t see anything obvious. Did they mention which email specifically? 👀
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:16:12Z
+    to_user: ktanaka
+  - content: Yeah, the re-admissions payment confirmation one. They said they got it twice yesterday. Can you check the batch job logs from yesterday afternoon?
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:17:30Z
+    to_user: ktanaka
+  - content: Sure, give me a min. Logging in now.
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:18:05Z
+    to_user: ktanaka
+  - content: Wait, which time exactly? We had two batches go out yesterday—one at 2 PM and another at 6 PM.
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:19:20Z
+    to_user: ktanaka
+  - content: I think it’s the 6 PM one. That’s when the student said they got the second email.
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:20:10Z
+    to_user: ktanaka
+  - content: Got it. Checking…
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:20:45Z
+    to_user: ktanaka
+  - content: Hmm, looks like the 6 PM batch was triggered twice. 😬 Pretty sure it’s a script issue.
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:23:10Z
+    to_user: ktanaka
+  - content: Twice? Ugh, that explains it. Do you know why? Could it be related to the patch we did on 4/1? 🛠️
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:24:00Z
+    to_user: ktanaka
+  - content: Possibly… let me dig deeper. The cron job might’ve been rescheduled incorrectly after the patch. 🤦‍♂️
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:25:15Z
+    to_user: ktanaka
+  - content: Okay. Can you also check if it’s affecting other email types? I don’t want this blowing up on orientation day. 😓
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:26:00Z
+    to_user: ktanaka
+  - content: On it. Give me 10 mins. I’ll test a few scenarios to confirm.
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:26:45Z
+    to_user: ktanaka
+  - content: Thanks, Karan. Let me know what you find.
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:27:10Z
+    to_user: ktanaka
+  - content: Hey, quick update. It’s definitely the cron job. The script runs twice if it detects a timeout—which happened yesterday. 🤦‍♂️
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:35:00Z
+    to_user: ktanaka
+  - content: Ah, got it. Can we tweak the script to prevent retries? Or at least limit it to one email per recipient?
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:36:20Z
+    to_user: ktanaka
+  - content: Yeah, I can add a check for duplicate email IDs before sending. Let me push a hotfix. ETA 30 mins.
+    from_user: karan_singh
+    timestamp: 2026-04-03T09:37:15Z
+    to_user: ktanaka
+  - content: Perfect. Let me know when it’s live. I’ll draft an apology email in case students start complaining. 🙃
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T09:38:00Z
+    to_user: ktanaka
+  - content: Hotfix deployed. Tested it with a dummy batch, and no duplicates were sent. Should be good now. ✅
+    from_user: karan_singh
+    timestamp: 2026-04-03T10:10:45Z
+    to_user: ktanaka
+  - content: Nice work! Let’s monitor for a day to be safe. Thanks, Karan! 🙏
+    from_user: kenji_tanaka
+    timestamp: 2026-04-03T10:11:30Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - ksingh
+- id: chat_003
+  messages:
+  - content: Hey Mei, did you see the dean's email? He wants alumni achievements added to the slides. 😅
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:12:45Z
+    to_user: hmatsuda
+  - content: Yeah, just saw it. Do we have a list ready? Or do we need to dig through records? 🤔
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:13:22Z
+    to_user: hmatsuda
+  - content: I think there’s a draft from last month in the shared folder. Let me check. One sec!
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:13:48Z
+    to_user: hmatsuda
+  - content: Ok, I’ll start drafting placeholders just in case. Ping me if you find it.
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:14:10Z
+    to_user: hmatsuda
+  - content: Found it! But it’s a bit outdated. We’ll need to add the latest ones from the March alumni newsletter.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:15:02Z
+    to_user: hmatsuda
+  - content: March newsletter… wasn’t that sent as a PDF? Do you have it? 😅
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:15:35Z
+    to_user: hmatsuda
+  - content: Let me check my inbox… Hold on…
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:15:50Z
+    to_user: hmatsuda
+  - content: Got it! Forwarding it to you now.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:16:23Z
+    to_user: hmatsuda
+  - content: Received, thanks! 🙌 I’ll extract the key points and format them for the slides.
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:17:05Z
+    to_user: hmatsuda
+  - content: Awesome. Let me know if you need help with anything.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:17:23Z
+    to_user: hmatsuda
+  - content: Uh oh, quick question—do we need photos for these alumni? Or just text?
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:18:10Z
+    to_user: hmatsuda
+  - content: Good question. Let me double-check with the dean. BRB.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:18:32Z
+    to_user: hmatsuda
+  - content: Just heard back—photos would be great if we can get them, but not mandatory.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:20:05Z
+    to_user: hmatsuda
+  - content: Got it. I’ll stick to text for now since we’re short on time. If we find photos, I can add them later.
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:20:35Z
+    to_user: hmatsuda
+  - content: Sounds good. I’ll keep an eye out for any photos in the archives.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:21:10Z
+    to_user: hmatsuda
+  - content: 'Hey, quick heads-up: I noticed one of the alumni on the list had a different title in the newsletter compared to our draft. Can you confirm which one’s right? 🤔'
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:22:45Z
+    to_user: hmatsuda
+  - content: Which one? Let me check.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:23:02Z
+    to_user: hmatsuda
+  - content: Dr. Emily Tan—our draft says she’s a ‘lead engineer,’ but the newsletter says ‘senior research scientist.’
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:23:38Z
+    to_user: hmatsuda
+  - content: Hmm, I think the newsletter is more recent. Let’s go with that title.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:24:15Z
+    to_user: hmatsuda
+  - content: Got it. Updating now. Thanks!
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:24:35Z
+    to_user: hmatsuda
+  - content: No prob. Let me know when the slides are ready, and I’ll do a quick review.
+    from_user: hiroshi_matsuda
+    timestamp: 2026-04-03T10:24:55Z
+    to_user: hmatsuda
+  - content: Will do! Should be ready in about 20 mins. 🚀
+    from_user: mei_zhang
+    timestamp: 2026-04-03T10:25:12Z
+    to_user: hmatsuda
+  participants:
+  - hmatsuda
+  - mzhang
+- id: chat_005
+  messages:
+  - content: Hey Yasmin, did you see the email from that international student? Missing docs for their RA app. ☝🏽
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:15:00Z
+    to_user: smensah
+  - content: Morning, Samuel! Just saw it—checking now. Which student was it again?
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:16:10Z
+    to_user: smensah
+  - content: Uh, Rami something? Hold on, lemme grab the name...
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:16:30Z
+    to_user: smensah
+  - content: 'Rami Al-Sayed. Got the email at 8:45 AM—subject line: ''Urgent: RA Application Issue''.'
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:17:05Z
+    to_user: smensah
+  - content: Found it. Seems like they’re missing a transcript? Did we flag that earlier? 🤔
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:17:45Z
+    to_user: smensah
+  - content: Hmm, I thought we caught all the flags last week. Can you check the system to confirm? I’m in a meeting soon.
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:18:15Z
+    to_user: smensah
+  - content: Sure, gimme a sec. BTW, are we still having issues with the re-admissions portal? 🖥️
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:18:50Z
+    to_user: smensah
+  - content: Nope, IT patched it yesterday. Should be good now. 🙌🏽
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:19:10Z
+    to_user: smensah
+  - content: Cool. Okay, checked the system—Rami’s transcript isn’t uploaded. Did they get the submission instructions?
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:20:00Z
+    to_user: smensah
+  - content: Ugh, not sure. Could be a comms issue from last week. Can you send them the upload link again? ✉️
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:20:35Z
+    to_user: smensah
+  - content: On it. Also, should we CC the RA coordinator? Just in case this delays things?
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:21:05Z
+    to_user: smensah
+  - content: Good call. CC the coordinator and maybe loop in IT if they hit upload issues. 🤷🏽‍♂️
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:21:35Z
+    to_user: smensah
+  - content: Done. Sent the email and copied the team. Fingers crossed this gets resolved quickly. 🙏🏽
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:22:10Z
+    to_user: smensah
+  - content: Nice work, Yasmin. Let me know if Rami replies. I’ll follow up after my meeting. 👌🏽
+    from_user: Samuel Mensah
+    timestamp: 2026-04-03T09:22:40Z
+    to_user: smensah
+  - content: Will do. Talk later! 😊
+    from_user: Yasmin Abdul
+    timestamp: 2026-04-03T09:23:00Z
+    to_user: smensah
+  participants:
+  - smensah
+  - yabdul
+- id: chat_007
+  messages:
+  - content: Hey Samuel, did you see the email about the international student’s RA docs issue? 📨
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:15:00Z
+    to_user: lhaddad
+  - content: Morning, Layla! Just saw it now. What’s missing exactly? 🤔
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:16:30Z
+    to_user: lhaddad
+  - content: Looks like their passport copy didn’t upload correctly. Admin flagged it. Can you double-check the system? 🙏
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:17:45Z
+    to_user: lhaddad
+  - content: On it. One sec.
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:18:10Z
+    to_user: lhaddad
+  - content: Hmm, I’m not seeing an upload attempt at all. Are we sure it wasn’t an email attachment? 📎
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:22:00Z
+    to_user: lhaddad
+  - content: Oh, good point. Let me check the shared inbox. Brb.
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:23:15Z
+    to_user: lhaddad
+  - content: Found it! It’s in the inbox, but the file name is just ‘scan001.pdf’ 🤦‍♀️. Could’ve been missed during processing.
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:27:30Z
+    to_user: lhaddad
+  - content: Yikes. Okay, can you forward it to me? I’ll attach it to their profile manually.
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:28:15Z
+    to_user: lhaddad
+  - content: Done! Sent it just now. 📤
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:29:00Z
+    to_user: lhaddad
+  - content: Got it. Adding it now. Also, we should probably update the checklist for these docs. This isn’t the first time. 🤷‍♂️
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:31:20Z
+    to_user: lhaddad
+  - content: Agreed. Let’s flag it in the next admin meeting. Btw, did you see the email about duplicate re-admissions emails? 📨
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:33:45Z
+    to_user: lhaddad
+  - content: Ugh, yeah. IT’s already on it. Looks like a batching error. Should be fixed soon.
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:35:10Z
+    to_user: lhaddad
+  - content: Okay, good. Last thing—did you hear about the banner misprint? Logistics is scrambling. 😬
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:36:50Z
+    to_user: lhaddad
+  - content: Oh no, what happened? Wrong date? 😅
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:37:25Z
+    to_user: lhaddad
+  - content: Yep. They’re making a temp replacement, but it’s cutting it close for tomorrow. 😬
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:38:40Z
+    to_user: lhaddad
+  - content: Classic orientation chaos. Let me know if they need a hand. I’ll finish this RA doc issue and check back later. 👍
+    from_user: samuel_mensah
+    timestamp: 2026-04-03T09:40:00Z
+    to_user: lhaddad
+  - content: Will do. Thanks, Samuel! 😊
+    from_user: layla_haddad
+    timestamp: 2026-04-03T09:41:15Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - smensah
+- id: ceo_cto_portal_update_20260404
+  messages:
+  - content: Morning, Kenji. Did you see the update on the re-admissions portal slowdowns? 🖥️
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:15:00Z
+    to_user: mgarcia
+  - content: Morning! Just saw it. Looks like intermittent slowdowns again. 🙄
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:16:12Z
+    to_user: mgarcia
+  - content: Ugh, not what we needed today. Can you check if it’s affecting payment processing too? 💸
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:17:34Z
+    to_user: mgarcia
+  - content: On it. Give me 5 mins.
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:18:02Z
+    to_user: mgarcia
+  - content: Okay, payments seem fine for now, but the slowdown might cause some delays in confirmation emails. 😬
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:22:47Z
+    to_user: mgarcia
+  - content: Ugh, we can’t afford delays with orientation around the corner. Can we prioritize this issue? ⏳
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:23:50Z
+    to_user: mgarcia
+  - content: Already flagged it with the team. They're diving in now. BTW, did you see the duplicate email complaint yesterday? 📧
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:24:55Z
+    to_user: mgarcia
+  - content: Yeah, saw it. Thought it was resolved? Or is it related to this slowdown? 🤔
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:26:12Z
+    to_user: mgarcia
+  - content: Could be connected. But honestly, I think it’s a separate email queue issue. Still digging. 🛠️
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:27:30Z
+    to_user: mgarcia
+  - content: Alright. Can you loop me in on whatever you find? I need to update the admin team soon. 📋
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:29:00Z
+    to_user: mgarcia
+  - content: Will do. Oh, one more thing—did you hear about the campus map QR code issue? 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:30:20Z
+    to_user: mgarcia
+  - content: Yes, IT fixed that yesterday, right? Please tell me it’s not back. 😩
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:31:10Z
+    to_user: mgarcia
+  - content: No, no, it’s fine now. Just double-checking since I saw a note about it in Slack. 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:31:45Z
+    to_user: mgarcia
+  - content: Phew, okay. We don’t need more fires today. 🔥
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:32:20Z
+    to_user: mgarcia
+  - content: For real. Let’s hope the payment system holds up. 🙏
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:33:02Z
+    to_user: mgarcia
+  - content: Agreed. Thanks, Kenji. Keep me posted. 👍
+    from_user: Maria Garcia
+    timestamp: 2026-04-04T08:34:10Z
+    to_user: mgarcia
+  - content: Will do. Talk soon. 👋
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-04T08:34:40Z
+    to_user: mgarcia
+  participants:
+  - mgarcia
+  - ktanaka
+- id: coo_hr_ra_redistribution_20260404
+  messages:
+  - content: Hey Layla, did you see the error in the RA assignment list? 😩
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:15:00Z
+    to_user: jokonkwo
+  - content: Yes! Saw it earlier. It's a mess. Do we know how many entries are affected? 🤔
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:16:12Z
+    to_user: jokonkwo
+  - content: Not sure yet—getting the counts now. Can you check if the flagged ones match the student IDs in the spreadsheet I sent yesterday?
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:17:45Z
+    to_user: jokonkwo
+  - content: On it! Hold on ✋
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:18:10Z
+    to_user: jokonkwo
+  - content: Hmm... the spreadsheet has 15 errors listed, but the flagged ones in the system show 18 🤷‍♀️. We might have missed a few.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:20:02Z
+    to_user: jokonkwo
+  - content: Ugh, seriously? 😫 Okay, I'll cross-check the database again. Can you also confirm if the flagged IDs match any duplicates?
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:21:30Z
+    to_user: jokonkwo
+  - content: Sure. Wait—did you see the email from Sarah? She said some of the RA applications have missing transcripts. That might explain part of this mess. 😳
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:22:40Z
+    to_user: jokonkwo
+  - content: No, I didn’t see that. When did she send it? 📧
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:23:05Z
+    to_user: jokonkwo
+  - content: Like 30 mins ago. Check your inbox, subject line is 'RA Application Review Updates'.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:23:53Z
+    to_user: jokonkwo
+  - content: Found it. You're right—4 apps missing transcripts. Let’s add those to the list too. 🙄
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:25:10Z
+    to_user: jokonkwo
+  - content: Okay, adding them now. Did you also notice the mismatched roles? Some applicants were assigned TA positions instead of RA ones. 😬
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:26:20Z
+    to_user: jokonkwo
+  - content: Ugh, no 😩. That’s a whole other issue. Can you flag those for me? I’ll start on the redistribution plan.
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:27:30Z
+    to_user: jokonkwo
+  - content: Done. Also, the system might be glitching. Some flagged IDs are appearing twice. Can you check with IT? 🖥️
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:28:50Z
+    to_user: jokonkwo
+  - content: Seriously?! 🤦‍♀️ Okay, I’ll ping them now. This is turning into a nightmare.
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:29:40Z
+    to_user: jokonkwo
+  - content: 😅 Hang in there, Joy! We’ll get through this. Let me know what IT says.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T09:30:15Z
+    to_user: jokonkwo
+  - content: Will do. Thanks, Layla. Appreciate it. 🙌
+    from_user: joy_okonkwo
+    timestamp: 2026-04-04T09:31:00Z
+    to_user: jokonkwo
+  participants:
+  - jokonkwo
+  - lhaddad
+- id: operations_catering_vehicle_delay_20260404
+  messages:
+  - content: Hey Aisha, just got word the catering van broke down 😕. What’s the status on the snacks?
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:15:00Z
+    to_user: fdubois
+  - content: Yeah, I heard. They're saying it’ll take at least 2 hours to get it fixed. Ugh. 😩
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:15:45Z
+    to_user: fdubois
+  - content: 2 hours? That’s going to cut it close for the rehearsal later. Did they say if they could send another van?
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:16:20Z
+    to_user: fdubois
+  - content: I asked but they’re short on backup vehicles today. They’re trying to reroute another delivery truck to help us out.
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:17:05Z
+    to_user: fdubois
+  - content: Okay, let’s have a Plan B just in case. Can we borrow some snacks from the student union? 🥨🍎
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:17:50Z
+    to_user: fdubois
+  - content: Good idea. Let me call and check if they have anything available. Hold on.
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:18:10Z
+    to_user: fdubois
+  - content: 👍 Let me know what they say. I’ll also check if the morning group can share their snacks with the afternoon crew.
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:18:45Z
+    to_user: fdubois
+  - content: Just spoke to the student union—they can give us a few boxes of granola bars and some juice cartons. Not much, though. 😬
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:25:30Z
+    to_user: fdubois
+  - content: Better than nothing. Let’s grab them. Can you coordinate pickup? I’ll handle the morning group snacks redistribution.
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:26:10Z
+    to_user: fdubois
+  - content: On it. Do we need to send someone to the union now, or should I wait until closer to the rehearsal?
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:26:50Z
+    to_user: fdubois
+  - content: Let’s grab it ASAP, just in case. Can you check if we have a cart to bring it over?
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:27:15Z
+    to_user: fdubois
+  - content: I think there’s one in the storage room. I’ll grab it now. 🚶‍♀️
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:27:40Z
+    to_user: fdubois
+  - content: Thanks, Aisha! Oh, did you see the email about the tea options? Someone said we’re low on green tea. Can you check?
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:28:05Z
+    to_user: fdubois
+  - content: Green tea? 🤔 Didn’t see that. I’ll check with the catering team after I grab the snacks.
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:28:40Z
+    to_user: fdubois
+  - content: Perfect. Let’s stay in the loop—text me if anything changes!
+    from_user: francois_dubois
+    timestamp: 2026-04-04T10:29:00Z
+    to_user: fdubois
+  - content: Will do! 💪
+    from_user: aisha_kabir
+    timestamp: 2026-04-04T10:29:15Z
+    to_user: fdubois
+  participants:
+  - fdubois
+  - akabir
+- id: communications_guest_speaker_update_20260404
+  messages:
+  - content: Hey Daniela, did you see the final update about the guest speaker? 🎤
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:15:00Z
+    to_user: lhaddad
+  - content: Morning! Just saw it. Looks good, but did we update the slide with their profile pic?
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:16:30Z
+    to_user: lhaddad
+  - content: I thought you were handling that? 😅 I added their bio but didn't touch visuals.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:17:15Z
+    to_user: lhaddad
+  - content: Wait... wasn't their pic in the email attachments? Let me check.
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:18:00Z
+    to_user: lhaddad
+  - content: I didn't see it there. Try searching 'guest speaker assets' in the shared drive?
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:18:45Z
+    to_user: lhaddad
+  - content: Oh, found it! 🙌 Looks like we got the wrong resolution version though. Super pixelated. 😬
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:19:30Z
+    to_user: lhaddad
+  - content: Ugh, not again. Can you ping the alumni office for a better version? They're usually quick.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:20:15Z
+    to_user: lhaddad
+  - content: On it. Did you see the note about adding their recent award to the slide? 🏆
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:21:00Z
+    to_user: lhaddad
+  - content: Nope, missed that. Where was it mentioned?
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:21:30Z
+    to_user: lhaddad
+  - content: 'In yesterday''s email thread. Subject line: ''Orientation Speaker Updates''.'
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:22:00Z
+    to_user: lhaddad
+  - content: Found it! Okay, adding the award now. Can you check if the QR code placement looks okay?
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:23:00Z
+    to_user: lhaddad
+  - content: Sure, one sec. Opening the file.
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:23:20Z
+    to_user: lhaddad
+  - content: Hmm, it's a bit too close to the bottom text. Can you move it up a bit?
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:24:00Z
+    to_user: lhaddad
+  - content: Done! Should be good now. Check again?
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:24:45Z
+    to_user: lhaddad
+  - content: Looks better! 👍 Also, did we fix that typo on slide 3? Someone flagged it earlier.
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:25:30Z
+    to_user: lhaddad
+  - content: Oh no, I completely forgot! 😩 What was the error again?
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:26:00Z
+    to_user: lhaddad
+  - content: It’s 'guest alumni' instead of 'alumnus guest'. Super minor but important. 😅
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:26:30Z
+    to_user: lhaddad
+  - content: Got it. Fixed now. Anything else before we send this off to the logistics team? 🤔
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:27:00Z
+    to_user: lhaddad
+  - content: I think we're good. Sending the pic request now. Will update once I hear back. 🚀
+    from_user: daniela_rossi
+    timestamp: 2026-04-04T10:27:45Z
+    to_user: lhaddad
+  - content: Perfect. Thanks, Daniela! 🙌 Fingers crossed nothing else pops up today.
+    from_user: layla_haddad
+    timestamp: 2026-04-04T10:28:15Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - drossi
+- id: finance_cto_budget_impact_20260404
+  messages:
+  - content: Hey Kenji, did you get a chance to look at the portal slowdown issue? It’s back again. 😓
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:02:13Z
+    to_user: ksharma
+  - content: Yeah, saw the report earlier. Looks like it’s intermittent again. Any specific complaints logged?
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:03:45Z
+    to_user: ksharma
+  - content: One student flagged it this morning. They said it took over 2 mins to load their payment status. That’s not great. 😬
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:05:09Z
+    to_user: ksharma
+  - content: Oof, okay. Did they mention if it happened on mobile or desktop? Need to narrow this down.
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:06:22Z
+    to_user: ksharma
+  - content: Desktop. Windows, Chrome browser. I think they’re using their home WiFi too, so no campus network involved.
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:07:10Z
+    to_user: ksharma
+  - content: Got it. I’ll check the server logs from this morning. Might need to run a diagnostic during off-peak hours. Can you ping the server vendor rep if it’s a config issue?
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:08:33Z
+    to_user: ksharma
+  - content: Sure. I’ll email them now. Also, have you noticed the troubleshooting costs creeping up? Budget’s tighter than usual. 🤑
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:09:45Z
+    to_user: ksharma
+  - content: Yep, I was just thinking about that. These recurring slowdowns are eating into the budget. 😕
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:10:51Z
+    to_user: ksharma
+  - content: We might need to justify this to the admin team. They’ve already flagged IT spending last quarter. 🗂️
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:12:03Z
+    to_user: ksharma
+  - content: Yikes. Maybe we can frame it as essential maintenance? Or blame legacy system quirks? 😅
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:13:15Z
+    to_user: ksharma
+  - content: Haha, blaming legacy systems is our go-to move. But seriously, we need a more permanent fix. Let’s talk options after lunch?
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:14:28Z
+    to_user: ksharma
+  - content: Sounds good. I’ll have some server data ready by then. Also, can you check if the payment confirmation email issue from yesterday is resolved? Just to double-check. 📨
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:15:40Z
+    to_user: ksharma
+  - content: Oh, right. Forgot about that. Let me confirm with the team. Will get back to you in 10. ⏳
+    from_user: karan_sharma
+    timestamp: 2026-04-04T10:16:52Z
+    to_user: ksharma
+  - content: 👍 Cool. Catch you later.
+    from_user: kenji_tanaka
+    timestamp: 2026-04-04T10:17:30Z
+    to_user: ksharma
+  participants:
+  - ksharma
+  - ktanaka
+- id: chat_003
+  messages:
+  - content: Hey Karan, did you see the student report about the payment receipt glitch? 🙃
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:15:00Z
+    to_user: ktanaka
+  - content: Morning, Kenji! Just saw it in the ticket queue. Any details on the error? 🤔
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:16:12Z
+    to_user: ktanaka
+  - content: Apparently, their receipt shows a blank payment ID. Can you check if it's the portal or email system? ⚠️
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:17:03Z
+    to_user: ktanaka
+  - content: Got it. Let me pull logs from the portal first. 🕵️‍♂️
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:18:25Z
+    to_user: ktanaka
+  - content: Thanks! I’ll double-check the email system meanwhile. Fingers crossed it’s not widespread. 🙏
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:19:40Z
+    to_user: ktanaka
+  - content: Uh-oh... Found a weird entry in the transaction logs. Looks like it failed to generate the receipt ID for some users. 😬
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:22:10Z
+    to_user: ktanaka
+  - content: That matches the email issue. From my side, emails with blank payment IDs were sent out. 😩
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:23:45Z
+    to_user: ktanaka
+  - content: Could this be related to the patch we did last week? The payment confirmation glitch? 🧐
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:24:52Z
+    to_user: ktanaka
+  - content: Possible... Let me check the changes we pushed. Can you verify if the same student had issues before? 📂
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:26:18Z
+    to_user: ktanaka
+  - content: Will do. Hold up... Looks like there’s another report coming in about duplicate emails. Related? 🤷‍♂️
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:27:40Z
+    to_user: ktanaka
+  - content: Duplicate emails? 😳 Could be tied to the blank ID bug. This might’ve triggered retries... Checking now. 🔍
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:29:10Z
+    to_user: ktanaka
+  - content: Yep, confirmed. Same student flagged duplicate emails last week. Looks like we missed something in the patch. 😓
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:31:20Z
+    to_user: ktanaka
+  - content: Okay, let’s isolate the payment ID issue first. Can you test the portal with a dummy transaction? 💻
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:33:05Z
+    to_user: ktanaka
+  - content: On it. Dummy transaction... running now. 🤞
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:34:18Z
+    to_user: ktanaka
+  - content: Test receipt generated fine. No blank payment ID this time. Weird. 🤔
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:36:00Z
+    to_user: ktanaka
+  - content: Hmm, intermittent error maybe? Let’s check server load logs. Could be timing out under heavy traffic. 📊
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:37:45Z
+    to_user: ktanaka
+  - content: Good idea. I’ll pull the traffic logs for today and last week. 🚦
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:39:15Z
+    to_user: ktanaka
+  - content: Found something. The email system retries failed transactions by design. That explains the duplicates. 😅
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:40:52Z
+    to_user: ktanaka
+  - content: Makes sense! But the blank IDs are still a mystery. Server logs show spikes during re-admissions rush hours. 🕒
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:42:30Z
+    to_user: ktanaka
+  - content: Let’s patch the retry logic to exclude blank IDs. Also, maybe optimize server handling for peak times? 🛠️
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:44:05Z
+    to_user: ktanaka
+  - content: Agreed. I’ll draft a quick fix for the retry logic. Can you alert the student this might take a day to resolve? 📧
+    from_user: Karan Singh
+    timestamp: 2026-04-05T09:45:40Z
+    to_user: ktanaka
+  - content: Already on it. Sending them a polite heads-up now! 🙌
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-05T09:46:55Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - ksingh
+- id: chat_3
+  messages:
+  - content: Morning, Chi. Did you see the security alert on the re-admissions portal? 🛑
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:03:00Z
+    to_user: ktanaka
+  - content: Morning, Kenji! Yes, saw it during the routine logs. Looks like a vulnerability in the session token handling. 😓
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:04:15Z
+    to_user: ktanaka
+  - content: Yikes. Can you confirm if it's just affecting student logins or admin accounts too? 🔍
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:05:30Z
+    to_user: ktanaka
+  - content: From what I checked, it's both. Admin sessions are at risk too. 😕
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:06:45Z
+    to_user: ktanaka
+  - content: Okay, priority patch then. I'll notify the team. Can you start drafting fixes? 🚀
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:07:20Z
+    to_user: ktanaka
+  - content: Already on it. Also, can you ping Alex to double-check the session validation code? Might need a second pair of eyes. 👀
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:08:10Z
+    to_user: ktanaka
+  - content: Good call. I'll loop him in. One sec.
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:08:35Z
+    to_user: ktanaka
+  - content: '@Alex Hey, can you jump on the re-admissions portal issue? Need you to review session validation code. 🔧'
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:09:00Z
+    to_user: ktanaka
+  - content: Just saw this. On it. Where’s the latest codebase? Git or local? 🗂️
+    from_user: Alex
+    timestamp: 2026-04-06T09:10:10Z
+    to_user: ktanaka
+  - content: 'Pushed to Git 5 mins ago. Branch: hotfix/vulnerability-patch. Let me know if you need anything else! 💻'
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:11:00Z
+    to_user: ktanaka
+  - content: Got it. Pulling now. 👌
+    from_user: Alex
+    timestamp: 2026-04-06T09:11:20Z
+    to_user: ktanaka
+  - content: Chi, did you notify the admin team to restrict access temporarily? We don’t want any active exploits. ⛔
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:12:00Z
+    to_user: ktanaka
+  - content: Not yet. Thought you were handling that? 😬
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:12:45Z
+    to_user: ktanaka
+  - content: Ah, my bad. I’ll do it now. Hold tight. 👍
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:13:10Z
+    to_user: ktanaka
+  - content: '@Admin Team FYI: Portal access will be limited temporarily while we patch a security issue. ETA 2 hrs. 🚨'
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:13:45Z
+    to_user: ktanaka
+  - content: Kenji, the patch draft is ready. Testing locally now. ✅
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:20:00Z
+    to_user: ktanaka
+  - content: Perfect. Let me know how the tests go. Also, Alex, any issues on your side? ⚙️
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:21:15Z
+    to_user: ktanaka
+  - content: No major issues so far. Just added some extra checks for session expiry. Will push updates in 5 mins. 🚀
+    from_user: Alex
+    timestamp: 2026-04-06T09:22:30Z
+    to_user: ktanaka
+  - content: Tests passed! 🎉 Deploying to staging now for a final check. ETA 10 mins. ⏳
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:25:00Z
+    to_user: ktanaka
+  - content: Awesome work, Chi. Let’s aim to deploy to production by 10 AM. 🕙
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:26:00Z
+    to_user: ktanaka
+  - content: Will do! 🤞
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:26:15Z
+    to_user: ktanaka
+  - content: Pushed my updates to the same branch. Take a look before deploying. 👀
+    from_user: Alex
+    timestamp: 2026-04-06T09:27:00Z
+    to_user: ktanaka
+  - content: Thanks, Alex. Reviewing now. 📝
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:27:30Z
+    to_user: ktanaka
+  - content: 'Heads-up: Admin team asked for a quick ETA update. Told them we’re on track for 10 AM. 🕒'
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:28:10Z
+    to_user: ktanaka
+  - content: Sounds good. Patch looks solid. Deploying to production now! 🚀
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:30:00Z
+    to_user: ktanaka
+  - content: Great work, team! Let’s monitor traffic closely for the next hour. 👏
+    from_user: Kenji Tanaka
+    timestamp: 2026-04-06T09:31:00Z
+    to_user: ktanaka
+  - content: Agreed. Keeping an eye on the logs. Let’s hope for a smooth ride. 🤞
+    from_user: Chi Nguyen
+    timestamp: 2026-04-06T09:31:30Z
+    to_user: ktanaka
+  - content: No errors so far on my end. Nice job, everyone. 💪
+    from_user: Alex
+    timestamp: 2026-04-06T09:32:15Z
+    to_user: ktanaka
+  participants:
+  - ktanaka
+  - cnguyen
+- id: chat_4
+  messages:
+  - content: Aisha, did you see the coffee supplies mix-up? ☕ They ended up at the orientation venue instead of the faculty lounge.
+    from_user: francois_dubois
+    timestamp: 2026-04-06T09:15:00Z
+    to_user: fdubois
+  - content: Ugh, yes, just saw it. 😅 Any idea how that happened?
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:16:15Z
+    to_user: fdubois
+  - content: Looks like Catering swiped the wrong delivery slip. Can you check with them to confirm it’s still fixable? 🙏
+    from_user: francois_dubois
+    timestamp: 2026-04-06T09:17:30Z
+    to_user: fdubois
+  - content: On it. Hold tight! 👍
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:18:10Z
+    to_user: fdubois
+  - content: Just spoke to Catering—they’re rerouting the coffee to the lounge now. Should take 30 mins max. ⏳
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:25:45Z
+    to_user: fdubois
+  - content: Phew, thanks Aisha! Did they say if the lounge setup is still on track otherwise? 🤔
+    from_user: francois_dubois
+    timestamp: 2026-04-06T09:27:00Z
+    to_user: fdubois
+  - content: Yeah, they said everything else is fine. Lounge is ready once the coffee gets there. 👍
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:28:30Z
+    to_user: fdubois
+  - content: Perfect. Can you double-check with the orientation team to make sure no one’s confused about the coffee there? Last thing we need is students thinking it’s for them. 😅
+    from_user: francois_dubois
+    timestamp: 2026-04-06T09:30:00Z
+    to_user: fdubois
+  - content: LOL good point. I’ll text Jane from orientation now to clarify. 🏃‍♀️
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:31:20Z
+    to_user: fdubois
+  - content: Jane’s on it. She’ll make sure the coffee gets sent back ASAP. Crisis averted! 🙌
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:40:05Z
+    to_user: fdubois
+  - content: 👏👏 Thanks, Aisha! You’re a lifesaver. Let me know if anything else comes up.
+    from_user: francois_dubois
+    timestamp: 2026-04-06T09:41:00Z
+    to_user: fdubois
+  - content: Will do! Hopefully no more mix-ups today. 🤞
+    from_user: aisha_kabir
+    timestamp: 2026-04-06T09:42:15Z
+    to_user: fdubois
+  participants:
+  - fdubois
+  - akabir
+- id: chat_5
+  messages:
+  - content: Hey Samuel, did you see the dean’s email? He’s asking for a moderator for the Q&A session. 🤔
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:12:37Z
+    to_user: lhaddad
+  - content: Morning, Layla! Just saw it. Why is this coming up now? 😅
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:14:02Z
+    to_user: lhaddad
+  - content: No idea. He must’ve decided last minute. Can you help find someone? I’m swamped with the signage issue. 🪧
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:14:58Z
+    to_user: lhaddad
+  - content: I’ll check with the comms team. Maybe someone there can step in. Hold on. 👍
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:15:37Z
+    to_user: lhaddad
+  - content: Thanks, Samuel! Let me know what they say. 🙏
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:16:12Z
+    to_user: lhaddad
+  - content: Okay... just asked Sarah from Comms. She says they’re slammed with the QR code fix. 😩
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:20:45Z
+    to_user: lhaddad
+  - content: Ugh, of course. Why does everything happen at once? 😅
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:21:20Z
+    to_user: lhaddad
+  - content: Right?? What about someone from IT? They’ve been around for all the rehearsals so they know the setup. 💡
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:22:01Z
+    to_user: lhaddad
+  - content: Good idea! Can you email them? I’ll forward the dean’s request for context. 📧
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:23:15Z
+    to_user: lhaddad
+  - content: On it. Sending now. ✉️
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:24:03Z
+    to_user: lhaddad
+  - content: BTW, the dean also wants the Q&A format adjusted a bit. Did he say anything about that to you? 🤷‍♀️
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:25:47Z
+    to_user: lhaddad
+  - content: Nope, first I’m hearing about it. What kind of adjustment? 🤔
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:26:30Z
+    to_user: lhaddad
+  - content: He wants the moderator to filter questions from the audience mic AND the live chat. Multitasking much? 😂
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:27:54Z
+    to_user: lhaddad
+  - content: Oof, that’s a lot. 😅 Let’s hope IT says yes. We need someone who can juggle that. 🤹‍♂️
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:28:45Z
+    to_user: lhaddad
+  - content: Agreed. Fingers crossed. 🤞
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:29:12Z
+    to_user: lhaddad
+  - content: Just got a reply. Jordan from IT says they’re okay to moderate! 🙌
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:35:08Z
+    to_user: lhaddad
+  - content: Yes!! 🎉 I’ll let the dean know. Thanks so much, Samuel. You’re a lifesaver. 😄
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:36:47Z
+    to_user: lhaddad
+  - content: No problem, Layla! Let’s hope this is the LAST surprise today. 😂
+    from_user: samuel_mensah
+    timestamp: 2026-04-06T09:37:21Z
+    to_user: lhaddad
+  - content: Don’t jinx it! 😅
+    from_user: layla_haddad
+    timestamp: 2026-04-06T09:37:48Z
+    to_user: lhaddad
+  participants:
+  - lhaddad
+  - smensah

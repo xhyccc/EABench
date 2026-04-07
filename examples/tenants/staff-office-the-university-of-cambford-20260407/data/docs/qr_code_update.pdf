@@ -1,0 +1,101 @@
+# Updated Campus Map Pamphlet with Corrected QR Code
+
+## Author: Chi Nguyen
+
+### Context
+In preparation for the 2026 orientation day, the campus map pamphlet was updated to address a critical issue with the embedded QR code. This update ensures that students can easily access the digital campus map without encountering technical difficulties. The following document outlines the changes made, the rationale behind them, and the steps taken to ensure the corrected QR code is functional across all devices.
+
+---
+
+## 1. Overview of Changes
+
+### 1.1 Issue Identified
+- **Problem:** The QR code embedded in the original version of the campus map pamphlet failed to scan correctly on certain devices.
+- **Cause:** The QR code was linked to an outdated URL that was no longer active due to a recent server migration.
+- **Reported By:** A student who attempted to access the map on April 2, 2026.
+
+### 1.2 Corrective Actions
+- **URL Update:** The QR code link was updated to point to the new, active URL for the digital campus map.
+- **Testing:** The corrected QR code was tested on multiple devices and platforms to ensure compatibility.
+- **Reprint:** Updated pamphlets were printed and distributed to replace the faulty batch.
+
+---
+
+## 2. Detailed Steps Taken
+
+### 2.1 QR Code Update Process
+- Identified the correct URL for the campus map: `https://campus.example.edu/map2026`.
+- Generated a new QR code using a high-quality QR code generator.
+- Embedded the new QR code into the pamphlet design.
+
+### 2.2 Testing and Validation
+- **Devices Tested:**
+  - iOS smartphones (iPhone 12, iPhone 14 Pro).
+  - Android smartphones (Samsung Galaxy S22, Google Pixel 7).
+  - Tablets (iPad Air, Samsung Galaxy Tab S8).
+- **Scanning Apps Tested:**
+  - Native camera apps.
+  - Third-party scanning apps (e.g., QR Code Reader, QRbot).
+- **Results:**
+  - 100% success rate in scanning and redirecting to the correct URL.
+
+### 2.3 Reprinting and Redistribution
+- **Number of Copies Reprinted:** 200.
+- **Printing Vendor:** Campus Printing Services.
+- **Distribution Timeline:**
+  - April 6, 2026: Updated pamphlets delivered.
+  - April 7, 2026: Pamphlets distributed to key orientation locations.
+
+---
+
+## 3. Lessons Learned
+
+### 3.1 Root Cause Analysis
+- The issue arose due to poor coordination between the communications and IT teams during the server migration.
+- No testing was conducted on the QR code after its initial integration into the pamphlet design.
+
+### 3.2 Improvements Implemented
+- Established a cross-departmental checklist for future pamphlet updates.
+- Incorporated QR code testing as a mandatory step in the design process.
+- Scheduled periodic reviews of QR code destinations to ensure active and accurate links.
+
+---
+
+## 4. Additional Notes
+
+### 4.1 Feedback from Stakeholders
+- **Students:** Reported that the updated QR code was significantly easier to use.
+- **Logistics Team:** Appreciated the quick turnaround time for the reprint.
+
+### 4.2 Future Recommendations
+- Use dynamic QR codes that can be updated without requiring changes to the printed material.
+- Maintain a centralized database of all QR code links for easier tracking and management.
+
+---
+
+## 5. Appendix
+
+### 5.1 Updated QR Code
+Below is the updated QR code embedded in the pamphlet:
+
+![QR Code](https://campus.example.edu/assets/qr_code_map2026.png)
+
+### 5.2 Timeline of Events
+- **April 2, 2026:** Issue reported by a student.
+- **April 3, 2026:** Communications team identified the outdated URL.
+- **April 4, 2026:** New QR code generated and integrated into the pamphlet design.
+- **April 5, 2026:** New pamphlet batch sent to print.
+- **April 6, 2026:** Updated pamphlets delivered to campus.
+- **April 7, 2026:** Distribution of updated pamphlets completed.
+
+---
+
+### 5.3 Contact Information
+For further inquiries, please contact:
+- **Chi Nguyen** (Communications Coordinator)  
+  Email: chi.nguyen@campus.example.edu  
+  Phone: +1 (555) 123-4567
+
+---
+
+End of Document

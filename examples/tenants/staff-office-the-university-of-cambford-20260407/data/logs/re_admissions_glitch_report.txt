@@ -1,0 +1,101 @@
+# Technical Glitch Report: Online Re-Admissions Portal Disruption
+
+**Author:** Chi Nguyen  
+**Date:** March 24, 2026  
+
+---
+
+## Context
+On March 24, 2026, the online re-admissions portal experienced a technical glitch that temporarily disrupted access for second-year students attempting to complete their re-enrollment process. The issue lasted approximately 27 minutes before being resolved, causing minor delays. This report outlines the incident, its impact, and the measures implemented to prevent recurrence.
+
+---
+
+## Incident Overview
+
+### Timeline
+- **12:43 PM:** Automated monitoring systems flagged unusual activity on the re-admissions portal.
+- **12:45 PM:** Students began reporting login failures and disrupted session continuity.
+- **12:50 PM:** IT support team initiated diagnostic procedures.
+- **01:10 PM:** Root cause identified as an expired security token issue within the portal's API.
+- **01:12 PM:** Temporary fix deployed to refresh expired tokens and restore portal functionality.
+- **01:15 PM:** Normal operations resumed.
+
+### Root Cause
+The disruption stemmed from a misconfiguration in the authentication service's token refresh cycle. Specifically:
+- Expired security tokens were not automatically refreshed due to an overlooked parameter in the API configuration.
+- This caused authentication failures and prevented users from accessing their accounts.
+
+---
+
+## Impact Assessment
+
+### Affected Users
+- **Second-Year Students:** Approximately 1,200 students were unable to access the portal during the outage.
+- **Administrative Staff:** Staff responsible for monitoring re-admissions experienced delays in processing applications.
+
+### Severity
+- **Duration:** 27 minutes.
+- **Scope:** Limited to re-admissions portal functionality; no other systems were impacted.
+- **Data Integrity:** No data loss or corruption was detected during the incident.
+
+### User Feedback
+- 37 students submitted complaints via the help desk.
+- Common issues reported:
+  - Login errors.
+  - Session timeouts.
+  - Inability to finalize re-admissions submissions.
+
+---
+
+## Resolution Details
+
+### Immediate Actions
+- **Token Refresh:** Deployed a temporary script to force token refresh across all active sessions.
+- **API Configuration Fix:** Updated the authentication service parameters to ensure future tokens auto-renew as intended.
+
+### Post-Incident Testing
+- Conducted stress tests on the portal to validate stability and functionality.
+- Verified that all affected students could successfully log in and complete their re-admissions.
+
+### Communication
+- **Students:** Sent an email apology to all affected users, ensuring transparency and offering extended submission deadlines.
+- **Staff:** Provided a detailed incident summary to administrative teams.
+
+---
+
+## Preventative Measures
+
+### Technical Changes
+- Scheduled routine audits of API token management processes.
+- Implemented alerts to identify token expiration anomalies.
+- Enhanced automated monitoring systems to detect similar issues earlier.
+
+### Operational Improvements
+- Established a rapid-response protocol for portal disruptions.
+- Conducted additional training for IT support staff on handling authentication errors.
+
+---
+
+## Recommendations
+
+1. **System Enhancements:**
+   - Integrate additional redundancy mechanisms into the authentication service.
+   - Review all critical portal components for similar vulnerabilities.
+2. **User Experience Improvements:**
+   - Provide clearer error messages to guide users during disruptions.
+   - Offer alternative submission methods for students during outages.
+3. **Proactive Monitoring:**
+   - Expand monitoring tools to cover edge cases like token expiration.
+
+---
+
+## Conclusion
+The March 24, 2026 disruption to the online re-admissions portal was a minor but impactful incident. Prompt action by the IT team mitigated its effects and restored normal operations swiftly. Through technical fixes, enhanced monitoring, and improved communication protocols, the institution can ensure this issue does not recur.
+
+---
+
+**Author's Note:**  
+Should you have any questions regarding this report or require further clarification, please feel free to reach out to me directly.
+
+**Chi Nguyen**  
+Technical Support Specialist

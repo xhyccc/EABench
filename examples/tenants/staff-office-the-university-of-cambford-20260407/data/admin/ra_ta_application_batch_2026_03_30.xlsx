@@ -1,0 +1,117 @@
+# RA and TA Application Batch Report - March 30, 2026
+
+## Author
+François Dubois
+
+## Context
+This spreadsheet contains the latest batch of RA (Research Assistant) and TA (Teaching Assistant) applications submitted on March 30, 2026. The administration team is prioritizing the review process to meet upcoming deadlines. Below is a detailed breakdown of the data captured in this file.
+
+---
+
+## Summary of Applications
+
+### Total Applications
+- **Number of Applications Submitted:** 124
+- **Applications Flagged for Missing Documents:** 15
+- **Applications Flagged for Discrepancies:** 8
+
+### Breakdown by Position Type
+- **Research Assistant Applications:**
+  - Submitted: 72
+  - Missing Documents: 9
+  - Discrepancies: 4
+
+- **Teaching Assistant Applications:**
+  - Submitted: 52
+  - Missing Documents: 6
+  - Discrepancies: 4
+
+### Academic Backgrounds of Applicants
+- **Undergraduate Programs:**
+  - STEM Majors: 68
+  - Humanities Majors: 32
+  - Business Majors: 15
+  - Other: 9
+
+- **Graduate Programs:**
+  - Master's Students: 23
+  - PhD Students: 33
+
+### Recommendation Letters
+- **Recommendation Letters Provided:** 109
+- **Recommendation Letters Missing:** 15
+- **Flagged Letters (Discrepancies or Incomplete):** 8
+
+---
+
+## Application Status Overview
+
+### Completed Applications
+- **Fully Reviewed:** 92
+- **Pending Review:** 32
+
+### Processing Notes
+- Applications missing documents have been flagged, and follow-up emails were sent to applicants.
+- Discrepancies in academic transcripts and recommendation letters are being investigated.
+- Applications submitted after the deadline will be processed separately.
+
+---
+
+## Observations and Trends
+
+### Trends
+- **Increase in STEM Applications:** STEM majors continue to dominate RA applications, accounting for 55% of total submissions.
+- **Higher Graduate Participation:** Graduate-level students (Master's and PhD) make up 45% of the applicant pool.
+
+### Observations
+- A notable number of applicants uploaded incomplete or incorrect documents, which delayed processing.
+- Recommendation letters from faculty outside the applicant’s primary department showed higher rates of discrepancies.
+
+---
+
+## Administrative Actions
+
+### Follow-Up Emails
+- **Sent to Applicants:** 23 follow-up emails were sent requesting missing documents or clarification.
+- **Deadlines:** Applicants are required to respond by April 3, 2026, to ensure their applications are processed.
+
+### Adjustments to Workflow
+- The administration team is working overtime to ensure applications flagged for discrepancies are resolved before the next review cycle.
+- Additional training sessions are planned for staff to improve document verification processes.
+
+---
+
+## Next Steps
+
+### Immediate Actions
+- Prioritize applications flagged for missing documents and discrepancies.
+- Ensure all flagged applications are reviewed by April 5, 2026.
+
+### Long-Term Improvements
+- Enhance the online application portal to reduce errors and missing document submissions.
+- Integrate automated document validation systems to streamline application reviews.
+
+---
+
+## Data Snapshot (Table Format)
+
+| Application ID | Position Type | Degree Level | Major | Status        | Missing Documents | Discrepancies |
+|----------------|---------------|--------------|-------|---------------|-------------------|---------------|
+| RA202603001    | Research Assistant | PhD         | STEM  | Pending Review | Yes               | No            |
+| TA202603002    | Teaching Assistant | Master's    | Humanities | Fully Reviewed | No                | No            |
+| RA202603003    | Research Assistant | Undergraduate | Business | Flagged        | No                | Yes           |
+| TA202603004    | Teaching Assistant | Master's    | STEM  | Pending Review | Yes               | Yes           |
+| RA202603005    | Research Assistant | PhD         | STEM  | Fully Reviewed | No                | No            |
+
+---
+
+## File Metadata
+
+- **File Path:** `data/admin/ra_ta_application_batch_2026_03_30.xlsx`
+- **Created By:** François Dubois
+- **Date Generated:** March 30, 2026
+
+---
+
+## Notes
+This report is intended for internal use by the administration team to facilitate decision-making and improve the efficiency of the RA and TA application review process. For questions or concerns, please contact François Dubois via email at admin@university.edu.

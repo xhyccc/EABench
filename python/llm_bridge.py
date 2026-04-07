@@ -47,6 +47,7 @@ import glob
 import json
 import os
 import sys
+import time
 import traceback
 from typing import Any
 
@@ -136,7 +137,25 @@ def main() -> int:
         if tools:
             call_kwargs["tools"] = tools
 
-        response = client.chat.completions.create(**call_kwargs)
+        # Retry with exponential backoff on 429 RateLimitError.
+        # The SDK's built-in max_retries does not reliably cover rate limits.
+        from openai import RateLimitError
+        _rate_limit_retries = 6
+        _backoff = 5.0  # seconds, doubles each attempt
+        for _attempt in range(_rate_limit_retries + 1):
+            try:
+                response = client.chat.completions.create(**call_kwargs)
+                break
+            except RateLimitError:
+                if _attempt == _rate_limit_retries:
+                    raise
+                wait = _backoff * (2 ** _attempt)
+                print(
+                    f"[llm_bridge] 429 rate limit – retrying in {wait:.0f}s "
+                    f"(attempt {_attempt + 1}/{_rate_limit_retries})",
+                    file=sys.stderr,
+                )
+                time.sleep(wait)
 
     except Exception:
         _die(traceback.format_exc())

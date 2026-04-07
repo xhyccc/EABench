@@ -1,0 +1,79 @@
+# Missing Documents Report for RA and TA Applications
+
+**Author:** Joy Okafor  
+**File Path:** `data/reports/missing_documents_ra_ta_apps.xlsx`  
+**Date:** March 24, 2026  
+
+## Context
+This report outlines the flagged RA (Research Assistant) and TA (Teaching Assistant) applications that are missing required documents. The identified gaps may impact the processing and approval of these applications. Follow-up actions have been initiated by the administration team to resolve these issues promptly.
+
+---
+
+## Summary of Missing Documents
+The following table provides a detailed breakdown of the missing documents by application type and applicant.
+
+| **Applicant Name**    | **Application Type** | **Missing Documents**                       | **Submission Deadline** | **Follow-Up Status**        |
+|------------------------|----------------------|---------------------------------------------|--------------------------|-----------------------------|
+| Sarah Johnson         | RA                   | Transcript, Recommendation Letter          | March 31, 2026          | Follow-up email sent       |
+| Alex Martinez         | TA                   | Proof of Enrollment                         | March 31, 2026          | Awaiting response          |
+| Priya Patel           | RA                   | Research Proposal, Proof of Enrollment     | March 31, 2026          | Follow-up email sent       |
+| David Lee             | TA                   | Recommendation Letter                       | March 31, 2026          | Awaiting response          |
+| Emily Carter          | RA                   | Transcript                                  | March 31, 2026          | Follow-up email sent       |
+| Hassan Ahmed          | TA                   | Proof of Enrollment, Transcript            | March 31, 2026          | Follow-up email sent       |
+| Mei Lin               | RA                   | Research Proposal                          | March 31, 2026          | Awaiting response          |
+
+---
+
+## Key Findings
+- **Total Applications Reviewed:** 50
+- **Applications Flagged for Missing Documents:** 7
+- **Most Common Missing Documents:**
+  - Transcript (3 cases)
+  - Proof of Enrollment (3 cases)
+  - Recommendation Letter (2 cases)
+  - Research Proposal (2 cases)
+- **Application Types Affected:**
+  - Research Assistant (RA): 4 applications
+  - Teaching Assistant (TA): 3 applications
+
+---
+
+## Follow-Up Actions
+The administration team has initiated the following steps to address the missing documents:
+
+1. **Email Notifications:**
+   - Personalized follow-up emails were sent to all flagged applicants, detailing the missing documents and providing instructions for submission.
+
+2. **Submission Deadline:**
+   - Applicants were given a deadline of **March 31, 2026**, to submit the required documents.
+
+3. **Escalation Plan:**
+   - If no response is received by the deadline, the applications will be escalated to the admissions review committee for further action.
+
+4. **Support Channels:**
+   - Applicants were directed to contact the admissions office for assistance with document submission.
+
+---
+
+## Recommendations
+To reduce instances of missing documents in future application cycles:
+
+- **Enhance Application Checklist:**
+  - Include a detailed checklist at the beginning of the application process to ensure all required documents are submitted.
+
+- **Automated Reminders:**
+  - Implement automated reminders for applicants before the submission deadline.
+
+- **System Integration:**
+  - Integrate the application portal with university records to automatically verify enrollment and transcript status.
+
+- **Training for Applicants:**
+  - Organize webinars or workshops to guide applicants through the application process.
+
+---
+
+## Conclusion
+The flagged RA and TA applications are being actively addressed to mitigate any delays in the approval process. Moving forward, implementing the recommended measures will streamline the application process and minimize errors.
+
+**Prepared by:** Joy Okafor  
+**Department:** Admissions Office

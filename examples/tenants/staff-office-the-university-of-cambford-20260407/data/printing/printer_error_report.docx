@@ -1,0 +1,103 @@
+# Printer Error Report
+
+**Author:** Aisha Kabir  
+**Date:** March 27, 2026  
+**Context:** Documentation of issues encountered with the office printer during the production of orientation pamphlets.
+
+---
+
+## 1. Overview
+
+During the final stages of preparing orientation day pamphlets, the office printer experienced multiple issues, resulting in delays to the reprinting process. These issues were identified on March 27, 2026, and required immediate troubleshooting to ensure the materials were ready for distribution. This report outlines the problems encountered, their impact, troubleshooting steps taken, and recommendations to mitigate such disruptions in the future.
+
+---
+
+## 2. Issues Encountered
+
+### 2.1 Paper Jams
+- **Frequency:** Occurred 5 times within a span of 2 hours.
+- **Location:** Primarily in tray 2 (used for double-sided printing).
+- **Impact:** Printing jobs were interrupted, requiring manual intervention to clear the jams.
+
+### 2.2 Toner Cartridge Error
+- **Error Message:** "Toner Low: Replace Cartridge."
+- **Details:** The error persisted even after replacing the toner cartridge with a new one.
+- **Impact:** Caused a 45-minute delay as the team attempted to resolve the error by resetting the printer and inspecting the cartridge.
+
+### 2.3 Connectivity Issues
+- **Details:** The printer intermittently lost connection to the network, leading to failed print jobs.
+- **Frequency:** Occurred 3 times during the production process.
+- **Impact:** Staff had to manually restart the printer and resubmit print jobs, leading to inefficiencies.
+
+### 2.4 Print Quality Issues
+- **Details:** Several pages were printed with streaks and smudges, making them unreadable.
+- **Cause:** Suspected to be due to worn-out drum rollers.
+- **Impact:** Approximately 20% of the pamphlets had to be reprinted, consuming additional time and resources.
+
+---
+
+## 3. Troubleshooting Steps
+
+### 3.1 Paper Jams
+- Cleared jammed paper from tray 2 and inspected rollers for debris.
+- Adjusted paper alignment to prevent misfeeds.
+
+### 3.2 Toner Cartridge Error
+- Removed and reinstalled the new toner cartridge.
+- Performed a printer hard reset to clear the error message.
+- Verified that the replacement cartridge was compatible with the printer model.
+
+### 3.3 Connectivity Issues
+- Restarted the printer and router to re-establish network connection.
+- Checked and updated printer firmware to the latest version.
+- Switched to a wired Ethernet connection as a temporary workaround.
+
+### 3.4 Print Quality Issues
+- Cleaned the drum unit and rollers to remove streaks and smudges.
+- Replaced the drum unit after cleaning failed to resolve the issue.
+
+---
+
+## 4. Impact
+
+### 4.1 Delays
+- **Total Delay:** Approximately 2.5 hours.
+- **Reason:** Time spent troubleshooting, reprinting damaged pages, and addressing errors.
+
+### 4.2 Resource Usage
+- **Additional Paper Used:** ~150 sheets.
+- **Additional Toner Used:** 1 new cartridge.
+
+### 4.3 Staff Productivity
+- Several staff members were diverted from other tasks to address printer issues, impacting overall workflow for the day.
+
+---
+
+## 5. Recommendations
+
+### 5.1 Maintenance Schedule
+- Implement a regular maintenance schedule for the printer, including cleaning and inspection of rollers and drum units.
+
+### 5.2 Backup Printer
+- Procure a secondary printer to serve as a backup during peak usage periods.
+
+### 5.3 Consumables Stock
+- Maintain a stock of compatible toner cartridges, drum units, and other consumables to avoid delays in case of errors.
+
+### 5.4 Staff Training
+- Provide basic troubleshooting training to staff members to quickly resolve common printer issues.
+
+### 5.5 Vendor Support
+- Establish a service agreement with the printer vendor for prompt technical support and repairs.
+
+---
+
+## 6. Conclusion
+
+The printer issues encountered during the production of orientation pamphlets caused significant delays and resource consumption. By adopting the recommendations outlined in this report, the office can minimize the likelihood of similar disruptions in the future. Immediate action on implementing a maintenance schedule and procuring a backup printer is strongly advised.
+
+---
+
+**Prepared by:** Aisha Kabir  
+**Position:** Administrative Coordinator  
+**Office:** Staff Office

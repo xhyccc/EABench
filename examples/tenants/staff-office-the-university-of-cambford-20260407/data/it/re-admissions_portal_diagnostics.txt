@@ -1,0 +1,148 @@
+# Re-Admissions Portal Diagnostics
+
+**Author:** Kenji Tanaka
+
+**Date:** 2026-04-04
+
+## Context
+The re-admissions portal serves as a critical system for facilitating enrollment processes for second-year and final-year students. Over the past few days, intermittent slowdowns have been reported, raising concerns about potential disruptions to student workflows. This document outlines diagnostics, troubleshooting steps, and recommended actions to ensure system stability and optimal performance.
+
+---
+
+## Observed Issues
+
+### 1. Intermittent Slowdowns
+- **Symptoms:**
+  - Slower page load times reported by students.
+  - Occasional timeout errors during form submissions.
+  - Delayed payment confirmation emails.
+
+- **Frequency:**
+  - Reports increased significantly on 2026-04-04.
+  - Slowdowns were most prominent during peak usage hours (10:00 AM - 1:00 PM).
+
+- **Impact:**
+  - Student frustration due to delays in application processing.
+  - Increased inquiries to the administration team.
+
+---
+
+## Diagnostics Performed
+
+### 1. Server Health Check
+- **Status:**
+  - CPU utilization peaked at 95% during peak hours.
+  - Memory usage remained within acceptable limits.
+  - Disk I/O showed slight bottlenecks when writing logs.
+
+- **Action Taken:**
+  - Temporarily increased server capacity by 20%.
+  - Cleared outdated logs to free up disk space.
+
+### 2. Database Performance Analysis
+- **Findings:**
+  - High-frequency queries were not optimized, leading to delays.
+  - A surge in concurrent connections caused minor locking issues.
+
+- **Action Taken:**
+  - Identified and optimized the most resource-intensive queries.
+  - Increased database connection pool size.
+
+### 3. Network Traffic Monitoring
+- **Findings:**
+  - No significant anomalies detected in network traffic.
+  - Bandwidth usage was near capacity during peak hours.
+
+- **Action Taken:**
+  - Increased bandwidth allocation temporarily.
+  - Implemented rate-limiting on non-essential API calls.
+
+### 4. Application Logs Review
+- **Findings:**
+  - Repeated error logs linked to the payment confirmation module.
+  - Minor inconsistencies in session handling.
+
+- **Action Taken:**
+  - Deployed a patch to fix the payment confirmation module.
+  - Enhanced session handling logic to reduce errors.
+
+---
+
+## Troubleshooting Steps
+
+### Immediate Actions
+- **Server Scaling:**
+  - Provision additional server capacity to handle peak loads.
+
+- **Database Optimization:**
+  - Continue refining query performance.
+  - Schedule a database maintenance window after orientation.
+
+- **Network Enhancements:**
+  - Implement dynamic bandwidth scaling based on real-time usage.
+
+- **Application Fixes:**
+  - Deploy hotfixes to address session handling and payment module errors.
+
+### Monitoring Plan
+- Enable real-time monitoring for:
+  - CPU, memory, and disk usage on servers.
+  - Database query performance.
+  - Network traffic patterns.
+  - Error logs and user session data.
+
+- Set up alerts for:
+  - Server utilization exceeding 80%.
+  - Database query execution time exceeding 500ms.
+  - Network bandwidth nearing capacity.
+
+---
+
+## Long-Term Recommendations
+
+### Infrastructure Improvements
+- Migrate to a scalable cloud-based architecture to accommodate fluctuating usage.
+- Implement load balancing across multiple servers.
+
+### Database Enhancements
+- Audit the database schema for further optimization.
+- Introduce caching mechanisms for frequently accessed data.
+
+### User Experience Improvements
+- Optimize front-end code to reduce page load times.
+- Enhance error handling on user-facing forms.
+
+### Staff Training
+- Conduct training sessions for the administration team on troubleshooting common issues.
+- Encourage timely reporting of portal-related problems.
+
+---
+
+## Next Steps
+
+### Assigned Teams
+- **IT Team:**
+  - Complete server scaling and database optimization by 2026-04-05.
+  - Monitor system performance continuously over the next week.
+
+- **Administration Team:**
+  - Notify students of potential delays and provide alternative support channels.
+
+- **Communications Team:**
+  - Prepare a follow-up email summarizing resolved issues and improvements.
+
+### Milestones
+- **2026-04-05:**
+  - Finalize immediate fixes and begin long-term infrastructure planning.
+
+- **2026-04-10:**
+  - Conduct a post-incident review to evaluate the effectiveness of implemented solutions.
+
+---
+
+## Summary
+The intermittent slowdowns on the re-admissions portal were caused by a combination of server capacity limitations, unoptimized database queries, and minor application errors. Immediate actions have been taken to mitigate the impact, and long-term improvements are planned to ensure system reliability and scalability. Continued monitoring and collaboration across teams will be essential to maintain smooth operations.
+
+---
+
+**End of Report**

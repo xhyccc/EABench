@@ -1,0 +1,138 @@
+# Initial Investigation Report on Intermittent Slowness in the Re-Admissions Portal
+
+**Author:** Kenji Tanaka  
+**Date:** 2026-03-28  
+
+---
+
+## 1. Introduction
+
+This report summarizes the findings of the initial investigation into the intermittent slowness reported in the university's re-admissions portal on 2026-03-28. The portal is a critical system used by students to complete their re-enrollment processes, and any performance issues can significantly impact user experience and administrative workflows.
+
+---
+
+## 2. Background
+
+The re-admissions portal experienced intermittent slowness on 2026-03-28, prompting complaints from students and staff. This issue follows a previous technical glitch that temporarily disrupted the portal on 2026-03-24, which was resolved the following day. 
+
+Given the importance of the portal during peak periods such as re-admissions and enrollment, addressing this problem promptly is a high priority. 
+
+---
+
+## 3. Observations and Key Findings
+
+### 3.1 Incident Timeline
+- **2026-03-28, 09:45 AM:** First reports of intermittent slowness received by the IT department.
+- **2026-03-28, 10:15 AM:** Monitoring tools confirmed latency spikes on key requests to the portal's backend services.
+- **2026-03-28, 11:00 AM:** IT team initiated an investigation to identify the root cause.
+- **2026-03-28, 01:30 PM:** Preliminary findings pointed to potential database performance bottlenecks.
+
+### 3.2 Affected Areas
+- **User Impact:**
+  - Students experienced delays when loading the portal dashboard or submitting re-admission forms.
+  - Some sessions timed out, requiring users to log back in.
+- **Administrative Impact:**
+  - Staff processing re-admissions encountered delays retrieving student records.
+
+### 3.3 Technical Analysis
+- **Portal Performance Logs:**
+  - Latency spikes were observed in API responses, with response times exceeding 5 seconds during peak load.
+  - The issue was intermittent, with performance returning to normal momentarily before degrading again.
+
+- **Database Metrics:**
+  - The database server exhibited unusually high CPU utilization (peaking at 85%) and increased disk I/O activity.
+  - Slow query logs revealed several long-running queries related to student record retrieval.
+
+- **Infrastructure Monitoring:**
+  - No anomalies were detected in the server hardware or network connectivity.
+  - Application servers maintained steady CPU and memory usage during the incident.
+
+- **Historical Context:**
+  - The portal experienced a minor disruption on 2026-03-24 due to a technical glitch, which was resolved on 2026-03-25. However, no direct correlation with the current issue has been identified at this stage.
+
+---
+
+## 4. Hypotheses for Root Cause
+
+Based on preliminary findings, the following hypotheses are being considered:
+
+1. **Database Query Optimization Issues:**
+   - Certain queries, especially those involving large datasets, may not be optimized, leading to performance bottlenecks under peak load.
+
+2. **Inadequate Database Indexing:**
+   - Missing or poorly configured indexes on frequently queried fields could be causing slow query execution.
+
+3. **High User Load:**
+   - A sudden surge in concurrent users may have overloaded the database, exacerbating performance issues.
+
+4. **Background Processes:**
+   - Scheduled background jobs or data synchronization processes may be consuming significant resources, contributing to slowness.
+
+---
+
+## 5. Immediate Mitigation Steps
+
+The following actions were taken to mitigate the issue:
+
+- **Database Query Review:**
+  - The IT team identified and temporarily disabled non-critical background queries to reduce database load.
+
+- **Index Analysis:**
+  - An initial review of database indexes was performed, and missing indexes on key fields were added.
+
+- **Load Balancing:**
+  - Application servers were monitored to ensure even distribution of user requests across the server pool.
+
+- **User Communication:**
+  - A banner was added to the portal notifying users of intermittent slowness and advising them to retry if they encounter issues.
+
+---
+
+## 6. Next Steps
+
+To address the issue long-term, the following steps have been planned:
+
+1. **Comprehensive Query Optimization:**
+   - Conduct a detailed audit of database queries to identify inefficiencies and implement optimizations.
+
+2. **Scalability Testing:**
+   - Perform load testing under simulated peak conditions to evaluate system performance and identify bottlenecks.
+
+3. **Resource Allocation Review:**
+   - Assess database server resources and consider scaling up hardware or migrating to a more robust database solution if necessary.
+
+4. **Monitoring Enhancements:**
+   - Implement more granular monitoring for database performance metrics to detect and address potential issues proactively.
+
+5. **User Feedback:**
+   - Collect feedback from users affected by the incident to better understand their experiences and refine communication strategies.
+
+---
+
+## 7. Conclusion
+
+The intermittent slowness in the re-admissions portal was likely caused by database performance bottlenecks exacerbated by peak user load. Immediate mitigation steps have stabilized the system, and long-term improvements are planned to prevent future occurrences. A follow-up report will be provided after the root cause analysis and resolution phases are complete.
+
+---
+
+## 8. Appendix
+
+### 8.1 Key Metrics During Incident
+
+| Metric                  | Value          |
+|-------------------------|----------------|
+| Average Response Time  | 5.3 seconds    |
+| Peak Database CPU Usage| 85%            |
+| Peak Disk I/O          | 120 MB/s       |
+| User Complaints Logged | 37             |
+
+### 8.2 References
+- Portal Performance Logs (2026-03-28)
+- Database Slow Query Logs
+- Infrastructure Monitoring Dashboard
+
+---
+
+**Prepared by:**  
+Kenji Tanaka  
+IT Department, University

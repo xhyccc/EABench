@@ -1,0 +1,2144 @@
+cases:
+- assertions:
+  - description: Returns the email with subject 'Review of RA and TA Application Issues'
+  - description: Matches the sender as 'lhaddad'
+  - description: Filters by the date '2026-03-24'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_001
+  query: Show me the email from Layla Haddad about flagged applications and deadlines for resolution from March 24, 2026.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Status Update on Portal Glitch Resolution'
+  - description: Matches the sender as 'cnguyen'
+  - description: Filters by the date '2026-03-24'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_002
+  query: Find the email from Chi Nguyen about the portal glitch resolution from March 24, 2026.
+  user_id: ktanaka
+- assertions:
+  - description: Returns the email with subject 'Follow-Up on Missing RA and TA Application Documents'
+  - description: Matches the sender as 'smensah'
+  - description: Filters by the date '2026-03-24'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_003
+  query: Show me the email from Samuel Mensah about missing RA and TA application documents sent on March 24, 2026.
+  user_id: lhaddad
+- assertions:
+  - description: Does not return any results since Karan Sharma did not send an email on this date
+  - description: Confirms no email from 'ksharma' exists in the dataset
+  entity_list: []
+  id: case_004
+  query: Find the email from Karan Sharma about any system or technical issues on March 24, 2026.
+  user_id: mzhang
+- assertions:
+  - description: Returns the email with subject 'Orientation Day Seating Arrangements Finalized'
+  - description: Matches the sender as 'smensah'
+  - description: Filters by the date '2026-03-24'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_005
+  query: Show me the email from Samuel Mensah announcing seating arrangements for orientation day from March 24, 2026.
+  user_id: ysilva
+- assertions:
+  - description: Returns the email with subject 'Orientation Day Preparation Updates'
+  - description: Filters by sender 'Maria Garcia'
+  - description: Filters by date '2026-03-24'
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_006
+  query: Show me the email from Maria about seating arrangements and logistics for orientation day sent on March 24th.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Coordination for STEM Orientation Day Keynote'
+  - description: Filters by sender 'Daniela Rossi'
+  - description: Filters by date '2026-03-24'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_007
+  query: Find the email from Daniela about keynote logistics for STEM Orientation Day sent recently.
+  user_id: drossi
+- assertions:
+  - description: Returns the email with subject 'Dean's Opening Lecture for STEM Majors Approved'
+  - description: Filters by sender 'Kenji Tanaka'
+  - description: Filters by date '2026-03-24'
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_008
+  query: Show me Kenji's email about the dean's lecture approval for STEM majors sent on March 24.
+  user_id: ktanaka
+- assertions:
+  - description: Returns the email with subject 'Welcome Email Draft for New Students'
+  - description: Filters by sender 'Layla Haddad'
+  - description: Filters by date '2026-03-24'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_009
+  query: Find the draft email about welcoming new students that Layla sent on March 24.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with subject 'Approval Needed for Student Welcome Email'
+  - description: Filters by sender 'Maria Garcia'
+  - description: Filters by date '2026-03-24'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_010
+  query: Show me the email from Maria asking for final approval on the student welcome email sent on March 24.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Final Check on Orientation Day Pamphlets'
+  - description: Confirms that the email is from Mei Zhang
+  - description: 'Filters by date: March 25, 2026'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_011
+  query: Show me the email confirming the last check on the orientation day pamphlets and ensuring no more edits are needed.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with subject 'Logistics Confirmation for Orientation Day'
+  - description: Confirms that the email is from Daniela Rossi
+  - description: 'Filters by date: March 25, 2026'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_012
+  query: Find the email confirming that all orientation day logistics, like refreshments and equipment, have been finalized.
+  user_id: ysilva
+- assertions:
+  - description: Returns the email with subject 'Update on Re-Admissions Portal Status'
+  - description: Confirms that the email is from Kenji Tanaka
+  - description: 'Filters by date: March 25, 2026'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_013
+  query: Can you find the email explaining the steps taken to fix the re-admissions portal and avoid future problems?
+  user_id: ksharma
+- assertions:
+  - description: Returns the email with subject 'Missing RA/TA Documents Submitted'
+  - description: Confirms that the email is from Layla Haddad
+  - description: 'Filters by date: March 25, 2026'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_014
+  query: Locate the email about the missing RA and TA application documents being submitted to HR for processing.
+  user_id: npande
+- assertions:
+  - description: Returns the email with subject 'Re-Admissions Portal Stability Confirmed'
+  - description: Confirms that the email is from Daniela Rossi
+  - description: 'Filters by date: March 25, 2026'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_015
+  query: Find the email confirming that the re-admissions portal is now stable and all technical issues have been fixed.
+  user_id: lgomez
+- assertions:
+  - description: Returns the email with the subject 'Follow-Up on Portal Issue Resolution'
+  - description: Matches the sender as 'cnguyen' and the date as '2026-03-25'
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_016
+  query: Show me my email about getting feedback on the portal issue resolution from March 25th.
+  user_id: cnguyen
+- assertions:
+  - description: Returns the email with the subject 'HR Readiness for Orientation Day'
+  - description: Matches the sender as 'mgarcia' and the date as '2026-03-25'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_017
+  query: Find my email about HR readiness for orientation day sent this week.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Orientation Day Final Preparations'
+  - description: Matches the sender as 'jokonkwo' and the date as '2026-03-25'
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_018
+  query: Retrieve my email summarizing the final preparations for orientation day.
+  user_id: jokonkwo
+- assertions:
+  - description: Returns the email with the subject 'RA/TA Application Processing Timeline'
+  - description: Matches the sender as 'lhaddad' and the date as '2026-03-25'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_019
+  query: Find my email on the updated timeline for RA/TA applications that includes details about missing documents.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with the subject 'Acknowledgment of IT Department's Efforts'
+  - description: Matches the sender as 'drossi' and the date as '2026-03-25'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_020
+  query: Show me the email I wrote thanking the IT team for fixing the admissions portal.
+  user_id: drossi
+- assertions:
+  - description: 'Returns the email with subject ''Urgent: Registrar''s Last-Minute Orientation Day Update'''
+  - description: Filters by sender 'mgarcia' and date '2026-03-26'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_021
+  query: Show me the urgent email from Maria about changes to the orientation schedule sent recently.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with subject 'Error in Orientation Day Pamphlets'
+  - description: Filters by sender 'fdubois' and date '2026-03-26'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_022
+  query: Find the message François sent about the error in the orientation pamphlets from last week.
+  user_id: aramirez
+- assertions:
+  - description: Returns the email with subject 'Scheduled Welcome Email for New Students'
+  - description: Filters by sender 'cnguyen' and date '2026-03-26'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_023
+  query: Locate the email Chi sent about scheduling the welcome message for incoming students.
+  user_id: ysilva
+- assertions:
+  - description: 'Returns the email with subject ''Dean''s Request: Additional Audiovisual Equipment'''
+  - description: Filters by sender 'mzhang' and date '2026-03-26'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_024
+  query: Show me the email from Mei about the dean's request for extra AV equipment.
+  user_id: ktanaka
+- assertions:
+  - description: 'Returns the email with subject ''Follow-Up: Discrepancies in RA/TA Applications'''
+  - description: Filters by sender 'smensah' and date '2026-03-26'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_025
+  query: Find the email Samuel sent regarding flagged issues in RA/TA applications.
+  user_id: npande
+- assertions:
+  - description: 'Returns the email with the subject ''RA/TA Application Discrepancies: Next Steps'''
+  - description: Filters emails sent by 'lhaddad'
+  - description: Restricts results to emails sent within the current week
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_026
+  query: Show me the email from Layla about RA/TA application discrepancies from this week.
+  user_id: jokonkwo
+- assertions:
+  - description: 'Returns the email with the subject ''Orientation Day Schedule Adjustments: Action Plan'''
+  - description: Filters emails authored by 'mgarcia'
+  - description: Restricts results to emails sent on the previous day
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_027
+  query: Find the email I sent about the updated orientation day schedule changes yesterday.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Reprinting Orientation Day Pamphlets'
+  - description: Filters emails authored by 'fdubois'
+  - description: Restricts results to emails sent on the current date
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_028
+  query: Locate the email from François about reprinting orientation day materials sent today.
+  user_id: cnguyen
+- assertions:
+  - description: 'Returns the email with the subject ''Technical Confirmation: Welcome Email Delivery'''
+  - description: Filters emails authored by 'ktanaka'
+  - description: Restricts results to emails sent in the morning of the current date
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_029
+  query: Find Kenji's email about verifying the welcome email delivery from this morning.
+  user_id: yabdul
+- assertions:
+  - description: 'Returns the email with the subject ''Dean''s Audiovisual Request: Logistics Update'''
+  - description: Filters emails authored by 'mzhang'
+  - description: Restricts results to emails sent on the current date
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_030
+  query: Show me Mei's email about audiovisual equipment for the dean's lecture sent today.
+  user_id: aramirez
+- assertions:
+  - description: Returns the email sent by Chi Nguyen on 2026-03-27.
+  - description: Matches the topic of printer issues affecting pamphlet production.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_031
+  query: Show me the email about printer malfunctions delaying the orientation pamphlet production from earlier today.
+  user_id: drossi
+- assertions:
+  - description: Returns the email sent by Aisha Kabir on 2026-03-27.
+  - description: Identifies the logistics topic and delivery confirmation details.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_032
+  query: Find the update about the last-minute purchase of extension cords for the dean’s equipment this morning.
+  user_id: akabir
+- assertions:
+  - description: Returns the email sent by Samuel Mensah on 2026-03-27.
+  - description: Focuses on the flagged applications and outlined next steps.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_033
+  query: Show me the follow-up email about flagged RA and TA applications with transcript issues from today.
+  user_id: smensah
+- assertions:
+  - description: Returns the email sent by Samuel Mensah on 2026-03-27.
+  - description: Matches the topic of re-admission inquiries and communication strategies.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_034
+  query: Find the email summarizing student questions about re-admission deadlines and the updated FAQ link shared today.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email sent by Daniela Rossi on 2026-03-27.
+  - description: Focuses on the revised timeline and printer delay context.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_035
+  query: Show me the email about the updated reprinting timeline for orientation pamphlets due to printer issues earlier today.
+  user_id: drossi
+- assertions:
+  - description: Returns the email with the subject 'Coordination for Applicant Follow-ups'
+  - description: Filters emails by the sender (Layla Haddad) and the date (March 2026)
+  - description: Identifies the email content discussing flagged RA and TA applicants
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_036
+  query: Show me the email about dividing tasks for following up on flagged RA and TA applicants from earlier this week.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with the subject 'Orientation Day Schedule Updates'
+  - description: Focuses on emails mentioning the orientation schedule from late March 2026
+  - description: Identifies the sender (Daniela Rossi) as someone responsible for informing departments
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_037
+  query: Find the latest email about updates to the orientation day schedule.
+  user_id: drossi
+- assertions:
+  - description: Returns the email with the subject 'Feedback on Orientation Welcome Speech Rewrite'
+  - description: Identifies the sender (Chi Nguyen) as the person requesting approval
+  - description: Filters emails related to speech drafts and feedback in March 2026
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_038
+  query: Locate the email requesting approval for the updated orientation welcome speech draft.
+  user_id: cnguyen
+- assertions:
+  - description: Returns the email with the subject 'Confirmation of Extension Cord Delivery'
+  - description: Filters emails about deliveries and audiovisual equipment in March 2026
+  - description: Identifies François Dubois as the sender of the relevant email
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_039
+  query: Show me the email confirming the delivery of extension cords for the dean's audiovisual setup.
+  user_id: fdubois
+- assertions:
+  - description: Returns the email with the subject 'RA and TA Application Follow-up Workflow'
+  - description: Filters emails discussing flagged applications and workflows in March 2026
+  - description: Identifies Samuel Mensah as the sender proposing the new workflow
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_040
+  query: Find the email about a proposed workflow for handling flagged RA and TA applications.
+  user_id: smensah
+- assertions:
+  - description: Returns the email with the subject 'Update on Audiovisual Setup for Dean's Lecture'.
+  - description: Matches the sender as 'akabir' and the date as '2026-03-28'.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_041
+  query: Show me the email about the audiovisual setup for the Dean's lecture sent by Aisha on March 28th.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Follow-Up on Incorrect RA Application Submission'.
+  - description: Matches the sender as 'yabdul'.
+  - description: Relevant to RA application mistakes.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_042
+  query: Find the email from Yolanda about a student uploading the wrong RA application document.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with the subject 'Investigating Slowness in Re-Admissions Portal'.
+  - description: Matches the sender as 'cnguyen'.
+  - description: Relevant to system performance issues.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_043
+  query: Locate the email discussing slowness in the re-admissions portal, sent by Chi.
+  user_id: ktanaka
+- assertions:
+  - description: 'Returns the email with the subject ''Adjustments to Orientation Pamphlets: Humanities Department Request''.'
+  - description: Matches the sender as 'drossi'.
+  - description: Relevant to orientation pamphlet updates.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_044
+  query: Show me Daniela's email about updates to the orientation pamphlets for the humanities department.
+  user_id: ysilva
+- assertions:
+  - description: 'Returns the email with the subject ''Student Application Follow-Up: Incorrect Document''.'
+  - description: Matches the sender as 'smensah'.
+  - description: Related to RA application document issues.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_045
+  query: Find the email from Samuel about the student application with the incorrect document.
+  user_id: npande
+- assertions:
+  - description: Returns the email authored by Chi Nguyen on March 28, 2026.
+  - description: 'Subject should match ''Re-Admissions Portal: Status Update and Next Steps''.'
+  - description: Summary should contain updates and plans for resolution of portal slowness.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_046
+  query: Show me the email from Chi Nguyen about the re-admissions portal investigation sent on March 28, 2026.
+  user_id: ktanaka
+- assertions:
+  - description: Returns the email authored by Yolanda Silva on March 28, 2026.
+  - description: Subject should match 'Budget Impact of Additional Extension Cord Purchase'.
+  - description: Summary should include cost details and approval requests.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_047
+  query: Find the email written by Yolanda Silva about the budget impact of logistics purchases sent on March 28, 2026.
+  user_id: npande
+- assertions:
+  - description: Returns the email authored by Luis Gomez on March 28, 2026.
+  - description: 'Subject should match ''Orientation Day Preparedness: Final Updates''.'
+  - description: Summary should mention audiovisual setup, pamphlets, and welcome email corrections.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_048
+  query: Locate the email from Luis Gomez about orientation day updates sent on March 28, 2026.
+  user_id: ysilva
+- assertions:
+  - description: Returns the email authored by Layla Haddad on March 28, 2026.
+  - description: 'Subject should match ''RA Application Clarifications: Outreach Plan''.'
+  - description: Summary should discuss a structured outreach plan for clarifications and follow-ups.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_049
+  query: Get the email from Layla Haddad about RA application outreach sent on March 28, 2026.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email authored by Kenji Tanaka on March 28, 2026.
+  - description: 'Subject should match ''Technical Investigation: Re-Admissions Portal Slowness''.'
+  - description: Summary should include task assignments and investigation details.
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_050
+  query: Show me Kenji Tanaka's email about the technical investigation for the re-admissions portal sent on March 28, 2026.
+  user_id: lhaddad
+- assertions:
+  - description: 'Returns the email with subject ''Urgent: Adjustments Needed for Orientation Seating Layout'''
+  - description: Email was authored by Joy Okafor
+  - description: Email date matches the ongoing orientation planning timeline
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_051
+  query: Show me the email about urgent seating layout changes for orientation sent recently.
+  user_id: mgarcia
+- assertions:
+  - description: 'Returns the email with subject ''Account-Specific Issue: Re-admissions Portal Access'''
+  - description: Email was authored by Kenji Tanaka
+  - description: Email date aligns with the recent occurrence of the issue
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_052
+  query: Find the email about a final-year student's issue accessing the re-admissions portal.
+  user_id: npande
+- assertions:
+  - description: 'Returns the email with subject ''Request for Backup Options: Orientation Name Tags'''
+  - description: Email was authored by Joy Okonkwo
+  - description: Email pertains to backup solutions for delayed supplies
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_053
+  query: Locate the email about backup options for orientation name tags that got delayed.
+  user_id: ysilva
+- assertions:
+  - description: 'Returns the email with subject ''Feedback Received: Welcome Email Revision'''
+  - description: Email was authored by Daniela Rossi
+  - description: Email content specifically addresses feedback for clarity improvements
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_054
+  query: Show me the email about feedback on revising the welcome email for clarity.
+  user_id: ksharma
+- assertions:
+  - description: 'Returns the email with subject ''Dean''s Request: Additional Rehearsal for Opening Lecture'''
+  - description: Email was authored by Luis Gomez
+  - description: Email content pertains to coordinating an extra rehearsal
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_055
+  query: Find the email about scheduling an additional rehearsal for the dean's opening lecture.
+  user_id: lhaddad
+- assertions:
+  - description: 'Returns the email with subject ''Urgent: Missing Vegetarian Option for Orientation Refreshments'''
+  - description: The sender is Aisha Kabir
+  - description: The date is March 30, 2026
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_056
+  query: Can you find the recent email about the missing vegetarian option for orientation day refreshments that Aisha sent?
+  user_id: mgarcia
+- assertions:
+  - description: 'Returns the email with subject ''Resolved: Account-Specific Re-admissions Portal Issue'''
+  - description: The sender is Karan Singh
+  - description: The date is March 30, 2026
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_057
+  query: Show me the email Karan sent about fixing the student re-admissions portal issue recently.
+  user_id: ktanaka
+- assertions:
+  - description: Returns the email with subject 'Successful Rehearsal of Dean's Opening Lecture'
+  - description: The sender is Daniela Rossi
+  - description: The date is March 30, 2026
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_058
+  query: Find the email I sent about the successful rehearsal of the Dean's opening lecture.
+  user_id: drossi
+- assertions:
+  - description: Returns the email with subject 'New RA and TA Applications Submitted'
+  - description: The sender is Layla Haddad
+  - description: The date is March 30, 2026
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_059
+  query: Show me the email I sent about the new batch of RA and TA applications that need to be reviewed.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with subject 'QR Code Added to Orientation Pamphlets'
+  - description: The sender is Chi Nguyen
+  - description: The date is March 30, 2026
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_060
+  query: Can you find my email confirming that the QR code for campus maps was added to the orientation pamphlets?
+  user_id: cnguyen
+- assertions:
+  - description: Returns the email with the subject 'Minor Glitch in Payment Confirmation Emails Resolved'
+  - description: Matches the sender 'Kenji Tanaka'
+  - description: Filters by the date '2026-03-31'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_061
+  query: Show me the email from Kenji about resolving the payment confirmation glitch from a few days ago.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the email with the subject 'Emergency Reprint of Orientation Pamphlets'
+  - description: Matches the sender 'François Dubois'
+  - description: Filters by the date '2026-03-31'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_062
+  query: Find the email about the emergency reprint of the orientation pamphlets sent earlier this week.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with the subject 'Additional Rehearsal Request from Dean of Engineering'
+  - description: Matches the sender 'Mei Zhang'
+  - description: Filters by the date '2026-03-31'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_063
+  query: Locate the email from Mei about scheduling an additional rehearsal for the Dean’s lecture.
+  user_id: smensah
+- assertions:
+  - description: 'Returns the email with the subject ''Catering Update: Additional Vegetarian Snack Options'''
+  - description: Matches the sender 'Joy Okonkwo'
+  - description: Filters by the date '2026-03-31'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_064
+  query: Find the email about the catering update for more vegetarian snack options sent recently.
+  user_id: ysilva
+- assertions:
+  - description: Returns the email with the subject 'Typo in Welcome Email Subject Line Corrected'
+  - description: Matches the sender 'Chi Nguyen'
+  - description: Filters by the date '2026-03-31'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_065
+  query: Show me the email about the typo correction in the welcome email that was fixed this week.
+  user_id: aramirez
+- assertions:
+  - description: 'Returns the email with the subject ''Urgent: Typo in Re-admissions Payment Confirmation Email Footer'''
+  - description: Filters for emails sent on '2026-04-01'
+  - description: Identifies the sender as Kenji Tanaka
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_066
+  query: Show me the urgent email about fixing the typo in the payment confirmation footer sent on April 1st.
+  user_id: mgarcia
+- assertions:
+  - description: 'Returns the email with the subject ''Orientation Setup Update: Logistics Resolved'''
+  - description: Filters for emails sent by 'jokonkwo' on '2026-04-01'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_067
+  query: Find my email update about resolving the logistics issues for orientation setup on April 1st.
+  user_id: jokonkwo
+- assertions:
+  - description: 'Returns the email with the subject ''Follow-up: Borrowed Tables for Orientation'''
+  - description: Filters for emails sent by 'akabir' on '2026-04-01'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_068
+  query: Find my email confirming the borrowed tables for the orientation venue from earlier today.
+  user_id: akabir
+- assertions:
+  - description: Returns the email with the subject 'Gluten-Free Snack Shortage During Orientation'
+  - description: Filters for emails sent by 'lhaddad' on '2026-04-01'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_069
+  query: Find my email about the shortage of gluten-free snacks during orientation and what steps were taken.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email with the subject 'Shortage of Tables for Orientation Setup'
+  - description: Filters for emails sent by 'fdubois' on '2026-04-01'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_070
+  query: Show me my email about the table shortage for the orientation setup sent earlier today.
+  user_id: fdubois
+- assertions:
+  - description: Returns the email with instructions for updating the dean's lecture slides.
+  - description: Identifies the email sent by Kenji Tanaka on April 1, 2026.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_071
+  query: Show me the email with detailed instructions on updating the dean's orientation slides sent earlier today.
+  user_id: mgarcia
+- assertions:
+  - description: Returns the follow-up email regarding the flagged error in the re-admissions system.
+  - description: Identifies the email sent by Chi Nguyen on April 1, 2026.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_072
+  query: Find the follow-up email about the flagged error in the re-admissions system.
+  user_id: lhaddad
+- assertions:
+  - description: Returns the email where Mei Zhang requested assistance with the dean's lecture slides.
+  - description: Identifies the email sent by Mei Zhang on April 1, 2026.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_073
+  query: Find the email where I requested help updating the graph in the dean's orientation lecture slides.
+  user_id: mzhang
+- assertions:
+  - description: Returns the summary of resolved issues for orientation day.
+  - description: Identifies the email sent by Daniela Rossi on April 1, 2026.
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_074
+  query: Show me the summary email listing all resolved issues for orientation day readiness.
+  user_id: drossi
+- assertions:
+  - description: Returns the email reporting the student error in the re-admissions system.
+  - description: Identifies the email sent by Layla Haddad on April 1, 2026.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_075
+  query: Find the original email that reported the student error in the re-admissions application.
+  user_id: cnguyen
+- assertions:
+  - description: Filters emails related to 'projector screen' and 'replacement'.
+  - description: Limits results to emails before orientation day.
+  - description: Finds the email authored by François Dubois on 2026-04-02.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_076
+  query: Show me the email about replacing the projector screen for the main auditorium before orientation day.
+  user_id: mgarcia
+- assertions:
+  - description: Searches for emails about a misrouted internal email.
+  - description: Finds the email written by Yasmin Abdul on 2026-04-02.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_077
+  query: Retrieve the email about the follow-up on the internal email mistakenly sent to students.
+  user_id: yabdul
+- assertions:
+  - description: Searches for emails mentioning 'audiovisual equipment' and 'lecture hall'.
+  - description: Finds the email authored by Hiroshi Matsuda on 2026-04-02.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_078
+  query: Find the email requesting a final audiovisual equipment check for the lecture hall.
+  user_id: hmatsuda
+- assertions:
+  - description: Filters emails related to 'bottled water' and 'redistribution'.
+  - description: Finds the email authored by Aisha Kabir on 2026-04-02.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_079
+  query: Locate the email about redistributing the extra bottled water for future campus events.
+  user_id: akabir
+- assertions:
+  - description: Searches for emails mentioning 'QR code' and 'campus map pamphlet'.
+  - description: Finds the email authored by Karan Singh on 2026-04-02.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_080
+  query: Show me the email about the QR code issue in the campus map pamphlet and how it was resolved.
+  user_id: ksingh
+- assertions:
+  - description: Identifies the flagged RA and TA applications email requesting updates and follow-ups.
+  - description: Links the email to the group chat discussing follow-ups.
+  - description: Connects the flagged applications group chat to the file containing the list of missing documents.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: ra_ta_followups_20260324
+    entity_type: group_chat
+  - entity_id: data/reports/missing_documents_ra_ta_apps.xlsx
+    entity_type: file
+  id: case_081
+  query: Which flagged RA and TA applications were discussed in the group chat about follow-ups mentioned in the email?
+  user_id: jokonkwo
+- assertions:
+  - description: Links the email discussing the glitch to the meeting discussing the disruption.
+  - description: Connects the glitch discussion to the technical report file documenting the issue.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: meeting_2
+    entity_type: meeting
+  - entity_id: data/logs/re_admissions_glitch_report.txt
+    entity_type: file
+  id: case_082
+  query: What was identified as the cause of the re-admissions portal glitch discussed in the email and meeting?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the email discussing technical and logistical requirements for the lecture.
+  - description: Links the email to the meeting about the dean's approval of the lecture draft.
+  - description: Connects the meeting to the finalized lecture document.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: meeting_3
+    entity_type: meeting
+  - entity_id: data/docs/dean_opening_lecture_final.pdf
+    entity_type: file
+  id: case_083
+  query: What preparations were discussed for the dean's keynote lecture mentioned in the meeting about the approved draft?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the email confirming portal issue resolution and its stability
+  - description: Links the email to the technical report documenting the resolution
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: data/reports/re_admissions_portal_issue_resolution.pdf
+    entity_type: file
+  id: case_084
+  query: Where can I find the detailed steps taken to resolve the online re-admissions portal issues?
+  user_id: ksharma
+- assertions:
+  - description: Identifies the email notifying the HR team about the submission of missing documents
+  - description: Links it to the email providing an update on the processing timeline
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  id: case_085
+  query: What is the updated timeline for processing RA and TA applications?
+  user_id: npande
+- assertions:
+  - description: Identifies the email confirming refreshment and equipment delivery
+  - description: Links it to the meeting where logistical details were finalized
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_086
+  query: Who finalized the logistical details for Orientation Day, and what was confirmed about refreshments and equipment?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the registrar's last-minute updates from the orientation schedule update file.
+  - description: Confirms the assigned action items from the email and meeting discussing the updated schedule.
+  entity_list:
+  - entity_id: data/docs/orientation_schedule_update_2026-03-26.pdf
+    entity_type: file
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_087
+  query: What action items were assigned after the registrar's last-minute updates to the orientation day schedule?
+  user_id: ksharma
+- assertions:
+  - description: Identifies flagged discrepancies from the RA/TA application summary file.
+  - description: Confirms follow-up discussions from group chats and emails.
+  - description: Confirms proposed next steps from the meeting focusing on resolving discrepancies.
+  entity_list:
+  - entity_id: data/docs/ra_ta_application_discrepancies_summary_2026-03-26.xlsx
+    entity_type: file
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_088
+  query: What were the proposed next steps to address discrepancies in RA and TA applications flagged earlier?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the dean's request for audiovisual equipment from the related file.
+  - description: Confirms coordination efforts from group chats and emails discussing the equipment request.
+  - description: Validates readiness from the meeting focused on ensuring all requested equipment is operational.
+  entity_list:
+  - entity_id: data/docs/audiovisual_request_dean_2026-03-26.docx
+    entity_type: file
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_089
+  query: Was the additional audiovisual equipment requested by the dean confirmed to be ready for the lecture?
+  user_id: lgomez
+- assertions:
+  - description: Identifies the email discussing inconsistencies in transcripts (email_001)
+  - description: Connects to the group chat organizing follow-ups (chat_006)
+  - description: Confirms the meeting resolving flagged issues (meeting_005)
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_090
+  query: What were the proposed steps to address flagged RA and TA applications, and who organized the follow-up communication?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the email about printer malfunctions (email_002)
+  - description: Links to the meeting troubleshooting printer problems (meeting_003)
+  - description: References the printer error report documenting the issues (data/printing/printer_error_report.docx)
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/printing/printer_error_report.docx
+    entity_type: file
+  id: case_091
+  query: What caused the delays in orientation pamphlet production, and how were the issues addressed?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the email sharing student ambassador feedback (email_007)
+  - description: Links to the chat planning the rewrite (chat_005)
+  - description: References the revised speech file (data/communications/welcome_speech_rewrite.docx)
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: data/communications/welcome_speech_rewrite.docx
+    entity_type: file
+  id: case_092
+  query: What changes were suggested for the orientation day welcome speech, and when was the final draft approved?
+  user_id: ktanaka
+- assertions:
+  - description: Identifies the logistics team's testing report on the audiovisual setup.
+  - description: Connects the updates to the orientation day preparations email.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: data/logistics/audiovisual_testing_report.pdf
+    entity_type: file
+  - entity_id: email_008
+    entity_type: email
+  id: case_093
+  query: What updates were made to the audiovisual setup for the dean's lecture, and how were these included in the final orientation day preparations?
+  user_id: ktanaka
+- assertions:
+  - description: Identifies the email discussing the mistake in the RA application upload.
+  - description: Connects the follow-up communication file to the outreach plan email.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: data/administration/ra_application_followup.txt
+    entity_type: file
+  id: case_094
+  query: How was the issue of the incorrectly uploaded RA application document addressed, and what follow-ups were made?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the initial investigation report file.
+  - description: Connects updates from related emails detailing findings and resolution plans.
+  entity_list:
+  - entity_id: data/it/re_admissions_portal_issue_report.docx
+    entity_type: file
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  id: case_095
+  query: What findings were reported in the investigation into the re-admissions portal's intermittent slowness, and what plans were detailed for resolution?
+  user_id: hmatsuda
+- assertions:
+  - description: Identifies the email about seating adjustments for orientation day
+  - description: Tracks the logistics team's discussion about seating layout in group chat
+  - description: Finds the final updated seating layout file
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/logistics/seating_layout_update_2026-03-29.pdf
+    entity_type: file
+  id: case_096
+  query: What adjustments were made to the seating layout for orientation day after the logistics team identified the issue?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the email reporting the portal issue
+  - description: Connects the chat discussing account-specific problems to the portal issue
+  - description: Finds the investigation report file for the portal issue
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: data/it/portal_access_issue_report_2026-03-29.docx
+    entity_type: file
+  id: case_097
+  query: What was the final outcome of the investigation into the re-admissions portal issue reported by a final-year student?
+  user_id: ksharma
+- assertions:
+  - description: Identifies the email discussing feedback about the welcome email
+  - description: Connects the communications team's meeting about revisions to the feedback
+  - description: Finds the file containing feedback and notes for the welcome email
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/communications/welcome_email_feedback_2026-03-29.txt
+    entity_type: file
+  id: case_098
+  query: What specific changes were proposed to improve clarity in the welcome email based on feedback from a new student?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the email about missing vegetarian options (email_001)
+  - description: Confirms the logistics team's role during their meeting (meeting_001)
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_099
+  query: Who ensured the urgent catering order for vegetarian refreshments was processed during the logistics team's meeting?
+  user_id: ysilva
+- assertions:
+  - description: Identifies the email about the account-specific issue resolution (email_002)
+  - description: Links the IT meeting discussion about preventive steps (meeting_002)
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_100
+  query: What steps were discussed by the IT team to prevent similar account-specific issues after resolving the student's re-admissions portal access problem?
+  user_id: npande
+- assertions:
+  - description: Identifies the group chat discussing QR code addition (chat_005)
+  - description: Confirms the communications team's role during their meeting (meeting_005)
+  entity_list:
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_101
+  query: Which team ensured the QR code was added to the orientation pamphlets to enhance accessibility for new students?
+  user_id: jokonkwo
+- assertions:
+  - description: Identifies the patch notes about the payment confirmation email glitch
+  - description: Identifies the meeting where the IT team reviewed the patch
+  entity_list:
+  - entity_id: data/it/re_admissions_portal_patch_notes_2026-03-31.pdf
+    entity_type: file
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_102
+  query: Which meeting reviewed the resolution of the payment confirmation email glitch mentioned in the patch notes for the re-admissions portal?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the emergency reprint request document for the orientation pamphlets
+  - description: Connects the logistics team's review of the revised distribution plan to the misprint issue
+  entity_list:
+  - entity_id: data/logistics/orientation_pamphlet_reprint_request_2026-03-31.docx
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_103
+  query: Which meeting discussed the logistics team's actions to address the misprint in the orientation pamphlets?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the catering team’s request for additional vegetarian snack options
+  - description: Connects the dietary preference submission data to the meeting where final plans were made
+  entity_list:
+  - entity_id: data/catering/vegetarian_snack_request_2026-03-31.pdf
+    entity_type: file
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_104
+  query: Which meeting finalized the catering team's adjustments for vegetarian snack options based on dietary preference submissions?
+  user_id: ysilva
+- assertions:
+  - description: Identifies the report of the typo in the payment confirmation email footer from 'meeting-001'.
+  - description: Tracks the coordination to resolve the typo in 'chat_001'.
+  - description: Finds the updated footer in the file 'data/emails/payment_confirmation_footer_update_20260401.txt'.
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/emails/payment_confirmation_footer_update_20260401.txt
+    entity_type: file
+  id: case_105
+  query: What steps were taken to resolve the typo in the payment confirmation email footer, and where is the updated footer stored?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the shortage of tables in 'meeting-002'.
+  - description: Tracks the resolution plan discussed in 'group_chat_001'.
+  - description: Confirms the borrowed tables were placed at the orientation venue as described in 'email_003'.
+  entity_list:
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: email_003
+    entity_type: email
+  id: case_106
+  query: How was the shortage of tables for the orientation identified and resolved, and where were the borrowed tables placed?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the flagged error in 'meeting-005'.
+  - description: Tracks the investigation process described in 'group_chat_002'.
+  - description: Finds the review documentation in the file 'data/admin/re_admissions_application_error_review_20260401.xlsx'.
+  entity_list:
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: data/admin/re_admissions_application_error_review_20260401.xlsx
+    entity_type: file
+  id: case_107
+  query: What error was flagged in the re-admissions application system, and what steps were taken to investigate and resolve similar discrepancies?
+  user_id: ysilva
+- assertions:
+  - description: Identifies the email informing about the issue with the projector screen.
+  - description: Links the group chat discussing the replacement and coordinating delivery.
+  - description: Connects the meeting where the logistics team finalized the arrangements.
+  - description: References the file detailing the replacement process.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/logistics/projector_screen_replacement.pdf
+    entity_type: file
+  id: case_108
+  query: What steps were taken to replace the torn projector screen in the main auditorium before orientation day?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the email detailing the accidental email and steps taken to clarify confusion.
+  - description: Links the chat discussing the drafting of the follow-up clarification email.
+  - description: Connects the meeting where HR discussed improving internal communication procedures.
+  - description: References the incident report about the email error.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/communications/internal_email_error_report.pdf
+    entity_type: file
+  id: case_109
+  query: What steps were taken to address the accidental email sent to students and improve communication procedures?
+  user_id: ksharma
+- assertions:
+  - description: Identifies the email reporting the QR code issue and confirming the resolution.
+  - description: Links the chat investigating and resolving the issue.
+  - description: Connects the meeting where the IT team finalized the resolution.
+  - description: References the report documenting the technical fix.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/it/qr_code_issue_resolution.pdf
+    entity_type: file
+  id: case_110
+  query: How was the QR code issue for the campus map resolved, and what actions were taken?
+  user_id: cnguyen
+- assertions:
+  - description: Identifies the student complaint about duplicate emails (email_002).
+  - description: Maps the complaint to the IT team's investigation (meeting_002).
+  - description: Links the investigation findings to the report (data/it/email_system_investigation_report.pdf).
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/it/email_system_investigation_report.pdf
+    entity_type: file
+  id: case_111
+  query: What were the findings in the investigation report regarding the duplicate re-admissions emails, which were triggered by a student complaint?
+  user_id: ksharma
+- assertions:
+  - description: Identifies the dean's request for slide updates (email_004).
+  - description: Connects the request to the collaboration on updates (chat_003).
+  - description: Confirms the updated slides are finalized in the file (data/dean/engineering_opening_lecture_slides_update.pptx).
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: data/dean/engineering_opening_lecture_slides_update.pptx
+    entity_type: file
+  id: case_112
+  query: Were the requested updates to the dean of engineering's opening lecture slides, including alumni achievements, completed as per the file?
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the original inquiry from the international student (email_006).
+  - description: Links the inquiry to subsequent follow-ups for resolution (email_007).
+  - description: Maps the resolution efforts to the documentation file (data/administration/international_student_ra_documentation_inquiry.pdf).
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: data/administration/international_student_ra_documentation_inquiry.pdf
+    entity_type: file
+  id: case_113
+  query: What actions were taken to resolve the international student's inquiry about missing RA application documentation?
+  user_id: aramirez
+- assertions:
+  - description: Identifies the email detailing the discovery of mismatched chairs.
+  - description: Links the logistics team’s discussion and coordination efforts for reorganization.
+  - description: References the file containing the chair reorganization plan.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: logistics_team_chairs_20260404
+    entity_type: group_chat
+  - entity_id: data/logistics/chair_reorganization_plan.docx
+    entity_type: file
+  id: case_114
+  query: What steps did the logistics team take to address the mismatched chairs in the secondary orientation room?
+  user_id: lgomez
+- assertions:
+  - description: Identifies emails requesting troubleshooting of the portal issues.
+  - description: Links the IT team’s group chat discussing diagnostics.
+  - description: References the file detailing the diagnostics and troubleshooting steps.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: it_team_portal_issues_20260404
+    entity_type: group_chat
+  - entity_id: data/it/re-admissions_portal_diagnostics.txt
+    entity_type: file
+  id: case_115
+  query: What actions were taken to address the intermittent slowdowns on the re-admissions portal?
+  user_id: ktanaka
+- assertions:
+  - description: Identifies the email regarding the inclusion of the guest speaker.
+  - description: Links the communications team’s group chat updating the orientation slides.
+  - description: References the file containing the updated orientation slides.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: communications_orientation_slides_20260404
+    entity_type: group_chat
+  - entity_id: data/presentations/orientation_guest_speaker_update.pdf
+    entity_type: file
+  id: case_116
+  query: How was the guest speaker’s contribution to the orientation presentation finalized and communicated?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the discussion about the power outlet issue in the group chat and meeting records.
+  - description: Confirms the resolution in the follow-up email and log report.
+  entity_list:
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: email_0007
+    entity_type: email
+  - entity_id: data/logs/power_outlet_issue_2026-04-05.txt
+    entity_type: file
+  id: case_117
+  query: Was the power outlet issue in the main orientation hall resolved before the event? If so, where was this confirmed?
+  user_id: hmatsuda
+- assertions:
+  - description: Identifies the professor's feedback discussed in the email, group chat, and meeting.
+  - description: Confirms the changes in the updated pamphlet file.
+  entity_list:
+  - entity_id: email_0002
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/orientation_pamphlet_v2.pdf
+    entity_type: file
+  id: case_118
+  query: Does the updated orientation pamphlet incorporate the professor's feedback about clearer fonts? Where can this be verified?
+  user_id: lgomez
+- assertions:
+  - description: Identifies the dean's request discussed in the email and group chat.
+  - description: Confirms the schedule adjustment in the follow-up email and updated schedule file.
+  entity_list:
+  - entity_id: email_0004
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: group_chat
+  - entity_id: email_0009
+    entity_type: email
+  - entity_id: data/schedules/dean_qa_session_adjusted_schedule.xlsx
+    entity_type: file
+  id: case_119
+  query: Was the orientation day schedule updated to include additional time for the dean's Q&A session? Where is this documented?
+  user_id: npande
+- assertions:
+  - description: Identifies the initial report of the QR code scanning issue in 'email_004'.
+  - description: Recognizes the discussion and coordination between teams in 'chat_1'.
+  - description: Confirms the updates to the QR code are documented in 'meeting-001'.
+  - description: Verifies the fix with the confirmation request in 'email_010'.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_1
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: email_010
+    entity_type: email
+  id: case_120
+  query: How was the QR code scanning issue identified, updated, and confirmed as fixed?
+  user_id: mzhang
+- assertions:
+  - description: Identifies the initial request for a moderator in 'email_003'.
+  - description: Follows up on the proposed candidates and decision-making in 'email_006'.
+  - description: Recognizes HR's discussion of the request in 'chat_5'.
+  - description: Confirms moderation tasks were part of the training plan in 'email_008'.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_5
+    entity_type: chat
+  - entity_id: email_008
+    entity_type: email
+  id: case_121
+  query: Who was proposed as a moderator for the dean's Q&A session, and what was the final decision?
+  user_id: lhaddad
+- assertions:
+  - description: Identifies the initial incident report in 'email_005'.
+  - description: Recognizes the logistics team's discussion of the issue in 'chat_4'.
+  - description: Confirms steps to identify and set improvements during 'meeting-004'.
+  - description: Verifies the details of the corrective measures in 'data/logistics/coffee_mixup_report.docx'.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_4
+    entity_type: chat
+  - entity_id: meeting-004
+    entity_type: meeting
+  - entity_id: data/logistics/coffee_mixup_report.docx
+    entity_type: file
+  id: case_122
+  query: What caused the coffee supply delivery mix-up, how was it corrected, and what preventive measures were implemented?
+  user_id: ysilva
+- assertions:
+  - description: Includes a timeline of when the disruption occurred and when it was resolved.
+  - description: Identifies the root cause of the glitch.
+  - description: Details the resolution steps taken by the IT team.
+  - description: Provides recommendations for future preventive measures.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: re_admissions_glitch_20260324
+    entity_type: chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/logs/re_admissions_glitch_report.txt
+    entity_type: file
+  - entity_id: data/reports/re_admissions_portal_issue_resolution.pdf
+    entity_type: file
+  id: case_123
+  query: Provide a comprehensive report on the technical glitch affecting the online re-admissions portal, including the timeline, root cause, resolution steps, and recommendations for preventing future incidents.
+  user_id: ksharma
+- assertions:
+  - description: Lists the reasons why applications were flagged.
+  - description: Explains follow-up actions taken to collect the missing documents or address discrepancies.
+  - description: Provides the current status of processing for these applications.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: ra_ta_followups_20260324
+    entity_type: group_chat
+  - entity_id: ra_ta_applications_processing
+    entity_type: group_chat
+  - entity_id: data/reports/missing_documents_ra_ta_apps.xlsx
+    entity_type: file
+  - entity_id: data/apps/ra_ta_missing_docs_submission_list.xlsx
+    entity_type: file
+  - entity_id: data/docs/ra_ta_application_discrepancies_summary_2026-03-26.xlsx
+    entity_type: file
+  id: case_124
+  query: Prepare a detailed analysis of the flagged RA and TA applications, including the reasons for missing documents or discrepancies, follow-up actions taken, and the current status of processing.
+  user_id: lhaddad
+- assertions:
+  - description: Covers finalized seating arrangements and related approvals.
+  - description: Mentions the creation and revision of the pamphlets.
+  - description: Describes coordination for refreshments, equipment, and other logistics.
+  - description: Details the last-minute schedule adjustments and how they were addressed.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: orientation_seating_20260324
+    entity_type: group_chat
+  - entity_id: orientation_pamphlet_check
+    entity_type: group_chat
+  - entity_id: orientation_day_logistics
+    entity_type: group_chat
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/seating_arrangements_orientation.pdf
+    entity_type: file
+  - entity_id: data/docs/orientation_day_pamphlet.pdf
+    entity_type: file
+  - entity_id: data/logistics/orientation_day_refreshments_equipment_delivery.pdf
+    entity_type: file
+  - entity_id: data/docs/orientation_schedule_update_2026-03-26.pdf
+    entity_type: file
+  id: case_125
+  query: Summarize the planning and logistical coordination for orientation day, including seating arrangements, pamphlet preparation, technical requirements, and any last-minute schedule adjustments.
+  user_id: mgarcia
+- assertions:
+  - description: Describes the discovery of the extension cord shortage and its impact on the dean's lecture preparations.
+  - description: Outlines the steps taken to resolve the issue, including the last-minute purchase from a local supplier.
+  - description: Confirms the delivery and readiness of the equipment for the lecture.
+  entity_list:
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: data/logistics/extension_cords_purchase_receipt.pdf
+    entity_type: file
+  id: case_126
+  query: Generate a detailed report on the logistics issue involving the shortage of extension cords for the dean's audiovisual equipment. Include the timeline, resolution steps, and final outcome.
+  user_id: mgarcia
+- assertions:
+  - description: Identifies the types of discrepancies in the RA and TA applications (e.g., recommendation letters, academic transcripts).
+  - description: Details the steps taken to follow up with applicants and resolve the issues.
+  - description: Includes the current status of the flagged applications.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: data/docs/ra_ta_application_discrepancies_summary_2026-03-26.xlsx
+    entity_type: file
+  - entity_id: data/admin/flagged_ra_ta_applications.xlsx
+    entity_type: file
+  - entity_id: chat_006
+    entity_type: group_chat
+  id: case_127
+  query: Provide a comprehensive analysis of the flagged RA and TA applications, including the types of discrepancies found, the follow-up process, and any remaining unresolved cases.
+  user_id: jokonkwo
+- assertions:
+  - description: Details the feedback provided by the student ambassador regarding the tone of the speech.
+  - description: Describes the changes made to make the speech more engaging.
+  - description: Explains how the revised speech is expected to resonate better with incoming students.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/communications/welcome_speech_rewrite.docx
+    entity_type: file
+  id: case_128
+  query: Summarize the updates to the orientation day welcome speech, including the feedback received, the specific changes made, and the intended impact on the audience.
+  user_id: ysilva
+- assertions:
+  - description: Explains the changes required by the registrar's updates.
+  - description: Provides a timeline of actions taken to adjust the schedule.
+  - description: Highlights the communication strategies used to inform stakeholders.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/orientation_schedule_update_2026-03-26.pdf
+    entity_type: file
+  id: case_129
+  query: Provide a detailed report on the adjustments made to the orientation day schedule based on the registrar's last-minute updates. Include a timeline of actions taken and communication strategies used.
+  user_id: mgarcia
+- assertions:
+  - description: Covers all incidents of flagged discrepancies in RA and TA applications.
+  - description: Details follow-up actions and communications with applicants.
+  - description: Summarizes the resolution process and its outcomes.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: chat_010
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/docs/ra_ta_application_discrepancies_summary_2026-03-26.xlsx
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: chat_006
+    entity_type: group_chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/admin/flagged_ra_ta_applications.xlsx
+    entity_type: file
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat2
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/administration/ra_application_followup.txt
+    entity_type: file
+  id: case_130
+  query: Generate a comprehensive analysis of efforts to address flagged discrepancies in RA and TA applications over the three-day period. Include communication, follow-ups, and resolution actions.
+  user_id: jokonkwo
+- assertions:
+  - description: Describes the dean's request for additional audiovisual equipment.
+  - description: Explains the shortage of extension cords and how it was resolved.
+  - description: Includes confirmation of the tested audiovisual setup.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/docs/audiovisual_request_dean_2026-03-26.docx
+    entity_type: file
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/logistics/extension_cords_purchase_receipt.pdf
+    entity_type: file
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat1
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/logistics/audiovisual_testing_report.pdf
+    entity_type: file
+  id: case_131
+  query: Summarize the logistics challenges and resolutions surrounding the dean of engineering’s opening lecture, including audiovisual equipment requests and extension cord shortages.
+  user_id: ktanaka
+- assertions:
+  - description: Summarizes inconsistencies found in RA and TA applications
+  - description: Describes follow-up actions taken with applicants
+  - description: Includes details on a student mistakenly uploading the wrong document and the outreach to resolve it
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_006
+    entity_type: group_chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/admin/flagged_ra_ta_applications.xlsx
+    entity_type: file
+  - entity_id: data/administration/ra_application_followup.txt
+    entity_type: file
+  id: case_132
+  query: Generate a detailed report on the flagged RA and TA applications, including inconsistencies, follow-up actions, and the issue of a student uploading the wrong document.
+  user_id: jokonkwo
+- assertions:
+  - description: Includes the timeline of events related to purchasing and testing extension cords
+  - description: Analyzes the challenges faced by the logistics team
+  - description: Confirms the successful setup of the audiovisual equipment
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: data/logistics/extension_cords_purchase_receipt.pdf
+    entity_type: file
+  - entity_id: data/logistics/audiovisual_testing_report.pdf
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_133
+  query: Provide a timeline and analysis of the audiovisual setup issues for the dean's lecture, including the purchase and testing of extension cords and any related challenges.
+  user_id: ktanaka
+- assertions:
+  - description: Details the adjustments to the seating layout to accommodate more attendees
+  - description: Mentions the revisions to the orientation pamphlet
+  - description: Includes the student feedback on the welcome email and planned changes for future drafts
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_004
+    entity_type: chat
+  - entity_id: data/logistics/seating_layout_update_2026-03-29.pdf
+    entity_type: file
+  - entity_id: data/humanities/orientation_pamphlet_update.pdf
+    entity_type: file
+  - entity_id: data/communications/welcome_email_feedback_2026-03-29.txt
+    entity_type: file
+  id: case_134
+  query: Summarize the key updates and adjustments made to orientation day preparations, including seating layout changes, pamphlet revisions, and feedback on the welcome email.
+  user_id: lhaddad
+- assertions:
+  - description: Includes details about the audiovisual setup testing and additional extension cords
+  - description: Mentions the seating layout adjustments due to increased student attendees
+  - description: Covers the resolution of missing vegetarian options for refreshments
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: data/logistics/audiovisual_testing_report.pdf
+    entity_type: file
+  - entity_id: data/logistics/seating_layout_update_2026-03-29.pdf
+    entity_type: file
+  - entity_id: data/logistics/refreshments_update_vegetarian_option.pdf
+    entity_type: file
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_135
+  query: Provide a comprehensive report on the logistics team's preparations for orientation day, including audiovisual setup, seating adjustments, and refreshments.
+  user_id: mgarcia
+- assertions:
+  - description: Discusses the intermittent slowness reported on March 28
+  - description: Includes details of the account-specific issue resolved on March 30
+  - description: Provides insights into the resolution steps and preventive measures
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: data/it/re_admissions_portal_issue_report.docx
+    entity_type: file
+  - entity_id: data/it/portal_access_issue_report_2026-03-29.docx
+    entity_type: file
+  - entity_id: data/it/account_issue_resolution_final_year_student.docx
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_136
+  query: Generate an analysis of the IT department's handling of re-admissions portal issues, including intermittent slowness and account-specific problems.
+  user_id: hmatsuda
+- assertions:
+  - description: Mentions the typo correction in the orientation day welcome email
+  - description: Includes details of the professor's message added to the pamphlets
+  - description: Covers the feedback-based email clarity improvement
+  - description: Describes the addition of a QR code to the pamphlets
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: data/communications/orientation_email_typo_fix.docx
+    entity_type: file
+  - entity_id: data/humanities/orientation_pamphlet_update.pdf
+    entity_type: file
+  - entity_id: data/communications/welcome_email_feedback_2026-03-29.txt
+    entity_type: file
+  - entity_id: data/communications/orientation_pamphlet_qr_update.pptx
+    entity_type: file
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_137
+  query: Summarize the communications team's updates to orientation materials, including email corrections, pamphlet revisions, and the QR code addition.
+  user_id: ysilva
+- assertions:
+  - description: Includes the reason for the adjustments (unexpected increase in student attendees)
+  - description: Details the timeline of discussions and decision-making
+  - description: References the final updated seating layout file
+  entity_list:
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/logistics/seating_layout_update_2026-03-29.pdf
+    entity_type: file
+  id: case_138
+  query: Provide a detailed report on the adjustments made to the seating layout for orientation day, including the timeline, decisions, and final implementation.
+  user_id: mgarcia
+- assertions:
+  - description: Mentions the dean's concerns about lecture flow
+  - description: Describes the timeline and feedback from the rehearsals
+  - description: Includes outcomes from the final rehearsal
+  entity_list:
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/engineering/dean_rehearsal_notes_2026-03-29.txt
+    entity_type: file
+  - entity_id: data/dean/lecture_rehearsal_notes.pdf
+    entity_type: file
+  id: case_139
+  query: Analyze the process of the dean of engineering's lecture rehearsals, highlighting the challenges addressed and the outcome of the final rehearsal.
+  user_id: ktanaka
+- assertions:
+  - description: Describes the student's inability to access the portal and its enrollment impact
+  - description: Details the resolution process by the IT team
+  - description: Mentions any preventive measures discussed for future issues
+  entity_list:
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/it/portal_access_issue_report_2026-03-29.docx
+    entity_type: file
+  - entity_id: data/it/account_issue_resolution_final_year_student.docx
+    entity_type: file
+  id: case_140
+  query: Create a report analyzing the re-admissions portal issue, including the impact on the student, the resolution process, and steps for preventing similar issues in the future.
+  user_id: cnguyen
+- assertions:
+  - description: Describes the discovery of the missing vegetarian option
+  - description: Includes actions taken to resolve the issue, such as placing an urgent catering order
+  - description: Confirms the resolution of the issue before orientation day
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/logistics/refreshments_update_vegetarian_option.pdf
+    entity_type: file
+  id: case_141
+  query: Provide a detailed report on the resolution of the missing vegetarian option for orientation day refreshments, including the timeline of actions and outcomes.
+  user_id: mgarcia
+- assertions:
+  - description: Details the discovery of the payment confirmation email glitch
+  - description: Explains the steps taken to resolve the issue
+  - description: Includes recommendations for preventing similar glitches in the future
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/it/re_admissions_portal_patch_notes_2026-03-31.pdf
+    entity_type: file
+  id: case_142
+  query: Generate a comprehensive analysis of the re-admissions portal payment confirmation email glitch, including the timeline of discovery, resolution steps, and recommendations for preventing similar issues.
+  user_id: ksharma
+- assertions:
+  - description: Mentions the dean’s initial successful rehearsal
+  - description: Describes the timing issue discovered during a subsequent rehearsal
+  - description: Includes details on the addition of updated research data to the lecture slides
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/slides/orientation_lecture_graph_update_20260401.pptx
+    entity_type: file
+  id: case_143
+  query: Prepare a summary of the dean of engineering’s lecture rehearsals, highlighting key feedback, timing adjustments, and the integration of updated research data into the slides.
+  user_id: jokonkwo
+- assertions:
+  - description: Describes the discovery of the glitch during final testing on March 31, 2026.
+  - description: Explains the steps taken to patch the glitch and verify the system.
+  - description: Confirms the portal's readiness for launch after testing.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/it/re_admissions_portal_patch_notes_2026-03-31.pdf
+    entity_type: file
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_144
+  query: Provide a detailed analysis of the resolution of the payment confirmation email glitch in the re-admissions portal, including the timeline, actions taken, and final readiness assessment.
+  user_id: mgarcia
+- assertions:
+  - description: Describes the discovery of the misprint in the orientation pamphlets on March 31, 2026.
+  - description: Explains the coordination for the emergency reprint of 200 copies.
+  - description: Provides details on the delivery timeline for the reprinted pamphlets.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: data/logistics/orientation_pamphlet_reprint_request_2026-03-31.docx
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_145
+  query: Summarize the handling of the misprinted orientation pamphlets, including the emergency reprint process, coordination efforts, and resolution timeline.
+  user_id: lhaddad
+- assertions:
+  - description: Mentions the student-reported error on April 1, 2026.
+  - description: Details the system-wide review initiated to identify similar discrepancies.
+  - description: Explains the findings and actions taken to resolve the issue.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: data/admin/re_admissions_application_error_review_20260401.xlsx
+    entity_type: file
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_146
+  query: Generate a report on the flagged error in the re-admissions application system, including the investigation process, findings, and steps taken to address the discrepancies.
+  user_id: aramirez
+- assertions:
+  - description: Includes details of the student-reported error in the re-admissions application status.
+  - description: Describes the system-wide review process conducted by the administration team.
+  - description: Summarizes the findings of the review and any confirmed discrepancies.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/admin/re_admissions_application_error_review_20260401.xlsx
+    entity_type: file
+  id: case_147
+  query: Provide a detailed report on the investigation into the re-admissions application system errors, including the flagged issue, system review process, and outcomes.
+  user_id: jokonkwo
+- assertions:
+  - description: Details the dean's request for updated orientation slides.
+  - description: Describes the collaboration process to gather and integrate the new research data.
+  - description: Confirms the completion and readiness of the updated slides for the lecture.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/slides/orientation_lecture_graph_update_20260401.pptx
+    entity_type: file
+  id: case_148
+  query: Compile a comprehensive timeline and summary of the update to the dean of engineering's orientation lecture slides, including the addition of the latest research trends.
+  user_id: ktanaka
+- assertions:
+  - description: Mentions the discovery of the table shortage during orientation setup.
+  - description: Describes the process of borrowing tables from the student union building.
+  - description: Confirms the resolution of the shortage and readiness for orientation day.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: group_chat_001
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/logistics/orientation_table_shortage_notes_20260401.docx
+    entity_type: file
+  id: case_149
+  query: Create a report on the logistics team's handling of the table shortage for orientation, including the resolution steps and overall readiness for the event.
+  user_id: lhaddad
+- assertions:
+  - description: Describes the discovery of the torn projector screen
+  - description: Details the coordination efforts to arrange for a replacement
+  - description: Confirms that the replacement was completed before orientation day
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/logistics/projector_screen_replacement.pdf
+    entity_type: file
+  id: case_150
+  query: Provide a detailed timeline of events and actions taken to replace the torn projector screen in the main auditorium before orientation day.
+  user_id: mgarcia
+- assertions:
+  - description: Explains the accidental email and its impact on students
+  - description: Details the follow-up actions taken to clarify the confusion
+  - description: Provides recommendations for improving internal communication processes
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/communications/internal_email_error_report.pdf
+    entity_type: file
+  id: case_151
+  query: Analyze the accidental email incident, including its impact, steps taken to resolve the confusion, and recommendations for preventing similar mistakes in the future.
+  user_id: lhaddad
+- assertions:
+  - description: Mentions the reported issue with the QR code for the campus map
+  - description: Describes the troubleshooting steps taken by the IT team
+  - description: Confirms that the issue was resolved within the hour
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/it/qr_code_issue_resolution.pdf
+    entity_type: file
+  id: case_152
+  query: Summarize the QR code access issue for the campus map, including the reported problem, troubleshooting steps, and confirmation of the resolution.
+  user_id: ktanaka
+- assertions:
+  - description: Details the incorrect orientation banner issue and its resolution.
+  - description: Mentions the mismatched chairs in the secondary orientation room and the reorganization plan.
+  - description: Includes artifacts such as the updated banner and reorganization documentation.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: logistics_team_chairs_20260404
+    entity_type: group_chat
+  - entity_id: data/logistics/orientation_banner_temporary_replacement.pdf
+    entity_type: file
+  - entity_id: data/logistics/chair_reorganization_plan.docx
+    entity_type: file
+  id: case_153
+  query: Provide a comprehensive report on the logistical challenges encountered during the orientation preparation, including the incorrect banner and mismatched chairs, along with their resolutions.
+  user_id: mgarcia
+- assertions:
+  - description: Explains the duplicate email issue reported by a student and the findings from the investigation.
+  - description: Covers the intermittent slowdowns on the re-admissions portal reported by students.
+  - description: Includes diagnostics and troubleshooting documentation.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: it_team_portal_issues_20260404
+    entity_type: group_chat
+  - entity_id: data/it/email_system_investigation_report.pdf
+    entity_type: file
+  - entity_id: data/it/re-admissions_portal_diagnostics.txt
+    entity_type: file
+  id: case_154
+  query: Generate an analysis of the IT-related incidents, including duplicate re-admissions emails and re-admissions portal slowdowns, with a focus on root causes and resolution steps.
+  user_id: ktanaka
+- assertions:
+  - description: Includes the dean's request for alumni achievements in the lecture slides.
+  - description: Mentions the adjustment to the orientation schedule for a Q&A session.
+  - description: Includes updated presentation slides and the revised schedule.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_0004
+    entity_type: email
+  - entity_id: group_chat_008
+    entity_type: group_chat
+  - entity_id: data/dean/engineering_opening_lecture_slides_update.pptx
+    entity_type: file
+  - entity_id: data/schedules/dean_qa_session_adjusted_schedule.xlsx
+    entity_type: file
+  id: case_155
+  query: Summarize the dean of engineering's contributions to the orientation preparations, including updates to the lecture slides, the Q&A session adjustment, and the inclusion of alumni achievements.
+  user_id: jokonkwo
+- assertions:
+  - description: Describes the reported slowdowns on the re-admissions portal
+  - description: Details the troubleshooting steps taken by the IT team
+  - description: Explains the impact on students accessing the enrollment system
+  - description: Includes updates on the resolution and monitoring efforts
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: it_team_portal_issues_20260404
+    entity_type: group_chat
+  - entity_id: ceo_cto_portal_update_20260404
+    entity_type: chat
+  - entity_id: data/it/re-admissions_portal_diagnostics.txt
+    entity_type: file
+  id: case_156
+  query: Provide a detailed report on the intermittent slowdowns affecting the re-admissions portal, including the timeline of events, troubleshooting actions, and their outcomes.
+  user_id: mgarcia
+- assertions:
+  - description: Explains the nature of the errors in the RA assignment list
+  - description: Details the manual review and redistribution process
+  - description: Includes the oversight measures requested for accuracy
+  - description: Summarizes the final corrected assignments
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: admin_ra_assignment_review_20260404
+    entity_type: group_chat
+  - entity_id: coo_hr_ra_redistribution_20260404
+    entity_type: chat
+  - entity_id: data/administration/ra_assignment_review.xlsx
+    entity_type: file
+  id: case_157
+  query: Generate an in-depth analysis of the errors in the RA assignment list, including the manual review process and the redistribution outcomes.
+  user_id: lhaddad
+- assertions:
+  - description: Mentions the addition of the guest speaker to the orientation slides
+  - description: Includes feedback and approval steps for the updated slides
+  - description: Highlights the collaboration between the communications team and other stakeholders
+  - description: References the final approved version of the slides
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: communications_orientation_slides_20260404
+    entity_type: group_chat
+  - entity_id: communications_guest_speaker_update_20260404
+    entity_type: chat
+  - entity_id: data/presentations/orientation_guest_speaker_update.pdf
+    entity_type: file
+  id: case_158
+  query: Compile a summary of the process to update and finalize the orientation presentation slides, focusing on the inclusion of the guest speaker.
+  user_id: drossi
+- assertions:
+  - description: Describes the reported issue with the payment receipt by a student
+  - description: Outlines the investigation process into the re-admissions system glitch
+  - description: Confirms the resolution of the issue
+  - description: Proposes recommendations to prevent future occurrences
+  entity_list:
+  - entity_id: email_0001
+    entity_type: email
+  - entity_id: email_0006
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/docs/re_admissions_issue_report_2026-04-05.docx
+    entity_type: file
+  id: case_159
+  query: Provide a detailed analysis of the re-admissions payment receipt issue, including the investigation steps, resolution, and preventative measures.
+  user_id: smensah
+- assertions:
+  - description: Mentions the professor's feedback on font clarity
+  - description: Describes the adjustments made to the pamphlet
+  - description: Confirms the final approval of the revised pamphlet before printing
+  entity_list:
+  - entity_id: email_0002
+    entity_type: email
+  - entity_id: email_0008
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/orientation_pamphlet_v2.pdf
+    entity_type: file
+  id: case_160
+  query: Summarize the process of addressing the professor's feedback on the orientation pamphlet's font clarity, including key updates and final approval.
+  user_id: mgarcia
+- assertions:
+  - description: Details the dean's initial request for additional Q&A time
+  - description: Includes the schedule adjustment process
+  - description: Mentions the last-minute request for a moderator
+  - description: Describes the final decisions on the session format
+  entity_list:
+  - entity_id: email_0004
+    entity_type: email
+  - entity_id: email_0009
+    entity_type: email
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: group_chat
+  - entity_id: chat_5
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/schedules/dean_qa_session_adjusted_schedule.xlsx
+    entity_type: file
+  - entity_id: data/events/qna_session_update.docx
+    entity_type: file
+  id: case_161
+  query: Create a timeline of events and decisions related to the updates to the dean of engineering's Q&A session, including schedule changes and moderator addition.
+  user_id: lhaddad
+- assertions:
+  - description: Describes the security vulnerability and how it was discovered
+  - description: Outlines the steps taken to deploy the security patch
+  - description: Includes details of the monitoring plan to ensure ongoing portal security
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_3
+    entity_type: chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/security/patch_notes_april_06.txt
+    entity_type: file
+  id: case_162
+  query: Provide a detailed report on the security vulnerability identified in the re-admissions portal, including the timeline of events, actions taken to patch the issue, and the monitoring plan to prevent future incidents.
+  user_id: cnguyen
+description: Generated evaluation queries covering search, multi-hop reasoning, and report generation.
+name: Evaluation Set for staff-office-the-university-of-cambford-20260407

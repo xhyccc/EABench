@@ -1,0 +1,106 @@
+# Incident Report: Incorrect Snack Shipment and Substitution
+
+**Author:** François Dubois  
+**Date:** 2026-04-05  
+**File Path:** `data/logs/snack_shipment_issue_2026-04-05.txt`  
+
+---
+
+## Summary of Incident
+On April 5, 2026, the catering team received an incorrect shipment of snacks intended for the orientation day event. The shipment, originally planned to include pre-approved and dietary-compliant items, contained incorrect products that did not meet the specified requirements. This issue surfaced during the final quality check before the scheduled event. To mitigate the situation, the catering team coordinated with local suppliers to source alternative snacks that adhered to dietary preferences and ensured the event proceeded without major disruption.
+
+---
+
+## Timeline of Events
+
+### April 5, 2026
+- **07:30 AM**: The catering team received the snack shipment from the supplier.
+- **08:15 AM**: During a routine quality check, the catering team identified that the shipment contained incorrect items:
+  - Missing vegetarian snack options.
+  - Non-gluten-free items included despite explicit instructions.
+- **08:30 AM**: The catering team escalated the issue to the logistics coordinator.
+- **09:00 AM**: A decision was made to source snacks locally as a substitution to avoid further delays.
+- **09:15 AM**: The logistics coordinator contacted local suppliers and verified the availability of compliant snack options.
+- **10:00 AM**: Local suppliers confirmed availability of the following items:
+  - Gluten-free granola bars.
+  - Vegan fruit cups.
+  - Locally baked vegetarian pastries.
+- **11:00 AM**: The locally sourced snacks were delivered to the venue.
+- **11:30 AM**: The catering team completed the setup with the substitute snacks.
+- **12:00 PM**: The orientation event proceeded as scheduled.
+
+---
+
+## Impact Assessment
+
+### Affected Areas
+- **Event Schedule**: No significant delays occurred due to swift mitigation efforts.
+- **Budget**: Additional costs incurred due to:
+  - Emergency sourcing from local suppliers.
+  - Additional transportation fees for urgent delivery.
+- **Attendee Experience**: Minimal impact as snacks were substituted with high-quality, locally sourced alternatives that met dietary requirements.
+
+### Key Metrics
+- **Initial Snack Order Value**: $2,500
+- **Additional Cost for Substitution**: $450
+- **Delay in Setup Completion**: 1 hour
+
+---
+
+## Root Cause Analysis
+
+### Identified Issues
+1. **Supplier Error**:
+   - Incorrect fulfillment of the snack order.
+   - Failure to cross-check dietary requirements before shipment.
+2. **Internal Oversight**:
+   - No secondary verification process in place for received shipments.
+
+### Contributing Factors
+- Tight timelines leading up to the orientation day.
+- Increased complexity due to a higher-than-expected number of dietary preferences submitted by students.
+
+---
+
+## Resolution Steps
+
+### Immediate Actions
+- Sourced compliant snacks from local suppliers to substitute incorrect items.
+- Coordinated with logistics and catering teams to ensure timely delivery and setup.
+- Communicated transparently with event coordinators about the substitution.
+
+### Long-term Preventive Measures
+1. **Supplier Management**:
+   - Establish a mandatory pre-shipment verification process with suppliers.
+   - Include penalties for non-compliance in supplier contracts.
+2. **Internal Processes**:
+   - Implement a secondary verification step for all incoming shipments.
+   - Maintain a small buffer stock of compliant snacks for emergencies.
+3. **Documentation**:
+   - Update the catering checklist to include a detailed snack verification process.
+
+---
+
+## Lessons Learned
+- The importance of having contingency plans for critical event supplies.
+- Proactive communication with local vendors can mitigate potential disruptions.
+- Strengthening supplier relationships and ensuring accountability can reduce the likelihood of future errors.
+
+---
+
+## Acknowledgments
+Special thanks to the following teams for their prompt actions and support:
+- **Catering Team**: For quickly identifying the issue and sourcing alternatives.
+- **Logistics Team**: For efficiently coordinating emergency deliveries.
+- **Communications Team**: For ensuring attendees were informed of the high-quality substitutes provided.
+
+---
+
+## Attachments
+- **Attachment 1**: Original snack order invoice.
+- **Attachment 2**: Emergency order receipt from local suppliers.
+- **Attachment 3**: Photos of substituted snacks at the event.
+
+---
+
+**End of Report**

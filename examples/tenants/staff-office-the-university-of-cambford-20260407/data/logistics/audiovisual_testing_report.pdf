@@ -1,0 +1,134 @@
+# Audiovisual Testing Report for the Dean's Opening Lecture
+
+**Author:** Joy Okonkwo  
+**Date:** March 28, 2026  
+
+---
+
+## Table of Contents
+1. Introduction
+2. Objectives
+3. Testing Procedure
+4. Equipment Inventory
+5. Observations
+6. Issues Identified
+7. Resolutions Implemented
+8. Recommendations
+9. Conclusion
+
+---
+
+## 1. Introduction
+
+This report provides a detailed account of the testing process conducted for the audiovisual (AV) setup required for the Dean of Engineering's opening lecture. The lecture is scheduled as part of the upcoming orientation day for STEM majors, and it is critical to ensure seamless functionality of all AV components to enhance the event's success.
+
+The testing was conducted by the logistics team in collaboration with the IT department, following a request for additional AV equipment to accommodate the Dean's presentation needs.
+
+---
+
+## 2. Objectives
+
+The primary objectives of this testing process were as follows:
+
+- To confirm the functionality of all AV components, including new additions.
+- To ensure compatibility between the Dean's presentation materials and the AV systems.
+- To identify and resolve any technical issues prior to the event.
+- To validate the adequacy of the setup in meeting the event's requirements.
+
+---
+
+## 3. Testing Procedure
+
+The testing process was conducted in three phases:
+
+### Phase 1: Pre-Test Setup
+- Verified the delivery and condition of all required equipment, including additional extension cords.
+- Configured the AV setup in the auditorium as per the finalized seating arrangement.
+- Installed and connected the additional AV equipment requested by the Dean.
+
+### Phase 2: Functional Testing
+- Tested individual components:
+  - **Projector:** Verified brightness, resolution, and alignment.
+  - **Microphones:** Checked audio clarity and range for both handheld and lapel microphones.
+  - **Speakers:** Ensured even sound distribution across the auditorium.
+  - **Extension Cords:** Confirmed adequate power supply to all equipment.
+- Conducted a full presentation run-through using the Dean's slides and video materials.
+
+### Phase 3: Stress Testing
+- Simulated potential scenarios, such as power fluctuations and connectivity issues, to evaluate system stability.
+- Monitored performance metrics, including latency, audio delay, and overall synchronization.
+
+---
+
+## 4. Equipment Inventory
+
+### Equipment Used:
+- **1 Projector** (4K resolution, 5000 lumens)
+- **2 Wireless Handheld Microphones**
+- **2 Lapel Microphones**
+- **1 Audio Mixer**
+- **4 Speakers** (Mounted at strategic points for optimal sound distribution)
+- **5 Extension Cords** (Newly purchased to address the initial shortage)
+- **1 Laptop** (Used to run the Dean's presentation materials)
+
+---
+
+## 5. Observations
+
+### Positive Outcomes:
+- All newly procured extension cords functioned as expected, resolving the initial shortage.
+- The projector displayed high-quality visuals with excellent color accuracy.
+- The audio system provided clear and consistent sound throughout the auditorium.
+
+### Notable Findings:
+- The addition of lapel microphones improved mobility for the Dean during the presentation.
+- The AV system demonstrated compatibility with the Dean's presentation files.
+
+---
+
+## 6. Issues Identified
+
+1. **Microphone Interference:**
+   - Intermittent static noise was observed when both handheld microphones were used simultaneously.
+
+2. **Minor Latency in Audio:**
+   - A slight delay was detected between video playback and corresponding audio.
+
+3. **Connectivity Instability:**
+   - The HDMI cable connecting the laptop to the projector occasionally disconnected.
+
+---
+
+## 7. Resolutions Implemented
+
+- **Microphone Interference:**
+   - Changed the operating frequency of one handheld microphone to avoid overlap.
+
+- **Audio Latency:**
+   - Adjusted the audio mixer settings to reduce latency.
+
+- **HDMI Connectivity:**
+   - Replaced the faulty HDMI cable with a new, high-quality cable.
+
+---
+
+## 8. Recommendations
+
+To ensure a smooth event, the following recommendations are proposed:
+
+- Keep spare HDMI cables and audio equipment on hand during the lecture.
+- Assign a dedicated technician to monitor the AV setup throughout the event.
+- Conduct a final system check on the morning of the lecture to confirm functionality.
+- Train key staff members on operating the AV equipment to handle any unexpected issues.
+
+---
+
+## 9. Conclusion
+
+The audiovisual testing for the Dean's opening lecture has been successfully completed. All major issues have been resolved, and the setup is now fully functional and ready for use. With the recommended precautions in place, the AV system will effectively support the Dean's presentation and contribute to a successful orientation day event.
+
+---
+
+**Prepared by:**  
+Joy Okonkwo  
+Logistics Team Lead
