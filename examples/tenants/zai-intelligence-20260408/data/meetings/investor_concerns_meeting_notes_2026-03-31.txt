@@ -1,0 +1,122 @@
+# Investor Concerns Meeting Notes (2026-03-31)
+
+**Author:** Mateo Carvalho  
+**Date:** March 31, 2026  
+**Context:** Impromptu leadership meeting addressing investor concerns about the delayed beta release of the benchmark dataset.
+
+---
+
+## Executive Summary
+
+The leadership meeting was convened by the CEO to address escalating investor concerns regarding the delayed beta release of the benchmark dataset. Key topics discussed included technical blockers, resource allocation, communication gaps, and financial implications. The meeting highlighted critical misalignments across teams and leadership, as well as the broader impact of delays on investor confidence and team morale.
+
+---
+
+## Attendees
+
+- **CEO:** [Name Redacted]
+- **CTO:** [Name Redacted]
+- **CFO:** [Name Redacted]
+- **Product Manager:** [Name Redacted]
+- **Engineering Lead:** [Name Redacted]
+- **Data Science Lead:** [Name Redacted]
+- **HR Representative:** [Name Redacted]
+
+---
+
+## Key Discussion Points
+
+### 1. Investor Concerns
+- **Primary Concerns:**
+  - Delayed release of the beta benchmark dataset.
+  - Lack of clear financial projections and ROI for the delayed product.
+  - Growing skepticism about technical feasibility and execution timelines.
+- **Additional Pressure:**
+  - Investors are demanding a detailed roadmap and functional demo for the beta release.
+  - Threats of reduced funding commitments if milestones are not met within the next quarter.
+
+### 2. Technical Challenges
+- **Memory Leak Workaround:**
+  - The engineering team discovered that the temporary workaround caused latency issues during high-load scenarios.
+  - Concerns were raised about scalability and long-term sustainability of the solution.
+- **Data Loss Incident:**
+  - An intern accidentally deleted a portion of annotated training data, further delaying dataset improvements.
+  - A junior data scientist proposed an alternative annotation strategy to recover faster, sparking debate over whether to pivot or maintain existing processes.
+- **Visualization Components:**
+  - Missing visualizations in the demo preparation created last-minute bottlenecks for the product team.
+  - CTO suggested reallocating engineering resources to address this, but the proposal faced pushback due to existing priorities.
+
+### 3. Leadership Tensions
+- **CEO vs CTO:**
+  - Heated debate over whether to fast-track the beta dataset release despite unresolved technical issues.
+  - CTO emphasized the risks of rushing the release, citing potential reputational damage and technical debt.
+  - CEO argued that appeasing investors was paramount given the financial stakes.
+- **Resource Prioritization:**
+  - CFO advocated for reallocating resources to finalize the demo, while engineering and data science leads expressed concerns about overloading their teams.
+
+### 4. Employee Morale and Burnout
+- **HR Feedback:**
+  - Recent anonymous survey revealed widespread confusion and dissatisfaction with the 'no-meeting' policy.
+  - Employees reported frustration with overlapping scheduling conflicts and unclear policy implementation.
+- **Town Hall Miscommunication:**
+  - The town hall meeting intended to address policy confusion was rescheduled twice, leading to complaints about poor communication practices.
+  - HR acknowledged the need for clearer policy rollouts and better internal communication.
+
+---
+
+## Key Decisions and Action Items
+
+### Immediate Actions:
+1. **Benchmark Dataset Demo:**
+   - Product manager to prioritize finalizing the demo with input from engineering and data science teams.
+   - CFO to review the corrected demo draft before submission to investors.
+2. **Memory Leak Issue:**
+   - Engineering team to investigate alternative solutions to mitigate latency problems.
+   - CTO to schedule a dedicated technical review session to assess scalability concerns.
+3. **Data Loss Recovery:**
+   - Data science team to evaluate the proposed alternative annotation strategy and make a decision within 48 hours.
+   - HR to assist with better documentation and training to prevent future incidents.
+
+### Long-Term Actions:
+1. **Leadership Alignment:**
+   - CEO and CTO to host weekly alignment meetings to resolve ongoing tensions and ensure unified strategic direction.
+   - CFO to prepare updated financial forecasts that account for delayed milestones.
+2. **Employee Morale:**
+   - HR to develop a clearer communication plan for policy rollouts.
+   - Consider implementing flexible work initiatives to address burnout concerns.
+
+### Deadlines:
+- **Demo Submission to Investors:** April 3, 2026
+- **Memory Leak Review:** April 7, 2026
+- **Annotation Strategy Decision:** April 2, 2026
+
+---
+
+## Risks and Mitigation Strategies
+
+### Risks:
+1. **Investor Dissatisfaction:**
+   - Failure to deliver a satisfactory demo or roadmap may lead to reduced funding commitments.
+2. **Technical Debt:**
+   - Rushed releases may result in long-term scalability and maintenance issues.
+3. **Employee Turnover:**
+   - Growing dissatisfaction with workplace policies may exacerbate burnout and lead to attrition.
+
+### Mitigation Strategies:
+1. **Transparent Communication:**
+   - Maintain regular updates to investors with realistic timelines and technical progress.
+2. **Resource Planning:**
+   - Avoid diverting resources from critical tasks without thorough impact assessments.
+3. **Employee Engagement:**
+   - Develop targeted initiatives to improve morale and reduce burnout.
+
+---
+
+## Conclusion
+
+The impromptu meeting underscored the urgency of addressing investor concerns while balancing internal priorities and team morale. Leadership must act swiftly to align on strategy, resolve technical blockers, and improve communication practices to mitigate risks and regain investor confidence.
+
+---
+
+**Prepared By:** Mateo Carvalho  
+**Date:** March 31, 2026

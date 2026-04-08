@@ -1,0 +1,116 @@
+# Investor Metrics Summary
+
+**Author**: Julia Rodriguez  
+**Date**: 2026-03-09  
+**Context**: Summary of the updated performance metrics requested by the A+-round investor.
+
+---
+
+## Executive Summary
+This document provides a comprehensive overview of the updated performance metrics requested by the A+-round investor. The metrics have been revised to reflect progress in key areas, address inconsistencies in prior reports, and align with the feedback received during the investor’s recent visit. This report aims to ensure transparency and support informed decision-making regarding the continuation of funding.
+
+---
+
+## Key Highlights
+
+### 1. Model Performance
+- **Accuracy**:
+  - Current Model (v3.2): **94.7%** (↑ 1.4% from v3.1)
+  - Benchmark Open-Source Model: **92.8%**
+- **Precision/Recall**:
+  - Precision: **93.2%**  
+  - Recall: **95.1%**
+- **F1-Score**: **94.1%**
+
+### 2. Operational Metrics
+- **Training Time**:
+  - Reduced by **18%** due to optimized hyperparameter tuning.
+- **Inference Latency**:
+  - Current average: **32ms** (↓ 4ms from previous iteration).
+- **Model Size**:
+  - Compressed from **2.1GB** to **1.8GB** via post-training quantization techniques.
+
+### 3. Data Integrity
+- **Dataset Size**:
+  - Annotated records: **1.2M samples**
+  - Resolved **dataset inconsistencies** as of 2026-03-09, improving annotation accuracy by **3.7%**.
+- **New Data Sources**:
+  - Integrated **2 new external datasets** to enhance domain diversity.
+
+### 4. Financial Metrics
+- **Runway Extension**:
+  - Projected runway: **12 months** (↑ 2 months due to cost optimizations).
+- **Operational Costs**:
+  - Monthly compute expenses: **$23,500** (↓ 6.3% from prior quarter).
+- **Investor-specific ROI Metrics**:
+  - Estimated ROI: **4.5x** over 3 years (upgraded model deployment projections).
+
+---
+
+## Challenges and Mitigations
+
+### 1. Dataset Annotation Inconsistencies
+- **Issue**: Discrepancies discovered in labeled data.
+- **Action Taken**:
+  - Implemented an alternative methodology proposed by the senior data scientist.
+  - Conducted a full review of **250K records**, correcting mislabeled entries.
+- **Outcome**: Improved annotation accuracy and restored confidence in evaluation results.
+
+### 2. Hyperparameter Tuning Debate
+- **Issue**: Team disagreement on strategy changes.
+- **Action Taken**:
+  - Conducted an internal review of the proposed strategies.
+  - Adopted a hybrid approach combining grid search and Bayesian optimization.
+- **Outcome**: Reduced training time by **18%** with no impact on model performance.
+
+### 3. Investor Requests for Additional Metrics
+- **Issue**: Delays in A+-round funding due to new metric requirements.
+- **Action Taken**:
+  - Compiled a comprehensive set of updated performance metrics.
+  - Scheduled a follow-up presentation to address investor concerns.
+- **Outcome**: Investor engagement improved, with positive early feedback received.
+
+---
+
+## Future Roadmap
+
+### 1. Model Enhancements
+- Evaluate the newly released open-source model for potential integration.
+- Explore advanced post-training techniques to further compress model size.
+
+### 2. Data Strategy
+- Expand dataset diversity by sourcing additional domain-specific data.
+- Automate annotation processes to minimize future inconsistencies.
+
+### 3. Operational Efficiency
+- Migrate to a more cost-efficient cloud provider to reduce compute expenses.
+- Continue optimizing training pipelines to further reduce training time.
+
+### 4. Investor Relations
+- Deliver follow-up report addressing any outstanding concerns.
+- Provide quarterly updates with detailed performance and financial metrics.
+
+---
+
+## Appendix
+
+### A. Detailed Metrics
+| Metric                | Value        | Change          |
+|-----------------------|--------------|-----------------|
+| Accuracy             | 94.7%        | +1.4%          |
+| Precision            | 93.2%        | +1.1%          |
+| Recall               | 95.1%        | +1.6%          |
+| F1-Score             | 94.1%        | +1.3%          |
+| Training Time        | 14 hours     | -18%           |
+| Inference Latency    | 32ms         | -4ms           |
+| Model Size           | 1.8GB        | -14.3%         |
+| Monthly Compute Cost | $23,500      | -6.3%          |
+
+### B. Glossary
+- **A+-round Investor**: An investor who provided funding during the A+ financing round.
+- **Post-Training Quantization**: A technique to reduce model size by approximating weights with lower precision.
+- **Hyperparameter Tuning**: The process of optimizing the settings that control the training of a machine learning model.
+
+---
+
+*Prepared by Julia Rodriguez for internal and investor review.*

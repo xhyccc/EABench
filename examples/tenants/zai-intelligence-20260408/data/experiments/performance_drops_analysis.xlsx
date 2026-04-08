@@ -1,0 +1,145 @@
+# Performance Drops Analysis Report
+
+**Author:** Alejandro Rendón  
+**Date:** 2026-03-11  
+**File Path:** `data/experiments/performance_drops_analysis.xlsx`
+
+---
+
+## Context
+This document provides an in-depth analysis of the unexpected performance drops observed in the latest reinforcement learning (RL) experiment conducted by the lead RL engineer. The experiment aimed to evaluate the impact of a new hyperparameter tuning strategy proposed on 2026-03-08. However, the results revealed a significant degradation in performance metrics compared to previous baselines.
+
+---
+
+## Key Issues Identified
+
+### 1. **Hyperparameter Tuning Strategy**
+- **Proposed Change:**
+  - Shift to a gradient-based hyperparameter tuning method, leveraging second-order optimization techniques for faster convergence.
+  - Initial goal: Reduce training time while maintaining or improving model performance.
+- **Observed Issue:**
+  - The new strategy led to overfitting on the training set, with a significant drop in generalization performance.
+  - Validation accuracy decreased by 12.4% compared to the baseline model.
+
+### 2. **Dataset Annotation Inconsistencies**
+- **Discovery:**
+  - On 2026-03-08, a junior data scientist flagged inconsistencies in the annotated dataset.
+- **Impact:**
+  - The inconsistencies may have introduced noise in the training data, exacerbating performance drops.
+  - Preliminary analysis indicates mislabeled samples in at least 5% of the dataset.
+
+### 3. **Pipeline Disruptions**
+- **Incident:**
+  - A junior engineer accidentally pushed an untested script to the shared repository on 2026-03-09.
+- **Impact:**
+  - While the issue was quickly resolved, it temporarily disrupted the training pipeline and may have introduced instability in the experimental setup.
+
+### 4. **Open-Source Model Debate**
+- **Context:**
+  - The team has been debating whether to integrate features from a newly released open-source RL model.
+- **Impact:**
+  - Resources have been divided, slowing down troubleshooting efforts.
+  - A lack of documentation for critical features has further delayed progress.
+
+---
+
+## Data Summary
+
+### Experiment Results
+| Metric                   | Baseline Model | New Strategy | Change (%) |
+|--------------------------|----------------|--------------|------------|
+| Validation Accuracy      | 83.7%          | 71.3%        | -12.4%     |
+| Training Accuracy        | 88.2%          | 94.6%        | +6.4%      |
+| Validation Loss          | 0.242          | 0.387        | +59.9%     |
+| Training Time (Epochs)   | 47             | 32           | -31.9%     |
+
+### Dataset Analysis
+| Issue Type               | Affected Samples | Percentage |
+|--------------------------|-------------------|------------|
+| Mislabeled Annotations   | 1,150             | 5.2%       |
+| Missing Annotations      | 420               | 1.9%       |
+| Duplicates               | 338               | 1.5%       |
+
+### Pipeline Disruptions Log
+| Date       | Issue Description                                        | Resolution Time |
+|------------|----------------------------------------------------------|-----------------|
+| 2026-03-09 | Untested script pushed to shared repository              | 45 minutes      |
+| 2026-03-10 | Unexpected resource allocation to open-source model test | Ongoing         |
+
+---
+
+## Root Cause Analysis
+
+1. **Hyperparameter Overfitting**
+   - The gradient-based tuning method heavily optimized for the training set but failed to generalize to unseen data.
+   - The absence of regularization in the new strategy exacerbated the issue.
+
+2. **Noisy Dataset**
+   - The mislabeled samples introduced ambiguity, leading to inconsistencies during training and evaluation.
+
+3. **Team Resource Misallocation**
+   - Prolonged debates over the open-source model diverted attention from addressing core experimental issues.
+
+---
+
+## Proposed Solutions
+
+### 1. Revert to Previous Hyperparameter Tuning Strategy
+- Reestablish the baseline strategy to stabilize performance.
+- Conduct a controlled experiment to further evaluate the new strategy’s potential with improved regularization.
+
+### 2. Address Dataset Issues
+- Implement automated tools to detect and rectify mislabeled samples.
+- Allocate a dedicated team to perform a thorough review of the dataset.
+
+### 3. Streamline Resource Allocation
+- Postpone exploratory tests with the open-source model until the primary pipeline is stable.
+- Establish a clear roadmap to avoid resource conflicts.
+
+---
+
+## Action Plan
+
+### Immediate (Within 24 Hours)
+- [ ] Revert to the baseline hyperparameter tuning strategy.
+- [ ] Review and clean the mislabeled samples in the dataset.
+- [ ] Communicate findings to the core team and align on next steps.
+
+### Short-Term (1-2 Weeks)
+- [ ] Conduct additional experiments with improved regularization for the new hyperparameter strategy.
+- [ ] Finalize the dataset quality assurance process.
+- [ ] Deliver a detailed report to investors addressing performance metrics and resolution strategies.
+
+### Long-Term (1 Month+)
+- [ ] Develop automated annotation tools to minimize future inconsistencies.
+- [ ] Reassess the feasibility of integrating features from the open-source model.
+- [ ] Refine team workflows to avoid resource misallocation during critical phases.
+
+---
+
+## Appendix
+
+### A. Experiment Configuration
+- **Baseline Settings:**
+  - Optimizer: Adam
+  - Learning Rate: 0.001
+  - Batch Size: 64
+  - Regularization: Dropout (0.3)
+- **New Strategy Settings:**
+  - Optimizer: Gradient Descent with Momentum
+  - Learning Rate: 0.01
+  - Batch Size: 32
+  - Regularization: None
+
+### B. Dataset Quality Assurance Tools
+- Proposed Tools:
+  - Label Validation Pipeline (Python-based)
+  - Duplicate Detection Script (Custom SQL Query)
+
+### C. References
+- Internal Memo: “Proposed Shift in Hyperparameter Tuning Strategies” (2026-03-08)
+- Dataset Audit Report: “Annotation Inconsistencies Analysis” (2026-03-09)
+
+---
+
+End of Report

@@ -1,0 +1,120 @@
+# Hyperparameter Tuning Results
+
+**Author:** Alejandro Rendón  
+**Date:** 2026-03-10  
+
+---
+
+## Context
+
+This report summarizes the initial findings from the experiment conducted to evaluate the new hyperparameter tuning strategy proposed by the lead RL engineer. The goal of this experiment was to assess whether the strategy could improve model performance, reduce training time, and optimize resource utilization. These results are preliminary and are meant to guide further iterations and discussions within the team.
+
+### Background
+
+- **Proposed Strategy**: The new hyperparameter tuning strategy leverages a combination of Bayesian Optimization and early-stopping mechanisms with dynamic resource allocation.
+- **Motivation**: Current grid and random search approaches were proving inefficient in high-dimensional parameter spaces, leading to suboptimal results and excessive compute costs.
+- **Challenges**:
+  - Inconsistent dataset annotations raised concerns about the reliability of evaluation metrics.
+  - The team faced internal disagreements regarding the feasibility of adopting new techniques amidst other ongoing initiatives.
+
+---
+
+## Experiment Setup
+
+### Model and Dataset
+- **Model**: Custom reinforcement learning (RL) agent based on a Transformer architecture.
+- **Dataset**: Proprietary dataset containing annotated trajectories. Note: Dataset inconsistencies previously flagged remain unresolved but were partially mitigated using automated correction scripts.
+
+### Tuning Approach
+- **Baseline**:
+  - Standard grid search over 5 hyperparameters.
+  - Training budget: 100 trials.
+- **New Strategy**:
+  - Bayesian Optimization with Gaussian Processes.
+  - Early stopping based on validation loss plateau.
+  - Dynamic allocation of compute resources based on intermediate results.
+
+### Hyperparameters Tuned
+1. Learning rate
+2. Batch size
+3. Discount factor (gamma)
+4. Number of hidden layers
+5. Dropout rate
+
+### Metrics Evaluated
+- **Primary Metrics**:
+  - Average reward per episode (higher is better).
+  - Training time (lower is better).
+- **Secondary Metrics**:
+  - Variance in reward (stability of performance).
+  - GPU/CPU utilization efficiency.
+
+---
+
+## Results
+
+### Summary Table
+| Metric                         | Baseline (Grid Search) | New Strategy (Bayesian Opt.) |
+|--------------------------------|-------------------------|------------------------------|
+| Avg. Reward per Episode        | 85.4                   | **92.1**                    |
+| Training Time (hours)          | 14.2                   | **8.7**                     |
+| Reward Variance                | 12.3                   | **9.8**                     |
+| GPU Utilization Efficiency (%) | 74.5                   | **88.1**                    |
+
+### Key Observations
+- **Improved Performance**: The new strategy achieved a 7.8% improvement in average reward compared to the baseline.
+- **Reduced Training Time**: Training time decreased by 38.7%, demonstrating significant efficiency gains.
+- **Stability**: Reward variance was reduced, indicating more consistent performance across episodes.
+- **Resource Optimization**: GPU utilization improved markedly, suggesting better allocation of computational resources.
+
+### Visualizations
+
+#### Average Reward Over Training Time
+![Avg Reward vs Training Time](https://via.placeholder.com/600x300?text=Graph+Placeholder)
+
+#### GPU Utilization
+![GPU Utilization](https://via.placeholder.com/600x300?text=Graph+Placeholder)
+
+---
+
+## Discussion
+
+### Strengths of the New Strategy
+- **Efficiency**: The dynamic resource allocation approach significantly reduced training time while maintaining high performance.
+- **Scalability**: Bayesian optimization showed promise in handling the high-dimensional hyperparameter space.
+
+### Limitations
+- **Dataset Quality**: Remaining inconsistencies in the dataset likely impacted the reliability of evaluation metrics.
+- **Computational Overhead**: Initial setup for Bayesian Optimization required more compute resources compared to grid search.
+
+### Team Feedback
+- Some team members expressed cautious optimism, highlighting the potential for further improvements with additional iterations.
+- Concerns were raised about the lack of alignment with other ongoing initiatives, such as the integration of new post-training techniques.
+
+---
+
+## Next Steps
+
+1. **Further Experiments**:
+   - Expand the hyperparameter search space.
+   - Investigate the impact of alternative Bayesian priors.
+2. **Dataset Refinement**:
+   - Prioritize resolving annotation inconsistencies.
+   - Explore automated tools for improving dataset quality.
+3. **Team Alignment**:
+   - Schedule a dedicated session to align on strategic priorities.
+   - Evaluate the feasibility of integrating this tuning strategy with new post-training techniques.
+4. **Documentation**:
+   - Prepare detailed documentation for reproducibility.
+   - Share findings with the broader team for feedback.
+
+---
+
+## Conclusion
+
+The initial results from the new hyperparameter tuning strategy are promising, showcasing significant improvements in both performance and efficiency. However, further iterations and refinements are required to address remaining challenges and fully integrate the approach into the broader development pipeline. Continued collaboration and alignment within the team will be critical to realizing the full potential of this strategy.
+
+---
+
+**Prepared by:** Alejandro Rendón  
+**Date:** 2026-03-10

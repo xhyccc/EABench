@@ -1,0 +1,2535 @@
+cases:
+- assertions:
+  - description: Returns the email with subject 'Proposal for New Hyperparameter Tuning Strategies'
+  - description: Filters by the sender 'arendón' and the date '2026-03-08'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_001
+  query: Find the email from Alejandro Rendón about hyperparameter tuning strategies sent on March 8, 2026.
+  user_id: jrodriguez
+- assertions:
+  - description: Returns the email with subject 'Concerns About the New Hyperparameter Proposal'
+  - description: Filters by the sender 'kpetrov' and the date '2026-03-08'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_002
+  query: Locate the email from Katya Petrov discussing concerns about the computational cost of the hyperparameter proposal on March 8, 2026.
+  user_id: mhamed
+- assertions:
+  - description: 'Returns the email with subject ''Urgency: Dataset Inconsistencies Identified'''
+  - description: Filters by the sender 'mcarvalho' and keywords in the summary
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_003
+  query: Show me the urgent email from Mateo Carvalho about dataset annotation issues identified by the junior data scientist.
+  user_id: hnguyen
+- assertions:
+  - description: 'Returns the email with subject ''Draft Plan: Feedback on Post-Training Integration'''
+  - description: Filters by the sender 'hwang' and the date '2026-03-08'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_004
+  query: Retrieve the draft plan from Hyejin Wang about post-training integration techniques that needed feedback by the end of March 8, 2026.
+  user_id: nreddy
+- assertions:
+  - description: 'Returns the email with subject ''Investor Visit: Presentation Preparation'''
+  - description: Filters by the sender 'jrodriguez' and the date '2026-03-08'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_005
+  query: Find the email from Julia Rodriguez about coordinating the investor presentation preparation on March 8, 2026.
+  user_id: tsharma
+- assertions:
+  - description: Returns the email titled 'Exploration of New Open-Source Model'
+  - description: The email is authored by Tanvi Sharma on March 8, 2026
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_006
+  query: Show me the email from Tanvi on March 8 about the new open-source model and its strategic implications.
+  user_id: rpatel
+- assertions:
+  - description: Returns the email titled 'Follow-Up on Investor Feedback'
+  - description: The email is authored by Chidinma Okonkwo on March 8, 2026
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_007
+  query: Retrieve the email from Chidinma on March 8 summarizing the investor meeting feedback and follow-up actions.
+  user_id: jrodriguez
+- assertions:
+  - description: Returns the email titled 'Strategic Focus Amid Multiple Initiatives'
+  - description: The email is authored by Liang Zhao on March 8, 2026
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_008
+  query: Find the email from Liang Zhao on March 8 addressing concerns about balancing multiple initiatives and roadmap prioritization.
+  user_id: mhamed
+- assertions:
+  - description: Returns the email titled 'Follow-Up on Post-Training Techniques Discussion'
+  - description: The email is authored by Hyejin Wang on March 9, 2026
+  entity_list:
+  - entity_id: email_1
+    entity_type: email
+  id: case_009
+  query: Locate the email from Hyejin Wang on March 9 about next steps after the post-training techniques meeting.
+  user_id: arendón
+- assertions:
+  - description: Returns the email titled 'Feedback on Alternative Dataset Annotation Methodology'
+  - description: The email is authored by Felipe Ribeiro on March 9, 2026
+  entity_list:
+  - entity_id: email_2
+    entity_type: email
+  id: case_010
+  query: Get the email from Felipe Ribeiro on March 9 providing feedback on the alternative dataset annotation methodology and its timelines.
+  user_id: nreddy
+- assertions:
+  - description: 'Returns the email with subject ''Exploring the Open-Source Model: Lunchtime Discussion Follow-Up'''
+  - description: Identifies the author as Tanvi Sharma
+  - description: Filters emails from March 9, 2026
+  entity_list:
+  - entity_id: email_5
+    entity_type: email
+  id: case_011
+  query: Show me the email about the open-source model discussion from yesterday that proposes a formal review session.
+  user_id: tsharma
+- assertions:
+  - description: 'Returns the email with subject ''Investor Metrics: Detailed Data Requirements'''
+  - description: Filters emails authored by Julia Rodriguez
+  - description: Focuses on the specific date March 9, 2026
+  entity_list:
+  - entity_id: email_7
+    entity_type: email
+  id: case_012
+  query: Find the email from Julia about investor metrics requested on March 9.
+  user_id: jrodriguez
+- assertions:
+  - description: 'Returns the email with subject ''Repository Issue: Script Push and Resolution'''
+  - description: Identifies the author as Lilian Kamau
+  - description: Focuses on emails from March 9, 2026
+  entity_list:
+  - entity_id: email_4
+    entity_type: email
+  id: case_013
+  query: Locate the email about the script push issue in the repository and its resolution.
+  user_id: lkamau
+- assertions:
+  - description: 'Returns the email with subject ''Leadership Alignment: Post-Training Techniques Strategy'''
+  - description: Filters emails authored by Mateo Carvalho
+  - description: Focuses on March 9, 2026
+  entity_list:
+  - entity_id: email_6
+    entity_type: email
+  id: case_014
+  query: Find Mateo's email about aligning leadership on post-training techniques and addressing ongoing tensions.
+  user_id: mcarvalho
+- assertions:
+  - description: 'Returns two emails: ''A+-Round Funding Update and Investor Metrics Request'' and ''Investor Metrics: Detailed Data Requirements'''
+  - description: Filters emails authored by Julia Rodriguez
+  - description: Focuses on March 9, 2026
+  entity_list:
+  - entity_id: email_3
+    entity_type: email
+  - entity_id: email_7
+    entity_type: email
+  id: case_015
+  query: Show me Julia's emails from March 9 about funding updates and investor metrics.
+  user_id: jrodriguez
+- assertions:
+  - description: Email must be authored by Alejandro Rendón.
+  - description: The email should have been sent on March 9, 2026.
+  - description: The subject or content should reference accidental script pushes or pipeline stability.
+  entity_list:
+  - entity_id: email_8
+    entity_type: email
+  id: case_016
+  query: Show me the email from Alejandro Rendón on March 9th about preventing disruptions from accidental script pushes.
+  user_id: arendón
+- assertions:
+  - description: Email must be authored by Daniel Schmidt.
+  - description: The email should have been sent on March 10, 2026.
+  - description: The subject should mention dataset inconsistencies.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_017
+  query: Find the email from Daniel Schmidt sent on March 10th about dataset inconsistency issues.
+  user_id: dschmidt
+- assertions:
+  - description: Email must be authored by Mateo Carvalho.
+  - description: The subject or content should reference leadership conflict resolution.
+  entity_list:
+  - entity_id: email_10
+    entity_type: email
+  id: case_018
+  query: Find the email from Mateo Carvalho about resolving leadership conflicts.
+  user_id: mcarvalho
+- assertions:
+  - description: Email must be authored by Tanvi Sharma.
+  - description: The email should have been sent on March 9, 2026.
+  - description: The content should involve assessing an open-source model.
+  entity_list:
+  - entity_id: email_9
+    entity_type: email
+  id: case_019
+  query: Show me the email from Tanvi Sharma sent on March 9th about assessing the technical feasibility of an open-source model.
+  user_id: tsharma
+- assertions:
+  - description: Email must be authored by Alejandro Rendón.
+  - description: The email should have been sent on March 10, 2026.
+  - description: The subject or content should reference hyperparameter tuning experiments.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_020
+  query: Find the email from Alejandro Rendón on March 10th discussing hyperparameter tuning results.
+  user_id: arendón
+- assertions:
+  - description: 'Returns the email with subject ''Revised Draft: Integration Plan for Post-Training Techniques'''
+  - description: Matches the sender 'hwang' and the date '2026-03-10'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_021
+  query: Show me the email from Hyejin Wang about the revised integration plan draft and feedback, sent on March 10.
+  user_id: mcarvalho
+- assertions:
+  - description: 'Returns the email with subject ''Urgent: Request for Revenue Stream Breakdown'''
+  - description: Matches the sender 'jrodriguez' and the date '2026-03-10'
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_022
+  query: Find Julia Rodriguez's email from March 10 about the urgent request for the revenue stream breakdown.
+  user_id: rpatel
+- assertions:
+  - description: 'Returns the email with subject ''Discovery: Undocumented Feature in Open-Source Model'''
+  - description: Matches the sender 'achukwuma' and the date '2026-03-10'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_023
+  query: Locate the email from Amara Chukwuma about a promising undocumented feature in the open-source model, sent on March 10.
+  user_id: lzhao
+- assertions:
+  - description: 'Returns the email with subject ''Strategic Focus Debate: Open-Source Model vs Current Roadmap'''
+  - description: Matches the sender 'lzhao' and the date '2026-03-10'
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_024
+  query: Find the email from Liang Zhao about the strategic debate between the open-source model and the current roadmap, sent on March 10.
+  user_id: arendón
+- assertions:
+  - description: 'Returns the email with subject ''Progress Update: Revenue Stream Breakdown Compilation'''
+  - description: Matches the sender 'mhamed' and the date '2026-03-10'
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_025
+  query: Show me Mariam Hamed's progress update email about the revenue stream breakdown compilation sent on March 10.
+  user_id: tsingh
+- assertions:
+  - description: Returns the email authored by Mateo Carvalho on 2026-03-10.
+  - description: The email discusses leadership alignment, challenges, and next steps.
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_026
+  query: Show me the email from yesterday about leadership alignment and challenges across engineering, research, and financial teams.
+  user_id: hwang
+- assertions:
+  - description: Returns the email authored by Julia Rodriguez on 2026-03-11.
+  - description: The email is about an emergency meeting regarding A+-round funding delays.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_027
+  query: Find the emergency meeting announcement about funding delays and financial runway concerns.
+  user_id: tsharma
+- assertions:
+  - description: Returns the email authored by Tanvi Sharma on 2026-03-10.
+  - description: The email provides feedback on hyperparameter tuning experiments.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_028
+  query: Locate the feedback email about hyperparameter tuning experiments and their results.
+  user_id: arendón
+- assertions:
+  - description: Returns the email authored by Felipe Ribeiro on 2026-03-11.
+  - description: The email discusses insufficient documentation for a critical feature and resource allocation.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_029
+  query: Find the email discussing lack of documentation for a critical feature in the open-source model and resource allocation.
+  user_id: mhamed
+- assertions:
+  - description: Returns the email authored by Hyejin Wang on 2026-03-10.
+  - description: The email reminds team members to provide final feedback on the integration plan.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_030
+  query: Retrieve the email reminding us to provide final feedback on the integration plan for alignment.
+  user_id: jwang
+- assertions:
+  - description: Returns the email authored by Hyejin Wang on March 11, 2026.
+  - description: The subject of the email should mention 'Preliminary Feedback on Revised Integration Plan'.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_031
+  query: Show me the email from Hyejin Wang about the mixed feedback on the revised integration plan that was sent on March 11, 2026.
+  user_id: hwang
+- assertions:
+  - description: Returns the email authored by Mateo Carvalho on March 11, 2026.
+  - description: The subject of the email should mention 'Follow-Up on A+-Round Funding Emergency Meeting'.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_032
+  query: Retrieve the email I sent about follow-up actions on the A+-round funding emergency meeting from March 11, 2026.
+  user_id: mcarvalho
+- assertions:
+  - description: Returns the email authored by Tanvi Sharma on March 11, 2026.
+  - description: The subject of the email should mention 'Exploratory Testing for Undocumented Feature'.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_033
+  query: Find the email I sent about exploratory testing for the undocumented feature on March 11, 2026.
+  user_id: tsharma
+- assertions:
+  - description: Returns the email authored by Alejandro Rendón on March 11, 2026.
+  - description: The subject of the email should mention 'Performance Drops in Latest Experiment'.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_034
+  query: Show me my email from March 11, 2026, about performance drops in the RL experiment.
+  user_id: arendón
+- assertions:
+  - description: Returns the email authored by Katya Petrov on March 11, 2026.
+  - description: The subject of the email should mention 'Proposal to Automate Data Annotation Process'.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_035
+  query: Find the email sent by Katya Petrov on March 11, 2026, about automating the data annotation process.
+  user_id: kpetrov
+- assertions:
+  - description: Returns the email sent by Hyejin Wang on 2026-03-12
+  - description: The subject mentions 'Final Feedback on Integration Plan for Post-Training Techniques'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_036
+  query: Show me the email Hyejin sent after the tense meeting about post-training integration feedback on March 12th.
+  user_id: hnguyen
+- assertions:
+  - description: Returns the email sent by Julia Rodriguez on 2026-03-11
+  - description: The subject mentions 'Request for Updated Revenue Stream Projections'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_037
+  query: Find Julia's email from March 11th about updated revenue streams and investor concerns.
+  user_id: mhamed
+- assertions:
+  - description: Returns the email sent by Felipe Ribeiro on 2026-03-11
+  - description: The subject mentions 'Accuracy Concerns for Proposed Data Annotation Automation'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_038
+  query: Retrieve Felipe's email on challenges with automating data annotation accuracy.
+  user_id: lzhao
+- assertions:
+  - description: Returns the email sent by Alejandro Rendón on 2026-03-11
+  - description: The subject mentions 'Reverting to Previous Hyperparameter Strategy'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_039
+  query: Get the email from Alejandro about going back to the old hyperparameter tuning strategy.
+  user_id: tsharma
+- assertions:
+  - description: Returns the email sent by Julia Rodriguez on 2026-03-12
+  - description: 'The subject mentions ''Urgent: Timeline for Product Release Milestones'''
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_040
+  query: Find Julia's urgent email from March 12th about product release milestone timelines.
+  user_id: rpatel
+- assertions:
+  - description: 'Returns the email with the subject ''Strategic Focus: Commercial Agent Models vs Open-Source Solutions'''
+  - description: Filters emails authored by Mateo Carvalho on March 12, 2026
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_041
+  query: Show me the email Mateo sent about the strategic focus between commercial agent models and open-source solutions on March 12, 2026.
+  user_id: mcarvalho
+- assertions:
+  - description: Returns the email with the subject 'Issues with Automated Annotation Tool Testing'
+  - description: Narrows results to emails authored by Tanvi Sharma on March 12, 2026
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_042
+  query: Find the email Tanvi sent about the problems with the automated annotation tool testing on March 12, 2026.
+  user_id: tsharma
+- assertions:
+  - description: 'Returns the email with the subject ''Exploratory Task: Undocumented Open-Source Feature'''
+  - description: Filters emails authored by Alejandro Rendón on March 12, 2026
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_043
+  query: Locate Alejandro's email about the exploratory task for the undocumented open-source feature sent on March 12, 2026.
+  user_id: arendon
+- assertions:
+  - description: 'Returns the email with the subject ''Potential Workaround for Undocumented Feature: Progress Update'''
+  - description: Filters emails authored by Felipe Ribeiro on March 12, 2026
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_044
+  query: Show me Felipe's email about the progress update on the workaround for the undocumented feature sent on March 12, 2026.
+  user_id: fribeiro
+- assertions:
+  - description: 'Returns the email with the subject ''Follow-Up Request: Detailed Breakdown for Revenue Streams'''
+  - description: Filters emails authored by Julia Rodriguez on March 12, 2026
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_045
+  query: Find Julia's email about the follow-up request for detailed revenue streams sent on March 12, 2026.
+  user_id: jrodriguez
+- assertions:
+  - description: 'Returns the email with the subject ''Brainstorming: Improving Automated Annotation Tool'''
+  - description: Filters by author 'tsharma', type 'email', and date '2026-03-12'
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_046
+  query: Show me the email from Tanvi Sharma about improving the automated annotation tool, sent on March 12.
+  user_id: mhamed
+- assertions:
+  - description: Returns the email with the subject 'Follow-Up on Workaround for Performance Drops'
+  - description: Filters by author 'arendon', type 'email', and date '2026-03-13'
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_047
+  query: Locate the email from Alejandro Rendón about the performance drop workaround sent after today's meeting.
+  user_id: lzhao
+- assertions:
+  - description: 'Returns the email with the subject ''Urgent: Updated Financial Projections for A+-Round Investors'''
+  - description: Filters by author 'jrodriguez', type 'email', and date '2026-03-13'
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_048
+  query: Find the urgent email from Julia Rodriguez about updated financial projections for A+-round investors sent today.
+  user_id: rpatel
+- assertions:
+  - description: 'Returns the email with the subject ''Emergency Strategy Session: Investor Concerns and Technical Roadblocks'''
+  - description: Filters by author 'mcarvalho', type 'email', and date '2026-03-12'
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_049
+  query: Retrieve Mateo Carvalho's urgent email about the strategy session for investor concerns sent yesterday.
+  user_id: nreddy
+- assertions:
+  - description: 'Returns the email with the subject ''Finalizing Post-Training Integration Plan: Key Decisions'''
+  - description: Filters by author 'hwang', type 'email', and date '2026-03-12'
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_050
+  query: Get the email from Hyejin Wang summarizing the key decisions from today's post-training integration plan meeting.
+  user_id: cgomez
+- assertions:
+  - description: 'Returns the email with the subject ''Incident Report: Server Overload During Workaround Testing'''
+  - description: Identifies the sender as Amara Chukwuma
+  - description: Filters by the date '2026-03-13'
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_051
+  query: Show me the email about the server overload caused during workaround testing that Amara sent on March 13, 2026.
+  user_id: achukwuma
+- assertions:
+  - description: Returns the email with the subject 'Concerns Over Viability of Workaround for Performance Drops'
+  - description: Identifies the sender as Tanvi Sharma
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_052
+  query: Find the email Tanvi sent about concerns over the viability of the workaround for performance issues.
+  user_id: tsharma
+- assertions:
+  - description: Returns the email with the subject 'Debugging Anomaly in Automated Annotation Tool Output'
+  - description: Identifies the sender as Felipe Ribeiro
+  - description: Filters by the date '2026-03-13'
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_053
+  query: Locate the email from Felipe about debugging the anomaly in the automated annotation tool that was sent on March 13, 2026.
+  user_id: mcarvalho
+- assertions:
+  - description: 'Returns the email with the subject ''Progress Update: Financial Projections for A+-Round Investors'''
+  - description: Identifies the sender as Mariam Hamed
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_054
+  query: Can you find the email Mariam sent about financial projections for A+-round investors?
+  user_id: jrodriguez
+- assertions:
+  - description: 'Returns the email with the subject ''Emergency Meeting: Integration Plan for Post-Training Techniques'''
+  - description: Identifies the sender as Hyejin Wang
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_055
+  query: Show me the email about the emergency meeting Hyejin announced regarding the integration plan for post-training techniques.
+  user_id: rpatel
+- assertions:
+  - description: 'Returns the email titled ''Summary of Emergency Meeting: Post-Training Techniques Integration Plan''.'
+  - description: Matches the sender as Hyejin Wang and date as March 13, 2026.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_056
+  query: Show me the email from Hyejin Wang about the emergency meeting on the integration plan that was sent earlier this week.
+  user_id: arendon
+- assertions:
+  - description: 'Returns the email titled ''Reminder: Final Decision on Integration Plan Meeting''.'
+  - description: Matches the sender as Hyejin Wang and date as March 14, 2026.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_057
+  query: Find the reminder email from Hyejin Wang about the final decision meeting for the integration plan.
+  user_id: jrodriguez
+- assertions:
+  - description: Returns the email titled 'Preliminary Stability Improvements in Training Pipeline'.
+  - description: Matches the sender as Alejandro Rendón and date as March 14, 2026.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_058
+  query: Show me Alejandro Rendón's email about the preliminary stability improvements in the training pipeline.
+  user_id: lzhao
+- assertions:
+  - description: 'Returns the email titled ''Investor Concerns: Delayed Product Roadmap''.'
+  - description: Matches the sender as Julia Rodriguez and date as March 14, 2026.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_059
+  query: Locate the email from Julia Rodriguez about investor concerns related to the delayed product roadmap.
+  user_id: cgomez
+- assertions:
+  - description: Returns the email titled 'Compatibility Issues in Open-Source Model Testing'.
+  - description: Matches the sender as Felipe Ribeiro and date as March 14, 2026.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_060
+  query: Find Felipe Ribeiro's email about the compatibility issues discovered during open-source model testing.
+  user_id: nreddy
+- assertions:
+  - description: Returns the email titled 'Debugging Prioritization for Annotation Tool Anomaly'.
+  - description: Filters by the sender 'Alejandro Rendón' and the date '2026-03-14'.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_061
+  query: Show me the email about debugging priorities for the annotation tool sent on March 14.
+  user_id: arendon
+- assertions:
+  - description: Returns the email titled 'Draft Response to Investor Concerns'.
+  - description: Filters by the sender 'Mariam Hamed' and topic related to 'investor concerns'.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_062
+  query: Find the draft email about addressing investor concerns sent recently.
+  user_id: mhamed
+- assertions:
+  - description: Returns the email titled 'Preparation for Final Integration Plan Meeting'.
+  - description: Filters by the sender 'Hyejin Wang' and subject related to 'integration plan'.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_063
+  query: Find Hyejin's email about the final integration plan meeting preparation.
+  user_id: hwang
+- assertions:
+  - description: 'Returns the email titled ''Follow-Up: Investor Concerns and Financial Metrics''.'
+  - description: Filters by the sender 'Julia Rodriguez' and subject related to 'financial data' and 'investor concerns'.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_064
+  query: Locate the email requesting additional financial data to address investor concerns.
+  user_id: jrodriguez
+- assertions:
+  - description: Returns the email titled 'New Edge Case in Automated Annotation Tool'.
+  - description: Filters by the sender 'Katya Petrov' and subject related to 'edge case'.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_065
+  query: Find the email about the new edge case in the automated annotation tool shared recently.
+  user_id: kpetrov
+- assertions:
+  - description: Returns the email sent by Hyejin Wang on 2026-03-15.
+  - description: 'The email subject includes ''Urgent: Resolution on Post-Training Integration Disagreement''.'
+  - description: The email summary discusses actionable steps regarding team alignment.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_066
+  query: Find the urgent email from Hyejin Wang about resolving the post-training integration disagreement on March 15, 2026.
+  user_id: hwang
+- assertions:
+  - description: Returns the email sent by Julia Rodriguez on 2026-03-15.
+  - description: 'The subject includes ''Investor Request: Benchmark Dataset Timeline and Financial Forecast''.'
+  - description: The summary mentions the need for financial data for investors.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_067
+  query: Locate the email from Julia Rodriguez about investor requests for the benchmark dataset timeline and financial forecast.
+  user_id: jrodriguez
+- assertions:
+  - description: Returns the email sent by Katya Petrov on 2026-03-15.
+  - description: The email subject includes 'Proposal for Semi-Automated Data Annotation Process'.
+  - description: The summary discusses feasibility and resource allocation for the proposal.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_068
+  query: Find the email from Katya Petrov about the proposal for semi-automating data annotation sent on March 15, 2026.
+  user_id: kpetrov
+- assertions:
+  - description: Returns the email sent by Alejandro Rendón on 2026-03-15.
+  - description: 'The email subject includes ''Update: Performance Drop Mitigation Success in Exploratory Testing''.'
+  - description: The summary mentions mitigation details and proposed additional tests.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_069
+  query: Locate the email from Alejandro Rendón about the successful mitigation of a performance drop during exploratory testing.
+  user_id: arendón
+- assertions:
+  - description: Returns the email sent by Lilian Kamau on 2026-03-14.
+  - description: The email subject includes 'Next Steps for Open-Source Model Testing'.
+  - description: The summary discusses a timeline for addressing compatibility issues.
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_070
+  query: Find the email from Lilian Kamau about next steps for fixing open-source model compatibility issues sent on March 14, 2026.
+  user_id: lkamau
+- assertions:
+  - description: Returns the email authored by Tanvi Sharma on March 15, 2026.
+  - description: Email subject mentions 'Feedback Request' and includes the word 'proposal'.
+  entity_list:
+  - entity_id: email_008
+    entity_type: email
+  id: case_071
+  query: Show me Tanvi Sharma’s email about providing feedback on a proposal from March 15, 2026.
+  user_id: tsingh
+- assertions:
+  - description: Returns the email authored by Chidinma Okonkwo that discusses strategies for investor communication involving milestone delays.
+  - description: The date of the email is March 15, 2026.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  id: case_072
+  query: Find Chidinma Okonkwo’s email about managing investor communication for milestone delays, sent on March 15, 2026.
+  user_id: nsharma
+- assertions:
+  - description: Returns the email authored by Felipe Ribeiro on March 15, 2026.
+  - description: Email subject includes 'Technical Debrief' and mentions compatibility challenges.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  id: case_073
+  query: Locate the email Felipe Ribeiro sent on March 15, 2026, discussing compatibility issues with open-source models.
+  user_id: lzhao
+- assertions:
+  - description: Returns the email authored by Mariam Hamed on March 15, 2026.
+  - description: The email summary mentions revising the financial forecast and aligning with project timelines.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  id: case_074
+  query: Find Mariam Hamed’s email about revising the financial forecast to address investor concerns, sent on March 15, 2026.
+  user_id: mbaddour
+- assertions:
+  - description: Returns the email authored by Mateo Carvalho on March 15, 2026.
+  - description: Email subject references 'Strategic Alignment' and discusses undocumented dependencies and pipeline re-basing.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  id: case_075
+  query: Show me Mateo Carvalho’s email about undocumented dependencies in the open-source model and pipeline re-basing, sent on March 15, 2026.
+  user_id: arendón
+- assertions:
+  - description: Returns the email sent by Hyejin Wang on 2026-03-16
+  - description: The email discusses the revised post-training techniques plan and next steps
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  id: case_076
+  query: Show me the follow-up email about the revised post-training techniques plan from Hyejin yesterday.
+  user_id: nsharma
+- assertions:
+  - description: Returns the email sent by Neha Sharma on 2026-03-16
+  - description: The email outlines flagged inconsistencies and requests guidance
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  id: case_077
+  query: Find the email about inconsistencies in the semi-automated data annotation tool sent earlier this week.
+  user_id: hwang
+- assertions:
+  - description: Returns the email sent by Julia Rodriguez on 2026-03-16
+  - description: The email includes the financial forecast and associated deadlines
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  id: case_078
+  query: Locate the email about the finalized financial forecast for the investor update sent recently.
+  user_id: arendón
+- assertions:
+  - description: Returns the email sent by Alejandro Rendón on 2026-03-16
+  - description: The email details the critical bug and requests additional resources
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  id: case_079
+  query: Find the email about the critical bug in the agent development pipeline sent yesterday.
+  user_id: hsingh
+- assertions:
+  - description: Returns the email sent by Harpreet Singh on 2026-03-15
+  - description: The email discusses collaboration on re-basing the agent development pipeline
+  entity_list:
+  - entity_id: email_010
+    entity_type: email
+  id: case_080
+  query: Show me the email about planning next steps for pipeline re-basing after resolving dependencies from a few days ago.
+  user_id: mcarvalho
+- assertions:
+  - description: Connects the group chat about hyperparameter tuning strategies to the proposal document.
+  - description: Identifies specific arguments or strategies outlined in the proposal document.
+  entity_list:
+  - entity_id: hyperparameter_strategy_debate
+    entity_type: group_chat
+  - entity_id: data/docs/hyperparameter_tuning_proposal.pdf
+    entity_type: file
+  id: case_081
+  query: What details in the hyperparameter tuning proposal document support the lead RL engineer's points during the debate?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the email addressing dataset annotation inconsistencies.
+  - description: Connects the email content to the analysis spreadsheet and the junior scientist's updates.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: junior_scientist_update
+    entity_type: chat
+  - entity_id: data/reports/dataset_inconsistencies_analysis.xlsx
+    entity_type: file
+  id: case_082
+  query: What actions were proposed in response to the dataset inconsistencies discovered by the junior scientist, as documented in the analysis spreadsheet?
+  user_id: tsharma
+- assertions:
+  - description: Identifies the email discussing updates and insights from the investor's visit.
+  - description: Connects the feedback from the investor to the final presentation file.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: investor_technical_questions
+    entity_type: chat
+  - entity_id: data/presentations/investor_meeting_2026-03-08.pptx
+    entity_type: file
+  id: case_083
+  query: What feedback from the investor's visit influenced the final content of the prepared presentation?
+  user_id: arendón
+- assertions:
+  - description: Connects the early-morning meeting argument with the follow-up group chat discussion about feasibility.
+  - description: Identifies the email proposing a framework for resolving conflicts.
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: email_10
+    entity_type: email
+  id: case_084
+  query: What was the proposed framework for resolving leadership conflicts stemming from the argument between the CTO and lead RL engineer about post-training techniques?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the chat where the CFO discusses the investor's request for performance metrics.
+  - description: Finds the email outlining the needed metrics.
+  - description: References the file summarizing the updated metrics.
+  entity_list:
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: email_7
+    entity_type: email
+  - entity_id: data/reports/investor_metrics_summary.pdf
+    entity_type: file
+  id: case_085
+  query: What specific performance metrics were outlined to address the investor's request from the funding discussions?
+  user_id: hwang
+- assertions:
+  - description: Identifies the group chat discussing the open-source model during lunchtime.
+  - description: Links the follow-up meeting debating the model's relevance.
+  - description: References the analysis document summarizing the model’s impact.
+  entity_list:
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/models/open_source_model_analysis.md
+    entity_type: file
+  id: case_086
+  query: What potential impact did the open-source model have on the company’s roadmap, according to the discussions and analysis?
+  user_id: arendón
+- assertions:
+  - description: Identifies the email discussing gaps in the revenue projection breakdown.
+  - description: Identifies the CFO as the organizer of the meeting addressing investor requests.
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: meeting-004
+    entity_type: meeting
+  id: case_087
+  query: Who led the team effort to address the A+-round investors' request, and what were the key gaps highlighted in the email about revenue projections?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the email requesting feedback on the integration plan.
+  - description: Identifies the CTO as the person who finalized the draft in the meeting.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: meeting-003
+    entity_type: meeting
+  id: case_088
+  query: What were the contentious points in the integration plan discussed in the email, and who finalized the draft in the meeting?
+  user_id: hwang
+- assertions:
+  - description: Identifies the email discussing the promising undocumented feature.
+  - description: Identifies the junior engineer's presentation and discussion in the meeting.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: meeting-005
+    entity_type: meeting
+  id: case_089
+  query: What was the promising feature mentioned in the email, and what did the junior engineer propose during the meeting?
+  user_id: arendón
+- assertions:
+  - description: Identifies the email discussing resource allocation for exploratory testing (email_001).
+  - description: Links the discussion to the senior engineer's discovery in the meeting (meeting_001).
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_090
+  query: Who discovered the insufficient documentation for the critical feature in the open-source model discussed in the team's meeting?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the emergency meeting led by the CFO (meeting_002).
+  - description: Links the meeting to the presentation document prepared by the CFO (data/presentations/cfo_emergency_meeting.pptx).
+  entity_list:
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/presentations/cfo_emergency_meeting.pptx
+    entity_type: file
+  id: case_091
+  query: What presentation did the CFO prepare for the emergency meeting addressing concerns about A+-round funding delays?
+  user_id: arendón
+- assertions:
+  - description: Identifies the junior data scientist's proposal in the email (email_004).
+  - description: Links the proposal to the team discussion evaluating its feasibility (chat_004).
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: group_chat
+  id: case_092
+  query: What concerns did the team raise about automating the data annotation process proposed by the junior data scientist?
+  user_id: mhamed
+- assertions:
+  - description: Identifies the tense meeting led by the CTO discussing the integration plan.
+  - description: Links the follow-up email requesting detailed input to the same topic.
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: email_009
+    entity_type: email
+  id: case_093
+  query: Who is responsible for resolving the disagreements mentioned in the email about the integration plan following the tense meeting?
+  user_id: hwang
+- assertions:
+  - description: Identifies the meeting where the exploratory task was assigned.
+  - description: Links the preliminary notes about the undocumented feature workaround to the assigned task.
+  entity_list:
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: data/experiments/undocumented_feature_workaround_notes.txt
+    entity_type: file
+  id: case_094
+  query: What findings were reported in the notes about the workaround discussed during the meeting led by the lead RL engineer?
+  user_id: mhamed
+- assertions:
+  - description: Identifies the Slack discussion that initiated the debate.
+  - description: Links the corresponding meeting exposing strategic divisions.
+  - description: Analyzes the summary file documenting the Slack discussion.
+  entity_list:
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/discussions/slack_prioritization_debate_summary.md
+    entity_type: file
+  id: case_095
+  query: What was the team’s consensus on prioritizing commercial agent models versus open-source solutions, as discussed both in Slack and during the meeting?
+  user_id: arendón
+- assertions:
+  - description: Identifies the email detailing the server overload incident during testing.
+  - description: Links the meeting discussing safeguards to prevent recurrence of the server overload.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: meeting5
+    entity_type: meeting
+  id: case_096
+  query: Which meeting addressed the root causes and safeguards for the server overload incident triggered during testing?
+  user_id: okonkwo
+- assertions:
+  - description: Identifies the email requesting assistance to debug the anomaly in the annotation tool.
+  - description: Connects the email to the meeting focused on debugging and strategizing solutions for the anomaly.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: meeting3
+    entity_type: meeting
+  id: case_097
+  query: What were the steps proposed during the debugging session for the anomaly discovered in the automated annotation tool?
+  user_id: mhamed
+- assertions:
+  - description: Identifies the email requesting financial projections for investors.
+  - description: Links the email to the meeting where the finance team addressed the compilation and verification process.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting2
+    entity_type: meeting
+  id: case_098
+  query: Which meeting discussed the compilation and verification of updated financial projections urgently requested by the CFO?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the email highlighting investor concerns (email_003).
+  - description: Connects it to the draft response shared for feedback (email_006).
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  id: case_099
+  query: What feedback was requested on the draft response addressing the A+-round investor’s concerns about the delayed roadmap?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the email reporting compatibility issues (email_004).
+  - description: Connects it to the email proposing a timeline for fixes (email_010).
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  id: case_100
+  query: What timeline was proposed to address the compatibility issues in the open-source model discovered during testing?
+  user_id: asuleiman
+- assertions:
+  - description: Identifies the email reporting the edge case anomaly (email_005).
+  - description: Matches it to the follow-up email confirming debugging progress (email_007).
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  id: case_101
+  query: What progress update was shared regarding debugging efforts for the anomaly in the automated annotation tool?
+  user_id: yamada
+- assertions:
+  - description: Identifies the meeting where undocumented dependencies were discovered.
+  - description: Identifies the collaboration between Felipe Ribeiro and Alessandra Rossi discussing re-basing strategies.
+  - description: Links the analysis file on undocumented dependencies to pipeline re-basing efforts.
+  entity_list:
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: data/notes/undocumented_dependencies_analysis.txt
+    entity_type: file
+  id: case_102
+  query: Who collaborated on addressing the undocumented dependencies in the open-source model, and what were the proposed strategies for re-basing the agent development pipeline?
+  user_id: fribeiro
+- assertions:
+  - description: Identifies the chat where Julia Rodriguez requested an emergency financial forecast review.
+  - description: Links the group chat discussing preparation for the investor update.
+  - description: References the financial forecast file addressing the benchmark dataset timelines.
+  entity_list:
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: data/forecasts/benchmark_dataset_timeline_update.xlsx
+    entity_type: file
+  id: case_103
+  query: What were the critical discussions and files involved in preparing the investor update on the benchmark dataset release timelines?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the meeting where the feasibility of the proposal was debated.
+  - description: Links the chat where Katya Petrov reached out to Tanvi Sharma for feedback.
+  - description: References the group chat debating the resource implications and benefits of the proposal.
+  entity_list:
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: chat_007
+    entity_type: group_chat
+  id: case_104
+  query: How was the semi-automated data annotation proposal by the junior data scientist evaluated, and what feedback did it receive from team members?
+  user_id: kpetrov
+- assertions:
+  - description: Identifies the group chat discussing the revised post-training integration plan.
+  - description: Links the discussion to the meeting where the CTO introduced the plan.
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_105
+  query: Which meeting introduced the revised post-training integration plan discussed in the group chat?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the meeting where the inconsistencies were flagged.
+  - description: Identifies the email proposing the resolution plan.
+  entity_list:
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: email_009
+    entity_type: email
+  id: case_106
+  query: What resolution plan for the flagged inconsistencies in the annotation tool was proposed following the junior engineer's meeting?
+  user_id: hwang
+- assertions:
+  - description: Identifies the product manager's proposal discussed in the meeting.
+  - description: Connects the proposal to the leadership team's group chat.
+  entity_list:
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: chat_005
+    entity_type: chat
+  id: case_107
+  query: What was the leadership team's reaction to the product manager's benchmark dataset release proposal?
+  user_id: arendón
+- assertions:
+  - description: Identifies the email about the investor's request (email_002)
+  - description: Links the investor's request to the finalized document (data/reports/benchmark_dataset_update_2026-03-17.pdf)
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: data/reports/benchmark_dataset_update_2026-03-17.pdf
+    entity_type: file
+  id: case_108
+  query: Which document was prepared in response to the A+-round investor's request for an updated benchmark dataset one-pager?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the meeting about performance regression (meeting-001)
+  - description: Links the undocumented dependencies issue to the workaround documented (data/engineering/undocumented_dependencies_workaround_2026-03-17.md)
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/engineering/undocumented_dependencies_workaround_2026-03-17.md
+    entity_type: file
+  id: case_109
+  query: What workaround was implemented to address the undocumented dependencies discussed during the engineering team's debate on performance regression?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the weekly stand-up discussion about prioritization (weekly_standup_2026_03_17)
+  - description: Links the discussion to leadership's input in the email (email_010)
+  entity_list:
+  - entity_id: weekly_standup_2026_03_17
+    entity_type: group_chat
+  - entity_id: email_010
+    entity_type: email
+  id: case_110
+  query: What decision did leadership provide regarding prioritization between the semi-automated annotation tool and dataset consistency fixes?
+  user_id: hwang
+- assertions:
+  - description: Identifies the email about the performance regression fix (email_001).
+  - description: Connects the group chat discussion (chat_001).
+  - description: Links to the meeting where the validation plan was discussed (meeting-001).
+  - description: References the document outlining the fix plan (data/docs/performance_regression_fix_plan.pdf).
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: data/docs/performance_regression_fix_plan.pdf
+    entity_type: file
+  id: case_111
+  query: What steps were taken by the engineering team and data science team to validate the fix for the performance regression issue?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the email about one-pager rejection (email_002).
+  - description: Connects the group chat discussion revising the one-pager (chat_002).
+  - description: References the meeting about the CFO's response to the investor rejection (meeting-002).
+  - description: Links the revised one-pager document (data/docs/revised_benchmark_dataset_onepager.pdf).
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/docs/revised_benchmark_dataset_onepager.pdf
+    entity_type: file
+  id: case_112
+  query: How did investor feedback about the one-pager influence the revision process and project timeline discussions?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the email about leadership concerns regarding beta release risks (email_003).
+  - description: Connects the group chat debating the feasibility of the beta release (chat_007).
+  - description: References the meeting discussing market exposure risks (meeting-003).
+  - description: Links the sales team's insights email (email_007).
+  - description: References the beta release proposal document (data/docs/beta_dataset_release_proposal.pdf).
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: data/docs/beta_dataset_release_proposal.pdf
+    entity_type: file
+  id: case_113
+  query: What were the key concerns and discussions surrounding the proposal for a beta release of the benchmark dataset, and how did sales insights factor into the decision-making process?
+  user_id: arendón
+- assertions:
+  - description: Identifies the chat where the flaw was discovered
+  - description: Connects the debugging session to the resolution efforts
+  - description: Links the flaw to the details documented in the debugging session report
+  entity_list:
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/tools/debugging_session_report.docx
+    entity_type: file
+  id: case_114
+  query: What was the critical flaw discovered in the semi-automated data annotation tool, and how was it addressed?
+  user_id: nreddy
+- assertions:
+  - description: Identifies the finalized one-pager
+  - description: Connects the flagged inconsistencies to the internal review email
+  - description: Links the preparation steps outlined for investor communication
+  entity_list:
+  - entity_id: data/docs/revised_benchmark_dataset_onepager.pdf
+    entity_type: file
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  id: case_115
+  query: What inconsistencies were flagged in the benchmark dataset one-pager, and how were they addressed for investor communication?
+  user_id: mrodrigues
+- assertions:
+  - description: Identifies the product manager's push for the 'beta' release
+  - description: Connects the leadership division to the meeting discussion
+  - description: Links the proposed resolution steps documented in the meeting notes
+  entity_list:
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/meeting_notes/beta_dataset_release_discussion.docx
+    entity_type: file
+  id: case_116
+  query: What were the leadership team's divided opinions on releasing the 'beta' version of the benchmark dataset, and what steps were proposed to resolve the debate?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the email discussing the memory allocation issue
+  - description: Connects the email to the meeting addressing the issue
+  - description: Extracts solutions proposed during the meeting
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: meeting_005
+    entity_type: meeting
+  id: case_117
+  query: What solutions were discussed in the meeting regarding the engineering team’s memory allocation issue mentioned in the email?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the file containing the streamlined workflow proposal
+  - description: Links the file to the meeting debate about the annotation tool
+  - description: Determines the decision's impact based on the meeting discussion
+  entity_list:
+  - entity_id: data/datascience/streamlined_workflow_proposal_2026-03-20.pdf
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_118
+  query: How did the streamlined workflow proposal affect the decision to continue developing the annotation tool?
+  user_id: hwang
+- assertions:
+  - description: Identifies the file containing survey results
+  - description: Links survey results to the email discussing initial feedback
+  - description: Extracts actionable steps proposed during the meeting
+  entity_list:
+  - entity_id: data/hr/employee_burnout_survey_2026-03-20.csv
+    entity_type: file
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_119
+  query: What actions were proposed in the meeting based on the survey results about employee burnout and mental health initiatives?
+  user_id: lzhao
+- assertions:
+  - description: Identifies the email discussing the inefficiency in the memory allocation fix.
+  - description: Connects the group chat and engineering meeting discussing the planned optimization efforts.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_120
+  query: What actions were planned during the engineering meeting to address the inefficiencies in the memory allocation fix?
+  user_id: fribeiro
+- assertions:
+  - description: Identifies the email summarizing the early-morning investor call.
+  - description: Connects the investor feedback to the meeting discussing financial clarifications.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_121
+  query: What clarifications were requested during the meeting based on feedback from the early-morning investor call?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the email requesting technical and leadership-level review of the proposal.
+  - description: Links discussions in the chat and meeting to evaluate the feasibility and strategic implications of the proposal.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_122
+  query: What strategic benefits were highlighted during the leadership-level review of the junior engineer's proposal on improving open-source model compatibility?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the debugging session related to the memory leak
+  - description: Links the debugging session findings to the engineering meeting discussing the root cause and fixes
+  entity_list:
+  - entity_id: debugging_session_20260322
+    entity_type: group_chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_123
+  query: What findings from the debugging session were discussed in the meeting about fixing the memory leak?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the chat discussing the investor's request
+  - description: Links the delay discussed in the chat to the meeting for finalizing the financial projections
+  entity_list:
+  - entity_id: investor_request_20260322
+    entity_type: chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_124
+  query: What was the impact of the investor's last-minute request on the A+-round pitch deck timeline?
+  user_id: arendón
+- assertions:
+  - description: Identifies the chat discussing overtime dissatisfaction
+  - description: Links dissatisfaction to proposed measures in the leadership's flexible work initiative
+  entity_list:
+  - entity_id: engineering_morale_20260322
+    entity_type: chat
+  - entity_id: email_010
+    entity_type: email
+  id: case_125
+  query: What measures were proposed to address employee dissatisfaction due to overtime, and how were they connected to burnout concerns?
+  user_id: achukwuma
+- assertions:
+  - description: Links the engineering team's email outlining latency issues (email_001) with the meeting focused on analyzing these issues (meeting_001).
+  - description: Identifies proposed next steps as discussed in the meeting.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  id: case_126
+  query: What were the proposed next steps for deployment discussed in the engineering team's meeting about the latency issue?
+  user_id: arendón
+- assertions:
+  - description: Identifies the CFO's email discussing investor concerns about revenue streams (email_002).
+  - description: Connects the content of the email to the finance team's group chat brainstorming strategies (chat_002).
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  id: case_127
+  query: What strategies did the finance team discuss in the group chat to address investor concerns mentioned in the CFO's email about revenue streams?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the email describing the accidental overwrite incident (email_003).
+  - description: Connects the incident to the version control policy updates outlined in the review (email_008).
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  id: case_128
+  query: What version control policy updates were proposed in response to the accidental overwrite incident outlined in the data science team's email?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the engineering team's meeting where the latency issue was resolved and inference accuracy problem discovered.
+  - description: Links debugging priorities to discussions in emails and chats.
+  entity_list:
+  - entity_id: meeting1
+    entity_type: meeting
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  id: case_129
+  query: What debugging priorities were discussed following the resolution of the latency issue during stress testing?
+  user_id: arendón
+- assertions:
+  - description: Identifies the CFO's impromptu meeting about revenue projections.
+  - description: Links the meeting to updates in the investor pitch deck and feedback analysis discussions.
+  entity_list:
+  - entity_id: meeting2
+    entity_type: meeting
+  - entity_id: data/presentations/investor_pitch_deck_v3.pdf
+    entity_type: file
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: chat_008
+    entity_type: chat
+  id: case_130
+  query: How did the CFO's impromptu meeting impact the updates to the investor pitch deck and subsequent feedback analysis?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the meeting where the annotation efficiency proposal was presented.
+  - description: Links the proposal to debates about resource allocation and potential timeline impacts.
+  entity_list:
+  - entity_id: meeting3
+    entity_type: meeting
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: chat
+  - entity_id: chat_010
+    entity_type: chat
+  id: case_131
+  query: What was the impact of the novel annotation efficiency proposal on resource allocation and the benchmark dataset timeline?
+  user_id: mhamed
+- assertions:
+  - description: The CEO requested alignment via email.
+  - description: The leadership team discussed the release strategy in detail.
+  entity_list:
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: chat_008
+    entity_type: chat
+  id: case_132
+  query: How did the leadership team respond to the CEO's call for cross-functional alignment on the benchmark dataset demo?
+  user_id: kwilliams
+- assertions:
+  - description: The investor requested a live demo via communication channels.
+  - description: Teams coordinated overnight to finalize the demo.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: chat
+  id: case_133
+  query: Which teams coordinated overnight efforts in response to the investor's request for a benchmark dataset demo?
+  user_id: arendón
+- assertions:
+  - description: The COO identified inconsistencies in the HR burnout survey.
+  - description: A follow-up report outlined actionable solutions.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: data/reports/hr_burnout_followup_2026-03-25.pdf
+    entity_type: file
+  id: case_134
+  query: What actionable steps were proposed in the follow-up report to address the discrepancies in the HR burnout survey?
+  user_id: hwang
+- assertions:
+  - description: Identifies the email outlining the debate over pipeline rework options (email_003).
+  - description: Connects the CEO's urgent request for a decision (email_004).
+  - description: Refers to the meeting discussing priorities and trade-offs (meeting_002).
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_135
+  query: What decision did the CEO make regarding the pipeline rework issue after the tense debate between the engineering lead and product manager?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the email about burnout survey feedback (email_007).
+  - description: Connects the meeting addressing confusion and next steps for burnout (meeting_003).
+  - description: Refers to the burnout survey clarification document (data/hr/burnout_survey_followup_email.pdf).
+  entity_list:
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/hr/burnout_survey_followup_email.pdf
+    entity_type: file
+  id: case_136
+  query: How did employee frustrations lead to the clarification of the 'no-meeting' policy?
+  user_id: nsharma
+- assertions:
+  - description: Recognizes the CFO's email sharing rushed updates to the pitch deck (email_002).
+  - description: Refers to chat discussions about addressing investor questions and updating the pitch deck (chat_006).
+  - description: Connects to the finalized pitch deck file (data/presentations/investor_pitch_deck_v4.pdf).
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: data/presentations/investor_pitch_deck_v4.pdf
+    entity_type: file
+  id: case_137
+  query: What updates were made to the pitch deck to address last-minute investor questions about competitive positioning?
+  user_id: jwang
+- assertions:
+  - description: Identifies the email detailing the compatibility issue
+  - description: Links the email to the meeting focused on brainstorming alternatives to resolve the issue
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: meeting_01
+    entity_type: meeting
+  id: case_138
+  query: Which meeting was organized to address the compatibility issue mentioned in the email?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the email discussing investor feedback on operational costs
+  - description: Links the feedback to the updated operational cost breakdown file
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: data/finance/operational_cost_breakdown_q2.xlsx
+    entity_type: file
+  id: case_139
+  query: Where can I find the updated operational cost breakdown file prepared in response to investor feedback?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the email discussing the outdated benchmark dataset presentation
+  - description: Links the outdated presentation to the updated version prepared for leadership and investors
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: data/presentations/benchmark_dataset_v2.pptx
+    entity_type: file
+  id: case_140
+  query: Where can I find the updated benchmark dataset presentation that addresses the confusion caused by the outdated version?
+  user_id: arendón
+- assertions:
+  - description: Identifies the investor's request in the relevant email and file.
+  - description: Links the funding strategy discussion to Julia Rodriguez's chat update with Mateo Carvalho.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: data/finance/investor_timeline_request_2026-03-28.xlsx
+    entity_type: file
+  - entity_id: chat_008
+    entity_type: chat
+  id: case_141
+  query: How did the investor's request for a detailed timeline for the benchmark dataset release affect the funding strategy and lead to updates shared between Julia Rodriguez and Mateo Carvalho?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the debate about testing priorities in the group chat.
+  - description: Links the engineering team's meeting agenda to the notes on the undocumented feature.
+  entity_list:
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/engineering/undocumented_feature_notes_2026-03-28.md
+    entity_type: file
+  id: case_142
+  query: What priorities were finalized in the engineering team's meeting after discussing the undocumented feature in the open-source model?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the outdated burnout survey and its impact on employee complaints.
+  - description: Links HR's plan discussed in the group chat and meeting to the COO's apology email.
+  entity_list:
+  - entity_id: data/hr/burnout_survey_outdated_2026-03-28.docx
+    entity_type: file
+  - entity_id: chat_005
+    entity_type: chat
+  - entity_id: meeting_004
+    entity_type: meeting
+  id: case_143
+  query: What steps did HR propose to manage employee frustration after the COO's apology for the outdated burnout survey?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the debugging report detailing the critical memory leak.
+  - description: Links this discovery to the engineering priorities outlined in the email.
+  entity_list:
+  - entity_id: data/engineering/memory_leak_debug_report_2026-03-29.txt
+    entity_type: file
+  - entity_id: email_005
+    entity_type: email
+  id: case_144
+  query: What debugging priorities were outlined in the engineering email after the discovery of the memory leak?
+  user_id: lkamau
+- assertions:
+  - description: Identifies the group chat discussing the presentation preparation.
+  - description: Links this discussion to the finalized presentation file.
+  entity_list:
+  - entity_id: investor_demo_prep_0329
+    entity_type: group_chat
+  - entity_id: data/product/benchmark_dataset_presentation_2026-03-29.pdf
+    entity_type: file
+  id: case_145
+  query: What materials were prepared for the investor presentation, and where can they be found?
+  user_id: cgomez
+- assertions:
+  - description: Identifies the feedback from the employee survey on the 'no-meeting' policy.
+  - description: Connects this feedback to the leadership meeting discussing solutions.
+  entity_list:
+  - entity_id: data/hr/employee_survey_feedback_2026-03-29.csv
+    entity_type: file
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_146
+  query: What concerns were raised by employees about the 'no-meeting' policy, and how did leadership plan to address them?
+  user_id: nsharma
+- assertions:
+  - description: Identifies the event of accidental deletion mentioned in email_003.
+  - description: Connects the proposed plan in email_003 to the review session outlined in meeting_003.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_147
+  query: How did the intern's accidental deletion of annotated training data lead to a review of backup protocols?
+  user_id: achukwuma
+- assertions:
+  - description: Identifies the missing visualization components mentioned in email_002.
+  - description: Connects the urgency discussed in email_002 to the work session described in meeting_002.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_148
+  query: What steps were taken to address investor demands for missing visualization components in the dataset demo?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the mixed reactions described in email_004.
+  - description: Links the reactions to the review notes documented in data/engineering/experimental_library_review_notes.md.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: data/engineering/experimental_library_review_notes.md
+    entity_type: file
+  id: case_149
+  query: What feedback did the engineering team provide during the discussion about the experimental library integration?
+  user_id: rpatel
+- assertions:
+  - description: Finds the engineering meeting where latency issues were discovered due to the memory leak workaround.
+  - description: Links the email discussing the action plan for scalability improvements.
+  entity_list:
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: email_007
+    entity_type: email
+  id: case_150
+  query: What action plan was suggested to address the latency problems caused by the memory leak workaround discussed in the engineering team's meeting?
+  user_id: lmatsuda
+- assertions:
+  - description: Identifies the meeting where the junior data scientist proposed the alternative annotation strategy.
+  - description: Finds the email requesting detailed feedback on the proposal.
+  entity_list:
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: email_006
+    entity_type: email
+  id: case_151
+  query: What feedback was requested on the alternative annotation strategy proposed during the meeting?
+  user_id: mhamed
+- assertions:
+  - description: Identifies the file containing the incomplete draft of the benchmark dataset demo.
+  - description: Links it to the meeting where corrections to the draft were discussed.
+  entity_list:
+  - entity_id: data/demos/incomplete_benchmark_dataset_demo_2026-03-31.pptx
+    entity_type: file
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_152
+  query: What corrections were prioritized for the incomplete benchmark dataset demo sent to the CFO?
+  user_id: arendón
+- assertions:
+  - description: Identifies the CFO's demand for urgency in 'email_002'.
+  - description: Links the engineering team's scramble to address missing components in 'chat_003'.
+  - description: Connects the finalization efforts to the meeting held in 'meeting_002'.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_153
+  query: Why is the benchmark dataset demo considered urgent, and what steps are being taken to address missing components?
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies HR's findings from the employee survey in 'email_005'.
+  - description: Links the survey findings to HR's escalation during 'chat_004'.
+  - description: Connects the proposed actions to the discussion in 'meeting_003'.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  id: case_154
+  query: What actions are being proposed by HR to address employee dissatisfaction with leadership communication, and how is the leadership team responding?
+  user_id: okonkwo
+- assertions:
+  - description: Identifies the initial discovery of the undocumented feature in 'email_001'.
+  - description: Links the engineering team's discussion on the feature in 'chat_001'.
+  - description: Connects the evaluation of feasibility to the analysis in 'data/models/open_source_feature_analysis.docx'.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: data/models/open_source_feature_analysis.docx
+    entity_type: file
+  id: case_155
+  query: How is the undocumented feature in the open-source model being evaluated for integration, and what are the potential impacts on scalability and inference speed?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the critical visualization bug in the engineering team's report.
+  - description: Links the follow-up email proposing a temporary workaround to the bug.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  id: case_156
+  query: What workaround was proposed to address the critical visualization bug reported by the engineering team?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the CFO's demand for updates on the benchmark dataset demo.
+  - description: Links the product manager's outreach to the data science team for resolving dataset inconsistencies.
+  entity_list:
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: pm_ds_tension_20260402
+    entity_type: chat
+  id: case_157
+  query: How did the CFO's urgency about the benchmark dataset demo contribute to the tensions between the product manager and the data science team?
+  user_id: hwang
+- assertions:
+  - description: Identifies the junior engineer's proposal summarized in the email.
+  - description: Links the engineering team's meeting to evaluate the risks and benefits of the proposal.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: engineering_standup_20260402
+    entity_type: group_chat
+  id: case_158
+  query: What risks and benefits were discussed during the engineering team's meeting regarding the junior engineer's proposal to use an undocumented feature?
+  user_id: tsingh
+- assertions:
+  - description: Identifies the CFO's request email about benchmark dataset updates.
+  - description: Links the leadership team's discussion to the investor pressures mentioned in the CFO's request.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: leadership_pressure_discussion_20260403
+    entity_type: chat
+  id: case_159
+  query: What updates did the CFO request in the email and how were these pressures discussed later in the leadership team's chat?
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the meeting where the product manager escalated the request.
+  - description: Connects the delays in debugging tasks discussed in the group chat to the visualization component request.
+  entity_list:
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: product_visualization_request_20260403
+    entity_type: group_chat
+  id: case_160
+  query: How did the product manager's request for visualization components impact the engineering team's debugging tasks as discussed in the group chat?
+  user_id: tsharma
+- assertions:
+  - description: Identifies the email about quality inconsistencies flagged by the Head of AI Research.
+  - description: Links the email's flagged issues to the documentation in the dataset review notes file.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: data/datasets/benchmark_dataset_review_notes_2026-04-03.pdf
+    entity_type: file
+  id: case_161
+  query: What quality issues were flagged in the benchmark dataset and how were these documented in the review notes?
+  user_id: hwang
+- assertions:
+  - description: Includes a summary of the proposed hyperparameter tuning strategy.
+  - description: Mentions the debates and concerns raised during meetings and discussions.
+  - description: Highlights the initial results from the late-night experiment and their implications.
+  entity_list:
+  - entity_id: data/docs/hyperparameter_tuning_proposal.pdf
+    entity_type: file
+  - entity_id: hyperparameter_strategy_debate
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/reports/hyperparameter_tuning_results_2026-03-10.pdf
+    entity_type: file
+  - entity_id: chat_001
+    entity_type: chat
+  id: case_162
+  query: Generate a detailed report summarizing the proposed hyperparameter tuning strategy, including initial reactions, debates, and experimental outcomes.
+  user_id: arendon
+- assertions:
+  - description: Details the inconsistencies found in the annotated dataset.
+  - description: Explains the impact of these inconsistencies on model evaluation tasks.
+  - description: Summarizes the proposed alternative methodology and its reception by the team.
+  entity_list:
+  - entity_id: dataset_inconsistencies
+    entity_type: chat
+  - entity_id: data/reports/dataset_inconsistencies_analysis.xlsx
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/research/dataset_annotation_methodology.pdf
+    entity_type: file
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  id: case_163
+  query: Provide an analysis of the dataset annotation inconsistencies, including their discovery, impact on the project, and the proposed alternative methodology.
+  user_id: hwang
+- assertions:
+  - description: Covers the initial unexpected visit by the A+-round investor.
+  - description: Describes the presentation prepared for the visit and key points discussed.
+  - description: Analyzes the follow-up on funding delays and the performance metrics requested by the investor.
+  entity_list:
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/presentations/investor_meeting_2026-03-08.pptx
+    entity_type: file
+  - entity_id: email_3
+    entity_type: email
+  - entity_id: chat_004
+    entity_type: group_chat
+  - entity_id: data/reports/investor_metrics_summary.pdf
+    entity_type: file
+  id: case_164
+  query: Create a report on the investor's unexpected visit and the follow-up discussions on funding delays, including communication strategies and key actions taken.
+  user_id: cgomez
+- assertions:
+  - description: Summarizes the argument between the CTO and lead RL engineer during the early-morning meeting.
+  - description: Includes follow-up discussions and emails about the conflict and proposed compromises.
+  - description: Mentions the revised draft of the integration plan and team feedback.
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: email_6
+    entity_type: email
+  - entity_id: email_3
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/meeting_notes/2026-03-09_cto_rl_engineer_argument.md
+    entity_type: file
+  - entity_id: data/plans/integration_plan_revised_draft_2026-03-10.pdf
+    entity_type: file
+  id: case_165
+  query: Provide a comprehensive report on the conflict between the CTO and the lead RL engineer regarding the feasibility of adopting new post-training techniques. Include a timeline of events, key discussion points, and proposed resolutions.
+  user_id: mcarvalho
+- assertions:
+  - description: Details the investor's request for additional performance metrics and projected revenue streams.
+  - description: Summarizes team discussions and meetings about the funding delay.
+  - description: Mentions the urgency and steps taken to address the investor's concerns.
+  entity_list:
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: meeting-004
+    entity_type: meeting
+  - entity_id: email_3
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: data/reports/investor_metrics_summary.pdf
+    entity_type: file
+  - entity_id: data/reports/revenue_stream_projection_2026-03-10.xlsx
+    entity_type: file
+  id: case_166
+  query: Generate a detailed report on the A+-round funding delay, including the investor's requests for additional metrics, the company's response, and the potential impact on the financial runway.
+  user_id: jrodriguez
+- assertions:
+  - description: Summarizes the lunchtime discussion and informal debates about the open-source model.
+  - description: Includes findings from the analysis document and notes on the undocumented feature.
+  - description: Mentions the team-wide discussion and any proposed actions regarding exploratory testing.
+  entity_list:
+  - entity_id: group_chat_005
+    entity_type: group_chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/models/open_source_model_analysis.md
+    entity_type: file
+  - entity_id: data/notes/open_source_model_feature_discovery_2026-03-10.txt
+    entity_type: file
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_001
+    entity_type: email
+  id: case_167
+  query: Prepare an analysis of the newly released open-source model, including its potential impact on the company’s roadmap, key findings from team discussions, and next steps for evaluation.
+  user_id: arendón
+- assertions:
+  - description: Includes the initial results presented by the lead RL engineer
+  - description: Summarizes the feedback provided by team members on the experiment
+  - description: Analyzes the implications of the experiment results for upcoming model development
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: chat
+  - entity_id: chat_007
+    entity_type: chat
+  - entity_id: data/reports/hyperparameter_tuning_results_2026-03-10.pdf
+    entity_type: file
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_168
+  query: Provide a comprehensive report on the hyperparameter tuning strategy experiment, including initial results, team feedback, and its implications for future experiments.
+  user_id: arendón
+- assertions:
+  - description: Describes the flagged dataset inconsistency issue and its significance
+  - description: Summarizes the outcomes of the brainstorming session
+  - description: Details the next steps or proposed resolutions for addressing the inconsistencies
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: data/docs/dataset_inconsistency_notes_2026-03-10.docx
+    entity_type: file
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_169
+  query: Generate a detailed analysis of the dataset inconsistency issue, including identified problems, brainstorming session outcomes, and proposed next steps.
+  user_id: hwang
+- assertions:
+  - description: Includes the revised draft and its key points
+  - description: Summarizes the feedback and mixed opinions from the team
+  - description: Highlights key areas of contention and their potential impact on the plan's implementation
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: group_chat_005
+    entity_type: group_chat
+  - entity_id: data/plans/integration_plan_revised_draft_2026-03-10.pdf
+    entity_type: file
+  - entity_id: data/docs/integration_plan_feedback.docx
+    entity_type: file
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: meeting-005
+    entity_type: meeting
+  id: case_170
+  query: Summarize the progression of the integration plan for post-training techniques, including revisions, team feedback, and areas of contention.
+  user_id: mhamed
+- assertions:
+  - description: Summarizes the initial discovery of the undocumented feature and its impact on the team.
+  - description: Details the discussions about allocating resources for exploratory testing.
+  - description: Describes the workaround discovered by the junior engineer and its initial testing results.
+  - description: Includes implications of the workaround on future development and testing plans.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/docs/open_source_model_review.pdf
+    entity_type: file
+  - entity_id: data/experiments/undocumented_feature_workaround_notes.txt
+    entity_type: file
+  - entity_id: data/logs/server_overload_debug.log
+    entity_type: file
+  id: case_171
+  query: Provide a comprehensive report on the undocumented feature in the new open-source model, including discussions, exploratory tasks, discovered workarounds, and their implications.
+  user_id: mcarvalho
+- assertions:
+  - description: Summarizes the initial feedback on the integration plan and the resulting polarization within the team.
+  - description: Details the emergency meeting and highlights the key points of disagreement.
+  - description: Includes the final draft of the integration plan and any unresolved technical issues.
+  - description: Proposes potential steps or strategies for resolving the division and achieving alignment.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_008
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/docs/integration_plan_feedback.docx
+    entity_type: file
+  - entity_id: data/docs/integration_plan_final_draft.pdf
+    entity_type: file
+  - entity_id: data/meetings/emergency_integration_plan_notes.txt
+    entity_type: file
+  id: case_172
+  query: Generate a detailed analysis of the integration plan for post-training techniques, including team feedback, technical disagreements, and proposed solutions.
+  user_id: arendón
+- assertions:
+  - description: Summarizes the concerns raised by investors about delayed funding and its impact on the company's runway.
+  - description: Describes the emergency meeting held by the CFO and the follow-up requests for financial projections.
+  - description: Includes the updated revenue projections and their significance in addressing investor concerns.
+  - description: Highlights the leadership team’s strategy for managing the pressure and meeting deadlines.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: chat_006
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: meeting2
+    entity_type: meeting
+  - entity_id: data/presentations/cfo_emergency_meeting.pptx
+    entity_type: file
+  - entity_id: data/reports/investor_timeline_request.xlsx
+    entity_type: file
+  - entity_id: data/projections/investor_metrics_update.xlsx
+    entity_type: file
+  id: case_173
+  query: Prepare a summary of the events surrounding the delayed A+-round funding, including investor concerns, meetings, and steps taken to address the situation.
+  user_id: rpatel
+- assertions:
+  - description: Summarizes key disagreements from the tense meetings and Slack discussions.
+  - description: Includes proposed solutions and their feasibility.
+  - description: Details the final decision presented by the CTO in the late-afternoon meeting.
+  entity_list:
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/plans/ctomeeting_final_integration_plan_2026-03-14.pdf
+    entity_type: file
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: data/meetings/emergency_integration_plan_notes.txt
+    entity_type: file
+  id: case_174
+  query: Provide a comprehensive analysis of the team's disagreements and discussions on the integration plan for post-training techniques. Include key points of contention, proposed resolutions, and the final decision.
+  user_id: mcarvalho
+- assertions:
+  - description: Details the significant errors and anomalies reported in the annotation tool.
+  - description: Provides an overview of debugging sessions and collaboration among team members.
+  - description: Outlines proposed solutions and next steps to improve the tool's accuracy.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: data/debugging/annotation_tool_anomaly_analysis.docx
+    entity_type: file
+  - entity_id: data/debug/annotation_tool_edge_case_log_2026-03-14.txt
+    entity_type: file
+  - entity_id: meeting_002
+    entity_type: meeting
+  id: case_175
+  query: Summarize the debugging and improvement efforts for the automated annotation tool. Highlight the key issues discovered, the steps taken to address them, and proposed next actions.
+  user_id: hwang
+- assertions:
+  - description: Summarizes the concerns raised by A+-round investors and their implications.
+  - description: Details the leadership's strategy to address these concerns, including drafting a unified response.
+  - description: Includes updates on the progress of financial projections and their alignment with investor expectations.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: data/reports/investor_timeline_request.xlsx
+    entity_type: file
+  - entity_id: data/projections/investor_metrics_update.xlsx
+    entity_type: file
+  - entity_id: data/emails/cfo_investor_concerns_2026-03-14.txt
+    entity_type: file
+  - entity_id: meeting2
+    entity_type: meeting
+  id: case_176
+  query: Create a detailed report on the A+-round investors' concerns regarding the product roadmap delays. Include the leadership's response strategy, compiled projections, and the impact on team priorities.
+  user_id: rpatel
+- assertions:
+  - description: Includes a timeline of the server overload incident.
+  - description: Explains the root cause as related to the testing of the undocumented feature.
+  - description: Details the steps taken to resolve the server overload and restore functionality.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: data/logs/server_overload_debug.log
+    entity_type: file
+  - entity_id: meeting5
+    entity_type: meeting
+  id: case_177
+  query: Provide a detailed incident report on the server overload caused by testing the workaround for the undocumented feature, including a timeline of events, root cause analysis, and resolution steps.
+  user_id: mcarvalho
+- assertions:
+  - description: Identifies the main points of contention regarding the integration plan.
+  - description: Summarizes the discussions and resolutions proposed during the emergency meetings.
+  - description: Outlines the next steps agreed upon by the team to address the disagreements.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: chat_007
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/meetings/emergency_integration_plan_notes.txt
+    entity_type: file
+  id: case_178
+  query: Generate an analysis of the team's disagreements over the integration of post-training techniques, including the key points of contention, proposed solutions, and steps taken to achieve alignment.
+  user_id: hwang
+- assertions:
+  - description: Describes the concerns raised by A+-round investors about the delayed product roadmap.
+  - description: Analyzes the financial implications of these concerns and outlines the updated projections prepared.
+  - description: Summarizes the company's response strategy to reassure investors.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/projections/investor_metrics_update.xlsx
+    entity_type: file
+  id: case_179
+  query: Prepare an evaluation of how investor concerns about the delayed product roadmap have impacted financial projections and the company’s response strategy, including the preparation of updated metrics and timelines.
+  user_id: rpatel
+- assertions:
+  - description: Summarizes the late-afternoon meeting led by the CTO on March 14, 2026.
+  - description: Highlights differing viewpoints and key points of alignment leading to the final decision.
+  - description: Incorporates insights from pre-meeting discussions and follow-up communications.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_008
+    entity_type: email
+  - entity_id: group_chat_002
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/plans/ctomeeting_final_integration_plan_2026-03-14.pdf
+    entity_type: file
+  id: case_180
+  query: Generate a comprehensive timeline and analysis of the integration plan discussions and final decision, including key positions and outcomes.
+  user_id: hwang
+- assertions:
+  - description: Explains the investor concerns raised in emails and chats.
+  - description: Describes the leadership team's efforts to draft a unified response.
+  - description: Outlines the financial forecast updates and their implications for investor confidence.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: chat_009
+    entity_type: chat
+  - entity_id: group_chat_004
+    entity_type: group_chat
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: data/emails/cfo_investor_concerns_2026-03-14.txt
+    entity_type: file
+  - entity_id: data/forecasts/benchmark_dataset_timeline_update.xlsx
+    entity_type: file
+  id: case_181
+  query: Provide a detailed analysis of investor concerns about the delayed product roadmap and the company's response, including financial forecast discussions and strategic measures proposed.
+  user_id: jrodriguez
+- assertions:
+  - description: Details the discovery of the edge case anomaly and its impact on testing.
+  - description: Describes the debugging steps and resource allocations to resolve the issue.
+  - description: Mentions the follow-up actions and status updates provided in emails and meetings.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: group_chat_008
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/debug/annotation_tool_edge_case_log_2026-03-14.txt
+    entity_type: file
+  id: case_182
+  query: Summarize the discovery and debugging process for the edge case anomaly in the automated annotation tool, including resource allocations and subsequent impacts.
+  user_id: tsharma
+- assertions:
+  - description: Includes a summary of the undocumented dependencies discovered in the open-source model.
+  - description: Explains the delays caused in the agent development pipeline due to these dependencies.
+  - description: Describes the steps taken to address the issue, including the temporary workaround implemented and its impact.
+  entity_list:
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: data/notes/undocumented_dependencies_analysis.txt
+    entity_type: file
+  - entity_id: data/engineering/undocumented_dependencies_workaround_2026-03-17.md
+    entity_type: file
+  - entity_id: pipeline_bug_resolution
+    entity_type: group_chat
+  id: case_183
+  query: Generate a comprehensive analysis of the undocumented dependencies discovered in the open-source model, including their impact on the agent development pipeline and the measures taken to mitigate the delays.
+  user_id: mcarvalho
+- assertions:
+  - description: Summarizes the disagreements among team leads over post-training technique integration.
+  - description: Describes the revised plan introduced by the CTO, including key changes and goals.
+  - description: Mentions the cautious optimism sparked by the revised plan and any lingering challenges or unresolved debates.
+  entity_list:
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: data/reports/integration_meeting_notes.pdf
+    entity_type: file
+  - entity_id: data/docs/post_training_integration_plan_2026-03-16.pdf
+    entity_type: file
+  - entity_id: chat_001
+    entity_type: group_chat
+  id: case_184
+  query: Provide a detailed report on the disagreements over post-training technique integration, the revised plan introduced by the CTO, and the ongoing challenges faced during implementation.
+  user_id: hwang
+- assertions:
+  - description: Includes details of the junior data scientist's initial proposal for the semi-automated data annotation tool.
+  - description: Summarizes the internal debates over feasibility and resource allocation.
+  - description: Mentions the inconsistencies flagged in the tool and the delays caused by addressing these issues.
+  - description: Analyzes the impact of these events on the team's priorities and resource planning.
+  entity_list:
+  - entity_id: meeting_003
+    entity_type: meeting
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: data/docs/annotation_automation_proposal.pdf
+    entity_type: file
+  - entity_id: data/logs/data_annotation_tool_inconsistencies_2026-03-16.log
+    entity_type: file
+  - entity_id: weekly_standup_2026_03_17
+    entity_type: group_chat
+  - entity_id: chat_002
+    entity_type: chat
+  - entity_id: chat_006
+    entity_type: chat
+  id: case_185
+  query: Create a summary of the events surrounding the semi-automated data annotation tool, including the initial proposal, debates over feasibility and resource allocation, flagged inconsistencies, and their impact on priorities.
+  user_id: achukwuma
+- assertions:
+  - description: Summarizes the arguments for prioritizing the semi-automated data annotation tool.
+  - description: Summarizes the arguments for focusing on dataset consistency fixes.
+  - description: Describes any proposed resolutions or next steps discussed in the debates.
+  entity_list:
+  - entity_id: weekly_standup_2026_03_17
+    entity_type: group_chat
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: data/meetings/weekly_standup_notes_2026-03-17.md
+    entity_type: file
+  - entity_id: meeting-002
+    entity_type: meeting
+  id: case_186
+  query: Provide a detailed analysis of the prioritization debate between the semi-automated data annotation tool and dataset consistency fixes, including key arguments and proposed resolutions.
+  user_id: nreddy
+- assertions:
+  - description: Explains the reasons for the rejection of the one-pager.
+  - description: Lists the feedback provided by the investor.
+  - description: Outlines the revisions made and steps taken to meet investor expectations.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/docs/revised_benchmark_dataset_onepager.pdf
+    entity_type: file
+  id: case_187
+  query: Create a report detailing the rejection of the benchmark dataset one-pager by the investor, including the feedback provided, required revisions, and steps taken to address the concerns.
+  user_id: hnguyen
+- assertions:
+  - description: Details the nature and scope of employee burnout complaints.
+  - description: Describes the proposed mental health support initiative.
+  - description: Mentions any immediate actions or timelines discussed.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: data/docs/employee_burnout_feedback_summary.pdf
+    entity_type: file
+  id: case_188
+  query: Summarize the employee burnout complaints received by HR and outline the proposed mental health support initiative, including any immediate actions planned.
+  user_id: lkamau
+- assertions:
+  - description: Summarizes the arguments from both sides of the debate.
+  - description: Includes input from leadership on the decision-making process.
+  - description: Details any immediate actions or next steps agreed upon during or after the discussion.
+  entity_list:
+  - entity_id: weekly_standup_2026_03_17
+    entity_type: group_chat
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: data/meetings/weekly_standup_notes_2026-03-17.md
+    entity_type: file
+  id: case_189
+  query: Provide a comprehensive summary and analysis of the debates during the weekly stand-up regarding prioritization between the semi-automated data annotation tool and dataset consistency fixes.
+  user_id: jrodriguez
+- assertions:
+  - description: Explains the nature of the critical flaw in the tool's logic.
+  - description: Provides an update on debugging efforts and progress.
+  - description: Discusses the potential impact of the flaw on related deliverables.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/tools/debugging_session_report.docx
+    entity_type: file
+  id: case_190
+  query: Generate a detailed report on the critical flaw in the semi-automated data annotation tool's logic, including the debugging process, timeline for resolution, and potential impact on the project’s overall schedule.
+  user_id: achukwuma
+- assertions:
+  - description: Summarizes the investor feedback regarding the revised one-pager.
+  - description: Identifies the specific inconsistencies flagged during internal reviews.
+  - description: Explains the steps and timeline for addressing these issues.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/docs/revised_benchmark_dataset_onepager.pdf
+    entity_type: file
+  id: case_191
+  query: Create an analysis of the revised benchmark dataset one-pager, outlining the key feedback from the investor, internal inconsistencies identified during review, and the steps being taken to address these issues.
+  user_id: mhamed
+- assertions:
+  - description: Summarizes the leadership debate on the 'beta' dataset release
+  - description: Describes concerns over reputational risks and investor confidence
+  - description: Includes the timeline of discussions and meetings related to this topic
+  - description: Mentions the proposed compromise and its implications
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_003
+    entity_type: group_chat
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting-003
+    entity_type: meeting
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/docs/beta_dataset_release_proposal.pdf
+    entity_type: file
+  - entity_id: data/meeting_notes/beta_dataset_release_discussion.docx
+    entity_type: file
+  - entity_id: data/product/benchmark_dataset_beta_meeting_agenda_2026-03-20.docx
+    entity_type: file
+  id: case_192
+  query: Provide an analysis of the discussions and decisions surrounding the proposed 'beta' release of the benchmark dataset, including the risks and leadership division.
+  user_id: hwang
+- assertions:
+  - description: Lists key events and actions taken by HR regarding burnout
+  - description: Includes details about the proposed 'mental health recharge day'
+  - description: Summarizes employee feedback from the survey
+  - description: Mentions the informal meeting with team leads and its outcomes
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: chat_004
+    entity_type: group_chat
+  - entity_id: chat_008
+    entity_type: group_chat
+  - entity_id: meeting-005
+    entity_type: meeting
+  - entity_id: meeting_004
+    entity_type: meeting
+  - entity_id: data/docs/employee_burnout_feedback_summary.pdf
+    entity_type: file
+  - entity_id: data/notes/mental_health_recharge_day_discussion.txt
+    entity_type: file
+  - entity_id: data/hr/employee_burnout_survey_2026-03-20.csv
+    entity_type: file
+  id: case_193
+  query: Generate a timeline of HR's efforts to address employee burnout, including discussions, proposed initiatives, and employee feedback.
+  user_id: lkamau
+- assertions:
+  - description: Details the timeline of events related to the performance regression
+  - description: Explains the validation process and collaboration between teams
+  - description: Describes the memory allocation issues encountered and their impact
+  - description: Includes proposed or implemented solutions to the challenges
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: chat_006
+    entity_type: chat
+  - entity_id: meeting-001
+    entity_type: meeting
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/docs/performance_regression_fix_plan.pdf
+    entity_type: file
+  - entity_id: data/docs/performance_regression_fix_notes.pdf
+    entity_type: file
+  - entity_id: data/engineering/performance_fix_notes_2026-03-20.md
+    entity_type: file
+  id: case_194
+  query: Compile a technical report on the performance regression issue, including the validation process, implementation challenges, and current status.
+  user_id: mcarvalho
+- assertions:
+  - description: Includes a timeline of events leading to the validation of the performance regression fix.
+  - description: Details the collaboration process between engineering and data science teams.
+  - description: Summarizes the outcomes and next steps for testing.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_002
+    entity_type: meeting
+  - entity_id: data/docs/performance_regression_fix_notes.pdf
+    entity_type: file
+  id: case_195
+  query: Provide a detailed analysis of the collaboration between the engineering and data science teams to validate the performance regression fix, including the timeline, steps taken, and outcomes.
+  user_id: mcarvalho
+- assertions:
+  - description: Includes a summary of the leadership team’s divided opinions.
+  - description: Highlights the risks and benefits of releasing the 'beta' version.
+  - description: Documents the final decision or next steps regarding the release.
+  entity_list:
+  - entity_id: email_004
+    entity_type: email
+  - entity_id: chat_005
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/meeting_notes/beta_dataset_release_discussion.docx
+    entity_type: file
+  id: case_196
+  query: Summarize the discussions and decisions surrounding the release of the 'beta' version of the benchmark dataset, highlighting the risks, differing viewpoints, and final outcomes.
+  user_id: jrodriguez
+- assertions:
+  - description: Identifies the critical flaw in the data annotation tool.
+  - description: Details the debugging process and efforts to resolve the issue.
+  - description: Proposes suggestions or next steps to prevent similar issues in the future.
+  entity_list:
+  - entity_id: email_002
+    entity_type: email
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: chat_002
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/tools/debugging_session_report.docx
+    entity_type: file
+  id: case_197
+  query: Generate a comprehensive report on the discovery and debugging of the critical flaw in the semi-automated data annotation tool, including the root cause, debugging process, and suggested improvements.
+  user_id: hwang
+- assertions:
+  - description: Includes a detailed timeline of the memory allocation issue and its impact on testing.
+  - description: Mentions the resolution of the issue and the subsequent inefficiency that required optimization.
+  - description: Includes relevant communications, engineering notes, and meetings discussing the problem and solutions.
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_010
+    entity_type: email
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: data/engineering/performance_fix_notes_2026-03-20.md
+    entity_type: file
+  - entity_id: data/engineering/memory_allocation_fix_notes.txt
+    entity_type: file
+  id: case_198
+  query: Generate a comprehensive report summarizing the memory allocation issue encountered by the engineering team, including its impact, timeline of events, and resolution efforts.
+  user_id: mcarvalho
+- assertions:
+  - description: Summarizes the key investor’s feedback and financial projection requests.
+  - description: Details the timeline of events, including the early-morning call and subsequent communications.
+  - description: Includes relevant emails, meeting discussions, and files related to the financial projections.
+  entity_list:
+  - entity_id: email_003
+    entity_type: email
+  - entity_id: email_007
+    entity_type: email
+  - entity_id: investor_request_20260322
+    entity_type: group_chat
+  - entity_id: meeting-002
+    entity_type: meeting
+  - entity_id: data/finance/q2_financial_breakdown_request_2026-03-20.xlsx
+    entity_type: file
+  - entity_id: data/finance/investor_projection_request.xlsx
+    entity_type: file
+  id: case_199
+  query: Provide an analysis of the CFO's interactions with the investor regarding the financial projections request, including the timeline, key concerns raised, and the impact on A+-round funding preparations.
+  user_id: zokonkwo
+- assertions:
+  - description: Provides a summary of the leadership meeting debates about the beta dataset release.
+  - description: Includes an analysis of the risks and benefits as outlined in the discussions and related documentation.
+  - description: References communications and files that capture the arguments and decision-making process.
+  entity_list:
+  - entity_id: email_005
+    entity_type: email
+  - entity_id: email_009
+    entity_type: email
+  - entity_id: leadership_meeting_20260322
+    entity_type: group_chat
+  - entity_id: meeting_005
+    entity_type: meeting
+  - entity_id: data/product/benchmark_dataset_beta_meeting_agenda_2026-03-20.docx
+    entity_type: file
+  - entity_id: data/leadership/beta_dataset_risk_analysis.pptx
+    entity_type: file
+  id: case_200
+  query: Prepare an analysis of the discussions and risk assessments surrounding the release of the 'beta' benchmark dataset, including key arguments from leadership and potential implications.
+  user_id: arendón
+- assertions:
+  - description: Includes a timeline of events related to memory allocation inefficiencies and latency issues
+  - description: Summarizes debugging progress and identified root causes
+  - description: Describes proposed solutions and their potential impact
+  - description: Highlights any pending decisions or unresolved challenges
+  entity_list:
+  - entity_id: email_001
+    entity_type: email
+  - entity_id: email_006
+    entity_type: email
+  - entity_id: debugging_session_20260322
+    entity_type: group_chat
+  - entity_id: chat_001
+    entity_type: group_chat
+  - entity_id: data/engineering/memory_allocation_fix_notes.txt
+    entity_type: file
+  - entity_id: data/engineering/memory_leak_debug_notes.md
+    entity_type: file
+  - entity_id: data/engineering/latency_stress_test_results_2026-03-23.csv
+    entity_type: file
+  - entity_id: meeting_001
+    entity_type: meeting
+  - entity_id: meeting-001
+    entity_type: meeting
+  id: case_201
+  query: Provide a detailed report on the engineering challenges related to memory allocation inefficiencies and latency issues in the open-source model integration. The report should include the timeline of discoveries, debugging progress, proposed solutions, and key decisions pending resolution.
+  user_id: fribeiro
+description: Generated evaluation queries covering search, multi-hop reasoning, and report generation.
+name: Evaluation Set for zai-intelligence-20260408

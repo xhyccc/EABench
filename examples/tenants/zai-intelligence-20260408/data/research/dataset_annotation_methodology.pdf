@@ -1,0 +1,132 @@
+# Proposal for an Alternative Methodology to Resolve Dataset Annotation Inconsistencies
+
+## Author
+Mateo Carvalho
+
+## Abstract
+Dataset annotation inconsistencies pose a significant challenge in ensuring the reliability and accuracy of machine learning models. This proposal outlines an alternative methodology to address annotation discrepancies, leveraging automated validation tools, enhanced reviewer protocols, and iterative refinement cycles. The proposed approach aims to improve dataset quality while minimizing manual labor and resource expenditure.
+
+---
+
+## Table of Contents
+1. Introduction
+2. Problem Statement
+3. Proposed Methodology
+   - Automated Validation Tools
+   - Enhanced Reviewer Protocols
+   - Iterative Refinement Cycles
+4. Implementation Plan
+   - Timeline
+   - Resources Required
+5. Expected Outcomes
+6. Limitations and Risks
+7. Conclusion
+8. References
+
+---
+
+## 1. Introduction
+Annotation quality is a cornerstone of successful machine learning projects. Inconsistencies or errors in annotated datasets can lead to:
+- Reduced model performance
+- Misinterpretation of results
+- Wasted computational resources
+
+The urgency to resolve these issues is amplified by the increasing complexity of tasks in modern AI systems, particularly in reinforcement learning (RL) and computer vision domains.
+
+---
+
+## 2. Problem Statement
+During the recent dataset evaluation phase, inconsistencies were discovered in annotations, leading to:
+- Confusion among data scientists
+- Delays in model evaluation tasks
+- Potential risks to investor confidence
+
+These issues highlight the need for a robust methodology to ensure dataset consistency and reliability.
+
+---
+
+## 3. Proposed Methodology
+This proposal introduces a three-pronged approach to resolve annotation inconsistencies:
+
+### Automated Validation Tools
+- **Objective**: Detect annotation errors programmatically.
+- **Implementation**:
+  - Develop custom scripts to identify outliers and anomalies in annotated labels.
+  - Integrate open-source validation libraries for cross-checking.
+  - Utilize statistical metrics (e.g., inter-annotator agreement) to flag inconsistencies.
+- **Advantages**:
+  - Reduces manual workload.
+  - Ensures systematic error detection.
+
+### Enhanced Reviewer Protocols
+- **Objective**: Improve human oversight during annotation.
+- **Implementation**:
+  - Train annotators with updated guidelines emphasizing edge cases.
+  - Introduce secondary reviews by senior data scientists for high-risk samples.
+  - Establish a feedback loop for annotators to clarify ambiguous cases.
+- **Advantages**:
+  - Enhances annotation accuracy.
+  - Promotes accountability and shared understanding.
+
+### Iterative Refinement Cycles
+- **Objective**: Continuously improve dataset quality over time.
+- **Implementation**:
+  - Schedule periodic audits of annotated datasets.
+  - Incorporate findings from model performance metrics into annotation adjustments.
+  - Employ active learning to prioritize samples requiring re-annotation.
+- **Advantages**:
+  - Adapts to evolving project requirements.
+  - Ensures long-term dataset reliability.
+
+---
+
+## 4. Implementation Plan
+
+### Timeline
+| Phase                  | Duration         | Key Milestones                     |
+|------------------------|------------------|------------------------------------|
+| Tool Development       | 2 weeks          | Validation tool prototype          |
+| Reviewer Training      | 1 week           | Annotator workshops completed      |
+| Refinement Cycle 1     | 3 weeks          | Dataset audit and adjustments      |
+| Final Integration      | 1 week           | Tools and protocols operational    |
+
+### Resources Required
+- **Human Resources**:
+  - 2 Senior Data Scientists
+  - 5 Annotators
+  - 1 Software Engineer
+- **Technical Resources**:
+  - Cloud compute for validation tools
+  - Access to statistical libraries (e.g., Scikit-learn, NumPy)
+
+---
+
+## 5. Expected Outcomes
+- **Short-term**:
+  - Reduction in annotation errors by 40%.
+  - Faster resolution of flagged inconsistencies.
+- **Long-term**:
+  - Improved model accuracy.
+  - Enhanced trust among stakeholders.
+
+---
+
+## 6. Limitations and Risks
+- **Technical Challenges**:
+  - Validation tools may struggle with subjective annotation tasks.
+  - Computational overhead from large-scale audits.
+- **Human Factors**:
+  - Annotator resistance to new protocols.
+  - Risk of burnout during intensive refinement cycles.
+
+---
+
+## 7. Conclusion
+The proposed methodology offers a structured and scalable approach to resolving dataset annotation inconsistencies. By combining automated tools, enhanced human oversight, and iterative refinement, the organization can ensure the reliability of its datasets and maintain its competitive edge.
+
+---
+
+## 8. References
+1. Smith, J., & Lee, A. (2025). "Improving Annotation Quality in Machine Learning Datasets." Journal of AI Research.
+2. OpenAI (2026). "Annotation Validation Toolkit Documentation." Retrieved from: OpenAI.org
+3. Carvalho, M. (2024). "Efficient Annotation Protocols in RL Systems." Conference on Computational Learning.

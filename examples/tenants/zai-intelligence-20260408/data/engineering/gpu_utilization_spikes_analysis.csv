@@ -1,0 +1,92 @@
+# GPU Utilization Spikes Analysis
+
+**Author:** Lilian Kamau  
+**File Path:** data/engineering/gpu_utilization_spikes_analysis.csv  
+**Date:** 2026-04-07  
+
+## Overview
+This report provides a detailed analysis of GPU utilization spikes observed after implementing a partial memory leak fix in the open-source model integration pipeline. The spikes have caused significant disruptions in agent training jobs, forcing a temporary halt to operations. The data presented in this CSV file includes raw measurements, diagnostic findings, and recommendations for mitigating the issue.
+
+---
+
+## File Structure
+The CSV file is organized into the following columns:
+
+1. **Timestamp**: The date and time when the data point was recorded.
+2. **GPU_ID**: Unique identifier for the GPU where the spike occurred.
+3. **Utilization (%)**: Percentage of GPU utilization during the recorded interval.
+4. **Memory Usage (MB)**: GPU memory usage in megabytes.
+5. **Latency (ms)**: Latency observed in training jobs during the utilization spike.
+6. **Error Logs**: Error codes or messages generated during the spike.
+7. **Notes**: Additional observations or context.
+
+---
+
+## Diagnostic Findings
+
+### 1. Memory Leak Fix Impact
+- **Partial Fix Implementation Date:** 2026-04-06
+- **Observed Issue:** GPU utilization spikes began immediately after the deployment of the partial fix.
+- **Cause:** The fix introduced a minor latency in the agent training pipeline, increasing GPU memory consumption during specific operations.
+
+### 2. Utilization Spike Patterns
+- Spikes occurred intermittently across multiple GPUs.
+- Peak utilization ranged from **95% to 100%**, exceeding typical operational thresholds.
+- Memory usage showed abnormal increases during spikes, often exceeding **16 GB** per GPU.
+
+### 3. Latency Analysis
+- Average latency during spikes increased by **35 ms**, with some instances exceeding **50 ms**.
+- Latency correlated strongly with high utilization, suggesting that the fix caused bottlenecks in memory allocation routines.
+
+### 4. Error Logs
+- Common errors observed during spikes:
+  - **MemoryAllocationError**: "Failed to allocate memory block."
+  - **TrainingPipelineTimeout**: "Training job timeout exceeded threshold."
+  - **ResourceOverloadWarning**: "GPU resource utilization exceeds safe operational limits."
+- Errors were consistent across all affected GPUs.
+
+### 5. GPU Distribution
+- Affected GPUs: **GPU_01, GPU_03, GPU_07, GPU_12**.
+- GPUs with higher utilization spikes were part of **Cluster B**, which runs intensive batch training jobs.
+
+---
+
+## Raw Data Sample
+Below is a sample of the raw data included in the CSV file:
+
+| Timestamp           | GPU_ID | Utilization (%) | Memory Usage (MB) | Latency (ms) | Error Logs                 | Notes                                  |
+|---------------------|--------|-----------------|-------------------|--------------|---------------------------|----------------------------------------|
+| 2026-04-07 10:15:32 | GPU_01 | 96              | 16432             | 42           | MemoryAllocationError     | Spike observed during batch training. |
+| 2026-04-07 10:16:12 | GPU_03 | 100             | 16384             | 50           | TrainingPipelineTimeout   | Training job timeout exceeded limit.  |
+| 2026-04-07 10:17:45 | GPU_07 | 95              | 16000             | 37           | ResourceOverloadWarning   | Utilization exceeds operational limits.|
+| 2026-04-07 10:19:08 | GPU_12 | 98              | 16256             | 45           | MemoryAllocationError     | Memory allocation bottleneck.         |
+
+---
+
+## Recommendations
+
+### Short-Term Mitigation
+1. **Throttle GPU Utilization:** Implement temporary throttling mechanisms to cap utilization at **85%**.
+2. **Memory Allocation Optimization:** Adjust memory allocation routines to reduce bottlenecks.
+3. **Job Prioritization:** Limit batch sizes and prioritize smaller training jobs to reduce strain.
+
+### Long-Term Solutions
+1. **Patch Refinement:** Develop and deploy a refined memory leak fix that addresses latency without introducing new bottlenecks.
+2. **Infrastructure Scaling:** Add additional GPUs to Cluster B to distribute workloads more evenly.
+3. **Monitoring System Enhancements:** Implement real-time GPU monitoring tools to detect spikes early and trigger automated mitigations.
+
+---
+
+## Next Steps
+- **Engineering Team:** Focus on debugging the partial memory leak fix and test alternative approaches.
+- **Data Science Team:** Validate the impact of spikes on model performance and provide feedback to engineering.
+- **Leadership:** Allocate additional resources to accelerate the stabilization of infrastructure.
+
+---
+
+## Conclusion
+GPU utilization spikes following the memory leak fix have caused significant operational disruptions. Immediate mitigations and long-term strategies are critical for restoring stability and ensuring the scalability of the enterprise's training pipeline.
+
+---
+
+**End of Report**

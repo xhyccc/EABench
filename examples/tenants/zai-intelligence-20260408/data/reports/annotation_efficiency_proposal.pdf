@@ -1,0 +1,126 @@
+# Proposal for Improving Annotation Efficiency
+
+**Author**: Felipe Ribeiro  
+**Date**: 2026-03-27  
+**Role**: Senior Data Scientist  
+
+---
+
+## Executive Summary
+
+This proposal outlines a novel approach to improve annotation efficiency within the organization, addressing challenges that have hindered progress in recent weeks. Current annotation workflows are plagued by inefficiencies, including high manual workloads, error-prone automation, and version control issues. These inefficiencies have contributed to delays in dataset preparation, which in turn, have impacted product milestones and investor confidence.
+
+The proposed method leverages advancements in active learning and semi-supervised techniques to reduce manual effort while maintaining high-quality annotations. By adopting this approach, the team aims to:
+
+- Increase annotation throughput by **40%** over the next quarter.
+- Reduce error rates in automated annotations by **25%**.
+- Minimize employee burnout by reducing reliance on overtime work.
+
+---
+
+## Context
+
+### Key Challenges
+
+1. **Manual Annotation Bottlenecks**:
+   - Current workflows require extensive manual intervention for edge cases, consuming significant time and resources.
+   - Annotators report high levels of fatigue and dissatisfaction.
+
+2. **Automation Issues**:
+   - Semi-automated tools exhibit an error rate of **15-20%**, necessitating frequent manual corrections.
+   - Recent improvements boosted accuracy by **3%**, but this progress required unsustainable overtime efforts.
+
+3. **Dataset Version Control**:
+   - A junior data scientist recently overwrote a key annotation file, delaying progress by several hours and highlighting a lack of robust version control policies.
+   - Inconsistent dataset versions have caused disruptions in downstream tasks, including model training and validation.
+
+4. **Investor Pressure**:
+   - Investors are increasingly concerned about delays in dataset delivery and have requested live demonstrations and preliminary results from ongoing initiatives.
+
+### Recent Developments
+
+- The semi-automated annotation tool achieved a **3% improvement in accuracy**, but further optimization is needed.
+- A novel annotation efficiency approach, proposed on **2026-03-24**, has shown initial promise and warrants further investigation.
+- Employee burnout levels remain high, with HR's recent surveys indicating frustration over unclear policies and extended work hours.
+
+---
+
+## Proposed Solution
+
+### Key Components
+
+1. **Active Learning Integration**:
+   - Implement an active learning framework to prioritize the most informative samples for manual annotation.
+   - Use uncertainty sampling to identify data points where the model is least confident, ensuring human effort is focused on high-impact areas.
+
+2. **Semi-Supervised Learning**:
+   - Leverage semi-supervised techniques to automatically annotate large portions of the dataset, using a small subset of high-quality labeled data as a training base.
+   - Incorporate consistency training to improve model robustness and reduce error rates.
+
+3. **Enhanced Version Control**:
+   - Adopt a Git-based version control system specifically tailored for datasets (e.g., DVC or Git-LFS).
+   - Implement strict policies for dataset updates, including mandatory code reviews and automated backups.
+
+4. **Workforce Optimization**:
+   - Introduce flexible work initiatives, such as the midweek 'no-meeting' policy, to reduce burnout.
+   - Allocate dedicated time for annotators to focus on high-priority tasks without interruptions.
+
+### Implementation Plan
+
+| Step | Description | Timeline | Owner |
+|------|-------------|----------|-------|
+| 1 | Set up active learning pipeline and identify initial dataset for testing. | Week 1 | Data Science Team |
+| 2 | Train semi-supervised models using existing annotations and validate results. | Week 2-3 | ML Engineering Team |
+| 3 | Deploy new version control policies and train team members. | Week 2 | DevOps Team |
+| 4 | Conduct pilot testing with a subset of annotators to measure efficiency gains. | Week 4 | Data Science Team |
+| 5 | Roll out full implementation and monitor key metrics. | Week 5-6 | Cross-Functional Teams |
+
+---
+
+## Expected Benefits
+
+### Quantitative Metrics
+
+- **Annotation Throughput**:
+  - Current: **1,000 samples/day**
+  - Target: **1,400 samples/day** (40% improvement)
+
+- **Error Rate in Automated Annotations**:
+  - Current: **15-20%**
+  - Target: **10-12%** (25% reduction)
+
+- **Employee Overtime**:
+  - Current: **20 hours/week per annotator**
+  - Target: **10 hours/week per annotator** (50% reduction)
+
+### Qualitative Improvements
+
+- Higher employee satisfaction due to reduced workload and clearer policies.
+- Improved investor confidence from timely delivery of datasets and live demonstrations.
+- Enhanced organizational alignment on strategic priorities.
+
+---
+
+## Risks and Mitigation
+
+| Risk | Impact | Mitigation Strategy |
+|------|--------|----------------------|
+| Model inaccuracies in active learning pipeline. | Delayed implementation. | Conduct extensive testing on small subsets before scaling. |
+| Resistance to new version control policies. | Workflow disruptions. | Provide comprehensive training and clear documentation. |
+| Burnout persists despite policy changes. | Reduced productivity. | Continuously monitor employee feedback and adapt initiatives as needed. |
+
+---
+
+## Conclusion
+
+By adopting the proposed improvements, the organization can overcome current bottlenecks in annotation workflows, accelerate dataset preparation, and rebuild trust with investors. The outlined approach not only enhances efficiency but also fosters a healthier and more sustainable work environment.
+
+### Next Steps
+
+1. Secure leadership approval for pilot implementation.
+2. Allocate resources to the data science and engineering teams for immediate setup.
+3. Schedule a follow-up review in six weeks to evaluate progress and adjust the strategy if needed.
+
+---
+
+*Prepared by Felipe Ribeiro, Senior Data Scientist*

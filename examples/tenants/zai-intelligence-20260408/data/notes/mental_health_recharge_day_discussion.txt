@@ -1,0 +1,97 @@
+# Mental Health Recharge Day Discussion
+
+**Author:** Lilian Kamau  
+**Date:** 2026-03-19  
+**Context:** Notes from the HR team's informal meeting with team leads on mental health initiatives.
+
+---
+
+## Overview
+The HR team convened an informal meeting with team leads to address growing concerns about employee burnout. The discussion focused on the feasibility and logistics of implementing a 'mental health recharge day' as a short-term measure to alleviate stress and maintain productivity amidst ongoing organizational challenges.
+
+---
+
+## Meeting Agenda
+1. **Introduction and Context**
+   - Presentation of employee complaints about burnout.
+   - Overview of current organizational pressures.
+2. **Proposed Initiative**
+   - Details of the 'mental health recharge day' concept.
+   - Potential benefits and risks.
+3. **Feedback from Team Leads**
+   - Perspectives on feasibility and timing.
+   - Concerns about productivity impact.
+4. **Action Items and Next Steps**
+   - Implementation considerations.
+   - Drafting a proposal for executive review.
+
+---
+
+## Key Discussion Points
+
+### 1. Introduction and Context
+- HR reported a **30% increase in burnout-related complaints** over the past two months, with multiple employees citing:
+  - **Excessive workload** due to delayed project timelines.
+  - **Lack of clear communication** on project priorities.
+  - **Frequent emergency tasks**, creating a reactive work environment.
+- The current mental health support initiatives (e.g., counseling sessions, wellness webinars) are underutilized, with only **15% participation** in the last quarter.
+  
+### 2. Proposed Initiative: 'Mental Health Recharge Day'
+- **Definition:** A company-wide paid day off to allow employees to step back, rest, and recharge.
+- **Proposed Date:** Friday, 2026-03-29 (before the end-of-quarter rush).
+- **Key Objectives:**
+  - Alleviate immediate burnout symptoms.
+  - Signal management’s acknowledgment of employee well-being.
+  - Create a buffer for employees to re-align priorities and productivity.
+- **Potential Risks:**
+  - Loss of one workday during a critical period.
+  - Perception of inequity if certain teams (e.g., customer support) are excluded due to operational demands.
+
+### 3. Feedback from Team Leads
+- **General Agreement:** All team leads acknowledged the need for immediate action to address burnout.
+- **Concerns Raised:**
+  - **Timing:**
+    - Some team leads argued that end-of-quarter deliverables might make a one-day break counterproductive.
+    - Alternative suggestion: schedule the recharge day after the benchmark dataset release.
+  - **Operational Constraints:**
+    - Teams with direct client dependencies (e.g., customer support and engineering) expressed concerns about maintaining SLAs.
+    - Suggested partial implementation: staggered recharge days by department.
+  - **Long-Term Impact:**
+    - Several leads emphasized the importance of pairing this initiative with a broader strategy to address systemic issues, such as workload redistribution and improved planning.
+
+### 4. Action Items and Next Steps
+- **Immediate Action Items:**
+  - HR to draft a formal proposal for the 'mental health recharge day' initiative, including:
+    - Clear justification and expected benefits.
+    - Mitigation strategies for operational disruptions.
+    - Communication plan to ensure transparency and equity.
+  - Team leads to provide a list of critical dependencies and deliverables for their teams to assess feasibility.
+  - HR to conduct a quick pulse survey to gauge employee support for the initiative.
+
+- **Longer-Term Considerations:**
+  - Develop a holistic mental health support strategy:
+    - Regularly scheduled wellness days.
+    - Improved workload management practices.
+    - Enhanced employee assistance programs (EAPs).
+  - Conduct quarterly reviews of mental health metrics (e.g., employee burnout complaints, participation in wellness programs).
+
+---
+
+## Tentative Timeline
+| Date           | Action Item                                     | Responsible Party            |
+|----------------|------------------------------------------------|-----------------------------|
+| 2026-03-20    | Draft proposal and circulate for feedback       | HR Team                     |
+| 2026-03-22    | Finalize proposal and submit to executives      | HR Team                     |
+| 2026-03-25    | Announce decision to employees                 | HR Team, Leadership Team    |
+| 2026-03-29    | Tentative 'Mental Health Recharge Day'          | All Teams                   |
+| Ongoing       | Develop long-term mental health strategy        | HR Team, Input from Leads   |
+
+---
+
+## Conclusion
+The discussion highlighted the urgency of addressing employee burnout through immediate and visible action while ensuring minimal disruption to ongoing projects. The proposed 'mental health recharge day' was met with cautious optimism, with team leads emphasizing the need for clear communication, equitable implementation, and alignment with long-term well-being strategies. HR will move forward with drafting a formal proposal and gathering additional feedback to refine the initiative.
+
+---
+
+**Prepared by:** Lilian Kamau  
+**Date:** 2026-03-19

@@ -1,0 +1,125 @@
+# Financial Breakdown Call Minutes
+
+**Path:** data/finance/financial_breakdown_call_minutes.docx  
+**Author:** Julia Rodriguez  
+**Date:** 2026-03-21  
+
+---
+
+## Overview
+This document provides detailed minutes from the early-morning call between the CFO and a key A+-round investor. The discussion revolved around financial concerns, the enterprise's progress on strategic milestones, and immediate action items to address investor demands.
+
+---
+
+## Attendees
+- **CFO**: [Name Redacted for Privacy]
+- **Investor Representative**: [Name Redacted for Privacy]
+- **Finance Team Note-Taker**: Julia Rodriguez
+
+---
+
+## Key Discussion Points
+
+### 1. Financial Overview
+- The CFO presented a high-level summary of the current financial landscape:
+  - **Revenue Projections (Q2 2026)**: $12.8M, reflecting a 5% decline compared to initial forecasts due to project delays.
+  - **Burn Rate**: Currently at $1.2M per month, with a projected runway of 15 months if no additional funding is secured.
+  - **Current Cash Reserves**: $18M.
+
+- The investor expressed concern over the delayed benchmark dataset release and its potential impact on revenue generation.
+
+### 2. Benchmark Dataset Release
+- **Investor Concern**:
+  - Delays in the benchmark dataset release are creating uncertainty about product readiness.
+  - Market confidence is dwindling due to lack of clear milestones.
+
+- **CFO Response**:
+  - Acknowledged the delay but emphasized progress made on resolving technical bottlenecks.
+  - Highlighted the proposal to release a 'beta' version of the dataset as a stopgap measure.
+  - Reiterated the importance of balancing technical readiness with market expectations to avoid reputational risks.
+
+- **Action Items**:
+  - CFO to provide a revised timeline for the dataset release by the end of the week.
+  - Product manager to share the draft press release with the investor for review.
+
+### 3. Financial Breakdown Request
+- **Investor Request**:
+  - A more detailed financial breakdown for Q2 2026, including:
+    - Specific allocation of funds for engineering, data science, product development, and marketing.
+    - Updated projections for milestone completion and associated costs.
+
+- **CFO Response**:
+  - Confirmed that the finance team is already preparing a detailed report.
+  - Highlighted challenges in maintaining financial clarity amidst ongoing technical and operational changes.
+  
+- **Action Items**:
+  - CFO to deliver the updated financial breakdown by 2026-03-24.
+
+### 4. Employee Burnout and Operational Efficiency
+- **Investor Concern**:
+  - Reports of employee burnout and internal inefficiencies are troubling.
+  - Investor emphasized the importance of maintaining team morale to ensure productivity.
+
+- **CFO Response**:
+  - Acknowledged recent HR initiatives, including a sentiment survey and proposed mental health recharge days.
+  - Stressed the enterprise's commitment to fostering a sustainable work environment.
+
+- **Action Items**:
+  - CFO to provide a summary of HR findings and proposed actions in the next update.
+
+### 5. Risk Mitigation Strategies
+- **Investor Concern**:
+  - Potential reputational risks associated with releasing an unfinished 'beta' version of the benchmark dataset.
+  - Risk of further delays in addressing semi-automated data annotation tool flaws and open-source model compatibility.
+
+- **CFO Response**:
+  - Confirmed that engineering and data science teams are collaborating on resolving these issues.
+  - Discussed contingency plans, including allocating additional resources to high-priority tasks.
+
+- **Action Items**:
+  - CFO to coordinate with the CTO and product manager to finalize a mitigation plan.
+  - Leadership to decide on the 'beta' dataset release during the afternoon meeting.
+
+---
+
+## Detailed Financial Breakdown (Preliminary)
+
+| **Category**                | **Q2 Budget ($M)** | **% of Total Budget** | **Notes**                                        |
+|-----------------------------|--------------------|------------------------|------------------------------------------------|
+| Engineering & Development  | 6.5                | 50%                   | Includes resolving open-source model issues.   |
+| Data Science               | 2.5                | 19%                   | Focus on dataset consistency and annotation.   |
+| Product & Marketing        | 2.0                | 15%                   | Includes beta launch preparation efforts.      |
+| Administrative & HR        | 1.8                | 14%                   | Includes mental health initiatives.            |
+| Miscellaneous Contingencies| 0.4                | 2%                    | Allocated for unforeseen expenses.             |
+
+---
+
+## Action Items Summary
+
+### From CFO:
+- Deliver revised timeline for benchmark dataset release by 2026-03-24.
+- Provide detailed Q2 financial breakdown with milestone-specific allocations.
+- Summarize HR findings on employee burnout and proposed actions.
+
+### From Product Manager:
+- Finalize 'beta' dataset press release draft and share with the investor.
+- Coordinate with leadership to decide on dataset release strategy.
+
+### From Engineering Team:
+- Resolve inefficiencies in memory allocation fix by 2026-03-23.
+- Finalize and validate semi-automated data annotation tool improvements.
+
+### From HR Team:
+- Present survey findings and proposed mental health initiatives to leadership.
+
+---
+
+## Closing Remarks
+The call concluded with tentative investor approval of the CFO's proposed next steps, contingent on the delivery of clarified financial projections and a finalized timeline for the benchmark dataset release. The CFO emphasized the leadership team's commitment to addressing these issues promptly to rebuild investor confidence.
+
+---
+
+**Prepared by:** Julia Rodriguez  
+**Date:** 2026-03-21
+
+---

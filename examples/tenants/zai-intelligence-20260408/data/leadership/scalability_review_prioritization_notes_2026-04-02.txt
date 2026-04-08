@@ -1,0 +1,134 @@
+# Scalability Review and Prioritization Notes
+
+**Date:** 2026-04-02  
+**Author:** Hyejin Wang  
+**Context:** Notes from the leadership sync-up debating resource allocation for scalability review and debugging tasks.
+
+---
+
+## Agenda
+
+1. Recap of recent challenges and initiatives.
+2. Status updates on scalability review and debugging tasks.
+3. Key points of contention:
+   - Prioritization of scalability review vs ongoing debugging efforts.
+   - Resource allocation for critical tasks.
+4. Proposed solutions and next steps.
+
+---
+
+## Recap of Recent Events (Key Context)
+
+### Technical Challenges:
+- **Memory Leak Issue:**
+  - The engineering team identified a critical memory leak in the open-source model integration (discovered 2026-03-29).
+  - Temporary workaround caused **latency issues** under high-load scenarios (identified 2026-03-31).
+  - A junior engineer highlighted an undocumented feature in the open-source model that could potentially **improve inference speed** (2026-04-01).
+- **Benchmark Dataset Demo:**
+  - The product manager's efforts to prepare the demo faced delays due to missing visualization components and dataset inconsistencies.
+  - A critical bug in the newly added visualization component forced a rollback (2026-04-02).
+- **Data Quality Concerns:**
+  - Minor inconsistencies were discovered in the recovered training dataset after a data loss incident (2026-04-01).
+  - These issues have diverted additional resources toward quality control.
+
+### Leadership and Communication Issues:
+- **Investor Pressure:**
+  - The CFO demanded a finalized benchmark dataset demo by 2026-04-01, escalating tensions between the product and engineering teams.
+- **Employee Frustration:**
+  - HR's 'no-meeting' policy led to significant confusion and dissatisfaction, as revealed by an anonymous survey (2026-04-01).
+  - A company-wide memo intended to clarify the policy instead contradicted earlier statements, further aggravating frustration (2026-04-02).
+
+---
+
+## Discussion Highlights
+
+### 1. Scalability Review vs Debugging Tasks
+
+**CFO's Position:**  
+- Emphasized the need to prioritize scalability review as a critical deliverable for investors.
+- Argued that delays in addressing scalability could jeopardize long-term funding and trust.
+
+**CTO's Position:**  
+- Stressed that debugging tasks (especially related to memory leak and latency issues) are blocking critical milestones.
+- Warned that ignoring these issues could lead to cascading failures during scalability testing.
+
+**Key Points Raised:**
+- The temporary workaround for the memory leak is insufficient for high-load scenarios; scalability review would likely uncover further bottlenecks.
+- Engineering bandwidth is already stretched thin, raising concerns about the feasibility of balancing both tasks.
+- A junior engineer's suggestion to leverage the undocumented feature for latency improvements sparked debate over whether to allocate resources for experimentation.
+
+### 2. Resource Allocation Conflicts
+
+**Product Manager's Concerns:**
+- Highlighted the urgency of finalizing the benchmark dataset demo to meet investor expectations.
+- Requested additional engineering support to resolve the visualization bug and dataset inconsistencies.
+
+**Data Science Lead's Response:**
+- Pushed back on reallocating data science resources, citing ongoing efforts to address inconsistencies in the training dataset.
+- Proposed pausing non-critical tasks to free up resources, but this was met with resistance from other teams.
+
+**HR's Input:**
+- Shared findings from the latest employee survey:
+  - Widespread dissatisfaction with current communication and leadership alignment.
+  - Concerns over burnout and conflicting priorities.
+
+### 3. Proposed Solutions
+
+#### Short-Term:
+- **Scalability Review Prioritization:**
+  - Allocate a small, focused team to begin scalability testing while the rest of the engineering team continues debugging efforts.
+- **Benchmark Dataset Demo:**
+  - Cross-functional collaboration between engineering and product teams to address critical visualization bugs within the next 48 hours.
+  - Data science team to conduct a rapid quality check on the benchmark dataset to ensure investor readiness.
+- **Communication Improvements:**
+  - HR to host a follow-up town hall meeting (with clearer communication and scheduling) to address employee concerns and clarify the 'no-meeting' policy.
+
+#### Long-Term:
+- **Scalability and Debugging Alignment:**
+  - Establish a dedicated task force for scalability testing and debugging to prevent resource conflicts.
+  - Explore the feasibility of integrating the undocumented feature from the open-source model to address latency issues.
+- **Process Improvements:**
+  - Implement stricter data backup protocols to prevent future data loss incidents.
+  - Revise internal communication guidelines to reduce confusion and improve alignment among teams.
+
+---
+
+## Action Items
+
+1. **Engineering Team:**
+   - Investigate the undocumented feature in the open-source model for potential latency improvements.
+   - Address visualization component bug by 2026-04-04.
+   - Finalize memory leak resolution plan and provide an updated timeline by 2026-04-05.
+
+2. **Data Science Team:**
+   - Perform a targeted quality control audit on the benchmark dataset by 2026-04-03.
+   - Evaluate the feasibility of implementing the proposed alternative annotation strategy.
+
+3. **HR:**
+   - Schedule and communicate a clear agenda for the town hall meeting by 2026-04-05.
+   - Develop a detailed plan to address employee dissatisfaction and provide leadership recommendations.
+
+4. **Leadership Team:**
+   - Finalize the resource allocation strategy for scalability review and debugging tasks by 2026-04-03.
+   - Prepare a unified communication plan to address investor concerns and provide a clear roadmap for deliverables.
+
+---
+
+## Key Risks and Dependencies
+
+- **Investor Relations:**
+  - Delays in delivering the benchmark dataset demo could lead to further scrutiny and jeopardize funding.
+- **Employee Morale:**
+  - Continued miscommunication and burnout risks could lead to attrition and reduced productivity.
+- **Technical Debt:**
+  - Short-term workarounds for the memory leak and dataset inconsistencies could create long-term scalability and quality issues.
+
+---
+
+## Next Sync-Up
+
+**Date:** 2026-04-09  
+**Focus Areas:**
+- Progress on scalability review and debugging efforts.
+- Status of benchmark dataset demo and investor feedback.
+- Updates on HR initiatives and employee sentiment.

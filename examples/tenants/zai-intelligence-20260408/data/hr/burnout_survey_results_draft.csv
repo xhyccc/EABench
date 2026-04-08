@@ -1,0 +1,142 @@
+# Draft Results: Company-Wide Burnout Survey
+
+**File Path:** `data/hr/burnout_survey_results_draft.csv`
+
+**Author:** Unknown
+
+**Context:** Draft results from the company-wide burnout survey sent to employees to assess levels of burnout amidst ongoing organizational challenges.
+
+---
+
+## Overview
+
+The burnout survey was distributed on **2026-03-22** in response to mounting concerns about employee well-being due to internal and external pressures. These pressures included delays in technical milestones, resource constraints, investor demands, and increased workloads.
+
+### Survey Participation
+
+- **Total Employees Surveyed:** 312
+- **Responses Received:** 198 (63.5% response rate)
+- **Non-Responses:** 114 (36.5%)
+  - Common reasons for non-responses (based on feedback):
+    - Lack of time due to workload (75%)
+    - Survey fatigue from frequent internal polls (15%)
+    - Unawareness of the survey (10%)
+
+### Survey Format
+
+The survey consisted of the following sections:
+1. **Workload and Responsibilities:**
+   - Questions about workload distribution, task prioritization, and overtime hours.
+2. **Emotional and Physical Well-Being:**
+   - Questions assessing stress, fatigue, and emotional health.
+3. **Support and Resources:**
+   - Questions about access to tools, managerial support, and work-life balance initiatives.
+4. **Suggestions for Improvement:**
+   - Open-ended section for employees to provide actionable feedback.
+
+---
+
+## Key Findings
+
+### 1. Workload and Responsibilities
+
+- **Average Weekly Overtime:** 7.5 hours
+- **Percentage of Employees Reporting Excessive Workload:** 68%
+- **Top Causes of Overwork (as reported):**
+  - Unclear priorities from leadership (45%)
+  - Understaffing in critical teams (35%)
+  - High-pressure deadlines imposed by external stakeholders (20%)
+
+### 2. Emotional and Physical Well-Being
+
+- **Self-Reported Burnout Levels:**
+  - Severe Burnout: 31%
+  - Moderate Burnout: 45%
+  - Low Burnout: 24%
+- **Common Symptoms of Burnout:**
+  - Fatigue: 72%
+  - Difficulty concentrating: 54%
+  - Emotional detachment: 41%
+  - Physical symptoms (e.g., headaches, insomnia): 39%
+
+### 3. Support and Resources
+
+- **Access to Managerial Support:**
+  - Employees satisfied with managerial support: 52%
+  - Employees dissatisfied with managerial support: 48%
+- **Perceived Effectiveness of Current Work-Life Balance Initiatives:**
+  - Effective: 28%
+  - Neutral: 34%
+  - Ineffective: 38%
+- **Top Requests from Employees for Support:**
+  - Flexible work hours (62%)
+  - More staff/resources to share the workload (58%)
+  - Clearer communication from leadership (49%)
+
+### 4. Suggestions for Improvement
+
+A selection of anonymized employee feedback:
+- *“The workload is unsustainable. We need more people on the team or else these deadlines will always feel impossible.”*
+- *“Management needs to acknowledge the emotional toll this is taking on everyone. A simple ‘thank you’ goes a long way.”*
+- *“Flexible work hours would help reduce stress, especially for those of us juggling personal responsibilities.”*
+- *“There’s too much focus on metrics and not enough on the people doing the work.”*
+- *“Can we set realistic deadlines for once? The constant crunch is burning everyone out.”*
+
+---
+
+## Data Summary (Raw Numbers)
+
+| Question                                    | Response Category           | Percentage |
+|--------------------------------------------|-----------------------------|------------|
+| Do you feel your workload is manageable?   | Yes                         | 32%        |
+|                                            | No                          | 68%        |
+| How would you rate your burnout level?     | Severe                      | 31%        |
+|                                            | Moderate                    | 45%        |
+|                                            | Low                         | 24%        |
+| Do you feel supported by your manager?     | Yes                         | 52%        |
+|                                            | No                          | 48%        |
+| Are work-life balance initiatives helpful? | Effective                   | 28%        |
+|                                            | Neutral                     | 34%        |
+|                                            | Ineffective                 | 38%        |
+
+---
+
+## Next Steps
+
+Based on the draft results, the following actions are recommended:
+
+1. **Immediate Actions:**
+   - HR to plan a company-wide meeting to share survey results and proposed next steps.
+   - Initiate flexible work hour policies on a trial basis.
+   - Organize mental health workshops and provide access to counseling services.
+
+2. **Mid-Term Actions:**
+   - Conduct workload assessments for key teams and redistribute tasks where possible.
+   - Hire additional staff or contractors to reduce pressure on overburdened teams.
+   - Improve internal communication to ensure clarity on priorities and expectations.
+
+3. **Long-Term Actions:**
+   - Incorporate burnout metrics into quarterly reviews to monitor progress.
+   - Develop a clear escalation process for employees experiencing burnout.
+   - Create a dedicated task force to evaluate and improve work-life balance initiatives.
+
+---
+
+## Challenges and Limitations
+
+- **Low Response Rate:**
+  - With a 36.5% non-response rate, the survey may not fully capture the extent of burnout across the company.
+- **Survey Fatigue:**
+  - Employees expressed frustration with frequent surveys, potentially impacting the accuracy of responses.
+- **Timing of the Survey:**
+  - The survey coincided with peak workloads, limiting participation and possibly skewing results toward negative responses.
+
+---
+
+## Conclusion
+
+The draft results of the burnout survey highlight significant challenges in workload management, employee well-being, and managerial support. While some employees feel supported, a majority are experiencing moderate to severe burnout, indicating an urgent need for intervention. HR and leadership are encouraged to prioritize actions addressing these concerns to improve employee morale and productivity.
+
+---
+
+*This document is a draft and subject to further updates based on additional analysis and feedback.*

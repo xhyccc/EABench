@@ -1,0 +1,107 @@
+# Debugging Session Report: Semi-Automated Data Annotation Tool
+
+**Author:** Katya Petrov  
+**Date:** 2026-03-19  
+
+## Executive Summary
+The debugging session conducted on March 19, 2026, focused on resolving a critical flaw in the semi-automated data annotation tool's logic. This issue had previously delayed the tool's implementation and generated significant frustration within the data science team. The session concluded with actionable insights, a detailed issue breakdown, and a roadmap for addressing the identified flaws. While progress was made, several challenges remain, requiring further collaboration across teams to ensure a robust and reliable solution.
+
+---
+
+## Context
+The semi-automated data annotation tool was developed as part of an effort to streamline the annotation process and address delays caused by dataset inconsistencies. However, the tool has faced multiple implementation delays due to logical errors and inconsistencies flagged during testing. The debugging session on March 19 was initiated after a junior data scientist discovered a critical flaw in the tool's core logic, necessitating immediate action to prevent further project delays and resource inefficiencies.
+
+---
+
+## Objectives
+The primary objectives of the debugging session were:
+
+- To identify the root cause of the critical flaw discovered in the tool's logic.
+- To assess the impact of the error on the tool's functionality and downstream processes.
+- To develop a short-term fix to enable continued testing and integration.
+- To outline a long-term plan for improving the tool's robustness and reliability.
+
+---
+
+## Key Issues Identified
+### 1. Critical Flaw in Annotation Logic
+- **Description:** The tool's algorithm incorrectly assigned labels to overlapping data points, resulting in significant annotation errors.
+- **Root Cause:** A flaw in the logic for handling edge cases in multi-class labeling scenarios.
+- **Affected Modules:**
+  - Data Preprocessing Layer
+  - Annotation Logic Core
+- **Impact:**
+  - High error rates in annotated datasets.
+  - Inaccurate model training outputs during downstream tasks.
+
+### 2. Lack of Comprehensive Test Coverage
+- **Description:** Unit and integration tests failed to catch the critical flaw due to insufficient edge case scenarios in the testing suite.
+- **Root Cause:** Gaps in test design and oversight during earlier development phases.
+- **Impact:**
+  - Delayed identification of critical issues.
+  - Increased debugging workload for the engineering team.
+
+### 3. Fragmented Collaboration Between Teams
+- **Description:** Poor communication and coordination between engineering and data science teams led to misaligned expectations and inefficiencies.
+- **Root Cause:** Absence of a centralized issue tracking and resolution framework.
+- **Impact:**
+  - Frustration and burnout among team members.
+  - Prolonged resolution timelines for key issues.
+
+---
+
+## Actions Taken During the Session
+### Step 1: Issue Investigation
+- Reviewed the specific data points that triggered the flaw.
+- Conducted a live walkthrough of the annotation logic with the engineering and data science teams.
+- Isolated the problematic logic segment for focused debugging.
+
+### Step 2: Root Cause Analysis
+- Simulated multiple edge case scenarios to reproduce the error consistently.
+- Identified the incorrect handling of overlapping label boundaries in the algorithm.
+- Highlighted gaps in the testing suite that allowed the flaw to persist undetected.
+
+### Step 3: Short-Term Fix Implementation
+- Modified the annotation logic to properly account for overlapping data points.
+- Introduced a temporary validation check to flag anomalies in future annotations.
+- Ran regression tests to ensure no additional bugs were introduced.
+
+### Step 4: Collaboration and Coordination
+- Held a joint engineering-data science brainstorming session to outline long-term fixes.
+- Documented all findings and solutions in the project's internal wiki.
+- Updated the issue tracking system with detailed logs and next steps.
+
+---
+
+## Outcomes and Learnings
+### Immediate Outcomes
+- The critical flaw in the annotation logic was successfully resolved.
+- Regression tests confirmed the stability of the implemented fix.
+- The tool is now ready for limited testing in controlled scenarios.
+
+### Key Learnings
+1. **Proactive Testing:** Comprehensive test coverage, including edge case scenarios, is critical for identifying potential issues early in the development cycle.
+2. **Cross-Team Collaboration:** Regular communication and joint problem-solving sessions between engineering and data science teams can significantly improve efficiency and morale.
+3. **Documentation:** Maintaining clear, detailed documentation is essential for minimizing disruptions and ensuring continuity during debugging sessions.
+
+---
+
+## Next Steps
+### Short-Term Priorities (By 2026-03-26)
+- Conduct extended testing of the semi-automated data annotation tool with real-world datasets.
+- Refine the newly introduced validation checks based on feedback from testing.
+- Update the testing suite to include comprehensive edge case scenarios.
+
+### Long-Term Goals (Q2 2026)
+- Redesign the annotation logic to ensure scalability and robustness.
+- Implement a centralized issue tracking system to improve cross-team collaboration.
+- Develop a stress-testing framework to identify potential bottlenecks and vulnerabilities in the tool.
+- Address employee burnout concerns by implementing the proposed 'mental health recharge day' initiative.
+
+---
+
+## Conclusion
+The debugging session was a critical step toward resolving longstanding issues in the semi-automated data annotation tool. While the immediate flaw has been addressed, the session highlighted deeper systemic challenges that require attention. By implementing the recommended short-term and long-term measures, the team can ensure the tool's success and regain momentum in ongoing projects. Continued collaboration and proactive measures will be essential to overcoming future challenges.
+
+**Prepared by:** Katya Petrov  
+**Date:** 2026-03-19

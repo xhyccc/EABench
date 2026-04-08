@@ -1,0 +1,90 @@
+# Training Dataset Inconsistencies Log
+
+**Author:** Felipe Ribeiro  
+**Path:** `data/datasets/training_data_inconsistencies.csv`  
+**Context:** Log of minor inconsistencies found in the recovered training dataset.  
+**Date:** 2026-04-01  
+
+---
+
+## Overview
+This report documents the minor inconsistencies discovered in the recovered training dataset. These issues, while not catastrophic, have implications for model performance, data integrity, and the team's workflow. Addressing these inconsistencies is critical for ensuring the reliability of the dataset and mitigating downstream impacts on model training and evaluation.
+
+---
+
+## Identified Inconsistencies
+
+### 1. **Duplicate Entries**
+- **Description:** Several rows in the dataset were identified as duplicates. These entries were found to contain identical feature values and labels.
+- **Impact:** Duplicate entries can skew model training by over-representing certain patterns, leading to biased results.
+- **Affected Rows:** 1,452 duplicate entries out of 100,000 total rows (~1.45%).
+- **Proposed Action:** Remove duplicates and validate the deduplication process.
+
+### 2. **Missing Values**
+- **Description:** Certain features in the dataset contain missing values, primarily in columns related to metadata.
+- **Impact:** Missing values can impact feature engineering and lead to unstable model performance.
+- **Affected Columns:** `feature_12`, `feature_19`, `metadata_3`
+- **Affected Rows:** 3,278 rows (~3.28%).
+- **Proposed Action:** Implement imputation strategies (e.g., mean, median, or domain-specific methods) or exclude affected rows during training.
+
+### 3. **Incorrect Labels**
+- **Description:** A subset of rows was found to contain incorrect labels based on manual verification against reference data.
+- **Impact:** Incorrect labels can significantly degrade model performance by introducing noise during supervised learning.
+- **Affected Rows:** 854 rows (~0.85%).
+- **Proposed Action:** Manually re-annotate affected rows or use a semi-automated tool for correction.
+
+### 4. **Outliers in Numerical Features**
+- **Description:** Extreme values were detected in certain numerical features, likely due to data entry errors or differences in data collection protocols.
+- **Impact:** Outliers can distort model training, especially in algorithms sensitive to scale (e.g., SVM, linear regression).
+- **Affected Features:** `feature_5`, `feature_8`
+- **Affected Rows:** 1,127 rows (~1.13%).
+- **Proposed Action:** Apply outlier detection and mitigation techniques (e.g., z-score thresholding, IQR-based filtering).
+
+### 5. **Inconsistent Formatting**
+- **Description:** Some categorical features exhibit inconsistent formatting, such as mixed capitalization or spelling variations.
+- **Impact:** Inconsistent formatting can lead to errors during data preprocessing and feature encoding.
+- **Affected Features:** `category_1`, `category_5`
+- **Affected Rows:** 2,093 rows (~2.09%).
+- **Proposed Action:** Normalize formatting across all categorical features (e.g., convert to lowercase, standardize spelling).
+
+### 6. **Unaligned Time Series Data**
+- **Description:** Time series features were found to contain misaligned timestamps, likely due to differences in data recording frequencies.
+- **Impact:** Misaligned timestamps can compromise sequence-based models and temporal analysis.
+- **Affected Features:** `timestamp_1`, `timestamp_3`
+- **Affected Rows:** 1,678 rows (~1.68%).
+- **Proposed Action:** Align timestamps using interpolation or resampling techniques.
+
+---
+
+## Additional Observations
+- **Annotation Errors:** An intern accidentally deleted a portion of annotated training data on 2026-03-30, leading to delays in verification.
+- **Backup Status:** The backup system was found to contain outdated versions of the dataset, highlighting the need for improved backup protocols.
+- **Data Validation:** Quality control processes require reinforcement to prevent similar inconsistencies in future dataset recovery efforts.
+
+---
+
+## Action Plan
+
+### Immediate Steps
+- **Deduplication:** Remove duplicate rows and validate results.
+- **Imputation:** Apply appropriate strategies to handle missing values.
+- **Manual Verification:** Prioritize correction of incorrectly labeled rows.
+- **Outlier Handling:** Implement robust outlier detection and mitigation methods.
+- **Formatting Normalization:** Standardize formatting for categorical features.
+- **Timestamp Alignment:** Realign time series data using interpolation techniques.
+
+### Long-Term Improvements
+- **Process Automation:** Invest in semi-automated annotation tools with better error handling.
+- **Backup System Upgrade:** Update backup protocols to ensure data integrity.
+- **Quality Control:** Establish rigorous validation pipelines for data recovery processes.
+
+---
+
+## Summary
+The inconsistencies identified in the recovered training dataset represent minor but impactful challenges to the enterprise's data science efforts. Addressing these issues promptly and implementing long-term improvements will be essential for maintaining the quality and reliability of future datasets.
+
+**Author's Note:** Continuous monitoring and iterative refinement of data handling processes will be critical for mitigating risks and ensuring the enterprise remains on track to achieve its goals.
+
+---
+
+**End of Report**

@@ -1,0 +1,108 @@
+# All-Hands Meeting Notes - March 29, 2026
+
+**Author:** Mateo Carvalho
+
+## Agenda
+- Status Update: Beta Release of Benchmark Dataset
+- Technical Challenges and Progress
+- Leadership Discussion: Strategic Priorities
+- Investor Demands and Operational Updates
+- Employee Well-Being Initiatives
+
+---
+
+## 1. Status Update: Beta Release of Benchmark Dataset
+
+### Key Points:
+- The release of the 'beta' benchmark dataset remains a contentious issue.
+- **CEO's Position:** Emphasized the importance of releasing the dataset to demonstrate progress to investors and maintain competitive positioning.
+- **CTO's Position:** Highlighted unresolved technical issues, including annotation errors and inconsistencies, arguing that an early release could harm the enterprise's credibility.
+- Leadership remains divided, with no clear consensus reached during the meeting.
+
+### Open Questions:
+- Should the beta release proceed despite known issues?
+- What are the risks to investor relations if the release is delayed further?
+- How can the technical and product teams better align to address these challenges?
+
+---
+
+## 2. Technical Challenges and Progress
+
+### Engineering Updates:
+- A **critical memory leak** was discovered in the integration of the new open-source model. Debugging efforts are ongoing and have delayed other tasks.
+- Compatibility issues with existing infrastructure continue to pose challenges, with latency and inference accuracy below acceptable thresholds.
+- Incremental optimizations have been made, but significant technical debt remains unresolved.
+
+### Data Science Updates:
+- A novel **post-training technique** was tested on the latest annotated dataset, resulting in a **2.3% improvement** in model performance.
+- Annotation accuracy has improved slightly due to updated workflows, but resource constraints are limiting further advancements.
+- Conflicting priorities between annotation improvement and dataset delivery timelines are creating bottlenecks.
+
+### Action Items:
+- Allocate additional engineering resources to resolve the memory leak by the end of the week.
+- Initiate cross-team collaboration sessions to align priorities between engineering and data science.
+- Assess feasibility of deploying a partial dataset for internal testing to showcase progress to investors.
+
+---
+
+## 3. Leadership Discussion: Strategic Priorities
+
+### Summary of Discussion:
+- Leadership tensions were evident during the meeting, particularly between the CEO and CTO.
+- **CEO's Argument:** Investors are demanding tangible results, and delaying the beta release risks losing their confidence.
+- **CTO's Counterpoint:** Rushing the release could jeopardize long-term credibility and create more technical debt.
+- The CFO raised concerns about the financial implications of further delays, emphasizing the need to deliver milestones as part of the A+-round funding strategy.
+
+### Outcome:
+- Leadership agreed to hold a follow-up strategy session on April 1, 2026, to finalize a decision on the beta release.
+
+---
+
+## 4. Investor Demands and Operational Updates
+
+### Investor Requests:
+- A key investor requested a detailed demonstration of the benchmark dataset on short notice, forcing the product team to reprioritize tasks.
+- The CFO is under pressure to provide updated financial projections and operational cost breakdowns by April 3, 2026.
+
+### Challenges:
+- Last-minute preparation for investor demonstrations is diverting resources from critical tasks.
+- Unclear roadmap for the beta release is creating uncertainty among stakeholders.
+
+### Proposed Solutions:
+- Develop a clear, investor-facing timeline for the beta release, including contingency plans.
+- Assign a dedicated team to handle investor communications and demonstrations to minimize disruptions to other teams.
+
+---
+
+## 5. Employee Well-Being Initiatives
+
+### HR Updates:
+- The 'no-meeting' policy was rolled out to address employee burnout but has received mixed feedback.
+- An anonymous employee survey revealed:
+  - **43%** of respondents found the policy confusing.
+  - **32%** reported no change in workload or stress levels.
+  - **25%** expressed dissatisfaction with the lack of clarity in implementation.
+
+### Next Steps:
+- HR will refine the 'no-meeting' policy based on survey feedback.
+- Propose additional wellness initiatives, including optional mental health days and improved workload distribution practices.
+
+---
+
+## 6. Key Takeaways and Next Steps
+
+### Summary:
+- Leadership remains divided on the beta release, with technical and strategic concerns unresolved.
+- Engineering and data science teams are making slow but steady progress, though significant challenges remain.
+- Investor demands are intensifying, further straining resources.
+- Employee well-being initiatives need clearer communication and implementation to be effective.
+
+### Action Items:
+- Finalize decision on the beta release during April 1, 2026, strategy session.
+- Resolve memory leak issue by March 31, 2026.
+- CFO to deliver updated financial projections by April 3, 2026.
+- HR to provide a revised 'no-meeting' policy proposal by April 5, 2026.
+
+---
+
+**End of Notes**

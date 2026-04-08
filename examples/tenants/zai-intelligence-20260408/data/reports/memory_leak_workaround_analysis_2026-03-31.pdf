@@ -1,0 +1,136 @@
+# Memory Leak Workaround Analysis and Impact on Latency During High-Load Scenarios
+
+**Author:** Alejandro Rendón  
+**Date:** 2026-03-31  
+
+---
+
+## Executive Summary
+
+The purpose of this report is to analyze the recently implemented workaround for addressing memory leaks in the open-source model integration and evaluate its impact on system performance, particularly under high-load scenarios. While the workaround mitigates the immediate issue, it introduces significant latency concerns that could undermine the scalability and reliability of the system. This report outlines the findings, assesses the trade-offs, and provides recommendations for next steps. 
+
+---
+
+## Background
+
+### Context
+The enterprise has been navigating a challenging technical landscape, marked by:
+- **Memory Leaks:** Discovered on 2026-03-29 in the new open-source model integration.
+- **Investor Demands:** Increasing pressure to deliver a functional demo of the benchmark dataset and clear financial projections.
+- **Employee Morale:** Confusion and dissatisfaction stemming from recent HR policies, including the 'no-meeting' initiative.
+
+The memory leak issue was addressed with a temporary workaround on 2026-03-30, but subsequent testing on 2026-03-31 revealed unintended latency problems under high-load conditions. 
+
+### Key Technical Details
+- **Root Cause of Memory Leak:** Improper garbage collection and inefficiencies in buffer management within the open-source model.
+- **Workaround Implemented:** Manual memory deallocation and a modified caching mechanism to reduce memory usage spikes.
+- **Testing Environment:** High-load test cases simulated with 1,000 concurrent requests, with a focus on latency and throughput metrics.
+
+---
+
+## Findings
+
+### 1. Effectiveness of the Workaround
+- **Memory Leak Resolution:**
+  - The workaround successfully mitigated memory spikes.
+  - Average memory usage decreased by **23%** compared to the pre-workaround state.
+
+- **Stability Improvements:**
+  - The system no longer crashed during high-load tests due to memory exhaustion.
+  - Error rates related to memory allocation dropped from **18.4%** to **0.6%**.
+
+### 2. Latency Issues Introduced
+- **Observed Latency Increase:**
+  - Average response time under high-load conditions increased from **250ms** to **780ms**.
+  - 95th percentile latency reached **1,200ms**, compared to **400ms** prior to the workaround.
+
+- **Performance Bottlenecks:**
+  - The manual memory deallocation introduced blocking operations that slowed down request processing.
+  - Inefficient caching mechanisms caused frequent cache misses and redundant recomputation.
+
+### 3. Scalability Concerns
+- **Throughput Decline:**
+  - Peak throughput dropped by **35%**, from **4,000 requests/second** to **2,600 requests/second**.
+
+- **Resource Utilization:**
+  - CPU usage spiked by **40%** due to the overhead of managing manual memory allocation.
+  - Disk I/O increased by **22%**, likely due to inefficient caching and temporary storage operations.
+
+---
+
+## Analysis
+
+### Trade-offs of the Workaround
+- **Benefits:**
+  - Immediate resolution of memory leaks.
+  - Improved system stability during low to moderate loads.
+
+- **Drawbacks:**
+  - Significant increase in latency during high-load scenarios.
+  - Reduced system throughput and scalability.
+  - Potential technical debt due to the ad hoc nature of the workaround.
+
+### Long-Term Risks
+- **Investor Confidence:**
+  - Prolonged latency issues may delay the deployment of the benchmark dataset and demo, risking further erosion of investor trust.
+
+- **Employee Morale:**
+  - Continued firefighting and resource constraints could exacerbate burnout and dissatisfaction.
+
+- **Technical Debt:**
+  - The workaround is not a sustainable solution and may complicate future debugging and optimization efforts.
+
+---
+
+## Recommendations
+
+### 1. Short-Term Actions
+- **Optimize the Workaround:**
+  - Replace blocking memory deallocation operations with asynchronous techniques.
+  - Improve caching efficiency by implementing a least-recently-used (LRU) eviction policy.
+
+- **Monitor and Profile Performance:**
+  - Conduct detailed profiling to identify and address specific bottlenecks.
+  - Increase logging granularity to capture latency spikes in real-time.
+
+### 2. Medium-Term Actions
+- **Refactor Memory Management:**
+  - Integrate a more robust memory management library to handle garbage collection.
+  - Collaborate with the open-source model maintainers to address upstream inefficiencies.
+
+- **Expand Load Testing:**
+  - Simulate more diverse high-load scenarios to better understand system behavior.
+
+### 3. Long-Term Actions
+- **Invest in Scalability:**
+  - Transition to a microservices architecture to isolate and scale individual components.
+  - Explore distributed caching solutions to reduce single-node bottlenecks.
+
+- **Enhance Documentation and Processes:**
+  - Improve internal documentation to reduce onboarding and debugging time.
+  - Conduct regular technical reviews to minimize the risk of similar issues recurring.
+
+---
+
+## Data and Metrics
+
+| Metric                        | Pre-Workaround | Post-Workaround | Change         |
+|-------------------------------|----------------|-----------------|----------------|
+| Average Memory Usage (GB)    | 12.3           | 9.5             | -23%           |
+| Average Latency (ms)         | 250            | 780             | +212%          |
+| 95th Percentile Latency (ms) | 400            | 1,200           | +200%          |
+| Peak Throughput (req/sec)    | 4,000          | 2,600           | -35%           |
+| Error Rate (%)               | 18.4           | 0.6             | -96.7%         |
+| CPU Usage (%)                | 65             | 91              | +40%           |
+| Disk I/O (MB/s)              | 120            | 146             | +22%           |
+
+---
+
+## Conclusion
+
+While the memory leak workaround provided immediate relief, its impact on system latency and scalability under high-load scenarios is a critical concern. Addressing these issues will require a combination of short-term optimizations and long-term architectural changes. Failure to act promptly could jeopardize investor confidence, delay key deliverables, and exacerbate internal challenges. 
+
+---
+
+**Prepared by:** Alejandro Rendón  
+**Date:** 2026-03-31

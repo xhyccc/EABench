@@ -1,0 +1,111 @@
+# Meeting Notes: Emergency Cross-Team Meeting on Demo Readiness
+
+**Date:** 2026-04-07  
+**Author:** Tanvi Sharma  
+**Context:** Emergency cross-team meeting to address the readiness of the benchmark dataset demo and the debate over delaying the investor review.
+
+---
+
+## Attendees
+- **Product Team:** Product Manager (PM), Associate Product Manager
+- **Engineering Team:** Senior Engineer, Junior Engineer, Engineering Lead
+- **Data Science Team:** Data Science Lead, Junior Data Scientist
+- **Leadership:** CTO, CFO
+- **HR Representative:** HR Manager
+
+## Agenda
+1. Current status of the benchmark dataset demo
+2. Discussion of critical blockers and issues
+3. Debate on whether to delay the investor review
+4. Immediate next steps and action items
+
+---
+
+## Summary of Key Discussions
+
+### 1. **Current Status of the Demo**
+- **Visualizations:**
+  - A critical bug was discovered in the visualization code during the final rehearsal.
+  - The data science team is working on rewriting affected sections but requires additional time.
+  - The visualization bug impacts the demo’s ability to clearly communicate key insights to investors.
+
+- **Dataset Issues:**
+  - A mislabeled subset of annotations was identified on 2026-04-06, further delaying preparations.
+  - Efforts to correct the mislabeled data are ongoing but resource-intensive.
+
+- **Technical Challenges:**
+  - Partial fix for the memory leak issue introduced a minor latency spike in the agent training pipeline.
+  - GPU utilization spikes caused by the fix have temporarily halted training jobs.
+
+**Overall Assessment:**
+- PM: The demo is not investor-ready in its current state.
+- Data Science Lead: Requires a minimum of 1-2 additional days to address critical errors.
+- Engineering Lead: Stabilization efforts are progressing, but unresolved GPU utilization issues could impact downstream workflows.
+
+### 2. **Critical Blockers and Issues**
+- **Technical Blockers:**
+  - Memory leak workaround introduced new performance regressions (GPU utilization spikes).
+  - Ongoing debugging of the visualization bug and mislabeled annotations.
+  - Compatibility issues with the open-source model integration remain unresolved.
+
+- **Operational Challenges:**
+  - Conflicting priorities between technical and investor-facing deliverables.
+  - Employee burnout and resource constraints are slowing progress.
+
+- **Leadership Conflict:**
+  - CFO emphasized the importance of meeting the investor review deadline to secure additional funding.
+  - CTO argued that prioritizing technical feasibility is critical to maintaining long-term credibility.
+
+### 3. **Debate on Delaying the Investor Review**
+- **CFO's Perspective:**
+  - Delaying the review risks damaging investor confidence and jeopardizing A+-round funding.
+  - Suggested presenting a partial demo with a clear roadmap for resolving outstanding issues.
+
+- **CTO's Perspective:**
+  - Delivering an incomplete or flawed demo could harm the enterprise’s technical reputation.
+  - Proposed postponing the review by one week to ensure a polished and functional demo.
+
+- **PM's Input:**
+  - Highlighted the risk of investor dissatisfaction but supported the CTO’s recommendation for a delay to avoid reputational damage.
+
+- **Team Feedback:**
+  - Engineering Lead: Agreed with CTO, citing the need to stabilize the infrastructure.
+  - Data Science Lead: Supported the delay, emphasizing the impact of unresolved visualization bugs.
+  - HR Manager: Expressed concerns about employee morale and burnout if the team is forced to rush.
+
+### 4. **Immediate Next Steps and Action Items**
+- **Action Items:**
+  1. **Engineering Team:**
+     - Investigate and resolve GPU utilization spikes caused by the memory leak fix (Owner: Senior Engineer, Deadline: 2026-04-08 EOD).
+     - Assess the feasibility of pausing the open-source model integration temporarily (Owner: Engineering Lead, Deadline: 2026-04-09).
+  2. **Data Science Team:**
+     - Finalize corrections for mislabeled annotations (Owner: Data Science Lead, Deadline: 2026-04-08).
+     - Complete rewrites for visualization bug fixes (Owner: Junior Data Scientist, Deadline: 2026-04-09).
+  3. **Leadership:**
+     - Schedule a follow-up meeting to finalize the decision on delaying the investor review (Owner: PM, Deadline: 2026-04-08 AM).
+     - CFO to prepare a contingency communication plan for investors in case of a delay (Owner: CFO, Deadline: 2026-04-08).
+  4. **HR:**
+     - Conduct a pulse survey to assess employee sentiment following the introduction of the 'focus hour' initiative (Owner: HR Manager, Deadline: 2026-04-10).
+
+- **Meeting Schedule:**
+  - Follow-up sync: 2026-04-08 @ 10:00 AM
+
+---
+
+## Key Takeaways
+- The demo is currently not ready for the investor review due to unresolved critical issues.
+- Leadership remains divided on whether to delay the review, with strong arguments on both sides.
+- Immediate focus will be on resolving technical blockers and stabilizing the infrastructure.
+- A decision on delaying the review will be finalized during the follow-up meeting on 2026-04-08.
+- Employee morale and resource allocation continue to be key concerns.
+
+---
+
+## Additional Notes
+- The junior data scientist’s proposed annotation optimization technique was briefly discussed but deferred due to time constraints.
+- The 'focus hour' initiative introduced by HR received mixed feedback during the meeting, with employees questioning its practicality.
+- The PM emphasized the need for clearer communication across teams to avoid further delays and confusion.
+
+---
+
+**End of Notes**

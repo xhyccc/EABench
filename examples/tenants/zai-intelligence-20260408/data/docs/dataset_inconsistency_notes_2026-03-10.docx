@@ -1,0 +1,112 @@
+# Notes on Dataset Inconsistency Issues and Alternative Methodology
+
+**Date:** 2026-03-10  
+**Author:** Felipe Ribeiro  
+
+## Context
+These notes summarize the brainstorming session held on 2026-03-10 to address concerns raised by the senior data scientist regarding the newly proposed alternative methodology for resolving inconsistencies in the annotated dataset. The session was conducted in response to the flagged issues and aimed to evaluate the feasibility, risks, and potential improvements associated with the methodology.
+
+---
+
+## Key Issues Identified
+
+### 1. **Annotation Errors**
+- **Nature of Errors:**
+  - Mislabeling of critical data points in the training set.
+  - Inconsistent application of labeling rules across multiple annotators.
+
+- **Impact:**
+  - Reduced model accuracy in edge cases.
+  - Increased false positives in production environments.
+
+- **Questions Raised:**
+  - Are the annotation guidelines sufficiently clear?
+  - Should retraining be prioritized over immediate fixes?
+
+### 2. **Proposed Alternative Methodology**
+- **Description:**
+  - The methodology involves leveraging a secondary model trained on a subset of "clean" data to identify and correct inconsistencies in the primary dataset.
+
+- **Concerns:**
+  - The secondary model might inherit biases from the subset used for training.
+  - Computational overhead due to dual-model interactions.
+  - Lack of clarity on how outliers in the clean subset are handled.
+
+- **Potential Benefits:**
+  - Automated detection and correction of labeling inconsistencies.
+  - Reduced manual intervention in dataset cleaning.
+
+---
+
+## Challenges with Implementation
+
+### 1. **Technical Feasibility**
+- **Computational Load:**
+  - The methodology requires additional infrastructure to support real-time dataset corrections.
+  - Concerns about scalability in larger datasets.
+
+- **Model Validation:**
+  - How do we ensure the secondary model accurately flags inconsistencies without introducing new ones?
+
+### 2. **Team Alignment**
+- **Divergent Opinions:**
+  - Several team members expressed skepticism about the practicality of the methodology under current resource constraints.
+  - A divide remains between proponents of manual annotation reviews and advocates for automated corrections.
+
+- **Communication:**
+  - Need for clearer documentation and structured feedback channels to avoid misunderstandings.
+
+---
+
+## Action Points
+
+### Immediate Next Steps:
+1. **Data Analysis:**
+   - Conduct a thorough audit of the clean subset to identify potential biases.
+   - Use statistical analysis to define thresholds for flagging inconsistencies.
+
+2. **Model Experimentation:**
+   - Run a series of experiments comparing manual corrections versus automated corrections using the secondary model.
+   - Evaluate performance metrics: precision, recall, F1-score.
+
+3. **Team Collaboration:**
+   - Schedule follow-up meetings to address remaining concerns.
+   - Encourage cross-functional input from engineering, data science, and product teams.
+
+### Longer-Term Considerations:
+- **Infrastructure Upgrades:**
+  - Begin discussions with the CTO and CFO about allocating budget for additional computational resources.
+
+- **Documentation:**
+  - Develop robust guidelines for annotators and automated correction processes.
+
+- **Monitoring and Feedback:**
+  - Implement monitoring tools to track corrections made by the secondary model.
+  - Establish feedback loops to continuously refine the approach.
+
+---
+
+## Open Questions
+
+1. Can the clean subset be expanded without introducing additional inconsistencies?
+2. What safeguards can be put in place to prevent the secondary model from amplifying errors?
+3. Should a hybrid approach (combining manual and automated corrections) be tested?
+4. How will this methodology impact the timeline for delivering the A+-round investor metrics?
+
+---
+
+## Notes from Discussion
+- **Lead RL Engineer:** Expressed optimism about the methodology's potential to reduce manual workload but cautioned against rushing implementation without sufficient testing.
+- **Senior Data Scientist:** Highlighted the importance of addressing biases in the clean subset before scaling the methodology.
+- **CTO:** Emphasized that the methodology must align with the broader roadmap and resource allocation.
+- **Junior Engineer:** Suggested exploring the undocumented feature in the new open-source model to complement the secondary model's capabilities.
+
+---
+
+## Conclusion
+While the alternative methodology shows promise, its success hinges on addressing technical, operational, and team alignment challenges. Further experimentation and collaboration are required to validate its feasibility and effectiveness. 
+
+---
+
+**Next Meeting:** Scheduled for 2026-03-12 to review experimental results and finalize decisions. 
+**Action Owner:** Felipe Ribeiro

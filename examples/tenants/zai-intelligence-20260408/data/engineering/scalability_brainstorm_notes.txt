@@ -1,0 +1,120 @@
+# Scalability Brainstorming Notes
+
+**Date:** 2026-04-01  
+**Author:** Hyejin Wang  
+**Context:** Notes from the CTO's brainstorming session on alternative solutions for scalability issues.
+
+---
+
+## Agenda
+1. Overview of current scalability challenges
+2. Exploration of alternative solutions
+3. Prioritization and next steps
+
+---
+
+## Current Scalability Challenges
+
+### Key Issues
+- **Memory Leak in Open-Source Model Integration**
+  - Emergency workaround implemented, but:
+    - Introduced **latency issues** under high-load scenarios.
+    - Lacks long-term viability.
+  - Engineering team flagged the need for deeper debugging and refactoring.
+- **Latency Problems**
+  - Identified during stress testing of the memory leak workaround.
+  - Current inference times exceed SLA targets by 30% during peak usage.
+- **Dataset Management**
+  - Recent data loss incident due to accidental deletion by an intern.
+  - Recovery efforts surfaced **minor inconsistencies** in training datasets.
+  - Quality control measures are insufficient for current demands.
+- **Resource Constraints**
+  - Ongoing debates over prioritization of tasks:
+    - Benchmark dataset demo preparation.
+    - Performance optimizations.
+    - Exploration of experimental tools and techniques.
+- **Team Dynamics**
+  - Low attendance at critical brainstorming sessions due to overlapping deadlines.
+  - Anonymous employee survey revealed dissatisfaction with leadership communication and policy changes.
+
+---
+
+## Proposed Solutions
+
+### 1. Refactoring Open-Source Model Integration
+- **Action Items:**
+  - Conduct a thorough code review to identify root causes of memory leaks.
+  - Explore potential optimizations using the undocumented feature discovered on 2026-04-01.
+  - Assign a dedicated sub-team to focus solely on resolving integration issues.
+- **Risks:**
+  - High time investment.
+  - Potential for introducing new bugs during refactoring.
+
+### 2. Latency Optimization
+- **Potential Approaches:**
+  - Leverage the undocumented feature in the open-source model for **inference speed improvements**.
+  - Implement **asynchronous processing** for certain high-latency tasks.
+  - Evaluate the feasibility of **sharding** to distribute loads more effectively.
+- **Risks:**
+  - Implementation complexity.
+  - Requires additional time for testing and validation.
+
+### 3. Dataset Quality and Recovery
+- **Proposed Strategies:**
+  - Automate **data backup processes** to prevent future incidents.
+  - Introduce **checksum-based validation** for datasets to ensure integrity post-recovery.
+  - Experiment with the **alternative annotation strategy** proposed by the junior data scientist to speed up recovery.
+- **Risks:**
+  - Resource conflicts with other ongoing initiatives.
+  - Alternative annotation strategy is untested at scale.
+
+### 4. Policy and Process Improvements
+- **Suggestions:**
+  - Improve communication around policy changes (e.g., 'no-meeting' policy) to avoid confusion and dissatisfaction.
+  - Schedule brainstorming sessions with clear advance notice to improve attendance.
+  - Address employee burnout through more flexible deadlines and workload balancing.
+- **Risks:**
+  - Requires buy-in from leadership.
+  - May slow down short-term progress.
+
+### 5. Experimental Library Integration
+- **Proposal:**
+  - Evaluate the feasibility of integrating the experimental open-source library discussed during the session.
+  - Set up a small-scale prototype to test potential benefits before committing significant resources.
+- **Risks:**
+  - Diverts attention from critical path issues.
+  - May add undocumented dependencies.
+
+---
+
+## Prioritized Action Items
+1. **Memory Leak and Latency Issues**
+   - Immediate priority: Debug and refactor the open-source model integration.
+   - Short-term: Test the undocumented feature for performance improvements.
+2. **Dataset Recovery and Quality Assurance**
+   - Automate backups and implement validation checks.
+   - Evaluate alternative annotation strategies in parallel.
+3. **Improve Team Dynamics**
+   - Address communication issues with leadership and HR.
+   - Optimize scheduling for critical sessions to ensure participation.
+4. **Experimental Library Evaluation**
+   - Conduct a low-effort feasibility study to determine potential ROI.
+
+---
+
+## Open Questions
+- Should we temporarily pause the benchmark dataset demo to focus on scalability issues?
+- Is it feasible to allocate additional resources to parallelize efforts, or are current constraints too limiting?
+- How do we balance investor demands with technical realities to avoid overpromising?
+
+---
+
+## Next Steps
+- **Engineering Team:** Begin detailed debugging of memory leak with a focus on long-term scalability.
+- **Data Science Team:** Finalize recovery of annotated datasets and validate quality.
+- **Leadership:** Align on prioritization of benchmark dataset demo vs. scalability fixes.
+- **HR:** Address employee dissatisfaction and clarify recent policy changes.
+
+---
+
+**End of Notes.**

@@ -1,0 +1,115 @@
+# Dataset Inconsistencies Analysis Report
+
+**Author:** Katya Petrov  
+**Date:** 2026-03-08  
+**File Path:** data/reports/dataset_inconsistencies_analysis.xlsx  
+
+---
+
+## 1. Introduction
+
+This report highlights the inconsistencies identified in the annotated dataset used for model evaluation tasks. These issues were discovered during a routine data quality check and have temporarily halted further evaluation processes. The inconsistencies, their possible impacts, and recommendations for resolution are detailed below. The goal of this report is to provide clarity on corrective actions and mitigate risks to downstream tasks.
+
+---
+
+## 2. Key Findings
+
+### 2.1 Types of Inconsistencies Identified
+
+#### a. Annotation Errors
+- **Definition:** Mislabeled or incorrectly annotated data points.
+- **Examples:**
+  - Label "dog" assigned to images of cats (Sample IDs: `img_10234`, `img_56789`).
+  - Sentiment analysis dataset: Neutral phrases labeled as "positive" (Record IDs: `txt_0054`, `txt_8970`).
+- **Frequency:** Found in 3.2% of the total dataset.
+
+#### b. Missing Annotations
+- **Definition:** Data points without associated labels.
+- **Examples:**
+  - 240 unlabeled images in the validation set (File: `val_set_batch_3.zip`).
+  - 1200 text samples in the training set with no sentiment label.
+- **Frequency:** Affects 1.8% of the dataset.
+
+#### c. Duplicated Records
+- **Definition:** Identical data points occurring multiple times in the dataset.
+- **Examples:**
+  - Image `img_34091` repeated 15 times in the training set.
+  - Duplicate text records in natural language corpus (e.g., `txt_00322` and `txt_00323`).
+- **Frequency:** 2.5% duplication rate detected.
+
+#### d. Format Inconsistencies
+- **Definition:** Data points not conforming to the expected input format.
+- **Examples:**
+  - Images with non-standard resolutions (15% of test set). Examples: `img_00231` (320x240 px), `img_00345` (600x400 px).
+  - Text files with encoding issues (e.g., UTF-8/ASCII mismatch). Examples: `txt_0456`, `txt_0999`.
+- **Frequency:** 4.1% of records are affected.
+
+---
+
+## 3. Potential Impacts
+
+### 3.1 Model Performance
+- **Evaluation Metrics:** Mislabeled and missing annotations can lead to:
+  - Inflated or deflated accuracy, precision, recall, and F1 scores.
+  - Misleading insights into model performance.
+- **Example Scenario:**
+  - A mislabeled "dog" image may confuse the model, reducing its ability to generalize to unseen data.
+
+### 3.2 Training Stability
+- **Duplicated Records:**
+  - Over-represented data points may bias the model toward certain patterns.
+  - Example: Repeated images of one class (e.g., "cats") skew the class distribution.
+
+### 3.3 Resource Wastage
+- **Human Effort:**
+  - Debugging and re-annotating errors will require 2-3 weeks of additional labor.
+- **Compute Time:**
+  - Re-training with corrected data may increase computational costs.
+
+---
+
+## 4. Recommendations
+
+### 4.1 Immediate Actions
+- **Freeze Current Evaluation:**
+  - Halt all ongoing evaluation tasks until the dataset is corrected.
+- **Flag Affected Records:**
+  - Mark problematic records for review.
+
+### 4.2 Short-Term Resolutions
+- **Annotation Review:**
+  - Assign junior data scientists to manually verify mislabeled records.
+  - Utilize semi-automated tools to assist in annotation correction.
+- **Deduplication Scripts:**
+  - Run deduplication scripts to identify and remove redundant data points.
+
+### 4.3 Long-Term Strategies
+- **Quality Assurance Pipeline:**
+  - Develop and integrate a pre-processing pipeline to detect and address inconsistencies.
+- **Annotation Guidelines:**
+  - Revise annotation protocols to minimize human errors.
+- **Automated Validation:**
+  - Implement automated validation checks for format compliance and label correctness.
+
+---
+
+## 5. Detailed Data Summary
+
+| Issue Type           | Frequency (%) | Example Record IDs         |
+|----------------------|---------------|----------------------------|
+| Annotation Errors    | 3.2%          | img_10234, txt_8970        |
+| Missing Annotations  | 1.8%          | val_set_batch_3.zip        |
+| Duplicated Records   | 2.5%          | img_34091, txt_00322       |
+| Format Inconsistencies | 4.1%         | img_00231, txt_0456        |
+
+---
+
+## 6. Conclusion
+
+The identified dataset inconsistencies pose a significant risk to the validity of model evaluation and training processes. Addressing these issues promptly is critical to ensure model reliability and maintain trust with stakeholders. Immediate actions and recommendations outlined in this report aim to mitigate the impacts and establish long-term data quality standards.
+
+---
+
+**Prepared by:** Katya Petrov  
+**Reviewed by:** Data Science Team, QA Specialists  
+**Next Steps:** Schedule a team meeting to discuss implementation of recommendations and assign responsibilities.

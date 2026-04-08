@@ -1,0 +1,139 @@
+# Anomaly Analysis Report: Automated Annotation Tool
+
+**Author:** Felipe Ribeiro  
+**Date:** March 13, 2026  
+**Context:** Analysis of anomalies discovered in the automated annotation tool by a senior data scientist.
+
+---
+
+## Table of Contents
+1. Introduction
+2. Background
+3. Observed Anomalies
+4. Root Cause Analysis
+5. Impact Assessment
+6. Recommendations
+7. Next Steps
+
+---
+
+## 1. Introduction
+The automated annotation tool, designed to streamline the data annotation process, has recently exhibited anomalies in its output. This report, prepared by Felipe Ribeiro, aims to document the nature of these anomalies, provide a root cause analysis, and recommend actionable steps to mitigate their impact. The findings are based on a debugging session conducted on March 13, 2026.
+
+---
+
+## 2. Background
+The automated annotation tool was proposed by a junior data scientist as a means to address the growing volume of data requiring annotation. Initial tests of the tool, conducted on March 12, 2026, revealed significant issues, including:
+- **High error rates**, resulting in mislabeled data.
+- **Inconsistent behavior**, with outputs varying across repeated runs on the same dataset.
+- **Performance bottlenecks**, leading to extended runtime for large datasets.
+
+These anomalies have delayed progress on key projects, including the evaluation of new models and the preparation of metrics requested by A+-round investors.
+
+---
+
+## 3. Observed Anomalies
+### 3.1 Types of Anomalies
+The anomalies observed during the debugging session can be categorized as follows:
+
+- **Labeling Errors:**
+  - Incorrect labels applied to specific data points (e.g., misclassifying images in a vision dataset).
+  - Missing labels for a subset of data, resulting in incomplete annotations.
+
+- **Inconsistent Outputs:**
+  - Outputs for identical input data varied across multiple runs.
+  - Non-deterministic behavior traced to unseeded random processes.
+
+- **Performance Issues:**
+  - Runtime exceeded acceptable thresholds for datasets larger than 10,000 samples.
+  - Memory usage spiked during processing, occasionally causing system crashes.
+
+### 3.2 Example Outputs
+Below are examples of incorrect outputs observed during testing:
+
+| Input Data | Expected Label | Generated Label | Notes                     |
+|------------|----------------|-----------------|---------------------------|
+| Image A    | Dog            | Cat             | Clear misclassification.  |
+| Image B    | Tree           | None            | Missing annotation.       |
+| Image C    | Car            | Bicycle         | Significant error.        |
+
+---
+
+## 4. Root Cause Analysis
+The debugging session identified the following root causes for the anomalies:
+
+### 4.1 Labeling Errors
+- **Faulty Preprocessing Pipeline:**
+  - The tool failed to normalize input data consistently, leading to misinterpretation by the annotation model.
+- **Model Training Issues:**
+  - Training data for the annotation model contained mislabeled examples, propagating errors into the automated process.
+
+### 4.2 Inconsistent Outputs
+- **Unseeded Randomness:**
+  - The use of random number generators in data augmentation and sampling was not properly seeded, resulting in non-deterministic outputs.
+- **Concurrency Issues:**
+  - Multithreading in the tool's backend introduced race conditions, affecting reproducibility.
+
+### 4.3 Performance Issues
+- **Inefficient Algorithms:**
+  - The annotation tool employed suboptimal algorithms for large dataset handling, leading to exponential runtime growth.
+- **Memory Leaks:**
+  - Debugging revealed memory leaks in the data loader component, exacerbating crashes during extended runs.
+
+---
+
+## 5. Impact Assessment
+The anomalies have had the following impact on ongoing projects:
+
+- **Delayed Model Evaluation:**
+  - Inconsistent annotations forced the team to halt model evaluation tasks, delaying progress.
+- **Investor Relations:**
+  - Errors in annotated data compromised the team's ability to prepare performance metrics requested by A+-round investors.
+- **Team Morale:**
+  - Extended debugging sessions and lack of immediate solutions have contributed to frustration among team members.
+
+---
+
+## 6. Recommendations
+To address the identified issues, the following recommendations are proposed:
+
+### 6.1 Short-Term Fixes
+- Implement seeding for all random number generators to ensure reproducibility.
+- Patch the memory leak in the data loader component.
+- Normalize all input data consistently during preprocessing.
+
+### 6.2 Long-Term Solutions
+- Retrain the annotation model using a cleaned and verified dataset.
+- Conduct a thorough review of the tool's algorithms, replacing inefficient components with optimized alternatives.
+- Introduce a versioning system for annotated datasets to track changes and identify errors early.
+
+### 6.3 Process Improvements
+- Establish a formal testing protocol for automated tools before deployment.
+- Allocate dedicated resources for debugging and maintenance of critical tools.
+
+---
+
+## 7. Next Steps
+The following steps will be undertaken to resolve the identified issues:
+
+1. **Immediate Debugging (March 14-15, 2026):**
+   - Fix the memory leak and random seeding issues.
+   - Normalize the preprocessing pipeline.
+
+2. **Model Retraining (March 16-20, 2026):**
+   - Clean and verify the training dataset.
+   - Retrain the annotation model and validate its performance.
+
+3. **Tool Optimization (March 21-31, 2026):**
+   - Optimize algorithms for large dataset handling.
+   - Conduct stress testing to ensure stability under high load.
+
+4. **Review and Documentation (April 1-5, 2026):**
+   - Document all changes made to the tool.
+   - Prepare a follow-up report to evaluate the effectiveness of implemented fixes.
+
+---
+
+**Prepared by:** Felipe Ribeiro  
+**Role:** Senior Data Scientist  
+**Date:** March 13, 2026

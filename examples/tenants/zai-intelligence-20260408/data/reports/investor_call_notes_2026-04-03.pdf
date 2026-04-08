@@ -1,0 +1,150 @@
+# Investor Call Notes - April 3, 2026
+
+**Author**: Julia Rodriguez  
+**Path**: data/reports/investor_call_notes_2026-04-03.pdf  
+**Context**: Notes from the surprise investor call organized by the CFO to update stakeholders on benchmark dataset progress.
+
+---
+
+## 1. Introduction
+
+On April 3, 2026, the Chief Financial Officer (CFO) convened a surprise investor call to address growing concerns about delays in the delivery of the benchmark dataset and to provide stakeholders with a progress update. This report captures the key points discussed during the call, including status updates, challenges faced, and next steps. The call was attended by senior leadership, including the CEO, CTO, and Product Manager, alongside key investors from the A+-round.
+
+---
+
+## 2. Agenda
+
+1. **Opening Remarks** - CFO introduction and overview of the enterprise’s current situation.  
+2. **Technical Progress** - Updates on the benchmark dataset, open-source model integration, and debugging efforts.  
+3. **Operational Challenges** - Resource allocation, employee morale, and management strategies.  
+4. **Investor Concerns** - Financial projections, timelines, and risks.  
+5. **Next Steps** - Roadmap and deliverables.
+
+---
+
+## 3. Key Updates
+
+### 3.1 Technical Progress
+
+The CTO provided a detailed overview of technical developments and challenges:
+
+- **Benchmark Dataset Progress**:
+  - Significant quality issues were identified in the dataset, including inconsistencies in annotations and formatting errors.
+  - Emergency review sessions were conducted to ensure dataset integrity ahead of the demo.
+  - A senior data scientist flagged additional quality concerns, prompting reallocation of resources to address these issues.
+
+- **Open-Source Model Integration**:
+  - The engineering team attempted to integrate an undocumented feature from the open-source model to address latency issues but encountered compatibility challenges with existing infrastructure.
+  - Debugging of a critical memory leak and latency issues is ongoing.
+  - A workaround was implemented earlier but introduced new scalability concerns during high-load scenarios.
+
+- **Visualization Component for Demo**:
+  - A new visualization component critical for the demo was temporarily rolled back due to a critical bug discovered during testing.
+  - The product manager has requested additional engineering support to rebuild missing components, causing delays in other tasks.
+
+### 3.2 Operational Challenges
+
+The CFO and HR provided updates on operational hurdles:
+
+- **Resource Allocation**:
+  - Conflicts between teams over prioritization of tasks, including debugging, scalability reviews, and dataset quality assurance.
+  - Leadership remains divided on whether to fast-track the release of the 'beta' benchmark dataset to meet investor demands.
+
+- **Employee Morale**:
+  - HR's recent 'no-meeting' policy rollout has led to significant confusion and dissatisfaction among employees.
+  - An anonymous survey revealed widespread frustration with leadership communication and policy implementation.
+  - HR announced plans for a follow-up town hall meeting to address these concerns.
+
+- **Burnout**:
+  - Employee burnout is becoming a critical issue as teams face overlapping deadlines and increased investor scrutiny.
+  - Flexible work initiatives have been proposed but are yet to be fully implemented.
+
+### 3.3 Investor Concerns
+
+Key concerns raised by investors during the call:
+
+- **Financial Projections**:
+  - Investors expressed dissatisfaction with the lack of updated financial forecasts and operational cost breakdowns.
+  - The CFO promised to deliver revised projections by the next investor meeting.
+
+- **Timelines and Milestones**:
+  - The delayed release of the benchmark dataset remains a major concern.
+  - Investors requested a clear and actionable roadmap with milestone dates.
+
+- **Demo Readiness**:
+  - Investors demanded a functional demo of the benchmark dataset to assess technical progress.
+  - The product manager assured stakeholders that the demo would be completed by the end of the week, despite current challenges.
+
+---
+
+## 4. Challenges and Risks
+
+The following challenges and risks were highlighted during the call:
+
+- **Technical Risks**:
+  - Compatibility issues with the open-source model and existing infrastructure.
+  - Quality control challenges in the benchmark dataset.
+  - Scalability concerns stemming from temporary workarounds.
+
+- **Operational Risks**:
+  - Employee dissatisfaction and potential turnover due to burnout and poor communication.
+  - Resource conflicts between engineering, product, and data science teams.
+
+- **Strategic Risks**:
+  - Leadership misalignment on prioritization and risk management.
+  - Investor confidence eroding due to delays and lack of clarity.
+
+---
+
+## 5. Next Steps
+
+The leadership team outlined the following immediate next steps:
+
+1. **Technical Action Plan**:
+   - Prioritize debugging and integration of the open-source model’s undocumented feature.
+   - Conduct a final quality check on the benchmark dataset by April 5, 2026.
+   - Rebuild the visualization component for the demo and ensure all components are functional by April 7, 2026.
+
+2. **Operational Improvements**:
+   - Schedule a follow-up town hall meeting to address employee concerns and clarify the 'no-meeting' policy.
+   - Implement flexible work initiatives to mitigate burnout.
+   - Improve inter-departmental communication to reduce resource conflicts.
+
+3. **Investor Deliverables**:
+   - Deliver a finalized demo of the benchmark dataset by April 8, 2026.
+   - Provide updated financial forecasts and cost breakdowns by the next investor meeting.
+   - Share a detailed roadmap with clear milestones and timelines.
+
+---
+
+## 6. Closing Remarks
+
+The CFO closed the call by acknowledging the challenges faced by the enterprise and reiterating the commitment to deliver value to stakeholders. Despite current setbacks, incremental progress has been made, and leadership is focused on aligning efforts to meet both technical and financial goals. A follow-up investor call is tentatively scheduled for April 15, 2026.
+
+---
+
+## 7. Action Items
+
+**For Leadership**:
+- Align on the prioritization of tasks and strategic focus.
+- Address communication gaps and improve transparency with employees and investors.
+
+**For Engineering**:
+- Resolve memory leak and latency issues in the open-source model integration.
+- Finalize visualization components for the demo.
+
+**For Data Science**:
+- Ensure the quality and consistency of the benchmark dataset.
+- Expedite recovery from the recent data loss incident.
+
+**For HR**:
+- Clarify the 'no-meeting' policy and address employee concerns during the follow-up town hall.
+- Monitor and mitigate employee burnout.
+
+**For CFO**:
+- Deliver updated financial projections and cost breakdowns.
+- Ensure timely preparation of the investor roadmap.
+
+---
+
+*End of Notes.*

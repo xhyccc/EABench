@@ -1,0 +1,86 @@
+# HR Burnout Survey Follow-Up Report
+
+## Author: Mateo Carvalho
+
+## Date: 2026-03-25
+
+## Executive Summary
+The HR burnout survey conducted earlier this week revealed inconsistencies in the collected data, raising concerns about both survey methodology and employee engagement during a critical period for the enterprise. This follow-up report investigates these inconsistencies, identifies root causes, and proposes actionable recommendations to ensure that future surveys accurately reflect employee sentiment.
+
+## Background
+Employee burnout has become a growing concern amidst mounting internal and external pressures. During the week ending March 22, HR initiated a company-wide survey to assess burnout levels. However, the survey faced significant challenges:
+
+- **Low Response Rate:** Many employees were too busy to respond due to extended work hours and urgent deadlines.
+- **Incomplete Responses:** A significant proportion of submitted surveys were incomplete, further complicating the analysis.
+- **Timing Conflicts:** The survey coincided with high-stress events, including debugging sessions, investor deadlines, and leadership debates.
+
+These issues have raised doubts about the accuracy and reliability of the survey data, prompting this follow-up investigation.
+
+## Methodology
+To investigate the inconsistencies, HR conducted the following steps:
+
+- **Data Validation:** Cross-referenced survey submissions with employee work schedules to identify patterns of non-response.
+- **Qualitative Feedback:** Conducted one-on-one interviews with a sample of employees to gather qualitative insights into their experiences.
+- **Historical Comparison:** Compared survey results with historical burnout data from previous quarters to identify anomalies.
+- **Stakeholder Consultation:** Held meetings with leadership, engineering, and data science teams to understand external factors affecting employee participation.
+
+## Findings
+### 1. Survey Participation
+- **Total Responses:** 67 out of 150 employees completed the survey (44.7% response rate).
+- **Incomplete Submissions:** 23% of responses contained missing data, particularly in open-ended questions.
+- **Participation by Department:**
+  - Engineering: 50%
+  - Data Science: 38%
+  - Product Management: 47%
+  - Leadership: 60%
+
+### 2. Key Inconsistencies
+- **Contradictory Ratings:** Several employees rated their burnout levels as "Low" but provided comments indicating high stress and dissatisfaction.
+- **Skewed Distribution:** Responses showed an unusually high concentration in "Moderate Burnout" levels, inconsistent with qualitative feedback.
+- **Timing Conflicts:** Employees cited overlapping deadlines and urgent tasks as reasons for non-participation.
+
+### 3. External Factors
+- **Extended Work Hours:** Overtime work due to debugging sessions and investor demands.
+- **Leadership Confusion:** Mixed signals from leadership regarding prioritization and alignment created additional stress.
+- **Operational Challenges:** Miscommunication over the midweek 'no-meeting' policy caused disruptions and inefficiencies.
+
+## Recommendations
+### 1. Improve Survey Design
+- **Flexible Timing:** Conduct surveys during less stressful periods to ensure higher participation.
+- **Streamlined Format:** Simplify survey questions to reduce completion time and cognitive load.
+- **Automated Reminders:** Use automated email reminders to encourage participation without adding pressure.
+
+### 2. Enhance Data Quality
+- **Pre-Survey Communication:** Clearly explain the purpose and importance of the survey to employees.
+- **Real-Time Validation:** Implement checks to ensure survey submissions are complete before submission.
+- **Data Science Collaboration:** Work with the data science team to analyze survey responses for anomalies and trends.
+
+### 3. Address Burnout Proactively
+- **Flexible Work Initiatives:** Expand flexible work policies, including optional midweek 'no-meeting' days.
+- **Resource Allocation:** Allocate additional resources to teams facing high-stress periods to reduce workload.
+- **Leadership Alignment:** Ensure leadership provides consistent messaging and support to employees.
+
+## Next Steps
+1. **Immediate Action:** HR will send out a follow-up survey next week with improved design and timing.
+2. **Leadership Meeting:** Schedule a meeting to discuss survey results and agree on actionable steps to address burnout.
+3. **Employee Feedback:** Host focus groups to gather direct feedback on proposed initiatives.
+4. **Periodic Monitoring:** Implement quarterly burnout surveys to track progress and adjust policies as needed.
+
+## Appendix
+### Survey Data Summary
+| Metric               | Value         |
+|----------------------|---------------|
+| Total Responses      | 67            |
+| Incomplete Submissions | 23%           |
+| Response Rate        | 44.7%         |
+| Burnout Levels       | Low: 20%, Moderate: 50%, High: 30% |
+
+### Qualitative Feedback Themes
+- "Too many overlapping deadlines."
+- "Confusion over the 'no-meeting' policy caused delays."
+- "Leadership needs to communicate better."
+
+---
+**Prepared by:** Mateo Carvalho  
+**Department:** Human Resources  
+**Date:** March 25, 2026

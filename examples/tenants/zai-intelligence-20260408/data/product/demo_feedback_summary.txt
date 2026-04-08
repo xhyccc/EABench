@@ -1,0 +1,103 @@
+# Demo Feedback Summary
+
+**Author:** Hyejin Wang  
+**Date:** 2026-04-07  
+**Context:** Summary of feedback and concerns raised during the emergency meeting for the demo's readiness.  
+
+---
+
+## Executive Summary
+The emergency meeting held on 2026-04-07 to review the readiness of the demo for the benchmark dataset revealed widespread issues across technical, operational, and leadership domains. Critical concerns were raised regarding incomplete visualizations, delays caused by mislabeled data, unresolved memory leak issues, and escalating tensions between leadership priorities. The meeting underscored a lack of alignment across teams, highlighting the need for immediate action to mitigate risks ahead of the investor review.
+
+---
+
+## Key Feedback and Concerns
+
+### 1. **Technical Challenges**
+- **Benchmark Dataset Demo:**
+  - A critical visualization bug was discovered during the final rehearsal, rendering key components of the demo unusable.
+  - Mislabeled annotations in a subset of the dataset caused inconsistencies, requiring revalidation and delaying progress.
+
+- **Memory Leak Issues:**
+  - While a partial fix was implemented for the memory leak in the open-source model integration, it introduced minor latency spikes in the agent training pipeline.
+  - GPU utilization spikes were observed after the fix, forcing a temporary halt to training jobs.
+
+- **Open-Source Model Integration:**
+  - Undocumented features in the open-source model continue to cause unexpected behaviors, with scalability and compatibility remaining unresolved.
+  - A proposal to pause the integration and focus on stabilizing the existing infrastructure sparked internal divisions among the engineering team.
+
+### 2. **Leadership and Strategic Alignment**
+- **Investor Prioritization:**
+  - The CFO emphasized the urgency of delivering a polished demo to appease A+-round investors but faced resistance from the CTO, who argued for delaying the demo to ensure technical feasibility.
+
+- **Cross-Team Misalignment:**
+  - The emergency meeting revealed ongoing tensions between product, engineering, and data science teams, particularly around resource allocation and prioritization of tasks.
+  - The product manager expressed frustration over rushed approvals and missing visualization components, which jeopardize the demo's quality.
+
+- **Leadership Tensions:**
+  - A heated argument during the meeting highlighted the growing rift between the CFO and CTO over the balance between investor expectations and technical readiness.
+
+### 3. **Employee Morale and HR Policies**
+- **'No-Meeting' Policy Failures:**
+  - HR's initial rollout of the 'no-meeting' policy was poorly communicated, leading to widespread confusion and skepticism among employees.
+  - A follow-up survey and subsequent clarification email failed to restore trust, with many employees questioning HR's decision-making process.
+
+- **Introduction of 'Focus Hour':**
+  - HR proposed a 'focus hour' initiative to replace the 'no-meeting' policy, but employees expressed concerns about its practicality and effectiveness, given the organization's current state of crisis.
+
+---
+
+## Action Items and Proposed Solutions
+
+### 1. **Technical Improvements**
+- **Benchmark Dataset Demo:**
+  - Assign a dedicated sub-team to address visualization bugs and mislabeled annotations.
+  - Establish a rigorous validation pipeline for the dataset to prevent future errors.
+
+- **Memory Leak and Latency Issues:**
+  - Prioritize resolving GPU utilization spikes caused by the partial fix.
+  - Conduct a thorough review of the open-source model's undocumented features to identify potential workarounds or limitations.
+
+### 2. **Cross-Team Alignment**
+- **Leadership Collaboration:**
+  - Schedule a follow-up meeting between the CFO, CTO, and product manager to align on priorities and establish a unified roadmap for the demo.
+  - Implement a decision-making framework to resolve conflicts more effectively.
+
+- **Clear Communication:**
+  - Develop a communication plan to ensure all teams have a shared understanding of deadlines, deliverables, and expectations.
+  - Appoint a cross-functional coordinator to streamline collaboration between engineering, product, and data science teams.
+
+### 3. **Employee Morale and HR Policies**
+- **Policy Revisions:**
+  - Conduct an anonymous survey to gather employee feedback on the 'focus hour' initiative and other recent HR changes.
+  - Provide detailed guidelines and training sessions to ensure new policies are implemented smoothly.
+
+- **Burnout Mitigation:**
+  - Introduce flexible work schedules and additional mental health resources to address employee dissatisfaction.
+  - Recognize and reward team members who contribute to resolving critical issues under tight deadlines.
+
+---
+
+## Meeting Outcomes
+- The demo's readiness remains uncertain, with key technical and operational challenges still unresolved.
+- Leadership agreed to revisit the timeline for the investor review, though no final decision was reached during the meeting.
+- Teams committed to addressing critical issues within the next 48 hours, with progress to be reviewed in a follow-up meeting.
+
+---
+
+## Appendix
+
+### Key Dates:
+- **2026-04-05:** Initial discovery of critical visualization and annotation issues.
+- **2026-04-06:** Partial fix for memory leak introduced latency and GPU utilization spikes.
+- **2026-04-07:** Emergency meeting to address demo readiness and leadership tensions.
+
+### Key Participants:
+- **Engineering Team:** Responsible for resolving memory leak issues and stabilizing infrastructure.
+- **Data Science Team:** Tasked with validating and correcting the benchmark dataset.
+- **Product Manager:** Advocating for a high-quality demo to meet investor expectations.
+- **Leadership:** CFO, CTO, and product manager working to align priorities under tight deadlines.
+
+---
+
+*Prepared by Hyejin Wang*

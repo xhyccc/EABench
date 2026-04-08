@@ -1,0 +1,113 @@
+# Emergency Integration Plan Meeting Notes
+
+**Author:** Hyejin Wang  
+**Date:** 2026-03-13  
+**Context:** Notes from the emergency meeting held to address the divide over the integration plan for new post-training techniques.
+
+---
+
+## Agenda
+
+1. Review of the current state of the integration plan.
+2. Addressing technical concerns raised by team members.
+3. Discussing alternative approaches to resolve the divide.
+4. Setting actionable next steps and deadlines.
+
+---
+
+## Attendees
+
+- **CTO:** Facilitator of the meeting, responsible for the integration plan.
+- **Lead RL Engineer:** Raised concerns about the feasibility of new techniques and proposed alternative hyperparameter tuning strategies.
+- **Senior Data Scientist:** Flagged issues with the automated annotation tool and contributed to technical discussions.
+- **Junior Engineer:** Provided insights into the undocumented feature of the open-source model.
+- **CFO:** Attended to represent funding concerns and investor pressures.
+- **Additional team members:** Engineers, data scientists, and product managers.
+
+---
+
+## Key Discussion Points
+
+### 1. Integration Plan Status
+
+- **CTO's Summary:**
+  - Revised draft of the integration plan circulated on 2026-03-10.
+  - Preliminary feedback revealed mixed opinions, with technical feasibility being the primary point of contention.
+  - Investor pressure to finalize the plan and demonstrate progress is mounting.
+
+- **Challenges Identified:**
+  - Diverging opinions on adopting new post-training techniques.
+  - Performance drops in recent experiments with hyperparameter tuning.
+  - Lack of clarity on resource allocation for exploratory tasks related to the open-source model.
+
+### 2. Technical Concerns
+
+- **Hyperparameter Tuning:**
+  - Lead RL Engineer reported performance drops in the latest experiment.
+  - Skepticism from team members about the long-term viability of the proposed workaround.
+
+- **Dataset Annotation:**
+  - Senior Data Scientist flagged anomalies in the automated annotation tool's output.
+  - Significant errors in early testing results, delaying progress.
+
+- **Open-Source Model:**
+  - Junior Engineer identified a potential workaround for the undocumented feature but inadvertently triggered a server overload during testing.
+  - Senior Engineer raised concerns about the lack of documentation for critical features.
+
+### 3. Alternative Approaches
+
+- **Proposal from Lead RL Engineer:**
+  - Revert to the previous hyperparameter tuning strategy temporarily while exploring new techniques offline.
+
+- **Proposal from Senior Data Scientist:**
+  - Allocate dedicated resources to debug and refine the automated annotation tool.
+
+- **Open-Source Model Debate:**
+  - CTO suggested postponing exploratory testing until the integration plan is finalized.
+  - Mixed reactions from team members, with some advocating for immediate resource allocation.
+
+### 4. Investor Pressure
+
+- **CFO Update:**
+  - A+-round funding delays due to requests for additional metrics and timelines.
+  - Urgent need to finalize the integration plan to maintain investor confidence.
+
+---
+
+## Decisions Made
+
+1. **Integration Plan:**
+   - CTO will revise the plan to address technical concerns and circulate a final version by 2026-03-15.
+   - Team members must provide feedback by the end of 2026-03-14.
+
+2. **Hyperparameter Tuning:**
+   - Lead RL Engineer will lead a small team to test the previous strategy alongside exploratory testing of new techniques.
+
+3. **Dataset Annotation:**
+   - Senior Data Scientist will head a focused debugging session for the automated annotation tool.
+   - Decision on whether to adopt the tool will be postponed until 2026-03-17.
+
+4. **Open-Source Model:**
+   - Junior Engineer will document findings on the undocumented feature and share results by 2026-03-16.
+   - CTO will decide whether to allocate further resources based on the report.
+
+5. **Investor Relations:**
+   - CFO will compile updated projections and product timeline milestones for A+-round investors by 2026-03-14.
+
+---
+
+## Action Items
+
+- **CTO:** Revise and circulate the integration plan.
+- **Lead RL Engineer:** Investigate hyperparameter strategy issues and document results.
+- **Senior Data Scientist:** Debug and refine the automated annotation tool.
+- **Junior Engineer:** Complete testing and documentation of the open-source model.
+- **CFO:** Prepare updated projections and timelines for investors.
+
+---
+
+## Closing Notes
+
+- The team remains divided, but actionable steps have been identified to address key concerns.
+- Finalizing the integration plan is critical to maintaining investor confidence and ensuring project momentum.
+- Follow-up meeting scheduled for 2026-03-15 to review progress on action items.

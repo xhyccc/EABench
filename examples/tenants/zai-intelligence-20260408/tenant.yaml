@@ -1,0 +1,790 @@
+domain: zai-intelligence-20260408.com
+id: zai-intelligence-20260408
+users:
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mcarvalho
+  profile:
+    department: Executive
+    email: mcarvalho@zai-intelligence-20260408.com
+    location: London
+    name:
+      display_name: Mateo Carvalho
+      first_name: Mateo
+      last_name: Carvalho
+    skills:
+    - Leadership
+    - Strategy
+    - Fundraising
+    timezone: Europe/London
+    title: CEO
+  username: mcarvalho
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: hwang
+  profile:
+    department: Engineering
+    email: hwang@zai-intelligence-20260408.com
+    location: Seoul
+    manager_id: mcarvalho
+    name:
+      display_name: Hyejin Wang
+      first_name: Hyejin
+      last_name: Wang
+    skills:
+    - AI Research
+    - Reinforcement Learning
+    - Product Development
+    timezone: Asia/Seoul
+    title: CTO
+  username: hwang
+- groups:
+  - Executive
+  - Finance
+  - All Employees
+  id: jrodriguez
+  profile:
+    department: Finance
+    email: jrodriguez@zai-intelligence-20260408.com
+    location: São Paulo
+    manager_id: mcarvalho
+    name:
+      display_name: Julia Rodriguez
+      first_name: Julia
+      last_name: Rodriguez
+    skills:
+    - Financial Management
+    - Operational Efficiency
+    - Risk Analysis
+    timezone: America/Sao_Paulo
+    title: CFO
+  username: jrodriguez
+- groups:
+  - Research
+  - Engineering
+  - All Employees
+  id: tsharma
+  profile:
+    department: Engineering
+    email: tsharma@zai-intelligence-20260408.com
+    location: Bangalore
+    manager_id: hwang
+    name:
+      display_name: Tanvi Sharma
+      first_name: Tanvi
+      last_name: Sharma
+    skills:
+    - AI Model Design
+    - Data Analysis
+    - Research Leadership
+    timezone: Asia/Kolkata
+    title: Head of AI Research
+  username: tsharma
+- groups:
+  - Sales
+  - Executive
+  - All Employees
+  id: okonkwo
+  profile:
+    department: Sales
+    email: okonkwo@zai-intelligence-20260408.com
+    location: Cape Town
+    manager_id: mcarvalho
+    name:
+      display_name: Chidinma Okonkwo
+      first_name: Chidinma
+      last_name: Okonkwo
+    skills:
+    - Business Development
+    - Customer Relationships
+    - Sales Strategy
+    timezone: Africa/Johannesburg
+    title: VP of Sales
+  username: okonkwo
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: lzhao
+  profile:
+    department: Executive
+    email: lzhao@zai-intelligence-20260408.com
+    location: San Francisco
+    name:
+      display_name: Liang Zhao
+      first_name: Liang
+      last_name: Zhao
+    skills:
+    - Leadership
+    - Strategic Vision
+    - AI Business
+    timezone: America/Los_Angeles
+    title: CEO
+  username: lzhao
+- groups:
+  - Engineering
+  - All Employees
+  id: arendón
+  profile:
+    department: Engineering
+    email: arendón@zai-intelligence-20260408.com
+    location: Remote
+    manager_id: lzhao
+    name:
+      display_name: Alejandro Rendón
+      first_name: Alejandro
+      last_name: Rendón
+    skills:
+    - Reinforcement Learning
+    - Model Optimization
+    - Python
+    timezone: America/Mexico_City
+    title: Lead Engineer
+  username: arendón
+- groups:
+  - Finance
+  - All Employees
+  id: mhamed
+  profile:
+    department: Finance
+    email: mhamed@zai-intelligence-20260408.com
+    location: London
+    manager_id: lzhao
+    name:
+      display_name: Mariam Hamed
+      first_name: Mariam
+      last_name: Hamed
+    skills:
+    - Financial Analysis
+    - Budgeting
+    - AI Industry Trends
+    timezone: Europe/London
+    title: Finance Manager
+  username: mhamed
+- groups:
+  - Sales
+  - Management
+  - All Employees
+  id: tsingh
+  profile:
+    department: Sales
+    email: tsingh@zai-intelligence-20260408.com
+    location: Mumbai
+    manager_id: lzhao
+    name:
+      display_name: Taranjeet Singh
+      first_name: Taranjeet
+      last_name: Singh
+    skills:
+    - Sales Strategy
+    - Customer Relationship Management
+    - Negotiation
+    timezone: Asia/Kolkata
+    title: Sales Manager
+  username: tsingh
+- groups:
+  - Engineering
+  - All Employees
+  id: achukwuma
+  profile:
+    department: Engineering
+    email: achukwuma@zai-intelligence-20260408.com
+    location: Lagos
+    manager_id: arendón
+    name:
+      display_name: Amara Chukwuma
+      first_name: Amara
+      last_name: Chukwuma
+    skills:
+    - Reinforcement Learning
+    - TensorFlow
+    - Model Deployment
+    timezone: Africa/Lagos
+    title: Software Engineer
+  username: achukwuma
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: dschmidt
+  profile:
+    department: Executive
+    email: dschmidt@zai-intelligence-20260408.com
+    location: Berlin
+    name:
+      display_name: Daniel Schmidt
+      first_name: Daniel
+      last_name: Schmidt
+    skills:
+    - Leadership
+    - Strategy
+    timezone: Europe/Berlin
+    title: CEO
+  username: dschmidt
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: lkamau
+  profile:
+    department: Engineering
+    email: lkamau@zai-intelligence-20260408.com
+    location: Nairobi
+    manager_id: dschmidt
+    name:
+      display_name: Lilian Kamau
+      first_name: Lilian
+      last_name: Kamau
+    skills:
+    - Team Management
+    - Reinforcement Learning
+    timezone: Africa/Nairobi
+    title: Engineering Manager
+  username: lkamau
+- groups:
+  - Sales
+  - Management
+  - All Employees
+  id: mrodrigues
+  profile:
+    department: Sales
+    email: mrodrigues@zai-intelligence-20260408.com
+    location: São Paulo
+    manager_id: dschmidt
+    name:
+      display_name: Marcos Rodrigues
+      first_name: Marcos
+      last_name: Rodrigues
+    skills:
+    - Client Relations
+    - Negotiation
+    timezone: America/Sao_Paulo
+    title: Sales Manager
+  username: mrodrigues
+- groups:
+  - Engineering
+  - All Employees
+  id: nsharma
+  profile:
+    department: Engineering
+    email: nsharma@zai-intelligence-20260408.com
+    location: Mumbai
+    manager_id: lkamau
+    name:
+      display_name: Neha Sharma
+      first_name: Neha
+      last_name: Sharma
+    skills:
+    - Python
+    - TensorFlow
+    timezone: Asia/Kolkata
+    title: Software Engineer
+  username: nsharma
+- groups:
+  - Finance
+  - All Employees
+  id: hnguyen
+  profile:
+    department: Finance
+    email: hnguyen@zai-intelligence-20260408.com
+    location: Hanoi
+    name:
+      display_name: Hanh Nguyen
+      first_name: Hanh
+      last_name: Nguyen
+    skills:
+    - Budget Analysis
+    - Forecasting
+    timezone: Asia/Ho_Chi_Minh
+    title: Financial Analyst
+  username: hnguyen
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: jwang
+  profile:
+    department: Executive
+    email: jwang@zai-intelligence-20260408.com
+    location: London
+    name:
+      display_name: Jing Wang
+      first_name: Jing
+      last_name: Wang
+    skills:
+    - Leadership
+    - Strategic Planning
+    - AI Policy
+    timezone: Europe/London
+    title: CEO
+  username: jwang
+- groups:
+  - Engineering
+  - All Employees
+  id: fribeiro
+  profile:
+    department: Engineering
+    email: fribeiro@zai-intelligence-20260408.com
+    location: São Paulo
+    manager_id: jwang
+    name:
+      display_name: Felipe Ribeiro
+      first_name: Felipe
+      last_name: Ribeiro
+    skills:
+    - Reinforcement Learning
+    - Python
+    - TensorFlow
+    timezone: America/Sao_Paulo
+    title: Senior Machine Learning Engineer
+  username: fribeiro
+- groups:
+  - Sales
+  - All Employees
+  id: zokonkwo
+  profile:
+    department: Sales
+    email: zokonkwo@zai-intelligence-20260408.com
+    location: Lagos
+    manager_id: jwang
+    name:
+      display_name: Zainab Okonkwo
+      first_name: Zainab
+      last_name: Okonkwo
+    skills:
+    - Sales Strategy
+    - Client Relations
+    - Negotiation
+    timezone: Africa/Lagos
+    title: Sales Manager
+  username: zokonkwo
+- groups:
+  - Finance
+  - All Employees
+  id: mbaddour
+  profile:
+    department: Finance
+    email: mbaddour@zai-intelligence-20260408.com
+    location: Dubai
+    manager_id: jwang
+    name:
+      display_name: Mahmoud Baddour
+      first_name: Mahmoud
+      last_name: Baddour
+    skills:
+    - Financial Planning
+    - Risk Management
+    - Budgeting
+    timezone: Asia/Dubai
+    title: Chief Financial Officer
+  username: mbaddour
+- groups:
+  - Engineering
+  - All Employees
+  id: kpetrov
+  profile:
+    department: Engineering
+    email: kpetrov@zai-intelligence-20260408.com
+    location: Berlin
+    manager_id: fribeiro
+    name:
+      display_name: Katya Petrov
+      first_name: Katya
+      last_name: Petrov
+    skills:
+    - AI Research
+    - Data Analysis
+    - Python
+    timezone: Europe/Berlin
+    title: Junior AI Researcher
+  username: kpetrov
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mabdelaziz
+  profile:
+    department: Executive
+    email: mabdelaziz@zai-intelligence-20260408.com
+    location: London
+    name:
+      display_name: Mariam Abdelaziz
+      first_name: Mariam
+      last_name: Abdelaziz
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: Europe/London
+    title: CEO
+  username: mabdelaziz
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: takahashi
+  profile:
+    department: Engineering
+    email: takahashi@zai-intelligence-20260408.com
+    location: Tokyo
+    manager_id: mabdelaziz
+    name:
+      display_name: Hiroshi Takahashi
+      first_name: Hiroshi
+      last_name: Takahashi
+    skills:
+    - Project Management
+    - AI Development
+    timezone: Asia/Tokyo
+    title: Engineering Manager
+  username: takahashi
+- groups:
+  - Engineering
+  - All Employees
+  id: rpatel
+  profile:
+    department: Engineering
+    email: rpatel@zai-intelligence-20260408.com
+    location: Bangalore
+    manager_id: takahashi
+    name:
+      display_name: Rohan Patel
+      first_name: Rohan
+      last_name: Patel
+    skills:
+    - Reinforcement Learning
+    - Python
+    - TensorFlow
+    timezone: Asia/Kolkata
+    title: Software Engineer
+  username: rpatel
+- groups:
+  - Sales
+  - All Employees
+  id: cgomez
+  profile:
+    department: Sales
+    email: cgomez@zai-intelligence-20260408.com
+    location: Madrid
+    manager_id: mabdelaziz
+    name:
+      display_name: Carla Gomez
+      first_name: Carla
+      last_name: Gomez
+    skills:
+    - Client Relations
+    - Contract Negotiation
+    timezone: Europe/Madrid
+    title: Sales Manager
+  username: cgomez
+- groups:
+  - Finance
+  - All Employees
+  id: kwilliams
+  profile:
+    department: Finance
+    email: kwilliams@zai-intelligence-20260408.com
+    location: Remote
+    name:
+      display_name: Kwame Williams
+      first_name: Kwame
+      last_name: Williams
+    skills:
+    - Budgeting
+    - Financial Forecasting
+    timezone: America/New_York
+    title: Financial Analyst
+  username: kwilliams
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: aleblanc
+  profile:
+    department: Executive
+    email: aleblanc@zai-intelligence-20260408.com
+    location: Paris
+    name:
+      display_name: Adele LeBlanc
+      first_name: Adele
+      last_name: LeBlanc
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: Europe/Paris
+    title: CEO
+  username: aleblanc
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: hsingh
+  profile:
+    department: Engineering
+    email: hsingh@zai-intelligence-20260408.com
+    location: London
+    manager_id: aleblanc
+    name:
+      display_name: Harpreet Singh
+      first_name: Harpreet
+      last_name: Singh
+    skills:
+    - Artificial Intelligence
+    - Team Management
+    timezone: Europe/London
+    title: VP of Engineering
+  username: hsingh
+- groups:
+  - Engineering
+  - All Employees
+  id: yamada
+  profile:
+    department: Engineering
+    email: yamada@zai-intelligence-20260408.com
+    location: Tokyo
+    manager_id: hsingh
+    name:
+      display_name: Akiko Yamada
+      first_name: Akiko
+      last_name: Yamada
+    skills:
+    - Reinforcement Learning
+    - Python
+    - TensorFlow
+    timezone: Asia/Tokyo
+    title: Software Engineer
+  username: yamada
+- groups:
+  - Sales
+  - All Employees
+  id: jgarcia
+  profile:
+    department: Sales
+    email: jgarcia@zai-intelligence-20260408.com
+    location: Mexico City
+    manager_id: aleblanc
+    name:
+      display_name: Juan Garcia
+      first_name: Juan
+      last_name: Garcia
+    skills:
+    - Sales Strategy
+    - Customer Relations
+    timezone: America/Mexico_City
+    title: Sales Manager
+  username: jgarcia
+- groups:
+  - Finance
+  - All Employees
+  id: nkabongo
+  profile:
+    department: Finance
+    email: nkabongo@zai-intelligence-20260408.com
+    location: Cape Town
+    manager_id: aleblanc
+    name:
+      display_name: Nia Kabongo
+      first_name: Nia
+      last_name: Kabongo
+    skills:
+    - Financial Modeling
+    - Budget Analysis
+    timezone: Africa/Johannesburg
+    title: Financial Analyst
+  username: nkabongo
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: lmatsuda
+  profile:
+    department: Executive
+    email: lmatsuda@zai-intelligence-20260408.com
+    location: Tokyo
+    name:
+      display_name: Lina Matsuda
+      first_name: Lina
+      last_name: Matsuda
+    skills:
+    - Leadership
+    - Strategic Planning
+    timezone: Asia/Tokyo
+    title: CEO
+  username: lmatsuda
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: gmensah
+  profile:
+    department: Engineering
+    email: gmensah@zai-intelligence-20260408.com
+    location: Accra
+    manager_id: lmatsuda
+    name:
+      display_name: Grace Mensah
+      first_name: Grace
+      last_name: Mensah
+    skills:
+    - Team Management
+    - Machine Learning
+    timezone: Africa/Accra
+    title: Engineering Manager
+  username: gmensah
+- groups:
+  - Engineering
+  - All Employees
+  id: kvasilev
+  profile:
+    department: Engineering
+    email: kvasilev@zai-intelligence-20260408.com
+    location: Sofia
+    manager_id: gmensah
+    name:
+      display_name: Kiril Vasilev
+      first_name: Kiril
+      last_name: Vasilev
+    skills:
+    - Python
+    - Reinforcement Learning
+    timezone: Europe/Sofia
+    title: Software Engineer
+  username: kvasilev
+- groups:
+  - Finance
+  - Management
+  - All Employees
+  id: asuleiman
+  profile:
+    department: Finance
+    email: asuleiman@zai-intelligence-20260408.com
+    location: Dubai
+    manager_id: lmatsuda
+    name:
+      display_name: Aisha Suleiman
+      first_name: Aisha
+      last_name: Suleiman
+    skills:
+    - Budgeting
+    - Financial Modeling
+    timezone: Asia/Dubai
+    title: Finance Manager
+  username: asuleiman
+- groups:
+  - Sales
+  - All Employees
+  id: crivera
+  profile:
+    department: Sales
+    email: crivera@zai-intelligence-20260408.com
+    location: Mexico City
+    name:
+      display_name: Carlos Rivera
+      first_name: Carlos
+      last_name: Rivera
+    skills:
+    - Customer Relationship Management
+    - Negotiation
+    timezone: America/Mexico_City
+    title: Sales Representative
+  username: crivera
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: tsato
+  profile:
+    department: Executive
+    email: tsato@zai-intelligence-20260408.com
+    location: Tokyo
+    name:
+      display_name: Takumi Sato
+      first_name: Takumi
+      last_name: Sato
+    skills:
+    - Leadership
+    - Strategic Vision
+    timezone: Asia/Tokyo
+    title: CEO
+  username: tsato
+- groups:
+  - Engineering
+  - Management
+  - All Employees
+  id: nreddy
+  profile:
+    department: Engineering
+    email: nreddy@zai-intelligence-20260408.com
+    location: Bangalore
+    manager_id: tsato
+    name:
+      display_name: Nisha Reddy
+      first_name: Nisha
+      last_name: Reddy
+    skills:
+    - Team Management
+    - Reinforcement Learning
+    timezone: Asia/Kolkata
+    title: VP of Engineering
+  username: nreddy
+- groups:
+  - Sales
+  - Management
+  - All Employees
+  id: jkabongo
+  profile:
+    department: Sales
+    email: jkabongo@zai-intelligence-20260408.com
+    location: Cape Town
+    manager_id: tsato
+    name:
+      display_name: Jean Kabongo
+      first_name: Jean
+      last_name: Kabongo
+    skills:
+    - Negotiation
+    - Client Engagement
+    timezone: Africa/Johannesburg
+    title: Sales Manager
+  username: jkabongo
+- groups:
+  - Engineering
+  - All Employees
+  id: arossi
+  profile:
+    department: Engineering
+    email: arossi@zai-intelligence-20260408.com
+    location: Rome
+    manager_id: nreddy
+    name:
+      display_name: Alessandra Rossi
+      first_name: Alessandra
+      last_name: Rossi
+    skills:
+    - Python
+    - Distributed Systems
+    timezone: Europe/Rome
+    title: Senior Software Engineer
+  username: arossi
+- groups:
+  - Finance
+  - All Employees
+  id: lchan
+  profile:
+    department: Finance
+    email: lchan@zai-intelligence-20260408.com
+    location: Singapore
+    manager_id: tsato
+    name:
+      display_name: Li Chan
+      first_name: Li
+      last_name: Chan
+    skills:
+    - Forecasting
+    - Budget Management
+    timezone: Asia/Singapore
+    title: Financial Analyst
+  username: lchan

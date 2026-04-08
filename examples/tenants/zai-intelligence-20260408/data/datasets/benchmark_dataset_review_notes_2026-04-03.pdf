@@ -1,0 +1,163 @@
+# Emergency Review Session Notes: Benchmark Dataset Quality Issues
+
+**Date:** 2026-04-03  
+**Author:** Felipe Ribeiro  
+**Context:** Emergency review session held to address quality issues in the benchmark dataset ahead of the demo deadline. This document captures the findings, discussions, and action items from the session.
+
+---
+
+## Table of Contents
+1. [Background and Context](#background-and-context)
+2. [Summary of Issues Identified](#summary-of-issues-identified)
+3. [Detailed Findings](#detailed-findings)
+    - [Annotation Inconsistencies](#annotation-inconsistencies)
+    - [Data Integrity Concerns](#data-integrity-concerns)
+    - [Infrastructure Compatibility Challenges](#infrastructure-compatibility-challenges)
+4. [Impact Assessment](#impact-assessment)
+5. [Action Plan](#action-plan)
+6. [Next Steps](#next-steps)
+
+---
+
+## 1. Background and Context
+
+The benchmark dataset has encountered recurring quality issues that jeopardize the upcoming demo. With the demo deadline looming and investor scrutiny intensifying, an emergency review session was convened to assess the scope of the problems and define a course of action. The primary goal is to ensure that the dataset meets the required quality standards before it is showcased.
+
+Recent weeks have been marked by technical challenges, resource conflicts, and misaligned priorities. The dataset, initially plagued by annotation errors and inconsistencies, has become a focal point of internal and external pressure. Leadership tensions over the strategic direction of the project have further complicated efforts to resolve these issues.
+
+---
+
+## 2. Summary of Issues Identified
+
+During the review session, the following key issues were flagged:
+
+- **Annotation Inconsistencies:**
+  - Mismatched labels across multiple samples.
+  - Overlapping bounding boxes in image annotations.
+  - Missing annotations for critical classes.
+
+- **Data Integrity Concerns:**
+  - Corrupted data entries caused by a recent data recovery operation.
+  - Duplicate samples inflating the dataset size artificially.
+  - Unintended bias introduced during semi-automated annotation steps.
+
+- **Infrastructure Compatibility Challenges:**
+  - Compatibility issues between the open-source model and the dataset format.
+  - Performance bottlenecks arising from unoptimized data pipelines.
+
+---
+
+## 3. Detailed Findings
+
+### 3.1 Annotation Inconsistencies
+
+**Observation:**
+- Approximately 15% of the dataset contains mismatched labels. For instance, some images of 'Class A' were erroneously labeled as 'Class B.'
+- Overlapping bounding boxes were identified in ~8% of annotated images, particularly in dense object scenarios.
+- Missing annotations for key classes (e.g., 'Class C') were noted, affecting sample diversity.
+
+**Example Cases:**
+- Image ID `img_10234.jpg`: Annotated as 'Class B,' but ground truth indicates 'Class A.'
+- Image ID `img_20567.jpg`: Contains overlapping bounding boxes for objects of the same class.
+
+**Root Cause:**
+- Errors introduced during semi-automated annotation processes.
+- Insufficient QA checks during annotation reviews.
+
+### 3.2 Data Integrity Concerns
+
+**Observation:**
+- A recent incident involving accidental deletion and subsequent recovery of annotated data led to corrupted entries.
+- Duplicate samples were found in multiple dataset partitions (e.g., `train` and `test` splits), artificially inflating dataset size by ~7%.
+- Unintended bias was introduced due to over-representation of certain classes during semi-automated annotation.
+
+**Example Cases:**
+- Duplicate entries: `img_30045.jpg` appears in both `train` and `test` splits.
+- Corrupted entries: `img_45012.jpg` has incomplete metadata and labels.
+
+**Root Cause:**
+- Gaps in the data recovery process.
+- Lack of automated checks for duplicate and corrupted entries.
+
+### 3.3 Infrastructure Compatibility Challenges
+
+**Observation:**
+- The open-source model integration revealed compatibility issues with the dataset's metadata format.
+- Data pipelines were not optimized for the new annotation schema, leading to slower processing times.
+- Attempts to leverage undocumented features in the open-source model introduced additional complexity and errors.
+
+**Example Cases:**
+- Metadata mismatch errors during model training.
+- Latency spikes when loading large batches due to inefficient data preprocessing.
+
+**Root Cause:**
+- Poor alignment between dataset schema and model requirements.
+- Inadequate documentation and testing for new infrastructure components.
+
+---
+
+## 4. Impact Assessment
+
+The identified issues have the following implications:
+
+- **Technical Risks:**
+  - Reduced model performance due to inconsistent and biased training data.
+  - Increased likelihood of runtime errors during the demo.
+
+- **Operational Risks:**
+  - Delayed demo preparation due to rework on dataset QA.
+  - Strained relationships between teams due to resource conflicts.
+
+- **Reputational Risks:**
+  - Potential loss of investor confidence if issues are not resolved before the demo.
+  - Damage to the company’s credibility as a reliable AI solutions provider.
+
+---
+
+## 5. Action Plan
+
+The following actions were proposed and agreed upon:
+
+- **Immediate Actions (Deadline: 2026-04-04):**
+  - Conduct a full dataset QA pass to identify and rectify annotation inconsistencies.
+  - Remove duplicates and verify metadata integrity across all partitions.
+  - Implement short-term fixes for compatibility issues with the open-source model.
+
+- **Short-Term Actions (Deadline: 2026-04-07):**
+  - Develop automated validation scripts to flag future inconsistencies.
+  - Retrain the model on the corrected dataset and validate performance improvements.
+
+- **Long-Term Actions:**
+  - Revisit the semi-automated annotation process to minimize human error.
+  - Improve documentation and testing for all data pipelines and infrastructure components.
+
+---
+
+## 6. Next Steps
+
+### Assigned Responsibilities:
+- **Data Science Team:**
+  - Lead the dataset QA process and address annotation inconsistencies.
+  - Collaborate with the engineering team to resolve metadata compatibility issues.
+
+- **Engineering Team:**
+  - Optimize data pipelines for the updated annotation schema.
+  - Investigate long-term scalability solutions for the open-source model integration.
+
+- **Product Team:**
+  - Align demo preparation tasks with updated dataset timelines.
+  - Communicate progress updates to the CFO and leadership team.
+
+- **HR Team:**
+  - Address employee dissatisfaction stemming from recent policy miscommunications.
+  - Provide additional support to alleviate burnout among key personnel.
+
+### Milestones:
+- **2026-04-04:** Complete QA and initial fixes for the benchmark dataset.
+- **2026-04-07:** Finalize dataset updates and retrain the model.
+- **2026-04-10:** Conduct internal demo dry run with the updated dataset.
+
+---
+
+**Prepared by:** Felipe Ribeiro  
+**Reviewed by:** Emergency Review Session Team
