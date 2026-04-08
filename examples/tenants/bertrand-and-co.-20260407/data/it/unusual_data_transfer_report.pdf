@@ -1,0 +1,116 @@
+# Unusual Data Transfer Activity Report
+
+**Author:** Mosi Kabongo  
+**Date:** 2026-04-04  
+**Department:** IT  
+
+---
+
+## Executive Summary
+
+On April 4, 2026, the IT department at Bertrand and Co. identified unusual data transfer activity on the internal document server. This incident involved significant file exchanges between internal accounts that triggered security protocols and led to the temporary lockdown of the shared document server. Given the ongoing cybersecurity concerns, this report outlines the findings, immediate actions taken, and recommendations for mitigating future risks.
+
+---
+
+## Incident Overview
+
+### **Date & Time**
+- **Date:** April 4, 2026
+- **Time Identified:** 14:37 PM
+
+### **Affected Systems**
+- Shared document server (`Server-INT-04`)
+- Internal account communication channels
+
+### **Nature of Activity**
+- **Volume:** Approximately 1.2 GB of data transferred between three separate internal accounts.
+- **Files:** Primarily sensitive documents related to client IPO preparations, environmental compliance reports, and historical financial records.
+- **Unusual Behavior:** Data transfer patterns did not align with typical user workflows, suggesting either unauthorized activity or intentional misuse.
+
+### **Accounts Involved**
+1. **Account:** `j.doe@bertrand.co`
+   - **Role:** Junior Associate
+   - **Access Level:** Restricted access to client-related legal documents.
+
+2. **Account:** `s.miller@bertrand.co`
+   - **Role:** Litigation Associate
+   - **Access Level:** Moderate access to financial and legal data.
+
+3. **Account:** `it.admin@bertrand.co`
+   - **Role:** IT Administrator
+   - **Access Level:** Elevated access across all servers.
+
+---
+
+## Initial Findings
+
+### **Log Analysis**
+- **Timeframe of Activity:** 13:55 PM to 14:25 PM.
+- **IP Address Analysis:** Data transfers originated from internal IP addresses linked to Bertrand and Co. office locations.
+- **Authentication Method:** All accounts used valid credentials, indicating no immediate signs of external compromise.
+- **File Types Accessed:**
+  - `.pdf`, `.xlsx`, `.docx`, `.pptx`
+  - Keywords in file names: "Environmental Compliance," "IPO Strategy," "Financial Records."
+
+### **Potential Causes**
+1. **Phishing Incident:** Recent phishing attempts may have compromised user credentials.
+2. **Internal Malfeasance:** Deliberate misuse of access privileges by one or more employees.
+3. **Configuration Error:** System misconfiguration allowed unintended account permissions.
+
+---
+
+## Immediate Actions Taken
+
+### **Server Lockdown**
+- Restricted access to `Server-INT-04` as of 15:00 PM.
+- Implemented multi-factor authentication (MFA) for all affected accounts.
+
+### **Account Suspension**
+- Suspended the following accounts pending investigation:
+  - `j.doe@bertrand.co`
+  - `s.miller@bertrand.co`
+
+### **Data Backup & Isolation**
+- Created full backups of the server.
+- Isolated affected files for forensic analysis.
+
+### **Notification**
+- Alerted senior management and legal department.
+- Engaged external cybersecurity consultant to assist with investigation.
+
+---
+
+## Recommendations
+
+### **Enhanced Security Measures**
+1. **Mandatory Cybersecurity Training:**
+   - Schedule training sessions for all staff on phishing prevention, secure file handling, and account security.
+
+2. **Audit Access Permissions:**
+   - Conduct a comprehensive review of account access levels.
+   - Implement stricter controls for sensitive data.
+
+3. **Upgrade Encryption Protocols:**
+   - Replace outdated email encryption software.
+   - Implement end-to-end encryption for internal communications.
+
+### **Monitoring & Alerts**
+- Deploy real-time tracking tools for unusual data transfer patterns.
+- Configure automated alerts for high-volume transfers.
+
+### **Incident Response Plan**
+- Revise and rehearse the firm's incident response procedures.
+- Assign dedicated teams for rapid containment and communication during security events.
+
+---
+
+## Conclusion
+
+The unusual data transfer activity on April 4, 2026, highlights critical vulnerabilities in Bertrand and Co.'s internal systems. While the swift actions taken by the IT department minimized immediate risks, the incident underscores the need for proactive measures to strengthen cybersecurity protocols and safeguard sensitive data. By implementing the recommendations outlined in this report, Bertrand and Co. can mitigate future incidents and protect client trust amidst escalating external pressures.
+
+---
+
+**Prepared by:**  
+Mosi Kabongo  
+IT Department Head  
+Bertrand and Co.

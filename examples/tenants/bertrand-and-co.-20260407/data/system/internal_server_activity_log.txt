@@ -1,0 +1,118 @@
+# Internal Server Activity Log
+
+**Author:** Yolanda Silva  
+**Date:** 2026-04-02  
+**Context:** Log of unusual activity detected on Bertrand and Co.'s internal document server.
+
+---
+
+## Summary of Detected Activity
+
+On 2026-04-02, Bertrand and Co.'s IT department identified unusual activity on the firm's internal document server. This activity coincided with heightened cybersecurity concerns following phishing attempts and sensitive data mishandling within the firm. This report provides detailed findings and recommendations to address potential risks.
+
+---
+
+## Detailed Timeline of Events
+
+### 1. **Unusual Server Activity Detected**
+- **Timestamp:** 2026-04-02, 10:43 AM
+- **Description:** Multiple failed login attempts were recorded on the internal document server within a 15-minute window. The attempts originated from an external IP address flagged in previous phishing investigations.
+- **Affected System:** Internal Document Server (Server ID: DOC-SRV-003)
+- **Action Taken:**
+  - Login attempts were automatically blocked by the firewall after exceeding the threshold.
+  - IT department began an immediate investigation into the source of the activity.
+
+### 2. **Unauthorized File Access**
+- **Timestamp:** 2026-04-02, 11:22 AM
+- **Description:** An internal user account (User ID: JSmith_23) accessed files marked as 'Confidential' without proper clearance.
+- **Files Accessed:**
+  - `gens_chemistry_internal_audit_draft.pdf`
+  - `gens_chemistry_environmental_fines_2022.xlsx`
+- **Action Taken:**
+  - User activity was flagged for review.
+  - The account was temporarily suspended pending investigation.
+
+### 3. **Suspicious File Modification**
+- **Timestamp:** 2026-04-02, 1:15 PM
+- **Description:** A draft press release file (`gens_chemistry_EPO_response.docx`) was modified outside of regular working hours by an unrecognized device.
+- **Device Details:**
+  - **IP Address:** 192.168.1.45
+  - **Device Name:** UNKNOWN-45-JS
+  - **Location:** External network
+- **Action Taken:**
+  - File modifications were reverted to the previous version.
+  - Device was added to the blacklist.
+
+### 4. **Unusual Download Activity**
+- **Timestamp:** 2026-04-02, 3:47 PM
+- **Description:** A large volume of files (approx. 2 GB) was downloaded by a user account (User ID: AWalker_17) in a single session.
+- **Files Downloaded:**
+  - `gens_chemistry_financial_projection_2026.pptx`
+  - `gens_chemistry_environmental_violations_summary.docx`
+  - `gens_chemistry_pending_subpoenas.pdf`
+- **Action Taken:**
+  - Download activity was flagged.
+  - User account was locked, and the IT department is conducting a forensic review.
+
+---
+
+## Security Audit Findings
+
+### 1. **Potential Data Breach**
+- **Indicators:**
+  - External IP addresses attempting to gain unauthorized access.
+  - Unrecognized devices modifying confidential files.
+- **Risk Level:** High
+
+### 2. **Internal Account Misuse**
+- **Indicators:**
+  - Unauthorized file access and suspicious download patterns.
+  - Internal user activity that does not align with assigned roles.
+- **Risk Level:** Medium
+
+### 3. **Weak Document Security Protocols**
+- **Indicators:**
+  - Sensitive files found in shared printer rooms.
+  - Lack of encryption on key documents.
+- **Risk Level:** High
+
+---
+
+## Recommendations
+
+### 1. **Immediate Actions**
+- **Suspend accounts flagged for unusual activity:**
+  - User IDs: JSmith_23, AWalker_17
+- **Blacklist suspicious external IPs:**
+  - IP Address: 192.168.1.45
+- **Encrypt all sensitive files:**
+  - Priority: Documents related to Gens Chemistry Ltd.
+
+### 2. **Medium-Term Measures**
+- **Mandatory cybersecurity training:**
+  - Focus areas: Phishing prevention, secure file handling.
+  - Target audience: All staff, especially junior associates.
+- **Upgrade document server security:**
+  - Implement two-factor authentication.
+  - Restrict access based on clearance levels.
+
+### 3. **Long-Term Strategy**
+- **Conduct a full cybersecurity audit:**
+  - Engage external consultants to review infrastructure.
+- **Implement a document security policy:**
+  - Define protocols for sensitive file handling.
+  - Regularly review user access permissions.
+
+---
+
+## Conclusion
+
+The unusual activity detected on Bertrand and Co.'s internal document server poses significant risks to the firm's operations and reputation. Immediate and sustained measures are required to prevent potential data breaches and ensure compliance with legal and regulatory standards.
+
+**Next Steps:** Senior partners and IT leadership will convene for an emergency meeting on 2026-04-03 to finalize the response strategy.
+
+---
+
+**Prepared by:** Yolanda Silva  
+**Role:** Internal IT Auditor  
+**Date:** 2026-04-02

@@ -1,0 +1,4474 @@
+[
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Action Plan: CEO's Request for Damage Control'."
+      },
+      {
+        "description": "Filters by sender as Yara Jensen (yjensen)."
+      },
+      {
+        "description": "Restricts results to March 24, 2026."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_001",
+    "query": "Show me the email I sent about the CEO's urgent request for damage control strategy on March 24.",
+    "reasoning": "Yara Jensen (yjensen) is likely looking for the email she sent discussing the CEO's urgent request for a damage control action plan. The query should focus on the CEO's damage control strategy and Yara's involvement.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Next Steps: Meeting with Environmental Protection Organization'."
+      },
+      {
+        "description": "Filters by sender as Mosi Kabongo (mkabongo)."
+      },
+      {
+        "description": "Focuses exclusively on the meeting confirmation and document requests."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_002",
+    "query": "Find the email confirming the meeting with the Environmental Protection Organization and requests for related documents.",
+    "reasoning": "Rafael Gutierrez (rgutierrez) may need to review the email regarding the environmental meeting confirmed by Mosi Kabongo (mkabongo). The query should focus on the meeting and related documents.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Urgent: Internal Memo on Pollution Cover-ups'."
+      },
+      {
+        "description": "Filters by sender as Wei Huang (whuang)."
+      },
+      {
+        "description": "Focuses on the legal findings and IPO implications."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_003",
+    "query": "Locate the email I sent about the internal memo on pollution cover-ups and its impact on IPO transparency.",
+    "reasoning": "Wei Huang (whuang) may want to locate her own email summarizing the legal team's findings about pollution cover-ups and IPO implications. The query focuses on her authorship and the legal context.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Drafting Risk Disclosure for Gens Chemistry Ltd.'."
+      },
+      {
+        "description": "Filters by sender as Amina Nasser (anasser)."
+      },
+      {
+        "description": "Focuses on IPO-related risk disclosure drafting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_004",
+    "query": "Find the email I sent asking for guidance on drafting the risk disclosure for Gens Chemistry Ltd.'s IPO filings.",
+    "reasoning": "Amina Nasser (anasser) would be seeking her email regarding the drafting of a risk disclosure for Gens Chemistry Ltd.'s IPO filings. The query focuses on her authorship and the need for guidance.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Flagged Financial Projection Inconsistencies'."
+      },
+      {
+        "description": "Filters by sender as Jyoti Mukherjee (jmukherjee)."
+      },
+      {
+        "description": "Focuses on the flagged financial inconsistencies and IPO impact."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_005",
+    "query": "Show me the email I sent about financial projection inconsistencies and their potential impact on IPO preparations.",
+    "reasoning": "Jyoti Mukherjee (jmukherjee) would likely need to locate her email discussing flagged financial projection inconsistencies for IPO preparations. The query should focus on her authorship and the flagged inconsistencies.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Yara Jensen on 2026-03-25."
+      },
+      {
+        "description": "Matches keywords 'urgent strategy meeting,' 'IPO risks,' and 'Environmental Protection Organization.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_006",
+    "query": "Show me the email I sent about the urgent strategy meeting on IPO risks with the Environmental Protection Organization's evidence.",
+    "reasoning": "Yara Jensen likely wants to revisit the urgent strategy discussion she initiated regarding IPO risks, specifically focusing on environmental evidence and risk disclosures.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on 2026-03-24."
+      },
+      {
+        "description": "Matches keywords 'financial projection,' 'IPO requirements,' and 'immediate review.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_007",
+    "query": "Locate the email I sent about immediate financial projection reviews for IPO requirements.",
+    "reasoning": "Leena Patel may want to locate her email highlighting financial inconsistencies in Gens Chemistry Ltd.'s projections for IPO alignment.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Takeshi Kimura on 2026-03-24."
+      },
+      {
+        "description": "Matches keywords 'legal risks,' 'pollution cover-up,' and 'IPO transparency.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_008",
+    "query": "Find the email I wrote about legal risks from the pollution cover-up memo and its impact on IPO transparency.",
+    "reasoning": "Takeshi Kimura would likely need the email he sent regarding the legal implications of a pollution cover-up, as it pertains to IPO transparency risks.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Mosi Kabongo on 2026-03-25."
+      },
+      {
+        "description": "Matches keywords 'follow-up,' 'risk disclosure statement,' and 'pollution vulnerabilities.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_009",
+    "query": "Retrieve the follow-up email I sent about edits to the risk disclosure statement concerning pollution vulnerabilities.",
+    "reasoning": "Mosi Kabongo might want to find the follow-up email he sent addressing edits and clarifications to the risk disclosure statement tied to pollution cover-ups.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Markus Schmidt on 2026-03-24."
+      },
+      {
+        "description": "Matches keywords 'IPO timeline,' 'legal concerns,' and 'financial developments.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_010",
+    "query": "Find the email I sent about possibly adjusting the IPO timeline due to recent legal and financial developments.",
+    "reasoning": "Markus Schmidt may need his email discussing adjustments to the IPO timeline due to legal and financial concerns.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns email_004 sent by Yara Jensen"
+      },
+      {
+        "description": "Matches keywords 'aligning legal and financial teams' and 'public messaging'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_011",
+    "query": "Show me emails from March 25 about aligning legal and financial teams for public messaging.",
+    "reasoning": "Yara Jensen is likely involved in public communication strategies, given her email about a media response plan. She may need emails discussing alignment between legal and financial teams for Gens Chemistry Ltd.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns email_005 sent by Wei Huang"
+      },
+      {
+        "description": "Matches keywords 'legal impact analysis' and 'environmental evidence'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_012",
+    "query": "Find emails about legal impact analysis, specifically regarding environmental evidence.",
+    "reasoning": "Wei Huang is responsible for analyzing legal impacts related to environmental violations. They may need emails discussing evidence provided by the Environmental Protection Organization.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns email_007 sent by Jyoti Mukherjee"
+      },
+      {
+        "description": "Matches keywords 'inconsistencies' and 'financial projections'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_013",
+    "query": "Find emails from March 25 about inconsistencies in financial projections for Gens Chemistry Ltd.",
+    "reasoning": "Jyoti Mukherjee is analyzing financial projections for Gens Chemistry Ltd. She may need emails discussing preliminary findings and inconsistencies in projections.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns email_006 sent by Markus Schmidt"
+      },
+      {
+        "description": "Matches keywords 'IPO delay' and 'public trust issues'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_014",
+    "query": "Show me emails from March 25 discussing IPO delays due to public trust concerns.",
+    "reasoning": "Markus Schmidt is discussing the IPO delay recommendation for Gens Chemistry Ltd., focusing on public trust issues. He may need emails about this specific topic.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns email_003 sent by Rafael Gutierrez"
+      },
+      {
+        "description": "Matches keywords 'financial discrepancies' and 'historical IPO data'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_015",
+    "query": "Find emails from March 25 about financial discrepancies and historical IPO data cross-checks.",
+    "reasoning": "Rafael Gutierrez is reviewing financial discrepancies related to Gens Chemistry Ltd. He may need emails discussing cross-checking projections against historical IPO data.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on March 25, 2026."
+      },
+      {
+        "description": "Focuses specifically on the financial implications of the IPO delay."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_016",
+    "query": "Show me the email discussing the financial consequences of delaying the IPO sent this week.",
+    "reasoning": "The user is likely seeking an email related to the financial impact of the IPO delay discussion, authored by someone in a leadership role. Leena Patel's email on March 25 aligns with this request.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Takeshi Kimura on March 25, 2026."
+      },
+      {
+        "description": "Includes content discussing the updated legal strategy for IPO filing."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_017",
+    "query": "Find the email about adjustments to the IPO legal strategy sent yesterday.",
+    "reasoning": "The user is looking for a document authored by Takeshi Kimura regarding legal strategy changes on the IPO process, likely due to heightened media scrutiny.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Takeshi Kimura on March 26, 2026."
+      },
+      {
+        "description": "Focuses on scheduling a private meeting related to pollution allegations."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_018",
+    "query": "Locate the email requesting a private meeting with the legal team regarding pollution allegations.",
+    "reasoning": "The user likely attended or is involved in discussions about pollution allegations and wants details on a private meeting request proposed by Takeshi Kimura around March 26.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Jyoti Mukherjee on March 26, 2026."
+      },
+      {
+        "description": "Provides details on revenue growth overestimation and underperforming product lines."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_019",
+    "query": "Find the email addressing overestimation of revenue growth and underperforming product lines in the financial projections.",
+    "reasoning": "The user is looking for flagged issues related to financial projections and underperforming product lines, likely tied to revenue growth overestimation. Jyoti Mukherjee authored an email on this topic.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Wei Huang on March 25, 2026."
+      },
+      {
+        "description": "Contains an executive summary of legal risks tied to pollution cover-ups and recommendations."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_020",
+    "query": "Show me the executive summary about legal risks and mitigation strategies for the IPO process sent earlier this week.",
+    "reasoning": "The user is searching for a concise executive summary of legal risks related to pollution cover-ups, authored by Wei Huang on March 25.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Discussion on Media Briefing Strategy for Gens Chemistry Ltd.'"
+      },
+      {
+        "description": "Filters by author Yara Jensen and date March 26, 2026"
+      },
+      {
+        "description": "Ensures the email content discusses media briefing strategy and potential risks"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_021",
+    "query": "Show me my email about the risks and benefits of a media briefing for Gens Chemistry Ltd. from March 26.",
+    "reasoning": "Yara Jensen might be looking for her internal discussion email about the media briefing strategy for Gens Chemistry Ltd. on March 26. The query specifies the topic and focuses on the risks and benefits of conducting the briefing.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Revised Financial Analysis and Risk Implications for Gens Chemistry Ltd.'"
+      },
+      {
+        "description": "Filters by author Leena Patel and date March 26, 2026"
+      },
+      {
+        "description": "Ensures the email summary includes flagged financial inconsistencies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_022",
+    "query": "Find my email summarizing financial inconsistencies and IPO impact for Gens Chemistry Ltd. sent on March 26.",
+    "reasoning": "Leena Patel is likely searching for her email that includes a revised financial analysis addressing flagged inconsistencies and their impact on Gens Chemistry Ltd.'s IPO strategy.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Notice from Environmental Protection Organization: Clarification Required'"
+      },
+      {
+        "description": "Filters by author Takeshi Kimura and date March 26, 2026"
+      },
+      {
+        "description": "Ensures the email content discusses Bertrand and Co.'s role in environmental compliance issues"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_023",
+    "query": "Locate my email about the Environmental Protection Organization's clarification request related to Bertrand and Co. from March 26.",
+    "reasoning": "Takeshi Kimura might need to locate an email he sent regarding an environmental organization's notice about Bertrand and Co.'s role in compliance issues.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Potential Loophole in Gens Chemistry's Environmental Compliance Reports'"
+      },
+      {
+        "description": "Filters by author Amina Nasser and date March 27, 2026"
+      },
+      {
+        "description": "Ensures the email content includes details about the loophole and its implications"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_024",
+    "query": "Find my email about the loophole in Gens Chemistry's environmental compliance reports sent on March 27.",
+    "reasoning": "Amina Nasser is likely to seek the email she sent on March 27 discussing a loophole in Gens Chemistry's environmental compliance reports. The query focuses on the loophole and its implications.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Preliminary Recommendation to Delay Gens Chemistry Ltd.'s IPO'"
+      },
+      {
+        "description": "Filters by author Markus Schmidt and date March 26, 2026"
+      },
+      {
+        "description": "Ensures the email content includes the recommendation to delay the IPO and related disclosure strategy"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_025",
+    "query": "Retrieve my email about the recommendation to delay Gens Chemistry Ltd.'s IPO sent on March 26.",
+    "reasoning": "Markus Schmidt might want to locate his email containing the preliminary recommendation to delay Gens Chemistry Ltd.'s IPO, which he sent on March 26.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Urgent Update on IPO Risk Management Progress'"
+      },
+      {
+        "description": "Filters by author 'mschmidt' and date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_026",
+    "query": "Show me the email from Markus Schmidt about Bertrand and Co.'s IPO risks sent on the same day as the strategy meeting.",
+    "reasoning": "The user likely needs to locate the email regarding IPO risk management updates that directly impacts their financial or legal strategy. This request is best suited for someone with oversight like Yara Jensen.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Inconsistencies in Witness Testimonies from Environmental Protection Organization'"
+      },
+      {
+        "description": "Filters by author 'jmukherjee' and date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_027",
+    "query": "Find the email about witness testimony inconsistencies from Jyoti Mukherjee sent on March 27th.",
+    "reasoning": "Wei Huang might be investigating discrepancies in environmental protection cases and would need the email from Jyoti Mukherjee for evidence review.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Strategy Meeting on Media Briefing Proposal'"
+      },
+      {
+        "description": "Filters by author 'mkabongo' and date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_028",
+    "query": "Locate the email I sent about a last-minute strategy meeting to discuss PR and media briefing risks.",
+    "reasoning": "Mosi Kabongo initiated the meeting about media briefing risks, so they may need to locate their own email invite for follow-up or sharing.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Follow-Up on Environmental Compliance Loophole'"
+      },
+      {
+        "description": "Filters by author 'tkimura' and date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_029",
+    "query": "Retrieve the email I sent about the Gens Chemistry compliance loophole for deeper analysis.",
+    "reasoning": "Takeshi Kimura is likely tracking compliance issues and would need the email they sent about environmental loopholes for ongoing analysis.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with the subject 'Phishing Attempt Targeting Gens Chemistry Communications'"
+      },
+      {
+        "description": "Filters by author 'itsecurity' and date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_030",
+    "query": "Find the alert from IT Security about phishing attempts related to Gens Chemistry communications sent recently.",
+    "reasoning": "Amina Nasser, as a security-focused team member or stakeholder, might want to locate the IT notification about phishing attempts targeting Gens Chemistry.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Next Steps for Reviewing Witness Testimony Discrepancies'"
+      },
+      {
+        "description": "Matches the date '2026-03-27' and sender 'rgutierrez'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_031",
+    "query": "Show me the email from Rafael about reviewing inconsistencies in witness testimonies from March 27.",
+    "reasoning": "Yara Jensen (yjensen) is likely looking for guidance on reviewing witness testimony discrepancies, as it pertains to legal or compliance work. The query focuses on an email sent by Rafael Gutierrez on March 27, 2026, with specific keywords related to discrepancies.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Decision on Media Briefing'"
+      },
+      {
+        "description": "Identifies the sender as 'mschmidt' and date as '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_032",
+    "query": "Find the email from Markus about the firm's decision on the media briefing sent on March 27.",
+    "reasoning": "Wei Huang (whuang) would likely be interested in media-related decisions, as they might be part of PR or communications. This query filters for an email about the firm's decision on a media briefing sent by Markus Schmidt on March 27, 2026.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Recommendations for Addressing Compliance Loophole'"
+      },
+      {
+        "description": "Matches the sender as 'anasser' and the date '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_033",
+    "query": "Locate the email from Amina about strategies to address compliance loopholes from March 27.",
+    "reasoning": "Leena Patel (lpatel) might be tracking compliance issues or legal risks. This query focuses on an email from Amina Nasser about addressing compliance loopholes, sent on March 27, 2026.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Discrepancies in Pollution Timeline - Impact on Risk Disclosure'"
+      },
+      {
+        "description": "Identifies the sender as 'anasser' and date as '2026-03-28'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_034",
+    "query": "Can you find the email Amina sent about pollution timeline discrepancies and risk disclosures from March 28?",
+    "reasoning": "Yolanda Silva (ysilva) might be involved with risk disclosure or environmental reporting. This query targets an email from Amina Nasser discussing discrepancies in the pollution timeline, sent on March 28, 2026.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Media Briefing Proposal Follow-Up'"
+      },
+      {
+        "description": "Matches the sender as 'pr_consultant' and the date as '2026-03-27'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_035",
+    "query": "Find the email from the PR consultant about the media briefing proposal follow-up sent on March 27.",
+    "reasoning": "Takeshi Kimura (tkimura) might be following up on PR initiatives. This query targets an email from the PR consultant about the media briefing proposal follow-up, sent on March 27, 2026.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email 'email_006'"
+      },
+      {
+        "description": "Filters results to communications from Markus Schmidt"
+      },
+      {
+        "description": "Matches keywords 'encryption protocols' and 'IPO case files'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_036",
+    "query": "Show me the email from Markus about enhanced encryption protocols for IPO case files.",
+    "reasoning": "The user is looking for a specific email authored by Markus Schmidt regarding cybersecurity updates. The query is narrowed down by keywords related to encryption protocols and IPO case files.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email 'email_003'"
+      },
+      {
+        "description": "Filters results to items authored by Rafael Gutierrez"
+      },
+      {
+        "description": "Matches keywords 'financial projections' and 'pollution issues'"
+      },
+      {
+        "description": "Restricts results to items dated '2026-03-28'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_037",
+    "query": "Find Rafael's email about financial projections and pollution issues sent on March 28th.",
+    "reasoning": "The user is searching for a request related to financial disclosures and pollution discrepancies, authored by Rafael Gutierrez. The query limits results to emails sent on a specific day.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email 'email_005'"
+      },
+      {
+        "description": "Filters results to communications authored by Takeshi Kimura"
+      },
+      {
+        "description": "Matches keywords 'anonymous tip' and 'pollution incidents'"
+      },
+      {
+        "description": "Relates to the topic 'Gens Chemistry Ltd.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_038",
+    "query": "Locate the email from Takeshi about an anonymous pollution tip involving Gens Chemistry Ltd.",
+    "reasoning": "The user is looking for confidential information about pollution incidents involving Gens Chemistry Ltd., specifically from an email authored by Takeshi Kimura.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email 'email_004'"
+      },
+      {
+        "description": "Filters results to emails authored by Mosi Kabongo"
+      },
+      {
+        "description": "Matches keywords 'late-night meeting' and 'Gens Chemistry Ltd.'"
+      },
+      {
+        "description": "Restricts results to items dated '2026-03-28'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_039",
+    "query": "Find the email from Mosi confirming the late-night meeting with Gens Chemistry Ltd. on March 28th.",
+    "reasoning": "The user is interested in a confirmation email about a late-night meeting with Gens Chemistry Ltd., authored by Mosi Kabongo. The query focuses on the meeting context and date.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email 'email_002'"
+      },
+      {
+        "description": "Filters results to communications authored by Markus Schmidt"
+      },
+      {
+        "description": "Matches keywords 'legal contingency plan' and 'IPO delay'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_040",
+    "query": "Show me the email from Markus about legal contingency plans for an IPO delay.",
+    "reasoning": "The user is looking for legal instructions sent by Markus Schmidt regarding contingency planning for an IPO delay. The query narrows results by the author, topic, and keywords.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Yara Jensen on March 28, 2026."
+      },
+      {
+        "description": "Focuses on IPO challenges and regulatory scrutiny."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_041",
+    "query": "Find the email from late March discussing the strategic approach to IPO delays and public scrutiny.",
+    "reasoning": "Yara Jensen is likely following up on strategic matters related to IPO challenges due to her involvement in email discussions around this topic.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on March 29, 2026."
+      },
+      {
+        "description": "Specifically targets urgent revisions to financial disclosures."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_042",
+    "query": "Locate the email sent by Leena Patel about urgent revisions to the financial disclosure section of the IPO filing after discussions with the CFO.",
+    "reasoning": "Leena Patel is directly involved in emails about financial projections and revisions for the IPO filing, so she is likely searching for follow-up communications.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Amina Nasser on March 28, 2026."
+      },
+      {
+        "description": "Focuses on pollution cover-ups and legal strategies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_043",
+    "query": "Find the email summarizing investigations into potential pollution cover-ups and outlining next steps for the legal team.",
+    "reasoning": "Amina Nasser is deeply involved in legal investigations, and the query focuses on pollution cover-up evidence mentioned in her email.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Takeshi Kimura on March 28, 2026."
+      },
+      {
+        "description": "Targets environmental compliance clarification requests."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_044",
+    "query": "Retrieve the email regarding preparations to respond to the Environmental Protection Organization's request for clarification on compliance.",
+    "reasoning": "Takeshi Kimura's email discusses preparations for environmental clarifications, which aligns with regulatory matters he might be handling.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on March 28, 2026."
+      },
+      {
+        "description": "Focuses on financial projections and pollution disclosures."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_045",
+    "query": "Find the email from late March requesting an updated analysis of financial projections in light of pollution-related findings and investor concerns.",
+    "reasoning": "Wei Huang might be searching for deeper insights into financial projections due to investor concerns, especially with ongoing discussions around pollution disclosures.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Media Statement Draft: Addressing Pollution Allegations'."
+      },
+      {
+        "description": "Identifies Yara Jensen as the author."
+      },
+      {
+        "description": "Filters by type: email and date close to March 29, 2026."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_046",
+    "query": "Show me my draft email about addressing the pollution allegations from a few days ago.",
+    "reasoning": "Yara Jensen is likely looking for her draft email regarding the media statement addressing pollution allegations. This query specifies the email author (herself), mentions the subject of pollution allegations, and implies a specific date range (recent).",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Anonymous Allegation: Gens Chemistry Ltd. Suppressing Pollution Reports'."
+      },
+      {
+        "description": "Filters by keyword: suppression or pollution reports."
+      },
+      {
+        "description": "Identifies Amina Nasser as the sender."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_047",
+    "query": "Find the email Amina sent about allegations of suppressed pollution reports.",
+    "reasoning": "Amina Nasser is the sender of an email regarding anonymous allegations about Gens Chemistry Ltd. This query implies a search for emails mentioning 'pollution reports' or similar, sent by Amina in late March 2026.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Follow-Up: Revenue Projections and Fines Analysis'."
+      },
+      {
+        "description": "Filters by keyword: revenue projections and fines."
+      },
+      {
+        "description": "Identifies Rafael Gutierrez as the sender."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_048",
+    "query": "Can you get me Rafael's email about reconciling revenue projections with environmental fines?",
+    "reasoning": "Rafael Gutierrez sent a follow-up email about revenue projections and fines analysis on March 29, 2026. This query implies constraints on keywords, sender, and the date range.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Emergency Call Scheduled with Gens Chemistry Ltd.'s Board'."
+      },
+      {
+        "description": "Filters by keyword: emergency call, late afternoon."
+      },
+      {
+        "description": "Identifies Markus Schmidt as the sender."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_049",
+    "query": "Find Markus's email about the emergency call with Gens Chemistry's board scheduled for late afternoon.",
+    "reasoning": "Markus Schmidt's email outlines an emergency meeting with Gens Chemistry Ltd.'s board. This query targets a meeting-related email from Markus on March 29, 2026.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Conflict Identified: Revenue Projections vs. Environmental Fines'."
+      },
+      {
+        "description": "Filters by keyword: conflict, revenue projections, environmental fines."
+      },
+      {
+        "description": "Identifies Jyoti Mukherjee as the sender."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_050",
+    "query": "Show me Jyoti's email about potential conflicts between revenue projections and environmental fines.",
+    "reasoning": "Jyoti Mukherjee authored an email about a conflict between revenue projections and environmental fines. This query specifies keywords, the sender, and a recent timeframe.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Post-Emergency Call Action Items'"
+      },
+      {
+        "description": "Identifies the sender as Yara Jensen"
+      },
+      {
+        "description": "Filters based on the subject mentioning 'emergency board call' and 'action items'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_051",
+    "query": "Show me the email summarizing the outcomes of the emergency board call with Gens Chemistry Ltd. and listing the action items.",
+    "reasoning": "Yara Jensen likely needs a summary of the emergency board call to complete her tasks related to the action items. The query targets the email summarizing outcomes of the call and subsequent tasks.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Updated Financial Disclosure Based on New Findings'"
+      },
+      {
+        "description": "Identifies the sender as Leena Patel"
+      },
+      {
+        "description": "Filters by keywords 'updated financial disclosure' and 'environmental fines'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_052",
+    "query": "Find the latest email with the updated financial disclosure section based on new findings about environmental fines.",
+    "reasoning": "Leena Patel is likely working on financial disclosures and would need the updated section that reflects new adjustments. The query targets the email containing the adjusted disclosure information.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Contingency Plan for IPO Delay'"
+      },
+      {
+        "description": "Identifies the sender as Wei Huang"
+      },
+      {
+        "description": "Filters for keywords 'contingency plan' and 'IPO delay'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_053",
+    "query": "Locate the email with the legal team's contingency plan for the IPO delay due to public or regulatory pressures.",
+    "reasoning": "Wei Huang, as part of the legal team, is likely responsible for contingency planning related to the IPO. The query targets an email draft of the contingency plan.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Inconsistencies in Environmental Fine Estimates'"
+      },
+      {
+        "description": "Identifies the sender as Jyoti Mukherjee"
+      },
+      {
+        "description": "Filters for keywords 'inconsistencies', 'environmental fines', and 'risk assessment'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_054",
+    "query": "Retrieve the email about inconsistencies in the Environmental Protection Organization's fine estimates and their effect on IPO risk assessment.",
+    "reasoning": "Jyoti Mukherjee is investigating inconsistencies in environmental fine estimates. The query focuses on the email detailing discrepancies and their impact on risk assessment.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Preparation for Emergency Board Call'"
+      },
+      {
+        "description": "Identifies the sender as Takeshi Kimura"
+      },
+      {
+        "description": "Filters for keywords 'legal concerns', 'recommendations', and 'emergency board call'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_055",
+    "query": "Find the email summarizing legal concerns and recommendations for the emergency board call with Gens Chemistry Ltd.",
+    "reasoning": "Takeshi Kimura likely needs to reference the legal recommendations for the emergency board call he prepared. The query targets his email outlining concerns and recommendations.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Conflict Between Revenue Projections and Environmental Fines'"
+      },
+      {
+        "description": "Matches the author as Yolanda Silva"
+      },
+      {
+        "description": "Filters the date to March 30, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_056",
+    "query": "Show me the email from Yolanda Silva about how environmental fines might affect revenue projections for our IPO, sent on March 30th.",
+    "reasoning": "Yara Jensen is likely interested in financial implications of environmental fines due to her involvement in IPO filings. This query targets a specific email discussing this topic.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Urgent Meeting Request from Gens Chemistry Ltd. CEO'"
+      },
+      {
+        "description": "Filters for sender Mosi Kabongo"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_057",
+    "query": "Find the urgent email I sent about coordinating with Gens Chemistry Ltd. CEO to handle pollution allegations.",
+    "reasoning": "Mosi Kabongo likely needs to track down the urgent meeting coordination email he sent regarding pollution allegations. This query specifically narrows down to that email.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Media Inquiry: Allegations of Pollution Cover-Ups'"
+      },
+      {
+        "description": "Matches the date March 30, 2026"
+      },
+      {
+        "description": "Filters the sender as Markus Schmidt"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_058",
+    "query": "Locate the email I sent on March 30th about responding to the media inquiry regarding pollution cover-up allegations.",
+    "reasoning": "Markus Schmidt is likely responsible for handling sensitive media inquiries. This query is designed to retrieve an email he sent about a specific pollution cover-up allegation.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Cross-Checking Environmental Fine Estimates'"
+      },
+      {
+        "description": "Filters the sender as Rafael Gutierrez"
+      },
+      {
+        "description": "Matches the date March 30, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_059",
+    "query": "Find the email Rafael Gutierrez sent on March 30th about cross-checking environmental fine estimates and their flagged inconsistencies.",
+    "reasoning": "Rafael Gutierrez is likely following up on flagged inconsistencies in environmental fine estimates. This query targets his email on this topic.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email with subject 'Cybersecurity Protocol Review'"
+      },
+      {
+        "description": "Filters the sender as Takeshi Kimura"
+      },
+      {
+        "description": "Matches the date March 30, 2026"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_060",
+    "query": "Show me Takeshi Kimura's email about the unusual server activity and cybersecurity measures for IPO files, sent on March 30th.",
+    "reasoning": "Takeshi Kimura would likely be concerned with cybersecurity and IPO-related document protection. This query focuses on his report about unusual server activity.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Legal Review of Pollution Allegations'"
+      },
+      {
+        "description": "Filters by author 'mkabongo' and date '2026-03-30'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_061",
+    "query": "Show me the email from Mosi Kabongo about legal strategies for pollution allegations sent on March 30, 2026.",
+    "reasoning": "User is likely following up on the legal strategy discussed concerning pollution allegations. The query targets emails authored by Mosi Kabongo on a specific date related to this topic.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Media Statement Draft: Pollution Allegations'"
+      },
+      {
+        "description": "Filters by author 'mschmidt' and date '2026-03-30'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_062",
+    "query": "Find the email from Markus Schmidt about the media statement draft for pollution allegations sent on March 30, 2026.",
+    "reasoning": "User is likely seeking the draft for media statements regarding pollution allegations to provide feedback. The query targets emails authored by Markus Schmidt related to this topic on a specific date.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Emergency Strategy Meeting re: Gens Chemistry Ltd. Audit Discrepancies'"
+      },
+      {
+        "description": "Filters by author 'yjensen' and date '2026-03-31'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_063",
+    "query": "Retrieve the email from Yara Jensen about the emergency strategy meeting regarding audit discrepancies at Gens Chemistry Ltd., sent on March 31, 2026.",
+    "reasoning": "User is likely looking for the emergency meeting invitation about audit discrepancies at Gens Chemistry Ltd. The query targets emails authored by Yara Jensen on a specific date related to this topic.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Subpoena Request: Gens Chemistry Historical Pollution Documentation'"
+      },
+      {
+        "description": "Filters by author 'whuang' and date '2026-03-31'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_064",
+    "query": "Find Wei Huang's email about the subpoena request for Gens Chemistry Ltd.'s historical pollution documentation sent on March 31, 2026.",
+    "reasoning": "User is likely tasked with gathering documentation for a subpoena related to Gens Chemistry Ltd.'s historical pollution issues. The query targets emails authored by Wei Huang on the relevant date.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email titled 'Internal Memo Forwarding Error: Follow-Up Actions'"
+      },
+      {
+        "description": "Filters by author 'mkabongo' and date '2026-03-31'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_065",
+    "query": "Locate the email from Mosi Kabongo about the accidental memo forwarding and follow-up actions sent on March 31, 2026.",
+    "reasoning": "User is likely investigating the accidental memo forwarding incident and follow-up actions. The query targets emails authored by Mosi Kabongo on a specific date with relevant keywords.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Rafael Gutierrez on March 31, 2026."
+      },
+      {
+        "description": "Matches subject and summary related to EPO statement and IPO viability."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_066",
+    "query": "Show me the email about how the EPO statement is affecting investor sentiment and IPO timelines.",
+    "reasoning": "User is looking for detailed financial analysis related to the IPO impact caused by the Environmental Protection Organization's statement. The query implies the email authored by Rafael Gutierrez as he shared initial findings on this topic.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Takeshi Kimura on March 31, 2026."
+      },
+      {
+        "description": "Matches summary related to compliance documentation review."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_067",
+    "query": "Find the email discussing materials review for subpoena compliance with Gens Chemistry Ltd.",
+    "reasoning": "User is searching for documentation related to compliance with a subpoena regarding Gens Chemistry Ltd. The query matches an email authored by Takeshi Kimura requesting review of collected materials for subpoena compliance.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Yara Jensen on March 31, 2026."
+      },
+      {
+        "description": "Matches subject and summary related to cybersecurity training and phishing prevention."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_068",
+    "query": "Show me the email about cybersecurity training after the phishing attempt targeting the legal team.",
+    "reasoning": "User is looking for a cybersecurity discussion email related to a phishing attempt targeting the legal team. The query matches the email authored by Yara Jensen proposing mandatory cybersecurity training.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Amina Nasser on March 31, 2026."
+      },
+      {
+        "description": "Matches subject and summary regarding legal risk assessment related to pollution cases and the subpoena."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_069",
+    "query": "Find the email about legal risk assessment for past pollution cases tied to Gens Chemistry Ltd.",
+    "reasoning": "User is searching for legal risk assessment documentation tied to historical pollution cases and the subpoena for Gens Chemistry Ltd. The query matches the email authored by Amina Nasser drafting an initial legal risk assessment.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on March 31, 2026."
+      },
+      {
+        "description": "Matches subject and summary related to financial and public perception analysis following the EPO statement."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_070",
+    "query": "Find the email asking for analysis of financial and public perception impact after the EPO statement.",
+    "reasoning": "User is looking for an email about financial and public perception analysis following the EPO's statement. The query matches the email authored by Leena Patel requesting analysis of the financial and public reaction impact.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email sent by Yara Jensen on April 1, 2026."
+      },
+      {
+        "description": "Matches the keywords 'urgent,' 'environmental violations,' and 'Gens Chemistry.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_071",
+    "query": "Show me the urgent email about new environmental violations at Gens Chemistry from early April.",
+    "reasoning": "User is likely looking for the email regarding an urgent investigation into environmental violations at Gens Chemistry Ltd., which was sent by Yara Jensen on April 1, 2026.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email sent by Amina Nasser on April 1, 2026."
+      },
+      {
+        "description": "Matches the keywords 'fine payment inconsistencies' and 'Gens Chemistry.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_072",
+    "query": "Find the email from Amina about fine payment inconsistencies at Gens Chemistry sent on the first of April.",
+    "reasoning": "User wants to locate an email about discrepancies in fine payment records sent by Amina Nasser on April 1, 2026, concerning Gens Chemistry Ltd.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email sent by Wei Huang on April 1, 2026."
+      },
+      {
+        "description": "Matches the keywords 'meeting,' 'legal and strategic concerns,' and 'Gens Chemistry.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_073",
+    "query": "Locate the email about scheduling a meeting to discuss legal and strategic concerns for Gens Chemistry on April 1st.",
+    "reasoning": "User is searching for the email sent by Wei Huang proposing a legal and strategic meeting on Gens Chemistry Ltd. issues, dated April 1, 2026.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email sent by Yara Jensen on March 31, 2026."
+      },
+      {
+        "description": "Matches the keywords 'contingency planning,' 'IPO,' and 'Gens Chemistry.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_074",
+    "query": "Show me the email about contingency planning for Gens Chemistry's IPO sent on March 31st.",
+    "reasoning": "User is likely looking for the email from Yara Jensen regarding contingency planning for the Gens Chemistry Ltd. IPO, sent on March 31, 2026.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email sent by Markus Schmidt on March 31, 2026."
+      },
+      {
+        "description": "Matches the keywords 'investor relations strategy,' 'Gens Chemistry,' and 'IPO.'"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_075",
+    "query": "Find the email from Markus about investor relations strategy updates for Gens Chemistry sent at the end of March.",
+    "reasoning": "User is requesting the email from Markus Schmidt sent on March 31, 2026, which contains updates on investor relations strategy regarding Gens Chemistry Ltd.'s IPO.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Leena Patel on April 1, 2026."
+      },
+      {
+        "description": "Subject mentions 'Financial Impact Assessment of Gens Chemistry Ltd.'s Historical Discrepancies'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_076",
+    "query": "Find the email from Leena about the financial discrepancies in Gens Chemistry Ltd.'s fine payment history and its impact on the IPO.",
+    "reasoning": "User is looking for a specific email related to financial discrepancies at Gens Chemistry Ltd. sent by Leena Patel for IPO preparations.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Mosi Kabongo on April 1, 2026."
+      },
+      {
+        "description": "Subject mentions 'Subpoena Compliance and Risk Mitigation for Gens Chemistry Ltd.'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_077",
+    "query": "Locate the latest email discussing subpoena compliance and risk mitigation strategies for Gens Chemistry Ltd.",
+    "reasoning": "User is investigating compliance and risks related to subpoenas for Gens Chemistry Ltd., likely seeking a recent email update from Mosi Kabongo.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Markus Schmidt on April 1, 2026."
+      },
+      {
+        "description": "Subject mentions 'Cancellation of CFO Meeting and Internal Speculation'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_078",
+    "query": "Find the email explaining why the CFO meeting was canceled and discussing potential internal issues at Gens Chemistry Ltd.",
+    "reasoning": "User is concerned about the abrupt cancellation of a CFO meeting and wants context on internal challenges at Gens Chemistry Ltd. Markus Schmidt authored an email on this topic.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Markus Schmidt on April 1, 2026."
+      },
+      {
+        "description": "Subject mentions 'Cybersecurity Audit Progress and Phishing Attempt Follow-Up'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_079",
+    "query": "Show me the email with updates from the external cybersecurity consultant and recommendations for phishing prevention.",
+    "reasoning": "User is following up on a cybersecurity audit and phishing prevention strategies. Markus Schmidt sent an email on this topic.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Returns the email authored by Yara Jensen on April 1, 2026."
+      },
+      {
+        "description": "Subject mentions 'Crisis Communication Strategy for Gens Chemistry Ltd.'."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_080",
+    "query": "Retrieve the email about the crisis communication strategy for Gens Chemistry Ltd. regarding the Environmental Protection Organization's statement.",
+    "reasoning": "User is preparing a crisis communication strategy in response to an Environmental Protection Organization's public statement. Yara Jensen drafted an email discussing this.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the internal memo discussing pollution cover-ups by Gens Chemistry Ltd."
+      },
+      {
+        "description": "Links the internal memo to the email about the CEO's request for damage control."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/memos/internal_memo_gens_pollution.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_081",
+    "query": "What strategies were suggested in the email discussing the coordinated response to Gens Chemistry Ltd.'s CEO's request, and how do they relate to the internal memo about pollution cover-ups?",
+    "reasoning": "Trace the connection between the internal memo about pollution cover-ups and the coordinated response strategy discussed in the email.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email discussing flagged financial inconsistencies."
+      },
+      {
+        "description": "Links the flagged inconsistencies to the meeting about evaluating IPO risks."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting4",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_082",
+    "query": "What specific financial inconsistencies were discussed in the email and how were they addressed in the meeting about IPO preparations?",
+    "reasoning": "Identify how the flagged financial inconsistencies discussed in one email influenced the meeting about IPO preparations.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the group chat discussing the drafting of the risk disclosure statement."
+      },
+      {
+        "description": "Connects the contents of the risk disclosure draft to the group chat discussions."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "group_chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/docs/risk_disclosure_draft.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_083",
+    "query": "How does the draft risk disclosure statement reflect the discussions in the group chat about legal implications for Gens Chemistry Ltd.'s IPO filings?",
+    "reasoning": "Determine how the draft risk disclosure statement connects to the group chat about legal implications and IPO filings.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the evidence provided by the Environmental Protection Organization."
+      },
+      {
+        "description": "Connects the evidence to the proposed adjustments in the legal strategy."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/evidence/environmental_violations_evidence.zip",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_084",
+    "query": "What legal strategy adjustments were proposed in response to the evidence from the Environmental Protection Organization?",
+    "reasoning": "Determine how the evidence provided by the Environmental Protection Organization influenced the legal strategy adjustments discussed in the emails.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies internal debates and discussions about delaying the IPO."
+      },
+      {
+        "description": "Connects these discussions to the financial analysis of delaying the IPO."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_5",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/notes/ipo_delay_debate_meeting_minutes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_085",
+    "query": "What events led to the evaluation of the financial implications of delaying Gens Chemistry Ltd.'s IPO?",
+    "reasoning": "Trace the chain of events that led to the decision to evaluate a potential IPO delay and its financial implications.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the cross-check task assigned to the junior analyst."
+      },
+      {
+        "description": "Connects the results of the cross-check to the insights shared in the email."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_3",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/financial/financial_projection_analysis.xlsx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_086",
+    "query": "How did the cross-check of Gens Chemistry Ltd.'s financial projections inform the insights shared in the email?",
+    "reasoning": "Link the discrepancies in financial projections to the junior analyst's cross-checking task and the subsequent email insights.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the private meeting request from Gens Chemistry Ltd.'s legal team"
+      },
+      {
+        "description": "Connects the private meeting discussion to Bertrand and Co.'s guidance on investor confidence"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/emails/private_meeting_request.json",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_087",
+    "query": "What guidance did Bertrand and Co. provide to Gens Chemistry Ltd.'s legal team in response to their private meeting request about investor confidence?",
+    "reasoning": "Trace the sequence of discussions from the private meeting request by Gens Chemistry Ltd.'s legal team to the firm's guidance on investor confidence amidst pollution allegations.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the flagged revenue overestimation in the financial analysis file"
+      },
+      {
+        "description": "Connects the flagged issue to IPO strategy recommendations discussed in meetings"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/analysis/revenue_projection_review.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_088",
+    "query": "How did the flagged revenue overestimation impact Bertrand and Co.'s IPO strategy recommendations for Gens Chemistry Ltd.?",
+    "reasoning": "Link the flagged revenue overestimation from the data analysis file to the implications discussed during IPO strategy meetings.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the Environmental Protection Organization's notice requesting clarification"
+      },
+      {
+        "description": "Links Bertrand and Co.'s internal discussions to their formal response during the meeting"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/notices/epo_clarification_request.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "group_chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_089",
+    "query": "What was Bertrand and Co.'s response to the Environmental Protection Organization's inquiry about their role in Gens Chemistry Ltd.'s compliance measures?",
+    "reasoning": "Follow the chain of events from the Environmental Protection Organization's notice to Bertrand and Co.'s internal discussions and formal response.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the phishing attempt described in the report from the IT department."
+      },
+      {
+        "description": "Connects the phishing attempt to the group chat discussing measures taken."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/security/phishing_attempt_report_2026-03-27.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "group_chat_006",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_090",
+    "query": "What cybersecurity measures were implemented after the phishing attempt targeting internal communications related to Gens Chemistry Ltd.?",
+    "reasoning": "Determine the connection between the phishing attempt described in the report and the cybersecurity measures discussed in the group chat.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the chat where the compliance loophole was initially discussed."
+      },
+      {
+        "description": "Follows up on the legal team's evaluation of the loophole in the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_2",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_091",
+    "query": "What potential liability risks related to Gens Chemistry Ltd.'s compliance loophole were discussed in the legal team's meeting?",
+    "reasoning": "Trace the discussion about Gens Chemistry's environmental compliance loophole from the chat to the legal team's evaluation in the meeting.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email discussing risks associated with the media briefing."
+      },
+      {
+        "description": "Links the concerns raised to the strategy meeting led by Markus Schmidt."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_002",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_092",
+    "query": "What concerns about legal and reputational risks were raised in relation to the media briefing during Markus Schmidt's strategy meeting?",
+    "reasoning": "Connect the media briefing suggestion in the email to the strategy meeting led by Markus Schmidt.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the confidential tip file related to undisclosed pollution incidents."
+      },
+      {
+        "description": "Maps the tip to the meeting discussing its validity and implications."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/tips/anonymous_pollution_tip_2026-03-28.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_093",
+    "query": "Which meeting discussed the confidential tip about additional undisclosed pollution incidents involving Gens Chemistry Ltd.?",
+    "reasoning": "Trace the connection between the confidential tip about undisclosed pollution incidents and the meeting to assess its validity and implications.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Recognizes the suspicious activity targeting IPO files."
+      },
+      {
+        "description": "Identifies the encryption protocols as the response to the suspicious activity."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "group_chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/it/encryption_protocols_update_2026-03-28.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_094",
+    "query": "What measures were taken after suspicious activity targeting IPO-related files was noticed?",
+    "reasoning": "Find the connection between suspicious activity targeting IPO files and the implementation of enhanced encryption protocols.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies discrepancies in pollution disclosures as a key topic."
+      },
+      {
+        "description": "Connects discrepancies to investor confidence concerns discussed in the meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_095",
+    "query": "Which meeting addressed the discrepancies in pollution disclosures and their impact on investor confidence?",
+    "reasoning": "Determine the connection between discrepancies in pollution disclosures and their impact on investor confidence.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the anonymous email as the source of allegations about pollution report suppression."
+      },
+      {
+        "description": "Links the email to discussions about regulatory and public pressures on the IPO timeline."
+      },
+      {
+        "description": "Connects these pressures to the contingency plan drafted by the legal team."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_007",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_096",
+    "query": "What was the legal team's contingency plan in response to allegations of pollution report suppression by Gens Chemistry Ltd.?",
+    "reasoning": "Trace the chain of events linking the anonymous email about pollution report suppression to the IPO contingency plan drafted by the legal team.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the flagged conflict in revenue projections and environmental fines."
+      },
+      {
+        "description": "Links this conflict to the request for further financial disclosure revisions."
+      },
+      {
+        "description": "Connects the revisions to the updated IPO valuation."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/analysis/revenue_vs_environmental_fines.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_097",
+    "query": "How did the flagged conflict between revenue projections and environmental fines impact the IPO valuation revisions?",
+    "reasoning": "Follow the data from the flagged conflict between revenue projections and environmental fines to its impact on IPO valuation revisions.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the PR consultant's draft statement and liability concerns raised by the legal team."
+      },
+      {
+        "description": "Links these concerns to discussions in the emergency board call."
+      },
+      {
+        "description": "Connects the outcome of the board call to adjustments in the media strategy."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/media_statement_draft.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_098",
+    "query": "What media strategy adjustments were made in response to the legal team's concerns about liability in the PR consultant's draft statement?",
+    "reasoning": "Determine how the legal team's concerns about liability in the PR consultant's draft statement influenced the media strategy adjustments discussed after the emergency board call.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the flagged inconsistencies in environmental fine estimates."
+      },
+      {
+        "description": "Connects the flagged discrepancies to the meeting where they were raised."
+      },
+      {
+        "description": "Identifies the junior analyst as the person who discovered the discrepancies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_099",
+    "query": "Which meeting discussed the discrepancies flagged in the Environmental Protection Organization's fine estimates, and who discovered these inconsistencies?",
+    "reasoning": "Trace the connection between the inconsistencies in environmental fine estimates and the meeting where these issues were raised.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies unusual server activity flagged by the IT department."
+      },
+      {
+        "description": "Tracks how the leadership team coordinated a cybersecurity review."
+      },
+      {
+        "description": "Locates the discussion in a group chat or meeting."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_100",
+    "query": "What was the leadership team's response to the unusual server activity detected, and in which group chat or meeting was this discussed?",
+    "reasoning": "Link the cybersecurity incident to the leadership's strategic response to secure sensitive IPO-related documents.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the media inquiry regarding pollution cover-ups."
+      },
+      {
+        "description": "Connects the inquiry to the PR team's effort in drafting a response."
+      },
+      {
+        "description": "Enlists individuals or teams involved in the discussions leading to the draft."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_007",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/media_queries/media_inquiry_response_draft_2026_0330.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_101",
+    "query": "How did the media inquiry regarding pollution cover-ups lead to the creation of the PR consultant's draft statement, and who was involved in the discussions?",
+    "reasoning": "Follow the chain of events linking allegations of pollution suppression to the PR team's draft response.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the subpoena documentation request in 'email_002' and 'email_006'"
+      },
+      {
+        "description": "Connects the subpoena topic to 'meeting-004' where the response plan was discussed"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_102",
+    "query": "Which meeting addressed the response plan for the subpoena requesting additional documentation related to Gens Chemistry Ltd.'s historical pollution fines?",
+    "reasoning": "Connect the subpoena documentation request to the meeting where the response plan for the subpoena was discussed.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the EPO public statement in 'data/statements/epo_public_statement_gens_accountability.pdf'"
+      },
+      {
+        "description": "Links the statement's impact to 'chat_005' and 'email_007', which discuss investor confidence"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/statements/epo_public_statement_gens_accountability.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat_005",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_103",
+    "query": "Where was the impact of the Environmental Protection Organization's statement on investor confidence discussed?",
+    "reasoning": "Trace the connection between the Environmental Protection Organization's statement and its discussed impact on investor confidence.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the phishing attempt report in 'data/security/phishing_attempt_report.pdf'"
+      },
+      {
+        "description": "Connects the phishing attempt to 'email_005', 'chat_006', and 'meeting-005', which propose cybersecurity training"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/security/phishing_attempt_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_006",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-005",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_104",
+    "query": "What steps were proposed in response to the phishing attempt targeting the legal team?",
+    "reasoning": "Follow the chain of events from the phishing attempt report to the proposed cybersecurity training.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the anonymous tip document"
+      },
+      {
+        "description": "Connects the document to the meeting discussing the investigation strategy"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/anonymous_tip_environmental_violations.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_105",
+    "query": "Which meeting was held to strategize the investigation in response to the anonymous tip about Gens Chemistry Ltd.'s environmental violations?",
+    "reasoning": "Trace the link between the anonymous tip about undisclosed environmental violations and the meeting where the investigation strategy was discussed.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the spreadsheet on fine payment discrepancies"
+      },
+      {
+        "description": "Links the spreadsheet to the chat about legal review preparation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/reports/fine_payment_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat6",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_106",
+    "query": "Which chat discusses preparing data for legal review based on Gens Chemistry Ltd.'s fine payment discrepancies?",
+    "reasoning": "Connect the historical fine payment discrepancies to the legal review preparation mentioned in a chat.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the notes documenting the CFO's meeting cancellation"
+      },
+      {
+        "description": "Links the notes to the chat discussing potential internal challenges"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/notes/cfo_meeting_cancellation_notes.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat4",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_107",
+    "query": "Which chat discusses potential internal challenges at Gens Chemistry Ltd. following the abrupt cancellation of the CFO's meeting?",
+    "reasoning": "Follow the chain of events from the abrupt cancellation of the CFO's meeting to the discussion about internal challenges in Gens Chemistry Ltd.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the whistleblower report alleging financial fraud"
+      },
+      {
+        "description": "Analyzes the group chat discussing the impact on IPO preparations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/reports/financial_fraud_whistleblower_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat_008",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_108",
+    "query": "How did the whistleblower report about financial fraud affect IPO preparations according to the finance team's discussion?",
+    "reasoning": "Trace the relationship between the whistleblower allegations of financial fraud and its impact on IPO preparations, as discussed in the finance team's group chat.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the IT department's concerns about server activity"
+      },
+      {
+        "description": "Reviews the external consultant's audit results and proposed measures"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_109",
+    "query": "What vulnerabilities were highlighted by the external consultant's audit after the IT department raised concerns about server activity?",
+    "reasoning": "Connect the cybersecurity concerns raised by the IT department to the external consultant's audit results and proposed measures.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the PR team's struggles in group chat discussions"
+      },
+      {
+        "description": "Analyzes the draft press release addressing Environmental Protection Organization demands"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_003",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/pr/environmental_protection_response_draft.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_110",
+    "query": "What challenges did the PR team face in finalizing the tone and messaging for the press release addressing the Environmental Protection Organization's demands?",
+    "reasoning": "Link the PR team's struggles with the Environmental Protection Organization's demands to the draft press release and its tone and messaging.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Recognizes the meeting summary discussing the accidental PR draft leak as 'meeting-001'"
+      },
+      {
+        "description": "Identifies Yara Jensen's chat about fallout from the same incident as 'chat1'"
+      },
+      {
+        "description": "Connects both events to determine overlapping participants."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "chat1",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_111",
+    "query": "Who were the participants involved in the meeting about the accidental PR draft leak, and how does it relate to Yara Jensen's chat about fallout from the incident?",
+    "reasoning": "Identify the relationship between the accidental PR draft leak and the meeting discussing the internal scramble, then connect it to the involved individuals.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the server log documenting the suspicious login attempt as 'data/logs/server_login_alert_20260403.log'"
+      },
+      {
+        "description": "Connects the log to the email requesting a legal review ('email_005')"
+      },
+      {
+        "description": "Links both to the group chat ('groupchat1') discussing server access protocols."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/logs/server_login_alert_20260403.log",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "groupchat1",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_112",
+    "query": "How does the suspicious login attempt documented in the server log relate to the email requesting legal review and the group chat discussing server access protocols?",
+    "reasoning": "Trace the chain of events from the suspicious login attempt to the email discussing a legal review and the group chat addressing IT protocols.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email summarizing investor concerns as 'email_003'"
+      },
+      {
+        "description": "Links it to the group chat ('groupchat2') and meeting ('meeting-004') discussing IPO strategies and investor risk mitigation."
+      },
+      {
+        "description": "Traces participant involvement across these events."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "groupchat2",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_113",
+    "query": "Who were the key participants discussing investor concerns about environmental controversies, and how do these concerns connect to contingency plans for the IPO?",
+    "reasoning": "Examine how investor concerns about environmental controversies influence IPO strategy discussions and identify the participants involved across events.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the anonymous email warning about the IPO document leak."
+      },
+      {
+        "description": "Links the email to the meeting where next steps were discussed."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_114",
+    "query": "Which meeting was held to address the concerns raised in the anonymous email about the potential IPO document leak?",
+    "reasoning": "Trace the link between the anonymous email warning about an IPO document leak and the meeting held to address this issue.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email and chat discussing the unusual data transfer activity."
+      },
+      {
+        "description": "Locates the report documenting the server lockdown and data transfer details."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/it/unusual_data_transfer_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_115",
+    "query": "Where can I find the detailed report on the unusual data transfer activity that led to the server lockdown?",
+    "reasoning": "Connect the IT department's detection of unusual data transfer activity to the report documenting the server lockdown.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email and meeting discussing pollution fine discrepancies."
+      },
+      {
+        "description": "Links these issues to the leadership's feedback and subsequent press release revisions."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/communications/pr_draft_response_epo.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_116",
+    "query": "What revisions were made to the draft press release after Gens Chemistry Ltd.'s leadership raised concerns about the discrepancies in pollution fine records?",
+    "reasoning": "Follow the chain of events from the discovered pollution fine discrepancies to the draft press release revised after leadership concerns.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "The environmental compliance report draft contains updates to regulatory strategies."
+      },
+      {
+        "description": "These updates have implications for the IPO discussed in related emails and meetings."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/environmental_compliance_draft.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-005",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_117",
+    "query": "What are the regulatory strategy updates mentioned in the environmental compliance report draft, and how do they impact Gens Chemistry Ltd.'s IPO preparations?",
+    "reasoning": "Identify the connection between the new environmental compliance report draft found on the shared server and its implications for Gens Chemistry Ltd.'s IPO strategy discussed in related events.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "The subpoena response draft was left unsecured overnight."
+      },
+      {
+        "description": "This incident prompted discussions and meetings to review document security measures."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/subpoena_response_draft.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_118",
+    "query": "How did the incident involving the unsecured subpoena response draft lead to a broader review of document security protocols?",
+    "reasoning": "Trace the sequence of events related to the subpoena response draft being left unsecured and the subsequent review of document security protocols.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Investor concerns were raised about environmental controversies impacting Gens Chemistry Ltd.'s IPO confidence."
+      },
+      {
+        "description": "These concerns led to urgent revisions to the press release to address media and investor pressure."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_007",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/press_release_revised.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_119",
+    "query": "What investor concerns were discussed regarding Gens Chemistry Ltd.'s environmental controversies, and how did these concerns shape the revisions to the press release?",
+    "reasoning": "Evaluate how Gens Chemistry Ltd.'s investor concerns about environmental controversies influenced the press release revisions and strategy discussions.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email discussing the anonymous envelope (email_001)"
+      },
+      {
+        "description": "Identifies the follow-up email suggesting preliminary verification and legal steps (email_006)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/docs/anonymous_pollution_claims.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_120",
+    "query": "What were the suggested legal steps after the anonymous envelope containing claims of additional pollution violations was discussed?",
+    "reasoning": "Trace the chain of events from the anonymous envelope about pollution violations to the suggested next steps for legal action.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email raising concerns about flagged outbound email traffic (email_002)"
+      },
+      {
+        "description": "Identifies the email audit findings from the surprise audit (email_004)"
+      },
+      {
+        "description": "Identifies the emergency cybersecurity meeting (meeting_001)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/logs/outbound_email_traffic_2026-04-06.csv",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_121",
+    "query": "What were the outcomes of the investigation into the flagged outbound email traffic, and how was it addressed in the cybersecurity meeting?",
+    "reasoning": "Connect the flagged outbound email traffic to the cybersecurity meeting and the related audit findings.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Identifies the email notifying stakeholders about the whistleblower's voicemail (email_005)"
+      },
+      {
+        "description": "Identifies the chat discussing strategies about the voicemail (chat_004)"
+      },
+      {
+        "description": "Identifies the meeting analyzing the financial fraud implications (meeting_003)"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/audio/whistleblower_voicemail.wav",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_122",
+    "query": "What strategies were discussed following the whistleblower's voicemail about inflated financial projections, and what were the outcomes of the follow-up meeting?",
+    "reasoning": "Link the whistleblower voicemail to the strategy discussion and the meeting analyzing its implications.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the significance of the internal memo on pollution cover-ups."
+      },
+      {
+        "description": "Summarizes the legal vulnerabilities and risk disclosure updates."
+      },
+      {
+        "description": "Discusses the impact on the IPO timeline and public trust."
+      },
+      {
+        "description": "Covers the communication strategy adjustments in response to media scrutiny."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/memos/internal_memo_gens_pollution.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/legal/risk_disclosure_draft_v2.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/media/ipo_communication_strategy.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_123",
+    "query": "Provide a comprehensive analysis of how the internal memo and evidence of pollution cover-ups by Gens Chemistry Ltd. have influenced the IPO strategy, including legal, financial, and communication considerations.",
+    "reasoning": "The context includes multiple discussions and artifacts related to Gens Chemistry Ltd.'s pollution cover-ups. A report query should focus on how these revelations impact the IPO process.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the specific inconsistencies flagged in financial projections."
+      },
+      {
+        "description": "Explores the overestimation of revenue growth tied to underperforming product lines."
+      },
+      {
+        "description": "Analyzes the impact of these inconsistencies on IPO readiness."
+      },
+      {
+        "description": "Provides recommendations for mitigating financial risks."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/analysis/financial_projection_review.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/analysis/revenue_projection_review.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_124",
+    "query": "Generate a detailed report on the flagged financial inconsistencies in Gens Chemistry Ltd.'s IPO filings, focusing on their nature, potential risks, and suggested actions.",
+    "reasoning": "Several artifacts and discussions highlight financial inconsistencies in Gens Chemistry Ltd.'s IPO filings. A report query should examine these issues and their implications.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the arguments for and against delaying the IPO."
+      },
+      {
+        "description": "Discusses the impact of a delay on public trust and transparency."
+      },
+      {
+        "description": "Considers financial, legal, and reputational risks."
+      },
+      {
+        "description": "Provides a clear recommendation based on the available evidence."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "group_chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "group_chat_005",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/memos/recommendation_ipo_delay.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/notes/ipo_delay_debate_meeting_minutes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_125",
+    "query": "Prepare an analysis of the internal debate at Bertrand and Co. regarding the potential delay of Gens Chemistry Ltd.'s IPO, including the pros, cons, and strategic recommendations.",
+    "reasoning": "The context presents ongoing discussions and debates about delaying Gens Chemistry Ltd.'s IPO. A report query should assess the arguments and implications of a potential delay.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a summary of the pollution cover-up allegations and evidence provided"
+      },
+      {
+        "description": "Analyzes the legal implications for Gens Chemistry Ltd.'s IPO"
+      },
+      {
+        "description": "Proposes recommendations for mitigating these risks"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/legal/risk_disclosure_draft_v2.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/evidence/environmental_violations_evidence.zip",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_126",
+    "query": "Provide a detailed analysis of the legal vulnerabilities tied to Gens Chemistry Ltd.'s pollution cover-ups and the evidence provided by the Environmental Protection Organization.",
+    "reasoning": "The legal vulnerabilities tied to pollution cover-ups and the evidence provided by the Environmental Protection Organization are critical to understanding the risks associated with Gens Chemistry Ltd.'s IPO. A report query should summarize and analyze these legal risks comprehensively.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the flagged discrepancies in financial projections"
+      },
+      {
+        "description": "Explains how these inconsistencies could affect IPO strategy"
+      },
+      {
+        "description": "Includes historical comparisons from similar IPOs"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/financial/financial_projection_analysis.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_127",
+    "query": "Create a comprehensive report on the flagged discrepancies in Gens Chemistry Ltd.'s financial projections, including their impact on IPO preparations.",
+    "reasoning": "The discrepancies in financial projections flagged during the cross-check process could significantly impact IPO preparations. A report query should outline the flagged inconsistencies and their implications.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the pros and cons of delaying the IPO"
+      },
+      {
+        "description": "Includes insights from internal discussions and meetings"
+      },
+      {
+        "description": "Provides actionable recommendations for senior leadership"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/notes/ipo_delay_debate_meeting_minutes.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      }
+    ],
+    "id": "case_128",
+    "query": "Generate a detailed report on the internal debate at Bertrand and Co. regarding the potential delay of Gens Chemistry Ltd.'s IPO, including arguments for and against the delay and proposed recommendations.",
+    "reasoning": "The internal debate regarding whether to delay Gens Chemistry Ltd.'s IPO reflects critical strategic considerations. A report query should summarize arguments for and against the delay and provide recommendations.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Discusses the influence of pollution allegations on investor confidence"
+      },
+      {
+        "description": "Highlights the potential financial and reputational risks to the IPO"
+      },
+      {
+        "description": "Summarizes internal deliberations on media briefing and disclosure strategies"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_005",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/docs/environmental_compliance_loophole_notes.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/discrepancy_analysis_2026-03-28.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_129",
+    "query": "Provide a comprehensive analysis of the impact of pollution allegations on Gens Chemistry Ltd.'s IPO strategy, including investor confidence and public perception.",
+    "reasoning": "The context highlights concerns about Gens Chemistry Ltd.'s pollution allegations and their impact on investor confidence. A report query should analyze how these allegations influence the IPO strategy and public perception.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the flagged revenue overestimations tied to underperforming product lines"
+      },
+      {
+        "description": "Analyzes the implications of financial inconsistencies on investor confidence"
+      },
+      {
+        "description": "Provides recommendations for addressing these issues in IPO documentation"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/analysis/revenue_projection_review.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/emails/ipo_risk_update_request_2026-03-27.eml",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_130",
+    "query": "Draft a detailed report on flagged financial inconsistencies in Gens Chemistry Ltd.'s revenue projections and their implications for the IPO strategy.",
+    "reasoning": "The context includes flagged financial discrepancies in Gens Chemistry Ltd.'s projections and their implications for the IPO. A report query should summarize these financial inconsistencies and their potential impact.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the phishing attempt and its target"
+      },
+      {
+        "description": "Details the enhanced encryption protocols implemented by the IT department"
+      },
+      {
+        "description": "Evaluates the effectiveness of the measures in securing sensitive communications"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_006",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "data/security/phishing_attempt_report_2026-03-27.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_5",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/it/encryption_protocols_update_2026-03-28.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_131",
+    "query": "Compile a report on the phishing attempt targeting Gens Chemistry Ltd.'s IPO-related communications, including the cybersecurity measures taken and their effectiveness.",
+    "reasoning": "The context describes a phishing attempt targeting sensitive communications related to Gens Chemistry Ltd. A report query should summarize the cybersecurity measures implemented and their effectiveness.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the identified loophole and its impact on Gens Chemistry Ltd.'s liability"
+      },
+      {
+        "description": "Includes discussions from chats, emails, and meetings regarding the loophole"
+      },
+      {
+        "description": "Outlines proposed mitigation strategies to address the issue"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/docs/environmental_compliance_loophole_notes.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_2",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_132",
+    "query": "Provide a detailed report on the potential loophole in Gens Chemistry Ltd.'s environmental compliance reports, including its implications, discussions, and proposed mitigation strategies.",
+    "reasoning": "Given the events and artifacts, the potential loophole in Gens Chemistry Ltd.'s environmental compliance reports is critical. A comprehensive report should summarize all discussions, analysis, and decisions related to this topic.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes the phishing attempt and the internal communications targeted"
+      },
+      {
+        "description": "Includes discussions and decisions from relevant chats, emails, and meetings"
+      },
+      {
+        "description": "Details the cybersecurity measures implemented in response to the incident"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_006",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_5",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/security/phishing_attempt_report_2026-03-27.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_133",
+    "query": "Generate an analysis of the phishing attempt targeting Bertrand and Co.'s internal communications regarding Gens Chemistry Ltd., including the nature of the attempt, its impact, and the cybersecurity measures taken.",
+    "reasoning": "The phishing attempt targeting internal communications related to Gens Chemistry Ltd. poses significant cybersecurity risks. A report should analyze the incident, responses, and preventative measures implemented.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Chronologically lists the discovery of pollution timeline discrepancies and the confidential tip"
+      },
+      {
+        "description": "Summarizes discussions and analyses from relevant meetings, chats, and emails"
+      },
+      {
+        "description": "Explains the impact of these findings on Gens Chemistry Ltd.'s IPO strategy"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "group_chat_006",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting-004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/discrepancy_analysis_2026-03-28.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/tips/anonymous_pollution_tip_2026-03-28.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_134",
+    "query": "Create a timeline of events and actions related to the discrepancies in Gens Chemistry Ltd.'s pollution timeline and the confidential tip about undisclosed incidents, highlighting their implications for the IPO strategy.",
+    "reasoning": "The discrepancies in Gens Chemistry Ltd.'s pollution timeline and the confidential tip about additional incidents are crucial for assessing IPO risks. A timeline report should track these discoveries and their impact on the IPO strategy.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the revisions to the financial disclosure section, including the rationale behind the changes."
+      },
+      {
+        "description": "Addresses the potential conflict between revenue projections and environmental fines."
+      },
+      {
+        "description": "Includes the impact of allegations regarding suppressed pollution reports on the IPO process."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/financial_disclosure_revisions.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/analysis/revenue_vs_environmental_fines.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/emails/anonymous_pollution_report.msg",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_135",
+    "query": "Generate a detailed report on the revisions to Gens Chemistry Ltd.'s financial disclosure section, highlighting the key events, decisions, and potential risks associated with the IPO.",
+    "reasoning": "The IPO process for Gens Chemistry Ltd. is facing significant risks due to discrepancies in their financial disclosures, environmental fines, and pollution report allegations. A comprehensive analysis of the financial disclosure revisions and the related events is critical for assessing the status of the IPO.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Discusses the content and implications of the anonymous email alleging pollution report suppression."
+      },
+      {
+        "description": "Analyzes the legal risks and regulatory scrutiny triggered by these allegations."
+      },
+      {
+        "description": "Examines the impact of these allegations on public perception and media coverage."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/emails/anonymous_pollution_report.msg",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_003",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "chat_008",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_136",
+    "query": "Provide an analysis of the allegations regarding Gens Chemistry Ltd.'s suppression of pollution reports, including their potential legal and reputational impact on the IPO.",
+    "reasoning": "The allegations of suppressed pollution reports raise serious legal and reputational concerns for Gens Chemistry Ltd. A thorough examination of the allegations and their implications is required for strategic planning.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the unusual server activity and the phishing attempt targeting the legal team."
+      },
+      {
+        "description": "Covers the accidental forwarding of a sensitive internal memo and its implications."
+      },
+      {
+        "description": "Proposes strategies for improving cybersecurity and email protocols across the organization."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/security/incident_report_2026_0330.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/memos/internal_memo_forwarding_incident.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/security/phishing_attempt_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_137",
+    "query": "Prepare a report on the cybersecurity and data handling incidents related to Gens Chemistry Ltd.'s IPO, including the identified vulnerabilities and proposed mitigation strategies.",
+    "reasoning": "The cybersecurity incidents and data handling errors surrounding the IPO of Gens Chemistry Ltd. indicate vulnerabilities that could escalate existing risks. A report summarizing these incidents and outlining mitigation measures is necessary.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the discrepancies found in the environmental fine estimates."
+      },
+      {
+        "description": "Assesses how these inconsistencies complicate the IPO risk assessment."
+      },
+      {
+        "description": "Includes references to financial and legal implications of the flagged issues."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/reports/environmental_fines_analysis_2026_0330.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat_008",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_138",
+    "query": "Provide a detailed analysis of the inconsistencies in the Environmental Protection Organization's fine estimates and their impact on the IPO risk assessment.",
+    "reasoning": "The context highlights significant discrepancies in environmental fine estimates impacting the IPO risk assessment. A report query should focus on summarizing these inconsistencies and their implications.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Covers the anonymous tip and the decision to initiate an internal investigation."
+      },
+      {
+        "description": "Details findings or progress in the investigation of undisclosed environmental violations."
+      },
+      {
+        "description": "Discusses potential implications of the violations on Gens Chemistry Ltd.'s IPO readiness and investor confidence."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/anonymous_tip_environmental_violations.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "chat1",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat8",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_139",
+    "query": "Summarize the investigation triggered by the anonymous tip about undisclosed environmental violations by Gens Chemistry Ltd., including findings and potential implications for the IPO.",
+    "reasoning": "The context describes an anonymous tip about undisclosed environmental violations by Gens Chemistry Ltd. A report query should focus on summarizing the internal investigation and its potential effects on the IPO process.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Describes unusual server activity and the IT department's response."
+      },
+      {
+        "description": "Reports on the phishing attempt targeting the legal team and the subsequent discussions."
+      },
+      {
+        "description": "Summarizes the findings and recommendations from the external cybersecurity consultant's email protocol audit."
+      },
+      {
+        "description": "Includes proposed measures to enhance cybersecurity across the organization."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/security/incident_report_2026_0330.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/security/phishing_attempt_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/audits/email_protocol_review.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "group_chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "group_chat_006",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "chat7",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_140",
+    "query": "Provide a comprehensive report on the cybersecurity risks identified (e.g., server activity, phishing attempt, email protocol audit) and recommend measures to strengthen security.",
+    "reasoning": "The context outlines cybersecurity risks, including unusual server activity, a phishing attempt, and an email protocol audit. A report query should evaluate these incidents and provide an analysis of the firm's cybersecurity posture.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes discrepancies in Gens Chemistry Ltd.'s internal pollution audits versus regulator data."
+      },
+      {
+        "description": "Details the Environmental Protection Organization's public statement and its effects on investor sentiment."
+      },
+      {
+        "description": "Analyzes how these factors could delay or impact Gens Chemistry Ltd.'s IPO."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/confidential_email_gens_audits.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/statements/epo_public_statement_gens_accountability.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting-003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "chat_005",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_141",
+    "query": "Produce a detailed report analyzing the implications of Gens Chemistry Ltd.'s pollution audit discrepancies, the Environmental Protection Organization's public statement, and the potential impact on the IPO and investor confidence.",
+    "reasoning": "The context highlights significant concerns about Gens Chemistry Ltd.'s pollution audit discrepancies, investor skepticism, and potential litigation risks. A report query should provide a comprehensive analysis of these interconnected issues.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details from the whistleblower report regarding financial fraud."
+      },
+      {
+        "description": "Analyzes the inconsistencies in fine payment records and their impact on financial transparency."
+      },
+      {
+        "description": "Discusses how these findings could affect Gens Chemistry Ltd.'s IPO readiness and investor confidence."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/reports/financial_fraud_whistleblower_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/reports/fine_payment_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat6",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat8",
+        "entity_type": "group_chat"
+      }
+    ],
+    "id": "case_142",
+    "query": "Compile a report assessing the financial fraud allegations against Gens Chemistry Ltd., including an evaluation of the whistleblower report and discovered inconsistencies in fine payment records.",
+    "reasoning": "The whistleblower report and inconsistencies in Gens Chemistry Ltd.'s fine payment records indicate potential financial fraud and transparency issues. A query should focus on these findings and their implications.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the phishing attempt targeting the legal team and its thwarted outcome."
+      },
+      {
+        "description": "Discusses unusual activity on the internal document server and potential data breach risks."
+      },
+      {
+        "description": "Covers the mishandling of a confidential draft in the shared printer room and its implications for document security."
+      },
+      {
+        "description": "Provides recommendations to mitigate these risks, including mandatory training and protocol improvements."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/security/phishing_attempt_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/system/internal_server_activity_log.txt",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/reports/environmental_compliance_draft.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_143",
+    "query": "Prepare a comprehensive report on recent cybersecurity and document handling issues at Bertrand and Co., including the phishing attempt, unusual server activity, and mishandling of confidential documents.",
+    "reasoning": "The phishing attempt, server activity, and document mishandling incidents highlight vulnerabilities in Bertrand and Co.'s cybersecurity and document handling protocols. A query should request a comprehensive security assessment report.",
+    "user_id": "ysilva"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a detailed timeline of when the fine payment inconsistencies were discovered and discussed."
+      },
+      {
+        "description": "Analyzes the legal and financial risks associated with these inconsistencies."
+      },
+      {
+        "description": "Provides recommendations for addressing transparency concerns and preparing for the IPO."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/reports/fine_payment_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "chat6",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_144",
+    "query": "Provide a comprehensive analysis of the discovered inconsistencies in Gens Chemistry Ltd.'s fine payment records, including a timeline of events, potential legal and financial impacts, and recommendations for next steps.",
+    "reasoning": "The context highlights significant discrepancies in Gens Chemistry Ltd.'s historical fine payment records, raising questions about financial transparency and potential impacts on the IPO. A report query should focus on analyzing the timeline and implications of these discrepancies.",
+    "user_id": "lpatel"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes key allegations from the whistleblower report."
+      },
+      {
+        "description": "Analyzes the implications for Gens Chemistry Ltd.'s IPO readiness and legal challenges."
+      },
+      {
+        "description": "Identifies next steps for internal investigation and communication strategies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/reports/financial_fraud_whistleblower_report.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_145",
+    "query": "Summarize the contents of the whistleblower report alleging financial fraud within Gens Chemistry Ltd., including the potential impact on the company's IPO readiness and legal strategy.",
+    "reasoning": "The discovery of an anonymous whistleblower report alleging financial fraud within Gens Chemistry Ltd. is a critical event with far-reaching implications. A report query should summarize the whistleblower's claims and their potential impact on the IPO and legal strategy.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Provides a detailed timeline of the accidental leak and subsequent internal responses."
+      },
+      {
+        "description": "Outlines mitigation strategies taken to address the leak and minimize reputational damage."
+      },
+      {
+        "description": "Analyzes the potential impact of the leak on media relations and investor confidence."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/environmental_response_draft_v3.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "groupchat3",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_146",
+    "query": "Generate a detailed report on the accidental leak of the PR draft to a journalist, including the timeline of the incident, mitigation strategies implemented, and its potential impact on Bertrand and Co.'s reputation and media relations.",
+    "reasoning": "The accidental leak of the PR team's draft response to the Environmental Protection Organization triggered an internal scramble to contain reputational damage. A report query should focus on this incident, including its timeline, mitigation strategies, and the impact on media relations.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the discrepancies found during the subpoena response review."
+      },
+      {
+        "description": "Explains the potential legal consequences of these inconsistencies."
+      },
+      {
+        "description": "Analyzes the financial risks associated with the discrepancies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "data/reviews/timeline_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      }
+    ],
+    "id": "case_147",
+    "query": "Generate a comprehensive analysis of the discrepancies in Gens Chemistry Ltd.'s pollution fine timeline, including potential legal and financial implications.",
+    "reasoning": "The discovery of discrepancies in Gens Chemistry Ltd.'s pollution fine timeline raises significant legal and financial concerns. A report query should focus on analyzing these discrepancies and their implications.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Outlines the accidental forwarding of the PR draft by a junior associate."
+      },
+      {
+        "description": "Describes the internal response and damage control measures."
+      },
+      {
+        "description": "Highlights the reputational risks and potential fallout for Bertrand and Co."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat1",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "groupchat3",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/environmental_response_draft_v3.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_148",
+    "query": "Provide a detailed incident report on the accidental PR draft leak, including the sequence of events, mitigation strategies, and reputational impact.",
+    "reasoning": "The accidental leak of the PR team's draft response to a journalist is a critical reputational risk. A report query should summarize the incident, the response, and mitigation steps.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the whistleblower's claims of financial fraud."
+      },
+      {
+        "description": "Includes key points from the emergency meeting regarding investigation plans."
+      },
+      {
+        "description": "Analyzes the potential impact of these allegations on Gens Chemistry Ltd.'s IPO strategy."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_006",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/reports/financial_fraud_whistleblower_report.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_149",
+    "query": "Prepare a detailed summary of the whistleblower allegations against Gens Chemistry Ltd., including the findings discussed during the emergency meeting and their potential impact on the IPO strategy.",
+    "reasoning": "The whistleblower allegations of financial fraud within Gens Chemistry Ltd. and the subsequent emergency meeting highlight a major risk area. A report query should summarize the allegations and their broader implications.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes a detailed timeline of the accidental leak and subsequent actions"
+      },
+      {
+        "description": "Evaluates reputational risks to Bertrand and Co."
+      },
+      {
+        "description": "Summarizes strategies discussed to mitigate damage"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat1",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "groupchat3",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/environmental_response_draft_v3.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_150",
+    "query": "Provide a comprehensive report on the accidental leak of the PR draft to a local journalist, including the timeline of events, reputational risks, and containment strategies.",
+    "reasoning": "Given the accidental leak of Bertrand and Co.'s PR draft to a journalist, a report query should summarize the incident, its implications, and the mitigation strategies discussed.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Discusses discrepancies in the pollution fine records"
+      },
+      {
+        "description": "Assesses legal risks related to subpoena responses"
+      },
+      {
+        "description": "Evaluates potential impacts on IPO strategy and investor confidence"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/reviews/timeline_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_151",
+    "query": "Analyze the discovered discrepancies in Gens Chemistry Ltd.'s pollution fine timeline, including their impact on IPO strategy, legal risks, and investor confidence.",
+    "reasoning": "The discrepancies in Gens Chemistry Ltd.'s pollution fines and their potential impact on IPO preparation are significant concerns. A report query should analyze these findings and their implications.",
+    "user_id": "jmukherjee"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the vulnerabilities uncovered by the cybersecurity consultant"
+      },
+      {
+        "description": "Details the proposed email encryption updates"
+      },
+      {
+        "description": "Includes recommendations for staff training to improve security"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "groupchat4",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-005",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/reports/email_encryption_audit_vulnerabilities.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_152",
+    "query": "Provide a detailed report on the vulnerabilities in Bertrand and Co.'s email encryption system, including the cybersecurity consultant's findings, proposed updates, and training recommendations.",
+    "reasoning": "The discovery of vulnerabilities in Bertrand and Co.'s email encryption system and the subsequent cybersecurity concerns are critical for operational security. A report query should provide an analysis of the vulnerabilities and proposed measures.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Includes details of the anonymous email warning about the IPO document leak"
+      },
+      {
+        "description": "Summarizes the timeline of events following the discovery"
+      },
+      {
+        "description": "Describes the investigation steps taken by Bertrand and Co."
+      },
+      {
+        "description": "Mentions the measures implemented to secure sensitive information"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/emails/anonymous_warning_ipoleak.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_153",
+    "query": "Provide a comprehensive report on the anonymous email warning about the potential IPO document leak, including a timeline of events, investigation steps, and measures taken to secure sensitive information.",
+    "reasoning": "The context highlights an anonymous email warning about a potential leak of IPO documents and subsequent investigations. A report query should summarize this incident, including events, actions, and outcomes.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Explains the nature of the discrepancies in pollution fine records"
+      },
+      {
+        "description": "Analyzes the potential legal risks and obligations arising from these inconsistencies"
+      },
+      {
+        "description": "Discusses the impact on Gens Chemistry Ltd.'s transparency and credibility"
+      },
+      {
+        "description": "Includes proposed next steps to address the concerns"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_002",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting-002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/reviews/timeline_discrepancies_analysis.xlsx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_154",
+    "query": "Generate a detailed analysis of the discovered discrepancies in Gens Chemistry Ltd.'s pollution fine records, including their potential legal and transparency implications.",
+    "reasoning": "The context mentions discrepancies in Gens Chemistry Ltd.'s pollution fine records, raising legal and transparency concerns. A report query should analyze these discrepancies and their implications.",
+    "user_id": "anasser"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the whistleblower's claims about inflated financial projections"
+      },
+      {
+        "description": "Analyzes the potential risks to the IPO and the firm's reputation"
+      },
+      {
+        "description": "Discusses the legal and financial ramifications of the claims"
+      },
+      {
+        "description": "Recommends actions to investigate and address the allegations"
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/audio/whistleblower_voicemail.wav",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_155",
+    "query": "Prepare a report evaluating the implications of the whistleblower's claims about inflated financial projections tied to Gens Chemistry Ltd.'s IPO, including potential risks and recommended actions.",
+    "reasoning": "The context highlights concerns raised by a whistleblower about inflated financial projections tied to Gens Chemistry Ltd.'s IPO. A report query should evaluate the implications of this claim.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the content of the environmental compliance report draft."
+      },
+      {
+        "description": "Explains the potential regulatory strategy updates indicated in the report."
+      },
+      {
+        "description": "Analyzes the implications for Gens Chemistry Ltd.'s financial projections and IPO readiness."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "data/docs/environmental_compliance_draft.pdf",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "email_001",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-005",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_156",
+    "query": "Provide a comprehensive analysis of Gens Chemistry Ltd.'s environmental compliance report, including its potential impact on regulatory strategies and financial projections.",
+    "reasoning": "Given the multiple mentions of Gens Chemistry Ltd.'s environmental compliance report and its potential impact on regulatory and financial strategies, a detailed analysis of this topic would provide valuable insights for stakeholders.",
+    "user_id": "yjensen"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Provides a chronological timeline of events related to the foreign IP login attempt."
+      },
+      {
+        "description": "Discusses the IT department's investigation process and findings."
+      },
+      {
+        "description": "Identifies potential vulnerabilities and recommended remediation steps."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_009",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting-001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/reports/cybersecurity_incident_log.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_157",
+    "query": "Generate a detailed timeline and analysis of the cybersecurity incident involving the foreign IP login attempt flagged by the IT department.",
+    "reasoning": "In light of the flagged foreign IP login tied to a data breach network, a timeline and analysis of the cybersecurity incident would help assess risks and preventive measures.",
+    "user_id": "mkabongo"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the whistleblower's claims and provides context."
+      },
+      {
+        "description": "Analyzes the potential legal and financial implications for Gens Chemistry Ltd. and Bertrand and Co."
+      },
+      {
+        "description": "Recommends next steps, including verification and risk mitigation strategies."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "data/audio/whistleblower_voicemail.wav",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      }
+    ],
+    "id": "case_158",
+    "query": "Prepare a report on the whistleblower's claims of inflated financial projections tied to Gens Chemistry Ltd.'s IPO, including potential legal and reputational risks.",
+    "reasoning": "The whistleblower's claims of inflated financial projections tied to Gens Chemistry Ltd.'s IPO raise significant concerns. A detailed report on this matter is critical for understanding its implications and planning a response.",
+    "user_id": "whuang"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Summarizes the whistleblower's voicemail content and financial fraud claims."
+      },
+      {
+        "description": "Evaluates the potential impact on Gens Chemistry Ltd.'s IPO and reputation."
+      },
+      {
+        "description": "Details the steps taken by Bertrand and Co. to investigate and address the issue."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_005",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_010",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_001",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "chat_004",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "meeting_003",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/audio/whistleblower_voicemail.wav",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_159",
+    "query": "Provide a detailed analysis of the whistleblower's claims regarding inflated financial projections tied to Gens Chemistry Ltd.'s IPO, including the potential implications and actions taken by Bertrand and Co.",
+    "reasoning": "The whistleblower's voicemail alleging inflated financial projections tied to Gens Chemistry Ltd.'s IPO is a critical issue involving financial fraud and an imminent IPO. A comprehensive report would analyze the voicemail's content, its implications, and the steps taken by Bertrand and Co. to address the claims.",
+    "user_id": "mschmidt"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Chronicles the flagged outbound email activity and subsequent findings of unauthorized access."
+      },
+      {
+        "description": "Highlights the IT department's initial concerns and the results of the internal email system audit."
+      },
+      {
+        "description": "Explains the steps taken by Bertrand and Co. to mitigate cybersecurity risks."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_002",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_004",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_007",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "chat_003",
+        "entity_type": "chat"
+      },
+      {
+        "entity_id": "group_chat_001",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "group_chat_003",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_001",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "meeting_004",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/logs/outbound_email_traffic_2026-04-06.csv",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/reports/internal_email_audit_2026-04-06.pdf",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_160",
+    "query": "Generate a timeline and analysis of the cybersecurity incidents involving flagged outbound email traffic and unauthorized access to Bertrand and Co.'s internal email system.",
+    "reasoning": "The unusually high volume of outbound email traffic flagged by the IT department and the audit revealing unauthorized email access are closely related cybersecurity incidents. A report should provide a timeline of events and the actions taken to mitigate these risks.",
+    "user_id": "rgutierrez"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Details the conflicting edits from Gens Chemistry Ltd.'s leadership."
+      },
+      {
+        "description": "Explains the reasons for the delays in approving the press release."
+      },
+      {
+        "description": "Outlines the steps taken by Bertrand and Co. to resolve the issue and meet deadlines."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_008",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_002",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_002",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/docs/pr_draft_conflicting_edits.docx",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_161",
+    "query": "Summarize the delays in finalizing the press release for Gens Chemistry Ltd., detailing the conflicting edits, reasons for the delays, and the resolution strategy adopted by Bertrand and Co.",
+    "reasoning": "The delayed press release due to conflicting edits from Gens Chemistry Ltd.'s leadership is causing mounting pressure from investors and media. A report should summarize the delays, the reasons behind them, and the steps being taken to resolve the issue.",
+    "user_id": "tkimura"
+  },
+  {
+    "assertions": [
+      {
+        "description": "Provides a timeline of events leading to the recommendation to delay the IPO."
+      },
+      {
+        "description": "Explains the rationale for the delay, including financial inconsistencies and public trust issues."
+      },
+      {
+        "description": "Discusses legal and environmental challenges impacting the IPO process."
+      },
+      {
+        "description": "Highlights internal debates and final recommendations for addressing transparency concerns."
+      }
+    ],
+    "entity_list": [
+      {
+        "entity_id": "email_006",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "email_003",
+        "entity_type": "email"
+      },
+      {
+        "entity_id": "group_chat_5",
+        "entity_type": "group_chat"
+      },
+      {
+        "entity_id": "meeting_005",
+        "entity_type": "meeting"
+      },
+      {
+        "entity_id": "data/memos/recommendation_ipo_delay.docx",
+        "entity_type": "file"
+      },
+      {
+        "entity_id": "data/notes/ipo_delay_debate_meeting_minutes.txt",
+        "entity_type": "file"
+      }
+    ],
+    "id": "case_162",
+    "query": "Generate a detailed report on the discussions and factors leading to the recommendation to delay Gens Chemistry Ltd.'s IPO. Include a timeline of key events, the rationale behind the recommendation, and the potential impact of the delay.",
+    "reasoning": "The provided context involves key developments surrounding Gens Chemistry Ltd.'s IPO, including legal, environmental, and financial challenges. A comprehensive report query should focus on the recommendation to delay the IPO, considering the flagged concerns about transparency, financial inconsistencies, and public trust.",
+    "user_id": "mkabongo"
+  }
+]

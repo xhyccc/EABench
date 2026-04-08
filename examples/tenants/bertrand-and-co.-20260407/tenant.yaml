@@ -1,0 +1,197 @@
+domain: bertrand-and-co.-20260407.com
+id: bertrand-and-co.-20260407
+users:
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: yjensen
+  profile:
+    department: Executive
+    email: yjensen@bertrand-and-co.-20260407.com
+    location: New York
+    name:
+      display_name: Yara Jensen
+      first_name: Yara
+      last_name: Jensen
+    skills:
+    - Leadership
+    - Corporate Strategy
+    timezone: America/New_York
+    title: CEO
+  username: yjensen
+- groups:
+  - Executive
+  - Legal
+  - All Employees
+  id: whuang
+  profile:
+    department: Legal
+    email: whuang@bertrand-and-co.-20260407.com
+    location: San Francisco
+    manager_id: yjensen
+    name:
+      display_name: Wei Huang
+      first_name: Wei
+      last_name: Huang
+    skills:
+    - Corporate Law
+    - IPO Compliance
+    timezone: America/Los_Angeles
+    title: Chief Legal Officer
+  username: whuang
+- groups:
+  - Executive
+  - Finance
+  - All Employees
+  id: lpatel
+  profile:
+    department: Finance
+    email: lpatel@bertrand-and-co.-20260407.com
+    location: London
+    manager_id: yjensen
+    name:
+      display_name: Leena Patel
+      first_name: Leena
+      last_name: Patel
+    skills:
+    - Corporate Finance
+    - Risk Management
+    timezone: Europe/London
+    title: Chief Financial Officer
+  username: lpatel
+- groups:
+  - Legal
+  - Management
+  - All Employees
+  id: mkabongo
+  profile:
+    department: Legal
+    email: mkabongo@bertrand-and-co.-20260407.com
+    location: Johannesburg
+    manager_id: whuang
+    name:
+      display_name: Mosi Kabongo
+      first_name: Mosi
+      last_name: Kabongo
+    skills:
+    - Corporate Transactions
+    - Mergers & Acquisitions
+    timezone: Africa/Johannesburg
+    title: Head of Corporate Law
+  username: mkabongo
+- groups:
+  - Finance
+  - Management
+  - All Employees
+  id: rgutierrez
+  profile:
+    department: Finance
+    email: rgutierrez@bertrand-and-co.-20260407.com
+    location: Mexico City
+    manager_id: lpatel
+    name:
+      display_name: Rafael Gutierrez
+      first_name: Rafael
+      last_name: Gutierrez
+    skills:
+    - Financial Modeling
+    - Investment Strategy
+    timezone: America/Mexico_City
+    title: Head of Financial Analysis
+  username: rgutierrez
+- groups:
+  - Executive
+  - Board
+  - All Employees
+  id: mschmidt
+  profile:
+    department: Executive
+    email: mschmidt@bertrand-and-co.com
+    location: London
+    name:
+      display_name: Markus Schmidt
+      first_name: Markus
+      last_name: Schmidt
+    skills:
+    - Leadership
+    - Corporate Strategy
+    timezone: Europe/London
+    title: CEO
+  username: mschmidt
+- groups:
+  - Finance
+  - All Employees
+  id: ysilva
+  profile:
+    department: Finance
+    email: ysilva@bertrand-and-co.com
+    location: Toronto
+    manager_id: mschmidt
+    name:
+      display_name: Yolanda Silva
+      first_name: Yolanda
+      last_name: Silva
+    skills:
+    - Financial Analysis
+    - IPO Advisory
+    timezone: America/Toronto
+    title: Finance Manager
+  username: ysilva
+- groups:
+  - Legal
+  - All Employees
+  id: tkimura
+  profile:
+    department: Legal
+    email: tkimura@bertrand-and-co.com
+    location: Tokyo
+    manager_id: mschmidt
+    name:
+      display_name: Takeshi Kimura
+      first_name: Takeshi
+      last_name: Kimura
+    skills:
+    - Corporate Law
+    - M&A Transactions
+    timezone: Asia/Tokyo
+    title: Senior Legal Counsel
+  username: tkimura
+- groups:
+  - Legal
+  - All Employees
+  id: anasser
+  profile:
+    department: Legal
+    email: anasser@bertrand-and-co.com
+    location: Dubai
+    manager_id: tkimura
+    name:
+      display_name: Amina Nasser
+      first_name: Amina
+      last_name: Nasser
+    skills:
+    - Contract Drafting
+    - Compliance
+    timezone: Asia/Dubai
+    title: Legal Associate
+  username: anasser
+- groups:
+  - Finance
+  - All Employees
+  id: jmukherjee
+  profile:
+    department: Finance
+    email: jmukherjee@bertrand-and-co.com
+    location: Mumbai
+    manager_id: ysilva
+    name:
+      display_name: Jyoti Mukherjee
+      first_name: Jyoti
+      last_name: Mukherjee
+    skills:
+    - Financial Modeling
+    - Risk Assessment
+    timezone: Asia/Kolkata
+    title: Financial Analyst
+  username: jmukherjee

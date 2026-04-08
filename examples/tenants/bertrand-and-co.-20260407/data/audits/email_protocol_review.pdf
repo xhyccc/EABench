@@ -1,0 +1,146 @@
+# Audit Report: Email and Document-Sharing Protocols
+
+### Author: Takeshi Kimura
+
+### Date: 2026-04-01
+
+## Executive Summary
+This report presents the findings and recommendations from an external audit of Bertrand and Co.'s email and document-sharing protocols. The audit was conducted in response to recent cybersecurity incidents, including a phishing attempt targeting the legal team and the accidental forwarding of sensitive internal memos. The objective was to assess the robustness of current systems, identify vulnerabilities, and propose actionable improvements to mitigate risks and enhance security.
+
+Key findings include:
+- **Email Protocol Vulnerabilities**: Lack of proper encryption and insufficient two-factor authentication (2FA) measures.
+- **Document-Sharing Risks**: Over-reliance on outdated systems with limited access controls.
+- **Human Error Exposure**: Inadequate staff training on cybersecurity best practices.
+
+Recommendations have been outlined to address these issues, with a focus on immediate, short-term, and long-term actions.
+
+---
+
+## 1. Scope of the Audit
+
+The audit focused on the following areas:
+
+- **Email Communication Protocols**:
+    - Encryption standards for internal and external communications.
+    - Authentication mechanisms.
+    - Monitoring and logging of email activity.
+
+- **Document-Sharing Systems**:
+    - Platforms used for sharing sensitive documents internally and externally.
+    - Access control policies.
+    - Data retention and deletion policies.
+
+- **User Awareness and Training**:
+    - Staff knowledge of phishing identification and reporting.
+    - Adherence to established protocols.
+    - Frequency and effectiveness of cybersecurity training sessions.
+
+---
+
+## 2. Findings
+
+### 2.1 Email Protocol Vulnerabilities
+
+- **Encryption**:
+    - Emails sent internally and externally are not consistently encrypted.
+    - Some email threads containing sensitive information were found to lack Transport Layer Security (TLS) encryption.
+
+- **Authentication**:
+    - 85% of staff accounts rely solely on password authentication, with no 2FA implemented.
+    - Passwords used by staff do not meet complexity requirements in 30% of sampled accounts.
+
+- **Monitoring and Logging**:
+    - Email activity logs are stored for only 30 days, limiting the ability to trace incidents.
+    - Anomalous activity, such as logins from unusual locations, is not flagged or acted upon in real-time.
+
+### 2.2 Document-Sharing Risks
+
+- **Platforms**:
+    - Bertrand and Co. relies heavily on an outdated in-house file-sharing platform with limited security features.
+    - Third-party cloud services are occasionally used without formal approval or oversight.
+
+- **Access Controls**:
+    - Shared folders containing sensitive data are accessible to staff who do not require access for their roles.
+    - Permissions are not reviewed or updated regularly.
+
+- **Retention Policies**:
+    - Files containing sensitive client data are retained indefinitely, increasing exposure to potential breaches.
+    - No automated deletion policies are in place for outdated or unnecessary files.
+
+### 2.3 Human Error Exposure
+
+- **Training**:
+    - Cybersecurity training is conducted annually but is not mandatory for all staff.
+    - Phishing simulations have not been performed in over 12 months.
+
+- **Incident Response**:
+    - Staff are unclear on the proper escalation process for reporting suspected phishing attempts.
+    - The accidental forwarding of a sensitive memo highlights gaps in awareness and adherence to email best practices.
+
+---
+
+## 3. Recommendations
+
+### 3.1 Immediate Actions
+
+- **Email Security**:
+    - Enable mandatory 2FA for all email accounts.
+    - Enforce immediate password resets for accounts with weak credentials.
+    - Implement TLS encryption for all outgoing emails.
+
+- **Awareness Campaign**:
+    - Distribute a firm-wide memo highlighting recent incidents and emphasizing the importance of vigilance.
+    - Provide a quick reference guide on identifying and reporting phishing attempts.
+
+### 3.2 Short-Term Actions (Within 3 Months)
+
+- **Document-Sharing Enhancements**:
+    - Transition to a secure, modern document-sharing platform with granular access controls.
+    - Review and update access permissions for all shared folders.
+
+- **Training**:
+    - Schedule mandatory cybersecurity training sessions for all staff.
+    - Conduct phishing simulations to test awareness and improve response rates.
+
+- **Monitoring and Logging**:
+    - Extend email activity log retention to 12 months.
+    - Implement an alert system for anomalous email account activity.
+
+### 3.3 Long-Term Actions (Within 12 Months)
+
+- **Policy Updates**:
+    - Develop and enforce comprehensive email and document-sharing policies.
+    - Establish automated data retention and deletion policies.
+
+- **Infrastructure Investments**:
+    - Upgrade the firm’s IT infrastructure to enhance overall security.
+    - Explore the use of AI-based tools for threat detection and prevention.
+
+- **Regular Audits**:
+    - Schedule biannual cybersecurity audits to ensure ongoing compliance and adaptability to emerging threats.
+
+---
+
+## 4. Conclusion
+
+The cybersecurity incidents faced by Bertrand and Co. highlight critical vulnerabilities in its email and document-sharing protocols. Addressing these gaps is essential not only to safeguard sensitive client and internal information but also to maintain the firm’s reputation and investor confidence during high-stakes engagements such as the Gens Chemistry Ltd. IPO.
+
+By implementing the recommended actions outlined in this report, Bertrand and Co. can significantly enhance its cybersecurity posture and reduce the likelihood of future incidents.
+
+---
+
+## Appendix
+
+### A. Summary of Key Incidents
+
+| Date       | Incident Description                                   | Impact                             |
+|------------|-------------------------------------------------------|------------------------------------|
+| 2026-03-31 | Phishing attempt targeting legal team                 | No breach; prompted audit          |
+| 2026-03-31 | Accidental forwarding of sensitive memo               | Internal review initiated          |
+| 2026-04-01 | Receipt of anonymous tip on undisclosed violations    | Triggered internal investigation   |
+
+### B. References
+
+1. National Institute of Standards and Technology (NIST) Cybersecurity Framework.
+2. ISO/IEC 27001: Information Security Management Standards.
+3. Bertrand and Co. Internal IT Policies (2025).

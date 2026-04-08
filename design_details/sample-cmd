@@ -9,6 +9,31 @@ set -a && source .env && set +a && \
   --days 14 \
   --provider azure
 
+
+set -a && source .env && set +a && \
+./rust/target/release/eabench generate \
+  --company "Bertrand and Co." \
+  --industry "Law Firm" \
+  --description "A Law firm handling IPO and corporate finance affairs" \
+  --events "handling the IPO cases of Gens Chemistry Ltd., NY" "the pollution cases of Gens Chemistry Ltd in NY would affect its IPO" "communicate with environment protection organization on gens cases" \
+  --size medium \
+  --num-users 10 \
+  --days 14 \
+  --provider azure
+
+
+set -a && source .env && set +a && \
+./rust/target/release/eabench generate \
+  --company "zAI Intelligence" \
+  --industry "AI Startup" \
+  --description "AI Startup focusing on agent RL funded by a group of European PhD graduates, struggling on the directions in releasing their own commercial agent models or agents based on open-source models, executives are fighting" \
+  --events "setup the baselines and benchmark of next-generation agents for business" "sprints of infrastructure built-up for agent reinforcement learning" "data collection and annotation for agent models" "prepare data for evaluation" "re-base the agent development on top of new open-source models" "influenced by new post-training techniques and technical migration to new techniques" "closing A+-round fund and discuss new option incentive" "performance-based incentive plan for options" "release benchmark datasets for enterprise agents to lead the market" \
+  --size large \
+  --num-users 40 \
+  --days 31 \
+  --provider azure
+
+
   python run_eval.py \
     --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
     --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \

@@ -1,0 +1,98 @@
+# Cybersecurity Incident Log
+
+## Author: Mosi Kabongo
+
+### Context:
+This log details an attempted login from a foreign IP address tied to a known data breach network. The incident occurred amidst heightened cybersecurity concerns at Bertrand and Co., as the firm navigated mounting challenges related to Gens Chemistry Ltd.'s IPO preparation.
+
+---
+
+## Incident Details
+
+### **Date:** 2026-04-05  
+### **Time:** 14:23 UTC  
+### **Severity Level:** High
+
+### **Description:**
+Bertrand and Co.'s IT department flagged an unauthorized login attempt originating from a foreign IP address (93.184.216.34) identified as part of a known data breach network. The attempt targeted the firm's internal document server, which houses sensitive information related to Gens Chemistry Ltd.'s IPO, regulatory compliance records, and client communications.
+
+---
+
+## Technical Details
+
+### **IP Address:**
+- **Origin:** 93.184.216.34  
+- **Geolocation:** Frankfurt, Germany (suspected proxy server)  
+- **Classification:** Linked to previous data breach incidents reported in cybersecurity threat databases.
+
+### **Target:**
+- **System:** Internal Document Server (server ID: DOC-SRV-45B)  
+- **Access Attempt:** Unauthorized login via admin credentials  
+- **Protocol:** HTTPS  
+- **Encryption:** Attempted bypass of TLS 1.3 encryption layer  
+
+### **Detection:**
+- **Monitoring Tool:** Intrusion Detection System (IDS) - version 5.3.2  
+- **Alert Code:** ALRT-4587-HIGH  
+- **Timestamp of Detection:** 2026-04-05, 14:23 UTC  
+
+---
+
+## Action Taken
+
+### Initial Response:
+- **Firewall Update:** Blocked the foreign IP address and its associated subnet to prevent further attempts.
+- **Access Lockdown:** Temporarily restricted login access to the internal document server for all non-essential users.
+- **Incident Notification:** Alert issued to all senior IT personnel and cybersecurity consultants.
+
+### Investigation:
+- **Log Analysis:** Reviewed server access logs for anomalies and potential signs of prior intrusions.
+- **Threat Assessment:** Conducted cross-referencing with cybersecurity threat intelligence databases to confirm the IP's association with known breach networks.
+- **Vulnerability Scan:** Initiated a full scan of the document server for potential exploits or unpatched vulnerabilities.
+
+### Mitigation:
+- **Credential Audit:** Forced password resets for all admin accounts on the document server.
+- **Software Update:** Applied urgent patches to the server's operating system and encryption protocols.
+- **Enhanced Monitoring:** Deployed real-time monitoring scripts to flag unusual activity across all document servers.
+
+### Communication:
+- **Internal Memo:** Sent to all staff outlining the incident and reinforcing proper cybersecurity practices.
+- **Consultant Engagement:** External cybersecurity consultant assigned to oversee the investigation and recommend long-term security improvements.
+
+---
+
+## Findings
+
+### **Key Observations:**
+- The attempted login utilized a brute-force attack method, targeting admin credentials.
+- No evidence of successful access was found during preliminary investigations.
+- The foreign IP address belongs to a network flagged in multiple cybersecurity reports for phishing campaigns and ransomware distribution.
+
+### **Risks Identified:**
+- **Data Exposure:** Potential risk to confidential IPO documents and internal communications.
+- **Reputation Damage:** Possible fallout if the incident escalates and becomes public knowledge.
+
+---
+
+## Recommendations
+
+### **Short-Term Actions:**
+- Conduct mandatory cybersecurity training for all staff with a focus on phishing prevention and password hygiene.
+- Perform a comprehensive audit of all document-sharing protocols and access controls.
+
+### **Long-Term Actions:**
+- Upgrade the firm's intrusion detection and prevention systems (IDS/IPS) to the latest available version.
+- Implement multi-factor authentication (MFA) across all systems to enhance login security.
+- Schedule regular penetration testing to identify and remediate vulnerabilities proactively.
+
+---
+
+## Appendix
+
+### **Related Logs:**
+- **2026-04-02:** Unusual activity detected on the internal document server.
+- **2026-04-03:** Suspicious login attempt flagged by the IT department.
+
+### **References:**
+- **Threat Database:** Entry ID #45928 (93.184.216.34) from Cyber Threat Alliance.
+- **Compliance Standards:** NIST Cybersecurity Framework (Version 1.1). 
