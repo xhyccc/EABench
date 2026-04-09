@@ -6276,7 +6276,9 @@
   - content: 'Found the notes! They wanted: 1️⃣ clear delivery dates 2️⃣ a breakdown of key dependencies 3️⃣ contingency plans. I’ll paste the highlights.'
     from_user: hanh.nguyen
     timestamp: 2026-03-18T09:16:14Z
-  - content: "  - Delivery: Q2 release, with beta by mid-May.\n  - Dependencies: data consistency fixes, semi-auto annotations.\n  - Contingency: fallback if automation fails.\nfrom_user: hanh.nguyen\ntimestamp: 2026-03-18T09:16:45Z"
+  - content: "  - Delivery: Q2 release, with beta by mid-May.\n  - Dependencies: data consistency fixes, semi-auto annotations.\n  - Contingency: fallback if automation fails."
+    from_user: hanh.nguyen
+    timestamp: 2026-03-18T09:16:45Z
   - content: Mid-May beta? That’s ambitious given where we’re at right now. Did we even agree on that? 😑
     from_user: kwame.williams
     timestamp: 2026-03-18T09:17:23Z

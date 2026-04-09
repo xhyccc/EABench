@@ -17,3 +17,7 @@ academic_paper/*.synctex.gz
 academic_paper/*.bbl
 academic_paper/*.blg
 
+# Generated tenant caches
+examples/tenants/**/.cache/
+examples/tenants/**/*.pkl
+
