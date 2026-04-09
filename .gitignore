@@ -18,6 +18,6 @@ academic_paper/*.bbl
 academic_paper/*.blg
 
 # Generated tenant caches
-examples/tenants/**/.cache/
-examples/tenants/**/*.pkl
+examples/tenants/**/.cache/*
+!examples/tenants/**/.cache/*.pkl
 
