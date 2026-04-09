@@ -1,3 +1,7 @@
+# ============================================================
+# DATA GENERATION
+# ============================================================
+
 set -a && source .env && set +a && \
 ./rust/target/release/eabench generate \
   --company "Staff Office The University of Cambford" \
@@ -24,22 +28,104 @@ set -a && source .env && set +a && \
 
 set -a && source .env && set +a && \
 ./rust/target/release/eabench generate \
-  --company "zAI Intelligence" \
-  --industry "AI Startup" \
-  --description "AI Startup focusing on agent RL funded by a group of European PhD graduates, struggling on the directions in releasing their own commercial agent models or agents based on open-source models, executives are fighting" \
-  --events "setup the baselines and benchmark of next-generation agents for business" "sprints of infrastructure built-up for agent reinforcement learning" "data collection and annotation for agent models" "prepare data for evaluation" "re-base the agent development on top of new open-source models" "influenced by new post-training techniques and technical migration to new techniques" "closing A+-round fund and discuss new option incentive" "performance-based incentive plan for options" "release benchmark datasets for enterprise agents to lead the market" \
+  --company "ZAI Intelligence" \
+  --industry "Artificial Intelligence" \
+  --description "An AI startup building foundation models and RL-based post-training pipelines" \
+  --events "hyperparameter tuning strategy overhaul" "annotated dataset inconsistencies and data quality crisis" "CTO post-training integration plan" "A+ round investor pressure and benchmark dataset release" "open-source model dependency and engineering workarounds" "employee burnout and HR crisis" \
   --size large \
   --num-users 40 \
   --days 31 \
   --provider azure
 
 
-  python run_eval.py \
+# ============================================================
+# EVALUATION — react_agent  (baseline)
+# ============================================================
+
+cd python
+
+python run_eval.py \
     --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
     --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \
     --agent   ../examples/agents/react_agent.yaml
 
-  python run_eval.py \
+python run_eval.py \
     --tenant  ../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
     --eval    ../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
     --agent   ../examples/agents/react_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/bertrand-and-co.-20260407/tenant.yaml \
+    --eval    ../examples/tenants/bertrand-and-co.-20260407/eval_dataset_20260408_0050.yaml \
+    --agent   ../examples/agents/react_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/staff-office-the-university-of-cambford-20260407/tenant.yaml \
+    --eval    ../examples/tenants/staff-office-the-university-of-cambford-20260407/eval_dataset_20260407_1831.yaml \
+    --agent   ../examples/agents/react_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/zai-intelligence-20260408/tenant.yaml \
+    --eval    ../examples/tenants/zai-intelligence-20260408/eval_dataset_20260408_1850.yaml \
+    --agent   ../examples/agents/react_agent.yaml
+
+
+# ============================================================
+# EVALUATION — react_agent_v2
+# ============================================================
+
+python run_eval.py \
+    --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
+    --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \
+    --agent   ../examples/agents/react_agent_v2.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
+    --eval    ../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
+    --agent   ../examples/agents/react_agent_v2.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/bertrand-and-co.-20260407/tenant.yaml \
+    --eval    ../examples/tenants/bertrand-and-co.-20260407/eval_dataset_20260408_0050.yaml \
+    --agent   ../examples/agents/react_agent_v2.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/staff-office-the-university-of-cambford-20260407/tenant.yaml \
+    --eval    ../examples/tenants/staff-office-the-university-of-cambford-20260407/eval_dataset_20260407_1831.yaml \
+    --agent   ../examples/agents/react_agent_v2.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/zai-intelligence-20260408/tenant.yaml \
+    --eval    ../examples/tenants/zai-intelligence-20260408/eval_dataset_20260408_1850.yaml \
+    --agent   ../examples/agents/react_agent_v2.yaml
+
+
+# ============================================================
+# EVALUATION — researcher_agent
+# ============================================================
+
+python run_eval.py \
+    --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
+    --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \
+    --agent   ../examples/agents/researcher_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
+    --eval    ../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
+    --agent   ../examples/agents/researcher_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/bertrand-and-co.-20260407/tenant.yaml \
+    --eval    ../examples/tenants/bertrand-and-co.-20260407/eval_dataset_20260408_0050.yaml \
+    --agent   ../examples/agents/researcher_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/staff-office-the-university-of-cambford-20260407/tenant.yaml \
+    --eval    ../examples/tenants/staff-office-the-university-of-cambford-20260407/eval_dataset_20260407_1831.yaml \
+    --agent   ../examples/agents/researcher_agent.yaml
+
+python run_eval.py \
+    --tenant  ../examples/tenants/zai-intelligence-20260408/tenant.yaml \
+    --eval    ../examples/tenants/zai-intelligence-20260408/eval_dataset_20260408_1850.yaml \
+    --agent   ../examples/agents/researcher_agent.yaml
+

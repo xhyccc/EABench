@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import asyncio
 from typing import List
 from openai import AsyncAzureOpenAI
 
@@ -35,13 +36,23 @@ class AzureEmbeddingProvider(EmbeddingProvider):
         return response.data[0].embedding
 
     async def get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
-        """Single API call for the whole batch (Azure supports up to 2048 inputs)."""
-        response = await self.client.embeddings.create(
-            input=texts,
-            model=self.deployment_name
-        )
-        # response.data may not be ordered; sort by .index to be safe
-        return [item.embedding for item in sorted(response.data, key=lambda x: x.index)]
+        """Single API call for the whole batch, with exponential-backoff retry on 429."""
+        from openai import RateLimitError
+        backoff = 5.0
+        for attempt in range(7):
+            try:
+                response = await self.client.embeddings.create(
+                    input=texts,
+                    model=self.deployment_name
+                )
+                return [item.embedding for item in sorted(response.data, key=lambda x: x.index)]
+            except RateLimitError:
+                if attempt == 6:
+                    raise
+                wait = backoff * (2 ** attempt)
+                print(f"[embedding] 429 rate limit — retrying in {wait:.0f}s (attempt {attempt+1}/6)",
+                      flush=True)
+                await asyncio.sleep(wait)
 
     def get_model_name(self) -> str:
         return self.deployment_name

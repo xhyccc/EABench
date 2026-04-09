@@ -7,10 +7,14 @@ from .embedding_provider import EmbeddingProvider
 from ..config.tenant_config import TenantConfig
 from ..sandbox.base import SandboxInterface
 
-# Maximum texts per single embedding API call (Azure limit is 2048).
-_EMBED_BATCH_SIZE = 512
-# Maximum concurrent batch requests sent to the embedding API at once.
-_EMBED_CONCURRENCY = 8
+# Maximum texts per single embedding API call.
+# Kept small to stay within the Azure S0 rate limit (~60 RPM / ~350k tokens/min
+# for text-embedding-ada-002).  Raise if your quota allows it.
+_EMBED_BATCH_SIZE = 16
+# Number of batches sent concurrently per window.
+_EMBED_CONCURRENCY = 1
+# Seconds to wait between windows to avoid 429s on low-quota deployments.
+_EMBED_WINDOW_SLEEP = 1.0
 
 class SearchEngine:
     def __init__(self, tenant_config: TenantConfig, embedding_provider: EmbeddingProvider, sandbox: SandboxInterface, indices: Dict[str, Dict[str, Any]] = None):
@@ -168,7 +172,8 @@ class SearchEngine:
               f"(concurrency={min(len(batches), _EMBED_CONCURRENCY)})...")
 
         all_vectors: List[List[float]] = []
-        # Process in windows of _EMBED_CONCURRENCY to avoid overwhelming the API
+        # Process in windows of _EMBED_CONCURRENCY to stay within API rate limits.
+        # A short sleep after each window keeps throughput well below the quota.
         for window_start in range(0, len(batches), _EMBED_CONCURRENCY):
             window = batches[window_start:window_start + _EMBED_CONCURRENCY]
             batch_results = await asyncio.gather(*[
@@ -176,6 +181,8 @@ class SearchEngine:
             ])
             for batch_vectors in batch_results:
                 all_vectors.extend(batch_vectors)
+            if window_start + _EMBED_CONCURRENCY < len(batches):
+                await asyncio.sleep(_EMBED_WINDOW_SLEEP)
 
         # ── Phase 3: populate indices ──────────────────────────────────────────
         for (index_name, _, metadata), vector in zip(items, all_vectors):
