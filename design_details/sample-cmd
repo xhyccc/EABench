@@ -44,15 +44,6 @@ set -a && source .env && set +a && \
 
 cd python
 
-python run_eval.py \
-    --tenant  ../examples/tenants/onedaydynasty-corp-20260406/tenant.yaml \
-    --eval    ../examples/tenants/onedaydynasty-corp-20260406/eval_dataset_20260406_1138.yaml \
-    --agent   ../examples/agents/react_agent.yaml
-
-python run_eval.py \
-    --tenant  ../examples/tenants/hugesmoothtech-corp-20260404/tenant.yaml \
-    --eval    ../examples/tenants/hugesmoothtech-corp-20260404/eval_dataset_20260405_0033.yaml \
-    --agent   ../examples/agents/react_agent.yaml
 
 python run_eval.py \
     --tenant  ../examples/tenants/bertrand-and-co.-20260407/tenant.yaml \
