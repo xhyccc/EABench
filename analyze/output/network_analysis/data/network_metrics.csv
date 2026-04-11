@@ -1,0 +1,6 @@
+tenant,nodes,edges,density,mean_in_degree,mean_out_degree,max_in_degree,max_out_degree,reciprocity,transitivity,num_wcc,giant_wcc_fraction,diameter,avg_path_length,power_law_gamma,power_law_r2,power_law_k_min,top_betweenness,ba_mean_degree,real_mean_degree,ba_max_degree,real_max_degree
+bertrand-and-co.-20260407,41,322,0.1963,7.85,7.85,38,10,0.2857,0.4863,1,1.0,3,1.706,0.357,0.286,1,mkabongo(0.058); mschmidt(0.031); it_support(0.025),12.88,13.46,29,38
+hugesmoothtech-corp-20260404,127,1429,0.0893,11.25,11.25,83,29,0.3583,0.411,1,1.0,4,2.084,0.699,0.503,1,mgarcia(0.032); msharif(0.027); adubois(0.027),20.09,18.47,57,83
+onedaydynasty-corp-20260406,14,33,0.1813,2.36,2.36,10,3,0.303,0.4846,1,1.0,3,1.989,1.092,0.753,3,yzhang(0.179); kpatel(0.122); arossi(0.000),3.43,4.0,9,10
+staff-office-the-university-of-cambford-20260407,62,519,0.1372,8.37,8.37,43,15,0.343,0.4482,1,1.0,4,1.888,0.679,0.422,2,ktanaka(0.024); fdubois(0.024); cnguyen(0.020),13.94,13.87,34,43
+zai-intelligence-20260408,165,1956,0.0723,11.85,11.85,99,34,0.3139,0.3674,1,1.0,4,2.098,0.66,0.592,1,mcarvalho(0.064); jrodriguez(0.028); hwang(0.022),22.25,19.99,72,100

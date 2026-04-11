@@ -1,0 +1,256 @@
+source,target,channel,timestamp
+yzhang,arossi,email,2026-04-05 10:15:00+00:00
+yzhang,kpatel,email_cc,2026-04-05 10:15:00+00:00
+nhaddad,kpatel,email,2026-04-05 11:00:00+00:00
+jmensa,arossi,email,2026-04-05 12:30:00+00:00
+jmensa,yzhang,email_cc,2026-04-05 12:30:00+00:00
+kpatel,nhaddad,email,2026-04-05 13:00:00+00:00
+kpatel,yzhang,email_cc,2026-04-05 13:00:00+00:00
+yzhang,kpatel,email,2026-04-05 14:00:00+00:00
+yzhang,arossi,email_cc,2026-04-05 14:00:00+00:00
+arossi,jmensa,email,2026-04-05 15:00:00+00:00
+arossi,yzhang,email_cc,2026-04-05 15:00:00+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:02:15+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:03:22+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:03:55+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:04:30+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:04:47+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:06:10+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:07:30+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:08:15+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:09:00+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:09:45+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:10:22+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:10:50+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:11:20+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:11:55+00:00
+kiran_patel,yzhang,chat,2026-04-05 14:12:30+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:12:50+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:02:11+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:03:24+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:04:12+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:04:30+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:05:07+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:05:45+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:05:58+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:08:32+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:09:15+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:09:40+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:09:55+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:14:08+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:15:03+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:15:25+00:00
+yun_zhang,yzhang,chat,2026-04-05 14:16:12+00:00
+alessandro_rossi,yzhang,chat,2026-04-05 14:16:30+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:02:15+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:02:15+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:03:02+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:03:02+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:03:45+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:03:45+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:04:10+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:04:10+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:05:29+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:05:29+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:06:12+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:06:12+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:06:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:06:25+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:08:37+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:08:37+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:09:02+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:09:02+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:09:45+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:09:45+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:10:22+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:10:22+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:11:03+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:11:03+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:11:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:11:25+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:13:10+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:13:10+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:13:47+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:13:47+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:14:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:14:25+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 13:15:02+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 13:15:02+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 13:15:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 13:15:25+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:12:00+00:00
+Yun Zhang,arossi,group_chat,2026-04-05 09:12:00+00:00
+Yun Zhang,jmensa,group_chat,2026-04-05 09:12:00+00:00
+Alessandro Rossi,yzhang,group_chat,2026-04-05 09:13:15+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 09:13:15+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 09:13:15+00:00
+Joy Mensa,yzhang,group_chat,2026-04-05 09:14:07+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 09:14:07+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 09:14:07+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:14:45+00:00
+Yun Zhang,arossi,group_chat,2026-04-05 09:14:45+00:00
+Yun Zhang,jmensa,group_chat,2026-04-05 09:14:45+00:00
+Alessandro Rossi,yzhang,group_chat,2026-04-05 09:15:22+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 09:15:22+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 09:15:22+00:00
+Joy Mensa,yzhang,group_chat,2026-04-05 09:16:10+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 09:16:10+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 09:16:10+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:17:33+00:00
+Yun Zhang,arossi,group_chat,2026-04-05 09:17:33+00:00
+Yun Zhang,jmensa,group_chat,2026-04-05 09:17:33+00:00
+Alessandro Rossi,yzhang,group_chat,2026-04-05 09:18:02+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 09:18:02+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 09:18:02+00:00
+Joy Mensa,yzhang,group_chat,2026-04-05 09:18:39+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 09:18:39+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 09:18:39+00:00
+Alessandro Rossi,yzhang,group_chat,2026-04-05 09:19:10+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 09:19:10+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 09:19:10+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:19:48+00:00
+Yun Zhang,arossi,group_chat,2026-04-05 09:19:48+00:00
+Yun Zhang,jmensa,group_chat,2026-04-05 09:19:48+00:00
+Joy Mensa,yzhang,group_chat,2026-04-05 09:20:20+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 09:20:20+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 09:20:20+00:00
+Alessandro Rossi,yzhang,group_chat,2026-04-05 09:20:55+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 09:20:55+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 09:20:55+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:21:30+00:00
+Yun Zhang,arossi,group_chat,2026-04-05 09:21:30+00:00
+Yun Zhang,jmensa,group_chat,2026-04-05 09:21:30+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:01:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:03:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:12:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:15:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:16:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:25:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:32:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:35:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:38:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:45:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:47:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 09:53:00+00:00
+Yun Zhang,yzhang,group_chat,2026-04-05 10:00:00+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:02:00+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:02:00+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:02:15+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:02:15+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:02:45+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:02:45+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:03:00+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:03:00+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:03:30+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:03:30+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:03:45+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:03:45+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:04:10+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:04:10+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:04:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:04:25+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:04:40+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:04:40+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:04:55+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:04:55+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:06:00+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:06:00+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:06:20+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:06:20+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:06:35+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:06:35+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:06:50+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:06:50+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:07:30+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:07:30+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:07:45+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:07:45+00:00
+Nour Haddad,kpatel,group_chat,2026-04-05 10:08:10+00:00
+Nour Haddad,nhaddad,group_chat,2026-04-05 10:08:10+00:00
+Kiran Patel,kpatel,group_chat,2026-04-05 10:08:25+00:00
+Kiran Patel,nhaddad,group_chat,2026-04-05 10:08:25+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:01:45+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:01:45+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:02:10+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:02:10+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:03:25+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:03:25+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:03:50+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:03:50+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:04:12+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:04:12+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:04:45+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:04:45+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:05:05+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:05:05+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:06:30+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:06:30+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:07:15+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:07:15+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:09:00+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:09:00+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:10:25+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:10:25+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:11:00+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:11:00+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:12:15+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:12:15+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:12:40+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:12:40+00:00
+Joy Mensa,arossi,group_chat,2026-04-05 10:13:05+00:00
+Joy Mensa,jmensa,group_chat,2026-04-05 10:13:05+00:00
+Alessandro Rossi,arossi,group_chat,2026-04-05 10:13:20+00:00
+Alessandro Rossi,jmensa,group_chat,2026-04-05 10:13:20+00:00
+yun_zhang,yzhang,group_chat,2026-04-05 14:05:12+00:00
+yun_zhang,arossi,group_chat,2026-04-05 14:05:12+00:00
+yun_zhang,jmensa,group_chat,2026-04-05 14:05:12+00:00
+alessandro_rossi,yzhang,group_chat,2026-04-05 14:06:03+00:00
+alessandro_rossi,arossi,group_chat,2026-04-05 14:06:03+00:00
+alessandro_rossi,jmensa,group_chat,2026-04-05 14:06:03+00:00
+joy_mensa,yzhang,group_chat,2026-04-05 14:06:40+00:00
+joy_mensa,arossi,group_chat,2026-04-05 14:06:40+00:00
+joy_mensa,jmensa,group_chat,2026-04-05 14:06:40+00:00
+yun_zhang,yzhang,group_chat,2026-04-05 14:07:25+00:00
+yun_zhang,arossi,group_chat,2026-04-05 14:07:25+00:00
+yun_zhang,jmensa,group_chat,2026-04-05 14:07:25+00:00
+joy_mensa,yzhang,group_chat,2026-04-05 14:07:58+00:00
+joy_mensa,arossi,group_chat,2026-04-05 14:07:58+00:00
+joy_mensa,jmensa,group_chat,2026-04-05 14:07:58+00:00
+alessandro_rossi,yzhang,group_chat,2026-04-05 14:08:22+00:00
+alessandro_rossi,arossi,group_chat,2026-04-05 14:08:22+00:00
+alessandro_rossi,jmensa,group_chat,2026-04-05 14:08:22+00:00
+yun_zhang,yzhang,group_chat,2026-04-05 14:08:36+00:00
+yun_zhang,arossi,group_chat,2026-04-05 14:08:36+00:00
+yun_zhang,jmensa,group_chat,2026-04-05 14:08:36+00:00
+joy_mensa,yzhang,group_chat,2026-04-05 14:09:14+00:00
+joy_mensa,arossi,group_chat,2026-04-05 14:09:14+00:00
+joy_mensa,jmensa,group_chat,2026-04-05 14:09:14+00:00
+alessandro_rossi,yzhang,group_chat,2026-04-05 14:09:40+00:00
+alessandro_rossi,arossi,group_chat,2026-04-05 14:09:40+00:00
+alessandro_rossi,jmensa,group_chat,2026-04-05 14:09:40+00:00
+yun_zhang,yzhang,group_chat,2026-04-05 14:13:05+00:00
+yun_zhang,arossi,group_chat,2026-04-05 14:13:05+00:00
+yun_zhang,jmensa,group_chat,2026-04-05 14:13:05+00:00
+joy_mensa,yzhang,group_chat,2026-04-05 14:13:30+00:00
+joy_mensa,arossi,group_chat,2026-04-05 14:13:30+00:00
+joy_mensa,jmensa,group_chat,2026-04-05 14:13:30+00:00
+yun_zhang,yzhang,group_chat,2026-04-05 14:13:50+00:00
+yun_zhang,arossi,group_chat,2026-04-05 14:13:50+00:00
+yun_zhang,jmensa,group_chat,2026-04-05 14:13:50+00:00
+alessandro_rossi,yzhang,group_chat,2026-04-05 14:14:10+00:00
+alessandro_rossi,arossi,group_chat,2026-04-05 14:14:10+00:00
+alessandro_rossi,jmensa,group_chat,2026-04-05 14:14:10+00:00
+kpatel,nhaddad,meeting,2026-04-05 10:30:00+00:00
+kpatel,nhaddad,meeting,2026-04-05 10:30:00+00:00
+nhaddad,kpatel,meeting,2026-04-05 10:30:00+00:00
+arossi,jmensa,meeting,2026-04-05 13:00:00+00:00
+arossi,jmensa,meeting,2026-04-05 13:00:00+00:00
+jmensa,arossi,meeting,2026-04-05 13:00:00+00:00
+yzhang,arossi,meeting,2026-04-05 14:00:00+00:00
+yzhang,jmensa,meeting,2026-04-05 14:00:00+00:00
+yzhang,arossi,meeting,2026-04-05 14:00:00+00:00
+arossi,yzhang,meeting,2026-04-05 14:00:00+00:00
+yzhang,jmensa,meeting,2026-04-05 14:00:00+00:00
+jmensa,yzhang,meeting,2026-04-05 14:00:00+00:00
+arossi,jmensa,meeting,2026-04-05 14:00:00+00:00
+jmensa,arossi,meeting,2026-04-05 14:00:00+00:00
