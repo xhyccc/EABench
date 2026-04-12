@@ -1,0 +1,31 @@
+tenant,channel,nodes,edges,density,avg_in_degree,avg_out_degree,reciprocity,top_betweenness_node,top_betweenness_value
+bertrand-and-co.-20260407,email,15,60,0.2857,4.0,4.0,0.7333,mschmidt,0.238
+bertrand-and-co.-20260407,email_cc,14,69,0.3791,4.93,4.93,0.7246,yjensen,0.105
+bertrand-and-co.-20260407,chat,29,52,0.064,1.79,1.79,0.0,Yara Jensen,0.0
+bertrand-and-co.-20260407,group_chat,36,216,0.1714,6.0,6.0,0.0,Amina Nasser,0.0
+bertrand-and-co.-20260407,meeting,10,86,0.9556,8.6,8.6,1.0,mkabongo,0.0069
+bertrand-and-co.-20260407,aggregate,41,322,0.1963,7.85,7.85,0.2857,mkabongo,0.0576
+hugesmoothtech-corp-20260404,email,35,111,0.0933,3.17,3.17,0.3423,mgarcia,0.152
+hugesmoothtech-corp-20260404,email_cc,33,97,0.0919,2.94,2.94,0.3711,mgarcia,0.1512
+hugesmoothtech-corp-20260404,chat,59,68,0.0199,1.15,1.15,0.0,mariana_garcia,0.0
+hugesmoothtech-corp-20260404,group_chat,114,879,0.0682,7.71,7.71,0.0,Takeshi Sato,0.0
+hugesmoothtech-corp-20260404,meeting,36,502,0.3984,13.94,13.94,1.0,msharif,0.0865
+hugesmoothtech-corp-20260404,aggregate,127,1429,0.0893,11.25,11.25,0.3583,mgarcia,0.0322
+onedaydynasty-corp-20260406,email,5,6,0.3,1.2,1.2,0.6667,arossi,0.0833
+onedaydynasty-corp-20260406,email_cc,4,5,0.4167,1.25,1.25,0.8,yzhang,0.6667
+onedaydynasty-corp-20260406,chat,4,3,0.25,0.75,0.75,0.0,yun_zhang,0.0
+onedaydynasty-corp-20260406,group_chat,13,22,0.141,1.69,1.69,0.0,Yun Zhang,0.0
+onedaydynasty-corp-20260406,meeting,5,8,0.4,1.6,1.6,1.0,arossi,0.0
+onedaydynasty-corp-20260406,aggregate,14,33,0.1813,2.36,2.36,0.303,yzhang,0.1795
+staff-office-the-university-of-cambford-20260407,email,19,90,0.2632,4.74,4.74,0.5778,drossi,0.2866
+staff-office-the-university-of-cambford-20260407,email_cc,20,82,0.2158,4.1,4.1,0.4634,mzhang,0.1594
+staff-office-the-university-of-cambford-20260407,chat,40,50,0.0321,1.25,1.25,0.0,kenji_tanaka,0.0
+staff-office-the-university-of-cambford-20260407,group_chat,61,308,0.0842,5.05,5.05,0.0,Maria Garcia,0.0
+staff-office-the-university-of-cambford-20260407,meeting,19,158,0.462,8.32,8.32,1.0,fdubois,0.0991
+staff-office-the-university-of-cambford-20260407,aggregate,62,519,0.1372,8.37,8.37,0.343,ktanaka,0.0244
+zai-intelligence-20260408,email,42,191,0.1109,4.55,4.55,0.4817,hwang,0.117
+zai-intelligence-20260408,email_cc,39,184,0.1242,4.72,4.72,0.4565,hwang,0.1281
+zai-intelligence-20260408,chat,76,120,0.0211,1.58,1.58,0.0,Katya Petrov,0.0
+zai-intelligence-20260408,group_chat,140,1248,0.0641,8.91,8.91,0.0,Alejandro Rendón,0.0
+zai-intelligence-20260408,meeting,42,594,0.3449,14.14,14.14,1.0,mcarvalho,0.2351
+zai-intelligence-20260408,aggregate,165,1956,0.0723,11.85,11.85,0.3139,mcarvalho,0.0637
