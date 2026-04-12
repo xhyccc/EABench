@@ -367,11 +367,11 @@ def main():
 
         fig_dir = out_dir / "figures"
         plot_degree_powerlaw(G, f"Degree Distribution & Power-Law Fit — {name}",
-                             fig_dir / f"{name}_powerlaw.png")
+                             fig_dir / f"{name}_powerlaw.pdf")
         plot_centrality(G, f"Top Betweenness Centrality — {name}",
-                        fig_dir / f"{name}_centrality.png")
+                        fig_dir / f"{name}_centrality.pdf")
         plot_ba_comparison(G, f"Empirical vs BA Model Degree — {name}",
-                           fig_dir / f"{name}_ba_comparison.png")
+                           fig_dir / f"{name}_ba_comparison.pdf")
 
     # Write CSV
     csv_path = out_dir / "data" / "network_metrics.csv"
@@ -406,7 +406,7 @@ def main():
 
         fig.suptitle("Cross-Tenant Network Metrics", fontsize=13, fontweight="bold")
         fig.tight_layout()
-        fig.savefig(out_dir / "figures" / "cross_tenant_comparison.png", dpi=150)
+        fig.savefig(out_dir / "figures" / "cross_tenant_comparison.pdf", dpi=150)
         plt.close(fig)
 
     print("\nDone. Output written to:", out_dir)

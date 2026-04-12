@@ -30,9 +30,9 @@ types (emails, direct chats, group chats, meetings) and visualises them.
 
 | Output | Description |
 |--------|-------------|
-| `output/graphs/figures/<tenant>_aggregate_network.png` | Spring-layout directed graph, all channels merged; edge colour = dominant channel; node size ∝ in-degree |
-| `output/graphs/figures/<tenant>_degree_dist.png` | In/out-degree distribution bar charts |
-| `output/graphs/figures/<tenant>_<channel>_network.png` | Per-channel network (email, chat, group\_chat, meeting) |
+| `output/graphs/figures/<tenant>_aggregate_network.pdf` | Spring-layout directed graph, all channels merged; edge colour = dominant channel; node size ∝ in-degree |
+| `output/graphs/figures/<tenant>_degree_dist.pdf` | In/out-degree distribution bar charts |
+| `output/graphs/figures/<tenant>_<channel>_network.pdf` | Per-channel network (email, chat, group\_chat, meeting) |
 | `output/graphs/data/<tenant>_edgelist.csv` | Flat edge list: `source, target, channel, timestamp` |
 | `output/graphs/data/graph_summary.csv` | Node/edge count, density, reciprocity, top betweenness node per (tenant × channel) |
 
@@ -67,10 +67,10 @@ signatures.
 
 | Output | Description |
 |--------|-------------|
-| `output/network_analysis/figures/<tenant>_powerlaw.png` | Linear + log-log CCDF with power-law fit |
-| `output/network_analysis/figures/<tenant>_centrality.png` | Top-15 betweenness centrality bar chart |
-| `output/network_analysis/figures/<tenant>_ba_comparison.png` | Rank-ordered degree: empirical vs BA synthetic |
-| `output/network_analysis/figures/cross_tenant_comparison.png` | γ, transitivity, reciprocity across tenants |
+| `output/network_analysis/figures/<tenant>_powerlaw.pdf` | Linear + log-log CCDF with power-law fit |
+| `output/network_analysis/figures/<tenant>_centrality.pdf` | Top-15 betweenness centrality bar chart |
+| `output/network_analysis/figures/<tenant>_ba_comparison.pdf` | Rank-ordered degree: empirical vs BA synthetic |
+| `output/network_analysis/figures/cross_tenant_comparison.pdf` | γ, transitivity, reciprocity across tenants |
 | `output/network_analysis/data/network_metrics.csv` | All metrics in a single table |
 
 **Usage**
@@ -112,10 +112,10 @@ heavy-tail distributions rather than Poisson processes.
 
 | Output | Description |
 |--------|-------------|
-| `output/inter_event_times/figures/<tenant>_iet_ccdf.png` | Multi-channel IET CCDF (log-log) with power-law overlays |
-| `output/inter_event_times/figures/<tenant>_<channel>_iet_hist.png` | Histogram (linear + log scale) with log-normal fit |
-| `output/inter_event_times/figures/burstiness_heatmap.png` | Heatmap of B across all (tenant × channel) combinations |
-| `output/inter_event_times/figures/burstiness_memory_overview.png` | Scatter: B and M per tenant per channel |
+| `output/inter_event_times/figures/<tenant>_iet_ccdf.pdf` | Multi-channel IET CCDF (log-log) with power-law overlays |
+| `output/inter_event_times/figures/<tenant>_<channel>_iet_hist.pdf` | Histogram (linear + log scale) with log-normal fit |
+| `output/inter_event_times/figures/burstiness_heatmap.pdf` | Heatmap of B across all (tenant × channel) combinations |
+| `output/inter_event_times/figures/burstiness_memory_overview.pdf` | Scatter: B and M per tenant per channel |
 | `output/inter_event_times/data/<tenant>_iets.csv` | Per-sender IET records |
 | `output/inter_event_times/data/iet_summary.csv` | All metrics in one table |
 
@@ -170,13 +170,13 @@ configuration affects benchmark performance.
 
 | Output | Description |
 |--------|-------------|
-| `output/eval_analysis/figures/agent_radar.png` | Radar chart comparing agents on 5 key metrics |
-| `output/eval_analysis/figures/metrics_heatmap.png` | Heatmap: metric × (tenant, agent) |
-| `output/eval_analysis/figures/pass_rate_by_agent_tenant.png` | Grouped bar chart per tenant |
-| `output/eval_analysis/figures/scatter_relevance_vs_assertion.png` | Tool relevance vs assertion score per case |
-| `output/eval_analysis/figures/correlation_matrix.png` | Pearson correlations among all case-level metrics |
-| `output/eval_analysis/figures/latency_boxplot.png` | Case latency distribution per agent |
-| `output/eval_analysis/figures/<tenant>_pass_rate.png` | Per-tenant pass-rate bar chart |
+| `output/eval_analysis/figures/agent_radar.pdf` | Radar chart comparing agents on 5 key metrics |
+| `output/eval_analysis/figures/metrics_heatmap.pdf` | Heatmap: metric × (tenant, agent) |
+| `output/eval_analysis/figures/pass_rate_by_agent_tenant.pdf` | Grouped bar chart per tenant |
+| `output/eval_analysis/figures/scatter_relevance_vs_assertion.pdf` | Tool relevance vs assertion score per case |
+| `output/eval_analysis/figures/correlation_matrix.pdf` | Pearson correlations among all case-level metrics |
+| `output/eval_analysis/figures/latency_boxplot.pdf` | Case latency distribution per agent |
+| `output/eval_analysis/figures/<tenant>_pass_rate.pdf` | Per-tenant pass-rate bar chart |
 | `output/eval_analysis/data/agent_ranking.csv` | Global agent ranking table |
 | `output/eval_analysis/data/eval_summary.csv` | One row per result file |
 | `output/eval_analysis/data/cases.csv` | One row per test case |
@@ -200,43 +200,43 @@ analyze/output/
 │   │   ├── graph_summary.csv
 │   │   └── <tenant>_edgelist.csv
 │   └── figures/
-│       ├── <tenant>_aggregate_network.png
-│       ├── <tenant>_degree_dist.png
-│       └── <tenant>_<channel>_network.png
+│       ├── <tenant>_aggregate_network.pdf
+│       ├── <tenant>_degree_dist.pdf
+│       └── <tenant>_<channel>_network.pdf
 ├── network_analysis/
 │   ├── data/
 │   │   └── network_metrics.csv
 │   └── figures/
-│       ├── <tenant>_powerlaw.png
-│       ├── <tenant>_centrality.png
-│       ├── <tenant>_ba_comparison.png
-│       └── cross_tenant_comparison.png
+│       ├── <tenant>_powerlaw.pdf
+│       ├── <tenant>_centrality.pdf
+│       ├── <tenant>_ba_comparison.pdf
+│       └── cross_tenant_comparison.pdf
 ├── inter_event_times/
 │   ├── data/
 │   │   ├── iet_summary.csv
 │   │   └── <tenant>_iets.csv
 │   └── figures/
-│       ├── <tenant>_iet_ccdf.png
-│       ├── <tenant>_<channel>_iet_hist.png
-│       ├── burstiness_heatmap.png
-│       └── burstiness_memory_overview.png
+│       ├── <tenant>_iet_ccdf.pdf
+│       ├── <tenant>_<channel>_iet_hist.pdf
+│       ├── burstiness_heatmap.pdf
+│       └── burstiness_memory_overview.pdf
 └── eval_analysis/
     ├── data/
     │   ├── agent_ranking.csv
     │   ├── eval_summary.csv
     │   └── cases.csv
     └── figures/
-        ├── agent_radar.png
-        ├── metrics_heatmap.png
-        ├── pass_rate_by_agent_tenant.png
-        ├── assertion_score_by_agent_tenant.png
-        ├── tool_search_relevance_by_agent_tenant.png
-        ├── response_citation_relevance_by_agent_tenant.png
-        ├── pass_fail_breakdown.png
-        ├── scatter_relevance_vs_assertion.png
-        ├── correlation_matrix.png
-        ├── latency_boxplot.png
-        └── <tenant>_pass_rate.png
+        ├── agent_radar.pdf
+        ├── metrics_heatmap.pdf
+        ├── pass_rate_by_agent_tenant.pdf
+        ├── assertion_score_by_agent_tenant.pdf
+        ├── tool_search_relevance_by_agent_tenant.pdf
+        ├── response_citation_relevance_by_agent_tenant.pdf
+        ├── pass_fail_breakdown.pdf
+        ├── scatter_relevance_vs_assertion.pdf
+        ├── correlation_matrix.pdf
+        ├── latency_boxplot.pdf
+        └── <tenant>_pass_rate.pdf
 ```
 
 ## Dependencies

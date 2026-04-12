@@ -411,7 +411,7 @@ def process_tenant(tenant_dir: Path, out_dir: Path) -> list[dict]:
         plot_iet_histogram(
             flat_iets, ch,
             title=f"IET Histogram ({ch}) — {name}",
-            out_path=fig_dir / f"{name}_{ch}_iet_hist.png",
+            out_path=fig_dir / f"{name}_{ch}_iet_hist.pdf",
         )
 
         # Save per-sender IETs to CSV
@@ -427,7 +427,7 @@ def process_tenant(tenant_dir: Path, out_dir: Path) -> list[dict]:
         plot_iet_ccdf(
             channel_iets,
             title=f"IET CCDF (all channels) — {name}",
-            out_path=fig_dir / f"{name}_iet_ccdf.png",
+            out_path=fig_dir / f"{name}_iet_ccdf.pdf",
         )
 
     # Write raw IET CSV
@@ -486,7 +486,7 @@ def main():
         # Burstiness heatmap
         plot_burstiness_summary(
             summary_rows,
-            out_path=out_dir / "figures" / "burstiness_heatmap.png",
+            out_path=out_dir / "figures" / "burstiness_heatmap.pdf",
         )
 
     # Cross-channel IET comparison plot
@@ -519,7 +519,7 @@ def main():
         fig.suptitle("Burstiness & Memory across Tenants and Channels",
                      fontsize=12, fontweight="bold")
         fig.tight_layout()
-        fig.savefig(out_dir / "figures" / "burstiness_memory_overview.png", dpi=150)
+        fig.savefig(out_dir / "figures" / "burstiness_memory_overview.pdf", dpi=150)
         plt.close(fig)
 
     print("\nDone. Output written to:", out_dir)

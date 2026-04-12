@@ -426,25 +426,25 @@ def main():
 
     # 1. Pass rate per agent × tenant
     plot_metric_by_agent_tenant(df, "pass_rate",
-        "Pass Rate by Agent and Tenant", fig_dir / "pass_rate_by_agent_tenant.png")
+        "Pass Rate by Agent and Tenant", fig_dir / "pass_rate_by_agent_tenant.pdf")
 
     # 2. Assertion score per agent × tenant
     plot_metric_by_agent_tenant(df, "mean_assertion_score",
         "Assertion Score by Agent and Tenant",
-        fig_dir / "assertion_score_by_agent_tenant.png")
+        fig_dir / "assertion_score_by_agent_tenant.pdf")
 
     # 3. Tool search relevance per agent × tenant
     plot_metric_by_agent_tenant(df, "mean_tool_search_result_relevance",
         "Tool Search Relevance by Agent and Tenant",
-        fig_dir / "tool_search_relevance_by_agent_tenant.png")
+        fig_dir / "tool_search_relevance_by_agent_tenant.pdf")
 
     # 4. Response citation relevance per agent × tenant
     plot_metric_by_agent_tenant(df, "mean_response_citation_relevance",
         "Response Citation Relevance by Agent and Tenant",
-        fig_dir / "response_citation_relevance_by_agent_tenant.png")
+        fig_dir / "response_citation_relevance_by_agent_tenant.pdf")
 
     # 5. Radar chart
-    plot_agent_radar(df, fig_dir / "agent_radar.png")
+    plot_agent_radar(df, fig_dir / "agent_radar.pdf")
 
     # 6. Heatmap of key metrics
     key_metrics = [
@@ -454,20 +454,20 @@ def main():
     ]
     plot_heatmap(df, key_metrics,
                  "Key Metrics Heatmap (Tenant × Agent)",
-                 fig_dir / "metrics_heatmap.png")
+                 fig_dir / "metrics_heatmap.pdf")
 
     # 7. Passed vs failed stacked bar
-    plot_pass_rate_breakdown(df, fig_dir / "pass_fail_breakdown.png")
+    plot_pass_rate_breakdown(df, fig_dir / "pass_fail_breakdown.pdf")
 
     # 8. Scatter: tool relevance vs assertion score
     plot_scatter_relevance_vs_assertion(case_df,
-        fig_dir / "scatter_relevance_vs_assertion.png")
+        fig_dir / "scatter_relevance_vs_assertion.pdf")
 
     # 9. Case-level correlation matrix
-    plot_correlation_matrix(case_df, fig_dir / "correlation_matrix.png")
+    plot_correlation_matrix(case_df, fig_dir / "correlation_matrix.pdf")
 
     # 10. Latency boxplot
-    plot_latency_boxplot(case_df, fig_dir / "latency_boxplot.png")
+    plot_latency_boxplot(case_df, fig_dir / "latency_boxplot.pdf")
 
     # 11. Per-tenant pass rate bar (all agents overlaid)
     for tenant in sorted(df["tenant"].unique()):
@@ -489,15 +489,15 @@ def main():
             ax.text(i, val + 0.01, f"{val:.3f}", ha="center", fontsize=9)
         fig.tight_layout()
         safe_tenant = re.sub(r"[^a-zA-Z0-9_-]", "_", tenant)
-        fig.savefig(fig_dir / f"{safe_tenant}_pass_rate.png", dpi=150)
+        fig.savefig(fig_dir / f"{safe_tenant}_pass_rate.pdf", dpi=150)
         plt.close(fig)
 
     print("\nDone. Output written to:", out_dir)
     print("Key files:")
     print(f"  {out_dir / 'data' / 'agent_ranking.csv'}")
     print(f"  {out_dir / 'data' / 'eval_summary.csv'}")
-    print(f"  {out_dir / 'figures' / 'agent_radar.png'}")
-    print(f"  {out_dir / 'figures' / 'metrics_heatmap.png'}")
+    print(f"  {out_dir / 'figures' / 'agent_radar.pdf'}")
+    print(f"  {out_dir / 'figures' / 'metrics_heatmap.pdf'}")
 
 
 if __name__ == "__main__":

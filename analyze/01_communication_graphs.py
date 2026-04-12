@@ -305,12 +305,12 @@ def process_tenant(tenant_dir: Path, out_dir: Path):
     draw_aggregate_graph(
         aggregate,
         title=f"Communication Network — {name}",
-        out_path=fig_dir / f"{name}_aggregate_network.png",
+        out_path=fig_dir / f"{name}_aggregate_network.pdf",
     )
     draw_degree_distribution(
         aggregate,
         title=f"Degree Distribution (aggregate) — {name}",
-        out_path=fig_dir / f"{name}_degree_dist.png",
+        out_path=fig_dir / f"{name}_degree_dist.pdf",
     )
 
     # Per-channel graphs
@@ -318,7 +318,7 @@ def process_tenant(tenant_dir: Path, out_dir: Path):
         draw_aggregate_graph(
             G,
             title=f"{ch.replace('_',' ').title()} Network — {name}",
-            out_path=fig_dir / f"{name}_{ch}_network.png",
+            out_path=fig_dir / f"{name}_{ch}_network.pdf",
         )
 
     # Edge-list CSV
