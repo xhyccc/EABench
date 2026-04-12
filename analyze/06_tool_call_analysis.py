@@ -92,14 +92,14 @@ RESULT_COLORS = {
 def short_tenant(path: str) -> str:
     """Extract a short tenant label from a full path string."""
     p = Path(path)
-    for part in p.parts:
-        if "tenants" in p.parts:
-            idx = list(p.parts).index("tenants")
-            if len(p.parts) > idx + 1:
-                name = p.parts[idx + 1]
-                s = name.split("-")[0]
-                return s if len(s) >= 3 else name[:14]
-    # Fallback: try to get tenant from filename
+    parts = list(p.parts)
+    if "tenants" in parts:
+        idx = parts.index("tenants")
+        if len(parts) > idx + 1:
+            name = parts[idx + 1]
+            s = name.split("-")[0]
+            return s if len(s) >= 3 else name[:14]
+    # Fallback: use path stem
     name = p.stem
     return name[:14]
 

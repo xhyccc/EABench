@@ -608,9 +608,12 @@ def main(argv: list[str] | None = None) -> None:
         gen_rows[label] = ec
         ev = load_eval_entity_counts(td)
         eval_rows[label] = ev
-        for etype, cnt in {**ec, **ev}.items():
-            summary_rows.append({"tenant": td.name, "entity_type": etype, "count": cnt,
-                                  "source": "generation" if etype in ec else "eval"})
+        for etype, cnt in ec.items():
+            summary_rows.append({"tenant": td.name, "entity_type": etype,
+                                  "count": cnt, "source": "generation"})
+        for etype, cnt in ev.items():
+            summary_rows.append({"tenant": td.name, "entity_type": etype,
+                                  "count": cnt, "source": "eval"})
 
     gen_df = pd.DataFrame(gen_rows).T.fillna(0).astype(int)
     eval_df = pd.DataFrame(eval_rows).T.fillna(0).astype(int)
