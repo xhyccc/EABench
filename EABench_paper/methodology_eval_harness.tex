@@ -1,0 +1,99 @@
+\subsection{Multi-Dimensional Evaluation Harness}
+\label{sec:method_evalharness}
+
+\subsubsection{Judge Configuration via YAML}
+
+\textcolor{blue}{The evaluation harness is configured independently from the runtime under test. A separate YAML file specifies the judge model, decoding parameters, and prompt templates for each scoring function. This separation is intentional. It allows a stronger or more stable model to serve as the judge, and it lets researchers redefine the evaluation criteria without editing the evaluation code. In practice, we recommend using a deterministic judge configuration with temperature fixed at zero so that repeated runs remain comparable.}
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{0.92\linewidth}
+\begin{lstlisting}[basicstyle=\color{blue}\small\ttfamily]
+name: "Default Judge Prompts"
+model:
+  provider: azure
+  name: gpt-4o
+  parameters: {temperature: 0.0}
+prompts:
+  assertion_check: |
+    Verify whether the response satisfies each assertion.
+  citation_relevance: |
+    Judge the relevance of tool results to the query.
+  response_citation: |
+    Judge whether cited IDs are real, relevant, and
+    grounded in the tool trace.
+\end{lstlisting}
+\end{minipage}
+\caption{\textcolor{blue}{Condensed judge configuration illustrating independent control of the evaluation model and prompt templates.}}
+\label{lst:judge_yaml}
+\end{figure}
+
+\subsubsection{Configurable Evaluation Metrics}
+
+\textcolor{blue}{EABench combines judge-based metrics with deterministic diagnostics. The assertion score measures factual coverage by checking whether the final answer satisfies the case assertions. Tool-search-result relevance measures whether the tools selected by the agent and the evidence they returned were appropriate for the query. Response-citation score measures whether the final answer cites real, relevant artifacts and uses a well-formed references section. These judge-based metrics are complemented by deterministic counts for retrieved evidence items, citations, latency, token usage, and tool calls. Because the prompt templates and thresholds are defined in YAML, researchers can extend the metric set or tighten the evaluation criteria without changing the harness logic.}
+
+\begin{table}[h]
+\centering
+\caption{\textcolor{blue}{Metrics reported by the EABench evaluation harness.}}
+\label{tab:eval_metrics}
+\small
+{\color{blue}
+\begin{tabular}{p{0.22\linewidth}p{0.16\linewidth}p{0.52\linewidth}}
+\toprule
+\textbf{Metric} & \textbf{Type} & \textbf{Interpretation} \\
+\midrule
+Assertion score & Judge-based & Fraction of natural-language assertions satisfied by the final answer \\
+Tool search result relevance & Judge-based & Whether the selected tools and retrieved evidence were appropriate and faithfully reflected in the answer \\
+Response citation score & Judge-based & Whether the final answer cites real, relevant artifacts and includes grounded references \\
+Combined citation score & Derived & Mean of tool relevance and response citation scores \\
+Tool search result number & Deterministic & Number of retrieved evidence items surfaced across search tool calls \\
+Response citation number & Deterministic & Number of references emitted by the agent in the final answer \\
+Latency, token usage, tool-call count & Deterministic & Operational cost and efficiency of the agent trajectory \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{figure}[t]
+\centering
+%\fbox{\parbox{0.96\linewidth}{%
+%\vspace{4pt}
+%\small\color{blue}\itshape\raggedright
+%\textbf{[Figure placeholder --- generation pending.]}
+%A vertical funnel-and-merge scoring pipeline diagram.
+%\textbf{Top input block (deep blue, full width):} A wide rectangle labeled ``Agent Response + Tool Trace + Source Citations'' with embedded icons: a document icon (response), a chain-link icon (tool trace), and a citation-list icon (source citations).
+%Below the input block, a downward arrow fans into \textbf{three parallel vertical scoring tracks} separated by column dividers:
+%\textbf{Track~1 (left, amber) --- Citation Relevance Score:}
+%A ``Judge LLM'' rounded box with two annotation badges: ``prompt-configurable'' and ``threshold-configurable.''
+%Inside the box, a small visual: retrieved tool results $\rightarrow$ relevance check against query and access list $\rightarrow$ score bar.
+%Output: a horizontal score bar labeled ``0.0 \ldots 1.0'' in amber tone.
+%\textbf{Track~2 (center, orange) --- Assertion Check Score:}
+%A ``Judge LLM'' rounded box with the same two badges.
+%Inside: a bullet list of weighted assertions (Assertion~1: weight~0.4, Assertion~2: weight~0.3, \ldots) each checked against the response text.
+%Output: a weighted-average score bar labeled ``0.0 \ldots 1.0'' in orange tone.
+%\textbf{Track~3 (right, teal) --- Response Clarity Score:}
+%A ``Judge LLM'' rounded box with the same two badges.
+%Inside: three mini criteria icons---coherence, completeness, grounding---each with a binary check.
+%Output: a score bar labeled ``0.0 \ldots 1.0'' in teal tone.
+%Below the three tracks, a \textbf{merge trapezoid} labeled ``Configurable weight vector ($w_1, w_2, w_3$)'' combining the three score bars.
+%The trapezoid narrows to a single output: a large ``Final EABench Score'' speedometer gauge (green, bottom-center) with a needle.
+%To the far right, outside the main pipeline, a vertically stacked \textbf{Deterministic Diagnostics} column (light gray): Latency, Token Usage, Tool-call Count, Evidence Items---each as a labeled metric box.
+%Color scheme: input block in deep blue; Track~1 amber; Track~2 orange; Track~3 teal; merge zone and final gauge in green; deterministic column gray.
+%\vspace{4pt}
+%}}
+\includegraphics[width=0.9\textwidth]{figures/LLM-as-a-judge-eabench.png}
+\caption{\textcolor{blue}{EABench multi-dimensional evaluation harness. Three independently configurable LLM-judge tracks score citation relevance, assertion satisfaction, and response clarity; their outputs merge via a configurable weight vector into a single final score. Deterministic diagnostics complement the judge scores for operational profiling.}}
+\label{fig:eval_harness}
+\end{figure}
+
+\subsubsection{Pass/Fail Criteria}
+
+\textcolor{blue}{A case is marked as passed only when two conditions hold simultaneously: the assertion score exceeds a correctness threshold and the response-citation score exceeds a grounding threshold. This dual criterion encodes an important design principle. A response that sounds plausible but cites hallucinated artifacts should fail, and a fully cited response that does not answer the question should also fail. EABench therefore treats correctness and grounding as jointly necessary conditions for enterprise-agent success.}
+
+\subsubsection{Side-by-Side Comparison and Diagnostics}
+
+\textcolor{blue}{For comparative studies, EABench can evaluate two agent configurations on the same case and ask a judge model to declare a winner. These pairwise judgments support win-rate analyses and Bradley--Terry modeling, while the underlying per-case metric vectors support paired tests such as the Wilcoxon signed-rank test. Because the result structure stores the full response, tool trace, assertion outcomes, and citation logs, comparative findings are accompanied by diagnostics that explain why one agent won rather than only whether it won.}
+
+\subsubsection{User-Level Experience Simulation}
+
+\textcolor{blue}{Evaluation is always grounded in a requesting user context. Before each case is run, the search engine is bound to \texttt{case.user\_id}, and access-control rules are enforced consistently across search results, citation verification, and debugging views. This design allows the same tenant to support engineer, manager, and contractor personas without maintaining separate corpora, and it turns access control into a benchmarked capability rather than an external precondition.}

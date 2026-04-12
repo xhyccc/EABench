@@ -1,0 +1,58 @@
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm, inner sep=4pt},
+  pillar/.style={draw, rounded corners=3pt, inner sep=6pt},
+  arr/.style={-{Latex[length=2mm]}, thick}
+]
+  \node[box, fill=cyan!10, minimum width=0.92\textwidth] (story) {
+    \textbf{Scenario Specification}\\
+    StoryConfig: company profile, timeline, key events, prompt templates
+  };
+
+  \node[box, fill=green!10, minimum width=0.38\textwidth, below left=10mm and 0mm of story] (tenant) {
+    \textbf{Synthetic Tenant Generation}\\
+    users, emails, chats, meetings, files, generation log
+  };
+  \node[box, fill=gold!18, minimum width=0.38\textwidth, below right=10mm and 0mm of story] (cases) {
+    \textbf{Evaluation Dataset Generation}\\
+    retrieval, reasoning, and report cases with assertions
+  };
+
+  \node[box, fill=blue!8, minimum width=0.19\textwidth, below=11mm of tenant] (cfg) {
+    \textbf{Agent Config}\\
+    model, prompts, tools, flow
+  };
+  \node[box, fill=blue!8, minimum width=0.19\textwidth, right=4mm of cfg] (provider) {
+    \textbf{LLM Providers}\\
+    OpenAI, Azure, local
+  };
+  \node[box, fill=blue!8, minimum width=0.19\textwidth, right=4mm of provider] (sandbox) {
+    \textbf{Sandbox}\\
+    files, shell, Python
+  };
+
+  \node[box, fill=orange!10, minimum width=0.62\textwidth, below=8mm of provider] (runtime) {
+    \textbf{Configurable Agent Runtime}\\
+    ReAct or plan-and-execute + tool registry + access-controlled search
+  };
+
+  \node[box, fill=purple!10, minimum width=0.42\textwidth, below left=10mm and 1mm of runtime] (judge) {
+    \textbf{Evaluation Harness}\\
+    assertions, citation scoring, side-by-side comparison
+  };
+  \node[box, fill=red!8, minimum width=0.42\textwidth, below right=10mm and 1mm of runtime] (debug) {
+    \textbf{Interactive Debugging}\\
+    chat replay, tool traces, evidence inspection, citation tracking
+  };
+
+  \draw[arr] (story) -- (tenant);
+  \draw[arr] (story) -- (cases);
+  \draw[arr] (tenant) -- node[left]{\small tenant data} (runtime);
+  \draw[arr] (cases) -- node[right]{\small eval cases} (judge);
+  \draw[arr] (cfg) -- (runtime);
+  \draw[arr] (provider) -- (runtime);
+  \draw[arr] (sandbox) -- (runtime);
+  \draw[arr] (runtime) -- node[left]{\small responses + traces} (judge);
+  \draw[arr] (runtime) -- node[right]{\small live inspection} (debug);
+  \draw[arr] (tenant.east) to[out=0,in=90] node[right]{\small shared corpus} (debug.north);
+\end{tikzpicture}

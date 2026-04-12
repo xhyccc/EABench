@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm, inner sep=4pt},
+  arr/.style={-{Latex[length=2mm]}, thick}
+]
+  \node[box, fill=cyan!8, minimum width=0.82\linewidth] (log) {
+    \textbf{Tenant History and Generation Log}\\
+    emails, chats, meetings, files, storyline events, user roster
+  };
+
+  \node[box, fill=green!8, minimum width=0.24\linewidth, below left=10mm and 1mm of log] (search) {
+    \textbf{Needle-in-a-Haystack}\\
+    artifact batches
+  };
+  \node[box, fill=orange!10, minimum width=0.24\linewidth, below=10mm of log] (multihop) {
+    \textbf{Multi-Step Reasoning}\\
+    daily event clusters
+  };
+  \node[box, fill=purple!10, minimum width=0.24\linewidth, below right=10mm and 1mm of log] (report) {
+    \textbf{Deep-Dive Reports}\\
+    3--7 day windows
+  };
+
+  \node[box, fill=yellow!10, minimum width=0.82\linewidth, below=12mm of multihop] (gt) {
+    \textbf{Ground Truth Packaging}\\
+    query + user\_id + weighted assertions + entity\_list
+  };
+
+  \node[box, fill=blue!8, minimum width=0.82\linewidth, below=10mm of gt] (dataset) {
+    \textbf{Evaluation Dataset}\\
+    unified YAML cases for runtime execution and judge scoring
+  };
+
+  \draw[arr] (log) -- (search);
+  \draw[arr] (log) -- (multihop);
+  \draw[arr] (log) -- (report);
+  \draw[arr] (search) -- (gt);
+  \draw[arr] (multihop) -- (gt);
+  \draw[arr] (report) -- (gt);
+  \draw[arr] (gt) -- (dataset);
+\end{tikzpicture}

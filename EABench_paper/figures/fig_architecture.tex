@@ -1,0 +1,62 @@
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm},
+  outer/.style={draw, rounded corners=2pt, inner sep=7pt},
+  arr/.style={-{Latex[length=2mm]}, thick}
+]
+  % Top pipeline
+  \node[box, fill=cyan!8, minimum width=0.94\textwidth] (datagen) {
+    \textbf{Data Generation Pipeline}\\
+    Story Config $\rightarrow$ LLM-driven generation $\rightarrow$ Tenant YAML + files
+  };
+
+  % Runtime top row (symmetric around center)
+  \node[box, fill=blue!5, minimum width=0.20\textwidth, below=12mm of datagen] (llmprov) {
+    \textbf{LLM Provider}\\
+    OpenAI / Azure / Anthropic / Local
+  };
+  \node[box, fill=blue!5, minimum width=0.20\textwidth, left=12mm of llmprov] (agentcfg) {
+    \textbf{Agent Config}\\
+    model, flow, tools, prompts
+  };
+  \node[box, fill=blue!5, minimum width=0.20\textwidth, right=12mm of llmprov] (sandbox) {
+    \textbf{Sandbox}\\
+    LocalSandbox / DockerSandbox
+  };
+
+  % Runtime stack
+  \node[box, fill=green!6, minimum width=0.68\textwidth, below=8mm of llmprov] (runner) {
+    \textbf{AgentRunner}\\
+    ReAct loop / Researcher strategy
+  };
+
+  \node[box, fill=yellow!10, minimum width=0.68\textwidth, below=8mm of runner] (tools) {
+    \textbf{Tool Suite}\\
+    search\_email, search\_file, search\_meeting, search\_people, read\_file, execute\_python, ...
+  };
+
+  \node[box, fill=orange!10, minimum width=0.68\textwidth, below=8mm of tools] (search) {
+    \textbf{Search Engine}\\
+    Vector indices (per content type) + ACL filtering
+  };
+
+  % Runtime container and title
+  \node[outer, fit=(agentcfg)(llmprov)(sandbox)(runner)(tools)(search)] (runtime) {};
+  \node[anchor=north west, fill=white, inner sep=1.2pt, font=\bfseries\small]
+    at ([xshift=2mm,yshift=0.8mm]runtime.north west) {Agent Runtime Layer};
+
+  % Bottom evaluation
+  \node[box, fill=purple!8, minimum width=0.94\textwidth, below=7mm of runtime] (eval) {
+    \textbf{Evaluation Harness}\\
+    Assertions $\mid$ Citation scoring $\mid$ LLM-as-a-Judge $\mid$ A/B compare
+  };
+
+  % Orthogonal flows
+  \draw[arr] (datagen.south) -- node[right]{\small tenant data} (datagen.south |- runtime.north);
+  \draw[arr] (agentcfg.south) -- (agentcfg.south |- runner.north);
+  \draw[arr] (llmprov.south) -- (runner.north);
+  \draw[arr] (sandbox.south) -- (sandbox.south |- runner.north);
+  \draw[arr] (runner.south) -- (tools.north);
+  \draw[arr] (tools.south) -- (search.north);
+  \draw[arr] (runtime.south) -- node[right]{\small agent response + traces} (runtime.south |- eval.north);
+\end{tikzpicture}

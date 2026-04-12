@@ -1,0 +1,37 @@
+\subsection{End-to-End Platform Architecture}
+\label{sec:method_overview}
+
+\textcolor{blue}{EABench is organized as a single experimental pipeline rather than a loose collection of scripts. A scenario specification begins with a \texttt{StoryConfig}, which defines the company profile, timeline, employee count, and key events that drive narrative evolution. The tenant generator expands this specification into a multi-modal enterprise corpus containing users, emails, chats, meetings, and files. The same tenant is then consumed by the agent runtime, which executes under a concrete user identity and records its full tool trajectory. Finally, the evaluation harness scores the resulting answer with both deterministic and judge-based metrics. Because each stage writes explicit artifacts to disk, the entire process is reproducible and inspectable.}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/agent-evaluator-framework.png}
+%\resizebox{0.96\linewidth}{!}{\input{figures/fig_architecture}}
+\caption{\textcolor{blue}{End-to-end EABench architecture. The platform connects scenario specification, tenant generation, configurable runtime execution, evaluation-case generation, and interactive debugging in one reproducible workflow.}}
+\label{fig:arch}
+\end{figure}
+
+\textcolor{blue}{This architecture supports two complementary use modes. In batch mode, researchers generate a tenant, evaluate one or more agent configurations, and compare the resulting metric distributions. In interactive mode, they run the same runtime against the same tenant but inspect intermediate search results, tool calls, citations, and user context while debugging failure cases. The shared backend is important: debugging traces come from the exact runtime that produces benchmark results, so qualitative inspection and quantitative evaluation remain aligned.}
+
+\begin{table}[h]
+\centering
+\caption{\textcolor{blue}{Primary artifacts exchanged across the EABench pipeline.}}
+\label{tab:pipeline_artifacts}
+\small
+{\color{blue}
+\begin{tabular}{p{0.17\linewidth}p{0.24\linewidth}p{0.48\linewidth}}
+\toprule
+\textbf{Stage} & \textbf{Primary artifact} & \textbf{Role in the pipeline} \\
+\midrule
+Scenario specification & \texttt{StoryConfig} and prompt templates & Defines the enterprise domain, timeline, narrative drivers, and generator behavior \\
+Tenant generation & \texttt{tenant.yaml}, \texttt{generation\_log.json}, modality-specific YAML files, sandbox files & Materializes a coherent enterprise workspace with explicit provenance \\
+Evaluation dataset generation & \texttt{eval\_dataset\_*.yaml} & Converts raw tenant history into query cases with \texttt{user\_id}, \texttt{entity\_list}, and weighted assertions \\
+Agent runtime & Response text, tool traces, token and latency metrics & Executes a concrete agent configuration under a specific access context \\
+Evaluation harness & Per-case JSON results and aggregate summaries & Produces assertion, citation, and operational diagnostics for comparison and analysis \\
+Interactive debugging & Search evidence, tool-call logs, citation traces & Explains success and failure modes on individual cases without changing the runtime \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\textcolor{blue}{The key systems claim of EABench is therefore not only that each subsystem is configurable, but that the interfaces between subsystems are stable and explicit. A change in the generator alters the tenant and the resulting query set; a change in the runtime alters the trajectory and answer; a change in the judge alters the scoring layer. By exposing these seams directly, EABench makes causal experimentation possible.}
