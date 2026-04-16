@@ -1,0 +1,110 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "goh2008burstiness"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no number and no volume in abaskohi2025drbench
+Warning--page numbers missing in both pages and numpages fields in abaskohi2025drbench
+Warning--no number and no volume in chiang2024chatbot
+Warning--page numbers missing in both pages and numpages fields in chiang2024chatbot
+Warning--no number and no volume in choubey2025benchmarking
+Warning--page numbers missing in both pages and numpages fields in choubey2025benchmarking
+Warning--no number and no volume in drouin2024workarena
+Warning--page numbers missing in both pages and numpages fields in drouin2024workarena
+Warning--no number and no volume in glazer2024frontiermath
+Warning--page numbers missing in both pages and numpages fields in glazer2024frontiermath
+Warning--empty publisher in jimenez2024swebench
+Warning--empty address in jimenez2024swebench
+Warning--page numbers missing in both pages and numpages fields in jimenez2024swebench
+Warning--empty publisher in lewis2020rag
+Warning--empty address in lewis2020rag
+Warning--page numbers missing in both pages and numpages fields in lewis2020rag
+Warning--no number and no volume in liu2023agentbench
+Warning--page numbers missing in both pages and numpages fields in liu2023agentbench
+Warning--empty publisher in mialon2023gaia
+Warning--empty address in mialon2023gaia
+Warning--page numbers missing in both pages and numpages fields in mialon2023gaia
+Warning--no number and no volume in mitra2024agentinstruct
+Warning--page numbers missing in both pages and numpages fields in mitra2024agentinstruct
+Warning--no number and no volume in opsahlong2026officeqapro
+Warning--page numbers missing in both pages and numpages fields in opsahlong2026officeqapro
+Warning--no number and no volume in qin2023toolllm
+Warning--page numbers missing in both pages and numpages fields in qin2023toolllm
+Warning--no number and no volume in saxena2025continuous
+Warning--page numbers missing in both pages and numpages fields in saxena2025continuous
+Warning--empty publisher in vishwakarma2025enterprisebench
+Warning--empty address in vishwakarma2025enterprisebench
+Warning--page numbers missing in both pages and numpages fields in vishwakarma2025enterprisebench
+Warning--empty publisher in wang2023plansolve
+Warning--empty address in wang2023plansolve
+Warning--page numbers missing in both pages and numpages fields in wang2023plansolve
+Warning--empty publisher in xie2024osworld
+Warning--empty address in xie2024osworld
+Warning--page numbers missing in both pages and numpages fields in xie2024osworld
+Warning--empty publisher in yang2018hotpotqa
+Warning--empty address in yang2018hotpotqa
+Warning--page numbers missing in both pages and numpages fields in yang2018hotpotqa
+Warning--no number and no volume in yao2024taubench
+Warning--page numbers missing in both pages and numpages fields in yao2024taubench
+Warning--no number and no volume in yao2022react
+Warning--page numbers missing in both pages and numpages fields in yao2022react
+Warning--empty publisher in zhao2024wildchat
+Warning--empty address in zhao2024wildchat
+Warning--page numbers missing in both pages and numpages fields in zhao2024wildchat
+Warning--empty publisher in zheng2023judging
+Warning--empty address in zheng2023judging
+Warning--page numbers missing in both pages and numpages fields in zheng2023judging
+Warning--no number and no volume in zhou2023webarena
+Warning--page numbers missing in both pages and numpages fields in zhou2023webarena
+You've used 24 entries,
+            6273 wiz_defined-function locations,
+            1618 strings with 23476 characters,
+and the built_in function-call counts, 28222 in all, are:
+= -- 3378
+> -- 1516
+< -- 0
++ -- 528
+- -- 512
+* -- 2392
+:= -- 3035
+add.period$ -- 110
+call.type$ -- 24
+change.case$ -- 255
+chr.to.int$ -- 24
+cite$ -- 77
+duplicate$ -- 2150
+empty$ -- 1546
+format.name$ -- 600
+if$ -- 6784
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 97
+newline$ -- 222
+num.names$ -- 168
+pop$ -- 1141
+preamble$ -- 1
+purify$ -- 446
+quote$ -- 0
+skip$ -- 692
+stack$ -- 0
+substring$ -- 1285
+swap$ -- 105
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 538
+warning$ -- 53
+while$ -- 80
+width$ -- 0
+write$ -- 460
+(There were 54 warnings)

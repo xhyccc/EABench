@@ -1,0 +1,340 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{24}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Abaskohi et~al\mbox{.}(2025)]%
+        {abaskohi2025drbench}
+\bibfield{author}{\bibinfo{person}{Amirhossein Abaskohi},
+  \bibinfo{person}{Tianyi Chen}, \bibinfo{person}{Miguel Munoz-Marmol},
+  \bibinfo{person}{Curtis Fox}, \bibinfo{person}{Amrutha~Varshini Ramesh},
+  \bibinfo{person}{Etienne Marcotte}, \bibinfo{person}{Xing~Han Lu},
+  {et~al\mbox{.}}} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{DRBench: A Realistic Benchmark for Enterprise Deep
+  Research}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2510.00172}}
+  (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[Chiang et~al\mbox{.}(2024)]%
+        {chiang2024chatbot}
+\bibfield{author}{\bibinfo{person}{Wei-Lin Chiang}, \bibinfo{person}{Lianmin
+  Zheng}, \bibinfo{person}{Ying Sheng}, \bibinfo{person}{Anastasios~N.
+  Angelopoulos}, \bibinfo{person}{Tianyi Li}, \bibinfo{person}{Dacheng Li},
+  {et~al\mbox{.}}} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Chatbot Arena: An open platform for evaluating LLMs
+  by human preference}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2403.04132}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Choubey et~al\mbox{.}(2025)]%
+        {choubey2025benchmarking}
+\bibfield{author}{\bibinfo{person}{Prafulla~Kumar Choubey},
+  \bibinfo{person}{Xiangyu Peng}, \bibinfo{person}{Shilpa Bhagavath},
+  \bibinfo{person}{Kung-Hsiang Huang}, \bibinfo{person}{Caiming Xiong}, {and}
+  \bibinfo{person}{Chien-Sheng Wu}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Benchmarking Deep Search over Heterogeneous
+  Enterprise Data}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2506.23139}}
+  (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[Community(2025)]%
+        {gaia2}
+\bibfield{author}{\bibinfo{person}{Open-Source Community}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{GAIA-2: The Next Generation of General AI Assistants
+  Benchmark}.
+\newblock
+\showeprint[arxiv]{2501.00000}~[cs.AI]
+
+
+\bibitem[Drouin et~al\mbox{.}(2024)]%
+        {drouin2024workarena}
+\bibfield{author}{\bibinfo{person}{A. Drouin}, \bibinfo{person}{M. Gasse},
+  \bibinfo{person}{M. Caccia}, \bibinfo{person}{I.~H. Laradji},
+  \bibinfo{person}{M. Del~Verme}, \bibinfo{person}{T. Marty}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{WorkArena: How capable are web agents at solving
+  common knowledge work tasks?}
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2403.07718}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Glazer et~al\mbox{.}(2024)]%
+        {glazer2024frontiermath}
+\bibfield{author}{\bibinfo{person}{E. Glazer}, \bibinfo{person}{E. Erdil},
+  \bibinfo{person}{T. Besiroglu}, \bibinfo{person}{D. Chicharro},
+  \bibinfo{person}{E. Chen}, \bibinfo{person}{A. Gunning}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{FrontierMath: A benchmark for evaluating advanced
+  mathematical reasoning in AI}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2411.04872}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Jimenez et~al\mbox{.}(2024)]%
+        {jimenez2024swebench}
+\bibfield{author}{\bibinfo{person}{Carlos~E. Jimenez}, \bibinfo{person}{John
+  Yang}, \bibinfo{person}{Alexander Wettig}, \bibinfo{person}{Shunyu Yao},
+  \bibinfo{person}{Kexin Pei}, \bibinfo{person}{Ofir Press}, {and}
+  \bibinfo{person}{Karthik Narasimhan}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{SWE}-bench: Can Language Models Resolve Real-World
+  {GitHub} Issues?}. In \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Lewis et~al\mbox{.}(2020)]%
+        {lewis2020rag}
+\bibfield{author}{\bibinfo{person}{Patrick Lewis}, \bibinfo{person}{Ethan
+  Perez}, \bibinfo{person}{Aleksandra Piktus}, \bibinfo{person}{Fabio Petroni},
+  \bibinfo{person}{Vladimir Karpukhin}, \bibinfo{person}{Naman Goyal},
+  \bibinfo{person}{Heinrich K{\"u}ttler}, \bibinfo{person}{Mike Lewis},
+  \bibinfo{person}{Wen-tau Yih}, \bibinfo{person}{Tim Rockt{\"a}schel},
+  \bibinfo{person}{Sebastian Riedel}, {and} \bibinfo{person}{Douwe Kiela}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Retrieval-Augmented Generation for
+  Knowledge-Intensive {NLP} Tasks}. In \bibinfo{booktitle}{\emph{Advances in
+  Neural Information Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\bibitem[Liu et~al\mbox{.}(2023)]%
+        {liu2023agentbench}
+\bibfield{author}{\bibinfo{person}{X. Liu}, \bibinfo{person}{H. Yu},
+  \bibinfo{person}{H. Zhang}, \bibinfo{person}{Y. Xu}, \bibinfo{person}{X.
+  Lei}, \bibinfo{person}{H. Lai}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{AgentBench: Evaluating LLMs as agents}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2308.03688}}
+  (\bibinfo{year}{2023}).
+\newblock
+
+
+\bibitem[Mialon et~al\mbox{.}(2024)]%
+        {mialon2023gaia}
+\bibfield{author}{\bibinfo{person}{Gr{\'{e}}goire Mialon},
+  \bibinfo{person}{Cl{\'{e}}mentine Fourrier}, \bibinfo{person}{Craig Swift},
+  \bibinfo{person}{Thomas Wolf}, \bibinfo{person}{Yann LeCun}, {and}
+  \bibinfo{person}{Thomas Scialom}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{GAIA}: A Benchmark for General {AI} Assistants}.
+  In \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Microsoft(2023)]%
+        {microsoft2023copilot}
+\bibfield{author}{\bibinfo{person}{Microsoft}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Microsoft 365 Copilot: The AI-powered productivity
+  tool for work}.
+\newblock \bibinfo{howpublished}{Microsoft Blog}.
+\newblock
+
+
+\bibitem[Mitra et~al\mbox{.}(2024)]%
+        {mitra2024agentinstruct}
+\bibfield{author}{\bibinfo{person}{A. Mitra}, \bibinfo{person}{L. Del~Corro},
+  \bibinfo{person}{S. Mahajan}, \bibinfo{person}{A. Codas}, \bibinfo{person}{C.
+  Simoes}, \bibinfo{person}{S. Agrawal}, {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{AgentInstruct: Toward generative teaching with
+  agentic flows}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2407.03502}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Opsahl-Ong et~al\mbox{.}(2026)]%
+        {opsahlong2026officeqapro}
+\bibfield{author}{\bibinfo{person}{Krista Opsahl-Ong}, \bibinfo{person}{Arnav
+  Singhvi}, \bibinfo{person}{Jasmine Collins}, \bibinfo{person}{Ivan Zhou},
+  \bibinfo{person}{Cindy Wang}, \bibinfo{person}{Ashutosh Baheti},
+  \bibinfo{person}{Owen Oertell}, \bibinfo{person}{Jacob Portes},
+  \bibinfo{person}{Sam Havens}, \bibinfo{person}{Erich Elsen},
+  \bibinfo{person}{Michael Bendersky}, \bibinfo{person}{Matei Zaharia}, {and}
+  \bibinfo{person}{Xing Chen}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{OfficeQA Pro}: An Enterprise Benchmark for
+  End-to-End Grounded Reasoning}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2603.08655}}
+  (\bibinfo{year}{2026}).
+\newblock
+
+
+\bibitem[Qin et~al\mbox{.}(2023)]%
+        {qin2023toolllm}
+\bibfield{author}{\bibinfo{person}{Y. Qin}, \bibinfo{person}{S. Liang},
+  \bibinfo{person}{Y. Ye}, \bibinfo{person}{K. Zhu}, \bibinfo{person}{L. Yan},
+  \bibinfo{person}{Y. Lu}, {et~al\mbox{.}}} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{ToolLLM: Facilitating large language models to
+  master 16000+ real-world APIs}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2307.16789}}
+  (\bibinfo{year}{2023}).
+\newblock
+
+
+\bibitem[Saxena et~al\mbox{.}(2025)]%
+        {saxena2025continuous}
+\bibfield{author}{\bibinfo{person}{Divyanshu Saxena},
+  \bibinfo{person}{Rishikesh Maurya}, \bibinfo{person}{Xiaoxuan Ou},
+  \bibinfo{person}{Gagan Somashekar}, \bibinfo{person}{Shachee~Mishra Gupta},
+  \bibinfo{person}{Arun Iyer}, \bibinfo{person}{Yu Kang},
+  \bibinfo{person}{Chetan Bansal}, \bibinfo{person}{Aditya Akella}, {and}
+  \bibinfo{person}{Saravan Rajmohan}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Continuous Benchmark Generation for Evaluating
+  Enterprise-Scale {LLM} Agents}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2511.10049}}
+  (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[Vishwakarma et~al\mbox{.}(2025)]%
+        {vishwakarma2025enterprisebench}
+\bibfield{author}{\bibinfo{person}{Harsh Vishwakarma}, \bibinfo{person}{Ankush
+  Agarwal}, \bibinfo{person}{Ojas Patil}, \bibinfo{person}{Chaitanya
+  Devaguptapu}, {and} \bibinfo{person}{Mahesh Chandran}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Can {LLM}s Help You at Work? {A} Sandbox for
+  Evaluating {LLM} Agents in Enterprise Environments}. In
+  \bibinfo{booktitle}{\emph{EMNLP}}.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2023)]%
+        {wang2023plansolve}
+\bibfield{author}{\bibinfo{person}{L. Wang}, \bibinfo{person}{W. Xu},
+  \bibinfo{person}{Y. Lan}, \bibinfo{person}{Z. Hu}, \bibinfo{person}{Y. Lan},
+  \bibinfo{person}{R.~K.-W. Lee}, {and} \bibinfo{person}{E.-P. Lim}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Plan-and-Solve prompting: Improving zero-shot
+  chain-of-thought reasoning by large language models}. In
+  \bibinfo{booktitle}{\emph{ACL}}.
+\newblock
+
+
+\bibitem[Xie et~al\mbox{.}(2024)]%
+        {xie2024osworld}
+\bibfield{author}{\bibinfo{person}{Tianbao Xie}, \bibinfo{person}{Danyang
+  Zhang}, \bibinfo{person}{Jixuan Chen}, \bibinfo{person}{Xiaochuan Li},
+  \bibinfo{person}{Siheng Zhao}, \bibinfo{person}{Ruisheng Cao},
+  \bibinfo{person}{Toh~Jing Hua}, \bibinfo{person}{Zhoujun Cheng},
+  {et~al\mbox{.}}} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{OSWorld}: Benchmarking Multimodal Agents for
+  Open-Ended Tasks in Real Computer Environments}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}}.
+\newblock
+
+
+\bibitem[Yang et~al\mbox{.}(2018)]%
+        {yang2018hotpotqa}
+\bibfield{author}{\bibinfo{person}{Zhilin Yang}, \bibinfo{person}{Peng Qi},
+  \bibinfo{person}{Saizheng Zhang}, \bibinfo{person}{Yoshua Bengio},
+  \bibinfo{person}{William~W. Cohen}, \bibinfo{person}{Ruslan Salakhutdinov},
+  {and} \bibinfo{person}{Christopher~D. Manning}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{HotpotQA}: A Dataset for Diverse, Explainable
+  Multi-hop Question Answering}. In \bibinfo{booktitle}{\emph{EMNLP}}.
+\newblock
+
+
+\bibitem[Yao et~al\mbox{.}(2024)]%
+        {yao2024taubench}
+\bibfield{author}{\bibinfo{person}{S. Yao}, \bibinfo{person}{D. Yu},
+  \bibinfo{person}{J. Zhao}, \bibinfo{person}{I. Shafran},
+  \bibinfo{person}{T.~L. Griffiths}, \bibinfo{person}{Y. Cao}, {and}
+  \bibinfo{person}{K. Narasimhan}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{$\tau$-bench: A benchmark for tool-agent-user
+  interaction in real-world domains}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2406.12045}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Yao et~al\mbox{.}(2022)]%
+        {yao2022react}
+\bibfield{author}{\bibinfo{person}{S. Yao}, \bibinfo{person}{J. Zhao},
+  \bibinfo{person}{D. Yu}, \bibinfo{person}{N. Du}, \bibinfo{person}{I.
+  Shafran}, \bibinfo{person}{K. Narasimhan}, {and} \bibinfo{person}{Y. Cao}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{ReAct: Synergizing reasoning and acting in language
+  models}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2210.03629}}
+  (\bibinfo{year}{2022}).
+\newblock
+
+
+\bibitem[Zhao et~al\mbox{.}(2024)]%
+        {zhao2024wildchat}
+\bibfield{author}{\bibinfo{person}{W. Zhao}, \bibinfo{person}{X. Ren},
+  \bibinfo{person}{J. Hessel}, \bibinfo{person}{C. Cardie}, \bibinfo{person}{Y.
+  Choi}, {and} \bibinfo{person}{Y. Deng}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{WildChat: 1M ChatGPT interaction logs in the wild}.
+  In \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Zheng et~al\mbox{.}(2023)]%
+        {zheng2023judging}
+\bibfield{author}{\bibinfo{person}{L. Zheng}, \bibinfo{person}{W.-L. Chiang},
+  \bibinfo{person}{Y. Sheng}, \bibinfo{person}{S. Zhuang}, \bibinfo{person}{Z.
+  Wu}, \bibinfo{person}{Y. Zhuang}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Judging LLM-as-a-judge with MT-Bench and Chatbot
+  Arena}. In \bibinfo{booktitle}{\emph{NeurIPS}}.
+\newblock
+
+
+\bibitem[Zhou et~al\mbox{.}(2023)]%
+        {zhou2023webarena}
+\bibfield{author}{\bibinfo{person}{S. Zhou}, \bibinfo{person}{F.~F. Xu},
+  \bibinfo{person}{H. Zhu}, \bibinfo{person}{X. Zhou}, \bibinfo{person}{R. Lo},
+  \bibinfo{person}{S. Sridhar}, {et~al\mbox{.}}}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{WebArena: A realistic web environment for building
+  autonomous agents}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2307.13854}}
+  (\bibinfo{year}{2023}).
+\newblock
+
+
+\end{thebibliography}
