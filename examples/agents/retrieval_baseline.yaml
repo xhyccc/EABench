@@ -1,0 +1,44 @@
+id: retrieval-baseline
+version: 1.0.0
+# C5 retrieval-only baseline.
+# Anchors the pass-rate floor: one search call, then a single-turn answer
+# from the retrieved context. No planning, no multi-turn refinement,
+# no people-ID resolution loop.
+model:
+  provider: azure
+  name: gpt-4o-mini
+  parameters:
+    temperature: 0.0
+embedding:
+  provider: azure
+  model: text-embedding-ada-002
+system_prompt: |
+  You are a minimal retrieval-and-summarise baseline.
+
+  ### User Context
+  {user_profile}
+
+  ### Strict Protocol
+  1. Issue EXACTLY ONE search tool call using the user's verbatim query.
+     - Default to `search_email` unless the query explicitly mentions chats,
+       meetings, or files (in which case use the matching search tool once).
+  2. Read the top results returned by that single call.
+  3. Produce a direct answer using ONLY those results.
+  4. Do NOT issue any additional tool calls. Do NOT plan. Do NOT decompose.
+  5. If the retrieved results do not contain the answer, say so explicitly
+     and list what was retrieved.
+
+  ### Citations
+  - Cite artifact IDs from the single retrieved set in a `## References` section.
+tools:
+  definitions:
+    - search_email
+    - search_chat
+    - search_meeting
+    - search_file
+
+flow:
+  strategy: chain
+  # 2 hops: hop 1 = single search tool call, hop 2 = final answer from retrieved context.
+  # The system prompt forbids a second tool call, so this preserves the one-retrieval semantics.
+  max_turns: 2

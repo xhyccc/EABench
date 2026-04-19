@@ -1,0 +1,17 @@
+agent,tenant,n,pass_rate,ci95_lo,ci95_hi,mean_assertion,mean_rc_rel
+react_v1,bertrand-and-co.-20260407,162,0.4136,0.3406,0.4906,0.7361,0.5926
+react_v1,onedaydynasty-corp-20260406,63,0.381,0.2712,0.5044,0.7421,0.6048
+react_v1,staff-office-the-university-of-cambford-20260407,162,0.2284,0.1705,0.2989,0.5154,0.4494
+react_v1,zai-intelligence-20260408,201,0.2687,0.2121,0.3339,0.5599,0.5582
+react_v2,bertrand-and-co.-20260407,162,0.2593,0.1979,0.3318,0.7289,0.479
+react_v2,staff-office-the-university-of-cambford-20260407,162,0.2222,0.1651,0.2923,0.4887,0.4401
+react_v2,zai-intelligence-20260408,201,0.1542,0.1108,0.2106,0.4734,0.493
+researcher,bertrand-and-co.-20260407,162,0.4321,0.3583,0.5091,0.625,0.6395
+researcher,staff-office-the-university-of-cambford-20260407,162,0.3457,0.2768,0.4217,0.5432,0.684
+researcher,zai-intelligence-20260408,201,0.2886,0.2303,0.3547,0.5027,0.6234
+baseline,bertrand-and-co.-20260407,162,0.3025,0.237,0.3771,0.7063,0.637
+baseline,staff-office-the-university-of-cambford-20260407,162,0.2222,0.1651,0.2923,0.4949,0.5926
+baseline,zai-intelligence-20260408,201,0.209,0.1585,0.2704,0.5484,0.5826
+react_v3,bertrand-and-co.-20260407,162,0.3951,0.323,0.4719,0.6656,0.6648
+react_v3,staff-office-the-university-of-cambford-20260407,162,0.2963,0.2314,0.3707,0.5386,0.7
+react_v3,zai-intelligence-20260408,201,0.3632,0.2998,0.4317,0.569,0.7398

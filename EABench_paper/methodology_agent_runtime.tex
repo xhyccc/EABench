@@ -3,7 +3,7 @@
 
 \subsubsection{YAML Configuration Schema}
 
-\textcolor{blue}{The runtime follows a configuration-as-code model in which each agent variant is represented by a single YAML file. This file specifies the reasoning model, embedding model, system prompt, optional planning prompt, per-tool query-analyzer prompts, tool exposure, and flow strategy. The design choice is deliberate: researchers should be able to version-control an agent definition, rerun it on a new tenant, and attribute behavioral changes to the configuration diff rather than to hidden code edits.}
+The runtime follows a configuration-as-code model in which each agent variant is represented by a single YAML file. This file specifies the reasoning model, embedding model, system prompt, optional planning prompt, per-tool query-analyzer prompts, tool exposure, and flow strategy. The design choice is deliberate: researchers should be able to version-control an agent definition, rerun it on a new tenant, and attribute behavioral changes to the configuration diff rather than to hidden code edits.
 
 \begin{figure}[t]
 \centering
@@ -38,16 +38,15 @@ flow:
   max_turns: 5
 \end{lstlisting}
 \end{minipage}
-\caption{\textcolor{blue}{Condensed runtime configuration illustrating how model choice, prompt behavior, tool exposure, and flow strategy are all declared in YAML.}}
+\caption{Condensed runtime configuration illustrating how model choice, prompt behavior, tool exposure, and flow strategy are all declared in YAML.}
 \label{lst:runtime_yaml}
 \end{figure}
 
 \begin{table}[h]
 \centering
-\caption{\textcolor{blue}{Six runtime dimensions that can be changed without source-code edits.}}
+\caption{Six runtime dimensions that can be changed without source-code edits.}
 \label{tab:runtime_dimensions}
 \small
-{\color{blue}
 \begin{tabular}{p{0.17\linewidth}p{0.24\linewidth}p{0.48\linewidth}}
 \toprule
 \textbf{Dimension} & \textbf{Configuration field} & \textbf{Research question enabled} \\
@@ -57,31 +56,30 @@ Embedding model & \texttt{embedding.*} & How much of end-to-end performance is d
 Cognitive architecture & \texttt{flow.strategy} & Does ReAct or plan-and-execute better handle multi-step enterprise tasks? \\
 Global prompting & \texttt{system\_prompt}, \texttt{planning\_prompt} & How do role instructions and planning structure affect behavior and citation quality? \\
 Tool exposure & \texttt{tools.definitions} & Which tools are necessary for each query type, and what are the failure modes when they are removed? \\
-Sandbox implementation & tool dependencies and runtime backend & How do local, remote, or more restrictive execution environments change tool use and latency? \\
+Sandbox implementation & tool dependencies and runtime backend & How do local, remote, or more restrictive execution environments change tool use? \\
 \bottomrule
 \end{tabular}
-}
+
 \end{table}
 
 \subsubsection{Cognitive Architectures}
 
-\textcolor{blue}{EABench currently exposes two cognitive architectures. Under the \texttt{react} strategy, the runtime loops through thought, tool call, observation, and response generation until the model emits a final answer or reaches a hard turn limit. Under the \texttt{researcher} strategy, the runtime first invokes a planner to produce a structured plan and then executes that plan with the normal tool-enabled loop. The second strategy adds overhead, but it is often better suited to multi-hop cases in which the agent must identify a dependency chain before any single tool call is obviously useful.}
+EABench currently exposes two cognitive architectures. Under the \texttt{react} strategy, the runtime loops through thought, tool call, observation, and response generation until the model emits a final answer or reaches a hard turn limit. Under the \texttt{researcher} strategy, the runtime first invokes a planner to produce a structured plan and then executes that plan with the normal tool-enabled loop. The second strategy adds overhead, but it is often better suited to multi-hop cases in which the agent must identify a dependency chain before any single tool call is obviously useful.
 
 \begin{table}[t]
 \centering
-\caption{\textcolor{blue}{Comparison of the two built-in runtime strategies.}}
+\caption{Comparison of the two built-in runtime strategies.}
 \label{tab:strategy_compare}
 \small
-{\color{blue}
 \begin{tabular}{p{0.16\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.30\linewidth}}
 \toprule
 \textbf{Strategy} & \textbf{First action} & \textbf{Typical strength} & \textbf{Typical failure mode} \\
 \midrule
 ReAct & Immediate tool-enabled reasoning & Fast response on local retrieval tasks & Can drift on long dependency chains or overlook needed decomposition \\
-Researcher & Tool-free planning pass & Stronger structure on multi-step tasks & Higher latency and possible over-planning on simple cases \\
+Researcher & Tool-free planning pass & Stronger structure on multi-step tasks & Higher token cost and possible over-planning on simple cases \\
 \bottomrule
 \end{tabular}
-}
+
 \end{table}
 
 \begin{figure}[t]
@@ -111,20 +109,20 @@ Researcher & Tool-free planning pass & Stronger structure on multi-step tasks & 
 %\vspace{4pt}
 %}}
 \includegraphics[width=0.9\textwidth]{figures/agent-architecture-config.png}
-\caption{\textcolor{blue}{The two cognitive architectures natively supported by EABench as hot-swappable \texttt{flow.strategy} values. ReAct (left) interleaves reasoning and acting in a tight feedback loop; Plan-and-Execute (right) separates a global planning phase from sequential step-wise execution, reducing context drift on long multi-hop tasks.}}
+\caption{The two cognitive architectures natively supported by EABench as hot-swappable \texttt{flow.strategy} values. ReAct (left) interleaves reasoning and acting in a tight feedback loop; Plan-and-Execute (right) separates a global planning phase from sequential step-wise execution, reducing context drift on long multi-hop tasks.}
 \label{fig:cognitive_arch}
 \end{figure}
 
 \subsubsection{Multi-Provider LLM Support}
 
-\textcolor{blue}{The runtime separates the configuration schema from the provider implementation through a common LLM interface. Provider choice is driven by the YAML field \texttt{model.provider}, while credentials and deployment-specific settings are resolved from environment variables. This separation makes provider swapping operationally cheap: researchers can move between OpenAI, Azure-hosted deployments, or compatible local endpoints while preserving the rest of the runtime definition. That property is especially important for cross-model evaluations, because it prevents provider migration from becoming a hidden code change.}
+The runtime separates the configuration schema from the provider implementation through a common LLM interface. Provider choice is driven by the YAML field \texttt{model.provider}, while credentials and deployment-specific settings are resolved from environment variables. This separation makes provider swapping operationally cheap: researchers can move between OpenAI, Azure-hosted deployments, or compatible local endpoints while preserving the rest of the runtime definition. That property is especially important for cross-model evaluations, because it prevents provider migration from becoming a hidden code change.
 
 \subsubsection{Enterprise Tool Suite and Search Infrastructure}
 
-\textcolor{blue}{The built-in tool suite combines semantic retrieval tools with sandboxed execution tools. Search tools cover emails, files, meetings, people, one-to-one chats, group chats, and channel messages. Execution tools cover file inspection, directory listing, shell execution, and Python execution. Tools are registered through a decorator-based registry that automatically exports JSON schemas for model-facing tool calling, while dependencies such as the sandbox, search engine, and query analyzer are injected by the runner. This keeps tool implementations modular and makes tool ablations straightforward: removing a tool from the YAML file is sufficient to change the agent's action space.}
+The built-in tool suite combines semantic retrieval tools with sandboxed execution tools. Search tools cover emails, files, meetings, people, one-to-one chats, group chats, and channel messages. Execution tools cover file inspection, directory listing, shell execution, and Python execution. Tools are registered through a decorator-based registry that automatically exports JSON schemas for model-facing tool calling, while dependencies such as the sandbox, search engine, and query analyzer are injected by the runner. This keeps tool implementations modular and makes tool ablations straightforward: removing a tool from the YAML file is sufficient to change the agent's action space.
 
-\textcolor{blue}{Retrieval itself is implemented as a set of separate vector indices rather than as one monolithic store. EABench indexes at least nine content collections, including file snippets, full file contents, emails, chats, group chats, channels, meeting metadata, meeting transcripts, and user profiles. Similarity is computed with cosine similarity, and the resulting embeddings are cached on disk to avoid recomputation across repeated evaluations. The indices are filtered by user context before results are returned, which means the runtime and the evaluator both observe the same access-controlled search space.}
+Retrieval itself is implemented as a set of separate vector indices rather than as one monolithic store. EABench indexes at least nine content collections, including file snippets, full file contents, emails, chats, group chats, channels, meeting metadata, meeting transcripts, and user profiles. Similarity is computed with cosine similarity, and the resulting embeddings are cached on disk to avoid recomputation across repeated evaluations. The indices are filtered by user context before results are returned, which means the runtime and the evaluator both observe the same access-controlled search space.
 
 \subsubsection{Query Analyzer}
 
-\textcolor{blue}{An optional LLM-driven query analyzer sits between the user request and the retrieval tools. Instead of forwarding raw language directly to the vector index, the analyzer can refine a query, select a search strategy, or resolve a sender filter before retrieval occurs. Because its prompts are themselves configurable in YAML, EABench treats search refinement as a first-class experimental variable. Researchers can therefore study not only whether a search tool is useful, but whether specific decomposition heuristics or query rewrites materially improve retrieval fidelity.}
+An optional LLM-driven query analyzer sits between the user request and the retrieval tools. Instead of forwarding raw language directly to the vector index, the analyzer can refine a query, select a search strategy, or resolve a sender filter before retrieval occurs. Because its prompts are themselves configurable in YAML, EABench treats search refinement as a first-class experimental variable. Researchers can therefore study not only whether a search tool is useful, but whether specific decomposition heuristics or query rewrites materially improve retrieval fidelity.

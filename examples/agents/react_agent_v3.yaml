@@ -1,0 +1,62 @@
+id: react-agent-v3-ablation
+version: 1.0.0
+# C3 ablation configuration.
+# Matches Researcher on model (gpt-4o-mini) and temperature (0.0) but keeps
+# the ReAct (single-pass) architecture. Prompt reuses ReAct-v2's condensed
+# style so prompt verbosity is also controlled. The ONLY difference vs.
+# Researcher is the absence of a planning stage.
+model:
+  provider: azure
+  name: gpt-4o-mini
+  parameters:
+    temperature: 0.0
+embedding:
+  provider: azure
+  model: text-embedding-ada-002
+system_prompt: |
+  You are a highly efficient and precise enterprise assistant for the EABench platform.
+
+  ### User Context
+  Acting for:
+  {user_profile}
+
+  ### Core Responsibilities
+  - Act as the logged-in user.
+  - Answer questions and execute tasks using available data (emails, chats, files, meetings).
+  - STRICTLY verify all information with tools. NO assumptions.
+
+  ### Tool Usage Rules
+  - **Search First**: Use specific search tools (e.g., `search_email`, `search_file`) for information retrieval.
+  - **List Items**: Use empty queries to list recent items (e.g., `search_email(query=[])`).
+  - **People**: Use `search_people` for contact/colleague info; resolve every name to a user ID before any content search.
+  - **Files**: Use `read_file` with relative paths (e.g., "docs/specs/v1.md").
+  - **Content Search**: Use `search_in_file` to find keywords in a file.
+  - **Analysis**: Use `execute_python` ONLY for calculations/data processing. PRINT all results to stdout.
+
+  ### Pronouns & Relationships
+  - "I"/"my"/"me" -> currently logged-in user (use the `id` field, not the name).
+  - "my manager" -> `manager_id` from the profile. "my peers" -> users who share the manager.
+
+  ### Citation Format
+  - Every factual claim needs an inline citation like [^1].
+  - End every response with a `## References` section listing artifact IDs.
+
+  ### Response Standards
+  - Professional, concise, fact-grounded.
+  - State clearly if information cannot be found.
+tools:
+  definitions:
+    - search_email
+    - search_chat
+    - search_group_chat
+    - search_channel
+    - search_meeting
+    - search_file
+    - read_file
+    - search_in_file
+    - search_people
+    - execute_python
+
+flow:
+  strategy: react
+  max_turns: 20

@@ -1,0 +1,1126 @@
+{
+  "source": "python/results/eval_staff-office-the-university-of-cambford-20260407_20260409_083340.json",
+  "judge": "examples/evals/glm_judge.yaml",
+  "judge_model": "GLM-4.7-FlashX",
+  "total": 162,
+  "passed_glm": 49,
+  "pass_rate_glm": 0.3025,
+  "cases": [
+    {
+      "case_id": "case_001",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_002",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_003",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_004",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_005",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_006",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_007",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_008",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419154313c46feb7b652d44ca\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_009",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_010",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_011",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419155947d713fc01c0a2491a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_012",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_013",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_014",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_015",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_016",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_017",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_018",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_019",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_020",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_021",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_022",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_023",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419163814f2c7a78e829a4926\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_024",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_025",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_026",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_027",
+      "error": "Connection error."
+    },
+    {
+      "case_id": "case_028",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_029",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_030",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_031",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_032",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_033",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_034",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_035",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_036",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.1,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_037",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.4,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_038",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_039",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_040",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_041",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_042",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_043",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_044",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_045",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_046",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_047",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_048",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_049",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_050",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_051",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_052",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_053",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_054",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_055",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_056",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_057",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_058",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_059",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_060",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_061",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_062",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_063",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_064",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_065",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_066",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_067",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_068",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_069",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_070",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.2,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_071",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_072",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_073",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_074",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_075",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_076",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_077",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_078",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_079",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_080",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_081",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_082",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_083",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_084",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_085",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_086",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_087",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_088",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_089",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_090",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_091",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_092",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_093",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_094",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_095",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_096",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_097",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_098",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_099",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_100",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.2,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_101",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_102",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_103",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_104",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_105",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_106",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_107",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_108",
+      "assertion_score_glm": 0.25,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_109",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_110",
+      "assertion_score_glm": 0.25,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_111",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_112",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_113",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_114",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.8,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_115",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_116",
+      "assertion_score_glm": 0.3333333333333333,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_117",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_118",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_119",
+      "assertion_score_glm": 0.5,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 1.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_120",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_121",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_122",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_123",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_124",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_125",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_126",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_127",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_128",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_129",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_130",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_131",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_132",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_133",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_134",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_135",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_136",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_137",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.2,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_138",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_139",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_140",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_141",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_142",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_143",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_144",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_145",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_146",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_147",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_148",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_149",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_150",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_151",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_152",
+      "assertion_score_glm": 0.6666666666666666,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_153",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_154",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_155",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_156",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_157",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041920411808b0fa1f27274d21\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_158",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_159",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 1.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_160",
+      "assertion_score_glm": 1.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": true
+    },
+    {
+      "case_id": "case_161",
+      "assertion_score_glm": 0.0,
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_162",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041921071151094282628e4e57\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{24}
+\begin{thebibliography}{25}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -110,6 +110,19 @@
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2411.04872}}
   (\bibinfo{year}{2024}).
 \newblock
+
+
+\bibitem[Goh and Barab{\'a}si(2008)]%
+        {goh2008burstiness}
+\bibfield{author}{\bibinfo{person}{Kwang-Il Goh} {and}
+  \bibinfo{person}{Albert-L{\'a}szl{\'o} Barab{\'a}si}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Burstiness and memory in complex systems}.
+\newblock \bibinfo{journal}{\emph{EPL (Europhysics Letters)}}
+  \bibinfo{volume}{81}, \bibinfo{number}{4} (\bibinfo{year}{2008}),
+  \bibinfo{pages}{48002}.
+\newblock
+\href{https://doi.org/10.1209/0295-5075/81/48002}{doi:\nolinkurl{10.1209/0295-5075/81/48002}}
 
 
 \bibitem[Jimenez et~al\mbox{.}(2024)]%

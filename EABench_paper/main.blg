@@ -6,7 +6,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "goh2008burstiness"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -66,45 +65,45 @@ Warning--empty address in zheng2023judging
 Warning--page numbers missing in both pages and numpages fields in zheng2023judging
 Warning--no number and no volume in zhou2023webarena
 Warning--page numbers missing in both pages and numpages fields in zhou2023webarena
-You've used 24 entries,
+You've used 25 entries,
             6273 wiz_defined-function locations,
-            1618 strings with 23476 characters,
-and the built_in function-call counts, 28222 in all, are:
-= -- 3378
-> -- 1516
+            1625 strings with 23631 characters,
+and the built_in function-call counts, 29400 in all, are:
+= -- 3574
+> -- 1547
 < -- 0
-+ -- 528
-- -- 512
-* -- 2392
-:= -- 3035
-add.period$ -- 110
-call.type$ -- 24
-change.case$ -- 255
-chr.to.int$ -- 24
-cite$ -- 77
-duplicate$ -- 2150
-empty$ -- 1546
-format.name$ -- 600
-if$ -- 6784
++ -- 539
+- -- 526
+* -- 2465
+:= -- 3139
+add.period$ -- 115
+call.type$ -- 25
+change.case$ -- 261
+chr.to.int$ -- 25
+cite$ -- 78
+duplicate$ -- 2247
+empty$ -- 1611
+format.name$ -- 618
+if$ -- 7099
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 97
-newline$ -- 222
-num.names$ -- 168
-pop$ -- 1141
+missing$ -- 101
+newline$ -- 231
+num.names$ -- 175
+pop$ -- 1173
 preamble$ -- 1
-purify$ -- 446
+purify$ -- 460
 quote$ -- 0
-skip$ -- 692
+skip$ -- 731
 stack$ -- 0
-substring$ -- 1285
-swap$ -- 105
+substring$ -- 1362
+swap$ -- 119
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 538
+type$ -- 554
 warning$ -- 53
-while$ -- 80
+while$ -- 88
 width$ -- 0
-write$ -- 460
-(There were 54 warnings)
+write$ -- 480
+(There were 53 warnings)

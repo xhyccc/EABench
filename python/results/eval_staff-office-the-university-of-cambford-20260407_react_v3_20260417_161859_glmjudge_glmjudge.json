@@ -1,0 +1,902 @@
+{
+  "source": "python/results/eval_staff-office-the-university-of-cambford-20260407_react_v3_20260417_161859_glmjudge.json",
+  "judge": "examples/evals/glm_judge.yaml",
+  "judge_model": "GLM-4.7-FlashX",
+  "total": 162,
+  "passed_glm": 0,
+  "pass_rate_glm": 0.0,
+  "cases": [
+    {
+      "case_id": "case_001",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_002",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_003",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_004",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_005",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_006",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_007",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_008",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_009",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_010",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_011",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_012",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_013",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_014",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_015",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_016",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_017",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_018",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_019",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_020",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_021",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_022",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_023",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_024",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_025",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_026",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_027",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_028",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_029",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_030",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_031",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_032",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_033",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_034",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_035",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_036",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_037",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_038",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_039",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_040",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_041",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_042",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_043",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_044",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_045",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_046",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_047",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_048",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_049",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_050",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_051",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_052",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_053",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_054",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_055",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_056",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041818395157ff3a94c33546ec\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_057",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_058",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604181853432a9e1a1bc5204218\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_059",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604181906095ea0b5bd930b4dd3\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_060",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041819182525f1cbcc44f34eb4\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_061",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418193041ccebae874303466a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_062",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_063",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604181952388928f36cb0eb4bc7\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_064",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_065",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041820054275554175d0604cb8\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_066",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_067",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_068",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604182020446d5c9c054fc047da\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_069",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_070",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_071",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604182039547a2ef6756a044b9d\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_072",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_073",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604182103515dbde4500c3341a5\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_074",
+      "error": "Connection error."
+    },
+    {
+      "case_id": "case_075",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604182128568076f4efb8854d9d\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_076",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041821405809e6d35ce1624b20\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_077",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_078",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_079",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418220303247802933c2c418f\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_080",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_081",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_082",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418222027c44f6d04fb964539\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_083",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041822331816368ead6c4e45ae\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_084",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418224520bcee9e2ad8a24648\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_085",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418225722eaec16b8d0794d9a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_086",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_087",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_088",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_089",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041823380789c180b7ece44065\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_090",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260418235139ce1fe4f58b9e4509\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_091",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190004417df96716d5214092\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_092",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190016438686024950294070\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_093",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419002845a0211c21b1c54fa5\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_094",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419004144b87e17592f5b462d\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_095",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041900540508094199b9ad41a6\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_096",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419010607c5fb4e021018429e\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_097",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419011809ce8a0a687d35486e\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_098",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190131119d30e1bc4dc540d2\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_099",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190147506798cd5408244591\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_100",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_101",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419021334d70499bb593e489e\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_102",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_103",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_104",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_105",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419025356599c025293ba46cd\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_106",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_107",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_108",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_109",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_110",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041903164814b6a704098c4827\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_111",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190329484332824d6db8450c\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_112",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190342503c7d71558065483e\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_113",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_114",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_115",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_116",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a2026041904193547c4599adf9b4eaa\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_117",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a20260419043148632199fa67834e73\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_118",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_119",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_120",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190459079b7c4f2fb76c4ea5\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_121",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190512020f873500c4d54724\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_122",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190524464e8cd7ae666a447a\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_123",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_124",
+      "error": "Error code: 500 - {'error': {'code': '1234', 'message': '\u7f51\u7edc\u9519\u8bef\uff0c\u9519\u8befid\uff1a202604190542090b57eed5581e4a31\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5'}}"
+    },
+    {
+      "case_id": "case_125",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_126",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_127",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_128",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_129",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_130",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_131",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_132",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_133",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_134",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_135",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_136",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_137",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_138",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_139",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_140",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_141",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_142",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_143",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_144",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_145",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_146",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_147",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_148",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_149",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_150",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_151",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_152",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_153",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_154",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_155",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_156",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_157",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_158",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_159",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_160",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_161",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    },
+    {
+      "case_id": "case_162",
+      "ts_rel_glm": 0.0,
+      "rc_rel_glm": 0.0,
+      "passed_glm": false
+    }
+  ]
+}

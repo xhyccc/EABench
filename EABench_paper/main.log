@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 APR 2026 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 APR 2026 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,7 +1067,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [1.1{/Users/haoyi/Library/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/p
 dftex.map}{/Users/haoyi/Library/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/Users/haoyi/Library/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<figures/main_pipeline_research.png, id=144, 1381.16pt x 770.88pt>
+<figures/main_pipeline_research.png, id=164, 1381.16pt x 770.88pt>
 File: figures/main_pipeline_research.png Graphic file (type png)
 <use figures/main_pipeline_research.png>
 Package pdftex.def Info: figures/main_pipeline_research.png  used on input line
@@ -1080,29 +1080,28 @@ Class acmart Warning: A possible image without description on input line 169.
 
 
 [2.2]
-Underfull \hbox (badness 10000) in paragraph at lines 207--207
+
+[3.3 <./figures/main_pipeline_research.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
 []\T1/cmr/m/n/8 (+20) End-to-end eval-u-a-tion
  []
 
 
-Underfull \vbox (badness 3514) has occurred while \output is active []
-
-
-
-[3.3 <./figures/main_pipeline_research.png (PNG copy)>]
 
 [4.4]
 
 [5.5]
-<figures/research_position.png, id=222, 1381.16pt x 770.88pt>
+
+[6.6]
+<figures/research_position.png, id=253, 1381.16pt x 770.88pt>
 File: figures/research_position.png Graphic file (type png)
 <use figures/research_position.png>
-Package pdftex.def Info: figures/research_position.png  used on input line 315.
+Package pdftex.def Info: figures/research_position.png  used on input line 317.
 
 (pdftex.def)             Requested size: 387.00153pt x 215.99785pt.
 
 
-Class acmart Warning: A possible image without description on input line 343.
+Class acmart Warning: A possible image without description on input line 345.
 
 (./methodology_overview.tex
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1111,8 +1110,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[6.6]
-<figures/agent-evaluator-framework.png, id=234, 1381.16pt x 770.88pt>
+[7.7 <./figures/research_position.png (PNG copy)>]
+<figures/agent-evaluator-framework.png, id=263, 1381.16pt x 770.88pt>
 File: figures/agent-evaluator-framework.png Graphic file (type png)
 <use figures/agent-evaluator-framework.png>
 Package pdftex.def Info: figures/agent-evaluator-framework.png  used on input l
@@ -1123,40 +1122,37 @@ ine 8.
 Class acmart Warning: A possible image without description on input line 12.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 5607) in paragraph at lines 26--26
+Underfull \hbox (badness 5607) in paragraph at lines 25--25
 []\T1/cmr/m/n/8 (+20) Scenario spec-i-fi-ca-
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 26--26
+Underfull \hbox (badness 3333) in paragraph at lines 25--25
 []\T1/cmtt/m/n/8 StoryConfig \T1/cmr/m/n/8 (+20) and prompt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 []\T1/cmtt/m/n/8 tenant.yaml\T1/cmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 \T1/cmtt/m/n/8 generation_log.json\T1/cmr/m/n/8 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 \T1/cmr/m/n/8 (+20) modality-specific YAML
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 31--31
+Underfull \hbox (badness 6526) in paragraph at lines 30--30
 []\T1/cmr/m/n/8 (+20) Interactive de-bug-
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 31--31
+Underfull \hbox (badness 2020) in paragraph at lines 30--30
 []\T1/cmr/m/n/8 (+20) Search ev-i-dence, tool-call
  []
 
@@ -1164,11 +1160,6 @@ Underfull \hbox (badness 2020) in paragraph at lines 31--31
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./methodology_agent_runtime.tex
-Underfull \vbox (badness 3623) has occurred while \output is active []
-
-
-
-[7.7 <./figures/research_position.png (PNG copy)>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 12.
 
@@ -1176,7 +1167,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
 Class acmart Warning: A possible image without description on input line 43.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 []\T1/cmtt/m/n/8 system_prompt\T1/cmr/m/n/8 (+20) ,
  []
 
@@ -1184,62 +1175,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 1038) has occurred while \output is active []
-
-
 
 [8.8 <./figures/agent-evaluator-framework.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 []\T1/cmr/m/n/8 (+20) Immediate tool-
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 80--81
+Underfull \hbox (badness 2521) in paragraph at lines 78--79
 []\T1/cmr/m/n/8 (+20) Can drift on long de-pen-dency
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []\T1/cmr/m/n/8 (+20) Tool-free plan-ning
  []
 
 
 
 [9.9]
-<figures/agent-architecture-config.png, id=287, 1381.16pt x 770.88pt>
+<figures/agent-architecture-config.png, id=308, 1381.16pt x 770.88pt>
 File: figures/agent-architecture-config.png Graphic file (type png)
 <use figures/agent-architecture-config.png>
 Package pdftex.def Info: figures/agent-architecture-config.png  used on input l
-ine 113.
+ine 111.
 (pdftex.def)             Requested size: 387.00153pt x 215.99785pt.
 
 
-Class acmart Warning: A possible image without description on input line 116.
+Class acmart Warning: A possible image without description on input line 114.
 
 
 
-[10.10 <./figures/agent-architecture-config.png (PNG copy)>])
-(./methodology_data_generation.tex
+[10.10]) (./methodology_data_generation.tex
 
-[11.11]
-Underfull \hbox (badness 5533) in paragraph at lines 47--47
+[11.11 <./figures/agent-architecture-config.png (PNG copy)>]
+Underfull \hbox (badness 5533) in paragraph at lines 45--45
 []\T1/cmr/m/n/8 (+20) Artifact ma-te-ri-al-iza-tion
  []
 
-<figures/tenant-generation-pipeline.png, id=304, 1381.16pt x 770.88pt>
+
+
+[12.12]
+<figures/tenant-generation-pipeline.png, id=334, 1381.16pt x 770.88pt>
 File: figures/tenant-generation-pipeline.png Graphic file (type png)
 <use figures/tenant-generation-pipeline.png>
 Package pdftex.def Info: figures/tenant-generation-pipeline.png  used on input 
-line 87.
+line 85.
 (pdftex.def)             Requested size: 387.00153pt x 215.99785pt.
 
-Class acmart Warning: A possible image without description on input line 90.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Class acmart Warning: A possible image without description on input line 88.
 
 ) (./methodology_eval_dataset.tex
-<figures/eval_data_generation_pipeline.png, id=305, 1381.16pt x 770.88pt>
+<figures/eval_data_generation_pipeline.png, id=335, 1381.16pt x 770.88pt>
 File: figures/eval_data_generation_pipeline.png Graphic file (type png)
 <use figures/eval_data_generation_pipeline.png>
 Package pdftex.def Info: figures/eval_data_generation_pipeline.png  used on inp
@@ -1250,421 +1238,330 @@ ut line 11.
 Class acmart Warning: A possible image without description on input line 14.
 
 
+Underfull \hbox (badness 1454) in paragraph at lines 26--27
+[]\T1/cmr/m/n/8 (+20) Cross-modal ref-er-ence res-o-lu-tion and
+ []
 
-[12.12]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[13.13 <./figures/tenant-generation-pipeline.png (PNG copy)> <./figures/eval_da
-ta_generation_pipeline.png (PNG copy)>]) (./methodology_eval_harness.tex
+[13.13 <./figures/tenant-generation-pipeline.png (PNG copy)>]
+
+[14.14 <./figures/eval_data_generation_pipeline.png (PNG copy)>])
+(./methodology_eval_harness.tex
 
 Class acmart Warning: A possible image without description on input line 29.
 
 
+Underfull \vbox (badness 3838) has occurred while \output is active []
 
-[14.14]
-Underfull \hbox (badness 1270) in paragraph at lines 46--46
+
+
+[15.15]
+Underfull \hbox (badness 1270) in paragraph at lines 62--62
 []\T1/cmr/m/n/8 (+20) Tool search re-sult rel-e-
  []
 
-<figures/LLM-as-a-judge-eabench.png, id=332, 1381.16pt x 770.88pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]\T1/cmr/m/n/8 (+20) Token us-age, tool-call
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/LLM-as-a-judge-eabench.png, id=362, 1381.16pt x 770.88pt>
 File: figures/LLM-as-a-judge-eabench.png Graphic file (type png)
 <use figures/LLM-as-a-judge-eabench.png>
 Package pdftex.def Info: figures/LLM-as-a-judge-eabench.png  used on input line
- 84.
+ 95.
 (pdftex.def)             Requested size: 387.00153pt x 215.99785pt.
 
-Class acmart Warning: A possible image without description on input line 87.
+Class acmart Warning: A possible image without description on input line 98.
 
 
 
-[15.15]) (./methodology_interactive.tex
+[16.16]
 
-[16.16 <./figures/LLM-as-a-judge-eabench.png (PNG copy)>]
-<figures/eabench_screenshot.png, id=365, 1685.29625pt x 1135.24126pt>
+[17.17 <./figures/LLM-as-a-judge-eabench.png (PNG copy)>])
+(./methodology_interactive.tex
+<figures/eabench_screenshot.png, id=391, 1685.29625pt x 1135.24126pt>
 File: figures/eabench_screenshot.png Graphic file (type png)
 <use figures/eabench_screenshot.png>
-Package pdftex.def Info: figures/eabench_screenshot.png  used on input line 35.
+Package pdftex.def Info: figures/eabench_screenshot.png  used on input line 34.
 
 (pdftex.def)             Requested size: 430.00462pt x 289.64725pt.
 
 
-Class acmart Warning: A possible image without description on input line 38.
+Class acmart Warning: A possible image without description on input line 37.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 380--380
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+
+
+[18.18]
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []\T1/cmr/m/n/8 (+20) Policy evo-lu-tion
  []
 
 
-Underfull \hbox (badness 6032) in paragraph at lines 380--380
+Underfull \hbox (badness 6032) in paragraph at lines 381--381
 \T1/cmr/m/n/8 (+20) across ad-min-is-tra-
  []
 
 
-Underfull \hbox (badness 6047) in paragraph at lines 380--381
+Underfull \hbox (badness 6047) in paragraph at lines 381--382
 []\T1/cmr/m/n/8 (+20) Timeline re-con-struc-tion for cur-ricu-lum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
 []\T1/cmr/m/n/8 (+20) Strict con-fi-den-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
 \T1/cmr/m/n/8 (+20) tial-ity and role-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--382
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 []\T1/cmr/m/n/8 (+20) Cross-modal in-ci-
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 382--382
+Underfull \hbox (badness 4518) in paragraph at lines 383--383
 \T1/cmr/m/n/8 (+20) ing chats, sprint meet-
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 382--382
+Underfull \hbox (badness 3547) in paragraph at lines 383--383
 \T1/cmr/m/n/8 (+20) ings, launch doc-u-ments,
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 1178) has occurred while \output is active []
-
-
-
-[17.17]
-Underfull \vbox (badness 1789) has occurred while \output is active []
-
-
-
-[18.18 <./figures/eabench_screenshot.png>] (./scenarios_datasets.tex
-Overfull \hbox (48.59746pt too wide) in paragraph at lines 20--33
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 4048) has occurred while \output is active []
-
-
-
-[19.19]
+[19.19 <./figures/eabench_screenshot.png>] (./scenarios_datasets.tex
 
 [20.20]
-<figures/network_comparison.pdf, id=398, 457.35681pt x 168.57855pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[21.21]
+<figures/network_comparison.pdf, id=429, 457.35681pt x 168.57855pt>
 File: figures/network_comparison.pdf Graphic file (type pdf)
 <use figures/network_comparison.pdf>
-Package pdftex.def Info: figures/network_comparison.pdf  used on input line 99.
-
+Package pdftex.def Info: figures/network_comparison.pdf  used on input line 100
+.
 (pdftex.def)             Requested size: 365.50655pt x 134.72667pt.
 
 
-Class acmart Warning: A possible image without description on input line 102.
+Class acmart Warning: A possible image without description on input line 103.
 
 
 
-[21.21 <./figures/network_comparison.pdf>]
-
-Package natbib Warning: Citation `goh2008burstiness' on page 22 undefined on in
-put line 113.
-
-
-Package natbib Warning: Citation `goh2008burstiness' on page 22 undefined on in
-put line 113.
-
-<figures/burstiness_heatmap.pdf, id=452, 266.6905pt x 190.14035pt>
-File: figures/burstiness_heatmap.pdf Graphic file (type pdf)
-<use figures/burstiness_heatmap.pdf>
-Package pdftex.def Info: figures/burstiness_heatmap.pdf  used on input line 147
-.
-(pdftex.def)             Requested size: 279.50037pt x 199.27318pt.
-
-Class acmart Warning: A possible image without description on input line 150.
-
+[22.22 <./figures/network_comparison.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package natbib Warning: Citation `goh2008burstiness' on page 22 undefined on in
-put line 152.
 
-
-
-[22.22])
-Underfull \hbox (badness 8056) in paragraph at lines 417--417
+[23.23])
+Underfull \hbox (badness 8056) in paragraph at lines 418--418
 []\T1/cmr/m/n/8 (+20) Tenant gen-er-a-tor, run-time
  []
 
 
-Overfull \hbox (1.43668pt too wide) in paragraph at lines 417--418
+Overfull \hbox (1.43668pt too wide) in paragraph at lines 418--419
 \T1/cmr/m/n/8 (-20) ranking stability across generator--
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--418
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
 []\T1/cmr/m/n/8 (+20) Architecture (Re-Act vs.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--418
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
+\T1/cmr/m/n/8 (+20) plan-and-execute), prompt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--419
 []\T1/cmr/m/n/8 (+20) Metric deltas per
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
 []\T1/cmr/m/n/8 (+20) Per-scenario score
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 419--419
-\T1/cmr/m/n/8 (+20) dis-tri-bu-tion, fail-ure
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
+\T1/cmr/m/n/8 (+20) dis-tri-bu-tion and
  []
 
+(./experiments_results_new.tex
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--419
-\T1/cmr/m/n/8 (+20) tax-on-omy, la-tency
- []
+[24.24]
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 7415) has occurred while \output is active []
+LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <8> not available
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 18.
 
 
-
-[23.23 <./figures/burstiness_heatmap.pdf>] (./experiments_results.tex
-Overfull \hbox (1.05608pt too wide) in paragraph at lines 20--20
-[]\T1/cmr/bx/n/8 (-20) Architecture| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 []\T1/cmr/bx/n/8 (+20) Planning
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
-[]\T1/cmr/bx/n/8 (+20) Prompt
- []
-
-
-Underfull \hbox (badness 2884) in paragraph at lines 20--21
-[]\T1/cmr/bx/n/8 (+20) Avg. Lat.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
-[]\T1/cmr/m/n/8 (+20) Single-pass
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]\T1/cmr/m/n/8 (+20) Single-pass
- []
-
-
-Overfull \hbox (3.50774pt too wide) in paragraph at lines 24--24
-[]\T1/cmr/m/n/8 (-20) Plan+Execute| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]\T1/cmr/m/n/8 (+20) GPT-4o-
- []
-
-
-Overfull \hbox (2.60228pt too wide) in paragraph at lines 18--27
- [][] 
- []
-
-
-
-[24.24]
 
 [25.25]
-
-! LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 \begin{figure}[h]
-                       
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<figures/metrics_heatmap.pdf, id=542, 354.53484pt x 276.86435pt>
-File: figures/metrics_heatmap.pdf Graphic file (type pdf)
-<use figures/metrics_heatmap.pdf>
-Package pdftex.def Info: figures/metrics_heatmap.pdf  used on input line 102.
-(pdftex.def)             Requested size: 387.00153pt x 302.21973pt.
-
-Class acmart Warning: A possible image without description on input line 105.
-
-
-Overfull \hbox (8.32782pt too wide) in paragraph at lines 108--117
- [][] 
- []
-
-<figures/pass_rate_by_agent_tenant.pdf, id=543, 291.84343pt x 199.95688pt>
-File: figures/pass_rate_by_agent_tenant.pdf Graphic file (type pdf)
-<use figures/pass_rate_by_agent_tenant.pdf>
-Package pdftex.def Info: figures/pass_rate_by_agent_tenant.pdf  used on input l
-ine 121.
-(pdftex.def)             Requested size: 387.00153pt x 265.17957pt.
-
-LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <8> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 122.
-
-
-Class acmart Warning: A possible image without description on input line 124.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/citation_decomposition.pdf, id=544, 457.47223pt x 222.21596pt>
-File: figures/citation_decomposition.pdf Graphic file (type pdf)
-<use figures/citation_decomposition.pdf>
-Package pdftex.def Info: figures/citation_decomposition.pdf  used on input line
- 128.
-(pdftex.def)             Requested size: 387.00153pt x 187.9859pt.
-
-Class acmart Warning: A possible image without description on input line 131.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/assertion_score_by_agent_tenant.pdf, id=545, 291.84343pt x 199.95688pt
->
-File: figures/assertion_score_by_agent_tenant.pdf Graphic file (type pdf)
-<use figures/assertion_score_by_agent_tenant.pdf>
-Package pdftex.def Info: figures/assertion_score_by_agent_tenant.pdf  used on i
-nput line 135.
-(pdftex.def)             Requested size: 387.00153pt x 265.17957pt.
-
-Class acmart Warning: A possible image without description on input line 138.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 6758) has occurred while \output is active []
 
 
 
 [26.26]
-<figures/tool_usage_heatmap.pdf, id=556, 384.67683pt x 312.96799pt>
+<figures/aggregate_assr_rcrel.pdf, id=530, 715.01755pt x 266.4006pt>
+File: figures/aggregate_assr_rcrel.pdf Graphic file (type pdf)
+<use figures/aggregate_assr_rcrel.pdf>
+Package pdftex.def Info: figures/aggregate_assr_rcrel.pdf  used on input line 1
+01.
+(pdftex.def)             Requested size: 430.00462pt x 160.21149pt.
+
+
+Class acmart Warning: A possible image without description on input line 104.
+
+
+
+[27.27 <./figures/aggregate_assr_rcrel.pdf>]
+<figures/tool_usage_heatmap.pdf, id=591, 384.67683pt x 312.96799pt>
 File: figures/tool_usage_heatmap.pdf Graphic file (type pdf)
 <use figures/tool_usage_heatmap.pdf>
-Package pdftex.def Info: figures/tool_usage_heatmap.pdf  used on input line 151
+Package pdftex.def Info: figures/tool_usage_heatmap.pdf  used on input line 124
 .
-(pdftex.def)             Requested size: 387.00153pt x 314.87262pt.
+(pdftex.def)             Requested size: 365.50655pt x 297.38474pt.
 
 
-Class acmart Warning: A possible image without description on input line 154.
+Class acmart Warning: A possible image without description on input line 127.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 1127) has occurred while \output is active []
+
+[28.28]
+
+[29.29 <./figures/tool_usage_heatmap.pdf>]
+<figures/tool_ablation_combined.pdf, id=654, 787.37602pt x 244.617pt>
+File: figures/tool_ablation_combined.pdf Graphic file (type pdf)
+<use figures/tool_ablation_combined.pdf>
+Package pdftex.def Info: figures/tool_ablation_combined.pdf  used on input line
+ 167.
+(pdftex.def)             Requested size: 430.00462pt x 133.59541pt.
+
+
+Class acmart Warning: A possible image without description on input line 170.
+
+
+LaTeX Warning: Reference `tab:tool_usage' on page 30 undefined on input line 17
+2.
+
+
+LaTeX Warning: Reference `fig:tool_ablation' on page 30 undefined on input line
+ 172.
 
 
 
-[27.27 <./figures/pass_rate_by_agent_tenant.pdf>]
+[30.30 <./figures/tool_ablation_combined.pdf>]
+Underfull \vbox (badness 1199) has occurred while \output is active []
 
-[28.28 <./figures/citation_decomposition.pdf>]
 
-[29.29 <./figures/assertion_score_by_agent_tenant.pdf>]
 
-[30.30 <./figures/tool_usage_heatmap.pdf>]
-<figures/agent_radar.pdf, id=754, 636.6886pt x 251.19508pt>
+[31.31]
+<figures/agent_radar.pdf, id=745, 636.6886pt x 251.19508pt>
 File: figures/agent_radar.pdf Graphic file (type pdf)
 <use figures/agent_radar.pdf>
-Package pdftex.def Info: figures/agent_radar.pdf  used on input line 182.
+Package pdftex.def Info: figures/agent_radar.pdf  used on input line 194.
 (pdftex.def)             Requested size: 430.00462pt x 169.65668pt.
 
 
-Class acmart Warning: A possible image without description on input line 185.
+Class acmart Warning: A possible image without description on input line 197.
 
-<figures/assertion_by_query_type.pdf, id=755, 710.41724pt x 187.07446pt>
+<figures/assertion_by_query_type.pdf, id=747, 712.52238pt x 187.07446pt>
 File: figures/assertion_by_query_type.pdf Graphic file (type pdf)
 <use figures/assertion_by_query_type.pdf>
 Package pdftex.def Info: figures/assertion_by_query_type.pdf  used on input lin
-e 194.
-(pdftex.def)             Requested size: 430.00462pt x 113.2332pt.
+e 206.
+(pdftex.def)             Requested size: 430.00462pt x 112.89922pt.
 
-Class acmart Warning: A possible image without description on input line 197.
+Class acmart Warning: A possible image without description on input line 209.
 
-<figures/citation_by_query_type.pdf, id=756, 710.41724pt x 187.07446pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/citation_by_query_type.pdf, id=748, 712.52238pt x 187.07446pt>
 File: figures/citation_by_query_type.pdf Graphic file (type pdf)
 <use figures/citation_by_query_type.pdf>
 Package pdftex.def Info: figures/citation_by_query_type.pdf  used on input line
- 201.
-(pdftex.def)             Requested size: 430.00462pt x 113.2332pt.
+ 213.
+(pdftex.def)             Requested size: 430.00462pt x 112.89922pt.
 
-Class acmart Warning: A possible image without description on input line 204.
+Class acmart Warning: A possible image without description on input line 216.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/citation_decomp_by_query_type.pdf, id=757, 710.40848pt x 362.65863pt>
+<figures/citation_decomp_by_query_type.pdf, id=749, 708.00392pt x 362.65863pt>
 File: figures/citation_decomp_by_query_type.pdf Graphic file (type pdf)
 <use figures/citation_decomp_by_query_type.pdf>
 Package pdftex.def Info: figures/citation_decomp_by_query_type.pdf  used on inp
-ut line 208.
-(pdftex.def)             Requested size: 430.00462pt x 219.5115pt.
+ut line 220.
+(pdftex.def)             Requested size: 430.00462pt x 220.25856pt.
 
-Class acmart Warning: A possible image without description on input line 211.
+Class acmart Warning: A possible image without description on input line 223.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[31.31 <./figures/agent_radar.pdf> <./figures/assertion_by_query_type.pdf>]
+[32.32 <./figures/agent_radar.pdf>]
 
-[32.32 <./figures/citation_by_query_type.pdf> <./figures/citation_decomp_by_que
-ry_type.pdf>]
-<figures/latency_vs_pass.pdf, id=970, 277.39268pt x 204.71378pt>
-File: figures/latency_vs_pass.pdf Graphic file (type pdf)
-<use figures/latency_vs_pass.pdf>
-Package pdftex.def Info: figures/latency_vs_pass.pdf  used on input line 224.
-(pdftex.def)             Requested size: 322.50346pt x 238.0179pt.
+[33.33 <./figures/assertion_by_query_type.pdf> <./figures/citation_by_query_typ
+e.pdf>]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Class acmart Warning: A possible image without description on input line 227.
-
-<figures/cost_quality_frontier.pdf, id=971, 277.60129pt x 204.7033pt>
+<figures/cost_quality_frontier.pdf, id=925, 277.60129pt x 204.7033pt>
 File: figures/cost_quality_frontier.pdf Graphic file (type pdf)
 <use figures/cost_quality_frontier.pdf>
 Package pdftex.def Info: figures/cost_quality_frontier.pdf  used on input line 
-231.
+272.
 (pdftex.def)             Requested size: 301.00192pt x 221.96332pt.
 
-Class acmart Warning: A possible image without description on input line 234.
+Class acmart Warning: A possible image without description on input line 275.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 
-[33.33 <./figures/latency_vs_pass.pdf>]
-Underfull \vbox (badness 3884) has occurred while \output is active []
+[34.34 <./figures/citation_decomp_by_query_type.pdf>]
+Underfull \vbox (badness 1454) has occurred while \output is active []
 
 
 
-[34.34 <./figures/cost_quality_frontier.pdf>] (./main.bbl
+[35.35 <./figures/cost_quality_frontier.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[36.36] (./main.bbl
 Underfull \hbox (badness 3482) in paragraph at lines 81--87
 []\T1/cmr/m/n/7 (+20) Open-Source Com-mu-nity. 2025.  GAIA-2: The Next Gen-er-a
 -tion of Gen-eral AI As-sis-tants Bench-mark.
@@ -1672,10 +1569,7 @@ Underfull \hbox (badness 3482) in paragraph at lines 81--87
 
 
 
-[35.35])
-
-Package natbib Warning: There were undefined citations.
-
+[37.37]) (./appendix_extra_results.tex)
 
 Class acmart Warning: Some images may lack descriptions.
 (acmart)              ACM is committed to complying with the upcoming US ADA ht
@@ -1693,61 +1587,85 @@ ence can ingest your work..
 
 
 
+[38.38]
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
-[36.36] (./main.aux)
+[39.39] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 235094630274C249D9238E8FEFD1F0C6;6057.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 48A7369C3A67432E754C9073528145CA;6900
+(rerunfilecheck)             After:  F3C633A0335D8CF038162EC1783A0758;6900.
  ) 
 Here is how much of TeX's memory you used:
- 30999 strings out of 474662
- 562342 string characters out of 5751110
- 1139799 words of memory out of 5000000
+ 31036 strings out of 474662
+ 562271 string characters out of 5751110
+ 1143606 words of memory out of 5000000
  52635 multiletter control sequences out of 15000+600000
- 602182 words of font info for 322 fonts, out of 8000000 for 9000
+ 603286 words of font info for 335 fonts, out of 8000000 for 9000
  480 hyphenation exceptions out of 8191
- 90i,16n,131p,1772b,1648s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/ams
+ 90i,16n,131p,1784b,1648s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{table.caption.40} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.44} has been referenced but does not 
+exist, replaced by a fixed one
+
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb></Users/haoyi/Library/texmf/fonts/type1/p
-ublic/cm-super/sfbx0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-s
-uper/sfbx0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0
-800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0900.pfb></
-Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></Users/haoy
-i/Library/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></Users/haoyi/Library/
-texmf/fonts/type1/public/cm-super/sfrm0800.pfb></Users/haoyi/Library/texmf/font
-s/type1/public/cm-super/sfrm0900.pfb></Users/haoyi/Library/texmf/fonts/type1/pu
-blic/cm-super/sfsi0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-su
-per/sfsi0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss08
-00.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss1095.pfb></U
-sers/haoyi/Library/texmf/fonts/type1/public/cm-super/sfsx0900.pfb></Users/haoyi
-/Library/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></Users/haoyi/Library/t
-exmf/fonts/type1/public/cm-super/sfti0700.pfb></Users/haoyi/Library/texmf/fonts
-/type1/public/cm-super/sfti0800.pfb></Users/haoyi/Library/texmf/fonts/type1/pub
-lic/cm-super/sfti0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-sup
-er/sftt0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt090
-0.pfb>
-Output written on main.pdf (36 pages, 8190386 bytes).
+ublic/cm-super/sfbx0700.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-s
+uper/sfbx0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfbx0
+900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0800.pfb></
+Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0900.pfb></Users/haoy
+i/Library/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></Users/haoyi/Library/
+texmf/fonts/type1/public/cm-super/sfrm0700.pfb></Users/haoyi/Library/texmf/font
+s/type1/public/cm-super/sfrm0800.pfb></Users/haoyi/Library/texmf/fonts/type1/pu
+blic/cm-super/sfrm0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-su
+per/sfsi0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfsi09
+00.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss0800.pfb></U
+sers/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss1095.pfb></Users/haoyi
+/Library/texmf/fonts/type1/public/cm-super/sfsx0900.pfb></Users/haoyi/Library/t
+exmf/fonts/type1/public/cm-super/sfsx1200.pfb></Users/haoyi/Library/texmf/fonts
+/type1/public/cm-super/sfti0700.pfb></Users/haoyi/Library/texmf/fonts/type1/pub
+lic/cm-super/sfti0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-sup
+er/sfti0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt080
+0.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on main.pdf (39 pages, 8291039 bytes).
 PDF statistics:
- 1244 PDF objects out of 1440 (max. 8388607)
- 647 compressed objects within 7 object streams
- 212 named destinations out of 1000 (max. 500000)
- 66914 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1238 PDF objects out of 1440 (max. 8388607)
+ 708 compressed objects within 8 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 66934 words of extra memory for PDF output out of 74296 (max. 10000000)
 

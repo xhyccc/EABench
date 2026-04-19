@@ -6,22 +6,23 @@
 \subsection{Dataset Statistics}
 \label{sec:dataset-stats}
 
-We instantiated EABench across three concrete tenant organizations spanning distinct enterprise domains: a boutique law firm (\emph{Bertrand \& Co.}, 41 users), a mid-size research university (\emph{University of Cambford}, 62 users), and a fast-growing AI startup (\emph{ZAI Intelligence}, 165 users). Each tenant was generated independently by the same pipeline---GPT-4o (Azure OpenAI, temperature~0.7)---but parameterized with a domain-specific company description, a set of key narrative events, and an organizational size. The generation process follows a multi-stage design: (i)~a daily story prompt produces a narrative arc from recent and long-range organizational history, (ii)~summary prompts derive per-artifact synopses for each communication modality, and (iii)~content prompts elaborate those summaries into full email bodies, chat transcripts, meeting minutes, and file contents. This staged approach ensures that artifacts within a single simulated day are mutually coherent---an email thread's content is consistent with the meeting that prompted it---while still allowing realistic variation across days.
+We instantiated EABench across three concrete tenant organizations spanning distinct enterprise domains: a boutique law firm (\emph{Bertrand \& Co.}, 41 users), a mid-size research university (\emph{University of Cambford}, 62 users), and a fast-growing AI startup (\emph{ZAI Intelligence}, 165 users). Each tenant was generated independently by the same GPT-4o-based pipeline described in Section~\ref{sec:method_generation}, parameterized with a domain-specific company description, a set of key narrative events, and an organizational size. The staged generator ensures that artifacts within a single simulated day are mutually coherent---an email thread's content is consistent with the meeting that prompted it---while still allowing realistic variation across days.
 
-Table~\ref{tab:dataset_summary} summarizes the resulting artifact counts and evaluation-case distribution. For each tenant, three evaluation query generators---search, multi-hop, and report---produce structured test cases in a separate pass that examines the completed corpus and constructs questions, gold assertions, and entity lists against it.
+Table~\ref{tab:dataset_summary} summarizes the resulting artifact counts and evaluation-case distribution. For each tenant, three evaluation query generators---targeted artifact search, multi-hop reasoning, and comprehensive report---produce structured test cases in a separate pass that examines the completed corpus and constructs questions, gold assertions, and entity lists against it.
 
-\begin{table}[h]
+\begin{table*}[t]
 \centering
 \caption{Artifact composition and evaluation case counts for the three EABench tenants.
 For chats and group chats, the count reflects distinct conversation threads rather than individual messages.
-Evaluation cases span search, multi-hop, and report query types (see Section~\ref{sec:eval-metrics}).}
+Evaluation cases span targeted artifact search, multi-hop reasoning, and comprehensive report query types (see Section~\ref{sec:eval-metrics}).}
 \label{tab:dataset_summary}
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lcccccccccc}
 \toprule
 \textbf{Tenant} & \textbf{Domain} & \textbf{Users} & \textbf{Emails} & \textbf{DMs} & \textbf{Group} & \textbf{Meetings} & \textbf{Files} & \multicolumn{3}{c}{\textbf{Eval Cases}} \\
 \cmidrule(lr){9-11}
- & & & & & \textbf{Chats} & & & \textbf{Search} & \textbf{Multi-hop} & \textbf{Report} \\
+ & & & & & \textbf{Chats} & & & \textbf{Tgt.\ Search} & \textbf{Multi-Hop} & \textbf{Compreh.} \\
 \midrule
 Bertrand \& Co.     & Legal       & 41  & 132 & 56  & 118 & 69  & 70  & 80 & 43 & 39 \\
 Univ.\ of Cambford  & Education   & 62  & 120 & 41  & 118 & 70  & 70  & 80 & 44 & 38 \\
@@ -29,12 +30,12 @@ ZAI Intelligence    & AI / SW     & 165 & 298 & 140 & 301 & 164 & 164 & 79 & 82 
 \midrule
 \textbf{Total}      &             & 268 & 550 & 237 & 537 & 303 & 304 & 239 & 169 & 117 \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{tabular}}
+\end{table*}
 
 \noindent The three tenants vary substantially in scale: ZAI Intelligence is roughly four times larger than Bertrand \& Co.\ across every artifact category, and its eval-case count (201) is proportionally expanded to maintain per-tenant statistical power. This heterogeneity is intentional---EABench is designed to stress-test agents under differing information densities rather than to standardize them away.
 
-The query-type distribution follows the pipeline's target split of approximately 40/40/20 (search/multi-hop/report). The actual ratios deviate slightly because each generator produces variable-sized batches. Search queries each reference exactly one gold entity, multi-hop queries reference 2--5 entities from different modalities, and report queries reference 3--15 entities spanning multiple artifact types and dates.
+The query-type distribution follows the pipeline's target split of approximately 40/40/20 (targeted artifact search / multi-hop reasoning / comprehensive report). The actual ratios deviate slightly because each generator produces variable-sized batches. Targeted artifact search queries each reference exactly one gold entity, multi-hop reasoning queries reference 2--5 entities from different modalities, and comprehensive report queries reference 3--15 entities spanning multiple artifact types and dates.
 
 \begin{table}[h]
 \centering
@@ -50,24 +51,24 @@ The query-type distribution follows the pipeline's target split of approximately
 \textbf{Tenant} & \textbf{Query Type} & \textbf{Mean} & \textbf{Med.} & \textbf{Range} & \textbf{Mean} & \textbf{Med.} & \textbf{Range} \\
 \midrule
 \multirow{3}{*}{Bertrand}
-  & Fact-Check  & 2.4 & 2 & 2--4  & 1.0 & 1 & 1--1  \\
-  & Multi-Hop   & 2.3 & 2 & 2--3  & 2.7 & 2 & 2--5  \\
-  & Report      & 3.2 & 3 & 3--4  & 5.3 & 5 & 4--10 \\
+  & Targeted Artifact Search  & 2.4 & 2 & 2--4  & 1.0 & 1 & 1--1  \\
+  & Multi-Hop Reasoning        & 2.3 & 2 & 2--3  & 2.7 & 2 & 2--5  \\
+  & Comprehensive Report       & 3.2 & 3 & 3--4  & 5.3 & 5 & 4--10 \\
 \midrule
 \multirow{3}{*}{Cambford}
-  & Fact-Check  & 2.6 & 3 & 2--3  & 1.0 & 1 & 0--1  \\
-  & Multi-Hop   & 2.8 & 3 & 2--4  & 3.1 & 3 & 2--4  \\
-  & Report      & 3.2 & 3 & 3--4  & 5.9 & 5 & 3--15 \\
+  & Targeted Artifact Search  & 2.6 & 3 & 2--3  & 1.0 & 1 & 0--1  \\
+  & Multi-Hop Reasoning        & 2.8 & 3 & 2--4  & 3.1 & 3 & 2--4  \\
+  & Comprehensive Report       & 3.2 & 3 & 3--4  & 5.9 & 5 & 3--15 \\
 \midrule
 \multirow{3}{*}{ZAI}
-  & Fact-Check  & 2.2 & 2 & 2--3  & 1.0 & 1 & 1--1  \\
-  & Multi-Hop   & 2.3 & 2 & 2--5  & 2.4 & 2 & 2--5  \\
-  & Report      & 3.2 & 3 & 3--4  & 6.0 & 5 & 3--11 \\
+  & Targeted Artifact Search  & 2.2 & 2 & 2--3  & 1.0 & 1 & 1--1  \\
+  & Multi-Hop Reasoning        & 2.3 & 2 & 2--5  & 2.4 & 2 & 2--5  \\
+  & Comprehensive Report       & 3.2 & 3 & 3--4  & 6.0 & 5 & 3--11 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent Table~\ref{tab:ground_truth} reveals a clear complexity gradient across query types. Fact-check queries average 2.2--2.6 assertions grounded in a single entity, making them the simplest evaluation targets. Multi-hop queries maintain a similar assertion count but require cross-referencing 2--5 entities from different communication modalities. Report queries demand the most complex synthesis: 3--4 assertions each backed by 3--15 source entities spanning emails, chats, meetings, and files. This structured complexity scaling ensures that the evaluation set probes agent capabilities at multiple difficulty levels.
+\noindent Table~\ref{tab:ground_truth} reveals a clear complexity gradient across query types. Targeted artifact search queries average 2.2--2.6 assertions grounded in a single entity, making them the simplest evaluation targets. Multi-hop reasoning queries maintain a similar assertion count but require cross-referencing 2--5 entities from different communication modalities. Comprehensive report queries demand the most complex synthesis: 3--4 assertions each backed by 3--15 source entities spanning emails, chats, meetings, and files. This structured complexity scaling ensures that the evaluation set probes agent capabilities at multiple difficulty levels.
 
 \subsection{Communication Network Properties}
 \label{sec:network-stats}
@@ -141,13 +142,6 @@ $\alpha$ is the power-law exponent fitted to the IET distribution. Meeting chann
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.65\linewidth]{figures/burstiness_heatmap.pdf}
-\caption{Temporal burstiness $B$ per communication channel and tenant. Chat and group-chat channels exhibit strong burstiness ($B > 0.5$) across all tenants, while email and meeting channels are near-Poisson ($B \approx 0$). ZAI's email channel shows mild burstiness ($B = 0.17$) driven by correlated incident-response threads.}
-\label{fig:burstiness_heatmap}
-\end{figure}
 
 \noindent The results validate that EABench's generation pipeline reproduces two hallmarks of real organizational communication. First, email arrivals are near-Poisson ($B \approx 0$) across all three tenants, with high $\alpha$ values (1.28--2.00) indicating that inter-arrival times decay rapidly---consistent with the scheduled nature of formal correspondence. Second, chat and group-chat streams are highly bursty ($B \in [0.56, 0.66]$) with low power-law exponents ($\alpha \in [0.31, 0.36]$), confirming heavy-tailed inter-event time distributions where short bursts of rapid-fire messages are separated by long silences. This pattern matches empirical measurements of instant-messaging platforms in organizational settings~\cite{goh2008burstiness}.
 

@@ -28,7 +28,7 @@ Based on the three peer reviews in `reviews.md`. Items are grouped by what is ne
 
 ### Key discrepancies to fix
 
-1. **"Needle-in-a-haystack" is the wrong term.** In the literature this phrase denotes long-context retrieval where context length is the difficulty variable. Our search queries are *constrained natural-language searches* where difficulty comes from implicit multi-dimensional constraints (who, when, what type, what topic) — not from context length. Rename to **"Constrained Precision Search"** or **"Targeted Artifact Retrieval"** throughout the paper.
+1. **"Needle-in-a-haystack" is the wrong term.** In the literature this phrase denotes long-context retrieval where context length is the difficulty variable. Our search queries are *constrained natural-language searches* where difficulty comes from implicit multi-dimensional constraints (who, when, what type, what topic) — not from context length. Rename to **"Targeted Artifact Search"** throughout the paper.
 
 2. **The paper implies search queries target a single artifact**, but the prompt says "a specific item or a *small set of items*." The paper should say "one or a small number of target artifacts" to match the prompt.
 
@@ -42,7 +42,7 @@ Based on the three peer reviews in `reviews.md`. Items are grouped by what is ne
 
 | Query type | Definition (from generation prompt) | Primary capability tested |
 |---|---|---|
-| Constrained precision search | Natural-language query implying constraints on time, author, artifact type, or topic; targets a specific item or small result set without naming internal IDs | Precision retrieval under natural phrasing and user-level access control |
+| Targeted artifact search | Natural-language query implying constraints on time, author, artifact type, or topic; targets a specific item or small result set without naming internal IDs | Targeted retrieval under natural phrasing and user-level access control |
 | Multi-hop reasoning | Query that requires finding information in one artifact to answer a question about another, or tracing cross-artifact event chains | Cross-modal reference resolution and dependency-chain reasoning |
 | Comprehensive report | Request for a summary, timeline, or analysis of a specific topic grounded in a contiguous window of tenant activity | Long-form synthesis, temporal organization, and citation-grounded summarization |
 
@@ -100,7 +100,7 @@ WorkArena appears twice in Related Work (§2) with slightly different descriptio
 
 **Files:** all `*.tex` in `EABench_paper/`
 
-Replace all occurrences of "needle-in-a-haystack" and "Needle-in-a-haystack" with "constrained precision search" (or the agreed final term from Part A).
+Replace all occurrences of "needle-in-a-haystack" and "Needle-in-a-haystack" with "targeted artifact search" (agreed term from Part A).
 
 ### B6. Justify the 40/40/20 query-type target split [Text]
 

@@ -3,14 +3,13 @@
 
 \subsubsection{StoryConfig and Scenario Specification}
 
-\textcolor{blue}{Synthetic tenant generation begins with a \texttt{StoryConfig} that defines the company profile and the narrative arc the generator must realize. The configuration includes the company name, industry, company size, number of users, duration of the simulation, and a list of key events that anchor the narrative. This representation is compact enough for rapid scenario design yet expressive enough to vary organizational complexity and event density. The same generator can therefore instantiate a university administration scenario, a legal-services scenario, or a software-incident scenario without changing the code path.}
+Synthetic tenant generation begins with a \texttt{StoryConfig} that defines the company profile and the narrative arc the generator must realize. The configuration includes the company name, industry, company size, number of users, duration of the simulation, and a list of key events that anchor the narrative. This representation is compact enough for rapid scenario design yet expressive enough to vary organizational complexity and event density. The same generator can therefore instantiate a university administration scenario, a legal-services scenario, or a software-incident scenario without changing the code path.
 
 \begin{table}[t]
 \centering
-\caption{\textcolor{blue}{Core fields in the \texttt{StoryConfig} specification.}}
+\caption{Core fields in the \texttt{StoryConfig} specification.}
 \label{tab:storyconfig_fields}
 \small
-{\color{blue}
 \begin{tabular}{p{0.22\linewidth}p{0.14\linewidth}p{0.52\linewidth}}
 \toprule
 \textbf{Field} & \textbf{Type} & \textbf{Purpose} \\
@@ -24,19 +23,18 @@
 \texttt{description} & string & Supplies free-form scenario context to the generator prompts \\
 \bottomrule
 \end{tabular}
-}
+
 \end{table}
 
 \subsubsection{Five-Stage Generation Pipeline}
 
-\textcolor{blue}{The generator executes in five stages. It first creates the directory scaffold and initializes modality-specific YAML files. It then generates the user roster in batches, using diversity prompts to avoid name collisions and departmental imbalance. Next, it iterates day by day through the simulation, producing 3--5 narrative events per day while maintaining rolling history buffers. It materializes those events as emails, chats, meetings, and files, and it finally writes a complete \texttt{generation\_log.json} that serves as the source material for evaluation-case generation. The pipeline is incremental by design: artifacts are appended to disk as they are generated, which supports large tenants without requiring all content to remain in memory.}
+The generator executes in five stages. It first creates the directory scaffold and initializes modality-specific YAML files. It then generates the user roster in batches, using diversity prompts to avoid name collisions and departmental imbalance. Next, it iterates day by day through the simulation, producing 3--5 narrative events per day while maintaining rolling history buffers. It materializes those events as emails, chats, meetings, and files, and it finally writes a complete \texttt{generation\_log.json} that serves as the source material for evaluation-case generation. The pipeline is incremental by design: artifacts are appended to disk as they are generated, which supports large tenants without requiring all content to remain in memory.
 
 \begin{table}[h]
 \centering
-\caption{\textcolor{blue}{Five-stage tenant-generation process.}}
+\caption{Five-stage tenant-generation process.}
 \label{tab:generation_pipeline}
 \small
-{\color{blue}
 \begin{tabular}{p{0.07\linewidth}p{0.22\linewidth}p{0.60\linewidth}}
 \toprule
 \textbf{Stage} & \textbf{Name} & \textbf{Output and purpose} \\
@@ -48,16 +46,16 @@
 5 & Evaluation-log export & Serializes the full event history into \texttt{generation\_log.json} for downstream query generation and auditability \\
 \bottomrule
 \end{tabular}
-}
+
 \end{table}
 
 \subsubsection{Content Type Generation}
 
-\textcolor{blue}{Each artifact type is generated with a schema tailored to its role in enterprise communication. Emails are produced in two steps: a summary pass proposes sender, recipients, subject, and context, and a second pass expands that summary into realistic prose. Chats are likewise generated from conversation summaries into timestamped message sequences. Meetings produce three linked artifacts: metadata, transcript, and sidebar chat. Files are created as both metadata entries and concrete documents inside the sandboxed file tree. This staged process gives the generator enough structure to maintain consistency while still allowing varied surface realizations.}
+Each artifact type is generated with a schema tailored to its role in enterprise communication. Emails are produced in two steps: a summary pass proposes sender, recipients, subject, and context, and a second pass expands that summary into realistic prose. Chats are likewise generated from conversation summaries into timestamped message sequences. Meetings produce three linked artifacts: metadata, transcript, and sidebar chat. Files are created as both metadata entries and concrete documents inside the sandboxed file tree. This staged process gives the generator enough structure to maintain consistency while still allowing varied surface realizations.
 
 \subsubsection{Narrative Coherence Mechanisms}
 
-\textcolor{blue}{Long-range coherence is preserved through explicit memory structures rather than through prompt length alone. A recent-history buffer stores the last several days of events verbatim, while a long-history buffer stores compressed summaries of earlier periods. Every seven simulated days, the recent buffer is summarized and appended to the long-term history. This mechanism allows later generations to mention prior incidents, decisions, and unresolved tensions without forcing the model to ingest the entire raw history each day. Cross-document references are then encouraged directly in the prompts, so that an email can cite a meeting outcome, a file can summarize a discussion from chat, and a report can reference both.}
+Long-range coherence is preserved through explicit memory structures rather than through prompt length alone. A recent-history buffer stores the last several days of events verbatim, while a long-history buffer stores compressed summaries of earlier periods. Every seven simulated days, the recent buffer is summarized and appended to the long-term history. This mechanism allows later generations to mention prior incidents, decisions, and unresolved tensions without forcing the model to ingest the entire raw history each day. Cross-document references are then encouraged directly in the prompts, so that an email can cite a meeting outcome, a file can summarize a discussion from chat, and a report can reference both.
 
 \begin{figure}[h]
 \centering
@@ -85,6 +83,6 @@
 %\vspace{4pt}
 %}}
 \includegraphics[width=0.9\textwidth]{figures/tenant-generation-pipeline.png}
-\caption{\textcolor{blue}{EABench five-stage tenant-generation pipeline and inter-artifact linkage graph. A single \texttt{StoryConfig} drives the parallel creation of emails, meetings, files, and chats, which are connected by explicit cross-document references along a shared temporal timeline. These cross-references are what enable multi-hop and temporal reasoning evaluation cases.}}
+\caption{EABench five-stage tenant-generation pipeline and inter-artifact linkage graph. A single \texttt{StoryConfig} drives the parallel creation of emails, meetings, files, and chats, which are connected by explicit cross-document references along a shared temporal timeline. These cross-references are what enable multi-hop and temporal reasoning evaluation cases.}
 \label{fig:data_generation}
 \end{figure}

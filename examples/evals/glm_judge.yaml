@@ -1,0 +1,77 @@
+name: "GLM-4.7 Judge (cross-model)"
+description: >
+  Cross-model judge for C1. Prompts are identical to default_judge.yaml;
+  only the provider/model differ so that the judge is from a different
+  model family (Zhipu GLM) than the agent (GPT-4o / GPT-4o-mini) and the
+  generator. Accessed via the OpenAI-compatible endpoint at
+  open.bigmodel.cn; credentials come from OPENAI_API_KEY / OPENAI_API_BASE
+  in .env.
+model:
+  provider: openai
+  name: GLM-4.7-FlashX
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  parameters:
+    temperature: 0.0
+prompts:
+  citation_relevance: |
+    You are an expert evaluator for an AI agent. Your task is to judge the quality of the agent's tool usage and whether its response is grounded in the retrieved data.
+
+    User Query: {query}
+
+    Agent Tool Calls and Results:
+    {tool_calls}
+
+    Agent Final Response:
+    {response}
+
+    Evaluate:
+    1. Did the agent use appropriate tools for the information need?
+    2. Did retrieved results contain information relevant to the query?
+    3. Does the agent's response faithfully reflect the tool results (no hallucination, no contradiction)?
+
+    Scoring:
+    - 1.0: correct tools, relevant results, faithful response.
+    - 0.7-0.9: mostly correct, minor issues.
+    - 0.4-0.6: partial retrieval, some hallucination.
+    - 0.0-0.3: wrong tools, no relevant results, or unfaithful.
+
+    Output strictly:
+    ```yaml
+    score: <float 0.0-1.0>
+    explanation: "<string>"
+    ```
+
+  assertion_check: |
+    You are an expert evaluator. Verify whether the AI agent's response satisfies each assertion.
+
+    User Query: {query}
+    Agent Response: {response}
+    Assertions:
+    {assertions}
+
+    For each assertion, decide satisfied (1) or not satisfied (0). Output strictly:
+    ```yaml
+    results:
+      - id: <assertion_id>
+        satisfied: <0 or 1>
+        explanation: "<string>"
+    ```
+
+  response_citation: |
+    You are an expert evaluator for citation grounding.
+
+    User Query: {query}
+    Agent Response: {response}
+    Cited Artifacts: {cited_artifacts}
+
+    Judge:
+    1. Does each factual claim have an inline citation?
+    2. Do cited artifact IDs actually correspond to the supporting evidence?
+    3. Is the References section complete and non-redundant?
+
+    Output strictly:
+    ```yaml
+    score: <float 0.0-1.0>
+    citation_count: <int>
+    explanation: "<string>"
+    ```
