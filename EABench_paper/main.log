@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 APR 2026 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  20 APR 2026 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,7 +1067,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [1.1{/Users/haoyi/Library/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/p
 dftex.map}{/Users/haoyi/Library/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/Users/haoyi/Library/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<figures/main_pipeline_research.png, id=164, 1381.16pt x 770.88pt>
+<figures/main_pipeline_research.png, id=188, 1381.16pt x 770.88pt>
 File: figures/main_pipeline_research.png Graphic file (type png)
 <use figures/main_pipeline_research.png>
 Package pdftex.def Info: figures/main_pipeline_research.png  used on input line
@@ -1093,7 +1093,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--213
 [5.5]
 
 [6.6]
-<figures/research_position.png, id=253, 1381.16pt x 770.88pt>
+<figures/research_position.png, id=277, 1381.16pt x 770.88pt>
 File: figures/research_position.png Graphic file (type png)
 <use figures/research_position.png>
 Package pdftex.def Info: figures/research_position.png  used on input line 317.
@@ -1111,7 +1111,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 [7.7 <./figures/research_position.png (PNG copy)>]
-<figures/agent-evaluator-framework.png, id=263, 1381.16pt x 770.88pt>
+<figures/agent-evaluator-framework.png, id=287, 1381.16pt x 770.88pt>
 File: figures/agent-evaluator-framework.png Graphic file (type png)
 <use figures/agent-evaluator-framework.png>
 Package pdftex.def Info: figures/agent-evaluator-framework.png  used on input l
@@ -1194,7 +1194,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--79
 
 
 [9.9]
-<figures/agent-architecture-config.png, id=308, 1381.16pt x 770.88pt>
+<figures/agent-architecture-config.png, id=332, 1381.16pt x 770.88pt>
 File: figures/agent-architecture-config.png Graphic file (type png)
 <use figures/agent-architecture-config.png>
 Package pdftex.def Info: figures/agent-architecture-config.png  used on input l
@@ -1216,7 +1216,7 @@ Underfull \hbox (badness 5533) in paragraph at lines 45--45
 
 
 [12.12]
-<figures/tenant-generation-pipeline.png, id=334, 1381.16pt x 770.88pt>
+<figures/tenant-generation-pipeline.png, id=358, 1381.16pt x 770.88pt>
 File: figures/tenant-generation-pipeline.png Graphic file (type png)
 <use figures/tenant-generation-pipeline.png>
 Package pdftex.def Info: figures/tenant-generation-pipeline.png  used on input 
@@ -1227,7 +1227,7 @@ line 85.
 Class acmart Warning: A possible image without description on input line 88.
 
 ) (./methodology_eval_dataset.tex
-<figures/eval_data_generation_pipeline.png, id=335, 1381.16pt x 770.88pt>
+<figures/eval_data_generation_pipeline.png, id=359, 1381.16pt x 770.88pt>
 File: figures/eval_data_generation_pipeline.png Graphic file (type png)
 <use figures/eval_data_generation_pipeline.png>
 Package pdftex.def Info: figures/eval_data_generation_pipeline.png  used on inp
@@ -1272,7 +1272,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--67
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/LLM-as-a-judge-eabench.png, id=362, 1381.16pt x 770.88pt>
+<figures/LLM-as-a-judge-eabench.png, id=386, 1381.16pt x 770.88pt>
 File: figures/LLM-as-a-judge-eabench.png Graphic file (type png)
 <use figures/LLM-as-a-judge-eabench.png>
 Package pdftex.def Info: figures/LLM-as-a-judge-eabench.png  used on input line
@@ -1287,7 +1287,7 @@ Class acmart Warning: A possible image without description on input line 98.
 
 [17.17 <./figures/LLM-as-a-judge-eabench.png (PNG copy)>])
 (./methodology_interactive.tex
-<figures/eabench_screenshot.png, id=391, 1685.29625pt x 1135.24126pt>
+<figures/eabench_screenshot.png, id=415, 1685.29625pt x 1135.24126pt>
 File: figures/eabench_screenshot.png Graphic file (type png)
 <use figures/eabench_screenshot.png>
 Package pdftex.def Info: figures/eabench_screenshot.png  used on input line 34.
@@ -1353,7 +1353,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [21.21]
-<figures/network_comparison.pdf, id=429, 457.35681pt x 168.57855pt>
+<figures/network_comparison.pdf, id=453, 457.35681pt x 168.57855pt>
 File: figures/network_comparison.pdf Graphic file (type pdf)
 <use figures/network_comparison.pdf>
 Package pdftex.def Info: figures/network_comparison.pdf  used on input line 100
@@ -1426,12 +1426,12 @@ Underfull \vbox (badness 6758) has occurred while \output is active []
 
 
 [26.26]
-<figures/aggregate_assr_rcrel.pdf, id=530, 715.01755pt x 266.4006pt>
+<figures/aggregate_assr_rcrel.pdf, id=554, 715.12544pt x 266.4006pt>
 File: figures/aggregate_assr_rcrel.pdf Graphic file (type pdf)
 <use figures/aggregate_assr_rcrel.pdf>
 Package pdftex.def Info: figures/aggregate_assr_rcrel.pdf  used on input line 1
 01.
-(pdftex.def)             Requested size: 430.00462pt x 160.21149pt.
+(pdftex.def)             Requested size: 430.00462pt x 160.19116pt.
 
 
 Class acmart Warning: A possible image without description on input line 104.
@@ -1439,7 +1439,7 @@ Class acmart Warning: A possible image without description on input line 104.
 
 
 [27.27 <./figures/aggregate_assr_rcrel.pdf>]
-<figures/tool_usage_heatmap.pdf, id=591, 384.67683pt x 312.96799pt>
+<figures/tool_usage_heatmap.pdf, id=625, 384.67683pt x 312.96799pt>
 File: figures/tool_usage_heatmap.pdf Graphic file (type pdf)
 <use figures/tool_usage_heatmap.pdf>
 Package pdftex.def Info: figures/tool_usage_heatmap.pdf  used on input line 124
@@ -1457,7 +1457,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [28.28]
 
 [29.29 <./figures/tool_usage_heatmap.pdf>]
-<figures/tool_ablation_combined.pdf, id=654, 787.37602pt x 244.617pt>
+<figures/tool_ablation_combined.pdf, id=688, 787.37602pt x 244.617pt>
 File: figures/tool_ablation_combined.pdf Graphic file (type pdf)
 <use figures/tool_ablation_combined.pdf>
 Package pdftex.def Info: figures/tool_ablation_combined.pdf  used on input line
@@ -1468,14 +1468,6 @@ Package pdftex.def Info: figures/tool_ablation_combined.pdf  used on input line
 Class acmart Warning: A possible image without description on input line 170.
 
 
-LaTeX Warning: Reference `tab:tool_usage' on page 30 undefined on input line 17
-2.
-
-
-LaTeX Warning: Reference `fig:tool_ablation' on page 30 undefined on input line
- 172.
-
-
 
 [30.30 <./figures/tool_ablation_combined.pdf>]
 Underfull \vbox (badness 1199) has occurred while \output is active []
@@ -1483,7 +1475,7 @@ Underfull \vbox (badness 1199) has occurred while \output is active []
 
 
 [31.31]
-<figures/agent_radar.pdf, id=745, 636.6886pt x 251.19508pt>
+<figures/agent_radar.pdf, id=782, 636.6886pt x 251.19508pt>
 File: figures/agent_radar.pdf Graphic file (type pdf)
 <use figures/agent_radar.pdf>
 Package pdftex.def Info: figures/agent_radar.pdf  used on input line 194.
@@ -1492,7 +1484,7 @@ Package pdftex.def Info: figures/agent_radar.pdf  used on input line 194.
 
 Class acmart Warning: A possible image without description on input line 197.
 
-<figures/assertion_by_query_type.pdf, id=747, 712.52238pt x 187.07446pt>
+<figures/assertion_by_query_type.pdf, id=784, 712.52238pt x 187.07446pt>
 File: figures/assertion_by_query_type.pdf Graphic file (type pdf)
 <use figures/assertion_by_query_type.pdf>
 Package pdftex.def Info: figures/assertion_by_query_type.pdf  used on input lin
@@ -1504,7 +1496,7 @@ Class acmart Warning: A possible image without description on input line 209.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/citation_by_query_type.pdf, id=748, 712.52238pt x 187.07446pt>
+<figures/citation_by_query_type.pdf, id=785, 712.52238pt x 187.07446pt>
 File: figures/citation_by_query_type.pdf Graphic file (type pdf)
 <use figures/citation_by_query_type.pdf>
 Package pdftex.def Info: figures/citation_by_query_type.pdf  used on input line
@@ -1516,7 +1508,7 @@ Class acmart Warning: A possible image without description on input line 216.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/citation_decomp_by_query_type.pdf, id=749, 708.00392pt x 362.65863pt>
+<figures/citation_decomp_by_query_type.pdf, id=786, 708.00392pt x 362.65863pt>
 File: figures/citation_decomp_by_query_type.pdf Graphic file (type pdf)
 <use figures/citation_decomp_by_query_type.pdf>
 Package pdftex.def Info: figures/citation_decomp_by_query_type.pdf  used on inp
@@ -1537,7 +1529,7 @@ e.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/cost_quality_frontier.pdf, id=925, 277.60129pt x 204.7033pt>
+<figures/cost_quality_frontier.pdf, id=961, 277.60129pt x 204.7033pt>
 File: figures/cost_quality_frontier.pdf Graphic file (type pdf)
 <use figures/cost_quality_frontier.pdf>
 Package pdftex.def Info: figures/cost_quality_frontier.pdf  used on input line 
@@ -1569,7 +1561,44 @@ Underfull \hbox (badness 3482) in paragraph at lines 81--87
 
 
 
-[37.37]) (./appendix_extra_results.tex)
+[37.37]) (./appendix_extra_results.tex) (./appendix_prompts.tex
+Overfull \hbox (23.81476pt too wide) in paragraph at lines 34--43
+\T1/cmtt/m/n/9 search_chat\T1/cmr/m/n/9 (-20) , \T1/cmtt/m/n/9 search_group_cha
+t\T1/cmr/m/n/9 (-20) , \T1/cmtt/m/n/9 search_channel\T1/cmr/m/n/9 (-20) , \T1/c
+mtt/m/n/9 search_meeting\T1/cmr/m/n/9 (-20) , \T1/cmtt/m/n/9 search_file\T1/cmr
+/m/n/9 (-20) , \T1/cmtt/m/n/9 read_file\T1/cmr/m/n/9 (-20) , \T1/cmtt/m/n/9 sea
+rch_in_file\T1/cmr/m/n/9 (-20) ,
+ []
+
+
+Overfull \hbox (5.91765pt too wide) in paragraph at lines 34--43
+\T1/cmtt/m/n/9 search_people\T1/cmr/m/n/9 (-20) , and \T1/cmtt/m/n/9 execute_py
+thon\T1/cmr/m/n/9 (-20) . The \T1/cmr/m/sc/9 (-20) Re-trieval \T1/cmr/m/n/9 (-2
+0) base-line is re-stricted to four search tools (\T1/cmtt/m/n/9 search_email\T
+1/cmr/m/n/9 (-20) ,
+ []
+
+
+
+[38.38]
+
+[39.39]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 77.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <6> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 82.
+
+
+[40.40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[41.41]
+
+[42.42]
+
+[43.43])
 
 Class acmart Warning: Some images may lack descriptions.
 (acmart)              ACM is committed to complying with the upcoming US ADA ht
@@ -1587,85 +1616,64 @@ ence can ingest your work..
 
 
 
-[38.38]
-
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
-[39.39] (./main.aux)
+[44.44] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 48A7369C3A67432E754C9073528145CA;6900
-(rerunfilecheck)             After:  F3C633A0335D8CF038162EC1783A0758;6900.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 692BA8A799D5D7752D4EFDFAC2474555;8213.
  ) 
 Here is how much of TeX's memory you used:
- 31036 strings out of 474662
- 562271 string characters out of 5751110
- 1143606 words of memory out of 5000000
- 52635 multiletter control sequences out of 15000+600000
- 603286 words of font info for 335 fonts, out of 8000000 for 9000
+ 31593 strings out of 474662
+ 569299 string characters out of 5751110
+ 1423523 words of memory out of 5000000
+ 52966 multiletter control sequences out of 15000+600000
+ 605063 words of font info for 341 fonts, out of 8000000 for 9000
  480 hyphenation exceptions out of 8191
- 90i,16n,131p,1784b,1648s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{table.caption.40} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.44} has been referenced but does not 
-exist, replaced by a fixed one
-
-</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb></Users/haoyi/Library/texmf/fonts/type1/p
-ublic/cm-super/sfbx0700.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-s
-uper/sfbx0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfbx0
-900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0800.pfb></
-Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0900.pfb></Users/haoy
-i/Library/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></Users/haoyi/Library/
-texmf/fonts/type1/public/cm-super/sfrm0700.pfb></Users/haoyi/Library/texmf/font
-s/type1/public/cm-super/sfrm0800.pfb></Users/haoyi/Library/texmf/fonts/type1/pu
-blic/cm-super/sfrm0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-su
-per/sfsi0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfsi09
-00.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss0800.pfb></U
-sers/haoyi/Library/texmf/fonts/type1/public/cm-super/sfss1095.pfb></Users/haoyi
-/Library/texmf/fonts/type1/public/cm-super/sfsx0900.pfb></Users/haoyi/Library/t
-exmf/fonts/type1/public/cm-super/sfsx1200.pfb></Users/haoyi/Library/texmf/fonts
-/type1/public/cm-super/sfti0700.pfb></Users/haoyi/Library/texmf/fonts/type1/pub
-lic/cm-super/sfti0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-sup
-er/sfti0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt080
-0.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on main.pdf (39 pages, 8291039 bytes).
+ 90i,16n,131p,1784b,2222s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb></Users/haoyi/Library/texmf/fonts/type1
+/public/cm-super/sfbx0700.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm
+-super/sfbx0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfb
+x0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0700.pfb>
+</Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfcc0800.pfb></Users/ha
+oyi/Library/texmf/fonts/type1/public/cm-super/sfcc0900.pfb></Users/haoyi/Librar
+y/texmf/fonts/type1/public/cm-super/sfit0800.pfb></Users/haoyi/Library/texmf/fo
+nts/type1/public/cm-super/sfrm0500.pfb></Users/haoyi/Library/texmf/fonts/type1/
+public/cm-super/sfrm0700.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-
+super/sfrm0800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfrm
+0900.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfsi0800.pfb><
+/Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfsi0900.pfb></Users/hao
+yi/Library/texmf/fonts/type1/public/cm-super/sfss0800.pfb></Users/haoyi/Library
+/texmf/fonts/type1/public/cm-super/sfss1095.pfb></Users/haoyi/Library/texmf/fon
+ts/type1/public/cm-super/sfsx0900.pfb></Users/haoyi/Library/texmf/fonts/type1/p
+ublic/cm-super/sfsx1200.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-s
+uper/sfti0700.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfti0
+800.pfb></Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sfti0900.pfb></
+Users/haoyi/Library/texmf/fonts/type1/public/cm-super/sftt0800.pfb></Users/haoy
+i/Library/texmf/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on main.pdf (44 pages, 8374076 bytes).
 PDF statistics:
- 1238 PDF objects out of 1440 (max. 8388607)
- 708 compressed objects within 8 object streams
- 219 named destinations out of 1000 (max. 500000)
- 66934 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1549 PDF objects out of 1728 (max. 8388607)
+ 1000 compressed objects within 10 object streams
+ 431 named destinations out of 1000 (max. 500000)
+ 70566 words of extra memory for PDF output out of 74296 (max. 10000000)
 

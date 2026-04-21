@@ -243,18 +243,46 @@
 \bibcite{zhao2024wildchat}{{23}{2024}{{Zhao et~al\mbox  {.}}}{{}}}
 \bibcite{zheng2023judging}{{24}{2023}{{Zheng et~al\mbox  {.}}}{{}}}
 \bibcite{zhou2023webarena}{{25}{2023}{{Zhou et~al\mbox  {.}}}{{}}}
-\newlabel{tocindent-1}{0pt}
-\newlabel{tocindent0}{0pt}
-\newlabel{tocindent1}{6.9344pt}
-\newlabel{tocindent2}{11.81656pt}
-\newlabel{tocindent3}{26.7157pt}
-\newlabel{tocindent4}{22.09183pt}
-\newlabel{tocindent5}{0pt}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Extended Experimental Results}{38}{appendix.A}\protected@file@percent }
 \newlabel{app:extra_results}{{A}{38}{Extended Experimental Results}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Agent Configurations and Prompts}{38}{appendix.B}\protected@file@percent }
+\newlabel{app:prompts}{{B}{38}{Agent Configurations and Prompts}{appendix.B}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces \textcolor {blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled agents. $n$ is the number of paired cases; \textit  {Pass A} and \textit  {Pass B} are the per-agent pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc  {Retrieval} ablation is reported separately in Section\nonbreakingspace \ref {sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}}{39}{table.caption.45}\protected@file@percent }
 \newlabel{tab:wilcoxon_full}{{20}{39}{\textcolor {blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled agents. $n$ is the number of paired cases; \textit {Pass A} and \textit {Pass B} are the per-agent pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc {Retrieval} ablation is reported separately in Section~\ref {sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}{table.caption.45}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces \textcolor {blue}{Pass-rate sensitivity to the assertion-match threshold\nonbreakingspace $\tau $. Response-citation gate held at $0.70$. Rows are agent--tenant cells; columns are $\tau \in \{0.70, 0.75, 0.80, 0.90, 1.00\}$. Rank order across agents is preserved for every $\tau $ on every tenant, and the maximum within-cell range is $0.048$ pass-rate points.}}}{39}{table.caption.46}\protected@file@percent }
 \newlabel{tab:threshold_sensitivity}{{21}{39}{\textcolor {blue}{Pass-rate sensitivity to the assertion-match threshold~$\tau $. Response-citation gate held at $0.70$. Rows are agent--tenant cells; columns are $\tau \in \{0.70, 0.75, 0.80, 0.90, 1.00\}$. Rank order across agents is preserved for every $\tau $ on every tenant, and the maximum within-cell range is $0.048$ pass-rate points.}}{table.caption.46}{}}
-\newlabel{TotPages}{{39}{39}{}{page.39}{}}
-\gdef \@abspage@last{39}
+\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces Summary of agent configurations. \emph  {Flow} indicates the reasoning strategy; \emph  {Max turns} caps the number of tool-call rounds; \emph  {Tools} lists the number of tools available. All agents share the same embedding model (\texttt  {text-embedding-ada-002}).}}{39}{table.caption.47}\protected@file@percent }
+\newlabel{tab:agent_config_summary}{{22}{39}{Summary of agent configurations. \emph {Flow} indicates the reasoning strategy; \emph {Max turns} caps the number of tool-call rounds; \emph {Tools} lists the number of tools available. All agents share the same embedding model (\texttt {text-embedding-ada-002})}{table.caption.47}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}ReAct-v1 System Prompt}{39}{subsection.B.1}\protected@file@percent }
+\newlabel{app:prompt-v1}{{B.1}{39}{ReAct-v1 System Prompt}{subsection.B.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {23}{\ignorespaces Tool descriptions. All tools accept a list of query strings unless otherwise noted.}}{40}{table.caption.48}\protected@file@percent }
+\newlabel{tab:tool_descriptions}{{23}{40}{Tool descriptions. All tools accept a list of query strings unless otherwise noted}{table.caption.48}{}}
+\newlabel{lst:prompt-v1}{{1}{40}{ReAct-v1 system prompt (abridged; examples section truncated)}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces ReAct-v1 system prompt (abridged; examples section truncated).}}{40}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}ReAct-v2 System Prompt}{41}{subsection.B.2}\protected@file@percent }
+\newlabel{app:prompt-v2}{{B.2}{41}{ReAct-v2 System Prompt}{subsection.B.2}{}}
+\newlabel{lst:prompt-v2}{{2}{41}{ReAct-v2 system prompt (abridged)}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces ReAct-v2 system prompt (abridged).}}{41}{lstlisting.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}ReAct-v3 System Prompt}{42}{subsection.B.3}\protected@file@percent }
+\newlabel{app:prompt-v3}{{B.3}{42}{ReAct-v3 System Prompt}{subsection.B.3}{}}
+\newlabel{lst:prompt-v3}{{3}{42}{ReAct-v3 system prompt (complete)}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}{\ignorespaces ReAct-v3 system prompt (complete).}}{42}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.4}Researcher (Plan-and-Execute) Prompts}{42}{subsection.B.4}\protected@file@percent }
+\newlabel{app:prompt-researcher}{{B.4}{42}{Researcher (Plan-and-Execute) Prompts}{subsection.B.4}{}}
+\newlabel{lst:prompt-researcher-plan}{{4}{42}{Researcher planning prompt}{lstlisting.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}{\ignorespaces Researcher planning prompt.}}{42}{lstlisting.4}\protected@file@percent }
+\newlabel{lst:prompt-researcher-exec}{{5}{43}{Researcher execution system prompt (abridged)}{lstlisting.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}{\ignorespaces Researcher execution system prompt (abridged).}}{43}{lstlisting.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.5}Retrieval Baseline Prompt}{43}{subsection.B.5}\protected@file@percent }
+\newlabel{app:prompt-retrieval}{{B.5}{43}{Retrieval Baseline Prompt}{subsection.B.5}{}}
+\newlabel{lst:prompt-retrieval}{{6}{43}{Retrieval baseline system prompt (complete)}{lstlisting.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}{\ignorespaces Retrieval baseline system prompt (complete).}}{43}{lstlisting.6}\protected@file@percent }
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{6.9344pt}
+\newlabel{tocindent2}{13.74248pt}
+\newlabel{tocindent3}{26.7157pt}
+\newlabel{tocindent4}{22.09183pt}
+\newlabel{tocindent5}{0pt}
+\newlabel{TotPages}{{44}{44}{}{page.44}{}}
+\gdef \@abspage@last{44}
