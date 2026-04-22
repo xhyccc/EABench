@@ -73,15 +73,41 @@ The query-type distribution follows the pipeline's target split of approximately
 \subsection{Communication Network Properties}
 \label{sec:network-stats}
 
-To characterize inter-personal communication structure, we extract a directed multigraph for each tenant in which nodes are users and edges represent recorded communicative acts across five channel types: email (\emph{from}$\to$\emph{to}), email CC (\emph{from}$\to$\emph{cc}), direct-message chat (\emph{sender}$\to$\emph{recipient}), group chat (\emph{sender}$\to$all participants), and meeting (pairwise edges among all attendees plus \emph{organizer}$\to$\emph{attendee} edges). Table~\ref{tab:network_metrics} reports standard graph-theoretic properties for each tenant's aggregate communication network.
+To characterize inter-personal communication structure, we extract a directed multigraph for each tenant in which nodes are users and edges represent recorded communicative acts across five channel types: email (\emph{from}$\to$\emph{to}), email CC (\emph{from}$\to$\emph{cc}), direct-message chat (\emph{sender}$\to$\emph{recipient}), group chat (\emph{sender}$\to$all participants), and meeting (pairwise edges among all attendees plus \emph{organizer}$\to$\emph{attendee} edges). Table~\ref{tab:metric_defs} summarizes the structural and temporal metrics we report; Table~\ref{tab:network_metrics} then gives the per-tenant values.
 
 \begin{table}[h]
 \centering
-\caption{Communication network topology for each tenant.
-Density $= |E| / (|V|(|V|-1))$ for a directed graph.
-Reciprocity is the fraction of directed edges that have a reverse edge.
-Transitivity is the global clustering coefficient.
-$\gamma$ is the exponent of the power-law fit $P(k) \sim k^{-\gamma}$ to the in-degree complementary cumulative distribution (CCDF), with $R^2$ the goodness-of-fit.}
+\footnotesize
+\caption{Definitions of the dataset characterization metrics used in Sections~\ref{sec:network-stats} and~\ref{sec:temporal-stats}. $G = (V, E)$ denotes the directed communication multigraph for a tenant; $\tau_1, \tau_2, \ldots, \tau_n$ denote the inter-event time (IET) sequence on a given channel.}
+\label{tab:metric_defs}
+\begin{tabular}{p{2.4cm}p{3.4cm}p{7.0cm}}
+\toprule
+\textbf{Metric} & \textbf{Definition} & \textbf{Interpretation} \\
+\midrule
+\multicolumn{3}{l}{\emph{Structural (communication network)}} \\
+\midrule
+$|V|$, $|E|$ & Counts of nodes (users) and directed edges (communicative acts). & Scale of the organizational graph. \\
+Density & $|E| / (|V|(|V|-1))$. & Fraction of possible directed ties realized; higher in small, tight-knit organizations. \\
+Diameter & Longest shortest path over all connected node pairs. & Worst-case hop count for information to traverse the organization. \\
+Avg.\ Path & Mean shortest-path length over all connected pairs. & Typical separation between two employees. \\
+Reciprocity & Fraction of directed edges $(u,v)$ for which $(v,u) \in E$. & Tendency for communications to be returned; high for email, zero for chat by construction. \\
+Transitivity & Global clustering coefficient: fraction of connected triples that form triangles. & Prevalence of ``friend-of-friend'' closure. \\
+$\gamma$, $R^2$ & Exponent and goodness-of-fit of the power-law $P(k) \sim k^{-\gamma}$ fit to the in-degree CCDF. & Low $\gamma$ and high $R^2$ indicate a heavy-tailed, hub-and-spoke structure. \\
+\midrule
+\multicolumn{3}{l}{\emph{Temporal (per-channel inter-event times)}} \\
+\midrule
+Events & Number of timestamped events in the channel. & Sample size for IET statistics. \\
+$B$ & $(\sigma_\tau - \mu_\tau) / (\sigma_\tau + \mu_\tau)$~\cite{goh2008burstiness}. & $B \approx 0$: Poisson/regular; $B > 0$: bursty clustering; $B < 0$: anti-bursty. \\
+$M$ & Lag-1 autocorrelation of the IET sequence~\cite{goh2008burstiness}. & $M > 0$: long gaps follow long gaps (multi-scale clustering); $M \approx 0$: memoryless. \\
+$\alpha$ & Exponent of the power-law fit $P(\tau) \sim \tau^{-\alpha}$ to the IET distribution. & Lower $\alpha$ means heavier tail (more extreme silent gaps). \\
+Med.\ IET & Median inter-event time (seconds). & Typical temporal spacing; small for chat, large for email. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Communication network topology for each tenant. See Table~\ref{tab:metric_defs} for metric definitions.}
 \label{tab:network_metrics}
 \small
 \begin{tabular}{lccccccccc}
@@ -94,13 +120,6 @@ ZAI            & 165 & 1{,}956 & 0.072 & 4 & 2.10 & 0.314 & 0.367 & 0.66 & 0.59 
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\linewidth]{figures/network_comparison.pdf}
-\caption{Key communication-network metrics across the three EABench tenants. Density, reciprocity, and transitivity decrease with organizational scale, reflecting the transition from tight-knit professional-services firms to large engineering organizations with departmental silos.}
-\label{fig:network_comparison}
-\end{figure}
 
 \noindent These metrics reflect realistic organizational archetypes. Bertrand \& Co., the smallest organization, is the densest (0.196) and has the smallest diameter (3), consistent with a tight-knit professional-services firm where most colleagues interact directly. ZAI Intelligence, the largest, exhibits a sparse, long-tail structure (density~0.072, 1{,}956 edges among 165~nodes) typical of rapidly growing technology companies with departmental silos. The University of Cambford occupies an intermediate position with the highest reciprocity (0.343), reflecting the collaborative back-and-forth characteristic of academic committee work. Transitivity is highest for Bertrand (0.486), where shared client matters create strong triadic closure, and lowest for ZAI (0.367), where cross-functional interaction is sparser.
 
@@ -115,10 +134,7 @@ Realistic enterprise datasets exhibit bursty temporal structure: communication t
 
 \begin{table}[h]
 \centering
-\caption{Inter-event time (IET) statistics per communication channel and tenant.
-Burstiness $B > 0$ indicates clustered arrivals; $B \approx 0$ indicates near-Poisson behavior.
-Memory coefficient $M$ measures serial correlation between consecutive IETs.
-$\alpha$ is the power-law exponent fitted to the IET distribution. Meeting channels are omitted for brevity (their $|B| < 0.01$ in all tenants except ZAI, where $B = 0.23$ with $M = 0.19$).}
+\caption{Inter-event time (IET) statistics per communication channel and tenant. See Table~\ref{tab:metric_defs} for metric definitions. Meeting channels are omitted for brevity ($|B| < 0.01$ in all tenants except ZAI, where $B = 0.23$ with $M = 0.19$).}
 \label{tab:iet_summary}
 \small
 \begin{tabular}{llccccc}
