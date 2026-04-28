@@ -7,16 +7,16 @@ import numpy as np
 
 # ── Aggregate tool usage (mean calls/case across all 525 cases per agent) ──
 # Computed from eval JSONs; chat includes search_chat + search_group_chat + search_channel
-agents = ['ReAct-v1', 'ReAct-v2', 'ReAct-v3', 'Researcher', 'Retrieval']
+agents = ['ReAct-v1 (4o)', 'ReAct-v2 (4o)', 'Researcher (4o-mini)', 'ReAct-v1 (4o-mini)', 'Retrieval']
 tools  = ['search_email', 'search_chat', 'search_meeting', 'search_file',
           'search_people', 'read_file', 'search_in_file']
 tool_labels = ['Email', 'Chat', 'Meeting', 'File', 'People', 'Read', 'Search-in']
 
 data = {  # agent → tool → mean calls/case
-    'ReAct-v1':   [0.81, 0.05, 0.17, 0.19, 0.18, 0.27, 0.01],
-    'ReAct-v2':   [0.81, 0.06, 0.17, 0.18, 0.16, 0.17, 0.01],
-    'ReAct-v3':   [0.62, 0.04, 0.20, 0.30, 0.05, 0.02, 0.00],
-    'Researcher': [0.96, 0.34, 0.56, 0.39, 0.87, 0.97, 0.03],
+    'ReAct-v1 (4o)':      [0.81, 0.05, 0.17, 0.19, 0.18, 0.27, 0.01],
+    'ReAct-v2 (4o)':      [0.81, 0.06, 0.17, 0.18, 0.16, 0.17, 0.01],
+    'Researcher (4o-mini)': [0.96, 0.34, 0.56, 0.39, 0.87, 0.97, 0.03],
+    'ReAct-v1 (4o-mini)': [0.62, 0.04, 0.20, 0.30, 0.05, 0.02, 0.00],
     'Retrieval':  [0.96, 0.01, 0.03, 0.00, 0.00, 0.00, 0.00],
 }
 
@@ -31,7 +31,7 @@ tool_colors = {
 }
 
 # ── Panel 1: Stacked horizontal bar — tool breakdown per agent ──
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 3.5),
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 3.8),
                                 gridspec_kw={'width_ratios': [1.3, 1]})
 
 y = np.arange(len(agents))
@@ -55,16 +55,16 @@ ax1.invert_yaxis()
 # ── Panel 2: Grouped bars — browsing ablation (pass rate) ──
 # Per-tenant pass rates from tab:tool_ablation
 tenants = ['Bertrand', 'Cambford', 'ZAI']
-ablation_agents = ['Retrieval', 'ReAct-v3', 'Researcher']
+ablation_agents = ['Retrieval', 'ReAct-v1 (4o-mini)', 'Researcher (4o-mini)']
 ablation_colors = {
     'Retrieval':  '#999999',
-    'ReAct-v3':   '#55A868',
-    'Researcher': '#C44E52',
+    'ReAct-v1 (4o-mini)': '#55A868',
+    'Researcher (4o-mini)': '#C44E52',
 }
 pass_rates = {
     'Retrieval':  [0.302, 0.222, 0.209],
-    'ReAct-v3':   [0.395, 0.296, 0.363],
-    'Researcher': [0.432, 0.346, 0.289],
+    'ReAct-v1 (4o-mini)': [0.395, 0.296, 0.363],
+    'Researcher (4o-mini)': [0.432, 0.346, 0.289],
 }
 
 x = np.arange(len(tenants))
@@ -80,7 +80,7 @@ ax2.set_xticklabels(tenants, fontsize=9)
 ax2.set_ylabel('Pass Rate', fontsize=10)
 ax2.set_ylim(0, 0.55)
 ax2.set_title('Snippet-Only vs. Browsing', fontsize=11, fontweight='bold')
-ax2.legend(fontsize=8, frameon=False)
+ax2.legend(fontsize=7, frameon=False)
 ax2.spines['top'].set_visible(False)
 ax2.spines['right'].set_visible(False)
 

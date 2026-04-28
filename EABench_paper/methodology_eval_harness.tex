@@ -3,36 +3,13 @@
 
 \subsubsection{Judge Configuration via YAML}
 
-The evaluation harness is configured independently from the runtime under test. A separate YAML file specifies the judge model, decoding parameters, and prompt templates for each scoring function. This separation is intentional. It allows a stronger or more stable model to serve as the judge, and it lets researchers redefine the evaluation criteria without editing the evaluation code. In practice, we recommend using a deterministic judge configuration with temperature fixed at zero so that repeated runs remain comparable.
-
-\begin{figure}[t]
-\centering
-\begin{minipage}{0.92\linewidth}
-\begin{lstlisting}[basicstyle=\color{blue}\small\ttfamily]
-name: "Default Judge Prompts"
-model:
-  provider: azure
-  name: gpt-4o
-  parameters: {temperature: 0.0}
-prompts:
-  assertion_check: |
-    Verify whether the response satisfies each assertion.
-  citation_relevance: |
-    Judge the relevance of tool results to the query.
-  response_citation: |
-    Judge whether cited IDs are real, relevant, and
-    grounded in the tool trace.
-\end{lstlisting}
-\end{minipage}
-\caption{Condensed judge configuration illustrating independent control of the evaluation model and prompt templates.}
-\label{lst:judge_yaml}
-\end{figure}
+The evaluation harness is configured independently from the runtime under test. A separate YAML file specifies the judge model, decoding parameters, and prompt templates for each scoring function; Appendix~\ref{app:judge-config} gives the concrete judge configuration used in the experiments. This separation is intentional. It allows a stronger or more stable model to serve as the judge, and it lets researchers redefine the evaluation criteria without editing the evaluation code. In practice, we recommend using a deterministic judge configuration with temperature fixed at zero so that repeated runs remain comparable.
 
 \subsubsection{Configurable Evaluation Metrics}
 
 EABench separates the \emph{harness logic} from the \emph{evaluation criteria}. Researchers specify what to measure entirely through configuration; no code changes are required to add, replace, or retune a metric.
 
-\textbf{Judge-based metrics} are defined by prompt templates in the judge YAML file (Figure~\ref{lst:judge_yaml}). Each template receives the agent's query, response, and tool trace, and returns a score in $[0,1]$ with an explanation. Any number of judge prompts can be registered; common patterns include:
+\textbf{Judge-based metrics} are defined by prompt templates in the judge YAML file. Each template receives the agent's query, response, and tool trace, and returns a score in $[0,1]$ with an explanation. Any number of judge prompts can be registered; common patterns include:
 \begin{itemize}[leftmargin=*,itemsep=2pt,topsep=4pt]
   \item \textbf{Factual assertion checking.} A prompt that verifies whether each gold-standard assertion in the evaluation case is satisfied by the agent's response. The per-case score is a pass fraction over all assertions.
   \item \textbf{Retrieval quality.} A prompt that jointly evaluates tool selection, evidence relevance, and response grounding---checking whether the agent's answer faithfully reflects what was retrieved rather than hallucinating.
@@ -44,7 +21,7 @@ EABench separates the \emph{harness logic} from the \emph{evaluation criteria}. 
 \begin{itemize}[leftmargin=*,itemsep=2pt,topsep=4pt]
   \item \textbf{Retrieved-item count.} Total evidence items returned across all search tool calls.
   \item \textbf{Response citation count.} Number of structured reference entries emitted in the final answer.
-  \item \textbf{Token usage, tool-call count.} Operational cost and trajectory efficiency.
+  \item \textbf{Token usage, tool-call count.} Operational footprint and trajectory efficiency.
 \end{itemize}
 
 \textbf{Pass/fail threshold.} Whether a case is marked as passed is controlled by threshold parameters applied to any subset of the judge scores. Setting tighter thresholds raises the bar for correctness and grounding; researchers can calibrate these to match the compliance requirements of their target deployment context.
@@ -64,38 +41,13 @@ Response citation score & Judge-based & Whether the final answer cites real, rel
 Combined citation score & Derived & Mean of tool relevance and response citation scores \\
 Tool search result number & Deterministic & Number of retrieved evidence items surfaced across search tool calls \\
 Response citation number & Deterministic & Number of references emitted by the agent in the final answer \\
-Token usage, tool-call count & Deterministic & Operational cost and efficiency of the agent trajectory \\
+Token usage, tool-call count & Deterministic & Operational footprint and efficiency of the agent trajectory \\
 \bottomrule
 \end{tabular}
 
 \end{table}
 
-\begin{figure}[t]
-\centering
-%\fbox{\parbox{0.96\linewidth}{%
-%\vspace{4pt}
-%\small\color{blue}\itshape\raggedright
-%\textbf{[Figure placeholder --- generation pending.]}
-%A vertical funnel-and-merge scoring pipeline diagram.
-%\textbf{Top input block (deep blue, full width):} A wide rectangle labeled ``Agent Response + Tool Trace + Source Citations'' with embedded icons: a document icon (response), a chain-link icon (tool trace), and a citation-list icon (source citations).
-%Below the input block, a downward arrow fans into \textbf{three parallel vertical scoring tracks} separated by column dividers:
-%\textbf{Track~1 (left, amber) --- Citation Relevance Score:}
-%A ``Judge LLM'' rounded box with two annotation badges: ``prompt-configurable'' and ``threshold-configurable.''
-%Inside the box, a small visual: retrieved tool results $\rightarrow$ relevance check against query and access list $\rightarrow$ score bar.
-%Output: a horizontal score bar labeled ``0.0 \ldots 1.0'' in amber tone.
-%\textbf{Track~2 (center, orange) --- Assertion Check Score:}
-%A ``Judge LLM'' rounded box. Inside: assertions listed individually, each checked True/False against the response.
-%Output: a pass-fraction score bar labeled ``0.0 \ldots 1.0'' in orange tone.
-%Below the two parallel tracks (TS-Rel and RC-Rel), a merge node computes the equal-weight mean (combined citation score).
-%The combined score and the assertion score feed a final Pass/Fail decision node.
-%To the far right, outside the main pipeline, a vertically stacked \textbf{Deterministic Diagnostics} column (light gray): Latency, Token Usage, Tool-call Count, Evidence Items---each as a labeled metric box.
-%Color scheme: input block in deep blue; Track~1 amber; Track~2 orange; Track~3 teal; merge zone and final gauge in green; deterministic column gray.
-%\vspace{4pt}
-%}}
-\includegraphics[width=0.9\textwidth]{figures/LLM-as-a-judge-eabench.png}
-\caption{EABench multi-dimensional evaluation harness. Two independently configurable LLM-judge tracks score tool-search relevance and response-citation quality; their equal-weight average forms the combined citation score. The assertion score is computed by a third judge call. All three judge scores are reported alongside deterministic diagnostics for operational profiling.}
-\label{fig:eval_harness}
-\end{figure}
+The reported harness combines three judge scores with deterministic diagnostics. One judge call checks assertion satisfaction, one scores tool-search relevance, and one scores response-citation quality; the combined citation score is the equal-weight mean of tool-search relevance and response-citation quality. Token usage, tool-call count, retrieved-item count, and citation count are logged directly from the runtime, which keeps operational profiling separate from judge interpretation.
 
 \subsubsection{Pass/Fail Criteria}
 

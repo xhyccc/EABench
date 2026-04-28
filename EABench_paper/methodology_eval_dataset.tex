@@ -3,15 +3,7 @@
 
 \subsubsection{Three Query Types}
 
-EABench does not treat evaluation cases as fixed annotations authored by hand. Instead, it derives them automatically from the generated tenant history, producing three query types that cover retrieval, reasoning, and synthesis. Targeted artifact search cases ask the agent to locate a specific item or a small set of items using natural-language constraints on time, author, artifact type, or topic, without ever naming internal identifiers explicitly. Multi-hop reasoning cases require the agent to find information in one artifact in order to answer a question about another, or to trace a cross-artifact event chain across multiple modalities. Comprehensive report cases ask for a summary, timeline, or analysis of a specific topic grounded in a contiguous window of tenant activity. This tripartite design ensures that evaluation does not collapse to a single notion of success.
-
-\begin{figure}[t]
-\centering
-%\resizebox{0.95\linewidth}{!}{\input{figures/fig_eval_pipeline}}
-\includegraphics[width=0.7\textwidth]{figures/eval_data_generation_pipeline.png}
-\caption{Evaluation-case generation pipeline. The same tenant history is re-sliced into targeted artifact search, multi-hop reasoning, and comprehensive report cases, each with explicit user context and ground truth.}
-\label{fig:eval_pipeline}
-\end{figure}
+EABench does not treat evaluation cases as fixed annotations authored by hand. Instead, it derives them automatically from the generated tenant history, producing three query types that cover retrieval, reasoning, and synthesis. Targeted artifact search cases ask the agent to locate a specific item or a small set of items using natural-language constraints on time, author, artifact type, or topic, without ever naming internal identifiers explicitly. Multi-hop reasoning cases require the agent to find information in one artifact in order to answer a question about another, or to trace a cross-artifact event chain across multiple modalities. Comprehensive report cases ask for a summary, timeline, or analysis of a specific topic grounded in a contiguous window of tenant activity. Each case is stored with the requesting user context, a ground-truth artifact list, and natural-language assertions, so the same generated history can be re-sliced into retrieval, reasoning, and synthesis workloads without changing the runtime. This tripartite design ensures that evaluation does not collapse to a single notion of success.
 
 \begin{table}[h]
 \centering

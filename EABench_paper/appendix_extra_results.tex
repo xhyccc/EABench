@@ -21,30 +21,30 @@ the robustness claim in the Evaluation Metrics subsection.
 \begin{table}[htbp]
 \centering
 \footnotesize
-\caption{\textcolor{blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled agents. $n$ is the number of paired cases; \textit{Pass A} and \textit{Pass B} are the per-agent pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc{Retrieval} ablation is reported separately in Section~\ref{sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}
+\caption{\textcolor{blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled configurations. $n$ is the number of paired cases; \textit{Pass A} and \textit{Pass B} are the per-configuration pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc{Retrieval} ablation is reported separately in Section~\ref{sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}
 \label{tab:wilcoxon_full}
 \begin{tabular}{llrrrr}
 \toprule
 Agent A & Agent B & Tenant & $n$ & Pass A / B & $p$ \\
 \midrule
-react\_v1 & react\_v2    & Cambford & 162 & 0.228 / 0.222 & 0.847 \\
-react\_v1 & react\_v2    & ZAI      & 201 & 0.269 / 0.154 & \textbf{1.0e-4} \\
-react\_v1 & react\_v2    & Bertrand & 162 & 0.414 / 0.259 & \textbf{2.7e-4} \\
-react\_v1 & researcher   & Cambford & 162 & 0.228 / 0.346 & \textbf{5.6e-3} \\
-react\_v1 & researcher   & ZAI      & 201 & 0.269 / 0.289 & 0.572 \\
-react\_v1 & researcher   & Bertrand & 162 & 0.414 / 0.432 & 0.680 \\
-react\_v1 & react\_v3    & Cambford & 162 & 0.228 / 0.296 & 0.101 \\
-react\_v1 & react\_v3    & ZAI      & 201 & 0.269 / 0.363 & \textbf{1.8e-3} \\
-react\_v1 & react\_v3    & Bertrand & 162 & 0.414 / 0.395 & 0.668 \\
-react\_v2 & researcher   & Cambford & 162 & 0.222 / 0.346 & \textbf{1.2e-3} \\
-react\_v2 & researcher   & ZAI      & 201 & 0.154 / 0.289 & \textbf{5.7e-5} \\
-react\_v2 & researcher   & Bertrand & 162 & 0.259 / 0.432 & \textbf{7.5e-5} \\
-react\_v2 & react\_v3    & Cambford & 162 & 0.222 / 0.296 & \textbf{0.034} \\
-react\_v2 & react\_v3    & ZAI      & 201 & 0.154 / 0.363 & \textbf{$<$1e-4} \\
-react\_v2 & react\_v3    & Bertrand & 162 & 0.259 / 0.395 & \textbf{4.5e-3} \\
-researcher & react\_v3   & Cambford & 162 & 0.346 / 0.296 & 0.182 \\
-researcher & react\_v3   & ZAI      & 201 & 0.289 / 0.363 & \textbf{0.032} \\
-researcher & react\_v3   & Bertrand & 162 & 0.432 / 0.395 & 0.405 \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v2} (4o)    & Cambford & 162 & 0.228 / 0.222 & 0.847 \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v2} (4o)    & ZAI      & 201 & 0.269 / 0.154 & \textbf{1.0e-4} \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v2} (4o)    & Bertrand & 162 & 0.414 / 0.259 & \textbf{2.7e-4} \\
+\textsc{ReAct-v1} (4o) & \textsc{Researcher} (4o-mini)   & Cambford & 162 & 0.228 / 0.346 & \textbf{5.6e-3} \\
+\textsc{ReAct-v1} (4o) & \textsc{Researcher} (4o-mini)   & ZAI      & 201 & 0.269 / 0.289 & 0.572 \\
+\textsc{ReAct-v1} (4o) & \textsc{Researcher} (4o-mini)   & Bertrand & 162 & 0.414 / 0.432 & 0.680 \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v1} (4o-mini)    & Cambford & 162 & 0.228 / 0.296 & 0.101 \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v1} (4o-mini)    & ZAI      & 201 & 0.269 / 0.363 & \textbf{1.8e-3} \\
+\textsc{ReAct-v1} (4o) & \textsc{ReAct-v1} (4o-mini)    & Bertrand & 162 & 0.414 / 0.395 & 0.668 \\
+\textsc{ReAct-v2} (4o) & \textsc{Researcher} (4o-mini)   & Cambford & 162 & 0.222 / 0.346 & \textbf{1.2e-3} \\
+\textsc{ReAct-v2} (4o) & \textsc{Researcher} (4o-mini)   & ZAI      & 201 & 0.154 / 0.289 & \textbf{5.7e-5} \\
+\textsc{ReAct-v2} (4o) & \textsc{Researcher} (4o-mini)   & Bertrand & 162 & 0.259 / 0.432 & \textbf{7.5e-5} \\
+\textsc{ReAct-v2} (4o) & \textsc{ReAct-v1} (4o-mini)    & Cambford & 162 & 0.222 / 0.296 & \textbf{0.034} \\
+\textsc{ReAct-v2} (4o) & \textsc{ReAct-v1} (4o-mini)    & ZAI      & 201 & 0.154 / 0.363 & \textbf{$<$1e-4} \\
+\textsc{ReAct-v2} (4o) & \textsc{ReAct-v1} (4o-mini)    & Bertrand & 162 & 0.259 / 0.395 & \textbf{4.5e-3} \\
+\textsc{Researcher} (4o-mini) & \textsc{ReAct-v1} (4o-mini)   & Cambford & 162 & 0.346 / 0.296 & 0.182 \\
+\textsc{Researcher} (4o-mini) & \textsc{ReAct-v1} (4o-mini)   & ZAI      & 201 & 0.289 / 0.363 & \textbf{0.032} \\
+\textsc{Researcher} (4o-mini) & \textsc{ReAct-v1} (4o-mini)   & Bertrand & 162 & 0.432 / 0.395 & 0.405 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -58,18 +58,18 @@ researcher & react\_v3   & Bertrand & 162 & 0.432 / 0.395 & 0.405 \\
 \toprule
 Agent & Tenant & $\tau{=}0.70$ & $0.75$ & $0.80$ & $0.90$ & $1.00$ \\
 \midrule
-ReAct-v1    & Bertrand & 0.414 & 0.414 & 0.401 & 0.401 & 0.401 \\
-ReAct-v1    & Cambford & 0.228 & 0.228 & 0.228 & 0.228 & 0.228 \\
-ReAct-v1    & ZAI      & 0.269 & 0.269 & 0.264 & 0.264 & 0.264 \\
-ReAct-v2    & Bertrand & 0.259 & 0.259 & 0.253 & 0.253 & 0.253 \\
-ReAct-v2    & Cambford & 0.222 & 0.222 & 0.222 & 0.222 & 0.222 \\
-ReAct-v2    & ZAI      & 0.154 & 0.154 & 0.139 & 0.139 & 0.139 \\
-ReAct-v3    & Bertrand & 0.395 & 0.395 & 0.383 & 0.383 & 0.383 \\
-ReAct-v3    & Cambford & 0.296 & 0.296 & 0.284 & 0.284 & 0.284 \\
-ReAct-v3    & ZAI      & 0.363 & 0.363 & 0.338 & 0.338 & 0.338 \\
-Researcher  & Bertrand & 0.432 & 0.432 & 0.426 & 0.426 & 0.426 \\
-Researcher  & Cambford & 0.346 & 0.346 & 0.340 & 0.340 & 0.340 \\
-Researcher  & ZAI      & 0.289 & 0.289 & 0.284 & 0.284 & 0.284 \\
+\textsc{ReAct-v1} (4o)    & Bertrand & 0.414 & 0.414 & 0.401 & 0.401 & 0.401 \\
+\textsc{ReAct-v1} (4o)    & Cambford & 0.228 & 0.228 & 0.228 & 0.228 & 0.228 \\
+\textsc{ReAct-v1} (4o)    & ZAI      & 0.269 & 0.269 & 0.264 & 0.264 & 0.264 \\
+\textsc{ReAct-v2} (4o)    & Bertrand & 0.259 & 0.259 & 0.253 & 0.253 & 0.253 \\
+\textsc{ReAct-v2} (4o)    & Cambford & 0.222 & 0.222 & 0.222 & 0.222 & 0.222 \\
+\textsc{ReAct-v2} (4o)    & ZAI      & 0.154 & 0.154 & 0.139 & 0.139 & 0.139 \\
+\textsc{Researcher} (4o-mini)  & Bertrand & 0.432 & 0.432 & 0.426 & 0.426 & 0.426 \\
+\textsc{Researcher} (4o-mini)  & Cambford & 0.346 & 0.346 & 0.340 & 0.340 & 0.340 \\
+\textsc{Researcher} (4o-mini)  & ZAI      & 0.289 & 0.289 & 0.284 & 0.284 & 0.284 \\
+\textsc{ReAct-v1} (4o-mini)    & Bertrand & 0.395 & 0.395 & 0.383 & 0.383 & 0.383 \\
+\textsc{ReAct-v1} (4o-mini)    & Cambford & 0.296 & 0.296 & 0.284 & 0.284 & 0.284 \\
+\textsc{ReAct-v1} (4o-mini)    & ZAI      & 0.363 & 0.363 & 0.338 & 0.338 & 0.338 \\
 \bottomrule
 \end{tabular}
 \end{table}

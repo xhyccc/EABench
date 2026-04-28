@@ -6,9 +6,42 @@
 \label{app:prompts}
 
 This appendix reproduces the full system prompts and configurations used for
-each of the five agent variants evaluated in Section~\ref{sec:experiments}.
-Table~\ref{tab:agent_config_summary} summarises the key configuration
-parameters; the subsections that follow give the verbatim prompts.
+each of the five agent variants evaluated in Section~\ref{sec:experiments},
+along with the judge configuration used for automated scoring.
+Table~\ref{tab:agent_config_summary} summarises the key agent configuration
+parameters; the subsections that follow give the judge configuration and
+verbatim prompts.
+
+\subsection{Judge Configuration}
+\label{app:judge-config}
+
+The evaluation harness is configured separately from the agent runtime. The
+condensed YAML below shows the judge model, deterministic decoding setting, and
+three prompt families used to score assertion satisfaction, tool-search
+relevance, and response-citation grounding.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.92\linewidth}
+\begin{lstlisting}[basicstyle=\color{blue}\small\ttfamily]
+name: "Default Judge Prompts"
+model:
+  provider: azure
+  name: gpt-4o
+  parameters: {temperature: 0.0}
+prompts:
+  assertion_check: |
+    Verify whether the response satisfies each assertion.
+  citation_relevance: |
+    Judge the relevance of tool results to the query.
+  response_citation: |
+    Judge whether cited IDs are real, relevant, and
+    grounded in the tool trace.
+\end{lstlisting}
+\end{minipage}
+\caption{Condensed judge configuration illustrating independent control of the evaluation model and prompt templates.}
+\label{fig:app_judge_yaml}
+\end{figure}
 
 \begin{table}[htbp]
 \centering
@@ -22,16 +55,16 @@ parameters; the subsections that follow give the verbatim prompts.
 \toprule
 Agent & Model & Temp. & Flow & Max Turns & Tools \\
 \midrule
-\textsc{ReAct-v1}   & \texttt{gpt-4o}      & 0.7 & ReAct & 5  & 10 \\
-\textsc{ReAct-v2}   & \texttt{gpt-4o}      & 0.5 & ReAct & 5  & 10 \\
-\textsc{ReAct-v3}   & \texttt{gpt-4o-mini} & 0.0 & ReAct & 20 & 10 \\
-\textsc{Researcher}  & \texttt{gpt-4o-mini} & 0.0 & Plan-and-Execute & 20 & 10 \\
+\textsc{ReAct-v1} (4o)   & \texttt{gpt-4o}      & 0.7 & ReAct & 5  & 10 \\
+\textsc{ReAct-v2} (4o)   & \texttt{gpt-4o}      & 0.5 & ReAct & 5  & 10 \\
+\textsc{Researcher} (4o-mini)  & \texttt{gpt-4o-mini} & 0.0 & Plan-and-Execute & 20 & 10 \\
+\textsc{ReAct-v1} (4o-mini)   & \texttt{gpt-4o-mini} & 0.0 & ReAct & 20 & 10 \\
 \textsc{Retrieval}   & \texttt{gpt-4o-mini} & 0.0 & Chain (1-shot) & 2  & 4 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-All browsing-enabled agents (\textsc{ReAct-v1/v2/v3} and \textsc{Researcher})
+All browsing-enabled configurations (\textsc{ReAct-v1} (4o), \textsc{ReAct-v2} (4o), \textsc{Researcher} (4o-mini), and \textsc{ReAct-v1} (4o-mini))
 share ten tools: \texttt{search\_email}, \texttt{search\_chat},
 \texttt{search\_group\_chat}, \texttt{search\_channel},
 \texttt{search\_meeting}, \texttt{search\_file}, \texttt{read\_file},
@@ -173,15 +206,14 @@ Acting for:
 \end{lstlisting}
 
 % ------------------------------------------------------------------
-\subsection{ReAct-v3 System Prompt}
+\subsection{ReAct-v1 (4o-mini) System Prompt}
 \label{app:prompt-v3}
 
-\textsc{ReAct-v3} uses \texttt{gpt-4o-mini} (temperature 0.0) with the
-condensed v2-style prompt (controlling for prompt verbosity), but is allowed up
-to 20 tool-call turns. This isolates the effect of model choice and temperature
-while keeping the ReAct architecture.
+\textsc{ReAct-v1} (4o-mini) uses \texttt{gpt-4o-mini} (temperature 0.0) with the
+ReAct architecture and up to 20 tool-call turns. This configuration provides the
+mini-model ReAct ablation used in the main results.
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={ReAct-v3 system prompt (complete).}, label={lst:prompt-v3}]
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={ReAct-v1 (4o-mini) system prompt (complete).}, label={lst:prompt-v3}]
 You are a highly efficient and precise enterprise assistant for
 the EABench platform.
 

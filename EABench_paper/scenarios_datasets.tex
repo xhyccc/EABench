@@ -56,7 +56,7 @@ The query-type distribution follows the pipeline's target split of approximately
   & Comprehensive Report       & 3.2 & 3 & 3--4  & 5.3 & 5 & 4--10 \\
 \midrule
 \multirow{3}{*}{Cambford}
-  & Targeted Artifact Search  & 2.6 & 3 & 2--3  & 1.0 & 1 & 0--1  \\
+  & Targeted Artifact Search  & 2.6 & 3 & 2--3  & 1.0 & 1 & 1--1  \\
   & Multi-Hop Reasoning        & 2.8 & 3 & 2--4  & 3.1 & 3 & 2--4  \\
   & Comprehensive Report       & 3.2 & 3 & 3--4  & 5.9 & 5 & 3--15 \\
 \midrule
@@ -121,7 +121,7 @@ ZAI            & 165 & 1{,}956 & 0.072 & 4 & 2.10 & 0.314 & 0.367 & 0.66 & 0.59 
 \end{tabular}
 \end{table}
 
-\noindent These metrics reflect realistic organizational archetypes. Bertrand \& Co., the smallest organization, is the densest (0.196) and has the smallest diameter (3), consistent with a tight-knit professional-services firm where most colleagues interact directly. ZAI Intelligence, the largest, exhibits a sparse, long-tail structure (density~0.072, 1{,}956 edges among 165~nodes) typical of rapidly growing technology companies with departmental silos. The University of Cambford occupies an intermediate position with the highest reciprocity (0.343), reflecting the collaborative back-and-forth characteristic of academic committee work. Transitivity is highest for Bertrand (0.486), where shared client matters create strong triadic closure, and lowest for ZAI (0.367), where cross-functional interaction is sparser.
+\noindent These metrics show that the generated tenants instantiate distinct organizational archetypes for evaluation. Bertrand \& Co., the smallest organization, is the densest (0.196) and has the smallest diameter (3), consistent with a tight-knit professional-services scenario where most colleagues interact directly. ZAI Intelligence, the largest, exhibits a sparse, long-tail structure (density~0.072, 1{,}956 edges among 165~nodes), matching the intended evaluation setting of a rapidly growing technology company with departmental silos. The University of Cambford occupies an intermediate position with the highest reciprocity (0.343), reflecting the collaborative back-and-forth encoded in the academic committee scenario. Transitivity is highest for Bertrand (0.486), where shared client matters create strong triadic closure, and lowest for ZAI (0.367), where cross-functional interaction is sparser.
 
 The in-degree distributions follow a heavy-tailed pattern. We fit a power law $P(k) \sim k^{-\gamma}$ to the complementary cumulative distribution of in-degrees and compare the empirical graph against a synthetic Barab\'{a}si--Albert (BA) preferential-attachment graph of the same size. The low $\gamma$ values (0.36--0.68) confirm that all three networks exhibit right-skewed degree distributions rather than Poisson-like regularity. The $R^2$ values increase with tenant size (0.29 for Bertrand, 0.59 for ZAI), indicating that the power-law fit improves as the number of nodes permits a wider degree range. In each case, the maximum in-degree substantially exceeds the BA model's prediction (e.g., 99 vs.\ 72 for ZAI, 43 vs.\ 34 for Cambford), indicating that the generated organizations produce realistic ``hub'' individuals---such as executives, team leads, or central administrative staff---whose communication connectivity is disproportionately high.
 
@@ -130,7 +130,7 @@ Per-channel decomposition reveals further structural realism. Email communicatio
 \subsection{Temporal Communication Patterns}
 \label{sec:temporal-stats}
 
-Realistic enterprise datasets exhibit bursty temporal structure: communication tends to cluster around deadlines, incidents, or scheduled events rather than arriving as a uniform Poisson process. We quantify this using the burstiness parameter $B = (\sigma_\tau - \mu_\tau) / (\sigma_\tau + \mu_\tau)$, where $\mu_\tau$ and $\sigma_\tau$ are the mean and standard deviation of the inter-event time (IET) sequence for a given communication channel~\cite{goh2008burstiness}. Values of $B$ near zero indicate exponential (Poisson) inter-arrival times, while $B > 0$ indicates bursty clustering. We additionally report the memory coefficient $M$~\cite{goh2008burstiness}, which measures the correlation between consecutive IETs: $M > 0$ indicates that long gaps tend to follow long gaps (temporal clustering at multiple scales), while $M \approx 0$ indicates uncorrelated consecutive intervals.
+Enterprise communication often exhibits bursty temporal structure: communication tends to cluster around deadlines, incidents, or scheduled events rather than arriving as a uniform Poisson process. We quantify whether the generated evaluation tenants express this intended structure using the burstiness parameter $B = (\sigma_\tau - \mu_\tau) / (\sigma_\tau + \mu_\tau)$, where $\mu_\tau$ and $\sigma_\tau$ are the mean and standard deviation of the inter-event time (IET) sequence for a given communication channel~\cite{goh2008burstiness}. Values of $B$ near zero indicate exponential (Poisson) inter-arrival times, while $B > 0$ indicates bursty clustering. We additionally report the memory coefficient $M$~\cite{goh2008burstiness}, which measures the correlation between consecutive IETs: $M > 0$ indicates that long gaps tend to follow long gaps (temporal clustering at multiple scales), while $M \approx 0$ indicates uncorrelated consecutive intervals.
 
 \begin{table}[h]
 \centering
