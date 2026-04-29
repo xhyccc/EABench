@@ -706,10 +706,10 @@ INPUT ./experiments_results_new.tex
 INPUT ./experiments_results_new.tex
 INPUT experiments_results_new.tex
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-sc-t1.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/libertine/LinBiolinumT-tlf-sc-t1.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinBiolinumT-tlf-sc-t1--base.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp2.enc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinBiolinumTI-tlf-t1.tfm
 INPUT ./figures/aggregate_assr_rcrel.pdf
 INPUT ./figures/aggregate_assr_rcrel.pdf
@@ -762,13 +762,13 @@ INPUT ./appendix_prompts.tex
 INPUT ./appendix_prompts.tex
 INPUT ./appendix_prompts.tex
 INPUT appendix_prompts.tex
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-t1.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/vf/public/newtx/nxlmia.vf
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/LibertineMathRM.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4r-4.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/inconsolata/t1-zi4b-4.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/inconsolata/ts1-zi4r.tfm

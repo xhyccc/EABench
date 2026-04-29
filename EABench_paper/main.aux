@@ -141,7 +141,6 @@
 \newlabel{sec:temporal-stats}{{4.6}{21}{Temporal Communication Patterns}{subsection.4.6}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Inter-event time (IET) statistics per communication channel and tenant. See Table\nonbreakingspace \ref {tab:metric_defs} for metric definitions. Meeting channels are omitted for brevity ($|B| < 0.01$ in all tenants except ZAI, where $B = 0.23$ with $M = 0.19$).}}{21}{table.caption.23}\protected@file@percent }
 \newlabel{tab:iet_summary}{{15}{21}{Inter-event time (IET) statistics per communication channel and tenant. See Table~\ref {tab:metric_defs} for metric definitions. Meeting channels are omitted for brevity ($|B| < 0.01$ in all tenants except ZAI, where $B = 0.23$ with $M = 0.19$)}{table.caption.23}{}}
-\citation{yao2022react}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{22}{section.5}\protected@file@percent }
 \newlabel{sec:experiments}{{5}{22}{Experiments}{section.5}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Core experimental protocol supported by EABench.}}{22}{table.caption.24}\protected@file@percent }
@@ -150,18 +149,19 @@
 \newlabel{sec:exp-setup}{{5.1}{22}{Experimental Setup}{subsection.5.1}{}}
 \newlabel{sec:agent-configs}{{5.1.1}{22}{Agent Configurations}{subsubsection.5.1.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Agent Configurations}{22}{subsubsection.5.1.1}\protected@file@percent }
+\citation{yao2022react}
 \@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Configuration summary for the \textcolor {blue}{four} evaluated runtime configurations. ``Planning model'' refers to the LLM used for the optional pre-execution planning step; for \textsc  {Researcher} (4o-mini), the same model is used for both planning and execution. Prompt size is the approximate system-prompt token count. Avg.\ tool calls is the empirical mean across all evaluation cases.}}{23}{table.caption.25}\protected@file@percent }
 \newlabel{tab:agent_configs}{{17}{23}{Configuration summary for the \textcolor {blue}{four} evaluated runtime configurations. ``Planning model'' refers to the LLM used for the optional pre-execution planning step; for \textsc {Researcher} (4o-mini), the same model is used for both planning and execution. Prompt size is the approximate system-prompt token count. Avg.\ tool calls is the empirical mean across all evaluation cases}{table.caption.25}{}}
-\newlabel{sec:eval-metrics}{{5.1.2}{23}{Evaluation Metrics}{subsubsection.5.1.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Evaluation Metrics}{23}{subsubsection.5.1.2}\protected@file@percent }
+\newlabel{sec:eval-metrics}{{5.1.2}{24}{Evaluation Metrics}{subsubsection.5.1.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Evaluation Metrics}{24}{subsubsection.5.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Main Results}{24}{subsection.5.2}\protected@file@percent }
 \newlabel{sec:main-results}{{5.2}{24}{Main Results}{subsection.5.2}{}}
 \newlabel{sec:overall-results}{{5.2.1}{24}{Overall Results}{subsubsection.5.2.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Overall Results}{24}{subsubsection.5.2.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Per-tenant and per-agent evaluation results. \emph  {Pass}: pass rate\textcolor {blue}{\ (with 95\% Wilson CI in brackets)}. \emph  {Assr.}: assertion score. \emph  {TS-Rel}: tool-search relevance. \emph  {TS-$n$}: mean items retrieved. \emph  {RC-Rel}: response-citation relevance. \emph  {RC-$n$}: mean grounded citations. \emph  {Cite}: composite citation score (mean of TS-Rel and RC-Rel). Bold marks the best per-tenant value.}}{24}{table.caption.26}\protected@file@percent }
-\newlabel{tab:results_full}{{18}{24}{Per-tenant and per-agent evaluation results. \emph {Pass}: pass rate\textcolor {blue}{\ (with 95\% Wilson CI in brackets)}. \emph {Assr.}: assertion score. \emph {TS-Rel}: tool-search relevance. \emph {TS-$n$}: mean items retrieved. \emph {RC-Rel}: response-citation relevance. \emph {RC-$n$}: mean grounded citations. \emph {Cite}: composite citation score (mean of TS-Rel and RC-Rel). Bold marks the best per-tenant value}{table.caption.26}{}}
 \newlabel{sec:method-comparisons}{{5.2.2}{24}{Comparisons of the Evaluated Configurations}{subsubsection.5.2.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Comparisons of the Evaluated Configurations}{24}{subsubsection.5.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Per-tenant and per-agent evaluation results. \emph  {Pass}: pass rate\textcolor {blue}{\ (with 95\% Wilson CI in brackets)}. \emph  {Assr.}: assertion score. \emph  {TS-Rel}: tool-search relevance. \emph  {TS-$n$}: mean items retrieved. \emph  {RC-Rel}: response-citation relevance. \emph  {RC-$n$}: mean grounded citations. \emph  {Cite}: composite citation score (mean of TS-Rel and RC-Rel). Bold marks the best per-tenant value.}}{25}{table.caption.26}\protected@file@percent }
+\newlabel{tab:results_full}{{18}{25}{Per-tenant and per-agent evaluation results. \emph {Pass}: pass rate\textcolor {blue}{\ (with 95\% Wilson CI in brackets)}. \emph {Assr.}: assertion score. \emph {TS-Rel}: tool-search relevance. \emph {TS-$n$}: mean items retrieved. \emph {RC-Rel}: response-citation relevance. \emph {RC-$n$}: mean grounded citations. \emph {Cite}: composite citation score (mean of TS-Rel and RC-Rel). Bold marks the best per-tenant value}{table.caption.26}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Weighted-aggregate metrics across all tenants. \emph  {Left}: assertion score---\textsc  {ReAct-v1} (4o) leads (0.638). \emph  {Middle}: response-citation relevance---\textsc  {ReAct-v1} (4o-mini) leads (0.704). \emph  {Right}: composite citation score (mean of TS-Rel and RC-Rel)---\textsc  {ReAct-v1} (4o-mini) leads (0.751).}}{25}{figure.caption.27}\protected@file@percent }
 \newlabel{fig:aggregate_assr_rcrel}{{8}{25}{Weighted-aggregate metrics across all tenants. \emph {Left}: assertion score---\textsc {ReAct-v1} (4o) leads (0.638). \emph {Middle}: response-citation relevance---\textsc {ReAct-v1} (4o-mini) leads (0.704). \emph {Right}: composite citation score (mean of TS-Rel and RC-Rel)---\textsc {ReAct-v1} (4o-mini) leads (0.751)}{figure.caption.27}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Ablation Studies}{25}{subsection.5.3}\protected@file@percent }
@@ -170,14 +170,14 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}ReAct vs.\ Plan-and-Execute}{25}{subsubsection.5.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Tool-call distribution by configuration and tenant. Rows are grouped by tenant; columns show individual tools. \textsc  {Researcher} (4o-mini) allocates calls across more tool types in every tenant, while the reactive configurations concentrate on \texttt  {search\_messages} and \texttt  {search\_people}. Cross-tenant variation is visible: ZAI's larger corpus drives higher \texttt  {read\_file} usage across all configurations.}}{26}{figure.caption.28}\protected@file@percent }
 \newlabel{fig:tool_usage}{{9}{26}{Tool-call distribution by configuration and tenant. Rows are grouped by tenant; columns show individual tools. \textsc {Researcher} (4o-mini) allocates calls across more tool types in every tenant, while the reactive configurations concentrate on \texttt {search\_messages} and \texttt {search\_people}. Cross-tenant variation is visible: ZAI's larger corpus drives higher \texttt {read\_file} usage across all configurations}{figure.caption.28}{}}
-\newlabel{sec:ablation-model}{{5.3.2}{26}{\textcolor {blue}{Model-wise Comparison (GPT-4o vs.\ GPT-4o-mini)}}{subsubsection.5.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textcolor {blue}{Model-wise Comparison (GPT-4o vs.\ GPT-4o-mini)}}{26}{subsubsection.5.3.2}\protected@file@percent }
+\newlabel{sec:ablation-model}{{5.3.2}{27}{\textcolor {blue}{Model-wise Comparison (GPT-4o vs.\ GPT-4o-mini)}}{subsubsection.5.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}\textcolor {blue}{Model-wise Comparison (GPT-4o vs.\ GPT-4o-mini)}}{27}{subsubsection.5.3.2}\protected@file@percent }
 \newlabel{sec:ablation-tool}{{5.3.3}{27}{\textcolor {blue}{Tool-wise Ablation: Full-Content Browsing}}{subsubsection.5.3.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}\textcolor {blue}{Tool-wise Ablation: Full-Content Browsing}}{27}{subsubsection.5.3.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Mean tool calls per case by agent, aggregated across all three tenants. \emph  {Email/Chat/Meeting/File}: content-search endpoints returning ranked snippets. \emph  {People}: name-to-ID resolution. \emph  {Read}: full-body artifact retrieval (\texttt  {read\_file}). \emph  {Search-in}: exact-term scan inside an artifact (\texttt  {search\_in\_file}). \textsc  {Retrieval} is restricted to a single snippet-search call by construction.}}{27}{table.caption.29}\protected@file@percent }
 \newlabel{tab:tool_usage}{{19}{27}{Mean tool calls per case by agent, aggregated across all three tenants. \emph {Email/Chat/Meeting/File}: content-search endpoints returning ranked snippets. \emph {People}: name-to-ID resolution. \emph {Read}: full-body artifact retrieval (\texttt {read\_file}). \emph {Search-in}: exact-term scan inside an artifact (\texttt {search\_in\_file}). \textsc {Retrieval} is restricted to a single snippet-search call by construction}{table.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \emph  {Left}: stacked tool-call breakdown per configuration (mean calls/case across 525 cases). \textsc  {Researcher} (4o-mini) uses $4\times $ more tools than the reactive configurations, dominated by \texttt  {search\_people} and \texttt  {read\_file}. \textsc  {Retrieval} is restricted to a single snippet-search call. \emph  {Right}: per-tenant pass-rate comparison between snippet-only \textsc  {Retrieval} and two browsing-enabled configurations. Browsing yields a consistent 9--15 point lift on Bertrand and Cambford; on ZAI, \textsc  {ReAct-v1} (4o-mini) gains 15 points while \textsc  {Researcher} (4o-mini) gains only 8.}}{27}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:tool_ablation}{{10}{27}{\emph {Left}: stacked tool-call breakdown per configuration (mean calls/case across 525 cases). \textsc {Researcher} (4o-mini) uses $4\times $ more tools than the reactive configurations, dominated by \texttt {search\_people} and \texttt {read\_file}. \textsc {Retrieval} is restricted to a single snippet-search call. \emph {Right}: per-tenant pass-rate comparison between snippet-only \textsc {Retrieval} and two browsing-enabled configurations. Browsing yields a consistent 9--15 point lift on Bertrand and Cambford; on ZAI, \textsc {ReAct-v1} (4o-mini) gains 15 points while \textsc {Researcher} (4o-mini) gains only 8}{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \emph  {Left}: stacked tool-call breakdown per configuration (mean calls/case across 525 cases). \textsc  {Researcher} (4o-mini) uses $4\times $ more tools than the reactive configurations, dominated by \texttt  {search\_people} and \texttt  {read\_file}. \textsc  {Retrieval} is restricted to a single snippet-search call. \emph  {Right}: per-tenant pass-rate comparison between snippet-only \textsc  {Retrieval} and two browsing-enabled configurations. Browsing yields a consistent 9--15 point lift on Bertrand and Cambford; on ZAI, \textsc  {ReAct-v1} (4o-mini) gains 15 points while \textsc  {Researcher} (4o-mini) gains only 8.}}{28}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:tool_ablation}{{10}{28}{\emph {Left}: stacked tool-call breakdown per configuration (mean calls/case across 525 cases). \textsc {Researcher} (4o-mini) uses $4\times $ more tools than the reactive configurations, dominated by \texttt {search\_people} and \texttt {read\_file}. \textsc {Retrieval} is restricted to a single snippet-search call. \emph {Right}: per-tenant pass-rate comparison between snippet-only \textsc {Retrieval} and two browsing-enabled configurations. Browsing yields a consistent 9--15 point lift on Bertrand and Cambford; on ZAI, \textsc {ReAct-v1} (4o-mini) gains 15 points while \textsc {Researcher} (4o-mini) gains only 8}{figure.caption.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Case Studies}{28}{subsection.5.4}\protected@file@percent }
 \newlabel{sec:case-studies}{{5.4}{28}{Case Studies}{subsection.5.4}{}}
 \newlabel{sec:prompt-analysis}{{5.4.1}{28}{Effect of Prompt Engineering}{subsubsection.5.4.1}{}}
@@ -185,26 +185,28 @@
 \newlabel{sec:scenario-analysis}{{5.4.2}{28}{Scenario-Level Analysis}{subsubsection.5.4.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Scenario-Level Analysis}{28}{subsubsection.5.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Bertrand \& Co.\ (Legal).}{28}{section*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Univ.\ of Cambford (Education).}{28}{section*.32}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{ZAI Intelligence (Software / AI).}{28}{section*.33}\protected@file@percent }
-\newlabel{sec:query-type-analysis}{{5.4.3}{28}{Query-Type Analysis}{subsubsection.5.4.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3}Query-Type Analysis}{28}{subsubsection.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Univ.\ of Cambford (Education).}{29}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{ZAI Intelligence (Software / AI).}{29}{section*.33}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Per-tenant configuration profiles. Each subplot shows the \textcolor {blue}{four} evaluated configurations on a shared radar for one tenant. On Bertrand (dense, small) all configurations overlap; on Cambford (temporal multi-hop) \textsc  {Researcher} (4o-mini)'s citation and pass-rate advantage widens; on ZAI (large, bursty) \textcolor {blue}{\textsc  {ReAct-v1} (4o-mini)} matches or exceeds the planner on assertion accuracy.}}{29}{figure.caption.34}\protected@file@percent }
 \newlabel{fig:agent_radar}{{11}{29}{Per-tenant configuration profiles. Each subplot shows the \textcolor {blue}{four} evaluated configurations on a shared radar for one tenant. On Bertrand (dense, small) all configurations overlap; on Cambford (temporal multi-hop) \textsc {Researcher} (4o-mini)'s citation and pass-rate advantage widens; on ZAI (large, bursty) \textcolor {blue}{\textsc {ReAct-v1} (4o-mini)} matches or exceeds the planner on assertion accuracy}{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Mean assertion score by query type and tenant. All configurations perform best on targeted artifact search queries. The gap between configurations widens on multi-hop reasoning and comprehensive report queries, where \textsc  {ReAct-v1} (4o)'s precision advantage is most pronounced.}}{29}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:assertion_by_query_type}{{12}{29}{Mean assertion score by query type and tenant. All configurations perform best on targeted artifact search queries. The gap between configurations widens on multi-hop reasoning and comprehensive report queries, where \textsc {ReAct-v1} (4o)'s precision advantage is most pronounced}{figure.caption.35}{}}
+\newlabel{sec:query-type-analysis}{{5.4.3}{29}{Query-Type Analysis}{subsubsection.5.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3}Query-Type Analysis}{29}{subsubsection.5.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Mean assertion score by query type and tenant. All configurations perform best on targeted artifact search queries. The gap between configurations widens on multi-hop reasoning and comprehensive report queries, where \textsc  {ReAct-v1} (4o)'s precision advantage is most pronounced.}}{30}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:assertion_by_query_type}{{12}{30}{Mean assertion score by query type and tenant. All configurations perform best on targeted artifact search queries. The gap between configurations widens on multi-hop reasoning and comprehensive report queries, where \textsc {ReAct-v1} (4o)'s precision advantage is most pronounced}{figure.caption.35}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Mean citation score by query type and tenant. \textsc  {Researcher} (4o-mini) leads on comprehensive report queries where its planning stage systematically covers multiple source types, while the reactive configurations are competitive on targeted artifact search queries.}}{30}{figure.caption.36}\protected@file@percent }
 \newlabel{fig:citation_by_query_type}{{13}{30}{Mean citation score by query type and tenant. \textsc {Researcher} (4o-mini) leads on comprehensive report queries where its planning stage systematically covers multiple source types, while the reactive configurations are competitive on targeted artifact search queries}{figure.caption.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Citation decomposition (tool-search relevance and response-citation relevance) by query type. Top row: tool-search relevance; bottom row: response-citation relevance. The performance gap between configurations is most visible on comprehensive report queries, where \textsc  {Researcher} (4o-mini)'s broader retrieval strategy produces higher relevance across both sub-metrics.}}{30}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:citation_decomp_by_query_type}{{14}{30}{Citation decomposition (tool-search relevance and response-citation relevance) by query type. Top row: tool-search relevance; bottom row: response-citation relevance. The performance gap between configurations is most visible on comprehensive report queries, where \textsc {Researcher} (4o-mini)'s broader retrieval strategy produces higher relevance across both sub-metrics}{figure.caption.37}{}}
 \newlabel{sec:token-usage}{{5.4.4}{30}{Token-Usage Estimates}{subsubsection.5.4.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.4}Token-Usage Estimates}{30}{subsubsection.5.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Citation decomposition (tool-search relevance and response-citation relevance) by query type. Top row: tool-search relevance; bottom row: response-citation relevance. The performance gap between configurations is most visible on comprehensive report queries, where \textsc  {Researcher} (4o-mini)'s broader retrieval strategy produces higher relevance across both sub-metrics.}}{31}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:citation_decomp_by_query_type}{{14}{31}{Citation decomposition (tool-search relevance and response-citation relevance) by query type. Top row: tool-search relevance; bottom row: response-citation relevance. The performance gap between configurations is most visible on comprehensive report queries, where \textsc {Researcher} (4o-mini)'s broader retrieval strategy produces higher relevance across both sub-metrics}{figure.caption.37}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5}\textcolor {blue}{Threats to Validity}}{31}{subsection.5.5}\protected@file@percent }
 \newlabel{sec:threats}{{5.5}{31}{\textcolor {blue}{Threats to Validity}}{subsection.5.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Cross-Model Evaluation and Bias Mitigation}{31}{subsection.5.6}\protected@file@percent }
 \newlabel{sec:cross-model}{{5.6}{31}{Cross-Model Evaluation and Bias Mitigation}{subsection.5.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Discussion}{31}{subsection.5.7}\protected@file@percent }
-\newlabel{sec:exp-discussion}{{5.7}{31}{Discussion}{subsection.5.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Discussion}{32}{subsection.5.7}\protected@file@percent }
+\newlabel{sec:exp-discussion}{{5.7}{32}{Discussion}{subsection.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion and Discussion}{32}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{32}{Conclusion and Discussion}{section.6}{}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{bibliography}
 \bibcite{abaskohi2025drbench}{{1}{2025}{{Abaskohi et~al\mbox  {.}}}{{}}}
@@ -214,9 +216,6 @@
 \bibcite{drouin2024workarena}{{5}{2024}{{Drouin et~al\mbox  {.}}}{{}}}
 \bibcite{glazer2024frontiermath}{{6}{2024}{{Glazer et~al\mbox  {.}}}{{}}}
 \bibcite{goh2008burstiness}{{7}{2008}{{Goh and Barab{\'a}si}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion and Discussion}{32}{section.6}\protected@file@percent }
-\newlabel{sec:conclusion}{{6}{32}{Conclusion and Discussion}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{References}{32}{section*.39}\protected@file@percent }
 \bibcite{jimenez2024swebench}{{8}{2024}{{Jimenez et~al\mbox  {.}}}{{}}}
 \bibcite{lewis2020rag}{{9}{2020}{{Lewis et~al\mbox  {.}}}{{}}}
 \bibcite{liu2023agentbench}{{10}{2023}{{Liu et~al\mbox  {.}}}{{}}}
@@ -234,31 +233,32 @@
 \bibcite{yao2022react}{{22}{2022}{{Yao et~al\mbox  {.}}}{{}}}
 \bibcite{zhao2024wildchat}{{23}{2024}{{Zhao et~al\mbox  {.}}}{{}}}
 \bibcite{zheng2023judging}{{24}{2023}{{Zheng et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {section}{References}{33}{section*.39}\protected@file@percent }
 \bibcite{zhou2023webarena}{{25}{2023}{{Zhou et~al\mbox  {.}}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Extended Experimental Results}{33}{appendix.A}\protected@file@percent }
-\newlabel{app:extra_results}{{A}{33}{Extended Experimental Results}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Agent Configurations and Prompts}{33}{appendix.B}\protected@file@percent }
-\newlabel{app:prompts}{{B}{33}{Agent Configurations and Prompts}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Extended Experimental Results}{34}{appendix.A}\protected@file@percent }
+\newlabel{app:extra_results}{{A}{34}{Extended Experimental Results}{appendix.A}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces \textcolor {blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled configurations. $n$ is the number of paired cases; \textit  {Pass A} and \textit  {Pass B} are the per-configuration pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc  {Retrieval} ablation is reported separately in Section\nonbreakingspace \ref {sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}}{34}{table.caption.40}\protected@file@percent }
 \newlabel{tab:wilcoxon_full}{{20}{34}{\textcolor {blue}{Pairwise Wilcoxon signed-rank tests on matched cases, per tenant, for the four browsing-enabled configurations. $n$ is the number of paired cases; \textit {Pass A} and \textit {Pass B} are the per-configuration pass rates on the matched subset; $p$ is the two-sided Wilcoxon signed-rank $p$-value. The retrieval-only \textsc {Retrieval} ablation is reported separately in Section~\ref {sec:ablation-tool} and is not repeated here. Boldface marks $p<0.05$.}}{table.caption.40}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces \textcolor {blue}{Pass-rate sensitivity to the assertion-match threshold\nonbreakingspace $\tau $. Response-citation gate held at $0.70$. Rows are agent--tenant cells; columns are $\tau \in \{0.70, 0.75, 0.80, 0.90, 1.00\}$. Rank order across agents is preserved for every $\tau $ on every tenant, and the maximum within-cell range is $0.048$ pass-rate points.}}}{34}{table.caption.41}\protected@file@percent }
 \newlabel{tab:threshold_sensitivity}{{21}{34}{\textcolor {blue}{Pass-rate sensitivity to the assertion-match threshold~$\tau $. Response-citation gate held at $0.70$. Rows are agent--tenant cells; columns are $\tau \in \{0.70, 0.75, 0.80, 0.90, 1.00\}$. Rank order across agents is preserved for every $\tau $ on every tenant, and the maximum within-cell range is $0.048$ pass-rate points.}}{table.caption.41}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Judge Configuration}{34}{subsection.B.1}\protected@file@percent }
-\newlabel{app:judge-config}{{B.1}{34}{Judge Configuration}{subsection.B.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces Summary of agent configurations. \emph  {Flow} indicates the reasoning strategy; \emph  {Max turns} caps the number of tool-call rounds; \emph  {Tools} lists the number of tools available. All agents share the same embedding model (\texttt  {text-embedding-ada-002}).}}{34}{table.caption.43}\protected@file@percent }
-\newlabel{tab:agent_config_summary}{{22}{34}{Summary of agent configurations. \emph {Flow} indicates the reasoning strategy; \emph {Max turns} caps the number of tool-call rounds; \emph {Tools} lists the number of tools available. All agents share the same embedding model (\texttt {text-embedding-ada-002})}{table.caption.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Agent Configurations and Prompts}{35}{appendix.B}\protected@file@percent }
+\newlabel{app:prompts}{{B}{35}{Agent Configurations and Prompts}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Judge Configuration}{35}{subsection.B.1}\protected@file@percent }
+\newlabel{app:judge-config}{{B.1}{35}{Judge Configuration}{subsection.B.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Condensed judge configuration illustrating independent control of the evaluation model and prompt templates.}}{35}{figure.caption.42}\protected@file@percent }
 \newlabel{fig:app_judge_yaml}{{15}{35}{Condensed judge configuration illustrating independent control of the evaluation model and prompt templates}{figure.caption.42}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {23}{\ignorespaces Tool descriptions. All tools accept a list of query strings unless otherwise noted.}}{35}{table.caption.44}\protected@file@percent }
-\newlabel{tab:tool_descriptions}{{23}{35}{Tool descriptions. All tools accept a list of query strings unless otherwise noted}{table.caption.44}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}ReAct-v1 System Prompt}{35}{subsection.B.2}\protected@file@percent }
-\newlabel{app:prompt-v1}{{B.2}{35}{ReAct-v1 System Prompt}{subsection.B.2}{}}
-\newlabel{lst:prompt-v1}{{1}{35}{ReAct-v1 system prompt (abridged; examples section truncated)}{lstlisting.1}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces ReAct-v1 system prompt (abridged; examples section truncated).}}{35}{lstlisting.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}ReAct-v2 System Prompt}{36}{subsection.B.3}\protected@file@percent }
-\newlabel{app:prompt-v2}{{B.3}{36}{ReAct-v2 System Prompt}{subsection.B.3}{}}
-\newlabel{lst:prompt-v2}{{2}{36}{ReAct-v2 system prompt (abridged)}{lstlisting.2}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces ReAct-v2 system prompt (abridged).}}{36}{lstlisting.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {22}{\ignorespaces Summary of agent configurations. \emph  {Flow} indicates the reasoning strategy; \emph  {Max turns} caps the number of tool-call rounds; \emph  {Tools} lists the number of tools available. All agents share the same embedding model (\texttt  {text-embedding-ada-002}).}}{35}{table.caption.43}\protected@file@percent }
+\newlabel{tab:agent_config_summary}{{22}{35}{Summary of agent configurations. \emph {Flow} indicates the reasoning strategy; \emph {Max turns} caps the number of tool-call rounds; \emph {Tools} lists the number of tools available. All agents share the same embedding model (\texttt {text-embedding-ada-002})}{table.caption.43}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {23}{\ignorespaces Tool descriptions. All tools accept a list of query strings unless otherwise noted.}}{36}{table.caption.44}\protected@file@percent }
+\newlabel{tab:tool_descriptions}{{23}{36}{Tool descriptions. All tools accept a list of query strings unless otherwise noted}{table.caption.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}ReAct-v1 System Prompt}{36}{subsection.B.2}\protected@file@percent }
+\newlabel{app:prompt-v1}{{B.2}{36}{ReAct-v1 System Prompt}{subsection.B.2}{}}
+\newlabel{lst:prompt-v1}{{1}{36}{ReAct-v1 system prompt (abridged; examples section truncated)}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces ReAct-v1 system prompt (abridged; examples section truncated).}}{36}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}ReAct-v2 System Prompt}{37}{subsection.B.3}\protected@file@percent }
+\newlabel{app:prompt-v2}{{B.3}{37}{ReAct-v2 System Prompt}{subsection.B.3}{}}
+\newlabel{lst:prompt-v2}{{2}{37}{ReAct-v2 system prompt (abridged)}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces ReAct-v2 system prompt (abridged).}}{37}{lstlisting.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {B.4}ReAct-v1 (4o-mini) System Prompt}{37}{subsection.B.4}\protected@file@percent }
 \newlabel{app:prompt-v3}{{B.4}{37}{ReAct-v1 (4o-mini) System Prompt}{subsection.B.4}{}}
 \newlabel{lst:prompt-v3}{{3}{37}{ReAct-v1 (4o-mini) system prompt (complete)}{lstlisting.3}{}}
@@ -278,7 +278,7 @@
 \newlabel{tocindent5}{0pt}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B.6}Retrieval Baseline Prompt}{39}{subsection.B.6}\protected@file@percent }
 \newlabel{app:prompt-retrieval}{{B.6}{39}{Retrieval Baseline Prompt}{subsection.B.6}{}}
-\newlabel{lst:prompt-retrieval}{{6}{39}{Retrieval baseline system prompt (complete)}{lstlisting.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}{\ignorespaces Retrieval baseline system prompt (complete).}}{39}{lstlisting.6}\protected@file@percent }
+\newlabel{lst:prompt-retrieval}{{6}{39}{Retrieval baseline system prompt (abridged)}{lstlisting.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}{\ignorespaces Retrieval baseline system prompt (abridged).}}{39}{lstlisting.6}\protected@file@percent }
 \newlabel{TotPages}{{39}{39}{}{page.39}{}}
 \gdef \@abspage@last{39}

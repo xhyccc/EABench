@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.24)  26 APR 2026 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.24)  29 APR 2026 17:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1691,149 +1691,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--419
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/sc' will be
 (Font)              scaled to size 8.0pt on input line 18.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
-[][]\T1/LinuxLibertineT-TLF/m/sc/8 (+20) ReAct-v1 \T1/LinuxLibertineT-TLF/m/n/8
- (+20) (4o-
- []
+Underfull \vbox (badness 5161) has occurred while \output is active []
+
+ [22.22]
+[23.23{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp2
+.enc}]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 65.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 87.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22.22]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 48.
-
-Underfull \vbox (badness 5771) has occurred while \output is active []
-
- [23.23{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/libertine/lbtn_omcwp
-2.enc}]
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 70.
-<figures/aggregate_assr_rcrel.pdf, id=486, 787.39543pt x 296.3491pt>
+<figures/aggregate_assr_rcrel.pdf, id=487, 787.39543pt x 296.3491pt>
 File: figures/aggregate_assr_rcrel.pdf Graphic file (type pdf)
 <use figures/aggregate_assr_rcrel.pdf>
 Package pdftex.def Info: figures/aggregate_assr_rcrel.pdf  used on input line 1
-01.
+18.
 (pdftex.def)             Requested size: 430.00462pt x 161.83942pt.
 
-
-Class acmart Warning: A possible image without description on input line 104.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[24.24]
-<figures/tool_usage_heatmap.pdf, id=497, 390.62634pt x 312.96799pt>
-File: figures/tool_usage_heatmap.pdf Graphic file (type pdf)
-<use figures/tool_usage_heatmap.pdf>
-Package pdftex.def Info: figures/tool_usage_heatmap.pdf  used on input line 124
-.
-(pdftex.def)             Requested size: 365.50655pt x 292.83847pt.
-
-
-Class acmart Warning: A possible image without description on input line 127.
+Class acmart Warning: A possible image without description on input line 121.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25.25 <./figures/aggregate_assr_rcrel.pdf>] [26.26 <./figures/tool_usage_heatm
-ap.pdf>]
-<figures/tool_ablation_combined.pdf, id=630, 859.69496pt x 266.29802pt>
-File: figures/tool_ablation_combined.pdf Graphic file (type pdf)
-<use figures/tool_ablation_combined.pdf>
-Package pdftex.def Info: figures/tool_ablation_combined.pdf  used on input line
- 167.
-(pdftex.def)             Requested size: 430.00462pt x 133.19743pt.
-
-
-Class acmart Warning: A possible image without description on input line 170.
-
-[27.27 <./figures/tool_ablation_combined.pdf>]
-<figures/agent_radar.pdf, id=717, 636.6886pt x 251.19508pt>
-File: figures/agent_radar.pdf Graphic file (type pdf)
-<use figures/agent_radar.pdf>
-Package pdftex.def Info: figures/agent_radar.pdf  used on input line 194.
-(pdftex.def)             Requested size: 430.00462pt x 169.65668pt.
-
-
-Class acmart Warning: A possible image without description on input line 197.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/assertion_by_query_type.pdf, id=719, 718.44417pt x 187.07446pt>
-File: figures/assertion_by_query_type.pdf Graphic file (type pdf)
-<use figures/assertion_by_query_type.pdf>
-Package pdftex.def Info: figures/assertion_by_query_type.pdf  used on input lin
-e 206.
-(pdftex.def)             Requested size: 430.00462pt x 111.96864pt.
-
-Class acmart Warning: A possible image without description on input line 209.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/citation_by_query_type.pdf, id=720, 718.44417pt x 187.07446pt>
-File: figures/citation_by_query_type.pdf Graphic file (type pdf)
-<use figures/citation_by_query_type.pdf>
-Package pdftex.def Info: figures/citation_by_query_type.pdf  used on input line
- 213.
-(pdftex.def)             Requested size: 430.00462pt x 111.96864pt.
-
-Class acmart Warning: A possible image without description on input line 216.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/citation_decomp_by_query_type.pdf, id=721, 708.00392pt x 362.65863pt>
-File: figures/citation_decomp_by_query_type.pdf Graphic file (type pdf)
-<use figures/citation_decomp_by_query_type.pdf>
-Package pdftex.def Info: figures/citation_decomp_by_query_type.pdf  used on inp
-ut line 220.
-(pdftex.def)             Requested size: 430.00462pt x 220.25856pt.
-
-Class acmart Warning: A possible image without description on input line 223.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28.28] [29.29 <./figures/agent_radar.pdf> <./figures/assertion_by_query_type.p
-df>] [30.30 <./figures/citation_by_query_type.pdf> <./figures/citation_decomp_b
-y_query_type.pdf>]) [31.31] (./main.bbl
-Underfull \vbox (badness 2073) has occurred while \output is active []
-
- [32.32])
-(./appendix_extra_results.tex
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 7.0pt on input line 30.
-) (./appendix_prompts.tex
-
-Class acmart Warning: A possible image without description on input line 44.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33.33]
+ [24.24]
+[25.25 <./figures/aggregate_assr_rcrel.pdf>]
+<figures/tool_usage_heatmap.pdf, id=570, 390.62634pt x 312.96799pt>
+File: figures/tool_usage_heatmap.pdf Graphic file (type pdf)
+<use figures/tool_usage_heatmap.pdf>
+Package pdftex.def Info: figures/tool_usage_heatmap.pdf  used on input line 141
+.
+(pdftex.def)             Requested size: 365.50655pt x 292.83847pt.
+
+
+Class acmart Warning: A possible image without description on input line 144.
+
+[26.26 <./figures/tool_usage_heatmap.pdf>]
+<figures/tool_ablation_combined.pdf, id=630, 859.69496pt x 266.29802pt>
+File: figures/tool_ablation_combined.pdf Graphic file (type pdf)
+<use figures/tool_ablation_combined.pdf>
+Package pdftex.def Info: figures/tool_ablation_combined.pdf  used on input line
+ 184.
+(pdftex.def)             Requested size: 430.00462pt x 133.19743pt.
+
+
+Class acmart Warning: A possible image without description on input line 187.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27.27]
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [28.28 <./figures/tool_ablation_combined.pdf>]
+<figures/agent_radar.pdf, id=724, 636.6886pt x 251.19508pt>
+File: figures/agent_radar.pdf Graphic file (type pdf)
+<use figures/agent_radar.pdf>
+Package pdftex.def Info: figures/agent_radar.pdf  used on input line 211.
+(pdftex.def)             Requested size: 430.00462pt x 169.65668pt.
+
+
+Class acmart Warning: A possible image without description on input line 214.
+
+<figures/assertion_by_query_type.pdf, id=726, 718.44417pt x 187.07446pt>
+File: figures/assertion_by_query_type.pdf Graphic file (type pdf)
+<use figures/assertion_by_query_type.pdf>
+Package pdftex.def Info: figures/assertion_by_query_type.pdf  used on input lin
+e 223.
+(pdftex.def)             Requested size: 430.00462pt x 111.96864pt.
+
+Class acmart Warning: A possible image without description on input line 226.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/citation_by_query_type.pdf, id=727, 718.44417pt x 187.07446pt>
+File: figures/citation_by_query_type.pdf Graphic file (type pdf)
+<use figures/citation_by_query_type.pdf>
+Package pdftex.def Info: figures/citation_by_query_type.pdf  used on input line
+ 230.
+(pdftex.def)             Requested size: 430.00462pt x 111.96864pt.
+
+Class acmart Warning: A possible image without description on input line 233.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/citation_decomp_by_query_type.pdf, id=728, 708.00392pt x 362.65863pt>
+File: figures/citation_decomp_by_query_type.pdf Graphic file (type pdf)
+<use figures/citation_decomp_by_query_type.pdf>
+Package pdftex.def Info: figures/citation_decomp_by_query_type.pdf  used on inp
+ut line 237.
+(pdftex.def)             Requested size: 430.00462pt x 220.25856pt.
+
+Class acmart Warning: A possible image without description on input line 240.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29.29 <./figures/agent_radar.pdf>] [30.30 <./figures/assertion_by_query_type.p
+df> <./figures/citation_by_query_type.pdf>]) [31.31 <./figures/citation_decomp_
+by_query_type.pdf>]
+Underfull \vbox (badness 2073) has occurred while \output is active []
+
+ [32.32]
+(./main.bbl
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [33.33])
+(./appendix_extra_results.tex
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 7.0pt on input line 30.
+) (./appendix_prompts.tex [34.34]
+
+Class acmart Warning: A possible image without description on input line 44.
+
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 7.0pt on input line 58.
-
-[34.34]
+[35.35]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 110.
+nput line 118.
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 6.0pt on input line 110.
+(Font)              scaled to size 5.0pt on input line 118.
 
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 114.
+(Font)              using `T1/zi4/m/n' instead on input line 122.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 6.0pt on input line 114.
+(Font)              scaled to size 5.0pt on input line 122.
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 6.0pt on input line 115.
+(Font)              scaled to size 5.0pt on input line 123.
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 6.0pt on input line 121.
-[35.35] [36.36] [37.37] [38.38])
+(Font)              scaled to size 5.0pt on input line 129.
+[36.36] [37.37] [38.38])
 
 Class acmart Warning: Some images may lack descriptions.
 (acmart)              ACM is committed to complying with the upcoming US ADA ht
@@ -1868,13 +1864,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F3299DB858035978CE1B8D7EE5ED7676;8452.
  ) 
 Here is how much of TeX's memory you used:
- 35614 strings out of 467525
- 641556 string characters out of 5418982
- 1530755 words of memory out of 5000000
- 62313 multiletter control sequences out of 15000+600000
- 918021 words of font info for 798 fonts, out of 8000000 for 9000
+ 35609 strings out of 467525
+ 641424 string characters out of 5418982
+ 1553365 words of memory out of 5000000
+ 62314 multiletter control sequences out of 15000+600000
+ 917661 words of font info for 795 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,16n,131p,1718b,2230s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,16n,131p,1718b,2258s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/inconsolata/Inconsolat
 a-zi4b.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/inconsolata/I
 nconsolata-zi4r.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newt
@@ -1892,10 +1888,10 @@ ist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/local/texlive/2026/texmf-dist/f
 onts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
 pe1/public/newtx/txsym.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
 ic/newtx/txsys.pfb>
-Output written on main.pdf (39 pages, 6348857 bytes).
+Output written on main.pdf (39 pages, 6349695 bytes).
 PDF statistics:
- 1412 PDF objects out of 1440 (max. 8388607)
- 939 compressed objects within 10 object streams
- 423 named destinations out of 1000 (max. 500000)
+ 1413 PDF objects out of 1440 (max. 8388607)
+ 940 compressed objects within 10 object streams
+ 421 named destinations out of 1000 (max. 500000)
  143774 words of extra memory for PDF output out of 154059 (max. 10000000)
 

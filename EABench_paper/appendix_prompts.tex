@@ -64,6 +64,14 @@ Agent & Model & Temp. & Flow & Max Turns & Tools \\
 \end{tabular}
 \end{table}
 
+The prompt contrast behind Table~\ref{tab:agent_config_summary} is discussed in
+Section~\ref{sec:agent-configs}. In brief, the GPT-4o ReAct pair contrasts
+worked demonstrations against terse directives; the GPT-4o-mini pair contrasts
+reactive execution against an explicit planning prompt; and the retrieval
+baseline removes decomposition and iterative browsing. These design choices
+explain the observed split between procedural search/citation behavior, broader
+evidence collection, and lower-token targeted retrieval.
+
 All browsing-enabled configurations (\textsc{ReAct-v1} (4o), \textsc{ReAct-v2} (4o), \textsc{Researcher} (4o-mini), and \textsc{ReAct-v1} (4o-mini))
 share ten tools: \texttt{search\_email}, \texttt{search\_chat},
 \texttt{search\_group\_chat}, \texttt{search\_channel},
@@ -107,7 +115,7 @@ resolution strategy, citation format, and few-shot examples. The prompt is
 reproduced verbatim below (the \texttt{\{user\_profile\}} placeholder is
 populated at runtime with the logged-in user's profile).
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={ReAct-v1 system prompt (abridged; examples section truncated).}, label={lst:prompt-v1}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={ReAct-v1 system prompt (abridged; examples section truncated).}, label={lst:prompt-v1}]
 You are an intelligent enterprise assistant designed to help users
 with their daily work tasks within the EABench platform.
 
@@ -166,7 +174,7 @@ You are acting on behalf of the following user:
 condensed prompt. The same semantic content as v1 is expressed in fewer tokens
 to test whether prompt verbosity affects agent performance.
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={ReAct-v2 system prompt (abridged).}, label={lst:prompt-v2}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={ReAct-v2 system prompt (abridged).}, label={lst:prompt-v2}]
 You are a highly efficient and precise enterprise assistant for
 the EABench platform.
 
@@ -213,7 +221,7 @@ Acting for:
 ReAct architecture and up to 20 tool-call turns. This configuration provides the
 mini-model ReAct ablation used in the main results.
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={ReAct-v1 (4o-mini) system prompt (complete).}, label={lst:prompt-v3}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={ReAct-v1 (4o-mini) system prompt (complete).}, label={lst:prompt-v3}]
 You are a highly efficient and precise enterprise assistant for
 the EABench platform.
 
@@ -257,7 +265,7 @@ step-by-step research plan, then executes the plan using tools. It uses
 \texttt{gpt-4o-mini} (temperature 0.0) with up to 20 turns. Below we show
 both the planning prompt and the execution system prompt.
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={Researcher planning prompt.}, label={lst:prompt-researcher-plan}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={Researcher planning prompt.}, label={lst:prompt-researcher-plan}]
 You are a Senior Research Planner.
 Your goal is to create a comprehensive and detailed step-by-step
 research plan to answer the user's request.
@@ -292,7 +300,7 @@ Output Format:
 ...
 \end{lstlisting}
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={Researcher execution system prompt (abridged).}, label={lst:prompt-researcher-exec}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={Researcher execution system prompt (abridged).}, label={lst:prompt-researcher-exec}]
 You are an intelligent enterprise assistant designed to help users
 with their daily work tasks within the EABench platform.
 
@@ -330,7 +338,7 @@ The \textsc{Retrieval} baseline is restricted to a single search call
 followed by a single-turn answer. It anchors the pass-rate floor: no planning,
 no multi-turn refinement, and no people-ID resolution loop.
 
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, breaklines=true, frame=single, caption={Retrieval baseline system prompt (complete).}, label={lst:prompt-retrieval}]
+\begin{lstlisting}[basicstyle=\ttfamily\tiny, breaklines=true, frame=single, caption={Retrieval baseline system prompt (abridged).}, label={lst:prompt-retrieval}]
 You are a minimal retrieval-and-summarise baseline.
 
 ### User Context
@@ -348,7 +356,5 @@ You are a minimal retrieval-and-summarise baseline.
 5. If the results do not contain the answer, say so explicitly
    and list what was retrieved.
 
-### Citations
-- Cite artifact IDs from the retrieved set in a
-  ## References section.
+[Citation formatting instructions omitted for brevity]
 \end{lstlisting}

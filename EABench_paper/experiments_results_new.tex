@@ -9,26 +9,43 @@ We instantiate the three scenario families from Section~\ref{sec:scenarios} as c
 
 \subsubsection{Agent Configurations}
 \label{sec:agent-configs}
-We evaluate \textcolor{blue}{four} runtime configurations spanning reactive and planning-based reasoning. All share the same embedding model (\texttt{text-embedding-ada-002}) and use GPT-4o-family models via Azure OpenAI\textcolor{blue}{: \textsc{ReAct-v1} (4o) and \textsc{ReAct-v2} (4o) are the two GPT-4o reactive baselines, \textsc{Researcher} (4o-mini) is the plan-and-execute configuration, and \textsc{ReAct-v1} (4o-mini) is the mini-model ablation of the verbose ReAct prompt. This design separates architecture, prompt verbosity, and model size so that the main pairwise contrasts are interpretable.}
+We evaluate \textcolor{blue}{four} runtime configurations spanning reactive and planning-based reasoning. All share the same embedding model (\texttt{text-embedding-ada-002}) and use GPT-4o-family models via Azure OpenAI\textcolor{blue}{: \textsc{ReAct-v1} (4o) and \textsc{ReAct-v2} (4o) are the two GPT-4o reactive baselines, \textsc{Researcher} (4o-mini) is the plan-and-execute configuration, and \textsc{ReAct-v1} (4o-mini) is the mini-model reactive ablation. This design separates architecture, prompt verbosity, and model size so that the main pairwise contrasts are interpretable.}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Configuration summary for the \textcolor{blue}{four} evaluated runtime configurations.
 ``Planning model'' refers to the LLM used for the optional pre-execution planning step; for \textsc{Researcher} (4o-mini), the same model is used for both planning and execution.
 Prompt size is the approximate system-prompt token count. Avg.\ tool calls is the empirical mean across all evaluation cases.}
 \label{tab:agent_configs}
 \small
-\begin{tabular}{p{0.13\linewidth}p{0.15\linewidth}p{0.14\linewidth}p{0.15\linewidth}p{0.13\linewidth}p{0.12\linewidth}}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllcc}
 \toprule
 \textbf{Agent} & \textbf{Architecture} & \textbf{Model} & \textbf{Planning Model} & \textbf{Prompt Size} & \textbf{Avg.\ Tools} \\
 \midrule
 \textsc{ReAct-v1} (4o)   & ReAct             & GPT-4o      & ---               & $\sim$3k tok   & 1.70 \\
 \textsc{ReAct-v2} (4o)   & ReAct             & GPT-4o      & ---               & $\sim$1.5k tok & 1.70 \\
 \textcolor{blue}{\textsc{Researcher} (4o-mini)}  & \textcolor{blue}{Plan\,+\,Execute}  & \textcolor{blue}{GPT-4o-mini} & \textcolor{blue}{GPT-4o-mini}       & \textcolor{blue}{$\sim$3k tok}   & \textcolor{blue}{4.85} \\
-\textcolor{blue}{\textsc{ReAct-v1} (4o-mini)}   & \textcolor{blue}{ReAct}             & \textcolor{blue}{GPT-4o-mini} & \textcolor{blue}{---}               & \textcolor{blue}{$\sim$3k tok}   & \textcolor{blue}{1.23} \\
+\textcolor{blue}{\textsc{ReAct-v1} (4o-mini)}   & \textcolor{blue}{ReAct}             & \textcolor{blue}{GPT-4o-mini} & \textcolor{blue}{---}               & \textcolor{blue}{$\sim$0.5k tok}   & \textcolor{blue}{1.23} \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
+
+Table~\ref{tab:agent_configs} encodes three prompt-to-outcome contrasts. First,
+\textsc{ReAct-v1} (4o) and \textsc{ReAct-v2} (4o) hold architecture and model
+fixed while varying prompt granularity: v1 demonstrates people resolution,
+pronoun rewriting, multi-query search, and citation formatting through worked
+examples, whereas v2 states the same norms as shorter directives. The expected
+effect is better procedural imitation in v1, which matches its higher
+tool-search relevance and response-citation relevance. Second,
+\textsc{Researcher} (4o-mini) adds a planning prompt that explicitly asks the
+model to decompose multi-hop questions, search across artifact types, and
+resolve people before content search; this predicts broader evidence collection
+and explains both the higher tool-call count and the Cambford gains. Third,
+\textsc{ReAct-v1} (4o-mini) keeps a concise reactive prompt with a larger turn
+budget, so it favors targeted search loops with lower prompt overhead, a pattern
+that is especially competitive on dense ZAI workloads.
 
 \textsc{ReAct-v1} (4o) implements a standard ReAct loop~\cite{yao2022react} with a verbose system prompt ($\sim$3{,}000 tokens) containing eight fully worked \textsc{Thought}$\to$\textsc{Tool} examples covering people resolution, pronoun-to-ID disambiguation, multi-query decomposition, and citation formatting. Section~\ref{sec:prompt-analysis} analyses which of these worked demonstrations drive the observed performance gap against \textsc{ReAct-v2} (4o).
 

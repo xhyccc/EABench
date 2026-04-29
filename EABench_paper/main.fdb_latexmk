@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1777211097.78116 "main.aux" "main.bbl" "main" 1777211477.05208 0
+["bibtex main"] 1777455669.26046 "main.aux" "main.bbl" "main" 1777455671.7467 0
   "./ACM-Reference-Format.bst" 1776010739.28465 93560 12e0ced1522ea2bfa9b2fb12855c7e9e ""
   "./bibliography.bib" 1776330215.487 8004 dbf46f78c33bc070de1982f147993896 ""
-  "main.aux" 1777211476.58287 44920 4960b3faee69ed98848c7252d342e246 "pdflatex"
+  "main.aux" 1777455671.34654 44920 b332937758e52a9035b5cf5c8dc58829 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777211474.49825 "main.tex" "main.pdf" "main" 1777211477.05227 0
+["pdflatex"] 1777455669.36076 "main.tex" "main.pdf" "main" 1777455671.74688 0
   "/Users/haoyi/Library/texmf/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/Users/haoyi/Library/texmf/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/Users/haoyi/Library/texmf/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -296,9 +296,9 @@
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1777031915 3636774 efcbdadc7ebdd1f7688243cc51456fef ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
   "acmart.cls" 1776009839.51296 122399 4a6b256f62968deebd70fce5b60f5777 ""
-  "appendix_extra_results.tex" 1777210803.41576 5153 dcaec97be8f813ae22e05880184cddf9 ""
-  "appendix_prompts.tex" 1777210803.42529 14589 0ed94f57cfcb5316dfca88c184f8f8c8 ""
-  "experiments_results_new.tex" 1777211445.33552 33287 53472d5de8bc84a1b8f5c201ffdf665f ""
+  "appendix_extra_results.tex" 1777213525.31044 5153 dcaec97be8f813ae22e05880184cddf9 ""
+  "appendix_prompts.tex" 1777455637.34091 15043 0936966c2627e4614c0a18a65e813bdf ""
+  "experiments_results_new.tex" 1777455343.69687 34251 a2d46ce6c7dc27eb86c200252ec890a3 ""
   "figures/agent-architecture-config.png" 1775960284 922682 a6ce6f41aebdebd8d98b880d0416fe8d ""
   "figures/agent-evaluator-framework.png" 1775960284 995220 66103f53122dfad4ed8d1beab6ed9eae ""
   "figures/agent_radar.pdf" 1777211007.54719 35706 11ac3062335e5f6dbaa1cafbc6dff004 ""
@@ -312,10 +312,10 @@
   "figures/tenant-generation-pipeline.png" 1775960284 939594 e6c53d7e06cdd7c7a7c58c121107a2ac ""
   "figures/tool_ablation_combined.pdf" 1777210956.64429 25708 c31095ef1af9192f5206b5e26075c2d1 ""
   "figures/tool_usage_heatmap.pdf" 1777211007.54873 23732 d02ad3659fa9afabf7de9310fc73981b ""
-  "main.aux" 1777211476.58287 44920 4960b3faee69ed98848c7252d342e246 "pdflatex"
-  "main.bbl" 1777211097.87817 14885 62af22a9174209495cf470cfec2f050e "bibtex main"
-  "main.out" 1777211476.5852 8452 f3299db858035978ce1b8d7ee5ed7676 "pdflatex"
-  "main.tex" 1777211445.35023 43536 99929405d59388f631bab2dee7e292b8 ""
+  "main.aux" 1777455671.34654 44920 b332937758e52a9035b5cf5c8dc58829 "pdflatex"
+  "main.bbl" 1777455669.35701 14885 62af22a9174209495cf470cfec2f050e "bibtex main"
+  "main.out" 1777455671.34855 8452 f3299db858035978ce1b8d7ee5ed7676 "pdflatex"
+  "main.tex" 1777213525.31037 43536 99929405d59388f631bab2dee7e292b8 ""
   "methodology_agent_runtime.tex" 1777160487.43111 9308 c0c7b02280b0b587b40123851df789ce ""
   "methodology_data_generation.tex" 1776317758.36014 7989 6ae64cca45bab92a1b2e383404306508 ""
   "methodology_eval_dataset.tex" 1777160487.41015 5646 5704c7947edd8de053915981eb9b7f3a ""
